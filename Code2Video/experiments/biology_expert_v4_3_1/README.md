@@ -37,3 +37,6 @@ DNA进行了两轮有界定向检索，取得一个新教材来源；候选经�
 本轮模型调用与词元：{"deepseek_calls": 16, "qwen_calls": 4, "input_tokens": 128194, "output_tokens": 37161, "failed_model_requests": 0, "reported_cost": null}。Wan成功前估价为5秒×0.3元/秒=1.5元，非实际账单；实际收费不可得。
 
 测试源码提交：549625dfee704fe4d9fbad535f86ebb536519fd7。
+
+## 业务空间接口复核
+用户提供ws-t97wmnhtb5p967oq.cn-beijing.maas.aliyuncs.com后，保持已审核首尾图重新提交，仍403 AccessDenied.Unpurchased，request_id d8a3aa72-ab9f-98ea-a438-bc6d2f76080b。随后逐字段复现用户官方纯文本小猫示例，仍403同码，request_id39ad03bb-e778-991f-84d7-318140513158。两次均无task_id。原通用域名结论不足以单独证明账户未开通；纠正域名后该空间/密钥组合仍被服务端拒绝。不能确定是账户模型开通、密钥空间归属还是套餐权限，需控制台确认。累计3次生成POST均被拒绝，无视频，不继续尝试。

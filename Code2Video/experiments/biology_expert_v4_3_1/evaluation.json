@@ -18,7 +18,9 @@
     "scientific_identity_pass": null,
     "temporal_consistency_pass": null,
     "visual_quality_reviewed": false,
-    "human_review_completed": false
+    "human_review_completed": false,
+    "workspace_endpoint_rechecked": true,
+    "exact_official_text_example_http_status": 403
   },
   "tests": {
     "historical_and_new_passed": 67,
@@ -35,7 +37,7 @@
     "reported_cost": null
   },
   "wan_requests": {
-    "generation_post": 1,
+    "generation_post": 3,
     "tasks_created": 0,
     "actual_cost": null,
     "estimated_if_success_cny": 1.5,

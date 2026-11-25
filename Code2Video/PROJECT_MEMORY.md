@@ -75,3 +75,5 @@ VERIFIED：worktree /autodl-tmp/code2biovideo/biovideo-v4.3。新8秒有丝分�
 VERIFIED：独立worktree /autodl-tmp/code2biovideo/biovideo-v4.3.1，基线aaee5ca。用户明确选择Wan3并授权真实试调用，Seedance0。Wan首尾图经DeepSeek计划和开发者锚点准备、独立Qwen科学/视觉PASS；真实POST一次返回403 AccessDenied.Unpurchased，request_id223c94c4-9970-9519-ac3a-3d9e87c963f8，无task_id、无Wan视频，禁止自动重提交。现有密钥有效但模型权限未就绪；需账户控制台核对开通/业务空间/北京地域。
 通用可靠性审核/因果有限状态路径/定向检索/返工门禁接入现有Agent。DNA新候选精确引用修复后独立REVISE；囊泡候选精确引用失败且后续检索无进展；没有新增科学批准模型。新适配器真实重渲染124样本，关系观测248运行/107仅声明，像素仍未测量。67回归测试通过，最后20新增测试再过；冻结历史变化0。DeepSeek16、Qwen4，输入128194输出37161词元。Wan1次请求被拒，费用账单未知，Seedance仅dryrun stub。完整证据experiments/biology_expert_v4_3_1/README.md、evaluation.json、provider_runs.json。当前无必要后台任务。
 下一步：先读取providers/wan/task.json，确认权限错误后在百炼模型页开通/核对空间地域，不能重复提交既有run。DNA需专门独立来源解决核酸酶与替换执行者、nick/gap；囊泡需真正含机制正文的证据。通用有限状态检查不推断自由文本别名，历史初态未声明为REVIEW_INCOMPLETE而非自动科学FAIL。保留所有历史模型、视频、审核和失败响应。
+
+VERIFIED补充：用户提供业务空间域名后，已审核首尾图和用户原样纯文本示例各POST1次，均403 AccessDenied.Unpurchased，无task_id。累计3POST无生成。最后request_id39ad03bb-e778-991f-84d7-318140513158。后续先控制台核对空间/密钥权限，不能再说只试过旧域名。

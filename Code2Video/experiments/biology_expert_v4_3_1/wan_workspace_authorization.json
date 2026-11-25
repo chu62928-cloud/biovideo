@@ -1,0 +1,6 @@
+{
+  "source": "explicit_user_message",
+  "reason": "User supplied workspace endpoint and asked to correct invocation",
+  "new_generation_attempts": 1,
+  "preserve_previous_rejection": true
+}

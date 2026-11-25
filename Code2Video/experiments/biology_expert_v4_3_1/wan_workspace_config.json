@@ -1,0 +1,8 @@
+{
+  "model_id": "wan3.0-video",
+  "region": "cn-beijing",
+  "base_url": "https://ws-t97wmnhtb5p967oq.cn-beijing.maas.aliyuncs.com",
+  "documentation": "https://help.aliyun.com/zh/model-studio/wan3-video-generation-api-reference",
+  "endpoint_note": "User supplied exact business workspace Beijing endpoint; corrected from legacy generic endpoint.",
+  "price_cny_per_second": 0.3
+}
