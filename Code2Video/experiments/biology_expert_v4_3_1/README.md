@@ -35,3 +35,5 @@ DNA进行了两轮有界定向检索，取得一个新教材来源；候选经�
 先在百炼模型详情确认Wan3.0开通条件及业务空间/地域，再恢复真实生成；保留这次403记录。科学线优先获得真正专门的第二来源，解决状态生产链后再生成DNA/囊泡视频；暂不扩展六节。
 
 本轮模型调用与词元：{"deepseek_calls": 16, "qwen_calls": 4, "input_tokens": 128194, "output_tokens": 37161, "failed_model_requests": 0, "reported_cost": null}。Wan成功前估价为5秒×0.3元/秒=1.5元，非实际账单；实际收费不可得。
+
+测试源码提交：549625dfee704fe4d9fbad535f86ebb536519fd7。

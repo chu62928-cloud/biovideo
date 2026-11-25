@@ -1,7 +1,7 @@
 {
   "experiment": "V4.3.1_VP0",
   "baseline_commit": "aaee5ca1246779321e83393563f65565c36c74b5",
-  "git_commit": "aaee5ca1246779321e83393563f65565c36c74b5",
+  "git_commit": "549625dfee704fe4d9fbad535f86ebb536519fd7",
   "source_root": "Code2Video/src",
   "historical_inputs_file": "historical_inputs.json",
   "historical_files_unchanged": true,
