@@ -1,0 +1,5 @@
+{
+  "decision": "REVIEW_INCOMPLETE",
+  "reason": "Independent verification not executed before API account failure; no approval inferred",
+  "schema_pass": true
+}

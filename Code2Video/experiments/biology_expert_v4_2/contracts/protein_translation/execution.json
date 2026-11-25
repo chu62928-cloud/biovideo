@@ -1,0 +1,172 @@
+{
+  "checks": [
+    {
+      "check_id": "C1",
+      "type": "STRUCTURAL",
+      "constraint_hash": "baa6baad653610c25c99d62c11d0767bdef1efd69e4b3115f96a64e34a47213c",
+      "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+      "status": "NOT_MEASURED",
+      "object_ids": [
+        "intact_ribosome",
+        "ribosome_small_subunit",
+        "ribosome_large_subunit"
+      ],
+      "evidence_ids": [
+        "E_a415a44ba2f3"
+      ],
+      "capability": "DETERMINISTIC",
+      "observation_refs": [],
+      "reason": null,
+      "observed": {}
+    },
+    {
+      "check_id": "C2",
+      "type": "STRUCTURAL",
+      "constraint_hash": "e6e3414646facb312893d0c327c05e666ab3c89a8a2ad070e7edebe282125499",
+      "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+      "status": "NOT_MEASURED",
+      "object_ids": [
+        "intact_ribosome",
+        "charged_tRNA",
+        "mRNA_template"
+      ],
+      "evidence_ids": [
+        "E_a415a44ba2f3"
+      ],
+      "capability": "VLM",
+      "observation_refs": [],
+      "reason": "Semantic/visual claim needs independent observation review"
+    },
+    {
+      "check_id": "C3",
+      "type": "TEMPORAL",
+      "constraint_hash": "e2fcd0f20599968aaf3ec8916a6ab3413740a3c6d30021b6c3cab1939e1f425b",
+      "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+      "status": "NOT_MEASURED",
+      "object_ids": [
+        "charged_tRNA",
+        "mRNA_template",
+        "intact_ribosome"
+      ],
+      "evidence_ids": [
+        "E_a415a44ba2f3"
+      ],
+      "capability": "PARTIAL",
+      "observation_refs": [],
+      "reason": null,
+      "observed": {}
+    },
+    {
+      "check_id": "C4",
+      "type": "TEMPORAL",
+      "constraint_hash": "bda886af30e39acc15b6349c2d1f343a840b9d36e4ab26a0f2ebde134fe2504f",
+      "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+      "status": "NOT_MEASURED",
+      "object_ids": [
+        "ribosome_small_subunit",
+        "ribosome_large_subunit",
+        "mRNA_template",
+        "initiator_tRNA"
+      ],
+      "evidence_ids": [
+        "E_a415a44ba2f3"
+      ],
+      "capability": "PARTIAL",
+      "observation_refs": [],
+      "reason": null,
+      "observed": {}
+    },
+    {
+      "check_id": "C5",
+      "type": "VISUAL_SEMANTICS",
+      "constraint_hash": "3c066ca878d90f5d8c30b4f19d8d230e7b19dedce6c95b8190a5f251ca15c536",
+      "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+      "status": "NOT_MEASURED",
+      "object_ids": [
+        "ribosome_small_subunit",
+        "ribosome_large_subunit"
+      ],
+      "evidence_ids": [
+        "E_a415a44ba2f3"
+      ],
+      "capability": "VLM",
+      "observation_refs": [],
+      "reason": "Semantic/visual claim needs independent observation review"
+    },
+    {
+      "check_id": "C6",
+      "type": "PERSISTENT_RELATION",
+      "constraint_hash": "7fb8bcfd746044ef469581c86da9bc77a04c64dff6cdda39995cdc8ee7dbbdfe",
+      "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+      "status": "NOT_MEASURED",
+      "object_ids": [
+        "growing_polypeptide",
+        "charged_tRNA"
+      ],
+      "evidence_ids": [
+        "E_a415a44ba2f3"
+      ],
+      "capability": "PARTIAL",
+      "observation_refs": [],
+      "reason": null,
+      "observed": {}
+    },
+    {
+      "check_id": "C7",
+      "type": "TEMPORAL",
+      "constraint_hash": "77da18131b3346b1a2f42cb6edabd41e6db99147ec51b55462078b9bed600170",
+      "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+      "status": "NOT_MEASURED",
+      "object_ids": [
+        "mRNA_template",
+        "growing_polypeptide"
+      ],
+      "evidence_ids": [
+        "E_a415a44ba2f3"
+      ],
+      "capability": "VLM",
+      "observation_refs": [],
+      "reason": "Semantic/visual claim needs independent observation review"
+    },
+    {
+      "check_id": "C8",
+      "type": "STATE",
+      "constraint_hash": "5f574478b43a8fe9395917bff42708e0fbe58d63f4a51f446c418b0c1e5aff60",
+      "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+      "status": "NOT_MEASURED",
+      "object_ids": [
+        "release_factor",
+        "intact_ribosome",
+        "mRNA_template",
+        "growing_polypeptide"
+      ],
+      "evidence_ids": [
+        "E_a415a44ba2f3"
+      ],
+      "capability": "PARTIAL",
+      "observation_refs": [],
+      "reason": null,
+      "observed": {}
+    },
+    {
+      "check_id": "C9",
+      "type": "STRUCTURAL",
+      "constraint_hash": "87285af2610f5120d1e2233e8041622f9b173c6f5fecb1039a47a9af3b2ba5e9",
+      "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+      "status": "NOT_MEASURED",
+      "object_ids": [
+        "shine_dalgarno_sequence",
+        "ribosome_small_subunit",
+        "mRNA_template"
+      ],
+      "evidence_ids": [
+        "E_a415a44ba2f3"
+      ],
+      "capability": "HUMAN",
+      "observation_refs": [],
+      "reason": "Semantic/visual claim needs independent observation review"
+    }
+  ],
+  "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+  "decision": "REVIEW_INCOMPLETE"
+}

@@ -1,0 +1,534 @@
+{
+  "bindings": {
+    "semantic role": "Not applicable: no existing scene or runtime inventory supplied; bindings to actual IDs cannot be made."
+  },
+  "ir_review": {
+    "decision": "REVIEW_INCOMPLETE",
+    "issues": [
+      "No existing scene, runtime trace, or rendered artifact was supplied, so no observation-based verification of C1–C9 can be performed.",
+      "The contract contains unresolved questions about eukaryotic scanning, detailed eukaryotic initiation factors, and elongation factor identities; these are marked UNKNOWN and must remain explicitly labeled as simplifications or omitted.",
+      "Constraint C9 has capability HUMAN and cannot be fully verified by automated scene graph or VLM review alone; human review is required.",
+      "Constraint C3 verification_status is INSUFFICIENT_EVIDENCE at the constraint level, so strict automated temporal verification is incomplete."
+    ],
+    "contract_goal_coverage": {
+      "decision": "REVIEW_INCOMPLETE",
+      "missing_goals": []
+    }
+  },
+  "scene": {
+    "objects": [
+      {
+        "object_id": "OBJ_mRNA",
+        "scientific_identity": {
+          "name": "mRNA template",
+          "kind": "nucleic_acid",
+          "origin_id": "entity_mRNA_template"
+        },
+        "scientific_properties": {
+          "direction": "5' to 3'",
+          "features": [
+            "Shine-Dalgarno sequence in bacterial example",
+            "start codon AUG",
+            "codons",
+            "stop codon UAA/UAG/UGA"
+          ]
+        },
+        "anchors": [
+          "5' end",
+          "Shine-Dalgarno sequence",
+          "AUG start codon",
+          "codon in A site",
+          "stop codon in A site",
+          "3' end"
+        ],
+        "visual_representation": "Linear segmented ribbon with labeled 5' and 3' ends, codon blocks, and a distinct upstream Shine-Dalgarno patch for the bacterial example."
+      },
+      {
+        "object_id": "OBJ_S30",
+        "scientific_identity": {
+          "name": "small ribosomal subunit (30S, E. coli example)",
+          "kind": "ribonucleoprotein_complex",
+          "origin_id": "entity_ribosome_small_subunit"
+        },
+        "scientific_properties": {
+          "organism_example": "E. coli 30S",
+          "function": "binds mRNA and anchors via Shine-Dalgarno interaction"
+        },
+        "anchors": [
+          "mRNA binding surface",
+          "rRNA complementarity to Shine-Dalgarno sequence"
+        ],
+        "visual_representation": "Small rounded subunit with an mRNA-binding groove and a labeled rRNA-contact patch."
+      },
+      {
+        "object_id": "OBJ_L50",
+        "scientific_identity": {
+          "name": "large ribosomal subunit (50S, E. coli example)",
+          "kind": "ribonucleoprotein_complex",
+          "origin_id": "entity_ribosome_large_subunit"
+        },
+        "scientific_properties": {
+          "organism_example": "E. coli 50S",
+          "function": "binds tRNAs, contains peptidyl transferase ribozyme"
+        },
+        "anchors": [
+          "A site",
+          "P site",
+          "E site",
+          "peptidyl transferase center"
+        ],
+        "visual_representation": "Large rounded subunit with three labeled tRNA sites (A, P, E) and a highlighted peptidyl transferase center."
+      },
+      {
+        "object_id": "OBJ_RIBOSOME",
+        "scientific_identity": {
+          "name": "intact ribosome",
+          "kind": "assembled_ribonucleoprotein_complex",
+          "origin_id": "entity_intact_ribosome"
+        },
+        "scientific_properties": {
+          "composition": "small + large subunit",
+          "sites": [
+            "A",
+            "P",
+            "E"
+          ]
+        },
+        "anchors": [
+          "A site",
+          "P site",
+          "E site",
+          "mRNA channel"
+        ],
+        "visual_representation": "Combined small and large subunits forming a ribosome with visible A/P/E sites and mRNA threaded between subunits."
+      },
+      {
+        "object_id": "OBJ_INITIATOR_TRNA",
+        "scientific_identity": {
+          "name": "initiator tRNA (fMet-tRNA_fMet in E. coli; Met-tRNAi in eukaryotes)",
+          "kind": "aminoacyl_trna",
+          "origin_id": "entity_initiator_tRNA"
+        },
+        "scientific_properties": {
+          "bacterial_example": "fMet-tRNA_fMet",
+          "eukaryotic_example": "Met-tRNAi",
+          "entry_site": "P site directly"
+        },
+        "anchors": [
+          "anticodon",
+          "amino-acid attachment end",
+          "P site"
+        ],
+        "visual_representation": "Cloverleaf tRNA with a labeled fMet/Met cargo and an anticodon that pairs with AUG."
+      },
+      {
+        "object_id": "OBJ_CHARGED_TRNA",
+        "scientific_identity": {
+          "name": "charged aminoacyl-tRNA",
+          "kind": "aminoacyl_trna",
+          "origin_id": "entity_charged_tRNA"
+        },
+        "scientific_properties": {
+          "function": "carries amino acid and anticodon",
+          "entry_site": "A site"
+        },
+        "anchors": [
+          "anticodon",
+          "amino-acid attachment end",
+          "A site",
+          "P site",
+          "E site"
+        ],
+        "visual_representation": "Cloverleaf tRNA with an amino-acid cargo and a three-nucleotide anticodon; shown entering A site, shifting to P, then E."
+      },
+      {
+        "object_id": "OBJ_GROWING_POLYPEPTIDE",
+        "scientific_identity": {
+          "name": "growing polypeptide",
+          "kind": "polypeptide_chain",
+          "origin_id": "entity_growing_polypeptide"
+        },
+        "scientific_properties": {
+          "direction": "N terminus to C terminus",
+          "linkage": "linked to P-site tRNA until translocation"
+        },
+        "anchors": [
+          "N terminus",
+          "C terminus",
+          "P-site tRNA linkage"
+        ],
+        "visual_representation": "Bead-like chain extending from the P-site tRNA, with labeled N and C termini."
+      },
+      {
+        "object_id": "OBJ_RELEASE_FACTOR",
+        "scientific_identity": {
+          "name": "release factor",
+          "kind": "protein",
+          "origin_id": "entity_release_factor"
+        },
+        "scientific_properties": {
+          "function": "recognizes stop codon in A site and triggers release"
+        },
+        "anchors": [
+          "A site",
+          "stop codon"
+        ],
+        "visual_representation": "Distinct protein shape entering the A site when a stop codon is present."
+      },
+      {
+        "object_id": "OBJ_INITIATION_FACTORS",
+        "scientific_identity": {
+          "name": "initiation factors",
+          "kind": "protein_complex",
+          "origin_id": "entity_initiation_factors"
+        },
+        "scientific_properties": {
+          "bacterial_example": "three initiation factors",
+          "function": "help initiation complex assemble"
+        },
+        "anchors": [
+          "initiation complex"
+        ],
+        "visual_representation": "Small helper protein shapes near the small subunit during initiation, labeled generically."
+      },
+      {
+        "object_id": "OBJ_SHINE_DALGARNO",
+        "scientific_identity": {
+          "name": "Shine-Dalgarno sequence",
+          "kind": "rna_motif",
+          "origin_id": "entity_shine_dalgarno_sequence"
+        },
+        "scientific_properties": {
+          "location": "upstream of first AUG in E. coli mRNA",
+          "function": "base-pairs with rRNA to anchor 30S subunit"
+        },
+        "anchors": [
+          "upstream mRNA leader",
+          "rRNA contact"
+        ],
+        "visual_representation": "Highlighted AGGAGG patch upstream of AUG with a dashed base-pairing connection to the small subunit."
+      }
+    ],
+    "relations": [
+      {
+        "source": "OBJ_S30",
+        "target": "OBJ_mRNA",
+        "type": "binds_mRNA_template"
+      },
+      {
+        "source": "OBJ_SHINE_DALGARNO",
+        "target": "OBJ_S30",
+        "type": "base_pairs_with_rRNA_anchoring_30S"
+      },
+      {
+        "source": "OBJ_INITIATOR_TRNA",
+        "target": "OBJ_mRNA",
+        "type": "anticodon_pairs_with_AUG_start_codon"
+      },
+      {
+        "source": "OBJ_L50",
+        "target": "OBJ_RIBOSOME",
+        "type": "assembles_with_S30_to_form_intact_ribosome"
+      },
+      {
+        "source": "OBJ_CHARGED_TRNA",
+        "target": "OBJ_mRNA",
+        "type": "anticodon_pairs_with_codon_in_A_site"
+      },
+      {
+        "source": "OBJ_GROWING_POLYPEPTIDE",
+        "target": "OBJ_CHARGED_TRNA",
+        "type": "linked_to_P_site_tRNA_until_translocation"
+      },
+      {
+        "source": "OBJ_RELEASE_FACTOR",
+        "target": "OBJ_mRNA",
+        "type": "recognizes_stop_codon_in_A_site"
+      }
+    ],
+    "events": [
+      {
+        "event_id": "EV_initiation_complex_assembly",
+        "role": "initiation",
+        "description": "Small subunit, mRNA, initiation factors, GTP, and initiator tRNA assemble; initiator tRNA enters P site directly; large subunit joins to form intact ribosome.",
+        "state_before": "Separate small and large subunits; mRNA not fully engaged; no initiator tRNA in P site.",
+        "state_after": "Intact ribosome assembled on mRNA with initiator tRNA in P site and A site free."
+      },
+      {
+        "event_id": "EV_first_elongation_trna_entry",
+        "role": "codon_anticodon_recognition",
+        "description": "First charged tRNA enters the free A site and its anticodon pairs with the codon after AUG.",
+        "state_before": "A site free; initiator tRNA in P site.",
+        "state_after": "Charged tRNA in A site with anticodon-codon pairing."
+      },
+      {
+        "event_id": "EV_peptide_bond_formation",
+        "role": "peptide_bond_formation",
+        "description": "Peptidyl transferase catalyzes bond between A-site amino acid amino group and P-site amino acid carboxyl group; polypeptide remains linked to P-site tRNA until translocation.",
+        "state_before": "A-site tRNA carries one amino acid; P-site tRNA carries initiator amino acid/polypeptide.",
+        "state_after": "Peptide bond formed; growing polypeptide linked to P-site tRNA; A-site tRNA now uncharged or shortened."
+      },
+      {
+        "event_id": "EV_translocation",
+        "role": "translocation",
+        "description": "Ribosome advances by three bases in the 3' direction; tRNAs shift from A to P and P to E.",
+        "state_before": "tRNA in A site; peptidyl-tRNA in P site; E site may be empty.",
+        "state_after": "Peptidyl-tRNA in P site; former P-site tRNA in E site; A site free for next charged tRNA."
+      },
+      {
+        "event_id": "EV_e_site_release",
+        "role": "elongation_cycle",
+        "description": "Former P-site tRNA in E site detaches from amino acid and is expelled.",
+        "state_before": "Uncharged or detached tRNA in E site.",
+        "state_after": "E site empty; tRNA released."
+      },
+      {
+        "event_id": "EV_elongation_repeat",
+        "role": "elongation_cycle",
+        "description": "Cycle repeats: charged tRNA entry at A site, peptide bond formation, translocation, E-site release.",
+        "state_before": "Peptidyl-tRNA in P site; A site free.",
+        "state_after": "Polypeptide extended by one amino acid; ribosome advanced one codon."
+      },
+      {
+        "event_id": "EV_termination",
+        "role": "termination",
+        "description": "Stop codon in A site recognized by release factor; polypeptide released; subunits dissociate from mRNA and each other.",
+        "state_before": "Stop codon in A site; peptidyl-tRNA in P site.",
+        "state_after": "Polypeptide released; ribosome subunits dissociate."
+      }
+    ]
+  },
+  "normal_storyboard": {
+    "title": "Protein translation: initiation, elongation, and termination",
+    "audience": "grades_10_12",
+    "grounding_evidence_ids": [
+      "E_a415a44ba2f3"
+    ],
+    "scenes": [
+      {
+        "scene_id": "NS1",
+        "description": "Show an E. coli mRNA with 5' and 3' labels, a highlighted Shine-Dalgarno sequence upstream of AUG, and separate 30S and 50S subunits.",
+        "scientific_points": [
+          "mRNA is read 5' to 3'.",
+          "Shine-Dalgarno sequence is upstream of the first AUG in E. coli.",
+          "Small subunit binds mRNA; large subunit binds tRNAs."
+        ],
+        "simplification_note": "Bacterial example; eukaryotic initiation is not shown in detail."
+      },
+      {
+        "scene_id": "NS2",
+        "description": "Initiation complex forms: 30S binds mRNA; Shine-Dalgarno base-pairs with rRNA; initiation factors and GTP shown generically; fMet-tRNA enters P site directly; 50S joins to form intact ribosome with A, P, E sites.",
+        "scientific_points": [
+          "Initiator tRNA enters P site directly, leaving A site free.",
+          "Intact ribosome forms after large subunit joins.",
+          "E. coli uses fMet-tRNA and Shine-Dalgarno anchoring."
+        ],
+        "simplification_note": "Eukaryotic Met-tRNAi and 80S ribosome mentioned in caption, but detailed eIF/scanning omitted."
+      },
+      {
+        "scene_id": "NS3",
+        "description": "First elongation: a charged tRNA enters the free A site; its anticodon pairs with the mRNA codon after AUG.",
+        "scientific_points": [
+          "Charged tRNA enters A site.",
+          "Anticodon-codon complementary base pairing."
+        ],
+        "simplification_note": "Elongation factors and GTP hydrolysis shown only as energetic context, not molecular detail."
+      },
+      {
+        "scene_id": "NS4",
+        "description": "Peptide bond formation: peptidyl transferase in 50S catalyzes bond between A-site amino acid and P-site amino acid; growing polypeptide remains linked to P-site tRNA until translocation.",
+        "scientific_points": [
+          "Peptidyl transferase is an RNA-based ribozyme in the large subunit.",
+          "Polypeptide remains linked to P-site tRNA until translocation."
+        ],
+        "simplification_note": "No kinetic rate constants beyond the cited 0.05 s per amino acid are shown."
+      },
+      {
+        "scene_id": "NS5",
+        "description": "Translocation: ribosome advances three bases in the 3' direction; tRNAs shift A to P and P to E; former P-site tRNA enters E site and is expelled.",
+        "scientific_points": [
+          "Translocation moves ribosome by three bases in 3' direction.",
+          "Order: A-site entry, peptide bond, translocation, E-site exit."
+        ],
+        "simplification_note": "Steps are compressed for clarity; GTP hydrolysis and elongation factor names omitted."
+      },
+      {
+        "scene_id": "NS6",
+        "description": "Elongation cycle repeats, extending polypeptide from N terminus to C terminus while mRNA is read 5' to 3'.",
+        "scientific_points": [
+          "mRNA read 5' to 3'; polypeptide synthesized N to C terminus.",
+          "Multiple cycles add amino acids."
+        ],
+        "simplification_note": "Rate shown qualitatively; only cited 0.05 s per amino acid may be mentioned."
+      },
+      {
+        "scene_id": "NS7",
+        "description": "Termination: stop codon enters A site; release factor recognizes it; polypeptide detaches from P-site tRNA and is released; small and large subunits dissociate.",
+        "scientific_points": [
+          "Stop codons UAA, UAG, UGA have no complementary tRNA.",
+          "Release factors trigger polypeptide release and subunit dissociation."
+        ],
+        "simplification_note": "Prokaryotic and eukaryotic release factors shown generically."
+      },
+      {
+        "scene_id": "NS8",
+        "description": "Context panel: polyribosome on one mRNA; in prokaryotes transcription and translation can occur concurrently; in eukaryotes they cannot because RNA processing and nuclear export are required.",
+        "scientific_points": [
+          "Polyribosome: many ribosomes translate one mRNA in same direction.",
+          "Prokaryotic transcription-translation coupling is possible; eukaryotic is not."
+        ],
+        "simplification_note": "Selenocysteine/pyrrolysine recoding mentioned only as text exception, not animated."
+      }
+    ]
+  },
+  "incorrect_storyboard": {
+    "title": "Protein translation: single altered storyboard for review testing",
+    "audience": "grades_10_12",
+    "altered_claim": "The incorrect storyboard changes the source-supported relationship that the initiator tRNA enters the P site directly. It instead depicts the initiator tRNA entering the A site first, then shifting to the P site.",
+    "exact_quote": "During initiation complex formation, bacterial fMet−tRNA fMet or eukaryotic Met-tRNAi enters the P site directly without first entering the A site, providing a free A site ready to accept the tRNA corresponding to the first codon after the AUG.",
+    "expected_violation": "Violates contract constraint C4 event_order for E. coli initiation: initiator_tRNA_enters_P_site must occur without prior A-site entry and must leave A site free for the first elongation tRNA.",
+    "scenes": [
+      {
+        "scene_id": "IS1",
+        "description": "Same as normal scene NS1: E. coli mRNA with Shine-Dalgarno sequence, AUG, separate 30S and 50S subunits.",
+        "scientific_points": [
+          "mRNA read 5' to 3'.",
+          "Shine-Dalgarno upstream of AUG in E. coli."
+        ]
+      },
+      {
+        "scene_id": "IS2",
+        "description": "Incorrect initiation: fMet-tRNA is shown entering the A site first, then shifting to the P site before the large subunit joins.",
+        "scientific_points": [
+          "Initiator tRNA incorrectly shown entering A site first."
+        ],
+        "expected_violation": "C4 temporal order: initiator_tRNA_enters_P_site should occur without prior A-site entry."
+      },
+      {
+        "scene_id": "IS3",
+        "description": "Rest of elongation and termination follow normal storyboard NS3–NS7.",
+        "scientific_points": [
+          "Charged tRNA enters A site; peptide bond; translocation; termination."
+        ]
+      }
+    ]
+  },
+  "storyboard_reviews": [
+    {
+      "storyboard_id": "normal_storyboard",
+      "decision": "REVISE",
+      "issues": [
+        "Eukaryotic initiation is only mentioned in a caption; the user asked to identify organism-specific initiation simplifications, so a clearer explicit comparison panel is needed.",
+        "Constraint C9 (Shine-Dalgarno anchoring) is marked HUMAN verification; the storyboard should include a reviewer note that this relation is based on cited text and is not independently visualized in a rendered artifact.",
+        "The normal storyboard is a planned abstract sequence, not a rendered observation; no runtime trace exists to verify event order or visual semantics."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E_a415a44ba2f3",
+          "quote": "During initiation complex formation, bacterial fMet−tRNA fMet or eukaryotic Met-tRNAi enters the P site directly without first entering the A site, providing a free A site ready to accept the tRNA corresponding to the first codon after the AUG."
+        },
+        {
+          "evidence_id": "E_a415a44ba2f3",
+          "quote": "In E. coli mRNA, a leader sequence upstream of the first AUG codon, called the Shine-Dalgarno sequence (also known as the ribosomal binding site AGGAGG), interacts through complementary base pairing with the rRNA molecules that compose the ribosome."
+        }
+      ],
+      "contract_goal_coverage": {
+        "decision": "REVIEW_INCOMPLETE",
+        "missing_goals": []
+      }
+    },
+    {
+      "storyboard_id": "incorrect_storyboard",
+      "decision": "REVISE",
+      "issues": [
+        "Contains one deliberately altered scientific relationship: initiator tRNA shown entering A site first.",
+        "This violates C4 event_order and would mislead students about the free A site available for the first elongation tRNA.",
+        "Must not be used as an educational artifact; only as a negative test case."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E_a415a44ba2f3",
+          "quote": "During initiation complex formation, bacterial fMet−tRNA fMet or eukaryotic Met-tRNAi enters the P site directly without first entering the A site, providing a free A site ready to accept the tRNA corresponding to the first codon after the AUG."
+        }
+      ],
+      "contract_goal_coverage": {
+        "decision": "REVIEW_INCOMPLETE",
+        "missing_goals": []
+      }
+    }
+  ],
+  "reference_events": [
+    {
+      "event_id": "REF_EVENT_initiation_complex",
+      "evidence_id": "E_a415a44ba2f3",
+      "exact_quote": "In E. coli , this complex involves the small 30S ribosome, the mRNA template, three initiation factors that help the ribosome assemble correctly, guanosine triphosphate (GTP) that acts as an energy source, and a special initiator tRNA carrying N -formyl-methionine(fMet-tRNA fMet )",
+      "description": "E. coli initiation complex includes 30S subunit, mRNA, three initiation factors, GTP, and fMet-tRNA_fMet."
+    },
+    {
+      "event_id": "REF_EVENT_shine_dalgarno_anchor",
+      "evidence_id": "E_a415a44ba2f3",
+      "exact_quote": "This interaction anchors the 30S ribosomal subunit at the correct location on the mRNA template.",
+      "description": "Shine-Dalgarno base-pairing anchors the 30S subunit on mRNA."
+    },
+    {
+      "event_id": "REF_EVENT_large_subunit_join",
+      "evidence_id": "E_a415a44ba2f3",
+      "exact_quote": "At this point, the 50S ribosomal subunit then binds to the initiation complex, forming an intact ribosome.",
+      "description": "50S subunit joins the initiation complex to form an intact ribosome."
+    },
+    {
+      "event_id": "REF_EVENT_initiator_P_site_direct",
+      "evidence_id": "E_a415a44ba2f3",
+      "exact_quote": "During initiation complex formation, bacterial fMet−tRNA fMet or eukaryotic Met-tRNAi enters the P site directly without first entering the A site, providing a free A site ready to accept the tRNA corresponding to the first codon after the AUG.",
+      "description": "Initiator tRNA enters P site directly, leaving A site free."
+    },
+    {
+      "event_id": "REF_EVENT_tRNA_anticodon_pairing",
+      "evidence_id": "E_a415a44ba2f3",
+      "exact_quote": "The anticodon is a three-nucleotide sequence that bonds with an mRNA codon through complementary base pairing.",
+      "description": "tRNA anticodon pairs with mRNA codon by complementary base pairing."
+    },
+    {
+      "event_id": "REF_EVENT_elongation_order",
+      "evidence_id": "E_a415a44ba2f3",
+      "exact_quote": "During each translocation event, the charged tRNAs enter at the A site, then shift to the P site, and then finally to the E site for removal.",
+      "description": "Charged tRNAs enter A site, shift to P site, then E site for removal."
+    },
+    {
+      "event_id": "REF_EVENT_peptide_bond",
+      "evidence_id": "E_a415a44ba2f3",
+      "exact_quote": "Peptide bonds form between the amino group of the amino acid attached to the A-site tRNA and the carboxyl group of the amino acid attached to the P-site tRNA.",
+      "description": "Peptide bond forms between A-site amino acid amino group and P-site amino acid carboxyl group."
+    },
+    {
+      "event_id": "REF_EVENT_translocation_3_bases",
+      "evidence_id": "E_a415a44ba2f3",
+      "exact_quote": "Ribosomal movements, or steps, are induced by conformational changes that advance the ribosome by three bases in the 3’ direction.",
+      "description": "Ribosome advances by three bases in the 3' direction."
+    },
+    {
+      "event_id": "REF_EVENT_polypeptide_direction",
+      "evidence_id": "E_a415a44ba2f3",
+      "exact_quote": "Each mRNA molecule is simultaneously translated by many ribosomes, all synthesizing protein in the same direction: reading the mRNA from 5’ to 3’ and synthesizing the polypeptide from the N terminus to the C terminus.",
+      "description": "mRNA read 5' to 3'; polypeptide synthesized N terminus to C terminus."
+    },
+    {
+      "event_id": "REF_EVENT_e_site_release",
+      "evidence_id": "E_a415a44ba2f3",
+      "exact_quote": "As the ribosome steps across the mRNA, the former P-site tRNA enters the E site, detaches from the amino acid, and is expelled.",
+      "description": "Former P-site tRNA enters E site, detaches, and is expelled."
+    },
+    {
+      "event_id": "REF_EVENT_termination_release",
+      "evidence_id": "E_a415a44ba2f3",
+      "exact_quote": "On aligning with the A site, these nonsense codons are recognized by release factors in prokaryotes and eukaryotes that result in the P-site amino acid detaching from its tRNA, releasing the newly made polypeptide.",
+      "description": "Stop codon in A site recognized by release factors; polypeptide released."
+    },
+    {
+      "event_id": "REF_EVENT_subunit_dissociation",
+      "evidence_id": "E_a415a44ba2f3",
+      "exact_quote": "The small and large ribosomal subunits dissociate from the mRNA and from each other; they are recruited almost immediately into another translation init iation complex.",
+      "description": "Small and large subunits dissociate from mRNA and each other after termination."
+    }
+  ]
+}

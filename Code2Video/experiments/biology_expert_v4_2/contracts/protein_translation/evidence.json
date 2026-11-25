@@ -1,0 +1,157 @@
+[
+  {
+    "evidence_id": "E_a415a44ba2f3",
+    "url": "https://bio.libretexts.org/Bookshelves/Microbiology/Microbiology_(OpenStax)/11%3A_Mechanisms_of_Microbial_Genetics/11.04%3A_Protein_Synthesis_(Translation)",
+    "title": "11.4: Protein Synthesis (Translation) - Biology LibreTexts",
+    "author_or_institution": "bio.libretexts.org",
+    "source_type": "retrieved_scientific_webpage",
+    "biological_scope": "Requires independent scope verification against quoted passages",
+    "accessed_utc": "2026-11-25T05:11:53Z",
+    "content_sha256": "69f11869dbec3098aaf0b54f62f740c69c4eb66f1c03f6d62249580e47649fc4",
+    "saved_text": "/autodl-tmp/code2biovideo/Code2Video-v4.2-workspace/experiments/biology_expert_v4_2/references/retrieval/protein_translation/E_a415a44ba2f3.txt",
+    "passages": [
+      {
+        "location": "paragraph_0",
+        "text": "The synthesis of proteins consumes more of a cell’s energy than any other metabolic process. In turn, proteins account for more mass than any other macromolecule of living organisms. They perform virtually every function of a cell, serving as both functional (e.g., enzymes) and structural elements. The process of translation, or protein synthesis, the second part of gene expression, involves the decoding by a ribosome of an mRNA message into a polypeptide product."
+      },
+      {
+        "location": "paragraph_1",
+        "text": "Translation of the mRNA template converts nucleotide-based genetic information into the “language” of amino acids to create a protein product. A protein sequence consists of 20 commonly occurring amino acids. Each amino acid is defined within the mRNA by a triplet of nucleotides called a codon. The relationship between an mRNA codon and its corresponding amino acid is called the genetic code."
+      },
+      {
+        "location": "paragraph_2",
+        "text": "The three-nucleotide code means that there is a total of 64 possible combinations (4 3 , with four different nucleotides possible at each of the three different positions within the codon). This number is greater than the number of amino acids and a given amino acid is encoded by more than one codon (Figure \\(\\PageIndex{1}\\)). This redundancy in the genetic code is called degeneracy. Typically, whereas the first two positions in a codon are important for determining which amino acid will be incorporated into a growing polypeptide, the third position, called the wobble position, is less critical. In some cases, if the nucleotide in the third position is changed, the same amino acid is still incorporated."
+      },
+      {
+        "location": "paragraph_3",
+        "text": "Whereas 61 of the 64 possible triplets code for amino acids, three of the 64 codons do not code for an amino acid; they terminate protein synthesis, releasing the polypeptide from the translation machinery. These are called stop codon s or nonsense codon s . Another codon, AUG, also has a special function. In addition to specifying the amino acid methionine, it also typically serves as the start codon to initiate translation. The reading frame, the way nucleotides in mRNA are grouped into codons, for translation is set by the AUG start codon near the 5’ end of the mRNA. Each set of three nucleotides following this start codon is a codon in the mRNA message."
+      },
+      {
+        "location": "paragraph_4",
+        "text": "The genetic code is nearly universal. With a few exceptions, virtually all species use the same genetic code for protein synthesis, which is powerful evidence that all extant life on earth shares a common origin. However, unusual amino acids such as selenocysteine and pyrrolysine have been observed in archaea and bacteria. In the case of selenocysteine, the codon used is UGA (normally a stop codon). However, UGA can encode for selenocysteine using a stem-loop structure (known as the selenocysteine insertion sequence, or SECIS element), which is found at the 3’ untranslated region of the mRNA. Pyrrolysine uses a different stop codon, UAG. The incorporation of pyrrolysine requires the pylS gene and a unique transfer RNA (tRNA) with a CUA anticodon."
+      },
+      {
+        "location": "paragraph_5",
+        "text": "Figure \\(\\PageIndex{1}\\): This figure shows the genetic code for translating each nucleotide triplet in mRNA into an amino acid or a termination signal in a nascent protein. The first letter of a codon is shown vertically on the left, the second letter of a codon is shown horizontally across the top, and the third letter of a codon is shown vertically on the right. (credit: modification of work by National Institutes of Health)"
+      },
+      {
+        "location": "paragraph_6",
+        "text": "In addition to the mRNA template, many molecules and macromolecules contribute to the process of translation. The composition of each component varies across taxa; for instance, ribosomes may consist of different numbers of ribosomal RNAs (rRNAs) and polypeptides depending on the organism. However, the general structures and functions of the protein synthesis machinery are comparable from bacteria to human cells. Translation requires the input of an mRNA template, ribosomes, tRNAs, and various enzymatic factors."
+      },
+      {
+        "location": "paragraph_7",
+        "text": "A ribosome is a complex macromolecule composed of catalytic rRNAs (called ribozymes) and structural rRNAs, as well as many distinct polypeptides. Mature rRNAs make up approximately 50% of each ribosome. Prokaryotes have 70S ribosomes, whereas eukaryotes have 80S ribosomes in the cytoplasm and rough endoplasmic reticulum, and 70S ribosomes in mitochondria and chloroplasts. Ribosomes dissociate into large and small subunits when they are not synthesizing proteins and reassociate during the initiation of translation. In E. coli , the small subunit is described as 30S (which contains the 16S rRNA subunit), and the large subunit is 50S (which contains the 5S and 23S rRNA subunits), for a total of 70S (Svedberg units are not additive). Eukaryote ribosomes have a small 40S subunit (which contains the 18S rRNA subunit) and a large 60S subunit (which contains the 5S, 5.8S and 28S rRNA subunits), for a total of 80S. The small subunit is responsible for binding the mRNA template, whereas the large subunit binds tRNAs (discussed in the next subsection)."
+      },
+      {
+        "location": "paragraph_8",
+        "text": "Each mRNA molecule is simultaneously translated by many ribosomes, all synthesizing protein in the same direction: reading the mRNA from 5’ to 3’ and synthesizing the polypeptide from the N terminus to the C terminus. The complete structure containing an mRNA with multiple associated ribosomes is called a polyribosome (or polysome). In both bacteria and archaea, before transcriptional termination occurs, each protein-encoding transcript is already being used to begin synthesis of numerous copies of the encoded polypeptide(s) because the processes of transcription and translation can occur concurrently, forming polyribosomes (Figure \\(\\PageIndex{2}\\)). The reason why transcription and translation can occur simultaneously is because both of these processes occur in the same 5’ to 3’ direction, they both occur in the cytoplasm of the cell, and because the RNA transcript is not processed once it is transcribed. This allows a prokaryotic cell to respond to an environmental signal requiring new proteins very quickly. In contrast, in eukaryotic cells, simultaneous transcription and translation is not possible. Although polyribosomes also form in eukaryotes, they cannot do so until RNA synthesis is complete and the RNA molecule has been modified and transported out of the nucleus."
+      },
+      {
+        "location": "paragraph_9",
+        "text": "Figure \\(\\PageIndex{2}\\): In prokaryotes, multiple RNA polymerases can transcribe a single bacterial gene while numerous ribosomes concurrently translate the mRNA transcripts into polypeptides. In this way, a specific protein can rapidly reach a high concentration in the bacterial cell."
+      },
+      {
+        "location": "paragraph_10",
+        "text": "Transfer RNAs (tRNAs) are structural RNA molecules and, depending on the species, many different types of tRNAs exist in the cytoplasm. Bacterial species typically have between 60 and 90 types. Serving as adaptors, each tRNA type binds to a specific codon on the mRNA template and adds the corresponding amino acid to the polypeptide chain. Therefore, tRNAs are the molecules that actually “translate” the language of RNA into the language of proteins. As the adaptor molecules of translation, it is surprising that tRNAs can fit so much specificity into such a small package. The tRNA molecule interacts with three factors: aminoacyl tRNA synthetases, ribosomes, and mRNA."
+      },
+      {
+        "location": "paragraph_11",
+        "text": "Mature tRNAs take on a three-dimensional structure when complementary bases exposed in the single-stranded RNA molecule hydrogen bond with each other (Figure \\(\\PageIndex{3}\\)). This shape positions the amino-acid binding site, called the CCA amino acid binding end, which is a cytosine-cytosine-adenine sequence at the 3’ end of the tRNA, and the anticodonat the other end. The anticodon is a three-nucleotide sequence that bonds with an mRNA codon through complementary base pairing."
+      },
+      {
+        "location": "paragraph_12",
+        "text": "An amino acid is added to the end of a tRNA molecule through the process of tRNA “charging,” during which each tRNA molecule is linked to its correct or cognate amino acid by a group of enzymes called aminoacyl tRNA synthetases. At least one type of aminoacyl tRNA synthetase exists for each of the 20 amino acids. During this process, the amino acid is first activated by the addition of adenosine monophosphate (AMP) and then transferred to the tRNA, making it a charged tRNA, and AMP is released."
+      },
+      {
+        "location": "paragraph_13",
+        "text": "Figure \\(\\PageIndex{3}\\): (a) After folding caused by intramolecular base pairing, a tRNA molecule has one end that contains the anticodon, which interacts with the mRNA codon, and the CCA amino acid binding end. (b) A space-filling model is helpful for visualizing the three-dimensional shape of tRNA. (c) Simplified models are useful when drawing complex processes such as protein synthesis."
+      },
+      {
+        "location": "paragraph_14",
+        "text": "Translation is similar in prokaryotes and eukaryotes. Here we will explore how translation occurs in E. coli , a representative prokaryote, and specify any differences between bacterial and eukaryotic translation."
+      },
+      {
+        "location": "paragraph_15",
+        "text": "The initiation of protein synthesis begins with the formation of an initiation complex. In E. coli , this complex involves the small 30S ribosome, the mRNA template, three initiation factors that help the ribosome assemble correctly, guanosine triphosphate (GTP) that acts as an energy source, and a special initiator tRNA carrying N -formyl-methionine(fMet-tRNA fMet ) (Figure \\(\\PageIndex{4}\\)). The initiator tRNA interacts with the start codon AUG of the mRNA and carries a formylated methionine (fMet). Because of its involvement in initiation, fMet is inserted at the beginning (N terminus) of every polypeptide chain synthesized by E. coli . In E. coli mRNA, a leader sequence upstream of the first AUG codon, called the Shine-Dalgarno sequence (also known as the ribosomal binding site AGGAGG), interacts through complementary base pairing with the rRNA molecules that compose the ribosome. This interaction anchors the 30S ribosomal subunit at the correct location on the mRNA template. At this point, the 50S ribosomal subunit then binds to the initiation complex, forming an intact ribosome."
+      },
+      {
+        "location": "paragraph_16",
+        "text": "In eukaryotes, initiation complex formation is similar, with the following differences:"
+      },
+      {
+        "location": "paragraph_17",
+        "text": "Figure \\(\\PageIndex{4}\\): Translation in bacteria begins with the formation of the initiation complex, which includes the small ribosomal subunit, the mRNA, the initiator tRNA carrying N-formyl-methionine, and initiation factors. Then the 50S subunit binds, forming an intact ribosome."
+      },
+      {
+        "location": "paragraph_18",
+        "text": "In prokaryotes and eukaryotes, the basics of elongation of translation are the same. In E. coli , the binding of the 50S ribosomal subunit to produce the intact ribosome forms three functionally important ribosomal sites: The A (aminoacyl) site binds incoming charged aminoacyl tRNAs. The P (peptidyl) site binds charged tRNAs carrying amino acids that have formed peptide bonds with the growing polypeptide chain but have not yet dissociated from their corresponding tRNA. The E (exit) site releases dissociated tRNAs so that they can be recharged with free amino acids. There is one notable exception to this assembly line of tRNAs: During initiation complex formation, bacterial fMet−tRNA fMet or eukaryotic Met-tRNAi enters the P site directly without first entering the A site, providing a free A site ready to accept the tRNA corresponding to the first codon after the AUG."
+      },
+      {
+        "location": "paragraph_19",
+        "text": "Elongation proceeds with single-codon movements of the ribosome each called a translocation event. During each translocation event, the charged tRNAs enter at the A site, then shift to the P site, and then finally to the E site for removal. Ribosomal movements, or steps, are induced by conformational changes that advance the ribosome by three bases in the 3’ direction. Peptide bonds form between the amino group of the amino acid attached to the A-site tRNA and the carboxyl group of the amino acid attached to the P-site tRNA. The formation of each peptide bond is catalyzed by peptidyl transferase, an RNA-based ribozyme that is integrated into the 50S ribosomal subunit. The amino acid bound to the P-site tRNA is also linked to the growing polypeptide chain. As the ribosome steps across the mRNA, the former P-site tRNA enters the E site, detaches from the amino acid, and is expelled. Several of the steps during elongation, including binding of a charged aminoacyl tRNA to the A site and translocation, require energy derived from GTP hydrolysis, which is catalyzed by specific elongation factors. Amazingly, the E. coli translation apparatus takes only 0.05 seconds to add each amino acid, meaning that a 200 amino-acid protein can be translated in just 10 seconds."
+      },
+      {
+        "location": "paragraph_20",
+        "text": "The termination of translation occurs when a nonsense codon (UAA, UAG, or UGA) is encountered for which there is no complementary tRNA. On aligning with the A site, these nonsense codons are recognized by release factors in prokaryotes and eukaryotes that result in the P-site amino acid detaching from its tRNA, releasing the newly made polypeptide. The small and large ribosomal subunits dissociate from the mRNA and from each other; they are recruited almost immediately into another translation init iation complex."
+      },
+      {
+        "location": "paragraph_21",
+        "text": "In summary, there are several key features that distinguish prokaryotic gene expression from that seen in eukaryotes. These are illustrated in Figure \\(\\PageIndex{5}\\) and listed in Figure \\(\\PageIndex{6}\\)."
+      },
+      {
+        "location": "paragraph_22",
+        "text": "Figure \\(\\PageIndex{5}\\): (a) In prokaryotes, the processes of transcription and translation occur simultaneously in the cytoplasm, allowing for a rapid cellular response to an environmental cue. (b) In eukaryotes, transcription is localized to the nucleus and translation is localized to the cytoplasm, separating these processes and necessitating RNA processing for stability."
+      },
+      {
+        "location": "paragraph_23",
+        "text": "Figure \\(\\PageIndex{6}\\): Comparison of translation in bacteria versus eukaryotes"
+      },
+      {
+        "location": "paragraph_24",
+        "text": "During and after translation, polypeptides may need to be modified before they are biologically active. Post-translational modifications include:"
+      }
+    ],
+    "figures": [
+      {
+        "url": "https://bio.libretexts.org/@api/deki/files/8742/OSC_Microbio_11_04_GenCode.jpg?revision=1",
+        "caption": "Figure \\(\\PageIndex{1}\\): This figure shows the genetic code for translating each nucleotide triplet in mRNA into an amino acid or a termination signal in a nascent protein. The first letter of a codon is shown vertically on the left, the second letter of a codon is shown horizontally across the top, and the third letter of a codon is shown vertically on the right. (credit: modification of work by National Institutes of Health)",
+        "alt": "The codon table. On the left is the first letter of the codon (from top to bottom – U, C, A, G). On the top is the second letter (left to right U, C, A, G). On the right is the third letter (in each row, this is designated from top to bottom as U, C, A, G. UUU and UUC are Phe. UUA and UUG are Leu. UCU, UCC, UCA and UCG are Ser. UAU and UAC are Tyr. UAA and UAG are stop. UGU and UGC are Cys. UGA is stop. UGG is Trp. CUU, CUC, CUA, and CUG are Leu. CC, CCC, CCA, and CCG are Pro. CAU and CAC are his. CAA and CAG are Gln. CGU, CGC, CGA, CGG are Arg. AUU, AUC, AUA are Ile, AUG is Met and start. ACU, ACC, ACA, ACG is Thr. AAU AAc, is Asn. AAA, AAG is Lys. AGU, AGC is SEr. AGA, AG is ARg. GUU, GUC, GUA, GUG is Val. GCU, GCC, GCA, GCG, is ala. GAU, GAC is Asp. GAA, GAG is Glu. GGU, GGC, GGA, GGG is Gly.",
+        "source_page": "https://bio.libretexts.org/Bookshelves/Microbiology/Microbiology_(OpenStax)/11%3A_Mechanisms_of_Microbial_Genetics/11.04%3A_Protein_Synthesis_(Translation)"
+      },
+      {
+        "url": "https://bio.libretexts.org/@api/deki/files/8743/OSC_Microbio_11_04_Cotrantxn.jpg?revision=1",
+        "caption": "Figure \\(\\PageIndex{2}\\): In prokaryotes, multiple RNA polymerases can transcribe a single bacterial gene while numerous ribosomes concurrently translate the mRNA transcripts into polypeptides. In this way, a specific protein can rapidly reach a high concentration in the bacterial cell.",
+        "alt": "Diagram showing a double strand of DNA with RNA polymerase and a newly forming RNA strand. As the RNA elongates ribosomes bind and begin forming proteins. As the RNA gets longer, more and more ribosomes are bound in a row; this is called a polyribosome.",
+        "source_page": "https://bio.libretexts.org/Bookshelves/Microbiology/Microbiology_(OpenStax)/11%3A_Mechanisms_of_Microbial_Genetics/11.04%3A_Protein_Synthesis_(Translation)"
+      },
+      {
+        "url": "https://bio.libretexts.org/@api/deki/files/8744/OSC_Microbio_11_04_tRNA.jpg?revision=1",
+        "caption": "Figure \\(\\PageIndex{3}\\): (a) After folding caused by intramolecular base pairing, a tRNA molecule has one end that contains the anticodon, which interacts with the mRNA codon, and the CCA amino acid binding end. (b) A space-filling model is helpful for visualizing the three-dimensional shape of tRNA. (c) Simplified models are useful when drawing complex processes such as protein synthesis.",
+        "alt": "Three different drawings of tRNA. A) shows a single strand folded into a cross shape with intramolecular base pairing. The 3’ end at the top is labeled amino acid attachment site and has the sequence ACC. The 5’ end is also at the top. At the base of the cross is a three letter grouping called anticodon. This is complementary to a three letter set on the mRNA called a codon. B) shows a space filling 3-D model that is shaped like an L. One end is the amino acid attachment site and the other is the anticodon. C) is a ver simplified drawing shaped like zigzag; one end is the amino acid attachment site and the other is the anticodon.",
+        "source_page": "https://bio.libretexts.org/Bookshelves/Microbiology/Microbiology_(OpenStax)/11%3A_Mechanisms_of_Microbial_Genetics/11.04%3A_Protein_Synthesis_(Translation)"
+      },
+      {
+        "url": "https://bio.libretexts.org/@api/deki/files/8745/OSC_Microbio_11_04_TlnInit.jpg?revision=1",
+        "caption": "Figure \\(\\PageIndex{4}\\): Translation in bacteria begins with the formation of the initiation complex, which includes the small ribosomal subunit, the mRNA, the initiator tRNA carrying N-formyl-methionine, and initiation factors. Then the 50S subunit binds, forming an intact ribosome.",
+        "alt": "Diagram showing translation. At the start codon of the mRNA (AUG) the following attach: a tRNA with the anticodon UAC and containing the first amino acid, the large ribosomal subunit (a dome) and the small ribosomal subunit (a flat oval). During initiation, translational complex forms, and tRNA brings the first amino acid in polypeptide chain to bind to start codon om mRNA. At this point the tRNA is attached to the middle binding site (P) of the ribosome. The 3 sites from left to right are E, P, A. During elongation, tRNAs bring amino acids one by one to add to polypeptide chain. In the diagram, a tRNA with a long chain of circles is in the P site, a tRNA with a single circle is in the A site, and a tRNA without any circles is leaving from the E site. During termination, release factor recognizes stop codon, translational complex dissociates, and complete polypeptide is released. In the diagram a tRNA with a long strand is attached to the P site and a release factor (red shape) is attached to the stop codon in the mRNA which is now under the A site. Next the completed polypeptide leaves and all the other components dissociate from each other.",
+        "source_page": "https://bio.libretexts.org/Bookshelves/Microbiology/Microbiology_(OpenStax)/11%3A_Mechanisms_of_Microbial_Genetics/11.04%3A_Protein_Synthesis_(Translation)"
+      },
+      {
+        "url": "https://bio.libretexts.org/@api/deki/files/8746/OSC_Microbio_11_04_ProkEuk.jpg?revision=1",
+        "caption": "Figure \\(\\PageIndex{5}\\): (a) In prokaryotes, the processes of transcription and translation occur simultaneously in the cytoplasm, allowing for a rapid cellular response to an environmental cue. (b) In eukaryotes, transcription is localized to the nucleus and translation is localized to the cytoplasm, separating these processes and necessitating RNA processing for stability.",
+        "alt": "a) Diagram of prokaryotic cell with a plasma membrane on the outside. The DNA is in the cytoplasm and the mRNA is being copied at the same time that ribosomes are building proteins of the developing mRNA. B) Diagram of a eukaryotic cell with a plasma membrane an a nucleus. The DNA is in the nucleus and pre-mRNA is made during transcription; this is then process into mature mRNA. The mature mRNA then leaves the nucleus and enters the cytoplasm where translation takes place. This is when ribosomes bind to the mRNA and make proteins.",
+        "source_page": "https://bio.libretexts.org/Bookshelves/Microbiology/Microbiology_(OpenStax)/11%3A_Mechanisms_of_Microbial_Genetics/11.04%3A_Protein_Synthesis_(Translation)"
+      },
+      {
+        "url": "https://bio.libretexts.org/@api/deki/files/8747/OSC_Microbio_11_04_ComTranTbl.jpg?revision=1",
+        "caption": "Figure \\(\\PageIndex{6}\\): Comparison of translation in bacteria versus eukaryotes",
+        "alt": "Table titled: Comparison of Translation in Bacteria Versus Eukaryotes. Bacteria have 70s ribosomes made of a 30s (small subunit) with 16SrRNA subunit and a 50S (large subunit) with 5S and 23S rRNA subunits. Eukaryotic ribosomes are 80S with 40s (small subunit) with 18s rRNA subunit and 60S (large subunit) with 5S, 5.8S, and 28S rRNA subunits. The amino acid carried by the initiator tRNA is fMet for bacteria and Met for Eukaryotes. Bacteria have a Shine-Delgarno sequence in their mRNA while Eukaryotes do not. Transcription and translation is simultaneous in bacteria but not in eukaryotes.",
+        "source_page": "https://bio.libretexts.org/Bookshelves/Microbiology/Microbiology_(OpenStax)/11%3A_Mechanisms_of_Microbial_Genetics/11.04%3A_Protein_Synthesis_(Translation)"
+      }
+    ],
+    "fact_support": [],
+    "conflicts": [],
+    "trust_limitations": "Publisher authority and exact quotes do not establish entailment; independent contract review required",
+    "status": "RETRIEVED"
+  }
+]

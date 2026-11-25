@@ -7,7 +7,7 @@ from .contracts import write,digest,schema_validate,ConstraintExecutor,Scientifi
 from .providers import parse_json
 
 class ScientificEvidenceRetriever:
- def __init__(self,root,limit=36,visual_limit=12):
+ def __init__(self,root,limit=60,visual_limit=12):
   self.root=Path(root);self.root.mkdir(parents=True,exist_ok=True);self.path=self.root/'network.json';self.rows=json.loads(self.path.read_text()) if self.path.exists() else [];self.limit=limit;self.visual_limit=visual_limit
  def get(self,url,kind='scientific'):
   host=urlparse(url).hostname
@@ -19,7 +19,10 @@ class ScientificEvidenceRetriever:
   try:
    response=requests.get(url,timeout=25,headers={'User-Agent':'Mozilla/5.0 (compatible; ScientificContractResearch/4.2)'},allow_redirects=False)
    row['http_status']=response.status_code;response.raise_for_status()
-   if response.is_redirect:raise ValueError('Redirect destination requires explicit fresh public validation')
+   if response.is_redirect:
+    destination=urljoin(url,response.headers.get('Location',''))
+    row.update(status='redirect',destination=destination);write(self.path,self.rows)
+    return self.get(destination,kind)
    row.update(status='ok',content_sha256=hashlib.sha256(response.content).hexdigest());return response
   except Exception as ex:row.update(status='UNVERIFIED',error=type(ex).__name__);raise
   finally:write(self.path,self.rows)
@@ -49,9 +52,49 @@ class ScientificEvidenceRetriever:
     response=self.get(url);data=response.json();search_records.append({'query':query,'service':'Europe PMC','results':data.get('resultList',{}).get('result',[])})
    except Exception as ex:failures.append({'url':url,'error':type(ex).__name__})
   evidence=[]
-  for url in urls[:3]:
+  # Public HTML search provides a recovery path when model URLs are nonexistent or blocked.
+  for query in plan.get('scientific_queries',[])[:1]:
+   try:
+    response=self.get('https://www.google.com/search?q='+quote(query+' textbook mechanism'))
+    soup=BeautifulSoup(response.text,'html.parser')
+    for link in soup.find_all('a'):
+     target=link.get('href','')
+     if target.startswith('/url?'):target=parse_qs(urlparse(target).query).get('q',[''])[0]
+     host=urlparse(target).hostname or ''
+     if target.startswith('https://') and host.endswith(('openstax.org','ncbi.nlm.nih.gov','genome.gov','yourgenome.org','bio.libretexts.org')) and target not in urls:urls.append(target)
+    search_records.append({'query':query,'service':'Google HTML','candidate_links':urls[3:9]})
+   except Exception as ex:failures.append({'source':'public HTML discovery','error':type(ex).__name__})
+  # Discover replacement chapter slugs from the actual candidate publisher table of contents.
+  for suggested in list(urls):
+   parsed=urlparse(suggested)
+   if '/pages/' not in parsed.path:continue
+   base=suggested.split('/pages/')[0]
+   try:
+    response=self.get(base);soup=BeautifulSoup(response.text,'html.parser');tokens=set(re.findall('[a-z]+',scope['topic'].lower()))
+    candidates=[]
+    for link in soup.find_all('a'):
+     target=urljoin(base,link.get('href',''));words=set(re.findall('[a-z]+',(target+' '+link.get_text(' ',strip=True)).lower()))
+     if '/pages/' in target and urlparse(target).hostname==parsed.hostname:candidates.append((len(tokens&words),target))
+    for score,target in sorted(set(candidates),reverse=True)[:2]:
+     if score>=2 and target not in urls:urls.append(target)
+    search_records.append({'service':'publisher_live_TOC','url':base,'discovered':urls[3:]})
+   except Exception as ex:failures.append({'source':base,'error':type(ex).__name__})
+  for url in urls[:9]:
    try:evidence.append(self.fetch(url,scope['topic_id']))
-   except Exception as ex:failures.append({'url':url,'error':type(ex).__name__})
+   except Exception as ex:
+    failures.append({'url':url,'error':type(ex).__name__})
+    # Chapter numbers can drift across textbook editions. Probe nearby section numbers
+    # using the agent-proposed semantic slug, never a prewritten topic URL catalogue.
+    if '/pages/' in url and getattr(getattr(ex,'response',None),'status_code',None)==404:
+     match=re.search(r'/pages/(\d+)-(\d+)-',url)
+     if match:
+      for offset in [1,-1]:
+       section=int(match.group(2))+offset
+       if section<1:continue
+       alt=url[:match.start(2)]+str(section)+url[match.end(2):]
+       try:
+        evidence.append(self.fetch(alt,scope['topic_id']));break
+       except Exception as alt_ex:failures.append({'url':alt,'error':type(alt_ex).__name__})
   result={'evidence':evidence,'failures':failures,'search_records':search_records,'research_status':'RETRIEVED' if evidence else 'UNVERIFIED','discovery':'Agent planned queries + live bibliographic search + content fetch, no legacy topic catalogue'}
   write(self.root/(scope['topic_id']+'_retrieval.json'),result);return result
  def visual(self,scope,plan,retrieval):

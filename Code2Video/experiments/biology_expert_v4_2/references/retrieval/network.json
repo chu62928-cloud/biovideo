@@ -1,0 +1,471 @@
+[
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=eukaryotic%20DNA%20replication%20fork%20mechanism%20leading%20lagging%20strand%20synthesis%20RNA%20primer%20removal%20FEN1%20RNase%20H%20nick%20sealing%20ligase%20I&format=json&pageSize=2",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T04:57:58Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "d0041c8f8868bef97024d7f356fc5185cad528531f9678b85c7c8602b471ddc4"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK26844/",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T04:58:17Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "44669d8e9170caf57d840f30dac64be06821f99ca361e81830926296fd5dc0b5"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK9940/",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T04:58:17Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "660cd5138a9ba6e1834761ec5bee88554e60c6081bd28af7b969f16e11d6df87"
+  },
+  {
+    "url": "https://openstax.org/books/biology-2e/pages/14-4-dna-replication-in-eukaryotes",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T04:58:18Z",
+    "status": "UNVERIFIED",
+    "http_status": 404,
+    "error": "HTTPError"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=eukaryotic%20DNA%20replication%20fork%20mechanism%20leading%20lagging%20strand%20synthesis%20RNA%20primer%20removal%20FEN1%20RNase%20H%20nick%20sealing%20ligase%20I&format=json&pageSize=2",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:00:10Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "4cd6794a684242e0c97a5b4f40c9440f7cd38830ac4328163dac72f08d68f043"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK26844/",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:00:27Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "2fc9974056225564d7c860f726aa5aac07f042db3906c84452c6a234ff2a52fe"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK9940/",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:00:28Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "91a5e30d9a6561a5a8497a7c586f8f16e1bee60a52793a75fb7afc8d60c248dd"
+  },
+  {
+    "url": "https://openstax.org/books/biology-2e/pages/14-4-dna-replication-in-eukaryotes",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:00:29Z",
+    "status": "UNVERIFIED",
+    "http_status": 404,
+    "error": "HTTPError"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=eukaryotic%20DNA%20replication%20fork%20mechanism%20leading%20lagging%20strand%20synthesis%20RNA%20primer%20removal%20FEN1%20RNase%20H%20nick%20sealing%20ligase%20I&format=json&pageSize=2",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:01:40Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "4cd6794a684242e0c97a5b4f40c9440f7cd38830ac4328163dac72f08d68f043"
+  },
+  {
+    "url": "https://openstax.org/books/biology-2e",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:01:45Z",
+    "status": "UNVERIFIED",
+    "http_status": 301,
+    "error": "ValueError"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK26844/",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:01:45Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "fda3d4141298301aea3b201665d94160940ee0fd2cbad2c79a2dd8d9b2174911"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK9940/",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:01:46Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "b7cf9c31bd2dd43657a812c0e1fc9ec8e153bcad277d0a23d2c37c3ed66f521a"
+  },
+  {
+    "url": "https://openstax.org/books/biology-2e/pages/14-4-dna-replication-in-eukaryotes",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:01:47Z",
+    "status": "UNVERIFIED",
+    "http_status": 404,
+    "error": "HTTPError"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=eukaryotic%20DNA%20replication%20fork%20mechanism%20leading%20lagging%20strand%20synthesis%20RNA%20primer%20removal%20FEN1%20RNase%20H%20nick%20sealing%20ligase%20I&format=json&pageSize=2",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:02:33Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "4cd6794a684242e0c97a5b4f40c9440f7cd38830ac4328163dac72f08d68f043"
+  },
+  {
+    "url": "https://openstax.org/books/biology-2e",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:02:54Z",
+    "status": "redirect",
+    "http_status": 301,
+    "destination": "https://openstax.org/details/books/biology-2e"
+  },
+  {
+    "url": "https://openstax.org/details/books/biology-2e",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:02:55Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "795bf23703807085d5abad5783d7d023fab1674c46d6f76622946a9c039428ea"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK26844/",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:02:57Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "ea3a66937fcd6ddc8d0783bdbd16fba3fa1cbba2504a98cf6a879d67ae132bd8"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK9940/",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:02:58Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "b9bb8d8c704f3850e12b441dfd42e6e739ec225f3629879799f873fcabd9ade9"
+  },
+  {
+    "url": "https://openstax.org/books/biology-2e/pages/14-4-dna-replication-in-eukaryotes",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:02:58Z",
+    "status": "UNVERIFIED",
+    "http_status": 404,
+    "error": "HTTPError"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=eukaryotic%20DNA%20replication%20fork%20mechanism%20leading%20lagging%20strand%20synthesis%20RNA%20primer%20removal%20FEN1%20RNase%20H%20nick%20sealing%20ligase%20I&format=json&pageSize=2",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:03:29Z",
+    "status": "UNVERIFIED",
+    "error": "ReadTimeout"
+  },
+  {
+    "url": "https://openstax.org/books/biology-2e",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:03:55Z",
+    "status": "redirect",
+    "http_status": 301,
+    "destination": "https://openstax.org/details/books/biology-2e"
+  },
+  {
+    "url": "https://openstax.org/details/books/biology-2e",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:03:56Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "795bf23703807085d5abad5783d7d023fab1674c46d6f76622946a9c039428ea"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK26844/",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:04:01Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "0f75e32d173fada5c7a6894f50fdde143b3882cfc9de331ada8278df479ba2a4"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK9940/",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:04:01Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "c226f2ba9d3268161b06f85d8b475946d8d501f2e737749d290eab7911c1c0fd"
+  },
+  {
+    "url": "https://openstax.org/books/biology-2e/pages/14-4-dna-replication-in-eukaryotes",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:04:02Z",
+    "status": "UNVERIFIED",
+    "http_status": 404,
+    "error": "HTTPError"
+  },
+  {
+    "url": "https://openstax.org/books/biology-2e/pages/14-5-dna-replication-in-eukaryotes",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:04:06Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "11d7c19af08169e70d886c07bffc7226fd64e54c57257b0fa1fec773ecc24318"
+  },
+  {
+    "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/51d37f92e5fa60c65d661592c3a0256925c8bcc1",
+    "kind": "visual",
+    "started_utc": "2026-11-25T05:04:07Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "ec781791bbac245b079dc6c60d48b3547615b2bafb67320b8ac18449ca83d4fe"
+  },
+  {
+    "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/75e41fc0c90afb8b222007d3c5bb1dd027f8c94c",
+    "kind": "visual",
+    "started_utc": "2026-11-25T05:04:09Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "1f392634d2b5508b34be3ee4772e4d9e02d4f1f5b986e99cfcc88992bcc8bd9f"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=mitosis%20metaphase%20to%20anaphase%20chromosome%20congression%20kinetochore%20attachment%20opposite%20poles%20review&format=json&pageSize=2",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:08:08Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "c1682ab312c0ac71b87d95c16dbda73618334fa2181e609482041145da65da90"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK26859/",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:08:21Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "98f74919d83d034e8c0a0d984e670f76184a15830b98fc1d9bb602c1895aabeb"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:08:22Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "d2d57ff185582eaac900b90d10eb478e7ec6ab387380cbd829e785beae3c5823"
+  },
+  {
+    "url": "https://www.khanacademy.org/science/biology/cellular-molecular-biology/mitosis/a/phases-of-mitosis",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:08:23Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "4965d403ea8006362b7b9527e254092d06a584fa5335eddaca51255af1efe08e"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=protein%20translation%20initiation%20elongation%20mechanism%20ribosome%20mRNA%20tRNA%20codon%20review&format=json&pageSize=2",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:11:23Z",
+    "status": "pending"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=mitosis%20metaphase%20kinetochore%20attachment%20opposite%20poles%20sister%20chromatids&format=json&pageSize=2",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:11:32Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "aa70d7b6e21e786058084d590e42f0516aebd14548c1e650b58201a681d60a05"
+  },
+  {
+    "url": "https://openstax.org/books/biology-2e",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:11:35Z",
+    "status": "redirect",
+    "http_status": 301,
+    "destination": "https://openstax.org/details/books/biology-2e"
+  },
+  {
+    "url": "https://openstax.org/details/books/biology-2e",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:11:36Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "795bf23703807085d5abad5783d7d023fab1674c46d6f76622946a9c039428ea"
+  },
+  {
+    "url": "https://openstax.org/books/biology-2e",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:11:39Z",
+    "status": "redirect",
+    "http_status": 301,
+    "destination": "https://openstax.org/details/books/biology-2e"
+  },
+  {
+    "url": "https://openstax.org/details/books/biology-2e",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:11:40Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "795bf23703807085d5abad5783d7d023fab1674c46d6f76622946a9c039428ea"
+  },
+  {
+    "url": "https://openstax.org/books/biology-2e",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:11:45Z",
+    "status": "redirect",
+    "http_status": 301,
+    "destination": "https://openstax.org/details/books/biology-2e"
+  },
+  {
+    "url": "https://openstax.org/details/books/biology-2e",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:11:47Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "795bf23703807085d5abad5783d7d023fab1674c46d6f76622946a9c039428ea"
+  },
+  {
+    "url": "https://openstax.org/books/biology-ap-courses",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:11:48Z",
+    "status": "redirect",
+    "http_status": 301,
+    "destination": "https://openstax.org/details/books/biology-ap-courses"
+  },
+  {
+    "url": "https://openstax.org/details/books/biology-ap-courses",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:11:52Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "795bf23703807085d5abad5783d7d023fab1674c46d6f76622946a9c039428ea"
+  },
+  {
+    "url": "https://openstax.org/books/biology-2e/pages/10-2-the-cell-cycle",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:11:53Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "af5bb01d99dff15a6c176dedf3f8f8dc1cbc475e34717ff9f7423cf82a9444af"
+  },
+  {
+    "url": "https://openstax.org/books/biology-2e/pages/10-4-cancer-and-the-cell-cycle",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:11:57Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "e1fd8d884bac902bc5209b7f6586a862bbda918c91430ae77d419c36f8cd5cfa"
+  },
+  {
+    "url": "https://openstax.org/books/biology-2e/pages/10-introduction",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:11:59Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "fd6b740da31eb3bbe8ce5f0d06528c7d19d8489550793617530d2ecdf51e1a97"
+  },
+  {
+    "url": "https://openstax.org/books/biology-ap-courses/pages/10-2-the-cell-cycle",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:12:02Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "1f2a3d2d24dbb67f8c990afd8447a40d0964261b1a761f1012c4f18ba8454523"
+  },
+  {
+    "url": "https://bio.libretexts.org/Bookshelves/Introductory_and_General_Biology/General_Biology_(Boundless)/06%3A_Cell_Division/6.02%3A_The_Cell_Cycle",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:12:04Z",
+    "status": "UNVERIFIED",
+    "http_status": 404,
+    "error": "HTTPError"
+  },
+  {
+    "url": "https://bio.libretexts.org/Bookshelves/Introductory_and_General_Biology/General_Biology_(Boundless)/06%3A_Cell_Division/6.04%3A_Mitosis",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:12:07Z",
+    "status": "UNVERIFIED",
+    "http_status": 404,
+    "error": "HTTPError"
+  },
+  {
+    "url": "https://bio.libretexts.org/Bookshelves/Introductory_and_General_Biology/General_Biology_(OpenStax)/06%3A_Cell_Division/6.02%3A_The_Cell_Cycle",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:12:10Z",
+    "status": "UNVERIFIED",
+    "http_status": 404,
+    "error": "HTTPError"
+  },
+  {
+    "url": "https://bio.libretexts.org/Bookshelves/Introductory_and_General_Biology/General_Biology_(OpenStax)/06%3A_Cell_Division/6.04%3A_Mitosis",
+    "kind": "scientific",
+    "started_utc": "2026-11-25T05:12:12Z",
+    "status": "UNVERIFIED",
+    "http_status": 404,
+    "error": "HTTPError"
+  },
+  {
+    "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/418e5abd3be4fb9a0f0f1c81b82f0d51f93c81d4",
+    "kind": "visual",
+    "started_utc": "2026-11-25T05:12:16Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "1db8267e59f27f88e4d774746211418caf5a4f201cfbf47cca0c38743d8ba850"
+  },
+  {
+    "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/9164050222aea02b2e227df8a18237e79017ab20",
+    "kind": "visual",
+    "started_utc": "2026-11-25T05:12:18Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "895c4745b48eecd6ea1687dd7810709b4881af00771161f099e32f8c8b720623"
+  },
+  {
+    "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/d5cdb8f6e4131171fba557bb489b0448b22be60f",
+    "kind": "visual",
+    "started_utc": "2026-11-25T05:12:22Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "72355ce2952dabebbef8dcfc6907ea0e61e27e71a30369353451458543489bfd"
+  },
+  {
+    "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/4fab78d0b4dea0957a56fadfb1d4cd55eddbd81b",
+    "kind": "visual",
+    "started_utc": "2026-11-25T05:12:24Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "fe6893932fe3e9cf8ad1414973d652029a47a9235560440710a9bc9626510712"
+  },
+  {
+    "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/93102f6ba7ace242737e32bdebbe5abcc1cc6ea1",
+    "kind": "visual",
+    "started_utc": "2026-11-25T05:12:28Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "f359ea8f7ed2bb6a5fef0083d69c04c16f9b2c31cc4d1f75628873b706d3d067"
+  },
+  {
+    "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/c41230ee663df6246c2941239d6fa8dd92bb5e6a",
+    "kind": "visual",
+    "started_utc": "2026-11-25T05:12:30Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "3183f70476b4e07b37e92341ca5e53e6d3974d858e97399065a0e9e16f88e6ca"
+  },
+  {
+    "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/4a6abaa45336d529dd5bf72dac1373f86dc33136",
+    "kind": "visual",
+    "started_utc": "2026-11-25T05:12:34Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "b19efeed7b920afcd108e09bb211a4efb875df2f0466734a495082920ec0e44b"
+  },
+  {
+    "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/418e5abd3be4fb9a0f0f1c81b82f0d51f93c81d4",
+    "kind": "visual",
+    "started_utc": "2026-11-25T05:12:36Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "1db8267e59f27f88e4d774746211418caf5a4f201cfbf47cca0c38743d8ba850"
+  },
+  {
+    "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/1f1aa87959935d0a7dd075a0a6f76c2caa364595",
+    "kind": "visual",
+    "started_utc": "2026-11-25T05:12:37Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "5e30f3f3a7f9c4ce8ddbda82ed072f03ce3290659931c07a170c5a0c12537d4f"
+  }
+]

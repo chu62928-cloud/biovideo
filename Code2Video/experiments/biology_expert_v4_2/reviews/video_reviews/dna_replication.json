@@ -1,0 +1,6 @@
+{
+  "decision": "ERROR",
+  "error": "AccessDenied.Unpurchased",
+  "reason": "Confirmed model access 403; no retry or fake review",
+  "checks": []
+}

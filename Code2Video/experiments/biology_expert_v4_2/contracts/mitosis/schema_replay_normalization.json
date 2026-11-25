@@ -1,0 +1,25 @@
+{
+  "changes": [
+    {
+      "constraint_id": "C3",
+      "field": "type",
+      "before": "RELATION",
+      "after": "STRUCTURAL"
+    },
+    {
+      "constraint_id": "C4",
+      "field": "type",
+      "before": "RELATION",
+      "after": "STRUCTURAL"
+    },
+    {
+      "constraint_id": "C5",
+      "field": "type",
+      "before": "DIRECTION",
+      "after": "STRUCTURAL"
+    }
+  ],
+  "schema_pass": true,
+  "scientific_content_changed": false,
+  "origin": "saved actual response, not new model request"
+}

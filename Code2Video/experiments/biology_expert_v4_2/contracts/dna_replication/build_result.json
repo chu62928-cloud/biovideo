@@ -1,0 +1,1141 @@
+{
+  "contract": {
+    "contract_id": "contract_dna_replication_local_fork_v1",
+    "topic_id": "dna_replication",
+    "scope": {
+      "user_request": "Review a grades10-12 Section4 video showing local fork opening, RNA priming, leading/lagging extension, one local primer replacement and nick sealing. Origins/licensing are covered in Section2; no whole-genome completion claim.",
+      "audience": "grades_10_12",
+      "included": [
+        "Local replication fork opening by helicase",
+        "RNA primer formation by primase",
+        "Leading-strand continuous synthesis by pol ε",
+        "Lagging-strand discontinuous synthesis by pol δ",
+        "One local RNA primer removal on lagging strand by RNase H",
+        "Local replacement with DNA nucleotides",
+        "Nick sealing by DNA ligase"
+      ],
+      "excluded": [
+        "Origin licensing and pre-replication complex assembly",
+        "Whole-genome replication completion claims",
+        "Telomere maintenance and telomerase action",
+        "Cancer and aging telomere topics",
+        "Detailed polymerase switching beyond pol α handoff"
+      ]
+    },
+    "scientific_entities": [
+      {
+        "role": "replication_fork",
+        "description": "Local Y-shaped junction where parental DNA unwinds and two daughter strands are synthesized",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "role": "helicase_enzyme",
+        "description": "Enzyme that uses ATP hydrolysis to open the DNA helix at the fork",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "role": "primase_enzyme",
+        "description": "Enzyme that forms RNA primers",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "role": "rna_primer",
+        "description": "Short RNA segment synthesized by primase that provides a starting point for DNA polymerase",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "role": "dna_pol_alpha",
+        "description": "DNA polymerase that adds a short DNA fragment to the RNA primer on both strands before handing off",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "role": "dna_pol_epsilon",
+        "description": "DNA polymerase that continuously synthesizes the leading strand",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "role": "dna_pol_delta",
+        "description": "DNA polymerase that synthesizes the lagging strand",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "role": "leading_strand",
+        "description": "DNA strand synthesized continuously by pol ε",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "role": "lagging_strand",
+        "description": "DNA strand synthesized discontinuously in short stretches (Okazaki fragments) by pol δ",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "role": "okazaki_fragment",
+        "description": "Short stretch of DNA synthesized on the lagging strand, initiated by a separate primer",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "role": "rnase_h_enzyme",
+        "description": "Enzyme that removes displaced RNA primer from the lagging strand",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "role": "dna_ligase_enzyme",
+        "description": "Enzyme that seals gaps by forming phosphodiester bonds after RNA primer replacement",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "role": "phosphodiester_bond",
+        "description": "Chemical bond formed by DNA ligase to seal nicks between Okazaki fragments",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      }
+    ],
+    "required_processes": [
+      {
+        "role": "fork_opening",
+        "description": "Helicase opens the DNA helix, forming the replication fork",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "role": "rna_priming",
+        "description": "Primase forms RNA primers on both strands for DNA polymerase to start synthesis",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "role": "leading_strand_synthesis",
+        "description": "Pol ε continuously synthesizes the leading strand using the primer",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "role": "lagging_strand_synthesis",
+        "description": "Pol δ synthesizes the lagging strand in short stretches, each initiated by a separate primer",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "role": "primer_replacement",
+        "description": "RNase H removes displaced RNA primer; DNA nucleotides replace it",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "role": "nick_sealing",
+        "description": "DNA ligase seals remaining gaps by forming phosphodiester bonds",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      }
+    ],
+    "required_observations": [
+      "Local fork opening with helicase separating DNA strands",
+      "RNA primer visibly synthesized by primase on both leading and lagging strands",
+      "Leading strand extended continuously by pol ε",
+      "Lagging strand extended in short stretches by pol δ, each with a separate primer",
+      "One local RNA primer on lagging strand removed by RNase H and replaced with DNA",
+      "DNA ligase seals the nick between adjacent Okazaki fragments"
+    ],
+    "constraints": [
+      {
+        "constraint_id": "C1",
+        "type": "STRUCTURAL",
+        "participant_roles": [
+          "replication_fork",
+          "helicase_enzyme",
+          "leading_strand",
+          "lagging_strand"
+        ],
+        "applies_to": {
+          "process": "fork_opening"
+        },
+        "when": {
+          "stage": "fork_opening"
+        },
+        "must_hold": {
+          "relation": "helicase_enzyme opens DNA helix to form replication_fork with leading_strand and lagging_strand"
+        },
+        "exceptions": [],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d8ffea5a5785",
+            "quote": "A helicase using the energy from ATP hydrolysis opens up the DNA helix. Replication forks are formed at each replication origin as the DNA unwinds."
+          }
+        ],
+        "verification": {
+          "methods": [
+            "video_semantic_review"
+          ],
+          "capability": "VLM",
+          "primitive": "relation"
+        },
+        "severity": "critical",
+        "verification_status": "INDEPENDENTLY_VERIFIED",
+        "disputed": false
+      },
+      {
+        "constraint_id": "C2",
+        "type": "TEMPORAL",
+        "participant_roles": [
+          "primase_enzyme",
+          "rna_primer",
+          "dna_pol_alpha",
+          "dna_pol_epsilon",
+          "dna_pol_delta"
+        ],
+        "applies_to": {
+          "process": "rna_priming"
+        },
+        "when": {
+          "stage": "initiation"
+        },
+        "must_hold": {
+          "ordered_roles": [
+            "primase_enzyme",
+            "rna_primer",
+            "dna_pol_alpha",
+            "dna_pol_epsilon",
+            "dna_pol_delta"
+          ]
+        },
+        "exceptions": [],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d8ffea5a5785",
+            "quote": "Primers are formed by the enzyme primase, and using the primer, DNA pol can start synthesis. Three major DNA polymerases are then involved: α, δ and ε."
+          }
+        ],
+        "verification": {
+          "methods": [
+            "video_semantic_review"
+          ],
+          "capability": "VLM",
+          "primitive": "event_order"
+        },
+        "severity": "critical",
+        "verification_status": "INDEPENDENTLY_VERIFIED",
+        "disputed": false
+      },
+      {
+        "constraint_id": "C3",
+        "type": "PERSISTENT_RELATION",
+        "participant_roles": [
+          "dna_pol_epsilon",
+          "leading_strand"
+        ],
+        "applies_to": {
+          "process": "leading_strand_synthesis"
+        },
+        "when": {
+          "stage": "elongation"
+        },
+        "must_hold": {
+          "relation": "dna_pol_epsilon continuously synthesizes leading_strand"
+        },
+        "exceptions": [],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d8ffea5a5785",
+            "quote": "While the leading strand is continuously synthesized by the enzyme pol ε , the lagging strand is synthesized by pol δ ."
+          }
+        ],
+        "verification": {
+          "methods": [
+            "video_semantic_review"
+          ],
+          "capability": "VLM",
+          "primitive": "persistent_relation"
+        },
+        "severity": "major",
+        "verification_status": "INDEPENDENTLY_VERIFIED",
+        "disputed": false
+      },
+      {
+        "constraint_id": "C4",
+        "type": "PERSISTENT_RELATION",
+        "participant_roles": [
+          "dna_pol_delta",
+          "lagging_strand",
+          "okazaki_fragment",
+          "rna_primer"
+        ],
+        "applies_to": {
+          "process": "lagging_strand_synthesis"
+        },
+        "when": {
+          "stage": "elongation"
+        },
+        "must_hold": {
+          "relation": "dna_pol_delta synthesizes lagging_strand as okazaki_fragment stretches, each initiated by separate rna_primer"
+        },
+        "exceptions": [],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d8ffea5a5785",
+            "quote": "the lagging strand is synthesized by pol δ ."
+          },
+          {
+            "evidence_id": "E_d8ffea5a5785",
+            "quote": "On the lagging strand, DNA is synthesized in short stretches, each of which is initiated by a separate primer."
+          }
+        ],
+        "verification": {
+          "methods": [
+            "video_semantic_review"
+          ],
+          "capability": "VLM",
+          "primitive": "persistent_relation"
+        },
+        "severity": "major",
+        "verification_status": "INDEPENDENTLY_VERIFIED",
+        "disputed": false
+      },
+      {
+        "constraint_id": "C5",
+        "type": "TEMPORAL",
+        "participant_roles": [
+          "dna_pol_delta",
+          "rna_primer",
+          "rnase_h_enzyme"
+        ],
+        "applies_to": {
+          "process": "primer_replacement"
+        },
+        "when": {
+          "stage": "maturation"
+        },
+        "must_hold": {
+          "ordered_roles": [
+            "dna_pol_delta",
+            "rna_primer",
+            "rnase_h_enzyme"
+          ]
+        },
+        "exceptions": [],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d8ffea5a5785",
+            "quote": "As pol δ runs into the primer RNA on the lagging strand, it displaces it from the DNA template. The displaced primer RNA is then removed by RNase H"
+          }
+        ],
+        "verification": {
+          "methods": [
+            "video_semantic_review"
+          ],
+          "capability": "VLM",
+          "primitive": "event_order"
+        },
+        "severity": "critical",
+        "verification_status": "INDEPENDENTLY_VERIFIED",
+        "disputed": false
+      },
+      {
+        "constraint_id": "C6",
+        "type": "STATE",
+        "participant_roles": [
+          "rna_primer",
+          "rnase_h_enzyme",
+          "dna_pol_delta"
+        ],
+        "applies_to": {
+          "process": "primer_replacement"
+        },
+        "when": {
+          "stage": "maturation"
+        },
+        "must_hold": {
+          "key": "rna_primer_removed",
+          "value": "true"
+        },
+        "exceptions": [],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d8ffea5a5785",
+            "quote": "The displaced primer RNA is then removed by RNase H"
+          }
+        ],
+        "verification": {
+          "methods": [
+            "video_semantic_review"
+          ],
+          "capability": "VLM",
+          "primitive": "state"
+        },
+        "severity": "critical",
+        "verification_status": "INDEPENDENTLY_VERIFIED",
+        "disputed": false
+      },
+      {
+        "constraint_id": "C7",
+        "type": "TEMPORAL",
+        "participant_roles": [
+          "rna_primer",
+          "dna_ligase_enzyme",
+          "okazaki_fragment"
+        ],
+        "applies_to": {
+          "process": "nick_sealing"
+        },
+        "when": {
+          "stage": "maturation"
+        },
+        "must_hold": {
+          "ordered_roles": [
+            "rna_primer",
+            "dna_ligase_enzyme",
+            "okazaki_fragment"
+          ]
+        },
+        "exceptions": [],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d8ffea5a5785",
+            "quote": "The Okazaki fragments in the lagging strand are joined after the replacement of the RNA primers with DNA. The gaps that remain are sealed by DNA ligase"
+          }
+        ],
+        "verification": {
+          "methods": [
+            "video_semantic_review"
+          ],
+          "capability": "VLM",
+          "primitive": "event_order"
+        },
+        "severity": "critical",
+        "verification_status": "INDEPENDENTLY_VERIFIED",
+        "disputed": false
+      },
+      {
+        "constraint_id": "C8",
+        "type": "VISUAL_SEMANTICS",
+        "participant_roles": [
+          "dna_ligase_enzyme",
+          "phosphodiester_bond",
+          "okazaki_fragment"
+        ],
+        "applies_to": {
+          "process": "nick_sealing"
+        },
+        "when": {
+          "stage": "maturation"
+        },
+        "must_hold": {
+          "relation": "dna_ligase_enzyme seals gaps by forming phosphodiester_bond between okazaki_fragment"
+        },
+        "exceptions": [],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d8ffea5a5785",
+            "quote": "The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond."
+          }
+        ],
+        "verification": {
+          "methods": [
+            "video_semantic_review"
+          ],
+          "capability": "VLM",
+          "primitive": "relation"
+        },
+        "severity": "major",
+        "verification_status": "INDEPENDENTLY_VERIFIED",
+        "disputed": false
+      }
+    ],
+    "evidence_refs": [
+      "E_d8ffea5a5785"
+    ],
+    "visual_references": [],
+    "coverage_requirements": [
+      {
+        "item_id": "entity_replication_fork",
+        "kind": "entity",
+        "constraint_ids": [
+          "C1"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "entity_helicase_enzyme",
+        "kind": "entity",
+        "constraint_ids": [
+          "C1"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "entity_primase_enzyme",
+        "kind": "entity",
+        "constraint_ids": [
+          "C2"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "entity_rna_primer",
+        "kind": "entity",
+        "constraint_ids": [
+          "C2",
+          "C5",
+          "C6",
+          "C7"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "entity_dna_pol_alpha",
+        "kind": "entity",
+        "constraint_ids": [
+          "C2"
+        ],
+        "critical": false
+      },
+      {
+        "item_id": "entity_dna_pol_epsilon",
+        "kind": "entity",
+        "constraint_ids": [
+          "C3"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "entity_dna_pol_delta",
+        "kind": "entity",
+        "constraint_ids": [
+          "C4",
+          "C5"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "entity_leading_strand",
+        "kind": "entity",
+        "constraint_ids": [
+          "C1",
+          "C3"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "entity_lagging_strand",
+        "kind": "entity",
+        "constraint_ids": [
+          "C1",
+          "C4"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "entity_okazaki_fragment",
+        "kind": "entity",
+        "constraint_ids": [
+          "C4",
+          "C7",
+          "C8"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "entity_rnase_h_enzyme",
+        "kind": "entity",
+        "constraint_ids": [
+          "C5",
+          "C6"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "entity_dna_ligase_enzyme",
+        "kind": "entity",
+        "constraint_ids": [
+          "C7",
+          "C8"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "process_fork_opening",
+        "kind": "process",
+        "constraint_ids": [
+          "C1"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "process_rna_priming",
+        "kind": "process",
+        "constraint_ids": [
+          "C2"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "process_leading_strand_synthesis",
+        "kind": "process",
+        "constraint_ids": [
+          "C3"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "process_lagging_strand_synthesis",
+        "kind": "process",
+        "constraint_ids": [
+          "C4"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "process_primer_replacement",
+        "kind": "process",
+        "constraint_ids": [
+          "C5",
+          "C6"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "process_nick_sealing",
+        "kind": "process",
+        "constraint_ids": [
+          "C7",
+          "C8"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "temporal_priming_before_extension",
+        "kind": "temporal",
+        "constraint_ids": [
+          "C2"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "temporal_primer_removal_before_sealing",
+        "kind": "temporal",
+        "constraint_ids": [
+          "C5",
+          "C7"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "persistent_leading_continuity",
+        "kind": "persistent",
+        "constraint_ids": [
+          "C3"
+        ],
+        "critical": false
+      },
+      {
+        "item_id": "persistent_lagging_discontinuity",
+        "kind": "persistent",
+        "constraint_ids": [
+          "C4"
+        ],
+        "critical": false
+      }
+    ],
+    "unresolved_questions": [
+      "Whether the video explicitly shows ATP hydrolysis by helicase is not required for the learning objective and may be omitted; simplifications should be stated.",
+      "Whether the video depicts polymerase switching from pol α to pol ε/δ or omits it; omission is acceptable if not claimed as complete mechanism.",
+      "Whether the video shows RNase H versus flap endonuclease; source text equates them, but visualization may simplify to one removal step.",
+      "Whether the video correctly limits the scene to a local fork without implying whole-genome completion."
+    ],
+    "verification_plan": {
+      "stages": [
+        "script",
+        "storyboard",
+        "animation_code",
+        "rendered_video"
+      ],
+      "methods": [
+        "video_semantic_review",
+        "scene_graph",
+        "runtime_trace",
+        "human"
+      ],
+      "notes": "Use VLM review for biological identity and temporal order; use human review for contested simplifications and claims about completeness. No INDEPENDENTLY_VERIFIED status is assigned here."
+    }
+  },
+  "review": {
+    "decision": "REVISE",
+    "semantic_review": {
+      "decision": "REVISE",
+      "constraint_reviews": [
+        {
+          "constraint_id": "C1",
+          "status": "SUPPORTED",
+          "reason": "Quote explicitly states helicase opens DNA helix and replication forks form as DNA unwinds. Entails fork opening by helicase. Contract's phrasing 'with leading_strand and lagging_strand' is a reasonable structural elaboration of a Y-fork; source says forks formed, daughters implied by subsequent leading/lagging text. Acceptable for local fork scope.",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ]
+        },
+        {
+          "constraint_id": "C2",
+          "status": "SUPPORTED",
+          "reason": "Quote supports primase forms primers, DNA pol starts synthesis using primer, and three polymerases α, δ, ε are involved. The ordered_roles includes pol α before ε/δ, consistent with 'adds a short fragment... then hands off.' However, the temporal primitive event_order only checks ordering of appearance, not handoff semantics; acceptable as a teaching ordering. Note: contract excludes 'detailed polymerase switching beyond pol α handoff' but C2 includes pol α as ordered role—consistent with handoff being allowed.",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ]
+        },
+        {
+          "constraint_id": "C3",
+          "status": "SUPPORTED",
+          "reason": "Quote directly states leading strand is continuously synthesized by pol ε. Primitive persistent_relation is appropriate for continuity claim.",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ]
+        },
+        {
+          "constraint_id": "C4",
+          "status": "SUPPORTED",
+          "reason": "Quotes state lagging strand synthesized by pol δ and DNA synthesized in short stretches each initiated by a separate primer. Okazaki fragment terminology appears in same paragraph. Persistent_relation with 'each initiated by separate rna_primer' is entailed.",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ]
+        },
+        {
+          "constraint_id": "C5",
+          "status": "SUPPORTED",
+          "reason": "Quote states pol δ runs into primer RNA on lagging strand and displaces it; displaced primer RNA removed by RNase H. Ordered roles pol δ → rna_primer → RNase H matches source order. Note source equates RNase H with flap endonuclease; visualization may simplify—flagged in unresolved_questions.",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ]
+        },
+        {
+          "constraint_id": "C6",
+          "status": "SUPPORTED",
+          "reason": "Quote states displaced primer RNA is removed by RNase H. State rna_primer_removed=true is entailed at this local step. Scope is local primer, consistent with user request.",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ]
+        },
+        {
+          "constraint_id": "C7",
+          "status": "SUPPORTED",
+          "reason": "Quote states Okazaki fragments joined after replacement of RNA primers with DNA; gaps sealed by DNA ligase. Ordered roles rna_primer → dna_ligase → okazaki_fragment is a loose but acceptable ordering (primer replacement precedes sealing; fragments joined). Primitive event_order is weak for 'joined' semantics but not misleading.",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ]
+        },
+        {
+          "constraint_id": "C8",
+          "status": "SUPPORTED",
+          "reason": "Quote states gaps sealed by DNA ligase which forms the phosphodiester bond. Relation dna_ligase seals gaps by forming phosphodiester bond between Okazaki fragments is entailed. Caveat: 'phosphodiester_bond' is a chemical bond not directly visible in video—visual_semantics primitive must rely on depiction of sealing/joining, not literal bond visualization; this is an ambiguity to note but not a source conflict.",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ]
+        }
+      ],
+      "goal_coverage": {
+        "decision": "REVIEW_INCOMPLETE",
+        "missing_goals": [
+          "No constraint or coverage item enforces the user-required 'no whole-genome completion claim' exclusion at the visual/script level; unresolved_questions notes it but no blocking check exists.",
+          "No constraint enforces the exclusion of telomere/telomerase content, though source paragraph_5 contains telomere material that must be kept out of the Section4 video.",
+          "Verification primitive 'relation'/'event_order' on VLM does not prove chemical-level claims (phosphodiester bond formation) or ATP hydrolysis; appropriate to keep uncertain, but goal coverage should record these as simplifications requiring stated caveats.",
+          "No constraint checks that the scene remains limited to one local fork (scope locality), only that a fork exists."
+        ]
+      },
+      "issues": [
+        "C8 uses VISUAL_SEMANTICS relation to assert 'forms phosphodiester bond'—a chemical event not directly visually verifiable; VLM can only confirm depicted ligase-mediated joining. Downstream review must not treat graph metadata or visual joining as proof of bond chemistry.",
+        "C2 ordering primase→primer→pol α→pol ε/δ as a single linear event_order may misleadingly imply ε and δ sequentially follow α on the same strand; source describes α handing off to a second polymerase per strand. Keep as teaching simplification with explicit caveat.",
+        "C5/C6 source equates RNase H with flap endonuclease; video may depict only one removal step. This is a legitimate teaching simplification but should be labeled; not a conflict.",
+        "User goal explicitly excludes whole-genome completion and telomere topics; contract's excluded list mentions them but no coverage_requirement or constraint blocks their appearance in script/storyboard/code. Add negative checks.",
+        "User request says 'one local primer replacement and nick sealing'—constraints correctly scope to one local event; ensure animation code does not generalize to processive genome-wide replication.",
+        "Origin licensing exclusion is stated but no check enforces absence of origin-firing imagery.",
+        "Contract does not distinguish 'teaching simplification' vs 'misleading' for the pol α handoff omission on one strand; unresolved_questions acknowledges but verification_plan lacks explicit human gate for contested simplifications—notes mention human review but approval decision cannot rely on it alone."
+      ],
+      "reference_events": [
+        {
+          "event_role": "fork_opening",
+          "state": "helicase opens DNA helix; replication fork forms",
+          "relations": [
+            "helicase_enzyme opens helix",
+            "fork formed as DNA unwinds"
+          ],
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "quote": "A helicase using the energy from ATP hydrolysis opens up the DNA helix. Replication forks are formed at each replication origin as the DNA unwinds."
+        },
+        {
+          "event_role": "rna_priming_and_polymerase_involvement",
+          "state": "primase forms primers; DNA pol starts synthesis; pol α, δ, ε involved",
+          "relations": [
+            "primase → rna_primer",
+            "primer enables DNA pol synthesis",
+            "pol α adds short DNA then hands off"
+          ],
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "quote": "Primers are formed by the enzyme primase, and using the primer, DNA pol can start synthesis. Three major DNA polymerases are then involved: α, δ and ε. DNA pol α adds a short (20 to 30 nucleotides) DNA fragment to the RNA primer on both strands, and then hands off to a second polymerase."
+        },
+        {
+          "event_role": "leading_vs_lagging_synthesis",
+          "state": "leading continuous by pol ε; lagging by pol δ",
+          "relations": [
+            "pol ε → leading continuous",
+            "pol δ → lagging"
+          ],
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "quote": "While the leading strand is continuously synthesized by the enzyme pol ε , the lagging strand is synthesized by pol δ ."
+        },
+        {
+          "event_role": "primer_displacement_and_removal",
+          "state": "pol δ displaces primer RNA; RNase H removes it; replaced with DNA",
+          "relations": [
+            "pol δ displaces primer",
+            "RNase H removes displaced primer",
+            "DNA nucleotides replace primer"
+          ],
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "quote": "As pol δ runs into the primer RNA on the lagging strand, it displaces it from the DNA template. The displaced primer RNA is then removed by RNase H (AKA flap endonuclease ) and replaced with DNA nucleotides."
+        },
+        {
+          "event_role": "nick_sealing",
+          "state": "Okazaki fragments joined after primer replacement; ligase seals gaps forming phosphodiester bond",
+          "relations": [
+            "ligase seals gaps",
+            "ligase forms phosphodiester bond"
+          ],
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "quote": "The Okazaki fragments in the lagging strand are joined after the replacement of the RNA primers with DNA. The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond."
+        },
+        {
+          "event_role": "lagging_discontinuity_and_primer_initiation",
+          "state": "lagging synthesized in short stretches each initiated by separate primer",
+          "relations": [
+            "short stretches",
+            "each stretch separate primer"
+          ],
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "quote": "On the lagging strand, DNA is synthesized in short stretches, each of which is initiated by a separate primer."
+        }
+      ]
+    },
+    "quote_errors": [],
+    "independent_request": true,
+    "independent_provider": false,
+    "limitation": "Separate request using same provider, not independent scientist; source entailment is explicit",
+    "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d"
+  },
+  "retrieval": {
+    "evidence": [
+      {
+        "evidence_id": "E_d8ffea5a5785",
+        "url": "https://openstax.org/books/biology-2e/pages/14-5-dna-replication-in-eukaryotes",
+        "title": "14.5 DNA Replication in Eukaryotes - Biology 2e | OpenStax",
+        "author_or_institution": "openstax.org",
+        "source_type": "retrieved_scientific_webpage",
+        "biological_scope": "Requires independent scope verification against quoted passages",
+        "accessed_utc": "2026-11-25T05:04:06Z",
+        "content_sha256": "ff30253eb084c1944c86844790ccf2b6f06c512c2b1406395f6ad0e911342627",
+        "saved_text": "/autodl-tmp/code2biovideo/Code2Video-v4.2-workspace/experiments/biology_expert_v4_2/references/retrieval/dna_replication/E_d8ffea5a5785.txt",
+        "passages": [
+          {
+            "location": "paragraph_0",
+            "text": "By the end of this section, you will be able to do the following:"
+          },
+          {
+            "location": "paragraph_1",
+            "text": "Eukaryotic genomes are much more complex and larger in size than prokaryotic genomes. Eukaryotes also have a number of different linear chromosomes. The human genome has 3 billion base pairs per haploid set of chromosomes, and 6 billion base pairs are replicated during the S phase of the cell cycle. There are multiple origins of replication on each eukaryotic chromosome; humans can have up to 100,000 origins of replication across the genome. The rate of replication is approximately 100 nucleotides per second, much slower than prokaryotic replication. In yeast, which is a eukaryote, special sequences known as autonomously replicating sequences (ARS) are found on the chromosomes. These are equivalent to the origin of replication in E. coli ."
+          },
+          {
+            "location": "paragraph_2",
+            "text": "The number of DNA polymerases in eukaryotes is much more than in prokaryotes: 14 are known, of which five are known to have major roles during replication and have been well studied. They are known as pol α , pol β , pol γ , pol δ , and pol ε ."
+          },
+          {
+            "location": "paragraph_3",
+            "text": "The essential steps of replication are the same as in prokaryotes. Before replication can start, the DNA has to be made available as a template. Eukaryotic DNA is bound to basic proteins known as histones to form structures called nucleosomes. Histones must be removed and then replaced during the replication process, which helps to account for the lower replication rate in eukaryotes. The chromatin (the complex between DNA and proteins) may undergo some chemical modifications, so that the DNA may be able to slide off the proteins or be accessible to the enzymes of the DNA replication machinery. At the origin of replication, a pre-replication complex is made with other initiator proteins. Helicase and other proteins are then recruited to start the replication process ( Table 14.2 )."
+          },
+          {
+            "location": "paragraph_4",
+            "text": "A helicase using the energy from ATP hydrolysis opens up the DNA helix. Replication forks are formed at each replication origin as the DNA unwinds. The opening of the double helix causes over-winding, or supercoiling, in the DNA ahead of the replication fork. These are resolved with the action of topoisomerases. Primers are formed by the enzyme primase, and using the primer, DNA pol can start synthesis. Three major DNA polymerases are then involved: α, δ and ε. DNA pol α adds a short (20 to 30 nucleotides) DNA fragment to the RNA primer on both strands, and then hands off to a second polymerase. While the leading strand is continuously synthesized by the enzyme pol ε , the lagging strand is synthesized by pol δ . A sliding clamp protein known as PCNA (proliferating cell nuclear antigen) holds the DNA pol in place so that it does not slide off the DNA. As pol δ runs into the primer RNA on the lagging strand, it displaces it from the DNA template. The displaced primer RNA is then removed by RNase H (AKA flap endonuclease ) and replaced with DNA nucleotides. The Okazaki fragments in the lagging strand are joined after the replacement of the RNA primers with DNA. The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond."
+          },
+          {
+            "location": "paragraph_5",
+            "text": "Unlike prokaryotic chromosomes, eukaryotic chromosomes are linear. As you’ve learned, the enzyme DNA pol can add nucleotides only in the 5' to 3' direction. In the leading strand, synthesis continues until the end of the chromosome is reached. On the lagging strand, DNA is synthesized in short stretches, each of which is initiated by a separate primer. When the replication fork reaches the end of the linear chromosome, there is no way to replace the primer on the 5’ end of the lagging strand. The DNA at the ends of the chromosome thus remains unpaired, and over time these ends, called telomeres, may get progressively shorter as cells continue to divide."
+          },
+          {
+            "location": "paragraph_6",
+            "text": "Telomeres comprise repetitive sequences that code for no particular gene. In humans, a six-base-pair sequence, TTAGGG, is repeated 100 to 1000 times in the telomere regions. In a way, these telomeres protect the genes from getting deleted as cells continue to divide. The telomeres are added to the ends of chromosomes by a separate enzyme, telomerase ( Figure 14.16 ), whose discovery helped in the understanding of how these repetitive chromosome ends are maintained. The telomerase enzyme contains a catalytic part and a built-in RNA template. It attaches to the end of the chromosome, and DNA nucleotides complementary to the RNA template are added on the 3' end of the DNA strand. Once the 3' end of the lagging strand template is sufficiently elongated, DNA polymerase can add the nucleotides complementary to the ends of the chromosomes. Thus, the ends of the chromosomes are replicated."
+          },
+          {
+            "location": "paragraph_7",
+            "text": "Figure 14.15 The ends of linear chromosomes are maintained by the action of the telomerase enzyme. Credit: Rao, A. and Fletcher, S. Department of Biology, Texas A&M University."
+          },
+          {
+            "location": "paragraph_8",
+            "text": "Telomerase is typically active in germ cells and adult stem cells. It is not active in adult somatic cells. For their discovery of telomerase and its action, Elizabeth Blackburn, Carol W. Greider, and Jack W. Szostak ( Figure 14.16 ) received the Nobel Prize for Medicine and Physiology in 2009. Later research using HeLa cells (obtained from Henrietta Lacks)  confirmed that telomerase is present in human cells. And in 2001, researchers including Diane L. Wright found that telomerase is necessary for cells in human embryos to rapidly proliferate."
+          },
+          {
+            "location": "paragraph_9",
+            "text": "Figure 14.16 Elizabeth Blackburn, 2009 Nobel Laureate, is one of the scientists who discovered how telomerase works. (credit: US Embassy Sweden)"
+          },
+          {
+            "location": "paragraph_10",
+            "text": "Cells that undergo cell division continue to have their telomeres shortened because most somatic cells do not make telomerase. This essentially means that telomere shortening is associated with aging. With the advent of modern medicine, preventative health care, and healthier lifestyles, the human life span has increased, and there is an increasing demand for people to look younger and have a better quality of life as they grow older."
+          },
+          {
+            "location": "paragraph_11",
+            "text": "In 2010, scientists found that telomerase can reverse some age-related conditions in mice. This may have potential in regenerative medicine. 2 Telomerase-deficient mice were used in these studies; these mice have tissue atrophy, stem cell depletion, organ system failure, and impaired tissue injury responses. Telomerase reactivation in these mice caused extension of telomeres, reduced DNA damage, reversed neurodegeneration, and improved the function of the testes, spleen, and intestines. Thus, telomere reactivation may have potential for treating age-related diseases in humans."
+          },
+          {
+            "location": "paragraph_12",
+            "text": "Cancer is characterized by uncontrolled cell division of abnormal cells. The cells accumulate mutations, proliferate uncontrollably, and can migrate to different parts of the body through a process called metastasis. Scientists have observed that cancerous cells have considerably shortened telomeres and that telomerase is active in these cells. Interestingly, only after the telomeres were shortened in the cancer cells did the telomerase become active. If the action of telomerase in these cells can be inhibited by drugs during cancer therapy, then the cancerous cells could potentially be stopped from further division."
+          },
+          {
+            "location": "paragraph_13",
+            "text": "Access for free at https://openstax.org/books/biology-2e/pages/1-introduction"
+          },
+          {
+            "location": "paragraph_14",
+            "text": "Access for free at https://openstax.org/books/biology-2e/pages/1-introduction"
+          },
+          {
+            "location": "paragraph_15",
+            "text": "The information below includes the information needed to generate citations in most \n  major styles (APA, MLA, etc.); you must reformat and organize the information as needed \n  to fit the requirements of the style. Use the information below to generate a citation. \n  We recommend using a citation tool such as this one ."
+          },
+          {
+            "location": "paragraph_16",
+            "text": "© Jul 22, 2026 OpenStax. Textbook content produced by OpenStax is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike License. The OpenStax name, OpenStax logo, OpenStax book covers, OpenStax CNX name, and OpenStax CNX logo, \n    and Rice University name, and Rice University logo trademarks, or wordmarks are not subject to the Creative \n    Commons license and may not be reproduced without the prior and express written consent of Rice University."
+          }
+        ],
+        "figures": [
+          {
+            "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/51d37f92e5fa60c65d661592c3a0256925c8bcc1",
+            "caption": "Figure 14.15 The ends of linear chromosomes are maintained by the action of the telomerase enzyme. Credit: Rao, A. and Fletcher, S. Department of Biology, Texas A&M University.",
+            "alt": "The process of Telomere Replication is shown. The starting image has an unreplicated end, and is missing DNA on the lagging strang.  Telomerase has an associated R N A that complements the 5 prime overhang at the end of the chromosome, creating an extension of the unreplicated end. The R N A template is used to synthesize the complementary strand, and telomerase again extends the unreplicated end. Telomerase then shifts, and the process is repeated. Next, primase and D N A polymerase synthesize the rest of the complementary strand. And the lagging strand is completed.",
+            "source_page": "https://openstax.org/books/biology-2e/pages/14-5-dna-replication-in-eukaryotes"
+          },
+          {
+            "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/75e41fc0c90afb8b222007d3c5bb1dd027f8c94c",
+            "caption": "Figure 14.16 Elizabeth Blackburn, 2009 Nobel Laureate, is one of the scientists who discovered how telomerase works. (credit: US Embassy Sweden)",
+            "alt": "Photo of Elizabeth Blackburn.",
+            "source_page": "https://openstax.org/books/biology-2e/pages/14-5-dna-replication-in-eukaryotes"
+          }
+        ],
+        "fact_support": [],
+        "conflicts": [],
+        "trust_limitations": "Publisher authority and exact quotes do not establish entailment; independent contract review required",
+        "status": "RETRIEVED"
+      }
+    ],
+    "failures": [
+      {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=eukaryotic%20DNA%20replication%20fork%20mechanism%20leading%20lagging%20strand%20synthesis%20RNA%20primer%20removal%20FEN1%20RNase%20H%20nick%20sealing%20ligase%20I&format=json&pageSize=2",
+        "error": "ReadTimeout"
+      },
+      {
+        "source": "public HTML discovery",
+        "error": "ValueError"
+      },
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK26844/",
+        "error": "ValueError"
+      },
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK9940/",
+        "error": "ValueError"
+      },
+      {
+        "url": "https://openstax.org/books/biology-2e/pages/14-4-dna-replication-in-eukaryotes",
+        "error": "HTTPError"
+      }
+    ],
+    "search_records": [
+      {
+        "service": "publisher_live_TOC",
+        "url": "https://openstax.org/books/biology-2e",
+        "discovered": []
+      }
+    ],
+    "research_status": "RETRIEVED",
+    "discovery": "Agent planned queries + live bibliographic search + content fetch, no legacy topic catalogue"
+  },
+  "visual": [
+    {
+      "reference_id": "REF_446c6c6b5b",
+      "source_url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/51d37f92e5fa60c65d661592c3a0256925c8bcc1",
+      "source_page": "https://openstax.org/books/biology-2e/pages/14-5-dna-replication-in-eukaryotes",
+      "source_type": "scientific_illustration",
+      "scientific_objects": [
+        "parental DNA double helix",
+        "replication fork junction",
+        "helicase (MCM complex simplified)",
+        "single-strand DNA binding proteins",
+        "DNA primase (RNA polymerase)",
+        "RNA primer",
+        "DNA polymerase epsilon (leading strand)",
+        "DNA polymerase delta (lagging strand)",
+        "sliding clamp (PCNA simplified)",
+        "leading strand new DNA",
+        "lagging strand new DNA",
+        "Okazaki fragment",
+        "flap endonuclease (FEN1 simplified)",
+        "DNA ligase I",
+        "free nucleotide triphosphates",
+        "pyrophosphate byproduct"
+      ],
+      "represented_states": [
+        "parental duplex closed before fork arrival",
+        "fork opened exposing separated template strands",
+        "templates coated by single-strand binding proteins",
+        "RNA primer annealed to template",
+        "polymerase clamp loaded and extending new strand",
+        "leading strand continuously extended toward fork",
+        "lagging strand discontinuous with multiple Okazaki fragments at different stages",
+        "RNA primer displaced or removed leaving a nick/gap",
+        "nick sealed by DNA ligase forming continuous strand",
+        "local fork region with staggered leading and lagging synthesis",
+        "no whole-genome completion implied: only local fork section shown with cut-section ends"
+      ],
+      "represented_processes": [
+        "DNA replication fork opening helicase polymerase RNA primer leading lagging Okazaki fragment primer removal nick sealing high school schematic",
+        "local replication fork states: closed duplex, opened fork with exposed templates, primed template, extended new strand, removed primer gap, sealed nick",
+        "objects relations and motion: helicase unwinding, SSB coating, primase synthesizing RNA primer, clamp loading polymerase, leading continuous synthesis, lagging discontinuous synthesis, exonuclease flap removal, ligase sealing"
+      ],
+      "caption": "Figure 14.15 The ends of linear chromosomes are maintained by the action of the telomerase enzyme. Credit: Rao, A. and Fletcher, S. Department of Biology, Texas A&M University.",
+      "alt": "The process of Telomere Replication is shown. The starting image has an unreplicated end, and is missing DNA on the lagging strang.  Telomerase has an associated R N A that complements the 5 prime overhang at the end of the chromosome, creating an extension of the unreplicated end. The R N A template is used to synthesize the complementary strand, and telomerase again extends the unreplicated end. Telomerase then shifts, and the process is repeated. Next, primase and D N A polymerase synthesize the rest of the complementary strand. And the lagging strand is completed.",
+      "scientific_review": "PENDING",
+      "license_status": "UNVERIFIED",
+      "reuse_allowed": false,
+      "actual_asset_imported": false,
+      "found": true,
+      "page_read": true,
+      "image_retrieved": true,
+      "relations_extracted": false,
+      "limitations": [
+        "Caption is not independent verification of image pixels",
+        "No external asset imported into generated work"
+      ],
+      "local_reference_path": "/autodl-tmp/code2biovideo/Code2Video-v4.2-workspace/experiments/biology_expert_v4_2/references/retrieval/dna_replication/REF_446c6c6b5b.png",
+      "image_sha256": "ec781791bbac245b079dc6c60d48b3547615b2bafb67320b8ac18449ca83d4fe",
+      "mime": "image/webp"
+    },
+    {
+      "reference_id": "REF_9ca1076572",
+      "source_url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/75e41fc0c90afb8b222007d3c5bb1dd027f8c94c",
+      "source_page": "https://openstax.org/books/biology-2e/pages/14-5-dna-replication-in-eukaryotes",
+      "source_type": "scientific_illustration",
+      "scientific_objects": [
+        "parental DNA double helix",
+        "replication fork junction",
+        "helicase (MCM complex simplified)",
+        "single-strand DNA binding proteins",
+        "DNA primase (RNA polymerase)",
+        "RNA primer",
+        "DNA polymerase epsilon (leading strand)",
+        "DNA polymerase delta (lagging strand)",
+        "sliding clamp (PCNA simplified)",
+        "leading strand new DNA",
+        "lagging strand new DNA",
+        "Okazaki fragment",
+        "flap endonuclease (FEN1 simplified)",
+        "DNA ligase I",
+        "free nucleotide triphosphates",
+        "pyrophosphate byproduct"
+      ],
+      "represented_states": [
+        "parental duplex closed before fork arrival",
+        "fork opened exposing separated template strands",
+        "templates coated by single-strand binding proteins",
+        "RNA primer annealed to template",
+        "polymerase clamp loaded and extending new strand",
+        "leading strand continuously extended toward fork",
+        "lagging strand discontinuous with multiple Okazaki fragments at different stages",
+        "RNA primer displaced or removed leaving a nick/gap",
+        "nick sealed by DNA ligase forming continuous strand",
+        "local fork region with staggered leading and lagging synthesis",
+        "no whole-genome completion implied: only local fork section shown with cut-section ends"
+      ],
+      "represented_processes": [
+        "DNA replication fork opening helicase polymerase RNA primer leading lagging Okazaki fragment primer removal nick sealing high school schematic",
+        "local replication fork states: closed duplex, opened fork with exposed templates, primed template, extended new strand, removed primer gap, sealed nick",
+        "objects relations and motion: helicase unwinding, SSB coating, primase synthesizing RNA primer, clamp loading polymerase, leading continuous synthesis, lagging discontinuous synthesis, exonuclease flap removal, ligase sealing"
+      ],
+      "caption": "Figure 14.16 Elizabeth Blackburn, 2009 Nobel Laureate, is one of the scientists who discovered how telomerase works. (credit: US Embassy Sweden)",
+      "alt": "Photo of Elizabeth Blackburn.",
+      "scientific_review": "PENDING",
+      "license_status": "UNVERIFIED",
+      "reuse_allowed": false,
+      "actual_asset_imported": false,
+      "found": true,
+      "page_read": true,
+      "image_retrieved": true,
+      "relations_extracted": false,
+      "limitations": [
+        "Caption is not independent verification of image pixels",
+        "No external asset imported into generated work"
+      ],
+      "local_reference_path": "/autodl-tmp/code2biovideo/Code2Video-v4.2-workspace/experiments/biology_expert_v4_2/references/retrieval/dna_replication/REF_9ca1076572.png",
+      "image_sha256": "1f392634d2b5508b34be3ee4772e4d9e02d4f1f5b986e99cfcc88992bcc8bd9f",
+      "mime": "image/webp"
+    }
+  ],
+  "freeze": null
+}

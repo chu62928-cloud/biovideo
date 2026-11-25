@@ -1,0 +1,26 @@
+[
+  {
+    "status": "NEEDS_HUMAN_REVIEW",
+    "repair_allowed": false,
+    "reason": "Unstructured semantic issue",
+    "original_issue": "No existing scene, runtime trace, or rendered artifact was supplied, so no observation-based verification of C1–C9 can be performed."
+  },
+  {
+    "status": "NEEDS_HUMAN_REVIEW",
+    "repair_allowed": false,
+    "reason": "Unstructured semantic issue",
+    "original_issue": "The contract contains unresolved questions about eukaryotic scanning, detailed eukaryotic initiation factors, and elongation factor identities; these are marked UNKNOWN and must remain explicitly labeled as simplifications or omitted."
+  },
+  {
+    "status": "NEEDS_HUMAN_REVIEW",
+    "repair_allowed": false,
+    "reason": "Unstructured semantic issue",
+    "original_issue": "Constraint C9 has capability HUMAN and cannot be fully verified by automated scene graph or VLM review alone; human review is required."
+  },
+  {
+    "status": "NEEDS_HUMAN_REVIEW",
+    "repair_allowed": false,
+    "reason": "Unstructured semantic issue",
+    "original_issue": "Constraint C3 verification_status is INSUFFICIENT_EVIDENCE at the constraint level, so strict automated temporal verification is incomplete."
+  }
+]

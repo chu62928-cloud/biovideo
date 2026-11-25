@@ -1,0 +1,269 @@
+{
+  "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+  "baseline": {
+    "checks": [
+      {
+        "check_id": "C1",
+        "type": "STRUCTURAL",
+        "constraint_hash": "8589209726d67a4ff72aff0578b5c9a285320179e9f5d0f0a9ef573616223920",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "status": "NOT_MEASURED",
+        "object_ids": [
+          "replication_fork",
+          "helicase_enzyme",
+          "leading_strand",
+          "lagging_strand"
+        ],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "capability": "VLM",
+        "observation_refs": [],
+        "reason": "Semantic/visual claim needs independent observation review"
+      },
+      {
+        "check_id": "C2",
+        "type": "TEMPORAL",
+        "constraint_hash": "bf6ebd7c32b943e347e0e74a4ac490fa1b3dc2e2211b3c21f458900839ea7e08",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "status": "NOT_MEASURED",
+        "object_ids": [
+          "primase_enzyme",
+          "rna_primer",
+          "dna_pol_alpha",
+          "dna_pol_epsilon",
+          "dna_pol_delta"
+        ],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "capability": "VLM",
+        "observation_refs": [],
+        "reason": "Semantic/visual claim needs independent observation review"
+      },
+      {
+        "check_id": "C3",
+        "type": "PERSISTENT_RELATION",
+        "constraint_hash": "3a9eedc66d05c1004365baa9eea1dc2a54b0fe3a02a6c23e9186a18c792a68cc",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "status": "NOT_MEASURED",
+        "object_ids": [
+          "dna_pol_epsilon",
+          "leading_strand"
+        ],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "capability": "VLM",
+        "observation_refs": [],
+        "reason": "Semantic/visual claim needs independent observation review"
+      },
+      {
+        "check_id": "C4",
+        "type": "PERSISTENT_RELATION",
+        "constraint_hash": "73b64b01a28afdc238e798a1dc474f1bdf04d65284196702a5e803f231855956",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "status": "NOT_MEASURED",
+        "object_ids": [
+          "dna_pol_delta",
+          "lagging_strand",
+          "okazaki_fragment",
+          "rna_primer"
+        ],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "capability": "VLM",
+        "observation_refs": [],
+        "reason": "Semantic/visual claim needs independent observation review"
+      },
+      {
+        "check_id": "C5",
+        "type": "TEMPORAL",
+        "constraint_hash": "5b048a172ef8e31f56b369a9a5a6666df171ed30143ed24d1259ad05a51cfbc6",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "status": "NOT_MEASURED",
+        "object_ids": [
+          "dna_pol_delta",
+          "rna_primer",
+          "rnase_h_enzyme"
+        ],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "capability": "VLM",
+        "observation_refs": [],
+        "reason": "Semantic/visual claim needs independent observation review"
+      },
+      {
+        "check_id": "C6",
+        "type": "STATE",
+        "constraint_hash": "68979ca0fcfdb82d2e8fa7dd2d063683d43661814d8458b1b45df569859d160d",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "status": "NOT_MEASURED",
+        "object_ids": [
+          "rna_primer",
+          "rnase_h_enzyme",
+          "dna_pol_delta"
+        ],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "capability": "VLM",
+        "observation_refs": [],
+        "reason": "Semantic/visual claim needs independent observation review"
+      },
+      {
+        "check_id": "C7",
+        "type": "TEMPORAL",
+        "constraint_hash": "afdd45f90a8113ec50d6e6efb270c55013e87e321bb816b4c5644db274a55fe6",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "status": "NOT_MEASURED",
+        "object_ids": [
+          "rna_primer",
+          "dna_ligase_enzyme",
+          "okazaki_fragment"
+        ],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "capability": "VLM",
+        "observation_refs": [],
+        "reason": "Semantic/visual claim needs independent observation review"
+      },
+      {
+        "check_id": "C8",
+        "type": "VISUAL_SEMANTICS",
+        "constraint_hash": "887a41fa99dc1b1d833d1016aab5c335a5f7d20b7a2fdb9fb064bb0a7b0164a5",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "status": "NOT_MEASURED",
+        "object_ids": [
+          "dna_ligase_enzyme",
+          "phosphodiester_bond",
+          "okazaki_fragment"
+        ],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "capability": "VLM",
+        "observation_refs": [],
+        "reason": "Semantic/visual claim needs independent observation review"
+      }
+    ],
+    "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+    "decision": "REVIEW_INCOMPLETE"
+  },
+  "cases": [
+    {
+      "case_id": "MUT_C1",
+      "constraint_id": "C1",
+      "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+      "mutation_type": "disconnect_required_relation",
+      "expected": "FAIL",
+      "valid_sample": false,
+      "not_tested_reason": "No executable mutation for this constraint/observation",
+      "actual": "NOT_TESTED",
+      "detected": null,
+      "false_positive": null
+    },
+    {
+      "case_id": "MUT_C2",
+      "constraint_id": "C2",
+      "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+      "mutation_type": "reverse_event_order",
+      "expected": "FAIL",
+      "valid_sample": false,
+      "not_tested_reason": "Baseline constraint did not PASS; mutation efficacy unproven",
+      "actual": "NOT_MEASURED",
+      "detected": null,
+      "false_positive": false
+    },
+    {
+      "case_id": "MUT_C3",
+      "constraint_id": "C3",
+      "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+      "mutation_type": "early_terminate_relation",
+      "expected": "FAIL",
+      "valid_sample": false,
+      "not_tested_reason": "No executable mutation for this constraint/observation",
+      "actual": "NOT_TESTED",
+      "detected": null,
+      "false_positive": null
+    },
+    {
+      "case_id": "MUT_C4",
+      "constraint_id": "C4",
+      "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+      "mutation_type": "early_terminate_relation",
+      "expected": "FAIL",
+      "valid_sample": false,
+      "not_tested_reason": "No executable mutation for this constraint/observation",
+      "actual": "NOT_TESTED",
+      "detected": null,
+      "false_positive": null
+    },
+    {
+      "case_id": "MUT_C5",
+      "constraint_id": "C5",
+      "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+      "mutation_type": "reverse_event_order",
+      "expected": "FAIL",
+      "valid_sample": false,
+      "not_tested_reason": "Baseline constraint did not PASS; mutation efficacy unproven",
+      "actual": "NOT_MEASURED",
+      "detected": null,
+      "false_positive": false
+    },
+    {
+      "case_id": "MUT_C6",
+      "constraint_id": "C6",
+      "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+      "mutation_type": "wrong_event_state",
+      "expected": "FAIL",
+      "valid_sample": false,
+      "not_tested_reason": "Baseline constraint did not PASS; mutation efficacy unproven",
+      "actual": "NOT_MEASURED",
+      "detected": null,
+      "false_positive": false
+    },
+    {
+      "case_id": "MUT_C7",
+      "constraint_id": "C7",
+      "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+      "mutation_type": "reverse_event_order",
+      "expected": "FAIL",
+      "valid_sample": false,
+      "not_tested_reason": "Baseline constraint did not PASS; mutation efficacy unproven",
+      "actual": "NOT_MEASURED",
+      "detected": null,
+      "false_positive": false
+    },
+    {
+      "case_id": "MUT_C8",
+      "constraint_id": "C8",
+      "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+      "mutation_type": "disconnect_required_relation",
+      "expected": "FAIL",
+      "valid_sample": false,
+      "not_tested_reason": "No executable mutation for this constraint/observation",
+      "actual": "NOT_TESTED",
+      "detected": null,
+      "false_positive": null
+    },
+    {
+      "case_id": "CONTROL_VISUAL_COLOR",
+      "constraint_id": null,
+      "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+      "mutation_type": "irrelevant_color",
+      "expected": "UNCHANGED",
+      "valid_sample": true,
+      "actual": "UNCHANGED",
+      "detected": true,
+      "false_positive": false
+    }
+  ],
+  "valid_cases": 1,
+  "detected": 0,
+  "missed": 0,
+  "false_positives": 0
+}

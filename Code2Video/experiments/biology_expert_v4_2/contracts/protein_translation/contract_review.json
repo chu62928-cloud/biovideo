@@ -1,0 +1,197 @@
+{
+  "decision": "REVIEW_INCOMPLETE",
+  "semantic_review": {
+    "decision": "REVISE",
+    "constraint_reviews": [
+      {
+        "constraint_id": "C1",
+        "status": "SUPPORTED",
+        "reason": "Exact quote confirms 50S binding forms intact ribosome after initiation complex; state primitive is appropriate for structural assembly.",
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ]
+      },
+      {
+        "constraint_id": "C2",
+        "status": "SUPPORTED",
+        "reason": "Quotes establish A-site binds charged aminoacyl-tRNAs and anticodon pairs with mRNA codon via complementary base pairing; relation primitive matches claim.",
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ]
+      },
+      {
+        "constraint_id": "C3",
+        "status": "INSUFFICIENT_EVIDENCE",
+        "reason": "Quote supports A→P→E shift and E-site expulsion, but the ordered-role list includes 'peptide_bond_formation' between A-site entry and translocation, which the cited passage does not explicitly order as a single event sequence (it describes peptide bond formation after A/P site binding but before/with translocation only implicitly). The exact event order cannot be strictly entailed from the two quotes alone.",
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ]
+      },
+      {
+        "constraint_id": "C4",
+        "status": "SUPPORTED",
+        "reason": "Quotes describe E. coli initiation complex components and direct P-site entry of initiator tRNA providing free A site; event order is reasonably entailed, though 'small_subunit_binds_mRNA' timing relative to initiator tRNA P-site entry is not explicitly sequenced in the passage. The constraint is broadly supported but the exact order of small subunit binding mRNA vs initiator tRNA entry is not directly stated.",
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ]
+      },
+      {
+        "constraint_id": "C5",
+        "status": "SUPPORTED",
+        "reason": "Quote explicitly gives E. coli 30S small subunit and 50S large subunit identity; minor visual identity check is appropriate.",
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ]
+      },
+      {
+        "constraint_id": "C6",
+        "status": "SUPPORTED",
+        "reason": "Quotes state P-site tRNA amino acid is linked to growing polypeptide and P-site binds charged tRNAs that have formed peptide bonds but not yet dissociated; persistent relation until translocation is entailed.",
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ]
+      },
+      {
+        "constraint_id": "C7",
+        "status": "SUPPORTED",
+        "reason": "Quote explicitly states mRNA read 5' to 3' and polypeptide synthesized N terminus to C terminus; direction primitive is appropriate.",
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ]
+      },
+      {
+        "constraint_id": "C8",
+        "status": "SUPPORTED",
+        "reason": "Quotes confirm stop codon recognition by release factors, polypeptide release, and subunit dissociation; state primitive with release factor participant is supported.",
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ]
+      },
+      {
+        "constraint_id": "C9",
+        "status": "SUPPORTED",
+        "reason": "Quotes explicitly describe Shine-Dalgarno sequence base-pairing with rRNA and anchoring 30S subunit; exception for eukaryotes is correctly noted as not described in cited passage.",
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ]
+      }
+    ],
+    "goal_coverage": {
+      "decision": "REVIEW_INCOMPLETE",
+      "missing_goals": [
+        "The contract does not include any constraint or coverage requirement for organism-specific initiation simplifications as a distinct reviewable artifact; it lists them in scope and unresolved questions but does not require a specific visual/text label or check confirming that bacterial vs eukaryotic initiation differences are explicitly marked as simplifications in the storyboard.",
+        "No constraint ensures that the storyboard clearly distinguishes that the Shine-Dalgarno mechanism is bacterial-specific and not eukaryotic; C9 has an exception note but no verification requirement that the exception is visually or textually communicated.",
+        "No constraint addresses the user goal to 'identify organism-specific initiation simplifications' as an output requirement independent of correctness of individual steps."
+      ]
+    },
+    "issues": [
+      "C3 event order is not fully entailed by the cited quotes: the passage describes translocation and E-site expulsion, and separately peptide bond formation, but does not explicitly state a strict four-step sequence starting with A-site entry and including peptide bond formation before translocation. This may be a valid biological simplification but the contract labels it SOURCE_SUPPORTED without acknowledging the inferential gap.",
+      "C4 event order places small subunit binding mRNA before initiator tRNA enters P site; the cited passage lists complex components but does not explicitly sequence small subunit mRNA binding before initiator tRNA P-site entry. This is textbook-standard but not directly quoted, so the support is slightly overclaimed.",
+      "The contract's unresolved_questions and scope mention organism-specific initiation simplifications, but no constraint or coverage item verifies that the final storyboard explicitly labels these as simplifications for grades 10-12. This is a key user goal and is not operationalized.",
+      "C9 verification includes 'human' as a method, but the verification plan's human_review stage does not specifically check that Shine-Dalgarno is visually/textually restricted to bacteria; it checks 'No misleading claim that Shine-Dalgarno applies to eukaryotes' but not positive identification of the simplification.",
+      "The contract includes 'Polyribosome and prokaryotic transcription-translation coupling as context' in scope, but no constraint or critical coverage item checks that this context is depicted correctly or labeled as prokaryote-specific. This is minor but relevant to organism-specific simplification goal."
+    ],
+    "reference_events": [
+      {
+        "event_role": "initiation_complex_assembly",
+        "state": "E. coli initiation complex includes 30S, mRNA, three initiation factors, GTP, and fMet-tRNAfMet; Shine-Dalgarno anchors 30S; 50S joins to form intact ribosome",
+        "relations": [
+          "small_subunit_binds_mRNA",
+          "initiator_tRNA_enters_P_site",
+          "large_subunit_joins"
+        ],
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ],
+        "quote": "In E. coli , this complex involves the small 30S ribosome, the mRNA template, three initiation factors that help the ribosome assemble correctly, guanosine triphosphate (GTP) that acts as an energy source, and a special initiator tRNA carrying N -formyl-methionine(fMet-tRNA fMet )"
+      },
+      {
+        "event_role": "initiator_tRNA_P_site_entry",
+        "state": "fMet-tRNAfMet or eukaryotic Met-tRNAi enters P site directly, leaving A site free",
+        "relations": [
+          "initiator_tRNA_enters_P_site",
+          "A_site_available_for_first_elongation_tRNA"
+        ],
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ],
+        "quote": "During initiation complex formation, bacterial fMet−tRNA fMet or eukaryotic Met-tRNAi enters the P site directly without first entering the A site, providing a free A site ready to accept the tRNA corresponding to the first codon after the AUG."
+      },
+      {
+        "event_role": "elongation_translocation_cycle",
+        "state": "Charged tRNAs enter A site, shift to P site, then E site for removal; ribosome advances three bases in 3' direction",
+        "relations": [
+          "charged_tRNA_entry_at_A_site",
+          "translocation",
+          "tRNA_exit_from_E_site"
+        ],
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ],
+        "quote": "During each translocation event, the charged tRNAs enter at the A site, then shift to the P site, and then finally to the E site for removal."
+      },
+      {
+        "event_role": "peptide_bond_formation",
+        "state": "Peptide bond forms between A-site amino acid amino group and P-site amino acid carboxyl group, catalyzed by peptidyl transferase",
+        "relations": [
+          "peptide_bond_formation",
+          "growing_polypeptide_remains_linked_to_P_site_tRNA_until_translocation"
+        ],
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ],
+        "quote": "Peptide bonds form between the amino group of the amino acid attached to the A-site tRNA and the carboxyl group of the amino acid attached to the P-site tRNA. The formation of each peptide bond is catalyzed by peptidyl transferase, an RNA-based ribozyme that is integrated into the 50S ribosomal subunit."
+      },
+      {
+        "event_role": "E_site_tRNA_expulsion",
+        "state": "Former P-site tRNA enters E site, detaches from amino acid, and is expelled",
+        "relations": [
+          "tRNA_exit_from_E_site"
+        ],
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ],
+        "quote": "As the ribosome steps across the mRNA, the former P-site tRNA enters the E site, detaches from the amino acid, and is expelled."
+      },
+      {
+        "event_role": "termination",
+        "state": "Stop codon in A site recognized by release factors; P-site amino acid detaches from tRNA; polypeptide released; subunits dissociate",
+        "relations": [
+          "release_factor_recognition",
+          "polypeptide_released_and_ribosome_dissociates"
+        ],
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ],
+        "quote": "On aligning with the A site, these nonsense codons are recognized by release factors in prokaryotes and eukaryotes that result in the P-site amino acid detaching from its tRNA, releasing the newly made polypeptide."
+      },
+      {
+        "event_role": "shine_dalgarno_anchoring",
+        "state": "Shine-Dalgarno sequence upstream of first AUG base-pairs with rRNA and anchors 30S subunit",
+        "relations": [
+          "shine_dalgarno_base_pairs_with_rRNA_anchoring_30S_subunit"
+        ],
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ],
+        "quote": "In E. coli mRNA, a leader sequence upstream of the first AUG codon, called the Shine-Dalgarno sequence (also known as the ribosomal binding site AGGAGG), interacts through complementary base pairing with the rRNA molecules that compose the ribosome. This interaction anchors the 30S ribosomal subunit at the correct location on the mRNA template."
+      },
+      {
+        "event_role": "polyribosome_context",
+        "state": "Multiple ribosomes translate one mRNA simultaneously; prokaryotes can couple transcription and translation",
+        "relations": [
+          "polyribosome_formation"
+        ],
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ],
+        "quote": "Each mRNA molecule is simultaneously translated by many ribosomes, all synthesizing protein in the same direction: reading the mRNA from 5’ to 3’ and synthesizing the polypeptide from the N terminus to the C terminus. The complete structure containing an mRNA with multiple associated ribosomes is called a polyribosome (or polysome)."
+      }
+    ]
+  },
+  "quote_errors": [],
+  "independent_request": true,
+  "independent_provider": false,
+  "limitation": "Separate request using same provider, not independent scientist; source entailment is explicit",
+  "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533"
+}

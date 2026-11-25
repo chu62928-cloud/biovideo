@@ -1,0 +1,120 @@
+[
+  {
+    "reference_id": "REF_446c6c6b5b",
+    "source_url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/51d37f92e5fa60c65d661592c3a0256925c8bcc1",
+    "source_page": "https://openstax.org/books/biology-2e/pages/14-5-dna-replication-in-eukaryotes",
+    "source_type": "scientific_illustration",
+    "scientific_objects": [
+      "parental DNA double helix",
+      "replication fork junction",
+      "helicase (MCM complex simplified)",
+      "single-strand DNA binding proteins",
+      "DNA primase (RNA polymerase)",
+      "RNA primer",
+      "DNA polymerase epsilon (leading strand)",
+      "DNA polymerase delta (lagging strand)",
+      "sliding clamp (PCNA simplified)",
+      "leading strand new DNA",
+      "lagging strand new DNA",
+      "Okazaki fragment",
+      "flap endonuclease (FEN1 simplified)",
+      "DNA ligase I",
+      "free nucleotide triphosphates",
+      "pyrophosphate byproduct"
+    ],
+    "represented_states": [
+      "parental duplex closed before fork arrival",
+      "fork opened exposing separated template strands",
+      "templates coated by single-strand binding proteins",
+      "RNA primer annealed to template",
+      "polymerase clamp loaded and extending new strand",
+      "leading strand continuously extended toward fork",
+      "lagging strand discontinuous with multiple Okazaki fragments at different stages",
+      "RNA primer displaced or removed leaving a nick/gap",
+      "nick sealed by DNA ligase forming continuous strand",
+      "local fork region with staggered leading and lagging synthesis",
+      "no whole-genome completion implied: only local fork section shown with cut-section ends"
+    ],
+    "represented_processes": [
+      "DNA replication fork opening helicase polymerase RNA primer leading lagging Okazaki fragment primer removal nick sealing high school schematic",
+      "local replication fork states: closed duplex, opened fork with exposed templates, primed template, extended new strand, removed primer gap, sealed nick",
+      "objects relations and motion: helicase unwinding, SSB coating, primase synthesizing RNA primer, clamp loading polymerase, leading continuous synthesis, lagging discontinuous synthesis, exonuclease flap removal, ligase sealing"
+    ],
+    "caption": "Figure 14.15 The ends of linear chromosomes are maintained by the action of the telomerase enzyme. Credit: Rao, A. and Fletcher, S. Department of Biology, Texas A&M University.",
+    "alt": "The process of Telomere Replication is shown. The starting image has an unreplicated end, and is missing DNA on the lagging strang.  Telomerase has an associated R N A that complements the 5 prime overhang at the end of the chromosome, creating an extension of the unreplicated end. The R N A template is used to synthesize the complementary strand, and telomerase again extends the unreplicated end. Telomerase then shifts, and the process is repeated. Next, primase and D N A polymerase synthesize the rest of the complementary strand. And the lagging strand is completed.",
+    "scientific_review": "PENDING",
+    "license_status": "UNVERIFIED",
+    "reuse_allowed": false,
+    "actual_asset_imported": false,
+    "found": true,
+    "page_read": true,
+    "image_retrieved": true,
+    "relations_extracted": false,
+    "limitations": [
+      "Caption is not independent verification of image pixels",
+      "No external asset imported into generated work"
+    ],
+    "local_reference_path": "/autodl-tmp/code2biovideo/Code2Video-v4.2-workspace/experiments/biology_expert_v4_2/references/retrieval/dna_replication/REF_446c6c6b5b.png",
+    "image_sha256": "ec781791bbac245b079dc6c60d48b3547615b2bafb67320b8ac18449ca83d4fe",
+    "mime": "image/webp"
+  },
+  {
+    "reference_id": "REF_9ca1076572",
+    "source_url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/75e41fc0c90afb8b222007d3c5bb1dd027f8c94c",
+    "source_page": "https://openstax.org/books/biology-2e/pages/14-5-dna-replication-in-eukaryotes",
+    "source_type": "scientific_illustration",
+    "scientific_objects": [
+      "parental DNA double helix",
+      "replication fork junction",
+      "helicase (MCM complex simplified)",
+      "single-strand DNA binding proteins",
+      "DNA primase (RNA polymerase)",
+      "RNA primer",
+      "DNA polymerase epsilon (leading strand)",
+      "DNA polymerase delta (lagging strand)",
+      "sliding clamp (PCNA simplified)",
+      "leading strand new DNA",
+      "lagging strand new DNA",
+      "Okazaki fragment",
+      "flap endonuclease (FEN1 simplified)",
+      "DNA ligase I",
+      "free nucleotide triphosphates",
+      "pyrophosphate byproduct"
+    ],
+    "represented_states": [
+      "parental duplex closed before fork arrival",
+      "fork opened exposing separated template strands",
+      "templates coated by single-strand binding proteins",
+      "RNA primer annealed to template",
+      "polymerase clamp loaded and extending new strand",
+      "leading strand continuously extended toward fork",
+      "lagging strand discontinuous with multiple Okazaki fragments at different stages",
+      "RNA primer displaced or removed leaving a nick/gap",
+      "nick sealed by DNA ligase forming continuous strand",
+      "local fork region with staggered leading and lagging synthesis",
+      "no whole-genome completion implied: only local fork section shown with cut-section ends"
+    ],
+    "represented_processes": [
+      "DNA replication fork opening helicase polymerase RNA primer leading lagging Okazaki fragment primer removal nick sealing high school schematic",
+      "local replication fork states: closed duplex, opened fork with exposed templates, primed template, extended new strand, removed primer gap, sealed nick",
+      "objects relations and motion: helicase unwinding, SSB coating, primase synthesizing RNA primer, clamp loading polymerase, leading continuous synthesis, lagging discontinuous synthesis, exonuclease flap removal, ligase sealing"
+    ],
+    "caption": "Figure 14.16 Elizabeth Blackburn, 2009 Nobel Laureate, is one of the scientists who discovered how telomerase works. (credit: US Embassy Sweden)",
+    "alt": "Photo of Elizabeth Blackburn.",
+    "scientific_review": "PENDING",
+    "license_status": "UNVERIFIED",
+    "reuse_allowed": false,
+    "actual_asset_imported": false,
+    "found": true,
+    "page_read": true,
+    "image_retrieved": true,
+    "relations_extracted": false,
+    "limitations": [
+      "Caption is not independent verification of image pixels",
+      "No external asset imported into generated work"
+    ],
+    "local_reference_path": "/autodl-tmp/code2biovideo/Code2Video-v4.2-workspace/experiments/biology_expert_v4_2/references/retrieval/dna_replication/REF_9ca1076572.png",
+    "image_sha256": "1f392634d2b5508b34be3ee4772e4d9e02d4f1f5b986e99cfcc88992bcc8bd9f",
+    "mime": "image/webp"
+  }
+]

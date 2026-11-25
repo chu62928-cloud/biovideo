@@ -1,0 +1,171 @@
+{
+  "decision": "REVISE",
+  "semantic_review": {
+    "decision": "REVISE",
+    "constraint_reviews": [
+      {
+        "constraint_id": "C1",
+        "status": "SUPPORTED",
+        "reason": "Quote explicitly states helicase opens DNA helix and replication forks form as DNA unwinds. Entails fork opening by helicase. Contract's phrasing 'with leading_strand and lagging_strand' is a reasonable structural elaboration of a Y-fork; source says forks formed, daughters implied by subsequent leading/lagging text. Acceptable for local fork scope.",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "constraint_id": "C2",
+        "status": "SUPPORTED",
+        "reason": "Quote supports primase forms primers, DNA pol starts synthesis using primer, and three polymerases α, δ, ε are involved. The ordered_roles includes pol α before ε/δ, consistent with 'adds a short fragment... then hands off.' However, the temporal primitive event_order only checks ordering of appearance, not handoff semantics; acceptable as a teaching ordering. Note: contract excludes 'detailed polymerase switching beyond pol α handoff' but C2 includes pol α as ordered role—consistent with handoff being allowed.",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "constraint_id": "C3",
+        "status": "SUPPORTED",
+        "reason": "Quote directly states leading strand is continuously synthesized by pol ε. Primitive persistent_relation is appropriate for continuity claim.",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "constraint_id": "C4",
+        "status": "SUPPORTED",
+        "reason": "Quotes state lagging strand synthesized by pol δ and DNA synthesized in short stretches each initiated by a separate primer. Okazaki fragment terminology appears in same paragraph. Persistent_relation with 'each initiated by separate rna_primer' is entailed.",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "constraint_id": "C5",
+        "status": "SUPPORTED",
+        "reason": "Quote states pol δ runs into primer RNA on lagging strand and displaces it; displaced primer RNA removed by RNase H. Ordered roles pol δ → rna_primer → RNase H matches source order. Note source equates RNase H with flap endonuclease; visualization may simplify—flagged in unresolved_questions.",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "constraint_id": "C6",
+        "status": "SUPPORTED",
+        "reason": "Quote states displaced primer RNA is removed by RNase H. State rna_primer_removed=true is entailed at this local step. Scope is local primer, consistent with user request.",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "constraint_id": "C7",
+        "status": "SUPPORTED",
+        "reason": "Quote states Okazaki fragments joined after replacement of RNA primers with DNA; gaps sealed by DNA ligase. Ordered roles rna_primer → dna_ligase → okazaki_fragment is a loose but acceptable ordering (primer replacement precedes sealing; fragments joined). Primitive event_order is weak for 'joined' semantics but not misleading.",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "constraint_id": "C8",
+        "status": "SUPPORTED",
+        "reason": "Quote states gaps sealed by DNA ligase which forms the phosphodiester bond. Relation dna_ligase seals gaps by forming phosphodiester bond between Okazaki fragments is entailed. Caveat: 'phosphodiester_bond' is a chemical bond not directly visible in video—visual_semantics primitive must rely on depiction of sealing/joining, not literal bond visualization; this is an ambiguity to note but not a source conflict.",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      }
+    ],
+    "goal_coverage": {
+      "decision": "REVIEW_INCOMPLETE",
+      "missing_goals": [
+        "No constraint or coverage item enforces the user-required 'no whole-genome completion claim' exclusion at the visual/script level; unresolved_questions notes it but no blocking check exists.",
+        "No constraint enforces the exclusion of telomere/telomerase content, though source paragraph_5 contains telomere material that must be kept out of the Section4 video.",
+        "Verification primitive 'relation'/'event_order' on VLM does not prove chemical-level claims (phosphodiester bond formation) or ATP hydrolysis; appropriate to keep uncertain, but goal coverage should record these as simplifications requiring stated caveats.",
+        "No constraint checks that the scene remains limited to one local fork (scope locality), only that a fork exists."
+      ]
+    },
+    "issues": [
+      "C8 uses VISUAL_SEMANTICS relation to assert 'forms phosphodiester bond'—a chemical event not directly visually verifiable; VLM can only confirm depicted ligase-mediated joining. Downstream review must not treat graph metadata or visual joining as proof of bond chemistry.",
+      "C2 ordering primase→primer→pol α→pol ε/δ as a single linear event_order may misleadingly imply ε and δ sequentially follow α on the same strand; source describes α handing off to a second polymerase per strand. Keep as teaching simplification with explicit caveat.",
+      "C5/C6 source equates RNase H with flap endonuclease; video may depict only one removal step. This is a legitimate teaching simplification but should be labeled; not a conflict.",
+      "User goal explicitly excludes whole-genome completion and telomere topics; contract's excluded list mentions them but no coverage_requirement or constraint blocks their appearance in script/storyboard/code. Add negative checks.",
+      "User request says 'one local primer replacement and nick sealing'—constraints correctly scope to one local event; ensure animation code does not generalize to processive genome-wide replication.",
+      "Origin licensing exclusion is stated but no check enforces absence of origin-firing imagery.",
+      "Contract does not distinguish 'teaching simplification' vs 'misleading' for the pol α handoff omission on one strand; unresolved_questions acknowledges but verification_plan lacks explicit human gate for contested simplifications—notes mention human review but approval decision cannot rely on it alone."
+    ],
+    "reference_events": [
+      {
+        "event_role": "fork_opening",
+        "state": "helicase opens DNA helix; replication fork forms",
+        "relations": [
+          "helicase_enzyme opens helix",
+          "fork formed as DNA unwinds"
+        ],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "quote": "A helicase using the energy from ATP hydrolysis opens up the DNA helix. Replication forks are formed at each replication origin as the DNA unwinds."
+      },
+      {
+        "event_role": "rna_priming_and_polymerase_involvement",
+        "state": "primase forms primers; DNA pol starts synthesis; pol α, δ, ε involved",
+        "relations": [
+          "primase → rna_primer",
+          "primer enables DNA pol synthesis",
+          "pol α adds short DNA then hands off"
+        ],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "quote": "Primers are formed by the enzyme primase, and using the primer, DNA pol can start synthesis. Three major DNA polymerases are then involved: α, δ and ε. DNA pol α adds a short (20 to 30 nucleotides) DNA fragment to the RNA primer on both strands, and then hands off to a second polymerase."
+      },
+      {
+        "event_role": "leading_vs_lagging_synthesis",
+        "state": "leading continuous by pol ε; lagging by pol δ",
+        "relations": [
+          "pol ε → leading continuous",
+          "pol δ → lagging"
+        ],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "quote": "While the leading strand is continuously synthesized by the enzyme pol ε , the lagging strand is synthesized by pol δ ."
+      },
+      {
+        "event_role": "primer_displacement_and_removal",
+        "state": "pol δ displaces primer RNA; RNase H removes it; replaced with DNA",
+        "relations": [
+          "pol δ displaces primer",
+          "RNase H removes displaced primer",
+          "DNA nucleotides replace primer"
+        ],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "quote": "As pol δ runs into the primer RNA on the lagging strand, it displaces it from the DNA template. The displaced primer RNA is then removed by RNase H (AKA flap endonuclease ) and replaced with DNA nucleotides."
+      },
+      {
+        "event_role": "nick_sealing",
+        "state": "Okazaki fragments joined after primer replacement; ligase seals gaps forming phosphodiester bond",
+        "relations": [
+          "ligase seals gaps",
+          "ligase forms phosphodiester bond"
+        ],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "quote": "The Okazaki fragments in the lagging strand are joined after the replacement of the RNA primers with DNA. The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond."
+      },
+      {
+        "event_role": "lagging_discontinuity_and_primer_initiation",
+        "state": "lagging synthesized in short stretches each initiated by separate primer",
+        "relations": [
+          "short stretches",
+          "each stretch separate primer"
+        ],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "quote": "On the lagging strand, DNA is synthesized in short stretches, each of which is initiated by a separate primer."
+      }
+    ]
+  },
+  "quote_errors": [],
+  "independent_request": true,
+  "independent_provider": false,
+  "limitation": "Separate request using same provider, not independent scientist; source entailment is explicit",
+  "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d"
+}

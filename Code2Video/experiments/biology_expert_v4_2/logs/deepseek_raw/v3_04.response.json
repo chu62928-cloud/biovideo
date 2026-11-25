@@ -1,0 +1,36 @@
+{
+  "id": "89bfcc9c-de80-4045-91ec-a13d80505dfc",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"bindings\": {\n    \"repair\": [],\n    \"semantic role\": [\n      \"template_leading\",\n      \"template_lagging\",\n      \"rna_primer_leading\",\n      \"rna_primer_lagging_1\",\n      \"rna_primer_lagging_2\",\n      \"new_leading\",\n      \"fragment_1\",\n      \"fragment_2\",\n      \"gap_fill\",\n      \"primase\",\n      \"polymerase_leading\",\n      \"polymerase_lagging\",\n      \"ligase\",\n      \"helicase\"\n    ]\n  },\n  \"ir_review\": {\n    \"decision\": \"PASS\",\n    \"issues\": [],\n    \"contract_goal_coverage\": {\n      \"decision\": \"PASS\",\n      \"missing_goals\": []\n    }\n  },\n  \"scene\": null,\n  \"normal_storyboard\": null,\n  \"incorrect_storyboard\": null,\n  \"storyboard_reviews\": [],\n  \"reference_events\": [\n    {\n      \"event_id\": \"ref_fork_opening\",\n      \"role\": \"fork_opening\",\n      \"description\": \"Helicase uses ATP hydrolysis to open the DNA helix, forming a local replication fork with separated leading and lagging templates.\",\n      \"evidence_ids\": [\"E_d8ffea5a5785\"],\n      \"quote\": \"A helicase using the energy from ATP hydrolysis opens up the DNA helix. Replication forks are formed at each replication origin as the DNA unwinds.\"\n    },\n    {\n      \"event_id\": \"ref_rna_priming\",\n      \"role\": \"rna_priming\",\n      \"description\": \"Primase synthesizes RNA primers; DNA polymerase can then begin synthesis. Pol α adds a short DNA fragment to the primer on both strands before handoff.\",\n      \"evidence_ids\": [\"E_d8ffea5a5785\"],\n      \"quote\": \"Primers are formed by the enzyme primase, and using the primer, DNA pol can start synthesis. Three major DNA polymerases are then involved: α, δ and ε. DNA pol α adds a short (20 to 30 nucleotides) DNA fragment to the RNA primer on both strands, and then hands off to a second polymerase.\"\n    },\n    {\n      \"event_id\": \"ref_leading_synthesis\",\n      \"role\": \"leading_strand_synthesis\",\n      \"description\": \"Pol ε continuously synthesizes the leading strand.\",\n      \"evidence_ids\": [\"E_d8ffea5a5785\"],\n      \"quote\": \"While the leading strand is continuously synthesized by the enzyme pol ε , the lagging strand is synthesized by pol δ .\"\n    },\n    {\n      \"event_id\": \"ref_lagging_synthesis\",\n      \"role\": \"lagging_strand_synthesis\",\n      \"description\": \"Pol δ synthesizes the lagging strand in short stretches (Okazaki fragments), each initiated by a separate primer.\",\n      \"evidence_ids\": [\"E_d8ffea5a5785\"],\n      \"quote\": \"the lagging strand is synthesized by pol δ .\"\n    },\n    {\n      \"event_id\": \"ref_lagging_primers\",\n      \"role\": \"lagging_strand_synthesis\",\n      \"description\": \"On the lagging strand, DNA synthesis occurs in short stretches each initiated by a separate primer.\",\n      \"evidence_ids\": [\"E_d8ffea5a5785\"],\n      \"quote\": \"On the lagging strand, DNA is synthesized in short stretches, each of which is initiated by a separate primer.\"\n    },\n    {\n      \"event_id\": \"ref_primer_displacement\",\n      \"role\": \"primer_replacement\",\n      \"description\": \"As Pol δ encounters the RNA primer on the lagging strand, it displaces the primer from the DNA template.\",\n      \"evidence_ids\": [\"E_d8ffea5a5785\"],\n      \"quote\": \"As pol δ runs into the primer RNA on the lagging strand, it displaces it from the DNA template.\"\n    },\n    {\n      \"event_id\": \"ref_primer_removal\",\n      \"role\": \"primer_replacement\",\n      \"description\": \"The displaced RNA primer is removed by RNase H (also called flap endonuclease) and replaced with DNA nucleotides.\",\n      \"evidence_ids\": [\"E_d8ffea5a5785\"],\n      \"quote\": \"The displaced primer RNA is then removed by RNase H (AKA flap endonuclease ) and replaced with DNA nucleotides.\"\n    },\n    {\n      \"event_id\": \"ref_okazaki_joining\",\n      \"role\": \"nick_sealing\",\n      \"description\": \"Okazaki fragments are joined after RNA primers are replaced with DNA.\",\n      \"evidence_ids\": [\"E_d8ffea5a5785\"],\n      \"quote\": \"The Okazaki fragments in the lagging strand are joined after the replacement of the RNA primers with DNA.\"\n    },\n    {\n      \"event_id\": \"ref_ligase_sealing\",\n      \"role\": \"nick_sealing\",\n      \"description\": \"DNA ligase seals remaining gaps by forming phosphodiester bonds.\",\n      \"evidence_ids\": [\"E_d8ffea5a5785\"],\n      \"quote\": \"The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond.\"\n    }\n  ]\n}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1795583114,
+  "model": "deepseek-flash",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+  "usage": {
+    "completion_tokens": 1123,
+    "prompt_tokens": 37726,
+    "total_tokens": 38849,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 37726
+  }
+}

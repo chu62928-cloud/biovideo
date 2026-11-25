@@ -1,0 +1,15 @@
+{
+  "methods": [
+    "scene_graph",
+    "video_semantic_review",
+    "runtime_trace",
+    "human"
+  ],
+  "steps": [
+    "Use scene_graph to check presence of one duplicated chromosome with two sister chromatids aligned at a plane.",
+    "Use video_semantic_review to confirm kinetochore microtubules attach to opposite poles.",
+    "Use runtime_trace or event_order to verify cohesin degradation precedes sister separation.",
+    "Use human review to adjudicate molecular visibility of cohesin and metaphase plate representation."
+  ],
+  "pass_conditions": "All critical constraints have verification_status SOURCE_SUPPORTED or better with no blocking issues; unresolved questions documented but not contradicting scope."
+}

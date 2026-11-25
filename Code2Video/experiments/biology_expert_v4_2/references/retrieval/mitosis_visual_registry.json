@@ -1,0 +1,425 @@
+[
+  {
+    "reference_id": "REF_4713bf2036",
+    "source_url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/418e5abd3be4fb9a0f0f1c81b82f0d51f93c81d4",
+    "source_page": "https://openstax.org/books/biology-2e/pages/10-2-the-cell-cycle",
+    "source_type": "scientific_illustration",
+    "scientific_objects": [
+      "duplicated chromosome",
+      "sister chromatids",
+      "centromere",
+      "kinetochore",
+      "kinetochore microtubules",
+      "spindle poles",
+      "metaphase plate",
+      "cohesin complex",
+      "separase"
+    ],
+    "represented_states": [
+      "chromosome aligned at metaphase plate",
+      "bipolar kinetochore attachment",
+      "cohesin intact",
+      "cohesin cleaved",
+      "sister chromatids separating",
+      "chromatids moving to opposite poles"
+    ],
+    "represented_processes": [
+      "single duplicated chromosome with two sister chromatids, sister kinetochores attached to microtubules from opposite spindle poles, aligned at metaphase plate, high school schematic",
+      "cohesion complex between sister chromatids, separase activation, cohesion cleavage, sister chromatids separating and moving toward opposite poles, high school schematic",
+      "kinetochore microtubules depolymerizing at plus ends, chromosome-to-pole movement, spindle poles labeled, high school schematic"
+    ],
+    "caption": "Figure 10.5 The cell cycle in multicellular organisms consists of interphase and the mitotic phase. During interphase, the cell grows and the nuclear DNA is duplicated. Interphase is followed by the mitotic phase. During the mitotic phase, the duplicated chromosomes are segregated and distributed into daughter nuclei. Following mitosis, the cytoplasm is usually divided as well by cytokinesis, resulting in two genetically identical daughter cells.",
+    "alt": "Like a clock, the cell cycles from interphase to the mitotic phase and back to interphase. Most of the cell cycle is spent in interphase, which is subdivided into G subscript 1 baseline, S, and G subscript 2 baseline phases. Cell growth occurs during G subscript 1 baseline, D N A synthesis occurs during S, and more growth occurs during G subscript 2 baseline. The mitotic phase consists of mitosis, in which the nuclear chromatin is divided, and cytokinesis, in which the cytoplasm is divided, resulting in two daughter cells.",
+    "scientific_review": "PENDING",
+    "license_status": "UNVERIFIED",
+    "reuse_allowed": false,
+    "actual_asset_imported": false,
+    "found": true,
+    "page_read": true,
+    "image_retrieved": true,
+    "relations_extracted": false,
+    "limitations": [
+      "Caption is not independent verification of image pixels",
+      "No external asset imported into generated work"
+    ],
+    "local_reference_path": "/autodl-tmp/code2biovideo/Code2Video-v4.2-workspace/experiments/biology_expert_v4_2/references/retrieval/mitosis/REF_4713bf2036.png",
+    "image_sha256": "1db8267e59f27f88e4d774746211418caf5a4f201cfbf47cca0c38743d8ba850",
+    "mime": "image/webp"
+  },
+  {
+    "reference_id": "REF_5c388a09b4",
+    "source_url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/9164050222aea02b2e227df8a18237e79017ab20",
+    "source_page": "https://openstax.org/books/biology-2e/pages/10-2-the-cell-cycle",
+    "source_type": "scientific_illustration",
+    "scientific_objects": [
+      "duplicated chromosome",
+      "sister chromatids",
+      "centromere",
+      "kinetochore",
+      "kinetochore microtubules",
+      "spindle poles",
+      "metaphase plate",
+      "cohesin complex",
+      "separase"
+    ],
+    "represented_states": [
+      "chromosome aligned at metaphase plate",
+      "bipolar kinetochore attachment",
+      "cohesin intact",
+      "cohesin cleaved",
+      "sister chromatids separating",
+      "chromatids moving to opposite poles"
+    ],
+    "represented_processes": [
+      "single duplicated chromosome with two sister chromatids, sister kinetochores attached to microtubules from opposite spindle poles, aligned at metaphase plate, high school schematic",
+      "cohesion complex between sister chromatids, separase activation, cohesion cleavage, sister chromatids separating and moving toward opposite poles, high school schematic",
+      "kinetochore microtubules depolymerizing at plus ends, chromosome-to-pole movement, spindle poles labeled, high school schematic"
+    ],
+    "caption": "Figure 10.6 G2 of Interphase – The last stage of interphase is the second gap period, G2. During this stage, cells grow, replenish energy and synthesize needed macromolecules, such as proteins and lipids. Mitosis - When G2 is complete, the cell will enter mitosis. Although there are 5 phases in mitosis, with the exception of the metaphase to anaphase transition, these phases are not discrete and happen as a continuous process. Prophase is the first stage in mitosis. The nuclear envelope begins to break down and chromosomes condense and are now visible. Spindle fibers start to appear and centrosomes begin to move towards opposite poles. Prometaphase - Chromosomes continue to condense and are more visible. Kinetochores appear at the centromere and kinetochore microtubules attach. Centrosomes continue to move towards opposite poles. Metaphase – The mitotic spindle is fully developed and centrosomes are at opposite poles. Chromosomes are aligned at the “equatorial plate”, and each sister chromatid rests on one side of the plate, with spindle fibers attached to them. Anaphase - Sister chromatids are pulled apart by spindle fibers and are separated from each other. Each chromatid is now a chromosome. Telophase and Cytokinesis - Chromosomes arrive at opposite poles and start to decondense and become less visible. The nuclear envelope reassembles and begins to surround each new set of chromosomes. The mitotic spindle assembly breaks down and the division of the cytoplasm begins via cytokinesis. This physical separation into two cells are remarkably different processes in plant and animal cells. Credit: Rao, A., Hawkins, A.and Fletcher, S. Department of Biology, Texas A&M University.",
+    "alt": "This diagram shows the five phases of mitosis and cytokinesis. During prophase, the chromosomes condense and become visible, spindle fibers emerge from the centrosomes, the nuclear envelope breaks down, and the nucleolus disappears. During prometaphase, the chromosomes continue to condense and kinetochores appear at the centromeres. Mitotic spindle microtubules attach to the kinetochores, and centrosomes move toward opposite poles. During metaphase, the mitotic spindle is fully developed, and centrosomes are at opposite poles of the cell. Chromosomes line up at the metaphase plate and each sister chromatid is attached to a spindle fiber originating from the opposite pole. During anaphase, the cohesin proteins that were binding the sister chromatids together break down. The sister chromatids, which are now called chromosomes, move toward opposite poles of the cell. Non-kinetochore spindle fibers lengthen, elongating the cell. During telophase, chromosomes arrive at the opposite poles and begin to decondense. The nuclear envelope reforms. During cytokinesis in animals, a cleavage furrow separates the two daughter cells. In plants, a cell plate separates the two cells.",
+    "scientific_review": "PENDING",
+    "license_status": "UNVERIFIED",
+    "reuse_allowed": false,
+    "actual_asset_imported": false,
+    "found": true,
+    "page_read": true,
+    "image_retrieved": true,
+    "relations_extracted": false,
+    "limitations": [
+      "Caption is not independent verification of image pixels",
+      "No external asset imported into generated work"
+    ],
+    "local_reference_path": "/autodl-tmp/code2biovideo/Code2Video-v4.2-workspace/experiments/biology_expert_v4_2/references/retrieval/mitosis/REF_5c388a09b4.png",
+    "image_sha256": "895c4745b48eecd6ea1687dd7810709b4881af00771161f099e32f8c8b720623",
+    "mime": "image/webp"
+  },
+  {
+    "reference_id": "REF_4ab08ec831",
+    "source_url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/d5cdb8f6e4131171fba557bb489b0448b22be60f",
+    "source_page": "https://openstax.org/books/biology-2e/pages/10-2-the-cell-cycle",
+    "source_type": "scientific_illustration",
+    "scientific_objects": [
+      "duplicated chromosome",
+      "sister chromatids",
+      "centromere",
+      "kinetochore",
+      "kinetochore microtubules",
+      "spindle poles",
+      "metaphase plate",
+      "cohesin complex",
+      "separase"
+    ],
+    "represented_states": [
+      "chromosome aligned at metaphase plate",
+      "bipolar kinetochore attachment",
+      "cohesin intact",
+      "cohesin cleaved",
+      "sister chromatids separating",
+      "chromatids moving to opposite poles"
+    ],
+    "represented_processes": [
+      "single duplicated chromosome with two sister chromatids, sister kinetochores attached to microtubules from opposite spindle poles, aligned at metaphase plate, high school schematic",
+      "cohesion complex between sister chromatids, separase activation, cohesion cleavage, sister chromatids separating and moving toward opposite poles, high school schematic",
+      "kinetochore microtubules depolymerizing at plus ends, chromosome-to-pole movement, spindle poles labeled, high school schematic"
+    ],
+    "caption": "Figure 10.7 During prometaphase, mitotic spindle microtubules from opposite poles attach to each sister chromatid at the kinetochore. In anaphase, the connection between the sister chromatids breaks down, and the microtubules pull the chromosomes toward opposite poles.",
+    "alt": "This illustration shows two sister chromatids. Each has a kinetochore at the centromere, and mitotic spindle microtubules radiate from the kinetochore.",
+    "scientific_review": "PENDING",
+    "license_status": "UNVERIFIED",
+    "reuse_allowed": false,
+    "actual_asset_imported": false,
+    "found": true,
+    "page_read": true,
+    "image_retrieved": true,
+    "relations_extracted": false,
+    "limitations": [
+      "Caption is not independent verification of image pixels",
+      "No external asset imported into generated work"
+    ],
+    "local_reference_path": "/autodl-tmp/code2biovideo/Code2Video-v4.2-workspace/experiments/biology_expert_v4_2/references/retrieval/mitosis/REF_4ab08ec831.png",
+    "image_sha256": "72355ce2952dabebbef8dcfc6907ea0e61e27e71a30369353451458543489bfd",
+    "mime": "image/webp"
+  },
+  {
+    "reference_id": "REF_758b530ef1",
+    "source_url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/4fab78d0b4dea0957a56fadfb1d4cd55eddbd81b",
+    "source_page": "https://openstax.org/books/biology-2e/pages/10-4-cancer-and-the-cell-cycle",
+    "source_type": "scientific_illustration",
+    "scientific_objects": [
+      "duplicated chromosome",
+      "sister chromatids",
+      "centromere",
+      "kinetochore",
+      "kinetochore microtubules",
+      "spindle poles",
+      "metaphase plate",
+      "cohesin complex",
+      "separase"
+    ],
+    "represented_states": [
+      "chromosome aligned at metaphase plate",
+      "bipolar kinetochore attachment",
+      "cohesin intact",
+      "cohesin cleaved",
+      "sister chromatids separating",
+      "chromatids moving to opposite poles"
+    ],
+    "represented_processes": [
+      "single duplicated chromosome with two sister chromatids, sister kinetochores attached to microtubules from opposite spindle poles, aligned at metaphase plate, high school schematic",
+      "cohesion complex between sister chromatids, separase activation, cohesion cleavage, sister chromatids separating and moving toward opposite poles, high school schematic",
+      "kinetochore microtubules depolymerizing at plus ends, chromosome-to-pole movement, spindle poles labeled, high school schematic"
+    ],
+    "caption": "Figure 10.15 Cell Division and Apoptosis. In an adult organism, normal cell division is balanced by apoptosis (programmed cell death) to maintain a constant cell number in homeostasis. Either an increase in cell division or a decrease in apoptosis leads an increase in the number of cells and tumor formation. Credit: Rao, A. and Ryan, K. Department of Biology, Texas A&M University.",
+    "alt": "Three situations are shown. In the first, normal cell division and normal apoptosis creates a balance between the number of new cells and the number of cell deaths, resulting in a stable number of cells and homeostasis. In the second, increased cell division and normal apoptosis results in an increased number of cells and a tumor. In the third, normal cell division and decreased apoptosis results in an increased number of cells and a tumor.",
+    "scientific_review": "PENDING",
+    "license_status": "UNVERIFIED",
+    "reuse_allowed": false,
+    "actual_asset_imported": false,
+    "found": true,
+    "page_read": true,
+    "image_retrieved": true,
+    "relations_extracted": false,
+    "limitations": [
+      "Caption is not independent verification of image pixels",
+      "No external asset imported into generated work"
+    ],
+    "local_reference_path": "/autodl-tmp/code2biovideo/Code2Video-v4.2-workspace/experiments/biology_expert_v4_2/references/retrieval/mitosis/REF_758b530ef1.png",
+    "image_sha256": "fe6893932fe3e9cf8ad1414973d652029a47a9235560440710a9bc9626510712",
+    "mime": "image/webp"
+  },
+  {
+    "reference_id": "REF_1266b1f32a",
+    "source_url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/93102f6ba7ace242737e32bdebbe5abcc1cc6ea1",
+    "source_page": "https://openstax.org/books/biology-2e/pages/10-4-cancer-and-the-cell-cycle",
+    "source_type": "scientific_illustration",
+    "scientific_objects": [
+      "duplicated chromosome",
+      "sister chromatids",
+      "centromere",
+      "kinetochore",
+      "kinetochore microtubules",
+      "spindle poles",
+      "metaphase plate",
+      "cohesin complex",
+      "separase"
+    ],
+    "represented_states": [
+      "chromosome aligned at metaphase plate",
+      "bipolar kinetochore attachment",
+      "cohesin intact",
+      "cohesin cleaved",
+      "sister chromatids separating",
+      "chromatids moving to opposite poles"
+    ],
+    "represented_processes": [
+      "single duplicated chromosome with two sister chromatids, sister kinetochores attached to microtubules from opposite spindle poles, aligned at metaphase plate, high school schematic",
+      "cohesion complex between sister chromatids, separase activation, cohesion cleavage, sister chromatids separating and moving toward opposite poles, high school schematic",
+      "kinetochore microtubules depolymerizing at plus ends, chromosome-to-pole movement, spindle poles labeled, high school schematic"
+    ],
+    "caption": "Figure 10.16 The role of normal p53 is to monitor DNA and the supply of oxygen (hypoxia is a condition of reduced oxygen supply). If damage is detected, p53 triggers repair mechanisms. If repairs are unsuccessful, p53 signals apoptosis. A cell with an abnormal p53 protein cannot repair damaged DNA and thus cannot signal apoptosis. Cells with abnormal p53 can become cancerous. (credit: modification of work by Thierry Soussi)",
+    "alt": "Part a: This illustration shows cell cycle regulation by normal lower case p 5 3, which arrests the cell cycle in response to D N A damage, cell cycle abnormalities, or hypoxia. Once the damage is repaired, the cell cycle restarts. If the damage cannot be repaired, apoptosis, meaning programmed cell death, occurs. Part b: Mutated p 5 3 does not arrest the cell cycle in response to cellular damage. As a result, the cell cycle continues, and the cell may become cancerous.",
+    "scientific_review": "PENDING",
+    "license_status": "UNVERIFIED",
+    "reuse_allowed": false,
+    "actual_asset_imported": false,
+    "found": true,
+    "page_read": true,
+    "image_retrieved": true,
+    "relations_extracted": false,
+    "limitations": [
+      "Caption is not independent verification of image pixels",
+      "No external asset imported into generated work"
+    ],
+    "local_reference_path": "/autodl-tmp/code2biovideo/Code2Video-v4.2-workspace/experiments/biology_expert_v4_2/references/retrieval/mitosis/REF_1266b1f32a.png",
+    "image_sha256": "f359ea8f7ed2bb6a5fef0083d69c04c16f9b2c31cc4d1f75628873b706d3d067",
+    "mime": "image/webp"
+  },
+  {
+    "reference_id": "REF_6d08aaf41d",
+    "source_url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/c41230ee663df6246c2941239d6fa8dd92bb5e6a",
+    "source_page": "https://openstax.org/books/biology-2e/pages/10-introduction",
+    "source_type": "scientific_illustration",
+    "scientific_objects": [
+      "duplicated chromosome",
+      "sister chromatids",
+      "centromere",
+      "kinetochore",
+      "kinetochore microtubules",
+      "spindle poles",
+      "metaphase plate",
+      "cohesin complex",
+      "separase"
+    ],
+    "represented_states": [
+      "chromosome aligned at metaphase plate",
+      "bipolar kinetochore attachment",
+      "cohesin intact",
+      "cohesin cleaved",
+      "sister chromatids separating",
+      "chromatids moving to opposite poles"
+    ],
+    "represented_processes": [
+      "single duplicated chromosome with two sister chromatids, sister kinetochores attached to microtubules from opposite spindle poles, aligned at metaphase plate, high school schematic",
+      "cohesion complex between sister chromatids, separase activation, cohesion cleavage, sister chromatids separating and moving toward opposite poles, high school schematic",
+      "kinetochore microtubules depolymerizing at plus ends, chromosome-to-pole movement, spindle poles labeled, high school schematic"
+    ],
+    "caption": "Figure 10.1 A sea urchin begins life as a single diploid cell (zygote) that (a) divides through cell division to form two genetically identical daughter cells, visible here through scanning electron microscopy (SEM). After four rounds of cell division, (b) there are 16 cells, as seen in this SEM image. After many rounds of cell division, the individual develops into a complex, multicellular organism, as seen in this (c) mature sea urchin. (credit a: modification of work by Evelyn Spiegel, Louisa Howard; credit b: modification of work by Evelyn Spiegel, Louisa Howard; credit c: modification of work by Marco Busdraghi; scale-bar data from Matt Russell)",
+    "alt": "Image A shows two conjoined cells forming a dumbbell shape; the fertilization envelope has been removed so that the mesh-like outer layer can be seen. Image B shows the sea urchin embryo when it has divided into 16 conjoined cells; the overall shape is rounder than in image A. Image C shows a water melon sea urchin which appears as a peach-colored ball covered in white protruding spines.",
+    "scientific_review": "PENDING",
+    "license_status": "UNVERIFIED",
+    "reuse_allowed": false,
+    "actual_asset_imported": false,
+    "found": true,
+    "page_read": true,
+    "image_retrieved": true,
+    "relations_extracted": false,
+    "limitations": [
+      "Caption is not independent verification of image pixels",
+      "No external asset imported into generated work"
+    ],
+    "local_reference_path": "/autodl-tmp/code2biovideo/Code2Video-v4.2-workspace/experiments/biology_expert_v4_2/references/retrieval/mitosis/REF_6d08aaf41d.png",
+    "image_sha256": "3183f70476b4e07b37e92341ca5e53e6d3974d858e97399065a0e9e16f88e6ca",
+    "mime": "image/webp"
+  },
+  {
+    "reference_id": "REF_53ff80d4b2",
+    "source_url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/4a6abaa45336d529dd5bf72dac1373f86dc33136",
+    "source_page": "https://openstax.org/books/biology-ap-courses/pages/10-2-the-cell-cycle",
+    "source_type": "scientific_illustration",
+    "scientific_objects": [
+      "duplicated chromosome",
+      "sister chromatids",
+      "centromere",
+      "kinetochore",
+      "kinetochore microtubules",
+      "spindle poles",
+      "metaphase plate",
+      "cohesin complex",
+      "separase"
+    ],
+    "represented_states": [
+      "chromosome aligned at metaphase plate",
+      "bipolar kinetochore attachment",
+      "cohesin intact",
+      "cohesin cleaved",
+      "sister chromatids separating",
+      "chromatids moving to opposite poles"
+    ],
+    "represented_processes": [
+      "single duplicated chromosome with two sister chromatids, sister kinetochores attached to microtubules from opposite spindle poles, aligned at metaphase plate, high school schematic",
+      "cohesion complex between sister chromatids, separase activation, cohesion cleavage, sister chromatids separating and moving toward opposite poles, high school schematic",
+      "kinetochore microtubules depolymerizing at plus ends, chromosome-to-pole movement, spindle poles labeled, high school schematic"
+    ],
+    "caption": "Figure 10.5",
+    "alt": "A depicture of a diploid arrangement of chromosomes shows two each of three different chromosomes.  This is next to a diagram of a haploid arrangement of chromosomes with only one of each of three chromosomes.",
+    "scientific_review": "PENDING",
+    "license_status": "UNVERIFIED",
+    "reuse_allowed": false,
+    "actual_asset_imported": false,
+    "found": true,
+    "page_read": true,
+    "image_retrieved": true,
+    "relations_extracted": false,
+    "limitations": [
+      "Caption is not independent verification of image pixels",
+      "No external asset imported into generated work"
+    ],
+    "local_reference_path": "/autodl-tmp/code2biovideo/Code2Video-v4.2-workspace/experiments/biology_expert_v4_2/references/retrieval/mitosis/REF_53ff80d4b2.png",
+    "image_sha256": "b19efeed7b920afcd108e09bb211a4efb875df2f0466734a495082920ec0e44b",
+    "mime": "image/webp"
+  },
+  {
+    "reference_id": "REF_4713bf2036",
+    "source_url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/418e5abd3be4fb9a0f0f1c81b82f0d51f93c81d4",
+    "source_page": "https://openstax.org/books/biology-ap-courses/pages/10-2-the-cell-cycle",
+    "source_type": "scientific_illustration",
+    "scientific_objects": [
+      "duplicated chromosome",
+      "sister chromatids",
+      "centromere",
+      "kinetochore",
+      "kinetochore microtubules",
+      "spindle poles",
+      "metaphase plate",
+      "cohesin complex",
+      "separase"
+    ],
+    "represented_states": [
+      "chromosome aligned at metaphase plate",
+      "bipolar kinetochore attachment",
+      "cohesin intact",
+      "cohesin cleaved",
+      "sister chromatids separating",
+      "chromatids moving to opposite poles"
+    ],
+    "represented_processes": [
+      "single duplicated chromosome with two sister chromatids, sister kinetochores attached to microtubules from opposite spindle poles, aligned at metaphase plate, high school schematic",
+      "cohesion complex between sister chromatids, separase activation, cohesion cleavage, sister chromatids separating and moving toward opposite poles, high school schematic",
+      "kinetochore microtubules depolymerizing at plus ends, chromosome-to-pole movement, spindle poles labeled, high school schematic"
+    ],
+    "caption": "The cell cycle consists of interphase and the mitotic phase. During interphase, the cell grows and the nuclear DNA is duplicated. Interphase is followed by the mitotic phase. During the mitotic phase, the duplicated chromosomes are segregated and distributed into daughter nuclei. The cytoplasm is usually divided as well, resulting in two daughter cells.",
+    "alt": "Like a clock, the cell cycles from interphase to the mitotic phase and back to interphase. Most of the cell cycle is spent in interphase, which is subdivided into G_{1}, S, and G_{2} phases. Cell growth occurs during G_{1}, DNA synthesis occurs during S, and more growth occurs during G_{2}. The mitotic phase consists of mitosis, in which the nuclear chromatin is divided, and cytokinesis, in which the cytoplasm is divided, resulting in two daughter cells.",
+    "scientific_review": "PENDING",
+    "license_status": "UNVERIFIED",
+    "reuse_allowed": false,
+    "actual_asset_imported": false,
+    "found": true,
+    "page_read": true,
+    "image_retrieved": true,
+    "relations_extracted": false,
+    "limitations": [
+      "Caption is not independent verification of image pixels",
+      "No external asset imported into generated work"
+    ],
+    "local_reference_path": "/autodl-tmp/code2biovideo/Code2Video-v4.2-workspace/experiments/biology_expert_v4_2/references/retrieval/mitosis/REF_4713bf2036.png",
+    "image_sha256": "1db8267e59f27f88e4d774746211418caf5a4f201cfbf47cca0c38743d8ba850",
+    "mime": "image/webp"
+  },
+  {
+    "reference_id": "REF_472b9f46c3",
+    "source_url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/1f1aa87959935d0a7dd075a0a6f76c2caa364595",
+    "source_page": "https://openstax.org/books/biology-ap-courses/pages/10-2-the-cell-cycle",
+    "source_type": "scientific_illustration",
+    "scientific_objects": [
+      "duplicated chromosome",
+      "sister chromatids",
+      "centromere",
+      "kinetochore",
+      "kinetochore microtubules",
+      "spindle poles",
+      "metaphase plate",
+      "cohesin complex",
+      "separase"
+    ],
+    "represented_states": [
+      "chromosome aligned at metaphase plate",
+      "bipolar kinetochore attachment",
+      "cohesin intact",
+      "cohesin cleaved",
+      "sister chromatids separating",
+      "chromatids moving to opposite poles"
+    ],
+    "represented_processes": [
+      "single duplicated chromosome with two sister chromatids, sister kinetochores attached to microtubules from opposite spindle poles, aligned at metaphase plate, high school schematic",
+      "cohesion complex between sister chromatids, separase activation, cohesion cleavage, sister chromatids separating and moving toward opposite poles, high school schematic",
+      "kinetochore microtubules depolymerizing at plus ends, chromosome-to-pole movement, spindle poles labeled, high school schematic"
+    ],
+    "caption": "Figure 10.6",
+    "alt": "Photo shows small, green fleshy succulent sedum plants, growing as a ground cover. The plant has spread in a continuous mat, with new plants growing from offshoots of older plants.",
+    "scientific_review": "PENDING",
+    "license_status": "UNVERIFIED",
+    "reuse_allowed": false,
+    "actual_asset_imported": false,
+    "found": true,
+    "page_read": true,
+    "image_retrieved": true,
+    "relations_extracted": false,
+    "limitations": [
+      "Caption is not independent verification of image pixels",
+      "No external asset imported into generated work"
+    ],
+    "local_reference_path": "/autodl-tmp/code2biovideo/Code2Video-v4.2-workspace/experiments/biology_expert_v4_2/references/retrieval/mitosis/REF_472b9f46c3.png",
+    "image_sha256": "5e30f3f3a7f9c4ce8ddbda82ed072f03ce3290659931c07a170c5a0c12537d4f",
+    "mime": "image/webp"
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "topic_id": "dna_replication",
+  "scientific_queries": [
+    "eukaryotic DNA replication fork mechanism leading lagging strand synthesis RNA primer removal FEN1 RNase H nick sealing ligase I",
+    "DNA polymerase epsilon leading strand delta lagging strand PCNA clamp loading at replication fork review",
+    "eukaryotic Okazaki fragment maturation primer replacement flap endonuclease 1 DNA ligase I mechanism diagram"
+  ],
+  "candidate_urls": [
+    "https://www.ncbi.nlm.nih.gov/books/NBK26844/",
+    "https://www.ncbi.nlm.nih.gov/books/NBK9940/",
+    "https://openstax.org/books/biology-2e/pages/14-4-dna-replication-in-eukaryotes"
+  ],
+  "visual_queries": [
+    "DNA replication fork opening helicase polymerase RNA primer leading lagging Okazaki fragment primer removal nick sealing high school schematic",
+    "local replication fork states: closed duplex, opened fork with exposed templates, primed template, extended new strand, removed primer gap, sealed nick",
+    "objects relations and motion: helicase unwinding, SSB coating, primase synthesizing RNA primer, clamp loading polymerase, leading continuous synthesis, lagging discontinuous synthesis, exonuclease flap removal, ligase sealing"
+  ],
+  "visual_objects": [
+    "parental DNA double helix",
+    "replication fork junction",
+    "helicase (MCM complex simplified)",
+    "single-strand DNA binding proteins",
+    "DNA primase (RNA polymerase)",
+    "RNA primer",
+    "DNA polymerase epsilon (leading strand)",
+    "DNA polymerase delta (lagging strand)",
+    "sliding clamp (PCNA simplified)",
+    "leading strand new DNA",
+    "lagging strand new DNA",
+    "Okazaki fragment",
+    "flap endonuclease (FEN1 simplified)",
+    "DNA ligase I",
+    "free nucleotide triphosphates",
+    "pyrophosphate byproduct"
+  ],
+  "visual_states": [
+    "parental duplex closed before fork arrival",
+    "fork opened exposing separated template strands",
+    "templates coated by single-strand binding proteins",
+    "RNA primer annealed to template",
+    "polymerase clamp loaded and extending new strand",
+    "leading strand continuously extended toward fork",
+    "lagging strand discontinuous with multiple Okazaki fragments at different stages",
+    "RNA primer displaced or removed leaving a nick/gap",
+    "nick sealed by DNA ligase forming continuous strand",
+    "local fork region with staggered leading and lagging synthesis",
+    "no whole-genome completion implied: only local fork section shown with cut-section ends"
+  ],
+  "scope": {
+    "included": [
+      "local replication fork opening by helicase",
+      "single-strand template exposure and binding protein coating",
+      "RNA priming by primase",
+      "leading strand continuous synthesis by DNA polymerase epsilon",
+      "lagging strand discontinuous synthesis by DNA polymerase delta with Okazaki fragments",
+      "one local primer replacement/removal event (flap endonuclease or RNase H simplified)",
+      "nick sealing by DNA ligase",
+      "directionality and antiparallel template arrangement",
+      "approximate S-phase context in eukaryotes"
+    ],
+    "excluded": [
+      "origins of replication and licensing (covered in Section 2)",
+      "whole-genome replication completion or chromosome segregation",
+      "detailed molecular structures or kinetic parameters",
+      "telomere replication",
+      "mitochondrial DNA replication",
+      "cell cycle checkpoints beyond S-phase mention"
+    ]
+  }
+}

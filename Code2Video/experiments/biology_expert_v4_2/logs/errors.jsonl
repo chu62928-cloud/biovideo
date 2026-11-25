@@ -1,0 +1,5 @@
+{"topic_index": "0", "error_type": "PermissionDeniedError", "error": "Error code: 403 - {'error': {'message': 'Access to model denied. Please make sure you are eligible for using the model.', 'type': 'AccessDenied.Unpurchased', 'param': None, 'code': 'AccessDenied.Unpurchased'}, 'request_id': '61daf161-2a47-9137-80dd-783a8af57e33'}"}
+{"topic_index": "1", "error_type": "RuntimeError", "error": "Prior uncertain/failed API state; paid requests stopped"}
+{"topic_index": "2", "error_type": "TypeError", "error": "'str' object does not support item assignment"}
+{"topic_index": "2", "error_type": "AttributeError", "error": "'str' object has no attribute 'get'"}
+{"topic_index": "0", "error_type": "BadRequestError", "error": "Error code: 400 - {'error': {'message': 'Access denied, please make sure your account is in good standing. For details, see: https://help.aliyun.com/zh/model-studio/error-code#overdue-payment', 'type': 'Arrearage', 'param': None, 'code': 'Arrearage'}, 'id': 'chatcmpl-0a498c0e-ab06-9cea-babf-2a3a25acea26', 'request_id': '0a498c0e-ab06-9cea-babf-2a3a25acea26'}"}

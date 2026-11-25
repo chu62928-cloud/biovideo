@@ -1,0 +1,221 @@
+[
+  {
+    "call_id": "v3_01",
+    "provider": "deepseek",
+    "purpose": "contract_discovery_plan",
+    "status": "ok",
+    "started": 1795582672.954973,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 762,
+      "prompt_tokens": 336,
+      "total_tokens": 1098,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 336
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 5.405
+  },
+  {
+    "call_id": "v3_02",
+    "provider": "deepseek",
+    "purpose": "scientific_contract_build",
+    "status": "ok",
+    "started": 1795583050.8884342,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 4386,
+      "prompt_tokens": 3871,
+      "total_tokens": 8257,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 3871
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 21.674
+  },
+  {
+    "call_id": "v3_03",
+    "provider": "deepseek",
+    "purpose": "independent_contract_verification",
+    "status": "ok",
+    "started": 1795583072.5776887,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 2122,
+      "prompt_tokens": 5013,
+      "total_tokens": 7135,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 5013
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 10.488
+  },
+  {
+    "call_id": "v3_04",
+    "provider": "deepseek",
+    "purpose": "contract_binding_and_artifact_review",
+    "status": "ok",
+    "started": 1795583114.2857163,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 1123,
+      "prompt_tokens": 37726,
+      "total_tokens": 38849,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 37726
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 4.511
+  },
+  {
+    "call_id": "v3_05",
+    "provider": "qwen",
+    "purpose": "contract_reference_video_review",
+    "status": "error",
+    "started": 1795583131.554793,
+    "retries": 0,
+    "requested_model": "qwen4-max",
+    "error_type": "PermissionDeniedError",
+    "http_status": 403,
+    "elapsed_seconds": 0.508
+  },
+  {
+    "call_id": "v3_06",
+    "provider": "deepseek",
+    "purpose": "contract_discovery_plan",
+    "status": "ok",
+    "started": 1795583282.3072157,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 425,
+      "prompt_tokens": 329,
+      "total_tokens": 754,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 329
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 5.814
+  },
+  {
+    "call_id": "v3_07",
+    "provider": "deepseek",
+    "purpose": "contract_discovery_plan",
+    "status": "ok",
+    "started": 1795583478.7626326,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 647,
+      "prompt_tokens": 319,
+      "total_tokens": 966,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 319
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 4.591
+  },
+  {
+    "call_id": "v3_08",
+    "provider": "deepseek",
+    "purpose": "scientific_contract_build",
+    "status": "ok",
+    "started": 1795583541.4383662,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 5676,
+      "prompt_tokens": 5192,
+      "total_tokens": 10868,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 256
+      },
+      "prompt_cache_hit_tokens": 256,
+      "prompt_cache_miss_tokens": 4936
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 21.894
+  },
+  {
+    "call_id": "v3_09",
+    "provider": "deepseek",
+    "purpose": "independent_contract_verification",
+    "status": "ok",
+    "started": 1795583563.3588886,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 2464,
+      "prompt_tokens": 7308,
+      "total_tokens": 9772,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 128
+      },
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 7180
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 11.036
+  },
+  {
+    "call_id": "v3_10",
+    "provider": "deepseek",
+    "purpose": "contract_binding_and_artifact_review",
+    "status": "ok",
+    "started": 1795583574.4877884,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 6135,
+      "prompt_tokens": 7434,
+      "total_tokens": 13569,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 256
+      },
+      "prompt_cache_hit_tokens": 256,
+      "prompt_cache_miss_tokens": 7178
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 24.52
+  }
+]

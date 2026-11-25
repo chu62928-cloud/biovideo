@@ -163,7 +163,9 @@ class ScientificMutationTester:
    cases.append({'case_id':'MUT_'+c['constraint_id'],'constraint_id':c['constraint_id'],'contract_hash':digest(contract),'mutation_type':kind,'expected':'FAIL','valid_sample':valid,'scene':s if valid else None,'trace':t if valid else None,'not_tested_reason':None if valid else 'No executable mutation for this constraint/observation'})
   # Independent irrelevant appearance change must not be treated as science error.
   s=copy.deepcopy(scene)
-  for o in s.get('objects',[]):o.setdefault('visual_representation',{})['color']='#123456'
+  for o in s.get('objects',[]):
+   if not isinstance(o.get('visual_representation'),dict):o['visual_representation']={}
+   o['visual_representation']['color']='#123456'
   cases.append({'case_id':'CONTROL_VISUAL_COLOR','constraint_id':None,'contract_hash':digest(contract),'mutation_type':'irrelevant_color','expected':'UNCHANGED','valid_sample':True,'scene':s,'trace':copy.deepcopy(trace)})
   return cases
  def run(self,contract,scene,trace,bindings=None):
@@ -187,6 +189,8 @@ class ScientificConflictAdjudicator:
   # is required for substantive scientific resolution.
   by={c['check_id']:c for c in deterministic['checks']};conflicts=[]
   for issue in semantic.get('issues',[]):
+   if not isinstance(issue,dict):
+    conflicts.append({'status':'NEEDS_HUMAN_REVIEW','repair_allowed':False,'reason':'Unstructured semantic issue','original_issue':issue});continue
    cid=issue.get('constraint_id');measured=by.get(cid)
    if measured and measured['status']=='PASS':conflicts.append({'conflict_id':str(uuid.uuid4()),'constraint_id':cid,'contract_hash':digest(contract),'status':'NEEDS_HUMAN_REVIEW','repair_allowed':False,'deterministic':measured,'semantic_issue':issue,'reason':'Measured subset may not establish full scientific meaning; independent evidence adjudication required'})
   return conflicts

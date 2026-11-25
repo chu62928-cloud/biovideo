@@ -1,0 +1,36 @@
+{
+  "id": "54f5c184-c089-46bf-a860-4853cd128457",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"topic_id\": \"protein_translation\",\n  \"scientific_queries\": [\n    \"protein translation initiation elongation mechanism ribosome mRNA tRNA codon review\",\n    \"bacterial translation initiation Shine-Dalgarno fMet tRNA vs eukaryotic cap-dependent scanning initiator Met-tRNA\",\n    \"ribosome A P E sites peptidyl transferase translocation EF-Tu EF-G mechanism\",\n    \"high school biology translation teaching misconceptions simplification organism-specific initiation\"\n  ],\n  \"candidate_urls\": [\n    \"https://www.ncbi.nlm.nih.gov/books/NBK21154/\",\n    \"https://bio.libretexts.org/Bookshelves/Microbiology/Microbiology_(OpenStax)/11%3A_Mechanisms_of_Microbial_Genetics/11.04%3A_Protein_Synthesis_(Translation)\",\n    \"https://openstax.org/books/biology-2e/pages/15-5-translation\"\n  ],\n  \"visual_queries\": [\n    \"ribosome large small subunit mRNA binding sites A P E schematic high school\",\n    \"initiator tRNA codon anticodon base pairing ribosome schematic\",\n    \"peptidyl transferase peptide bond formation growing polypeptide chain diagram\",\n    \"translocation ribosome moving along mRNA tRNA release schematic\",\n    \"bacterial Shine-Dalgarno initiation vs eukaryotic cap scanning comparison diagram\"\n  ],\n  \"visual_objects\": [\n    \"mRNA strand with 5' and 3' ends and codon triplets\",\n    \"small ribosomal subunit\",\n    \"large ribosomal subunit\",\n    \"A site, P site, E site on ribosome\",\n    \"initiator tRNA with anticodon and amino acid\",\n    \"charged tRNA carrying amino acid\",\n    \"growing polypeptide chain\",\n    \"release factor at stop codon\"\n  ],\n  \"visual_states\": [\n    \"initiation complex assembling at start codon\",\n    \"tRNA anticodon base-paired with mRNA codon in A site\",\n    \"peptide bond formation between P-site and A-site amino acids\",\n    \"translocation shifting tRNAs from A to P and P to E\",\n    \"uncharged tRNA exiting from E site\",\n    \"polypeptide elongating one amino acid per codon\",\n    \"termination at stop codon with release factor\"\n  ],\n  \"scope\": {\n    \"included\": [\n      \"universal ribosome A/P/E site cycle\",\n      \"codon-anticodon complementary base pairing\",\n      \"peptidyl transferase and peptide bond formation\",\n      \"translocation and tRNA recycling\",\n      \"start codon recognition and reading frame establishment\",\n      \"organism-specific initiation differences (bacterial Shine-Dalgarno/fMet vs eukaryotic cap-dependent scanning/Met-tRNAi)\",\n      \"stop codon termination\"\n    ],\n    \"excluded\": [\n      \"detailed atomic structure of ribosome\",\n      \"molecular phylogenetics of translation machinery\",\n      \"post-translational modification pathways\",\n      \"regulation of translation by microRNAs or upstream ORFs\",\n      \"antibiotic mechanisms targeting ribosome\",\n      \"specific gene examples beyond generic start/stop codons\"\n    ]\n  }\n}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1795583479,
+  "model": "deepseek-flash",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+  "usage": {
+    "completion_tokens": 647,
+    "prompt_tokens": 319,
+    "total_tokens": 966,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 319
+  }
+}

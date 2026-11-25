@@ -1,0 +1,294 @@
+{
+  "topic_id": "protein_translation",
+  "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+  "uncovered_items": [
+    {
+      "item_id": "entity_mRNA_template",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_ribosome_small_subunit",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_ribosome_large_subunit",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_intact_ribosome",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_charged_tRNA",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_initiator_tRNA",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_growing_polypeptide",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_release_factor",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_initiation_factors",
+      "kind": "entity",
+      "critical": false,
+      "reason": "No rule"
+    },
+    {
+      "item_id": "entity_shine_dalgarno_sequence",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_initiation",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_codon_anticodon_recognition",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_elongation_cycle",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_peptide_bond_formation",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_translocation",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_termination",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_polyribosome_formation",
+      "kind": "process",
+      "critical": false,
+      "reason": "No rule"
+    },
+    {
+      "item_id": "relation_anticodon_codon_pairing",
+      "kind": "relation",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "relation_polypeptide_linked_to_P_site_tRNA",
+      "kind": "relation",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "relation_shine_dalgarno_anchoring",
+      "kind": "relation",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "temporal_elongation_order",
+      "kind": "temporal",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "temporal_initiation_order",
+      "kind": "temporal",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "persistent_polypeptide_tRNA_link",
+      "kind": "persistent",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    }
+  ],
+  "unsupported_checks": [],
+  "critical_gaps": [
+    {
+      "item_id": "entity_mRNA_template",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_ribosome_small_subunit",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_ribosome_large_subunit",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_intact_ribosome",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_charged_tRNA",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_initiator_tRNA",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_growing_polypeptide",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_release_factor",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_shine_dalgarno_sequence",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_initiation",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_codon_anticodon_recognition",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_elongation_cycle",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_peptide_bond_formation",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_translocation",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_termination",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "relation_anticodon_codon_pairing",
+      "kind": "relation",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "relation_polypeptide_linked_to_P_site_tRNA",
+      "kind": "relation",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "relation_shine_dalgarno_anchoring",
+      "kind": "relation",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "temporal_elongation_order",
+      "kind": "temporal",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "temporal_initiation_order",
+      "kind": "temporal",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "persistent_polypeptide_tRNA_link",
+      "kind": "persistent",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    }
+  ],
+  "contract_goal_coverage": {
+    "decision": "REVIEW_INCOMPLETE",
+    "missing_goals": [
+      "The contract does not include any constraint or coverage requirement for organism-specific initiation simplifications as a distinct reviewable artifact; it lists them in scope and unresolved questions but does not require a specific visual/text label or check confirming that bacterial vs eukaryotic initiation differences are explicitly marked as simplifications in the storyboard.",
+      "No constraint ensures that the storyboard clearly distinguishes that the Shine-Dalgarno mechanism is bacterial-specific and not eukaryotic; C9 has an exception note but no verification requirement that the exception is visually or textually communicated.",
+      "No constraint addresses the user goal to 'identify organism-specific initiation simplifications' as an output requirement independent of correctness of individual steps."
+    ]
+  },
+  "actual_observation_coverage": 0,
+  "checks_total": 9,
+  "entities_total": 10,
+  "entities_covered": 0,
+  "relations_total": 3,
+  "relations_covered": 0,
+  "processes_total": 7,
+  "processes_covered": 0,
+  "temporal_constraints_total": 2,
+  "temporal_constraints_covered": 0,
+  "persistent_relations_total": 1,
+  "persistent_relations_covered": 0,
+  "decision": "REVIEW_INCOMPLETE"
+}

@@ -1,0 +1,51 @@
+{
+  "stages": [
+    {
+      "stage": "evidence_lock",
+      "checks": [
+        "All constraints quote only E_a415a44ba2f3",
+        "No INDEPENDENTLY_VERIFIED status used"
+      ],
+      "blocking": true
+    },
+    {
+      "stage": "structural_review",
+      "checks": [
+        "C1, C5, C9 scene graph identity and relation checks",
+        "A/P/E site labels consistent with cited text"
+      ],
+      "blocking": true
+    },
+    {
+      "stage": "temporal_review",
+      "checks": [
+        "C3 elongation event order",
+        "C4 initiation order",
+        "C7 direction"
+      ],
+      "blocking": true
+    },
+    {
+      "stage": "semantic_review",
+      "checks": [
+        "tRNA anticodon-codon pairing visible (C2)",
+        "polypeptide release at stop codon (C8)",
+        "distinguish bacterial vs eukaryotic initiation features"
+      ],
+      "blocking": true
+    },
+    {
+      "stage": "human_review",
+      "checks": [
+        "Organism-specific simplification labels are clear for grades 10-12",
+        "No misleading claim that Shine-Dalgarno applies to eukaryotes",
+        "No detailed eukaryotic scanning depicted without evidence"
+      ],
+      "blocking": true
+    }
+  ],
+  "outputs": [
+    "PASS if all blocking checks pass and no unresolved critical gap",
+    "FAIL with earliest failing stage otherwise"
+  ]
+}

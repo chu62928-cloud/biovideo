@@ -1,0 +1,113 @@
+{
+  "status": "REVIEW_INCOMPLETE",
+  "retrieval": {
+    "evidence": [],
+    "failures": [
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK26844/",
+        "error": "ValueError"
+      },
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK9940/",
+        "error": "ValueError"
+      },
+      {
+        "url": "https://openstax.org/books/biology-2e/pages/14-4-dna-replication-in-eukaryotes",
+        "error": "HTTPError"
+      }
+    ],
+    "search_records": [
+      {
+        "query": "eukaryotic DNA replication fork mechanism leading lagging strand synthesis RNA primer removal FEN1 RNase H nick sealing ligase I",
+        "service": "Europe PMC",
+        "results": [
+          {
+            "id": "39121223",
+            "source": "MED",
+            "pmid": "39121223",
+            "pmcid": "PMC11313866",
+            "fullTextIdList": {
+              "fullTextId": [
+                "PMC11313866"
+              ]
+            },
+            "doi": "10.1126/sciadv.ado1739",
+            "title": "DNA polymerase δ subunit Pol32 binds histone H3-H4 and couples nucleosome assembly with Okazaki fragment processing.",
+            "authorString": "Shi G, Yang C, Wu J, Lei Y, Hu J, Feng J, Li Q.",
+            "journalTitle": "Sci Adv",
+            "issue": "32",
+            "journalVolume": "10",
+            "pubYear": "2024",
+            "journalIssn": "2375-2548",
+            "pageInfo": "eado1739",
+            "pubType": "research support, non-u.s. gov't; research-article; journal article",
+            "isOpenAccess": "Y",
+            "inEPMC": "Y",
+            "inPMC": "Y",
+            "citedByCount": 18,
+            "hasReferences": "Y",
+            "hasTextMinedTerms": "Y",
+            "hasDbCrossReferences": "N",
+            "hasPDF": "Y",
+            "hasBook": "N",
+            "hasSuppl": "Y",
+            "hasLabsLinks": "Y",
+            "hasTMAccessionNumbers": "Y",
+            "tmAccessionTypeList": {
+              "accessionType": [
+                "doi"
+              ]
+            },
+            "firstPublicationDate": "2024-08-09",
+            "firstIndexDate": "2024-08-09"
+          },
+          {
+            "id": "35819194",
+            "source": "MED",
+            "pmid": "35819194",
+            "pmcid": "PMC9371904",
+            "fullTextIdList": {
+              "fullTextId": [
+                "PMC9371904"
+              ]
+            },
+            "doi": "10.1093/nar/gkac581",
+            "title": "In vitro reconstitution reveals a key role of human mitochondrial EXOG in RNA primer processing.",
+            "authorString": "Karlowicz A, Dubiel AB, Czerwinska J, Bledea A, Purzycki P, Grzelewska M, McAuley RJ, Szczesny RJ, Brzuska G, Krol E, Szczesny B, Szymanski MR.",
+            "journalTitle": "Nucleic Acids Res",
+            "issue": "14",
+            "journalVolume": "50",
+            "pubYear": "2022",
+            "journalIssn": "0305-1048; 1362-4962; ",
+            "pageInfo": "7991-8007",
+            "pubType": "research support, non-u.s. gov't; research-article; journal article",
+            "isOpenAccess": "Y",
+            "inEPMC": "Y",
+            "inPMC": "Y",
+            "citedByCount": 8,
+            "hasReferences": "Y",
+            "hasTextMinedTerms": "Y",
+            "hasDbCrossReferences": "N",
+            "hasPDF": "Y",
+            "hasBook": "N",
+            "hasSuppl": "Y",
+            "hasLabsLinks": "Y",
+            "hasTMAccessionNumbers": "Y",
+            "tmAccessionTypeList": {
+              "accessionType": [
+                "gen",
+                "pdb",
+                "doi"
+              ]
+            },
+            "firstPublicationDate": "2022-08-01",
+            "firstIndexDate": "2022-07-13"
+          }
+        ]
+      }
+    ],
+    "research_status": "UNVERIFIED",
+    "discovery": "Agent planned queries + live bibliographic search + content fetch, no legacy topic catalogue"
+  },
+  "contract": null
+}

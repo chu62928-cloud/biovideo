@@ -1,0 +1,59 @@
+{
+  "topic_id": "protein_translation",
+  "scientific_queries": [
+    "protein translation initiation elongation mechanism ribosome mRNA tRNA codon review",
+    "bacterial translation initiation Shine-Dalgarno fMet tRNA vs eukaryotic cap-dependent scanning initiator Met-tRNA",
+    "ribosome A P E sites peptidyl transferase translocation EF-Tu EF-G mechanism",
+    "high school biology translation teaching misconceptions simplification organism-specific initiation"
+  ],
+  "candidate_urls": [
+    "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+    "https://bio.libretexts.org/Bookshelves/Microbiology/Microbiology_(OpenStax)/11%3A_Mechanisms_of_Microbial_Genetics/11.04%3A_Protein_Synthesis_(Translation)",
+    "https://openstax.org/books/biology-2e/pages/15-5-translation"
+  ],
+  "visual_queries": [
+    "ribosome large small subunit mRNA binding sites A P E schematic high school",
+    "initiator tRNA codon anticodon base pairing ribosome schematic",
+    "peptidyl transferase peptide bond formation growing polypeptide chain diagram",
+    "translocation ribosome moving along mRNA tRNA release schematic",
+    "bacterial Shine-Dalgarno initiation vs eukaryotic cap scanning comparison diagram"
+  ],
+  "visual_objects": [
+    "mRNA strand with 5' and 3' ends and codon triplets",
+    "small ribosomal subunit",
+    "large ribosomal subunit",
+    "A site, P site, E site on ribosome",
+    "initiator tRNA with anticodon and amino acid",
+    "charged tRNA carrying amino acid",
+    "growing polypeptide chain",
+    "release factor at stop codon"
+  ],
+  "visual_states": [
+    "initiation complex assembling at start codon",
+    "tRNA anticodon base-paired with mRNA codon in A site",
+    "peptide bond formation between P-site and A-site amino acids",
+    "translocation shifting tRNAs from A to P and P to E",
+    "uncharged tRNA exiting from E site",
+    "polypeptide elongating one amino acid per codon",
+    "termination at stop codon with release factor"
+  ],
+  "scope": {
+    "included": [
+      "universal ribosome A/P/E site cycle",
+      "codon-anticodon complementary base pairing",
+      "peptidyl transferase and peptide bond formation",
+      "translocation and tRNA recycling",
+      "start codon recognition and reading frame establishment",
+      "organism-specific initiation differences (bacterial Shine-Dalgarno/fMet vs eukaryotic cap-dependent scanning/Met-tRNAi)",
+      "stop codon termination"
+    ],
+    "excluded": [
+      "detailed atomic structure of ribosome",
+      "molecular phylogenetics of translation machinery",
+      "post-translational modification pathways",
+      "regulation of translation by microRNAs or upstream ORFs",
+      "antibiotic mechanisms targeting ribosome",
+      "specific gene examples beyond generic start/stop codons"
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "status": "REVIEW_INCOMPLETE",
+  "retrieval": {
+    "evidence": [],
+    "failures": [
+      {
+        "source": "public HTML discovery",
+        "error": "ValueError"
+      },
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK26859/",
+        "error": "ValueError"
+      },
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+        "error": "ValueError"
+      },
+      {
+        "url": "https://www.khanacademy.org/science/biology/cellular-molecular-biology/mitosis/a/phases-of-mitosis",
+        "error": "ValueError"
+      }
+    ],
+    "search_records": [
+      {
+        "query": "mitosis metaphase to anaphase chromosome congression kinetochore attachment opposite poles review",
+        "service": "Europe PMC",
+        "results": [
+          {
+            "id": "42273980",
+            "source": "MED",
+            "pmid": "42273980",
+            "pmcid": "PMC13258745",
+            "fullTextIdList": {
+              "fullTextId": [
+                "PMC13258745"
+              ]
+            },
+            "doi": "10.7554/elife.110952",
+            "title": "Contractile perinuclear actomyosin network promotes peripheral and polar chromosome interaction with the mitotic spindle.",
+            "authorString": "Sheidaei N, Eykelenboom JK, Yue Z, Ball G, Booth AJR, Tanaka TU.",
+            "journalTitle": "Elife",
+            "journalVolume": "15",
+            "pubYear": "2026",
+            "journalIssn": "2050-084x",
+            "pageInfo": "RP110952",
+            "pubType": "research-article; journal article",
+            "isOpenAccess": "Y",
+            "inEPMC": "Y",
+            "inPMC": "Y",
+            "citedByCount": 0,
+            "hasReferences": "Y",
+            "hasTextMinedTerms": "Y",
+            "hasDbCrossReferences": "N",
+            "hasPDF": "Y",
+            "hasBook": "N",
+            "hasSuppl": "Y",
+            "hasLabsLinks": "Y",
+            "hasTMAccessionNumbers": "Y",
+            "tmAccessionTypeList": {
+              "accessionType": [
+                "cellosaurus",
+                "uniprot",
+                "doi"
+              ]
+            },
+            "firstPublicationDate": "2026-06-11",
+            "firstIndexDate": "2026-06-12"
+          },
+          {
+            "id": "41844586",
+            "source": "MED",
+            "pmid": "41844586",
+            "pmcid": "PMC12996568",
+            "fullTextIdList": {
+              "fullTextId": [
+                "PMC12996568"
+              ]
+            },
+            "doi": "10.1038/s41467-026-69830-1",
+            "title": "Polar chromosomes are rescued from missegregation by spindle elongation-driven microtubule pivoting.",
+            "authorString": "Koprivec I, Štimac V, Đura M, Vukušić K, Mikec P, Tolić IM.",
+            "journalTitle": "Nat Commun",
+            "issue": "1",
+            "journalVolume": "17",
+            "pubYear": "2026",
+            "journalIssn": "2041-1723",
+            "pageInfo": "2049",
+            "pubType": "research-article; journal article",
+            "isOpenAccess": "Y",
+            "inEPMC": "Y",
+            "inPMC": "Y",
+            "citedByCount": 8,
+            "hasReferences": "Y",
+            "hasTextMinedTerms": "Y",
+            "hasDbCrossReferences": "N",
+            "hasPDF": "Y",
+            "hasBook": "N",
+            "hasSuppl": "Y",
+            "hasLabsLinks": "Y",
+            "hasTMAccessionNumbers": "Y",
+            "tmAccessionTypeList": {
+              "accessionType": [
+                "doi"
+              ]
+            },
+            "firstPublicationDate": "2026-03-17",
+            "firstIndexDate": "2026-03-18"
+          }
+        ]
+      }
+    ],
+    "research_status": "UNVERIFIED",
+    "discovery": "Agent planned queries + live bibliographic search + content fetch, no legacy topic catalogue"
+  },
+  "contract": null
+}

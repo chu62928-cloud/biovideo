@@ -1,0 +1,61 @@
+{
+  "topic_id": "mitosis",
+  "scientific_queries": [
+    "mitosis metaphase kinetochore attachment opposite poles sister chromatids",
+    "cohesin cleavage separase anaphase sister chromatid separation",
+    "metaphase to anaphase transition spindle assembly checkpoint",
+    "sister chromatids separate anaphase A B kinetochore microtubule shortening",
+    "mitosis teaching misconception chromosome alignment metaphase plate",
+    "kinetochore biorientation amphitelic attachment metaphase"
+  ],
+  "candidate_urls": [
+    "https://openstax.org/books/biology-2e/pages/10-2-the-cell-cycle",
+    "https://openstax.org/books/biology-2e/pages/10-4-cancer-and-the-cell-cycle",
+    "https://openstax.org/books/biology-2e/pages/10-introduction",
+    "https://openstax.org/books/biology-ap-courses/pages/10-2-the-cell-cycle",
+    "https://bio.libretexts.org/Bookshelves/Introductory_and_General_Biology/General_Biology_(Boundless)/06%3A_Cell_Division/6.02%3A_The_Cell_Cycle",
+    "https://bio.libretexts.org/Bookshelves/Introductory_and_General_Biology/General_Biology_(Boundless)/06%3A_Cell_Division/6.04%3A_Mitosis",
+    "https://bio.libretexts.org/Bookshelves/Introductory_and_General_Biology/General_Biology_(OpenStax)/06%3A_Cell_Division/6.02%3A_The_Cell_Cycle",
+    "https://bio.libretexts.org/Bookshelves/Introductory_and_General_Biology/General_Biology_(OpenStax)/06%3A_Cell_Division/6.04%3A_Mitosis"
+  ],
+  "visual_queries": [
+    "single duplicated chromosome with two sister chromatids, sister kinetochores attached to microtubules from opposite spindle poles, aligned at metaphase plate, high school schematic",
+    "cohesion complex between sister chromatids, separase activation, cohesion cleavage, sister chromatids separating and moving toward opposite poles, high school schematic",
+    "kinetochore microtubules depolymerizing at plus ends, chromosome-to-pole movement, spindle poles labeled, high school schematic"
+  ],
+  "visual_objects": [
+    "duplicated chromosome",
+    "sister chromatids",
+    "centromere",
+    "kinetochore",
+    "kinetochore microtubules",
+    "spindle poles",
+    "metaphase plate",
+    "cohesin complex",
+    "separase"
+  ],
+  "visual_states": [
+    "chromosome aligned at metaphase plate",
+    "bipolar kinetochore attachment",
+    "cohesin intact",
+    "cohesin cleaved",
+    "sister chromatids separating",
+    "chromatids moving to opposite poles"
+  ],
+  "scope": {
+    "included": [
+      "one duplicated chromosome alignment at metaphase plate",
+      "opposite-pole kinetochore attachment",
+      "cohesion release at anaphase onset",
+      "separation of existing sister chromatids"
+    ],
+    "excluded": [
+      "DNA replication",
+      "homolog pairing",
+      "crossing over",
+      "cytokinesis",
+      "spindle assembly checkpoint molecular detail beyond attachment status",
+      "cell cycle phases outside metaphase-to-anaphase transition"
+    ]
+  }
+}

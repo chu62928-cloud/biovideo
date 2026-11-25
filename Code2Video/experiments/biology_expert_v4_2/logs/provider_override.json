@@ -1,0 +1,6 @@
+{
+  "qwen_model": "qwen3.8-27b",
+  "authorization": "Explicit user request to try this model",
+  "historical_model": "qwen4-max",
+  "budget_reset": false
+}

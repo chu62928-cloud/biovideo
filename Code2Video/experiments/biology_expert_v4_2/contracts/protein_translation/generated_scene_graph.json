@@ -1,0 +1,283 @@
+{
+  "objects": [
+    {
+      "object_id": "OBJ_mRNA",
+      "scientific_identity": {
+        "name": "mRNA template",
+        "kind": "nucleic_acid",
+        "origin_id": "entity_mRNA_template"
+      },
+      "scientific_properties": {
+        "direction": "5' to 3'",
+        "features": [
+          "Shine-Dalgarno sequence in bacterial example",
+          "start codon AUG",
+          "codons",
+          "stop codon UAA/UAG/UGA"
+        ]
+      },
+      "anchors": [
+        "5' end",
+        "Shine-Dalgarno sequence",
+        "AUG start codon",
+        "codon in A site",
+        "stop codon in A site",
+        "3' end"
+      ],
+      "visual_representation": "Linear segmented ribbon with labeled 5' and 3' ends, codon blocks, and a distinct upstream Shine-Dalgarno patch for the bacterial example."
+    },
+    {
+      "object_id": "OBJ_S30",
+      "scientific_identity": {
+        "name": "small ribosomal subunit (30S, E. coli example)",
+        "kind": "ribonucleoprotein_complex",
+        "origin_id": "entity_ribosome_small_subunit"
+      },
+      "scientific_properties": {
+        "organism_example": "E. coli 30S",
+        "function": "binds mRNA and anchors via Shine-Dalgarno interaction"
+      },
+      "anchors": [
+        "mRNA binding surface",
+        "rRNA complementarity to Shine-Dalgarno sequence"
+      ],
+      "visual_representation": "Small rounded subunit with an mRNA-binding groove and a labeled rRNA-contact patch."
+    },
+    {
+      "object_id": "OBJ_L50",
+      "scientific_identity": {
+        "name": "large ribosomal subunit (50S, E. coli example)",
+        "kind": "ribonucleoprotein_complex",
+        "origin_id": "entity_ribosome_large_subunit"
+      },
+      "scientific_properties": {
+        "organism_example": "E. coli 50S",
+        "function": "binds tRNAs, contains peptidyl transferase ribozyme"
+      },
+      "anchors": [
+        "A site",
+        "P site",
+        "E site",
+        "peptidyl transferase center"
+      ],
+      "visual_representation": "Large rounded subunit with three labeled tRNA sites (A, P, E) and a highlighted peptidyl transferase center."
+    },
+    {
+      "object_id": "OBJ_RIBOSOME",
+      "scientific_identity": {
+        "name": "intact ribosome",
+        "kind": "assembled_ribonucleoprotein_complex",
+        "origin_id": "entity_intact_ribosome"
+      },
+      "scientific_properties": {
+        "composition": "small + large subunit",
+        "sites": [
+          "A",
+          "P",
+          "E"
+        ]
+      },
+      "anchors": [
+        "A site",
+        "P site",
+        "E site",
+        "mRNA channel"
+      ],
+      "visual_representation": "Combined small and large subunits forming a ribosome with visible A/P/E sites and mRNA threaded between subunits."
+    },
+    {
+      "object_id": "OBJ_INITIATOR_TRNA",
+      "scientific_identity": {
+        "name": "initiator tRNA (fMet-tRNA_fMet in E. coli; Met-tRNAi in eukaryotes)",
+        "kind": "aminoacyl_trna",
+        "origin_id": "entity_initiator_tRNA"
+      },
+      "scientific_properties": {
+        "bacterial_example": "fMet-tRNA_fMet",
+        "eukaryotic_example": "Met-tRNAi",
+        "entry_site": "P site directly"
+      },
+      "anchors": [
+        "anticodon",
+        "amino-acid attachment end",
+        "P site"
+      ],
+      "visual_representation": "Cloverleaf tRNA with a labeled fMet/Met cargo and an anticodon that pairs with AUG."
+    },
+    {
+      "object_id": "OBJ_CHARGED_TRNA",
+      "scientific_identity": {
+        "name": "charged aminoacyl-tRNA",
+        "kind": "aminoacyl_trna",
+        "origin_id": "entity_charged_tRNA"
+      },
+      "scientific_properties": {
+        "function": "carries amino acid and anticodon",
+        "entry_site": "A site"
+      },
+      "anchors": [
+        "anticodon",
+        "amino-acid attachment end",
+        "A site",
+        "P site",
+        "E site"
+      ],
+      "visual_representation": "Cloverleaf tRNA with an amino-acid cargo and a three-nucleotide anticodon; shown entering A site, shifting to P, then E."
+    },
+    {
+      "object_id": "OBJ_GROWING_POLYPEPTIDE",
+      "scientific_identity": {
+        "name": "growing polypeptide",
+        "kind": "polypeptide_chain",
+        "origin_id": "entity_growing_polypeptide"
+      },
+      "scientific_properties": {
+        "direction": "N terminus to C terminus",
+        "linkage": "linked to P-site tRNA until translocation"
+      },
+      "anchors": [
+        "N terminus",
+        "C terminus",
+        "P-site tRNA linkage"
+      ],
+      "visual_representation": "Bead-like chain extending from the P-site tRNA, with labeled N and C termini."
+    },
+    {
+      "object_id": "OBJ_RELEASE_FACTOR",
+      "scientific_identity": {
+        "name": "release factor",
+        "kind": "protein",
+        "origin_id": "entity_release_factor"
+      },
+      "scientific_properties": {
+        "function": "recognizes stop codon in A site and triggers release"
+      },
+      "anchors": [
+        "A site",
+        "stop codon"
+      ],
+      "visual_representation": "Distinct protein shape entering the A site when a stop codon is present."
+    },
+    {
+      "object_id": "OBJ_INITIATION_FACTORS",
+      "scientific_identity": {
+        "name": "initiation factors",
+        "kind": "protein_complex",
+        "origin_id": "entity_initiation_factors"
+      },
+      "scientific_properties": {
+        "bacterial_example": "three initiation factors",
+        "function": "help initiation complex assemble"
+      },
+      "anchors": [
+        "initiation complex"
+      ],
+      "visual_representation": "Small helper protein shapes near the small subunit during initiation, labeled generically."
+    },
+    {
+      "object_id": "OBJ_SHINE_DALGARNO",
+      "scientific_identity": {
+        "name": "Shine-Dalgarno sequence",
+        "kind": "rna_motif",
+        "origin_id": "entity_shine_dalgarno_sequence"
+      },
+      "scientific_properties": {
+        "location": "upstream of first AUG in E. coli mRNA",
+        "function": "base-pairs with rRNA to anchor 30S subunit"
+      },
+      "anchors": [
+        "upstream mRNA leader",
+        "rRNA contact"
+      ],
+      "visual_representation": "Highlighted AGGAGG patch upstream of AUG with a dashed base-pairing connection to the small subunit."
+    }
+  ],
+  "relations": [
+    {
+      "source": "OBJ_S30",
+      "target": "OBJ_mRNA",
+      "type": "binds_mRNA_template"
+    },
+    {
+      "source": "OBJ_SHINE_DALGARNO",
+      "target": "OBJ_S30",
+      "type": "base_pairs_with_rRNA_anchoring_30S"
+    },
+    {
+      "source": "OBJ_INITIATOR_TRNA",
+      "target": "OBJ_mRNA",
+      "type": "anticodon_pairs_with_AUG_start_codon"
+    },
+    {
+      "source": "OBJ_L50",
+      "target": "OBJ_RIBOSOME",
+      "type": "assembles_with_S30_to_form_intact_ribosome"
+    },
+    {
+      "source": "OBJ_CHARGED_TRNA",
+      "target": "OBJ_mRNA",
+      "type": "anticodon_pairs_with_codon_in_A_site"
+    },
+    {
+      "source": "OBJ_GROWING_POLYPEPTIDE",
+      "target": "OBJ_CHARGED_TRNA",
+      "type": "linked_to_P_site_tRNA_until_translocation"
+    },
+    {
+      "source": "OBJ_RELEASE_FACTOR",
+      "target": "OBJ_mRNA",
+      "type": "recognizes_stop_codon_in_A_site"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "EV_initiation_complex_assembly",
+      "role": "initiation",
+      "description": "Small subunit, mRNA, initiation factors, GTP, and initiator tRNA assemble; initiator tRNA enters P site directly; large subunit joins to form intact ribosome.",
+      "state_before": "Separate small and large subunits; mRNA not fully engaged; no initiator tRNA in P site.",
+      "state_after": "Intact ribosome assembled on mRNA with initiator tRNA in P site and A site free."
+    },
+    {
+      "event_id": "EV_first_elongation_trna_entry",
+      "role": "codon_anticodon_recognition",
+      "description": "First charged tRNA enters the free A site and its anticodon pairs with the codon after AUG.",
+      "state_before": "A site free; initiator tRNA in P site.",
+      "state_after": "Charged tRNA in A site with anticodon-codon pairing."
+    },
+    {
+      "event_id": "EV_peptide_bond_formation",
+      "role": "peptide_bond_formation",
+      "description": "Peptidyl transferase catalyzes bond between A-site amino acid amino group and P-site amino acid carboxyl group; polypeptide remains linked to P-site tRNA until translocation.",
+      "state_before": "A-site tRNA carries one amino acid; P-site tRNA carries initiator amino acid/polypeptide.",
+      "state_after": "Peptide bond formed; growing polypeptide linked to P-site tRNA; A-site tRNA now uncharged or shortened."
+    },
+    {
+      "event_id": "EV_translocation",
+      "role": "translocation",
+      "description": "Ribosome advances by three bases in the 3' direction; tRNAs shift from A to P and P to E.",
+      "state_before": "tRNA in A site; peptidyl-tRNA in P site; E site may be empty.",
+      "state_after": "Peptidyl-tRNA in P site; former P-site tRNA in E site; A site free for next charged tRNA."
+    },
+    {
+      "event_id": "EV_e_site_release",
+      "role": "elongation_cycle",
+      "description": "Former P-site tRNA in E site detaches from amino acid and is expelled.",
+      "state_before": "Uncharged or detached tRNA in E site.",
+      "state_after": "E site empty; tRNA released."
+    },
+    {
+      "event_id": "EV_elongation_repeat",
+      "role": "elongation_cycle",
+      "description": "Cycle repeats: charged tRNA entry at A site, peptide bond formation, translocation, E-site release.",
+      "state_before": "Peptidyl-tRNA in P site; A site free.",
+      "state_after": "Polypeptide extended by one amino acid; ribosome advanced one codon."
+    },
+    {
+      "event_id": "EV_termination",
+      "role": "termination",
+      "description": "Stop codon in A site recognized by release factor; polypeptide released; subunits dissociate from mRNA and each other.",
+      "state_before": "Stop codon in A site; peptidyl-tRNA in P site.",
+      "state_after": "Polypeptide released; ribosome subunits dissociate."
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+[
+  {
+    "reference_id": "REF_c7a0597a5e",
+    "source_url": "https://bio.libretexts.org/@api/deki/files/8742/OSC_Microbio_11_04_GenCode.jpg?revision=1",
+    "source_page": "https://bio.libretexts.org/Bookshelves/Microbiology/Microbiology_(OpenStax)/11%3A_Mechanisms_of_Microbial_Genetics/11.04%3A_Protein_Synthesis_(Translation)",
+    "source_type": "scientific_illustration",
+    "scientific_objects": [
+      "mRNA strand with 5' and 3' ends and codon triplets",
+      "small ribosomal subunit",
+      "large ribosomal subunit",
+      "A site, P site, E site on ribosome",
+      "initiator tRNA with anticodon and amino acid",
+      "charged tRNA carrying amino acid",
+      "growing polypeptide chain",
+      "release factor at stop codon"
+    ],
+    "represented_states": [
+      "initiation complex assembling at start codon",
+      "tRNA anticodon base-paired with mRNA codon in A site",
+      "peptide bond formation between P-site and A-site amino acids",
+      "translocation shifting tRNAs from A to P and P to E",
+      "uncharged tRNA exiting from E site",
+      "polypeptide elongating one amino acid per codon",
+      "termination at stop codon with release factor"
+    ],
+    "represented_processes": [
+      "ribosome large small subunit mRNA binding sites A P E schematic high school",
+      "initiator tRNA codon anticodon base pairing ribosome schematic",
+      "peptidyl transferase peptide bond formation growing polypeptide chain diagram",
+      "translocation ribosome moving along mRNA tRNA release schematic",
+      "bacterial Shine-Dalgarno initiation vs eukaryotic cap scanning comparison diagram"
+    ],
+    "caption": "Figure \\(\\PageIndex{1}\\): This figure shows the genetic code for translating each nucleotide triplet in mRNA into an amino acid or a termination signal in a nascent protein. The first letter of a codon is shown vertically on the left, the second letter of a codon is shown horizontally across the top, and the third letter of a codon is shown vertically on the right. (credit: modification of work by National Institutes of Health)",
+    "alt": "The codon table. On the left is the first letter of the codon (from top to bottom – U, C, A, G). On the top is the second letter (left to right U, C, A, G). On the right is the third letter (in each row, this is designated from top to bottom as U, C, A, G. UUU and UUC are Phe. UUA and UUG are Leu. UCU, UCC, UCA and UCG are Ser. UAU and UAC are Tyr. UAA and UAG are stop. UGU and UGC are Cys. UGA is stop. UGG is Trp. CUU, CUC, CUA, and CUG are Leu. CC, CCC, CCA, and CCG are Pro. CAU and CAC are his. CAA and CAG are Gln. CGU, CGC, CGA, CGG are Arg. AUU, AUC, AUA are Ile, AUG is Met and start. ACU, ACC, ACA, ACG is Thr. AAU AAc, is Asn. AAA, AAG is Lys. AGU, AGC is SEr. AGA, AG is ARg. GUU, GUC, GUA, GUG is Val. GCU, GCC, GCA, GCG, is ala. GAU, GAC is Asp. GAA, GAG is Glu. GGU, GGC, GGA, GGG is Gly.",
+    "scientific_review": "PENDING",
+    "license_status": "UNVERIFIED",
+    "reuse_allowed": false,
+    "actual_asset_imported": false,
+    "found": true,
+    "page_read": true,
+    "image_retrieved": true,
+    "relations_extracted": false,
+    "limitations": [
+      "Caption is not independent verification of image pixels",
+      "No external asset imported into generated work"
+    ],
+    "local_reference_path": "/autodl-tmp/code2biovideo/Code2Video-v4.2-workspace/experiments/biology_expert_v4_2/references/retrieval/protein_translation/REF_c7a0597a5e.jpg",
+    "image_sha256": "f3f3abd6f69e57bcfe5ce374f1a3abda8f024d8395c0c97f438c129c9dde4a73",
+    "mime": "image/jpeg"
+  },
+  {
+    "reference_id": "REF_9ccfd0fab9",
+    "source_url": "https://bio.libretexts.org/@api/deki/files/8743/OSC_Microbio_11_04_Cotrantxn.jpg?revision=1",
+    "source_page": "https://bio.libretexts.org/Bookshelves/Microbiology/Microbiology_(OpenStax)/11%3A_Mechanisms_of_Microbial_Genetics/11.04%3A_Protein_Synthesis_(Translation)",
+    "source_type": "scientific_illustration",
+    "scientific_objects": [
+      "mRNA strand with 5' and 3' ends and codon triplets",
+      "small ribosomal subunit",
+      "large ribosomal subunit",
+      "A site, P site, E site on ribosome",
+      "initiator tRNA with anticodon and amino acid",
+      "charged tRNA carrying amino acid",
+      "growing polypeptide chain",
+      "release factor at stop codon"
+    ],
+    "represented_states": [
+      "initiation complex assembling at start codon",
+      "tRNA anticodon base-paired with mRNA codon in A site",
+      "peptide bond formation between P-site and A-site amino acids",
+      "translocation shifting tRNAs from A to P and P to E",
+      "uncharged tRNA exiting from E site",
+      "polypeptide elongating one amino acid per codon",
+      "termination at stop codon with release factor"
+    ],
+    "represented_processes": [
+      "ribosome large small subunit mRNA binding sites A P E schematic high school",
+      "initiator tRNA codon anticodon base pairing ribosome schematic",
+      "peptidyl transferase peptide bond formation growing polypeptide chain diagram",
+      "translocation ribosome moving along mRNA tRNA release schematic",
+      "bacterial Shine-Dalgarno initiation vs eukaryotic cap scanning comparison diagram"
+    ],
+    "caption": "Figure \\(\\PageIndex{2}\\): In prokaryotes, multiple RNA polymerases can transcribe a single bacterial gene while numerous ribosomes concurrently translate the mRNA transcripts into polypeptides. In this way, a specific protein can rapidly reach a high concentration in the bacterial cell.",
+    "alt": "Diagram showing a double strand of DNA with RNA polymerase and a newly forming RNA strand. As the RNA elongates ribosomes bind and begin forming proteins. As the RNA gets longer, more and more ribosomes are bound in a row; this is called a polyribosome.",
+    "scientific_review": "PENDING",
+    "license_status": "UNVERIFIED",
+    "reuse_allowed": false,
+    "actual_asset_imported": false,
+    "found": true,
+    "page_read": true,
+    "image_retrieved": true,
+    "relations_extracted": false,
+    "limitations": [
+      "Caption is not independent verification of image pixels",
+      "No external asset imported into generated work"
+    ],
+    "local_reference_path": "/autodl-tmp/code2biovideo/Code2Video-v4.2-workspace/experiments/biology_expert_v4_2/references/retrieval/protein_translation/REF_9ccfd0fab9.jpg",
+    "image_sha256": "6282a16912b51d46ca9b0a3e9ca591a5632f40e4eb6e151c232695ca4109153e",
+    "mime": "image/jpeg"
+  },
+  {
+    "reference_id": "REF_5a386cf6d3",
+    "source_url": "https://bio.libretexts.org/@api/deki/files/8744/OSC_Microbio_11_04_tRNA.jpg?revision=1",
+    "source_page": "https://bio.libretexts.org/Bookshelves/Microbiology/Microbiology_(OpenStax)/11%3A_Mechanisms_of_Microbial_Genetics/11.04%3A_Protein_Synthesis_(Translation)",
+    "source_type": "scientific_illustration",
+    "scientific_objects": [
+      "mRNA strand with 5' and 3' ends and codon triplets",
+      "small ribosomal subunit",
+      "large ribosomal subunit",
+      "A site, P site, E site on ribosome",
+      "initiator tRNA with anticodon and amino acid",
+      "charged tRNA carrying amino acid",
+      "growing polypeptide chain",
+      "release factor at stop codon"
+    ],
+    "represented_states": [
+      "initiation complex assembling at start codon",
+      "tRNA anticodon base-paired with mRNA codon in A site",
+      "peptide bond formation between P-site and A-site amino acids",
+      "translocation shifting tRNAs from A to P and P to E",
+      "uncharged tRNA exiting from E site",
+      "polypeptide elongating one amino acid per codon",
+      "termination at stop codon with release factor"
+    ],
+    "represented_processes": [
+      "ribosome large small subunit mRNA binding sites A P E schematic high school",
+      "initiator tRNA codon anticodon base pairing ribosome schematic",
+      "peptidyl transferase peptide bond formation growing polypeptide chain diagram",
+      "translocation ribosome moving along mRNA tRNA release schematic",
+      "bacterial Shine-Dalgarno initiation vs eukaryotic cap scanning comparison diagram"
+    ],
+    "caption": "Figure \\(\\PageIndex{3}\\): (a) After folding caused by intramolecular base pairing, a tRNA molecule has one end that contains the anticodon, which interacts with the mRNA codon, and the CCA amino acid binding end. (b) A space-filling model is helpful for visualizing the three-dimensional shape of tRNA. (c) Simplified models are useful when drawing complex processes such as protein synthesis.",
+    "alt": "Three different drawings of tRNA. A) shows a single strand folded into a cross shape with intramolecular base pairing. The 3’ end at the top is labeled amino acid attachment site and has the sequence ACC. The 5’ end is also at the top. At the base of the cross is a three letter grouping called anticodon. This is complementary to a three letter set on the mRNA called a codon. B) shows a space filling 3-D model that is shaped like an L. One end is the amino acid attachment site and the other is the anticodon. C) is a ver simplified drawing shaped like zigzag; one end is the amino acid attachment site and the other is the anticodon.",
+    "scientific_review": "PENDING",
+    "license_status": "UNVERIFIED",
+    "reuse_allowed": false,
+    "actual_asset_imported": false,
+    "found": true,
+    "page_read": true,
+    "image_retrieved": true,
+    "relations_extracted": false,
+    "limitations": [
+      "Caption is not independent verification of image pixels",
+      "No external asset imported into generated work"
+    ],
+    "local_reference_path": "/autodl-tmp/code2biovideo/Code2Video-v4.2-workspace/experiments/biology_expert_v4_2/references/retrieval/protein_translation/REF_5a386cf6d3.jpg",
+    "image_sha256": "5546b2d170683d0dd8a2f9e52edae7ae15930928da967e0a20a7b205b9d651b0",
+    "mime": "image/jpeg"
+  }
+]

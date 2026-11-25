@@ -1,0 +1,54 @@
+{
+  "topic_id": "mitosis",
+  "scientific_queries": [
+    "mitosis metaphase to anaphase chromosome congression kinetochore attachment opposite poles review",
+    "sister chromatid cohesion release separase cleavage during anaphase mechanism",
+    "chromosome alignment metaphase plate bipolar kinetochore attachment error correction review",
+    "anaphase A sister chromatid separation kinetochore microtubule shortening mechanism textbook"
+  ],
+  "candidate_urls": [
+    "https://www.ncbi.nlm.nih.gov/books/NBK26859/",
+    "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+    "https://www.khanacademy.org/science/biology/cellular-molecular-biology/mitosis/a/phases-of-mitosis"
+  ],
+  "visual_queries": [
+    "single duplicated chromosome with two sister chromatids, sister kinetochores attached to microtubules from opposite spindle poles, aligned at metaphase plate, high school schematic",
+    "cohesion complex between sister chromatids, separase activation, cohesion cleavage, sister chromatids separating and moving toward opposite poles, high school schematic",
+    "kinetochore microtubules depolymerizing at plus ends, chromosome-to-pole movement, spindle poles labeled, high school schematic"
+  ],
+  "visual_objects": [
+    "duplicated chromosome",
+    "sister chromatids",
+    "centromere",
+    "kinetochore",
+    "kinetochore microtubules",
+    "spindle poles",
+    "metaphase plate",
+    "cohesin complex",
+    "separase"
+  ],
+  "visual_states": [
+    "chromosome aligned at metaphase plate",
+    "bipolar kinetochore attachment",
+    "cohesin intact",
+    "cohesin cleaved",
+    "sister chromatids separating",
+    "chromatids moving to opposite poles"
+  ],
+  "scope": {
+    "included": [
+      "one duplicated chromosome alignment at metaphase plate",
+      "opposite-pole kinetochore attachment",
+      "cohesion release at anaphase onset",
+      "separation of existing sister chromatids"
+    ],
+    "excluded": [
+      "DNA replication",
+      "homolog pairing",
+      "crossing over",
+      "cytokinesis",
+      "spindle assembly checkpoint molecular detail beyond attachment status",
+      "cell cycle phases outside metaphase-to-anaphase transition"
+    ]
+  }
+}

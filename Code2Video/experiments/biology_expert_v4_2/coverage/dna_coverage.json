@@ -1,0 +1,277 @@
+{
+  "topic_id": "dna_replication",
+  "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+  "uncovered_items": [
+    {
+      "item_id": "entity_replication_fork",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_helicase_enzyme",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_primase_enzyme",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_rna_primer",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_dna_pol_alpha",
+      "kind": "entity",
+      "critical": false,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_dna_pol_epsilon",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_dna_pol_delta",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_leading_strand",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_lagging_strand",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_okazaki_fragment",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_rnase_h_enzyme",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_dna_ligase_enzyme",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_fork_opening",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_rna_priming",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_leading_strand_synthesis",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_lagging_strand_synthesis",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_primer_replacement",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_nick_sealing",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "temporal_priming_before_extension",
+      "kind": "temporal",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "temporal_primer_removal_before_sealing",
+      "kind": "temporal",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "persistent_leading_continuity",
+      "kind": "persistent",
+      "critical": false,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "persistent_lagging_discontinuity",
+      "kind": "persistent",
+      "critical": false,
+      "reason": "Rule absent/unsupported/unmeasured"
+    }
+  ],
+  "unsupported_checks": [],
+  "critical_gaps": [
+    {
+      "item_id": "entity_replication_fork",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_helicase_enzyme",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_primase_enzyme",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_rna_primer",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_dna_pol_epsilon",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_dna_pol_delta",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_leading_strand",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_lagging_strand",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_okazaki_fragment",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_rnase_h_enzyme",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_dna_ligase_enzyme",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_fork_opening",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_rna_priming",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_leading_strand_synthesis",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_lagging_strand_synthesis",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_primer_replacement",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_nick_sealing",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "temporal_priming_before_extension",
+      "kind": "temporal",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "temporal_primer_removal_before_sealing",
+      "kind": "temporal",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    }
+  ],
+  "contract_goal_coverage": {
+    "decision": "REVIEW_INCOMPLETE",
+    "missing_goals": [
+      "No constraint or coverage item enforces the user-required 'no whole-genome completion claim' exclusion at the visual/script level; unresolved_questions notes it but no blocking check exists.",
+      "No constraint enforces the exclusion of telomere/telomerase content, though source paragraph_5 contains telomere material that must be kept out of the Section4 video.",
+      "Verification primitive 'relation'/'event_order' on VLM does not prove chemical-level claims (phosphodiester bond formation) or ATP hydrolysis; appropriate to keep uncertain, but goal coverage should record these as simplifications requiring stated caveats.",
+      "No constraint checks that the scene remains limited to one local fork (scope locality), only that a fork exists."
+    ]
+  },
+  "actual_observation_coverage": 0,
+  "checks_total": 8,
+  "entities_total": 12,
+  "entities_covered": 0,
+  "relations_total": 0,
+  "relations_covered": 0,
+  "processes_total": 6,
+  "processes_covered": 0,
+  "temporal_constraints_total": 2,
+  "temporal_constraints_covered": 0,
+  "persistent_relations_total": 2,
+  "persistent_relations_covered": 0,
+  "decision": "REVIEW_INCOMPLETE"
+}

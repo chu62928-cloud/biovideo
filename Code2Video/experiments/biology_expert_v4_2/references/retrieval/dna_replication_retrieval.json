@@ -1,0 +1,134 @@
+{
+  "evidence": [
+    {
+      "evidence_id": "E_d8ffea5a5785",
+      "url": "https://openstax.org/books/biology-2e/pages/14-5-dna-replication-in-eukaryotes",
+      "title": "14.5 DNA Replication in Eukaryotes - Biology 2e | OpenStax",
+      "author_or_institution": "openstax.org",
+      "source_type": "retrieved_scientific_webpage",
+      "biological_scope": "Requires independent scope verification against quoted passages",
+      "accessed_utc": "2026-11-25T05:04:06Z",
+      "content_sha256": "ff30253eb084c1944c86844790ccf2b6f06c512c2b1406395f6ad0e911342627",
+      "saved_text": "/autodl-tmp/code2biovideo/Code2Video-v4.2-workspace/experiments/biology_expert_v4_2/references/retrieval/dna_replication/E_d8ffea5a5785.txt",
+      "passages": [
+        {
+          "location": "paragraph_0",
+          "text": "By the end of this section, you will be able to do the following:"
+        },
+        {
+          "location": "paragraph_1",
+          "text": "Eukaryotic genomes are much more complex and larger in size than prokaryotic genomes. Eukaryotes also have a number of different linear chromosomes. The human genome has 3 billion base pairs per haploid set of chromosomes, and 6 billion base pairs are replicated during the S phase of the cell cycle. There are multiple origins of replication on each eukaryotic chromosome; humans can have up to 100,000 origins of replication across the genome. The rate of replication is approximately 100 nucleotides per second, much slower than prokaryotic replication. In yeast, which is a eukaryote, special sequences known as autonomously replicating sequences (ARS) are found on the chromosomes. These are equivalent to the origin of replication in E. coli ."
+        },
+        {
+          "location": "paragraph_2",
+          "text": "The number of DNA polymerases in eukaryotes is much more than in prokaryotes: 14 are known, of which five are known to have major roles during replication and have been well studied. They are known as pol α , pol β , pol γ , pol δ , and pol ε ."
+        },
+        {
+          "location": "paragraph_3",
+          "text": "The essential steps of replication are the same as in prokaryotes. Before replication can start, the DNA has to be made available as a template. Eukaryotic DNA is bound to basic proteins known as histones to form structures called nucleosomes. Histones must be removed and then replaced during the replication process, which helps to account for the lower replication rate in eukaryotes. The chromatin (the complex between DNA and proteins) may undergo some chemical modifications, so that the DNA may be able to slide off the proteins or be accessible to the enzymes of the DNA replication machinery. At the origin of replication, a pre-replication complex is made with other initiator proteins. Helicase and other proteins are then recruited to start the replication process ( Table 14.2 )."
+        },
+        {
+          "location": "paragraph_4",
+          "text": "A helicase using the energy from ATP hydrolysis opens up the DNA helix. Replication forks are formed at each replication origin as the DNA unwinds. The opening of the double helix causes over-winding, or supercoiling, in the DNA ahead of the replication fork. These are resolved with the action of topoisomerases. Primers are formed by the enzyme primase, and using the primer, DNA pol can start synthesis. Three major DNA polymerases are then involved: α, δ and ε. DNA pol α adds a short (20 to 30 nucleotides) DNA fragment to the RNA primer on both strands, and then hands off to a second polymerase. While the leading strand is continuously synthesized by the enzyme pol ε , the lagging strand is synthesized by pol δ . A sliding clamp protein known as PCNA (proliferating cell nuclear antigen) holds the DNA pol in place so that it does not slide off the DNA. As pol δ runs into the primer RNA on the lagging strand, it displaces it from the DNA template. The displaced primer RNA is then removed by RNase H (AKA flap endonuclease ) and replaced with DNA nucleotides. The Okazaki fragments in the lagging strand are joined after the replacement of the RNA primers with DNA. The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond."
+        },
+        {
+          "location": "paragraph_5",
+          "text": "Unlike prokaryotic chromosomes, eukaryotic chromosomes are linear. As you’ve learned, the enzyme DNA pol can add nucleotides only in the 5' to 3' direction. In the leading strand, synthesis continues until the end of the chromosome is reached. On the lagging strand, DNA is synthesized in short stretches, each of which is initiated by a separate primer. When the replication fork reaches the end of the linear chromosome, there is no way to replace the primer on the 5’ end of the lagging strand. The DNA at the ends of the chromosome thus remains unpaired, and over time these ends, called telomeres, may get progressively shorter as cells continue to divide."
+        },
+        {
+          "location": "paragraph_6",
+          "text": "Telomeres comprise repetitive sequences that code for no particular gene. In humans, a six-base-pair sequence, TTAGGG, is repeated 100 to 1000 times in the telomere regions. In a way, these telomeres protect the genes from getting deleted as cells continue to divide. The telomeres are added to the ends of chromosomes by a separate enzyme, telomerase ( Figure 14.16 ), whose discovery helped in the understanding of how these repetitive chromosome ends are maintained. The telomerase enzyme contains a catalytic part and a built-in RNA template. It attaches to the end of the chromosome, and DNA nucleotides complementary to the RNA template are added on the 3' end of the DNA strand. Once the 3' end of the lagging strand template is sufficiently elongated, DNA polymerase can add the nucleotides complementary to the ends of the chromosomes. Thus, the ends of the chromosomes are replicated."
+        },
+        {
+          "location": "paragraph_7",
+          "text": "Figure 14.15 The ends of linear chromosomes are maintained by the action of the telomerase enzyme. Credit: Rao, A. and Fletcher, S. Department of Biology, Texas A&M University."
+        },
+        {
+          "location": "paragraph_8",
+          "text": "Telomerase is typically active in germ cells and adult stem cells. It is not active in adult somatic cells. For their discovery of telomerase and its action, Elizabeth Blackburn, Carol W. Greider, and Jack W. Szostak ( Figure 14.16 ) received the Nobel Prize for Medicine and Physiology in 2009. Later research using HeLa cells (obtained from Henrietta Lacks)  confirmed that telomerase is present in human cells. And in 2001, researchers including Diane L. Wright found that telomerase is necessary for cells in human embryos to rapidly proliferate."
+        },
+        {
+          "location": "paragraph_9",
+          "text": "Figure 14.16 Elizabeth Blackburn, 2009 Nobel Laureate, is one of the scientists who discovered how telomerase works. (credit: US Embassy Sweden)"
+        },
+        {
+          "location": "paragraph_10",
+          "text": "Cells that undergo cell division continue to have their telomeres shortened because most somatic cells do not make telomerase. This essentially means that telomere shortening is associated with aging. With the advent of modern medicine, preventative health care, and healthier lifestyles, the human life span has increased, and there is an increasing demand for people to look younger and have a better quality of life as they grow older."
+        },
+        {
+          "location": "paragraph_11",
+          "text": "In 2010, scientists found that telomerase can reverse some age-related conditions in mice. This may have potential in regenerative medicine. 2 Telomerase-deficient mice were used in these studies; these mice have tissue atrophy, stem cell depletion, organ system failure, and impaired tissue injury responses. Telomerase reactivation in these mice caused extension of telomeres, reduced DNA damage, reversed neurodegeneration, and improved the function of the testes, spleen, and intestines. Thus, telomere reactivation may have potential for treating age-related diseases in humans."
+        },
+        {
+          "location": "paragraph_12",
+          "text": "Cancer is characterized by uncontrolled cell division of abnormal cells. The cells accumulate mutations, proliferate uncontrollably, and can migrate to different parts of the body through a process called metastasis. Scientists have observed that cancerous cells have considerably shortened telomeres and that telomerase is active in these cells. Interestingly, only after the telomeres were shortened in the cancer cells did the telomerase become active. If the action of telomerase in these cells can be inhibited by drugs during cancer therapy, then the cancerous cells could potentially be stopped from further division."
+        },
+        {
+          "location": "paragraph_13",
+          "text": "Access for free at https://openstax.org/books/biology-2e/pages/1-introduction"
+        },
+        {
+          "location": "paragraph_14",
+          "text": "Access for free at https://openstax.org/books/biology-2e/pages/1-introduction"
+        },
+        {
+          "location": "paragraph_15",
+          "text": "The information below includes the information needed to generate citations in most \n  major styles (APA, MLA, etc.); you must reformat and organize the information as needed \n  to fit the requirements of the style. Use the information below to generate a citation. \n  We recommend using a citation tool such as this one ."
+        },
+        {
+          "location": "paragraph_16",
+          "text": "© Jul 22, 2026 OpenStax. Textbook content produced by OpenStax is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike License. The OpenStax name, OpenStax logo, OpenStax book covers, OpenStax CNX name, and OpenStax CNX logo, \n    and Rice University name, and Rice University logo trademarks, or wordmarks are not subject to the Creative \n    Commons license and may not be reproduced without the prior and express written consent of Rice University."
+        }
+      ],
+      "figures": [
+        {
+          "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/51d37f92e5fa60c65d661592c3a0256925c8bcc1",
+          "caption": "Figure 14.15 The ends of linear chromosomes are maintained by the action of the telomerase enzyme. Credit: Rao, A. and Fletcher, S. Department of Biology, Texas A&M University.",
+          "alt": "The process of Telomere Replication is shown. The starting image has an unreplicated end, and is missing DNA on the lagging strang.  Telomerase has an associated R N A that complements the 5 prime overhang at the end of the chromosome, creating an extension of the unreplicated end. The R N A template is used to synthesize the complementary strand, and telomerase again extends the unreplicated end. Telomerase then shifts, and the process is repeated. Next, primase and D N A polymerase synthesize the rest of the complementary strand. And the lagging strand is completed.",
+          "source_page": "https://openstax.org/books/biology-2e/pages/14-5-dna-replication-in-eukaryotes"
+        },
+        {
+          "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/75e41fc0c90afb8b222007d3c5bb1dd027f8c94c",
+          "caption": "Figure 14.16 Elizabeth Blackburn, 2009 Nobel Laureate, is one of the scientists who discovered how telomerase works. (credit: US Embassy Sweden)",
+          "alt": "Photo of Elizabeth Blackburn.",
+          "source_page": "https://openstax.org/books/biology-2e/pages/14-5-dna-replication-in-eukaryotes"
+        }
+      ],
+      "fact_support": [],
+      "conflicts": [],
+      "trust_limitations": "Publisher authority and exact quotes do not establish entailment; independent contract review required",
+      "status": "RETRIEVED"
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=eukaryotic%20DNA%20replication%20fork%20mechanism%20leading%20lagging%20strand%20synthesis%20RNA%20primer%20removal%20FEN1%20RNase%20H%20nick%20sealing%20ligase%20I&format=json&pageSize=2",
+      "error": "ReadTimeout"
+    },
+    {
+      "source": "public HTML discovery",
+      "error": "ValueError"
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26844/",
+      "error": "ValueError"
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK9940/",
+      "error": "ValueError"
+    },
+    {
+      "url": "https://openstax.org/books/biology-2e/pages/14-4-dna-replication-in-eukaryotes",
+      "error": "HTTPError"
+    }
+  ],
+  "search_records": [
+    {
+      "service": "publisher_live_TOC",
+      "url": "https://openstax.org/books/biology-2e",
+      "discovered": []
+    }
+  ],
+  "research_status": "RETRIEVED",
+  "discovery": "Agent planned queries + live bibliographic search + content fetch, no legacy topic catalogue"
+}

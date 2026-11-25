@@ -1,0 +1,15 @@
+{
+  "stages": [
+    "script",
+    "storyboard",
+    "animation_code",
+    "rendered_video"
+  ],
+  "methods": [
+    "video_semantic_review",
+    "scene_graph",
+    "runtime_trace",
+    "human"
+  ],
+  "notes": "Use VLM review for biological identity and temporal order; use human review for contested simplifications and claims about completeness. No INDEPENDENTLY_VERIFIED status is assigned here."
+}
