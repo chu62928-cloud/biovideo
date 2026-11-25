@@ -1,0 +1,65 @@
+{
+  "type": "object",
+  "required": [
+    "process_id",
+    "input_assembly_types",
+    "required_states",
+    "preconditions",
+    "actions",
+    "postconditions",
+    "invariants",
+    "evidence_ids"
+  ],
+  "properties": {
+    "process_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "input_assembly_types": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required_states": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "preconditions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "postconditions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "invariants": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "additionalProperties": true
+}

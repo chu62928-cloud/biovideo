@@ -14,7 +14,7 @@ class ReviewTools:
  def __init__(self,gateway,root):self.gateway=gateway;self.root=Path(root)
  def verify_facts(self,pack):
   prompt="""Independently check the proposed scientific facts AGAINST the actual source passages. Return JSON {"facts":[{"fact_id":"...","status":"VERIFIED|CONFLICTED|INSUFFICIENT_EVIDENCE","reason":"brief source entailment and organism/stage scope judgment","evidence_ids":["..."]}],"conflicts":[]}.
-Do not use self-confidence scores. Exact quotation matching has already been checked by code, but does not prove entailment. Flag ungrounded extensions, specific details absent from passages, and misleading source statements. Textbooks may contain errors (e.g. do not conflate RNase H and FEN1). Restrict to appropriate topic scope. Validate claim meaning, not merely shared keywords. Multiple pages of the same publisher are not independent cross-validation. If insufficient, retain uncertainty.
+Do not use self-confidence scores. Exact quotation matching has already been checked by code, but does not prove entailment. Flag ungrounded extensions, specific details absent from passages, and misleading source statements. Textbooks may contain errors; require source entailment. Restrict to appropriate topic scope. Validate claim meaning, not merely shared keywords. Multiple pages of the same publisher are not independent cross-validation. If insufficient, retain uncertainty.
 PACK:\n"""+json.dumps(pack,ensure_ascii=False)
   data=parse_json(self.gateway.request('deepseek','independent_fact_verification_'+pack['topic_id'],prompt))
   by={f['fact_id']:f for f in data['facts']}
@@ -52,17 +52,6 @@ Evaluate each supplied sample independently, including a normal negative control
    results.append(out)
   return {'samples':results}
  def video_review(self,artifacts,context):
-  pack=context['knowledge_pack']
-  prompt="""You are the SINGLE BiologyExpertAgent's scientific video-review TOOL, not the visual-layout critic. Watch the COMPLETE MP4. GRID image is only a coordinate reference. Assess biological meaning, identity, template/new-strand topology, primer removal then polymerase gap filling then ligase nick sealing. Combine actual trajectory and visible polarity; do not trust the generator's intended direction. Report unreadable/ambiguous objects as UNCERTAIN. In particular inspect the central blue hollow ladder: is it parental duplex or an apparent additional DNA? Identify scientific root cause, not just moving icons.
-Return JSON with compatibility wrapper "layout":{"has_issues":true/false,"improvements":[]} AND "science":{"decision":"PASS|REVISE|NEEDS_HUMAN_REVIEW|ERROR","targeted_gap_direction":"PASS|FAIL|UNCERTAIN","issues":[{"issue_id":"...", "severity":"blocker|major|minor|uncertain","category":"scientific_mechanism|scientific_identity|scientific_ambiguity","description":"...", "object_ids":["ACTUAL KNOWN ID"],"evidence_ids":["FACT ID"],"artifact_evidence":{"video_timestamp":0.0,"observation":"what is actually seen"},"root_cause_stage":"SCRIPT|CAST|ASSETS|STORYBOARD|ANIMATION_CODE","suggested_repair_scope":"affected_event|scene_geometry|upstream_script"}],"checks":[]}.
-Separate the event5 direction repair target from other existing issues. A correct growth order does not imply the whole video PASS. Do not invent precise timestamps you cannot observe. If ambiguous, targeted direction UNCERTAIN; trajectory evidence can establish direction even if sparse frames cannot.
-""" + json.dumps({'facts':[f for f in pack['facts'] if f['verification']=='VERIFIED'],'storyboard':context.get('storyboard'),'mechanism_evidence':context.get('mechanism_result'),'actual_code':artifacts['code'],'actual_object_inventory':artifacts['trace']['object_metadata']},ensure_ascii=False)
-  if getattr(self.gateway,'qwen_profile',None):
-   prompt+='\nCONCISE STRUCTURED RESPONSE: JSON only, no markdown. At most 3 most important issues and 4 short checks. Each description/reason <=80 words. Avoid repeating full source or trajectory tables. Preserve scientific standards; do not hide remaining blockers. Use FACT IDs (not PMID IDs) in evidence_ids and only actual registered object IDs. Output science.targeted_gap_direction separately from overall decision. Overall PASS requires all necessary checks, not just the repaired direction.'
-  data=parse_json(self.gateway.request('qwen','science_video_review',prompt,video=artifacts['video']))
-  science=data['science'];known=set(artifacts['trace']['object_metadata']);facts={f['fact_id'] for f in pack['facts'] if f['verification']=='VERIFIED'}
-  if any(set(i['object_ids'])-known or set(i['evidence_ids'])-facts for i in science.get('issues',[])):return review_result('RENDERED_VIDEO','ERROR',[],artifacts,[{'reason':'Video reviewer cited unknown object or fact ID'}])
-  out=review_result('RENDERED_VIDEO',science['decision'],science.get('issues',[]),artifacts,science.get('checks',[]),mode='FULL_MP4',targeted_gap_direction=science.get('targeted_gap_direction','UNCERTAIN'))
-  if any(i['severity']=='blocker' for i in out['issues']) and out['decision']=='PASS':out.update(decision='REVISE',next_action='CREATE_REPAIR_TASK')
-  write(self.root/(out['review_id']+'.json'),out)
-  return out
+  service=context.get('contract_review_service')
+  if service is None:raise ValueError('Scientific Contract review service required; legacy topic rules retired')
+  return service.review(artifacts,context['scientific_contract'],context.get('evidence',[]))

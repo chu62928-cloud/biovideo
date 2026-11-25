@@ -25,7 +25,21 @@ class ModelGateway:
   acknowledged={cid for a in rows for cid in a['acknowledged_failed_calls']}
   self.stopped=any(r['status'] in {'error','pending'} and r.get('call_id') not in acknowledged for r in self.rows)
  def request(self,provider,purpose,prompt,video=None):
-  if self.stopped:raise RuntimeError('Prior uncertain/failed API state; paid requests stopped')
+  import fcntl
+  lock=self.root/'request.lock'
+  with lock.open('a') as handle:
+   fcntl.flock(handle,fcntl.LOCK_EX)
+   try:return self._request_locked(provider,purpose,prompt,video)
+   finally:fcntl.flock(handle,fcntl.LOCK_UN)
+ def _request_locked(self,provider,purpose,prompt,video=None):
+  self.rows=json.loads(self.path.read_text()) if self.path.exists() else []
+  authpath=self.root/'budget_authorizations.json'
+  auths=json.loads(authpath.read_text()) if authpath.exists() else []
+  acknowledged={cid for a in auths for cid in a.get('acknowledged_failed_calls',[])}
+  blocking=[r for r in self.rows if r['status'] in {'error','pending'} and r.get('call_id') not in acknowledged]
+  if blocking:
+   # A confirmed provider-specific 403 does not make other providers' state uncertain.
+   if any((r['provider']==provider and r.get('requested_model')==os.environ.get('QWEN_MODEL' if provider=='qwen' else 'DEEPSEEK_MODEL')) or r.get('http_status')!=403 for r in blocking):raise RuntimeError('Prior uncertain/failed API state for this provider; paid requests stopped')
   if provider not in self.limits:raise ValueError('Unknown provider')
   if sum(r['provider']==provider for r in self.rows)>=self.limits[provider]:raise RuntimeError('Persisted model budget exhausted')
   prompts=Path(__file__).parent/'prompts'
@@ -35,7 +49,8 @@ class ModelGateway:
   os.environ['CODE2VIDEO_AUDIT_DIR']=str(self.root/'deepseek_raw')
   os.environ['QWEN_CRITIC_AUDIT_DIR']=str(self.root/'qwen_raw')
   os.environ['CODE2VIDEO_STAGE']=purpose
-  n=len(self.rows)+1;call_id=f'v3_{n:02d}'
+  import uuid
+  n=len(self.rows)+1;call_id=f'v42_{n:02d}_'+uuid.uuid4().hex[:8]
   rec={'call_id':call_id,'provider':provider,'purpose':purpose,'status':'pending','started':time.time(),'retries':0,'requested_model':os.environ['DEEPSEEK_MODEL' if provider=='deepseek' else 'QWEN_MODEL']}
   self.rows.append(rec);write(self.path,self.rows);start=time.monotonic()
   (self.root/(call_id+'_prompt.txt')).write_text(prompt)

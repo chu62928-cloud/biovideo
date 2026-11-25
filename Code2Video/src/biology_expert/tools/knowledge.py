@@ -22,8 +22,7 @@ class KnowledgeTools:
   prompt="""Build an evidence-grounded Topic Knowledge Pack for the supplied topic and audience. Use ONLY actually retrieved evidence passages below. Return JSON with facts (5-8 atomic facts), mechanism (events, roles, constraints), assumptions.
 Each fact: fact_id, claim, scope, classification (established|teaching_simplification|disputed|unverified), evidence_ids, support:[{evidence_id,quote}].
 Every quote must be an EXACT contiguous substring of a retrieved passage, preferably 8-22 words, not a paraphrase. Do not invent citations. Include multiple sources where they genuinely support the same claim; do not use a title as claim evidence. Classification does not establish verification.
-Scope carefully: organism/stage matters; exclude molecular details not supported by sources. For DNA synthesis include 5prime-to-3prime addition at the free 3prime end, antiparallel templates, priming and maturation if actually supported. For mitosis distinguish sister chromatids vs homologous chromosomes, S phase vs mitosis, nuclear division vs cytokinesis. State any evidence gaps rather than fill from memory.
-For mechanism constraints use scientific language and associated fact_ids; do NOT prescribe screen x coordinates.
+Scope carefully: organism/stage matters; exclude molecular details not supported by sources. For mechanism constraints use scientific language and associated fact_ids; do NOT prescribe screen x coordinates.
 """ + '\nTOPIC:\n'+str(scope)+'\nRETRIEVED:\n'+str(retrieval['evidence'])
   data=parse_json(self.gateway.request('deepseek','knowledge_'+scope['topic_id'],prompt))
   pack={'topic_id':scope['topic_id'],'topic_scope':scope,'facts':data['facts'],'evidence':retrieval['evidence'],'mechanism':data.get('mechanism',{}),'assumptions':data.get('assumptions',[]),'build_report':{'status':'PENDING_VERIFICATION','retrieval_failures':retrieval['failures'],'model_synthesis_only':True}}

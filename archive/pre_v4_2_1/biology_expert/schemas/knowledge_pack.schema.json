@@ -1,0 +1,114 @@
+{
+  "type": "object",
+  "required": [
+    "topic_id",
+    "topic_scope",
+    "facts",
+    "evidence",
+    "mechanism",
+    "assumptions",
+    "build_report"
+  ],
+  "properties": {
+    "topic_id": {
+      "type": "string"
+    },
+    "topic_scope": {
+      "type": "object",
+      "required": [
+        "topic",
+        "audience",
+        "video_goal"
+      ]
+    },
+    "facts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/fact"
+      }
+    },
+    "evidence": {
+      "type": "array"
+    },
+    "mechanism": {
+      "type": "object"
+    },
+    "assumptions": {
+      "type": "array"
+    },
+    "build_report": {
+      "type": "object"
+    }
+  },
+  "$defs": {
+    "fact": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "required": [
+        "fact_id",
+        "claim",
+        "scope",
+        "classification",
+        "evidence_ids",
+        "support"
+      ],
+      "properties": {
+        "fact_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "claim": {
+          "type": "string",
+          "minLength": 4
+        },
+        "scope": {
+          "type": "string"
+        },
+        "classification": {
+          "enum": [
+            "established",
+            "teaching_simplification",
+            "disputed",
+            "unverified"
+          ]
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "support": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "evidence_id",
+              "quote"
+            ],
+            "properties": {
+              "evidence_id": {
+                "type": "string"
+              },
+              "quote": {
+                "type": "string",
+                "minLength": 8
+              }
+            }
+          }
+        },
+        "verification": {
+          "enum": [
+            "VERIFIED",
+            "CONFLICTED",
+            "INSUFFICIENT_EVIDENCE"
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

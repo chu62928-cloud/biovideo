@@ -5,7 +5,7 @@ from .state import WorkflowState,write,digest
 from .tool_registry import ToolRegistry
 from .schemas import validate
 from .tools.knowledge import topic_analyzer,KnowledgeTools
-from .tools.mechanism_validator import mechanism_validator
+from .contracts import generic_mechanism_validator as mechanism_validator
 from .tools.evidence_retriever import EvidenceRetriever
 from .tools.reviewers import ReviewTools,review_result
 from .tools.repair_planner import plan_repair
@@ -94,3 +94,23 @@ class BiologyExpertAgent:
   result=self.review(stage,artifacts,context)
   if 'samples' in result:raise ValueError('Gate requires one version-bound artifact, not a sample batch')
   ScienceWorkflow(self.state).apply(stage,result);return result
+
+ def enable_contract_workflow(self,root):
+  from .contract_builder import ContractAgentTools
+  self.contract_tools=ContractAgentTools(self,root)
+  return self.contract_tools
+ def build_contract(self,user_request):
+  if not hasattr(self,'contract_tools'):self.enable_contract_workflow(self.root/'contract_workflow')
+  return self.contract_tools.build_contract(user_request)
+ def audit_contract(self,contract,scene,trace,bindings=None,goal_review=None):
+  if not hasattr(self,'contract_tools'):self.enable_contract_workflow(self.root/'contract_workflow')
+  return self.contract_tools.audit_contract(contract,scene,trace,bindings,goal_review)
+ def choose_contract_tool(self,situation):
+  if not situation.get('has_evidence'):return 'scientific_evidence_retriever'
+  if situation.get('conflict'):return 'scientific_conflict_adjudicator'
+  if not situation.get('contract_exists'):return 'scientific_contract_builder'
+  if not situation.get('contract_verified'):return 'contract_verifier'
+  if situation.get('coverage_gap'):return 'coverage_auditor'
+  if situation.get('test_contract'):return 'mutation_tester'
+  if situation.get('visual_ambiguity'):return 'reference_video_reviewer'
+  return None

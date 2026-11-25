@@ -1,0 +1,120 @@
+{
+  "type": "object",
+  "required": [
+    "review_id",
+    "stage",
+    "decision",
+    "issues",
+    "next_action",
+    "artifact_versions",
+    "checks"
+  ],
+  "properties": {
+    "review_id": {
+      "type": "string",
+      "minLength": 5
+    },
+    "stage": {
+      "enum": [
+        "KNOWLEDGE",
+        "SCRIPT",
+        "CAST",
+        "ASSETS",
+        "STORYBOARD",
+        "ANIMATION_CODE",
+        "RENDERED_VIDEO",
+        "FINAL"
+      ]
+    },
+    "decision": {
+      "enum": [
+        "PASS",
+        "REVISE",
+        "NEEDS_HUMAN_REVIEW",
+        "ERROR"
+      ]
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "issue_id",
+          "severity",
+          "category",
+          "description",
+          "object_ids",
+          "evidence_ids",
+          "artifact_evidence",
+          "root_cause_stage",
+          "suggested_repair_scope"
+        ],
+        "properties": {
+          "issue_id": {
+            "type": "string"
+          },
+          "severity": {
+            "enum": [
+              "blocker",
+              "major",
+              "minor",
+              "uncertain"
+            ]
+          },
+          "category": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 5
+          },
+          "object_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "artifact_evidence": {
+            "type": "object"
+          },
+          "root_cause_stage": {
+            "enum": [
+              "KNOWLEDGE",
+              "SCRIPT",
+              "CAST",
+              "ASSETS",
+              "STORYBOARD",
+              "ANIMATION_CODE",
+              "RENDERED_VIDEO"
+            ]
+          },
+          "suggested_repair_scope": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "next_action": {
+      "enum": [
+        "NONE",
+        "CREATE_REPAIR_TASK",
+        "RETRIEVE_EVIDENCE",
+        "HUMAN_REVIEW",
+        "STOP"
+      ]
+    },
+    "artifact_versions": {
+      "type": "object"
+    },
+    "checks": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": true
+}
