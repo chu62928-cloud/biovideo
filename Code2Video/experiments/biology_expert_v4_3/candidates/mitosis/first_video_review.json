@@ -1,0 +1,21 @@
+{
+  "science": {
+    "decision": "REVISE",
+    "issues": [
+      "No real motion or shape change expressing chromosome alignment or sister‑chromatid separation: the colored circles are static decorative nodes and the yellow line merely extends to link them. Per review rules, decorative relation lines / labeled circles must not be equated with metaphase alignment or anaphase separation.",
+      "Final frame is an off‑topic 'Grid Visual' about SVM machine‑learning classification (A1–F6 dots + cats/dogs boundary text); it has no relation to the mitosis model and introduces a blocking topic mismatch.",
+      "Top text overlay is garbled/duplicated and illegible; it does not convey verifiable scientific content.",
+      "None of the modeled entities are visually instantiated: no duplicated chromosome / sister‑chromatid pair, no kinetochores, no spindle microtubules, no metaphase plate, and no two cell poles are shown.",
+      "No temporal trajectory demonstrating the required phase order (prometaphase bipolar attachment → metaphase alignment → anaphase poleward separation) is present; a few static frames cannot establish direction or process."
+    ],
+    "visible_processes": [
+      "Only a decorative change is visible: a horizontal yellow line grows from connecting two central circles to connecting the whole row of static circles. This is a schematic/decorative connector, not a biological process (not spindle fibers, not alignment, not separation)."
+    ],
+    "limitations": [
+      "Cannot assign molecular identity (chromatid, kinetochore, microtubule) to any on‑screen element; circles and lines carry no verified biological meaning.",
+      "Absence of poles/metaphase plate means alignment and poleward movement are not observable, so PROC_metaphase_alignment and PROC_anaphase_sister_separation cannot be confirmed.",
+      "Garbled overlay text and the unrelated SVM grid prevent confirming that the intended mitosis narrative is even being communicated.",
+      "Sampled frames show no directional motion; even if the line were intended as a spindle, direction of pull and sister‑chromatid identity remain unresolvable."
+    ]
+  }
+}

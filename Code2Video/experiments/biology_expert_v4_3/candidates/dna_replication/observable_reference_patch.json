@@ -1,0 +1,242 @@
+{
+  "patches": [
+    {
+      "process_semantic_id": "PROC_PRIMER_FORMATION",
+      "participants": [
+        {
+          "role": "enzyme",
+          "entity_ref": "ENT_PRIMASE"
+        },
+        {
+          "role": "product",
+          "entity_ref": "ENT_RNA_PRIMER"
+        }
+      ],
+      "input_roles": [
+        "enzyme"
+      ],
+      "output_roles": [
+        "product"
+      ],
+      "observables": [
+        {
+          "constraint_id": "OBS_PRIMER_FORMED",
+          "predicate": "state_transition_allowed",
+          "state_key": "primer_state",
+          "from_value": "absent",
+          "to_value": "formed",
+          "source_role": "enzyme",
+          "target_role": "product",
+          "capability": "PARTIAL",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_d8ffea5a5785",
+              "quote": "Primers are formed by the enzyme primase, and using the primer, DNA pol can start synthesis.",
+              "location": "paragraph_4"
+            }
+          ]
+        }
+      ],
+      "temporal_scope": {
+        "start_condition": "DNA template accessible and primase recruited",
+        "end_condition": "RNA primer formed",
+        "concurrent_with": [],
+        "after": []
+      }
+    },
+    {
+      "process_semantic_id": "PROC_POL_ALPHA_EXTENSION",
+      "participants": [
+        {
+          "role": "enzyme",
+          "entity_ref": "ENT_POL_ALPHA"
+        },
+        {
+          "role": "substrate",
+          "entity_ref": "ENT_RNA_PRIMER"
+        }
+      ],
+      "input_roles": [
+        "enzyme",
+        "substrate"
+      ],
+      "output_roles": [
+        "substrate"
+      ],
+      "observables": [
+        {
+          "constraint_id": "OBS_ALPHA_EXTENDS_PRIMER",
+          "predicate": "relation_holds_during",
+          "relation_ref": "REL_POL_ALPHA_EXTENDS_PRIMER",
+          "source_role": "enzyme",
+          "target_role": "substrate",
+          "capability": "PARTIAL",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_d8ffea5a5785",
+              "quote": "DNA pol α adds a short (20 to 30 nucleotides) DNA fragment to the RNA primer on both strands, and then hands off to a second polymerase.",
+              "location": "paragraph_4"
+            }
+          ]
+        }
+      ],
+      "temporal_scope": {
+        "start_condition": "RNA primer present",
+        "end_condition": "short DNA fragment added and polymerase hands off",
+        "concurrent_with": [],
+        "after": [
+          "PROC_PRIMER_FORMATION"
+        ]
+      }
+    },
+    {
+      "process_semantic_id": "PROC_POL_DELTA_EXTENSION",
+      "participants": [
+        {
+          "role": "enzyme",
+          "entity_ref": "ENT_POL_DELTA"
+        },
+        {
+          "role": "template",
+          "entity_ref": "ENT_RNA_PRIMER"
+        }
+      ],
+      "input_roles": [
+        "enzyme",
+        "template"
+      ],
+      "output_roles": [
+        "template"
+      ],
+      "observables": [
+        {
+          "constraint_id": "OBS_DELTA_SYNTHESIZES_LAGGING",
+          "predicate": "relation_holds_during",
+          "relation_ref": "REL_POL_DELTA_SYNTHESIZES_LAGGING",
+          "source_role": "enzyme",
+          "target_role": "template",
+          "capability": "PARTIAL",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_d8ffea5a5785",
+              "quote": "While the leading strand is continuously synthesized by the enzyme pol ε , the lagging strand is synthesized by pol δ .",
+              "location": "paragraph_4"
+            }
+          ]
+        }
+      ],
+      "temporal_scope": {
+        "start_condition": "polymerase hand-off after pol alpha",
+        "end_condition": "pol delta runs into the primer RNA on the lagging strand",
+        "concurrent_with": [],
+        "after": [
+          "PROC_POL_ALPHA_EXTENSION"
+        ]
+      }
+    },
+    {
+      "process_semantic_id": "PROC_PRIMER_REMOVAL",
+      "participants": [
+        {
+          "role": "enzyme",
+          "entity_ref": "ENT_RNASE_H"
+        },
+        {
+          "role": "target",
+          "entity_ref": "ENT_RNA_PRIMER"
+        }
+      ],
+      "input_roles": [
+        "enzyme",
+        "target"
+      ],
+      "output_roles": [
+        "target"
+      ],
+      "observables": [
+        {
+          "constraint_id": "OBS_PRIMER_REMOVED",
+          "predicate": "state_transition_allowed",
+          "state_key": "primer_state",
+          "from_value": "displaced",
+          "to_value": "removed",
+          "source_role": "enzyme",
+          "target_role": "target",
+          "capability": "PARTIAL",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_d8ffea5a5785",
+              "quote": "The displaced primer RNA is then removed by RNase H (AKA flap endonuclease ) and replaced with DNA nucleotides.",
+              "location": "paragraph_4"
+            }
+          ]
+        }
+      ],
+      "temporal_scope": {
+        "start_condition": "primer RNA displaced from template",
+        "end_condition": "primer RNA removed and replaced with DNA nucleotides",
+        "concurrent_with": [],
+        "after": [
+          "PROC_POL_DELTA_EXTENSION"
+        ]
+      }
+    },
+    {
+      "process_semantic_id": "PROC_LIGATION",
+      "participants": [
+        {
+          "role": "enzyme",
+          "entity_ref": "ENT_DNA_LIGASE"
+        }
+      ],
+      "input_roles": [
+        "enzyme"
+      ],
+      "output_roles": [
+        "enzyme"
+      ],
+      "observables": [
+        {
+          "constraint_id": "OBS_GAPS_SEALED",
+          "predicate": "state_transition_allowed",
+          "state_key": "gap_state",
+          "from_value": "present",
+          "to_value": "sealed",
+          "source_role": "enzyme",
+          "target_role": "enzyme",
+          "capability": "PARTIAL",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_d8ffea5a5785",
+              "quote": "The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond.",
+              "location": "paragraph_4"
+            }
+          ]
+        }
+      ],
+      "temporal_scope": {
+        "start_condition": "RNA primers replaced with DNA and gaps remain",
+        "end_condition": "gaps sealed by DNA ligase",
+        "concurrent_with": [],
+        "after": [
+          "PROC_PRIMER_REMOVAL"
+        ]
+      }
+    }
+  ]
+}

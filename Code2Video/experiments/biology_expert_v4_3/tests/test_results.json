@@ -1,0 +1,7 @@
+{
+  "command": "python -m pytest experiments/biology_expert_v4_3/tests experiments/biology_expert_v4_2_2/tests experiments/biology_expert_v4_2_1/tests -q",
+  "passed": 47,
+  "failed": 0,
+  "elapsed_seconds": 112.19,
+  "classification": "synthetic unit tests plus historical integration; actual experiment outputs separately evaluation.json"
+}

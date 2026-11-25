@@ -1,0 +1,53 @@
+{
+  "patches": [
+    {
+      "process_semantic_id": "PROC_PRIMER_FORMATION",
+      "input_roles": [
+        "enzyme",
+        "product"
+      ],
+      "output_roles": [
+        "product"
+      ]
+    },
+    {
+      "process_semantic_id": "PROC_POL_ALPHA_EXTENSION",
+      "input_roles": [
+        "enzyme",
+        "substrate"
+      ],
+      "output_roles": [
+        "substrate"
+      ]
+    },
+    {
+      "process_semantic_id": "PROC_POL_DELTA_EXTENSION",
+      "input_roles": [
+        "enzyme",
+        "template"
+      ],
+      "output_roles": [
+        "template"
+      ]
+    },
+    {
+      "process_semantic_id": "PROC_PRIMER_REMOVAL",
+      "input_roles": [
+        "enzyme",
+        "target"
+      ],
+      "output_roles": [
+        "target"
+      ]
+    },
+    {
+      "process_semantic_id": "PROC_LIGATION",
+      "input_roles": [
+        "enzyme"
+      ],
+      "output_roles": [
+        "enzyme"
+      ]
+    }
+  ]
+}

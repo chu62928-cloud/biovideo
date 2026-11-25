@@ -1,0 +1,741 @@
+{
+  "cases": [
+    {
+      "mutation_type": "RELATION_TERMINATED_EARLY",
+      "constraint_id": "OBS_bipolar_attachment_during_prometaphase",
+      "valid_sample": true,
+      "baseline_status": "PASS",
+      "mutated_status": "FAIL",
+      "detected": true,
+      "changes": [
+        {
+          "time": 0.5333333333333333,
+          "before": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "kinetochore_A",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ],
+          "after": [
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ]
+        },
+        {
+          "time": 0.6,
+          "before": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "kinetochore_A",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ],
+          "after": [
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ]
+        },
+        {
+          "time": 0.6666666666666666,
+          "before": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "kinetochore_A",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ],
+          "after": [
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ]
+        },
+        {
+          "time": 0.7333333333333333,
+          "before": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "kinetochore_A",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ],
+          "after": [
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ]
+        },
+        {
+          "time": 0.7999999999999999,
+          "before": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "kinetochore_A",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ],
+          "after": [
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ]
+        },
+        {
+          "time": 0.8666666666666666,
+          "before": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "kinetochore_A",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ],
+          "after": [
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ]
+        },
+        {
+          "time": 0.9333333333333332,
+          "before": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "kinetochore_A",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ],
+          "after": [
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ]
+        },
+        {
+          "time": 0.9999999999999999,
+          "before": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "kinetochore_A",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ],
+          "after": [
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ]
+        }
+      ],
+      "baseline_trace_sha256": "f4b02d7ad8dde9e630839ebc9606972b005396c28ddfce7d79b5d8aae993a3d4",
+      "mutated_artifact_sha256": "486c03a9fc97e152bf8339d02c5ba7c712e607112d5faeeaf7cabd5b787b6298"
+    },
+    {
+      "mutation_type": "EVENT_ORDER_REVERSED",
+      "valid_sample": false,
+      "baseline_status": "NOT_MEASURED",
+      "mutated_status": "NOT_TESTED",
+      "detected": null,
+      "reason": "No fully compiled source-supported real baseline PASS for this predicate"
+    },
+    {
+      "mutation_type": "CONNECTION_TARGET_CHANGED",
+      "constraint_id": "OBS_bipolar_attachment_during_prometaphase",
+      "valid_sample": true,
+      "baseline_status": "PASS",
+      "mutated_status": "FAIL",
+      "detected": true,
+      "changes": [
+        {
+          "time": 0.5333333333333333,
+          "before": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "kinetochore_A",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ],
+          "after": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "MUTATED_WRONG_TARGET",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ]
+        },
+        {
+          "time": 0.6,
+          "before": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "kinetochore_A",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ],
+          "after": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "MUTATED_WRONG_TARGET",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ]
+        },
+        {
+          "time": 0.6666666666666666,
+          "before": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "kinetochore_A",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ],
+          "after": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "MUTATED_WRONG_TARGET",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ]
+        },
+        {
+          "time": 0.7333333333333333,
+          "before": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "kinetochore_A",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ],
+          "after": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "MUTATED_WRONG_TARGET",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ]
+        },
+        {
+          "time": 0.7999999999999999,
+          "before": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "kinetochore_A",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ],
+          "after": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "MUTATED_WRONG_TARGET",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ]
+        },
+        {
+          "time": 0.8666666666666666,
+          "before": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "kinetochore_A",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ],
+          "after": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "MUTATED_WRONG_TARGET",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ]
+        },
+        {
+          "time": 0.9333333333333332,
+          "before": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "kinetochore_A",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ],
+          "after": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "MUTATED_WRONG_TARGET",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ]
+        },
+        {
+          "time": 0.9999999999999999,
+          "before": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "kinetochore_A",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ],
+          "after": [
+            {
+              "semantic_id": "REL_kmt_left_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "MUTATED_WRONG_TARGET",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            },
+            {
+              "semantic_id": "REL_kmt_right_binds",
+              "type": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_right",
+              "target": "kinetochore_B",
+              "source_anchor": "center",
+              "target_anchor": "center",
+              "model_relation_ref": "REL_microtubule_binds_kinetochore",
+              "draw_link": false
+            }
+          ]
+        }
+      ],
+      "baseline_trace_sha256": "f4b02d7ad8dde9e630839ebc9606972b005396c28ddfce7d79b5d8aae993a3d4",
+      "mutated_artifact_sha256": "d1f0810749cd4630cb7d2641d0a79ed23a24d39d6c707ad9e5a1f95b108c66e0"
+    },
+    {
+      "mutation_type": "STATE_PRECONDITION_VIOLATED",
+      "valid_sample": false,
+      "baseline_status": "NOT_MEASURED",
+      "mutated_status": "NOT_TESTED",
+      "detected": null,
+      "reason": "No fully compiled source-supported real baseline PASS for this predicate"
+    }
+  ],
+  "negative_controls": [
+    {
+      "type": "color",
+      "unchanged_scientific_results": true,
+      "false_positive": false,
+      "scope": "visual-only metadata, no scientific event interval changed"
+    },
+    {
+      "type": "label_position",
+      "unchanged_scientific_results": true,
+      "false_positive": false,
+      "scope": "visual-only metadata, no scientific event interval changed"
+    },
+    {
+      "type": "noncritical_visual_duration",
+      "unchanged_scientific_results": true,
+      "false_positive": false,
+      "scope": "visual-only metadata, no scientific event interval changed"
+    }
+  ],
+  "source": "actual_runtime_trace",
+  "distinct_valid_mutation_types": 2,
+  "valid_mutations": 2,
+  "detected": 2,
+  "false_positives": 0
+}

@@ -17,10 +17,13 @@ class TemporalMechanismValidator:
     a,b=interval['start'],interval['end'];sampled=[f for f in frames if a<=f['time']<b];times=sorted(set(f['time'] for f in sampled));tolerance=spec.get('max_sample_gap',.25)
     gaps=[{'start':x,'end':y,'length':y-x} for x,y in zip([a]+times,times+[b]) if y-x>tolerance]
     source=participants[spec['source_role']][0];target=participants[spec['target_role']][0];kind=spec['relation_type']
+    pairs=spec.get('expected_pairs',[{'source':source,'target':target}])
     for f in sampled:
-     matches=[r for r in f.get('relations',[]) if r.get('source')==source and r.get('target')==target and r.get('type')==kind]
-     if not matches:c['violations'].append({'time':f['time'],'reason':'expected_relation_absent','source':source,'target':target})
-     elif spec.get('source_anchor') and any(r.get('source_anchor','center')!=spec['source_anchor'] or r.get('target_anchor','center')!=spec['target_anchor'] for r in matches):c['violations'].append({'time':f['time'],'reason':'wrong_connection_anchor'})
+     for pair in pairs:
+      src,dst=pair['source'],pair['target']
+      matches=[r for r in f.get('relations',[]) if r.get('source')==src and r.get('target')==dst and r.get('type')==kind]
+      if not matches:c['violations'].append({'time':f['time'],'reason':'expected_relation_absent','source':src,'target':dst})
+      elif spec.get('source_anchor') and any(r.get('source_anchor','center')!=spec['source_anchor'] or r.get('target_anchor','center')!=spec['target_anchor'] for r in matches):c['violations'].append({'time':f['time'],'reason':'wrong_connection_anchor'})
     c.update(samples_checked=len(sampled),sample_times=times,observed_interval=[times[0],times[-1]] if times else None,evidence=[{'expected_relation':kind,'source':source,'target':target,'sampling_gaps':gaps,'interval_source':interval['source']}])
     c['status']='FAIL' if c['violations'] else 'REVIEW_INCOMPLETE' if gaps else 'PASS' if sampled else 'NOT_MEASURED'
    elif predicate=='event_precedes':

@@ -165,9 +165,13 @@
     "Code2Video/experiments/biology_expert_v4_2_2/tests/test_v422.py": "ff4080c115bca733465cc24e9de8cfc6324c0de45a982f4a43cbe4b44b01f66b"
   },
   "api_usage": {
-    "deepseek_calls": 0,
-    "qwen_calls": 0,
-    "cost": null
+    "deepseek_calls": 30,
+    "qwen_calls": 4,
+    "input_tokens": 216988,
+    "output_tokens": 93467,
+    "cost": null,
+    "cost_note": "API does not report actual charged amount; no invented monetary cost",
+    "failed_calls": 2
   },
   "paid_authorization": "PENDING_EXPLICIT_USER_RESPONSE",
   "historical_inputs_unchanged": true,
@@ -179,10 +183,58 @@
     "full_regression_log": "............................................                             [100%]\n44 passed in 107.15s (0:01:47)\n",
     "categories": "new model/planner synthetic fixtures; old real-trace tests remain explicitly historical"
   },
-  "git_commit": "26fa80d85468821725574712c3e3b6c4fdeaaec8",
+  "git_commit": "8b2af6bdc68a7f5ef55e0849bf48ead1106d759c",
   "source_hashes": {
     "Code2Video/src/biology_expert/typed_science_builder.py": "676647e0672c657896024292c85f9a8504b242e37bb961f58b3d38dce4ab4b9b",
     "Code2Video/src/scientific_scene/typed_planner.py": "9ca067cd12ad8693c7a6e5386076dbf62f2225251e21e010e725388842881e44",
     "Code2Video/src/scientific_scene/adapters/typed_manim_adapter.py": "edf14cc0a57aea64364c99d016c41cee649a607fe923e930158670f7c7384f1f"
-  }
+  },
+  "historical_changed": [],
+  "environment": {
+    "python": "3.12.4",
+    "manim": "0.19.0",
+    "host": "motion-data"
+  },
+  "artifacts": [
+    {
+      "path": "typed_models.json",
+      "sha256": "dab81c3e1742b197ee6b82598ba4db96e3dd22a471ec994508cc891d1d5241c3",
+      "bytes": 78040
+    },
+    {
+      "path": "execution_results.json",
+      "sha256": "9836a1896c547672c89d21bdb2a46f6cfc7ba638f8ba82bae8ad8689ab94e530",
+      "bytes": 8172
+    },
+    {
+      "path": "evidence.json",
+      "sha256": "68d53e7fb8058400e02358420fe1ba47aaf42e839649488ad3a6901d8569db90",
+      "bytes": 25179
+    },
+    {
+      "path": "evaluation.json",
+      "sha256": "ad519ca71b5fd8b6679363b31fddd95164e22a1a7fc34fd4994eec27b2a9528a",
+      "bytes": 42666
+    },
+    {
+      "path": "sample_scene.json",
+      "sha256": "e1d84bb392a6a1c2150b3dbd3a276c3fe618ba347c75c5b84bb606eea7a491bc",
+      "bytes": 18391
+    },
+    {
+      "path": "sample_trace.json",
+      "sha256": "3a7d017d5bbdba2085a770e9109766807068b448d1d067f973f9d6e9efdc1fe4",
+      "bytes": 1076885
+    },
+    {
+      "path": "sample_video.mp4",
+      "sha256": "c035449dc554645baf35a11b7855b8d0a85253ea2d06af39bf780bdde32e9f2d",
+      "bytes": 72702
+    },
+    {
+      "path": "keyframes.jpg",
+      "sha256": "6b5f73c12c84eea1ff54920b1d7ac721549b90fe23cd7cee4d0c892dcceccd9c",
+      "bytes": 34897
+    }
+  ]
 }

@@ -1,0 +1,16 @@
+{
+  "evidence": [],
+  "failures": [
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=eukaryotic%20DNA%20replication%20priming%20extension%20maturation%20Okazaki%20fragment%20RNA%20primer%20removal%20ligation%20OpenStax&format=json&pageSize=2",
+      "error": "ReadTimeout"
+    },
+    {
+      "source": "public HTML discovery",
+      "error": "ValueError"
+    }
+  ],
+  "search_records": [],
+  "research_status": "UNVERIFIED",
+  "discovery": "Agent planned queries + live bibliographic search + content fetch, no legacy topic catalogue"
+}

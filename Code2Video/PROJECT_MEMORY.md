@@ -66,3 +66,7 @@ src/biology_expert/与experiments/biology_expert_v3/：单一有界反应式Agen
 
 ## 2026-11-24 V4.1
 VERIFIED：V4.1阶段已执行，25项离线测试通过。极性误报限定裁决、真实IR/过程两次模型补丁、PathGeometry消楔形、连续叉推进、逐帧动粒连接与字幕修复。用户授权追加额度后DNA B4与M1均SCIENCE_APPROVED；新哈希有匹配审核，DNA剩余引物意见经802次端点观测与负对照裁决为误报，原始意见保留。当前用量见metrics.json及持久预算授权。历史V4实验目录哈希变化0，源码改动记录diagnostics/frozen_verification.json。完整报告experiments/scientific_scene_v4_1/RESULTS.md。下一步冻结approved_manifest.json与视频哈希，设计小规模公平对照和教师复核；本轮不启动Wan/Seedance，不重跑六节。
+
+## 2026-11-25 V4.3真实实验续跑检查点
+VERIFIED：worktree /autodl-tmp/code2biovideo/biovideo-v4.3。新8秒有丝分裂完整MP4、真实轨迹与关键帧已生成，sample_video.mp4 SHA256 c035449dc554645baf35a11b7855b8d0a85253ea2d06af39bf780bdde32e9f2d。模型独立审核PASS；运行1完整PASS/3部分验证；两类真实轨迹注错检出。Qwen完整视频科学PASS/视觉REVISE称重影，9张实际PNG审核双PASS；保留分歧，不联合批准。DNA/囊泡模型REVISE，整体REVIEW_INCOMPLETE。47测试通过，历史冻结文件变化0。真实DeepSeek30/Qwen4，输入216988输出93467词元，两次截断失败保留。用户最新取消建议次数上限，但不使用Wan/Seedance、不重置账本。细节以experiments/biology_expert_v4_3/{README.md,evaluation.json,manifest.json}为准。
+下一步：先处理typed_planner程序集父角色绑定代理问题与前置条件实际门禁，补几何观测；DNA来源存在RNaseH/FEN1表述歧义、未见囊泡主题缺马达证据。禁止把样本帧PASS或一条窄约束PASS当作全实验成功。当前无必要付费后台任务。

@@ -1,0 +1,206 @@
+{
+  "model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+  "science_review": "PASS",
+  "constraints": [
+    {
+      "constraint_id": "OBS_bipolar_attachment_during_prometaphase",
+      "process_semantic_id": "PROC_kinetochore_attachment_orientation",
+      "entity_semantic_ids": [
+        "ENT_duplicated_chromosome",
+        "ENT_sister_chromatid",
+        "ENT_kinetochore",
+        "ENT_mitotic_spindle_microtubule",
+        "ENT_spatial_landmark"
+      ],
+      "relation_semantic_id": "REL_microtubule_binds_kinetochore",
+      "predicate": "relation_holds_during",
+      "spec": {
+        "predicate": "relation_holds_during",
+        "participant_roles": [
+          "chromosome_being_attached",
+          "sister_chromatid_bearing_kinetochore",
+          "binding_site",
+          "attaching_fiber",
+          "target_pole"
+        ],
+        "interval": {
+          "event_role": "PROC_kinetochore_attachment_orientation"
+        },
+        "source_role": "attaching_fiber",
+        "target_role": "binding_site",
+        "relation_type": "REL_microtubule_binds_kinetochore"
+      },
+      "participant_entity_refs": {
+        "chromosome_being_attached": "ENT_duplicated_chromosome",
+        "sister_chromatid_bearing_kinetochore": "ENT_sister_chromatid",
+        "binding_site": "ENT_kinetochore",
+        "attaching_fiber": "ENT_mitotic_spindle_microtubule",
+        "target_pole": "ENT_spatial_landmark"
+      },
+      "evidence_ids": [
+        "E_dcb0de9a22b0"
+      ],
+      "source_support": [
+        {
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "mitotic spindle microtubules from opposite poles attach to each sister chromatid at the kinetochore",
+          "location": "paragraph_28"
+        }
+      ],
+      "compile_status": "COMPILED",
+      "full_semantics": true,
+      "exceptions": [],
+      "model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5"
+    },
+    {
+      "constraint_id": "OBS_alignment_during_metaphase",
+      "process_semantic_id": "PROC_metaphase_alignment",
+      "entity_semantic_ids": [
+        "ENT_duplicated_chromosome",
+        "ENT_spatial_landmark"
+      ],
+      "relation_semantic_id": "REL_duplicated_chromosome_at_metaphase_plate",
+      "predicate": "relation_holds_during",
+      "spec": {
+        "predicate": "relation_holds_during",
+        "participant_roles": [
+          "aligned_chromosome",
+          "alignment_plane"
+        ],
+        "interval": {
+          "event_role": "PROC_metaphase_alignment"
+        },
+        "source_role": "aligned_chromosome",
+        "target_role": "alignment_plane",
+        "relation_type": "REL_duplicated_chromosome_at_metaphase_plate"
+      },
+      "participant_entity_refs": {
+        "aligned_chromosome": "ENT_duplicated_chromosome",
+        "alignment_plane": "ENT_spatial_landmark"
+      },
+      "evidence_ids": [
+        "E_dcb0de9a22b0"
+      ],
+      "source_support": [
+        {
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "all the chromosomes are aligned in a plane called the metaphase plate",
+          "location": "paragraph_29"
+        }
+      ],
+      "compile_status": "PARTIALLY_COMPILED",
+      "full_semantics": false,
+      "exceptions": [],
+      "model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5"
+    },
+    {
+      "constraint_id": "OBS_connection_breakdown_after_alignment",
+      "process_semantic_id": "PROC_anaphase_sister_separation",
+      "entity_semantic_ids": [
+        "ENT_duplicated_chromosome",
+        "ENT_sister_chromatid",
+        "ENT_daughter_chromatid",
+        "ENT_mitotic_spindle_microtubule",
+        "ENT_spatial_landmark"
+      ],
+      "relation_semantic_id": null,
+      "predicate": "event_precedes",
+      "spec": {
+        "predicate": "event_precedes",
+        "participant_roles": [
+          "PROC_metaphase_alignment",
+          "PROC_anaphase_sister_separation"
+        ],
+        "interval": {
+          "event_role": "PROC_anaphase_sister_separation"
+        },
+        "ordered_event_roles": [
+          "PROC_metaphase_alignment",
+          "PROC_anaphase_sister_separation"
+        ]
+      },
+      "participant_entity_refs": {
+        "separating_duplex": "ENT_duplicated_chromosome",
+        "pre_separation_sister_chromatids": "ENT_sister_chromatid",
+        "daughter_chromatids": "ENT_daughter_chromatid",
+        "pulling_microtubules": "ENT_mitotic_spindle_microtubule",
+        "destination_pole": "ENT_spatial_landmark"
+      },
+      "evidence_ids": [
+        "E_dcb0de9a22b0"
+      ],
+      "source_support": [
+        {
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "In anaphase, the connection between the sister chromatids breaks down, and the microtubules pull the chromosomes toward opposite poles.",
+          "location": "paragraph_28"
+        }
+      ],
+      "compile_status": "PARTIALLY_COMPILED",
+      "full_semantics": false,
+      "exceptions": [
+        {
+          "note": "Source also states 'the cohesin proteins degrade' (paragraph_30); this molecular mechanism is acknowledged but deliberately not modeled as a causal agent, and the process asserts only the observable breakdown and separation."
+        }
+      ],
+      "model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5"
+    },
+    {
+      "constraint_id": "OBS_two_daughter_chromatids_after_separation",
+      "process_semantic_id": "PROC_anaphase_sister_separation",
+      "entity_semantic_ids": [
+        "ENT_duplicated_chromosome",
+        "ENT_sister_chromatid",
+        "ENT_daughter_chromatid",
+        "ENT_mitotic_spindle_microtubule",
+        "ENT_spatial_landmark"
+      ],
+      "relation_semantic_id": null,
+      "predicate": "state_transition_allowed",
+      "spec": {
+        "predicate": "state_transition_allowed",
+        "participant_roles": [
+          "separating_duplex",
+          "pre_separation_sister_chromatids",
+          "daughter_chromatids",
+          "pulling_microtubules",
+          "destination_pole"
+        ],
+        "interval": {
+          "event_role": "PROC_anaphase_sister_separation"
+        },
+        "state_key": "sister_chromatid_attachment",
+        "to_value": "separated",
+        "precondition": {
+          "metaphase_alignment": "Duplicated chromosome aligned at metaphase plate (schematic phase order)."
+        }
+      },
+      "participant_entity_refs": {
+        "separating_duplex": "ENT_duplicated_chromosome",
+        "pre_separation_sister_chromatids": "ENT_sister_chromatid",
+        "daughter_chromatids": "ENT_daughter_chromatid",
+        "pulling_microtubules": "ENT_mitotic_spindle_microtubule",
+        "destination_pole": "ENT_spatial_landmark"
+      },
+      "evidence_ids": [
+        "E_dcb0de9a22b0"
+      ],
+      "source_support": [
+        {
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "Each chromatid, now called a chromosome, is pulled rapidly toward the centrosome to which its microtubule is attached.",
+          "location": "paragraph_30"
+        }
+      ],
+      "compile_status": "PARTIALLY_COMPILED",
+      "full_semantics": false,
+      "exceptions": [
+        {
+          "note": "Source also states 'the cohesin proteins degrade' (paragraph_30); this molecular mechanism is acknowledged but deliberately not modeled as a causal agent, and the process asserts only the observable breakdown and separation."
+        }
+      ],
+      "model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5"
+    }
+  ],
+  "frozen_standard": "Typed observable text/roles/relations as independently reviewed; no semantic replacement"
+}

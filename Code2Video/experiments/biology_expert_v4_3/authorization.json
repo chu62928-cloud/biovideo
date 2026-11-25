@@ -1,0 +1,8 @@
+{
+  "source": "explicit_user_message",
+  "authorization": "Generate complete video; user removes suggested per-run request ceilings. Preserve usage records and scientific gates.",
+  "deepseek_limit": 1000000,
+  "qwen_limit": 1000000,
+  "wan_limit": 0,
+  "seedance_limit": 0
+}

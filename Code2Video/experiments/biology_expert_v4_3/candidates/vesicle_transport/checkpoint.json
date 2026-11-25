@@ -1,0 +1,7 @@
+{
+  "stage": "CONTRACT_REVIEWED",
+  "model_hash": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da",
+  "review": "REVISE",
+  "next_allowed_tool": "independent_evidence_repair",
+  "real_sources": 1
+}

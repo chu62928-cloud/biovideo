@@ -3,48 +3,983 @@
   "groups": [
     {
       "group": "G0",
-      "status": "FROZEN",
-      "baseline_commit": "e8fa3f1f29e003c7964f6ca81eb368ce2699e770"
+      "status": "FROZEN"
     },
     {
       "group": "G1",
-      "status": "BLOCKED_AUTHORIZATION"
+      "status": "3_REAL_MODELS"
     },
     {
       "group": "G2",
-      "status": "NOT_TESTED"
+      "status": "1_PASS_2_REVISE"
     },
     {
       "group": "G3",
-      "status": "NOT_TESTED"
+      "status": "MITOSIS_SCENE_GENERATED_AND_REPAIRED"
     },
     {
       "group": "G4",
-      "status": "NOT_TESTED"
+      "status": "1_FULL_PASS_3_PARTIAL"
     },
     {
       "group": "G5",
-      "status": "NOT_TESTED"
+      "status": "MITOSIS_SCIENCE_AND_SAMPLED_VISUAL_PASS"
     }
   ],
-  "topics": [],
-  "mutation_results": [
+  "topics": [
     {
-      "source": "synthetic_unit_tests",
-      "valid_types": [
-        "RELATION_TERMINATED_EARLY",
-        "CONNECTION_TARGET_CHANGED"
-      ],
-      "real_runtime_mutations": "NOT_TESTED"
+      "topic": "dna_replication",
+      "science_model_review": "REVISE",
+      "rendered": false,
+      "status": "REVISE",
+      "development_sample": true,
+      "final_evaluation_holdout": false
+    },
+    {
+      "topic": "mitosis",
+      "science_model_review": "PASS",
+      "rendered": true,
+      "status": "VIDEO_REVIEW_PASS_WITH_LIMITED_EXECUTION_COVERAGE",
+      "development_sample": true,
+      "final_evaluation_holdout": false
+    },
+    {
+      "topic": "vesicle_transport",
+      "science_model_review": "REVISE",
+      "rendered": false,
+      "status": "REVISE",
+      "development_sample": false,
+      "final_evaluation_holdout": false
     }
   ],
-  "generalization_results": [],
-  "visual_review_results": [],
-  "blockers": [
-    "Explicit V4.3 API authorization pending",
-    "No real independently reviewed typed models; formal scene/render gates cannot be passed"
+  "mutation_results": {
+    "cases": [
+      {
+        "mutation_type": "RELATION_TERMINATED_EARLY",
+        "constraint_id": "OBS_bipolar_attachment_during_prometaphase",
+        "valid_sample": true,
+        "baseline_status": "PASS",
+        "mutated_status": "FAIL",
+        "detected": true,
+        "changes": [
+          {
+            "time": 0.5333333333333333,
+            "before": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "kinetochore_A",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ],
+            "after": [
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ]
+          },
+          {
+            "time": 0.6,
+            "before": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "kinetochore_A",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ],
+            "after": [
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ]
+          },
+          {
+            "time": 0.6666666666666666,
+            "before": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "kinetochore_A",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ],
+            "after": [
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ]
+          },
+          {
+            "time": 0.7333333333333333,
+            "before": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "kinetochore_A",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ],
+            "after": [
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ]
+          },
+          {
+            "time": 0.7999999999999999,
+            "before": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "kinetochore_A",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ],
+            "after": [
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ]
+          },
+          {
+            "time": 0.8666666666666666,
+            "before": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "kinetochore_A",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ],
+            "after": [
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ]
+          },
+          {
+            "time": 0.9333333333333332,
+            "before": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "kinetochore_A",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ],
+            "after": [
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ]
+          },
+          {
+            "time": 0.9999999999999999,
+            "before": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "kinetochore_A",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ],
+            "after": [
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ]
+          }
+        ],
+        "baseline_trace_sha256": "f4b02d7ad8dde9e630839ebc9606972b005396c28ddfce7d79b5d8aae993a3d4",
+        "mutated_artifact_sha256": "486c03a9fc97e152bf8339d02c5ba7c712e607112d5faeeaf7cabd5b787b6298"
+      },
+      {
+        "mutation_type": "EVENT_ORDER_REVERSED",
+        "valid_sample": false,
+        "baseline_status": "NOT_MEASURED",
+        "mutated_status": "NOT_TESTED",
+        "detected": null,
+        "reason": "No fully compiled source-supported real baseline PASS for this predicate"
+      },
+      {
+        "mutation_type": "CONNECTION_TARGET_CHANGED",
+        "constraint_id": "OBS_bipolar_attachment_during_prometaphase",
+        "valid_sample": true,
+        "baseline_status": "PASS",
+        "mutated_status": "FAIL",
+        "detected": true,
+        "changes": [
+          {
+            "time": 0.5333333333333333,
+            "before": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "kinetochore_A",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ],
+            "after": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "MUTATED_WRONG_TARGET",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ]
+          },
+          {
+            "time": 0.6,
+            "before": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "kinetochore_A",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ],
+            "after": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "MUTATED_WRONG_TARGET",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ]
+          },
+          {
+            "time": 0.6666666666666666,
+            "before": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "kinetochore_A",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ],
+            "after": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "MUTATED_WRONG_TARGET",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ]
+          },
+          {
+            "time": 0.7333333333333333,
+            "before": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "kinetochore_A",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ],
+            "after": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "MUTATED_WRONG_TARGET",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ]
+          },
+          {
+            "time": 0.7999999999999999,
+            "before": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "kinetochore_A",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ],
+            "after": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "MUTATED_WRONG_TARGET",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ]
+          },
+          {
+            "time": 0.8666666666666666,
+            "before": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "kinetochore_A",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ],
+            "after": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "MUTATED_WRONG_TARGET",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ]
+          },
+          {
+            "time": 0.9333333333333332,
+            "before": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "kinetochore_A",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ],
+            "after": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "MUTATED_WRONG_TARGET",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ]
+          },
+          {
+            "time": 0.9999999999999999,
+            "before": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "kinetochore_A",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ],
+            "after": [
+              {
+                "semantic_id": "REL_kmt_left_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_left",
+                "target": "MUTATED_WRONG_TARGET",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              },
+              {
+                "semantic_id": "REL_kmt_right_binds",
+                "type": "REL_microtubule_binds_kinetochore",
+                "source": "kmt_right",
+                "target": "kinetochore_B",
+                "source_anchor": "center",
+                "target_anchor": "center",
+                "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                "draw_link": false
+              }
+            ]
+          }
+        ],
+        "baseline_trace_sha256": "f4b02d7ad8dde9e630839ebc9606972b005396c28ddfce7d79b5d8aae993a3d4",
+        "mutated_artifact_sha256": "d1f0810749cd4630cb7d2641d0a79ed23a24d39d6c707ad9e5a1f95b108c66e0"
+      },
+      {
+        "mutation_type": "STATE_PRECONDITION_VIOLATED",
+        "valid_sample": false,
+        "baseline_status": "NOT_MEASURED",
+        "mutated_status": "NOT_TESTED",
+        "detected": null,
+        "reason": "No fully compiled source-supported real baseline PASS for this predicate"
+      }
+    ],
+    "negative_controls": [
+      {
+        "type": "color",
+        "unchanged_scientific_results": true,
+        "false_positive": false,
+        "scope": "visual-only metadata, no scientific event interval changed"
+      },
+      {
+        "type": "label_position",
+        "unchanged_scientific_results": true,
+        "false_positive": false,
+        "scope": "visual-only metadata, no scientific event interval changed"
+      },
+      {
+        "type": "noncritical_visual_duration",
+        "unchanged_scientific_results": true,
+        "false_positive": false,
+        "scope": "visual-only metadata, no scientific event interval changed"
+      }
+    ],
+    "source": "actual_runtime_trace",
+    "distinct_valid_mutation_types": 2,
+    "valid_mutations": 2,
+    "detected": 2,
+    "false_positives": 0
+  },
+  "visual_review_results": [
+    {
+      "science": {
+        "decision": "PASS",
+        "issues": []
+      },
+      "visual": {
+        "decision": "REVISE",
+        "issues": [
+          "Crossfade/transition frames at ~1.2s, ~2.2s, and ~4.2s produce overlapping and garbled labels (e.g., 'SistSister_B', 'SistSister_A') and superimposed caption text, violating the clear-labels requirement during those frames. Key scientific states (0.2s prometaphase, 3.2s metaphase alignment, 5.2–7.2s anaphase) are legible, but the transition frames should use a cleaner cut or fade to preserve label readability."
+        ]
+      },
+      "scope_review": "Model scope is correctly honored: exactly one duplicated chromosome (one sister-chromatid pair) is shown; molecular cohesin cleavage is explicitly excluded and the caption states '(Molecular cleavage not shown.)'; no cytokinesis, nuclear envelope, or spindle-checkpoint content appears. The single-chromosome instantiation of the 'all chromosomes align' source statement is appropriately delimited.",
+      "visible_evidence": [
+        {
+          "time": "0.2s",
+          "observation": "Duplicated chromosome (two joined pink bars, Sister_A bottom / Sister_B top) positioned LEFT of the metaphase plate; yellow kinetochore dots on each chromatid; white microtubule lines extend from left and right poles to the respective kinetochores (bipolar attachment). Caption: 'Kinetochores of sister chromatids bind microtubules from opposite poles.' Consistent with prometaphase orientation."
+        },
+        {
+          "time": "1.2s",
+          "observation": "Transition/crossfade frame: chromosome shifting rightward toward the plate; labels and caption text are superimposed and garbled. Scientific content interpretable but labels not clear."
+        },
+        {
+          "time": "2.2s",
+          "observation": "Chromosome now near but slightly left of the metaphase plate; moderate label overlap from residual crossfade. Caption: 'Duplicated chromosome aligns at the metaphase plate.'"
+        },
+        {
+          "time": "3.2s",
+          "observation": "Duplicated chromosome centered ON the metaphase plate (vertical gray line passes through the centromeric junction); both kinetochores attached to microtubules from opposite poles; labels clear. Metaphase alignment confirmed."
+        },
+        {
+          "time": "4.2s",
+          "observation": "Transition frame at the plate; caption changes to 'Connection breaks down; existing sisters separate toward opposite poles. (Molecular cleavage not shown.)' Labels partially overlapping due to crossfade."
+        },
+        {
+          "time": "5.2s",
+          "observation": "Two distinct chromatids separated with a visible gap: Sister_A (left) with its kinetochore attached to the left-pole microtubule; Sister_B (right) with its kinetochore attached to the right-pole microtubule. Each is on its respective side of the metaphase plate. Anaphase separation confirmed."
+        },
+        {
+          "time": "6.2s",
+          "observation": "Sister_A moved further toward the left pole; Sister_B moved further toward the right pole. Microtubule attachments maintained. Continuous poleward movement confirmed."
+        },
+        {
+          "time": "7.2s",
+          "observation": "Sister_A near the left pole; Sister_B near the right pole. Both chromatids have traversed most of the distance from the metaphase plate to their destination poles. Movement direction and identity tracking consistent throughout."
+        }
+      ],
+      "video_sha256": "c035449dc554645baf35a11b7855b8d0a85253ea2d06af39bf780bdde32e9f2d",
+      "scene_sha256": "e1d84bb392a6a1c2150b3dbd3a276c3fe618ba347c75c5b84bb606eea7a491bc"
+    },
+    {
+      "science": {
+        "decision": "PASS",
+        "issues": []
+      },
+      "visual": {
+        "decision": "REVISE",
+        "issues": [
+          "Crossfade/label-doubling artifact present in the actual attached frames: at 1.2s the bottom caption is two superimposed sentences (unreadable) and the 'Sister_A'/'Sister_B'/'Microtubule' labels plus the chromosome bars are doubled (4 bars instead of 2). The same ghosting persists, milder, at 2.2s, 4.2s, 5.2s, 6.2s and 7.2s. Clean single-label frames at 0.2s and 3.2s confirm the doubling is a transition artifact, not intended content, so the prior 'unconfirmed' status is not supported by the attached pixels.",
+          "At 1.2s the doubled caption makes the stage caption illegible; this is the worst case and blocks a clean visual pass."
+        ]
+      },
+      "scope_review": "Scope is honestly represented. The video models exactly one duplicated chromosome (one sister pair), consistent with the model's deliberate single-chromosome instantiation of the source's 'all chromosomes align' statement. The anaphase caption explicitly states 'Molecular cleavage not shown,' matching the exclusion of cohesin degradation/cleavage; no molecular mechanism is depicted or implied. Phase order shown (bipolar kinetochore attachment -> metaphase-plate alignment -> sister separation to opposite poles) matches the schematic process order. No out-of-scope process (interphase replication, prophase NEBD, telophase, cytokinesis, SAC) is depicted. Schematic (not molecular-structure) interpretation is appropriate and is what the scene presents.",
+      "visible_evidence": [
+        {
+          "time": "0.2s",
+          "observation": "Crisp frame: two pink sister-chromatid bars (Sister_A bottom, Sister_B top) with yellow kinetochores at center; white microtubule lines from each blue pole bind the opposite-facing kinetochore; vertical gray metaphase-plate line through the pair. Caption: 'Kinetochores of sister chromatids bind microtubules from opposite poles.' Bipolar orientation correct."
+        },
+        {
+          "time": "1.2s",
+          "observation": "DEFECT: labels and chromosome bars doubled (4 pink bars); bottom caption is two overlapping sentences and illegible. Confirms crossfade artifact in the actual attached pixels (contradicts the claim of a crisp independent 1.2s extraction)."
+        },
+        {
+          "time": "2.2s",
+          "observation": "Residual label ghosting (Sister_A/Sister_B/Microtubule doubled, 4 bars) but caption now single: 'Duplicated chromosome aligns at the metaphase plate.' Chromosome at metaphase plate."
+        },
+        {
+          "time": "3.2s",
+          "observation": "Clean frame: single labels, two bars, pair centered on metaphase plate. Metaphase alignment clearly shown."
+        },
+        {
+          "time": "4.2s",
+          "observation": "Label/bar doubling recurs (transition into anaphase); caption single: 'Connection breaks down; existing sisters separate toward opposite poles. (Molecular cleavage not shown.)' Honest scope note present."
+        },
+        {
+          "time": "5.2s",
+          "observation": "Sisters now in two separated groups (left = Sister_A, right = Sister_B), each still showing doubled bars/labels; each group has a microtubule to its respective pole. Identity continuity maintained (A left, B right)."
+        },
+        {
+          "time": "6.2s",
+          "observation": "Left chromatid (Sister_A) moved toward left pole, right chromatid (Sister_B) toward right pole; mild label ghosting remains. Poleward movement toward the pole of the attached microtubule is correct."
+        },
+        {
+          "time": "7.2s",
+          "observation": "Daughter chromatids further displaced to opposite poles; mild label ghosting persists. Separation and poleward movement consistent with anaphase; no molecular cleavage depicted (matches scope)."
+        }
+      ],
+      "video_sha256": "c035449dc554645baf35a11b7855b8d0a85253ea2d06af39bf780bdde32e9f2d",
+      "scene_sha256": "e1d84bb392a6a1c2150b3dbd3a276c3fe618ba347c75c5b84bb606eea7a491bc"
+    },
+    {
+      "science": {
+        "decision": "PASS",
+        "issues": []
+      },
+      "visual": {
+        "decision": "PASS",
+        "issues": []
+      },
+      "scope_review": "Single duplicated chromosome (one sister-chromatid pair) is the only modeled chromosome, consistent with the declared scope; 'all chromosomes' source statements are instantiated for this pair only. Excluded processes are respected: no interphase replication, no nuclear-envelope/centrosome dynamics, no telophase/cytokinesis, no spindle-checkpoint, and no molecular cohesin cleavage — the 4.2–7.8 s caption explicitly states 'Molecular cleavage not shown,' matching the exclusion. The earlier endpoint's specific claim of LABEL DOUBLING is NOT substantiated by the actual decoded pixels: every label (Pole, Microtubule, Sister_A, Sister_B, Metaphase plate, and the bottom caption) renders as a single crisp instance in all eight frames, with no ghost/offset/double-stamped text. No visual doubling, overlap, or clipping is present. Scene is read as a schematic, not a molecular structure; no audio required.",
+      "visible_evidence": [
+        {
+          "time": "0.2",
+          "observation": "Two pink sister-chromatid bars joined at center, each with a yellow kinetochore dot at the centromeric region; left microtubule binds left kinetochore, right microtubule binds right kinetochore (bipolar orientation). All labels single; no doubling. Caption: kinetochores bind microtubules from opposite poles."
+        },
+        {
+          "time": "1.2",
+          "observation": "Joined pair centered on the vertical metaphase-plate line (aligned at equatorial plane). Labels Sister_A (bottom), Sister_B (top), Pole, Microtubule, Metaphase plate each appear once. Caption: duplicated chromosome aligns at metaphase plate."
+        },
+        {
+          "time": "2.2",
+          "observation": "Pair still straddling the metaphase-plate line; kinetochores and microtubule attachments unchanged. Single label instances; no doubling."
+        },
+        {
+          "time": "3.2",
+          "observation": "Joined pair at the plate, slight positional shift only; identities Sister_A/Sister_B stable. No label doubling."
+        },
+        {
+          "time": "4.2",
+          "observation": "Gap opens between the two chromatids (connection breakdown as observable transition); each retains its yellow kinetochore and its poleward microtubule. Caption notes molecular cleavage not shown. Labels single."
+        },
+        {
+          "time": "5.2",
+          "observation": "Sister_A moved left toward left pole, Sister_B right toward right pole; each chromatid's kinetochore remains attached to its own pole's microtubule. Continuous sister identities preserved. No doubling."
+        },
+        {
+          "time": "6.2",
+          "observation": "Further poleward migration; Sister_A near left, Sister_B near right, microtubules tracking the moving kinetochores. All labels single and contained in frame."
+        },
+        {
+          "time": "7.2",
+          "observation": "Sister_A adjacent to left pole, Sister_B adjacent to right pole; correct poleward movement with correct kinetochore-microtubule attachments. No label doubling or clipping."
+        },
+        {
+          "time": "7.8",
+          "observation": "Final state consistent with 7.2; separated daughter chromatids at opposite poles. All labels render once; the alleged label-doubling defect is absent."
+        }
+      ],
+      "video_sha256": "c035449dc554645baf35a11b7855b8d0a85253ea2d06af39bf780bdde32e9f2d",
+      "scene_sha256": "e1d84bb392a6a1c2150b3dbd3a276c3fe618ba347c75c5b84bb606eea7a491bc"
+    }
   ],
-  "final_status": "OFFLINE_ENGINEERING_CHECKPOINT",
-  "actual_model_calls": 0,
-  "videos_rendered": 0
+  "visual_dispute": {
+    "full_video_endpoint": "Twice alleged ghosting",
+    "decoded_frame_review": "9 exact PNG frames PASS, ghosting not substantiated",
+    "resolution": "Keep both observations; sampled images cannot establish every-frame visual perfection"
+  },
+  "api_usage": {
+    "deepseek_calls": 30,
+    "qwen_calls": 4,
+    "input_tokens": 216988,
+    "output_tokens": 93467,
+    "cost": null,
+    "cost_note": "API does not report actual charged amount; no invented monetary cost",
+    "failed_calls": 2
+  },
+  "tests": {
+    "passed": 47,
+    "seconds": 112.19,
+    "scope": "V4.3 + V4.2.2 + V4.2.1, includes synthetic and historical integration"
+  },
+  "generalization_results": {
+    "unseen_theme": "vesicle_transport",
+    "model_review": "REVISE",
+    "topic_specific_production_branches_added": false,
+    "two_topics_fully_compiled": false
+  },
+  "blockers": [
+    "DNA model still scientifically REVISE",
+    "Unseen vesicle model lacks motor-protein evidence",
+    "Only one topic has a reviewed fully compiled predicate",
+    "Assembly parent binding still uses component proxies; full assembly semantics incomplete",
+    "Video review contains conflicting full-video and exact-frame findings"
+  ],
+  "final_status": "REVIEW_INCOMPLETE",
+  "sample_science_validity": "PASS_MODEL",
+  "sample_execution_fidelity": "PARTIAL",
+  "sample_visual_fidelity": "PASS_SAMPLED_FRAMES",
+  "video_approved": false
 }

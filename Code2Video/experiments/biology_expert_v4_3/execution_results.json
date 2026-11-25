@@ -1,5 +1,245 @@
 {
-  "results": [],
-  "status": "NOT_TESTED",
-  "reason": "No independently science-approved real typed models yet"
+  "topic": "mitosis",
+  "runtime": {
+    "contract_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+    "checks": [
+      {
+        "constraint_id": "OBS_bipolar_attachment_during_prometaphase",
+        "predicate": "relation_holds_during",
+        "status": "PASS",
+        "full_constraint_verified": true,
+        "expected_interval": {
+          "status": "RESOLVED",
+          "source": "typed_scene_independent_start_end",
+          "event_id": "EV_attach_orient",
+          "start": 0,
+          "end": 1.0,
+          "model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5"
+        },
+        "observed_interval": [
+          0.0,
+          0.9999999999999999
+        ],
+        "samples_checked": 17,
+        "sample_times": [
+          0.0,
+          0.06666666666666667,
+          0.13333333333333333,
+          0.2,
+          0.26666666666666666,
+          0.3333333333333333,
+          0.39999999999999997,
+          0.4666666666666666,
+          0.5333333333333333,
+          0.6,
+          0.6666666666666666,
+          0.7333333333333333,
+          0.7999999999999999,
+          0.8666666666666666,
+          0.9333333333333332,
+          0.9999999999999999
+        ],
+        "violations": [],
+        "evidence": [
+          {
+            "expected_relation": "REL_microtubule_binds_kinetochore",
+            "source": "kmt_left",
+            "target": "kinetochore_A",
+            "sampling_gaps": [],
+            "interval_source": "typed_scene_independent_start_end"
+          }
+        ],
+        "reason": null,
+        "participants": {
+          "chromosome_being_attached": [
+            "sister_chromatid_A"
+          ],
+          "sister_chromatid_bearing_kinetochore": [
+            "sister_chromatid_A",
+            "sister_chromatid_B"
+          ],
+          "binding_site": [
+            "kinetochore_A",
+            "kinetochore_B"
+          ],
+          "attaching_fiber": [
+            "kmt_left",
+            "kmt_right"
+          ],
+          "target_pole": [
+            "pole_left",
+            "pole_right"
+          ]
+        },
+        "contract_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+        "scene_sha256": "ed8c6c9e92eec39a4cb458514c6e8084e16b8a139c8375391f7d1dfd2a67c25a",
+        "trace_sha256": "f4b02d7ad8dde9e630839ebc9606972b005396c28ddfce7d79b5d8aae993a3d4"
+      },
+      {
+        "constraint_id": "OBS_alignment_during_metaphase",
+        "predicate": "relation_holds_during",
+        "status": "PARTIALLY_VERIFIED",
+        "full_constraint_verified": false,
+        "expected_interval": {
+          "status": "RESOLVED",
+          "source": "typed_scene_independent_start_end",
+          "event_id": "EV_metaphase_align",
+          "start": 1.0,
+          "end": 2.5,
+          "model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5"
+        },
+        "observed_interval": [
+          1.0666666666666667,
+          2.4666666666666677
+        ],
+        "samples_checked": 22,
+        "sample_times": [
+          1.0666666666666667,
+          1.1333333333333333,
+          1.2,
+          1.2666666666666666,
+          1.3333333333333333,
+          1.4,
+          1.4666666666666666,
+          1.5333333333333332,
+          1.5999999999999999,
+          1.6666666666666665,
+          1.7333333333333332,
+          1.7999999999999998,
+          1.8666666666666665,
+          1.9333333333333331,
+          1.9999999999999998,
+          2.0666666666666664,
+          2.1333333333333333,
+          2.2,
+          2.266666666666667,
+          2.333333333333334,
+          2.400000000000001,
+          2.4666666666666677
+        ],
+        "violations": [],
+        "evidence": [
+          {
+            "expected_relation": "REL_duplicated_chromosome_at_metaphase_plate",
+            "source": "sister_chromatid_A",
+            "target": "metaphase_plate",
+            "sampling_gaps": [],
+            "interval_source": "typed_scene_independent_start_end"
+          }
+        ],
+        "reason": null,
+        "participants": {
+          "aligned_chromosome": [
+            "sister_chromatid_A",
+            "sister_chromatid_B"
+          ],
+          "alignment_plane": [
+            "metaphase_plate"
+          ]
+        },
+        "contract_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+        "scene_sha256": "ed8c6c9e92eec39a4cb458514c6e8084e16b8a139c8375391f7d1dfd2a67c25a",
+        "trace_sha256": "f4b02d7ad8dde9e630839ebc9606972b005396c28ddfce7d79b5d8aae993a3d4"
+      },
+      {
+        "constraint_id": "OBS_connection_breakdown_after_alignment",
+        "predicate": "event_precedes",
+        "status": "PARTIALLY_VERIFIED",
+        "full_constraint_verified": false,
+        "expected_interval": {
+          "status": "RESOLVED",
+          "source": "typed_scene_independent_start_end",
+          "event_id": "EV_anaphase_separate",
+          "start": 4.0,
+          "end": 7.5,
+          "model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5"
+        },
+        "observed_interval": null,
+        "samples_checked": 2,
+        "sample_times": [
+          1.0666666666666667,
+          4.000000000000005
+        ],
+        "violations": [],
+        "evidence": [
+          {
+            "event_ids": [
+              "EV_metaphase_align",
+              "EV_anaphase_separate"
+            ],
+            "source": "actual_event_markers"
+          }
+        ],
+        "reason": null,
+        "participants": {
+          "PROC_metaphase_alignment": [
+            "EV_metaphase_align"
+          ],
+          "PROC_anaphase_sister_separation": [
+            "EV_anaphase_separate"
+          ]
+        },
+        "contract_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+        "scene_sha256": "ed8c6c9e92eec39a4cb458514c6e8084e16b8a139c8375391f7d1dfd2a67c25a",
+        "trace_sha256": "f4b02d7ad8dde9e630839ebc9606972b005396c28ddfce7d79b5d8aae993a3d4"
+      },
+      {
+        "constraint_id": "OBS_two_daughter_chromatids_after_separation",
+        "predicate": "state_transition_allowed",
+        "status": "PARTIALLY_VERIFIED",
+        "full_constraint_verified": false,
+        "expected_interval": {
+          "status": "RESOLVED",
+          "source": "typed_scene_independent_start_end",
+          "event_id": "EV_anaphase_separate",
+          "start": 4.0,
+          "end": 7.5,
+          "model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5"
+        },
+        "observed_interval": null,
+        "samples_checked": 1,
+        "sample_times": [
+          7.533333333333326
+        ],
+        "violations": [],
+        "evidence": [
+          {
+            "precondition": {
+              "metaphase_alignment": "Duplicated chromosome aligned at metaphase plate (schematic phase order)."
+            },
+            "to_value": "separated"
+          }
+        ],
+        "reason": null,
+        "participants": {
+          "separating_duplex": [
+            "sister_chromatid_A"
+          ],
+          "pre_separation_sister_chromatids": [
+            "sister_chromatid_A",
+            "sister_chromatid_B"
+          ],
+          "daughter_chromatids": [
+            "sister_chromatid_A",
+            "sister_chromatid_B"
+          ],
+          "pulling_microtubules": [
+            "kmt_left",
+            "kmt_right"
+          ],
+          "destination_pole": [
+            "pole_left",
+            "pole_right"
+          ]
+        },
+        "contract_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+        "scene_sha256": "ed8c6c9e92eec39a4cb458514c6e8084e16b8a139c8375391f7d1dfd2a67c25a",
+        "trace_sha256": "f4b02d7ad8dde9e630839ebc9606972b005396c28ddfce7d79b5d8aae993a3d4"
+      }
+    ]
+  },
+  "scene_path": "sample_scene.json",
+  "trace_path": "sample_trace.json",
+  "video_path": "sample_video.mp4",
+  "interpretation": "One full relation predicate PASS, three PARTIALLY_VERIFIED. Relation bookkeeping does not prove chemistry or all geometry. Assembly parent roles still include component proxies; these rules are not full verification."
 }

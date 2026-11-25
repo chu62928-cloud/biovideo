@@ -1,0 +1,40 @@
+{
+  "patches": [
+    {
+      "process_semantic_id": "PROC_kinetochore_attachment_orientation",
+      "input_roles": [
+        "chromosome_being_attached",
+        "binding_site",
+        "attaching_fiber",
+        "target_pole"
+      ],
+      "output_roles": [
+        "chromosome_being_attached",
+        "binding_site"
+      ]
+    },
+    {
+      "process_semantic_id": "PROC_metaphase_alignment",
+      "input_roles": [
+        "aligned_chromosome",
+        "alignment_plane"
+      ],
+      "output_roles": [
+        "aligned_chromosome",
+        "alignment_plane"
+      ]
+    },
+    {
+      "process_semantic_id": "PROC_anaphase_sister_separation",
+      "input_roles": [
+        "separating_chromatids",
+        "pulling_microtubules",
+        "destination_pole"
+      ],
+      "output_roles": [
+        "separating_chromatids",
+        "destination_pole"
+      ]
+    }
+  ]
+}

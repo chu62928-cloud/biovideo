@@ -1,0 +1,13 @@
+{
+  "patches": [
+    {
+      "process_semantic_id": "PROC_kinetochore_attachment_orientation",
+      "temporal_scope": {
+        "start_condition": "Kinetochores have formed on sister chromatids and spindle microtubules are present. Prior out-of-scope context: interphase DNA replication and prophase (nuclear envelope breakdown and centrosome separation) have occurred.",
+        "end_condition": "All sister chromatids of the chromosome are attached via kinetochores to microtubules from opposing poles.",
+        "concurrent_with": [],
+        "after": []
+      }
+    }
+  ]
+}

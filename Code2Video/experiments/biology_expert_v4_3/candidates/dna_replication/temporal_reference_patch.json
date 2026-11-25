@@ -1,0 +1,48 @@
+{
+  "patches": [
+    {
+      "process_semantic_id": "PROC_POL_ALPHA_EXTENSION",
+      "temporal_scope": {
+        "start_condition": "RNA primer present after primer formation by primase",
+        "end_condition": "short DNA fragment added and polymerase hands off",
+        "concurrent_with": [],
+        "after": [
+          "PROC_PRIMER_FORMATION"
+        ]
+      }
+    },
+    {
+      "process_semantic_id": "PROC_POL_DELTA_EXTENSION",
+      "temporal_scope": {
+        "start_condition": "polymerase hand-off after pol alpha",
+        "end_condition": "pol delta runs into the primer RNA on the lagging strand",
+        "concurrent_with": [],
+        "after": [
+          "PROC_POL_ALPHA_EXTENSION"
+        ]
+      }
+    },
+    {
+      "process_semantic_id": "PROC_PRIMER_REMOVAL",
+      "temporal_scope": {
+        "start_condition": "primer RNA displaced from template by pol delta",
+        "end_condition": "primer RNA removed and replaced with DNA nucleotides",
+        "concurrent_with": [],
+        "after": [
+          "PROC_POL_DELTA_EXTENSION"
+        ]
+      }
+    },
+    {
+      "process_semantic_id": "PROC_LIGATION",
+      "temporal_scope": {
+        "start_condition": "RNA primers replaced with DNA and gaps remain",
+        "end_condition": "gaps sealed by DNA ligase",
+        "concurrent_with": [],
+        "after": [
+          "PROC_PRIMER_REMOVAL"
+        ]
+      }
+    }
+  ]
+}

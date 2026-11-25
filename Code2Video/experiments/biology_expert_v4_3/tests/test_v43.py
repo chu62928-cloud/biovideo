@@ -46,3 +46,14 @@ def test_no_topic_names_in_common_paths():
 def test_failed_science_review_blocks_planner():
  m,e,r=fixture();r['decision']='REVISE'
  with pytest.raises(ValueError):plan_typed_scene(m,r)
+
+def test_explicit_role_binding_beats_shared_entity_type():
+ m,e,r=fixture();s=plan_typed_scene(m,r);extra=copy.deepcopy(s['objects'][1]);extra['object_id']='other_B';s['objects'].insert(0,extra)
+ plan=bind_typed_plan(m,TypedContractCompiler().compile(m,r),s)
+ assert plan['compiled_constraints'][0]['participants']['target']==['object_2']
+def test_all_relation_instances_checked():
+ m,s,p,t=execution();rule=p['compiled_constraints'][0];rule['spec']['expected_pairs']=[{'source':'object_1','target':'object_2'},{'source':'second_A','target':'second_B'}]
+ assert TemporalMechanismValidator().execute(p,m,s,t)['checks'][0]['status']=='FAIL'
+def test_unknown_explicit_participant_rejected():
+ m,e,r=fixture();s=plan_typed_scene(m,r);s['events'][0]['participant_bindings']['actor']='missing'
+ with pytest.raises(ValueError,match='Unknown scene participant'):bind_typed_plan(m,TypedContractCompiler().compile(m,r),s)

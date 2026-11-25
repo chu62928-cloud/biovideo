@@ -1,0 +1,58 @@
+{
+  "topic_id": "mitosis",
+  "scientific_queries": [
+    "mitosis chromosome congression metaphase plate sister chromatid separation anaphase mechanism review",
+    "eukaryotic mitosis kinetochore microtubule attachment chromosome alignment sister chromatid cohesion cleavage separase",
+    "anaphase sister chromatid separation poleward movement kinetochore microtubule depolymerization mechanism"
+  ],
+  "candidate_urls": [
+    "https://www.ncbi.nlm.nih.gov/books/NBK26839/",
+    "https://www.khanacademy.org/science/ap-biology/cell-communication-and-cell-cycle/cell-cycle/a/phases-of-mitosis",
+    "https://openstax.org/books/biology-ap-courses/pages/10-2-the-cell-cycle"
+  ],
+  "visual_queries": [
+    "duplicated chromosome condensed with two sister chromatids joined at centromere schematic high school",
+    "metaphase chromosome alignment at equatorial metaphase plate kinetochore microtubules bipolar spindle schematic",
+    "anaphase sister chromatids separate move toward opposite poles spindle microtubules shorten schematic high school",
+    "cytokinesis after mitosis two daughter nuclei chromosome number schematic high school"
+  ],
+  "visual_objects": [
+    "duplicated chromosome",
+    "sister chromatids",
+    "centromere",
+    "kinetochore",
+    "spindle microtubules",
+    "centrosomes/centrioles",
+    "metaphase plate",
+    "cell membrane",
+    "nuclear envelope fragments/absent in metaphase-anaphase"
+  ],
+  "visual_states": [
+    "condensed duplicated chromosome",
+    "chromosome aligned at metaphase plate",
+    "sister chromatids attached to opposite poles",
+    "cohesion cleaved",
+    "sister chromatids separated moving poleward",
+    "microtubules shortening",
+    "two daughter nuclei forming"
+  ],
+  "scope": {
+    "included": [
+      "eukaryotic mitosis",
+      "chromosome condensation and duplicated chromosome structure",
+      "metaphase alignment at metaphase plate",
+      "bipolar spindle attachment via kinetochores",
+      "sister chromatid cohesion and separation",
+      "anaphase poleward movement",
+      "resulting daughter nuclei with identical chromosome number"
+    ],
+    "excluded": [
+      "meiosis and crossing over",
+      "details of cell cycle checkpoints beyond brief mention",
+      "molecular details of separase/cohesin beyond high-school level",
+      "plant vs animal cell differences beyond centriole presence",
+      "cytokinesis mechanisms in detail",
+      "mitotic abnormalities and cancer"
+    ]
+  }
+}

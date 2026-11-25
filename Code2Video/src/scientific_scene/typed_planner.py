@@ -1,8 +1,10 @@
 """Scene planning from reviewed semantic IDs, without topic process blueprints."""
 from pathlib import Path
 import copy,json
-from biology_expert.contracts import digest
-from biology_expert.typed_science_builder import validate_typed_model
+from .models import digest
+def validate_typed_model(model):
+ from biology_expert.typed_science_builder import validate_typed_model as validate
+ return validate(model)
 
 def plan_typed_scene(model,review,duration=7):
  validate_typed_model(model)
@@ -25,9 +27,18 @@ def plan_typed_scene(model,review,duration=7):
 
 def bind_typed_plan(model,compiled,scene):
  if scene['typed_model_hash']!=digest(model) or compiled['model_hash']!=digest(model):raise ValueError('VERSION_CONFLICT')
- objects={o['entity_semantic_id']:o['object_id'] for o in scene['objects']};events={e['process_semantic_id']:e for e in scene['events']};rules=[]
+ objects={}
+ for o in scene['objects']:objects.setdefault(o['entity_semantic_id'],[]).append(o['object_id']);events={e['process_semantic_id']:e for e in scene['events']};rules=[]
  for item in compiled['constraints']:
-  p=events[item['process_semantic_id']];spec=copy.deepcopy(item['spec']);participants={role:[objects[entity]] for role,entity in item['participant_entity_refs'].items()}
+  p=events[item['process_semantic_id']];spec=copy.deepcopy(item['spec']);participants={}
+  byid={o['object_id']:o for o in scene['objects']}
+  for role,entity in item['participant_entity_refs'].items():
+   value=p.get('participant_bindings',{}).get(role,objects.get(entity,[]));value=value if isinstance(value,list) else [value]
+   if any(oid not in byid for oid in value):raise ValueError('Unknown scene participant')
+   participants[role]=value
+  if spec['predicate'] in ['relation_holds_during','connection_holds_until']:
+   pairs=[{'source':r['source'],'target':r['target']} for r in scene['relations'] if r.get('model_relation_ref',r['type'])==spec['relation_type'] and r['source'] in participants[spec['source_role']] and r['target'] in participants[spec['target_role']]]
+   if pairs:spec['expected_pairs']=pairs
   if spec['predicate']=='event_precedes':participants={pid:[events[pid]['event_id']] for pid in spec['ordered_event_roles']}
   rules.append({'constraint_id':item['constraint_id'],'predicate':item['predicate'],'spec':spec,'participants':participants,'expected_interval':{'status':'RESOLVED','source':'typed_scene_independent_start_end','event_id':p['event_id'],'start':p['start_time'],'end':p['end_time'],'model_hash':digest(model)},'compile_status':item['compile_status'],'full_semantics':item['full_semantics'],'reason':None,'evidence_ids':item['evidence_ids'],'process_semantic_id':item['process_semantic_id']})
  return {'contract_hash':digest(model),'scene_sha256':digest(scene),'compiled_constraints':rules,'model_hash':digest(model)}

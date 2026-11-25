@@ -1,0 +1,544 @@
+{
+  "model": {
+    "model_id": "mitosis_chromosome_alignment_separation_v2",
+    "schema_version": "1.0",
+    "scope": {
+      "topic": "Mitosis: duplicated chromosome alignment and sister chromatid separation in eukaryotic cells",
+      "organism_context": "eukaryotic cells (animal cell examples with centrosomes/centrioles; plant/fungi differences noted but not modeled)",
+      "audience": "grades_10_12",
+      "included_processes": [
+        "prometaphase kinetochore attachment and chromosome orientation",
+        "metaphase alignment at the metaphase plate",
+        "anaphase sister chromatid separation and poleward movement"
+      ],
+      "excluded_processes": [
+        "interphase DNA replication",
+        "prophase nuclear envelope breakdown and centrosome separation",
+        "telophase nuclear envelope reformation",
+        "cytokinesis",
+        "spindle assembly checkpoint regulation",
+        "molecular mechanism of cohesin degradation/cleavage"
+      ],
+      "simplifications": [
+        "Only one duplicated chromosome (a single sister chromatid pair) is modeled; the full chromosome complement is not represented, so 'all chromosomes' statements in sources are instantiated only for this one pair.",
+        "Separation is represented by the duplex entity splitting into two distinct persistent daughter chromatids (now chromosomes), each moving to one pole; the model uses two persistent entity instances rather than a single state change.",
+        "The molecular mechanism by which the sister-chromatid connection breaks down (cohesin degradation/cleavage) is not modeled; only the observable breakdown of the connection is asserted.",
+        "Processes are discrete stages for schematic clarity; continuous timing is not modeled and phase order is schematic, not a strict mechanistic causal constraint.",
+        "Maximal chromosome condensation at metaphase is noted in source but excluded from process effects as out-of-scope for alignment/separation proof."
+      ]
+    },
+    "entities": [
+      {
+        "semantic_id": "ENT_duplicated_chromosome",
+        "scientific_name": "duplicated chromosome: sister chromatid pair attached at centromeric region",
+        "entity_type": "chromosome_structure",
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "identical pairs of DNA molecules—sister chromatids—that are firmly attached at the centromeric region",
+            "location": "paragraph_17"
+          },
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "The sister chromatids are still tightly attached to each other by cohesin proteins.",
+            "location": "paragraph_29"
+          }
+        ],
+        "cardinality": 1,
+        "states": {
+          "attached": "sister chromatids firmly attached at centromeric region",
+          "separated": "no longer modeled on this entity; see ENT_daughter_chromatid instances after separation"
+        }
+      },
+      {
+        "semantic_id": "ENT_daughter_chromatid",
+        "scientific_name": "individual chromatid (post-separation chromosome)",
+        "entity_type": "chromosome_structure",
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "Each chromatid, now called a chromosome, is pulled rapidly toward the centrosome to which its microtubule is attached.",
+            "location": "paragraph_30"
+          }
+        ],
+        "cardinality": 2,
+        "states": {
+          "at_pole": "chromatid pulled toward the centrosome to which its microtubule is attached"
+        }
+      },
+      {
+        "semantic_id": "ENT_kinetochore",
+        "scientific_name": "kinetochore (protein structure at centromeric region of each sister chromatid)",
+        "entity_type": "protein_complex",
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "Each sister chromatid develops a protein structure called a kinetochore in the centromeric region",
+            "location": "paragraph_27"
+          }
+        ],
+        "cardinality": 2
+      },
+      {
+        "semantic_id": "ENT_mitotic_spindle_microtubule",
+        "scientific_name": "mitotic spindle microtubule (kinetochore microtubule from a pole)",
+        "entity_type": "cytoskeletal_structure",
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "The proteins of the kinetochore attract and bind mitotic spindle microtubules.",
+            "location": "paragraph_27"
+          },
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "mitotic spindle microtubules from opposite poles attach to each sister chromatid at the kinetochore",
+            "location": "paragraph_28"
+          }
+        ],
+        "cardinality": 2
+      },
+      {
+        "semantic_id": "ENT_spatial_landmark",
+        "scientific_name": "spatial landmarks: metaphase plate (equatorial plane) and the two cell poles",
+        "entity_type": "spatial_region",
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "a plane called the metaphase plate , or the equatorial plane, midway between the two poles of the cell",
+            "location": "paragraph_29"
+          },
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "the kinetochores of sister chromatids face the opposite poles.",
+            "location": "paragraph_27"
+          }
+        ],
+        "cardinality": 3
+      }
+    ],
+    "relations": [
+      {
+        "semantic_id": "REL_kinetochore_part_of_chromatid",
+        "relation_type": "part_of",
+        "definition": "Each kinetochore is a protein structure located in the centromeric region of a sister chromatid.",
+        "source_entity": "ENT_kinetochore",
+        "target_entity": "ENT_duplicated_chromosome",
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "Each sister chromatid develops a protein structure called a kinetochore in the centromeric region",
+            "location": "paragraph_27"
+          }
+        ]
+      },
+      {
+        "semantic_id": "REL_microtubule_binds_kinetochore",
+        "relation_type": "binds",
+        "definition": "Mitotic spindle microtubules from opposite poles bind to kinetochores of sister chromatids.",
+        "source_entity": "ENT_mitotic_spindle_microtubule",
+        "target_entity": "ENT_kinetochore",
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "The proteins of the kinetochore attract and bind mitotic spindle microtubules.",
+            "location": "paragraph_27"
+          },
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "mitotic spindle microtubules from opposite poles attach to each sister chromatid at the kinetochore",
+            "location": "paragraph_28"
+          }
+        ]
+      },
+      {
+        "semantic_id": "REL_chromosome_at_metaphase_plate",
+        "relation_type": "located_at",
+        "definition": "During metaphase, the duplicated chromosome is aligned at the metaphase plate (equatorial plane).",
+        "source_entity": "ENT_duplicated_chromosome",
+        "target_entity": "ENT_spatial_landmark",
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "all the chromosomes are aligned in a plane called the metaphase plate , or the equatorial plane, midway between the two poles of the cell.",
+            "location": "paragraph_29"
+          }
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "process_semantic_id": "PROC_kinetochore_attachment_orientation",
+        "scientific_name": "prometaphase kinetochore-microtubule binding and bipolar chromosome orientation",
+        "action_category": "binding",
+        "participants": [
+          {
+            "role": "chromosome_being_attached",
+            "entity_ref": "ENT_duplicated_chromosome"
+          },
+          {
+            "role": "binding_site",
+            "entity_ref": "ENT_kinetochore"
+          },
+          {
+            "role": "attaching_fiber",
+            "entity_ref": "ENT_mitotic_spindle_microtubule"
+          },
+          {
+            "role": "target_pole",
+            "entity_ref": "ENT_spatial_landmark"
+          }
+        ],
+        "input_roles": [
+          "chromosome_being_attached",
+          "binding_site",
+          "attaching_fiber",
+          "target_pole"
+        ],
+        "output_roles": [
+          "chromosome_being_attached",
+          "binding_site",
+          "attaching_fiber",
+          "target_pole"
+        ],
+        "preconditions": {
+          "kinetochore_formed": "Each sister chromatid has a kinetochore in the centromeric region.",
+          "spindle_microtubules_present": "Mitotic spindle microtubules are present and extend from centrosomes."
+        },
+        "effects": {
+          "attachment": "Kinetochore microtubules from opposite poles attach to the two sister chromatids.",
+          "orientation": "Chromosome is oriented so that kinetochores of sister chromatids face opposite poles.",
+          "mechanism_note": "Binding is asserted as source-supported; the attract-and-bind mechanism is described at a schematic level only."
+        },
+        "temporal_scope": {
+          "start_condition": "Kinetochores have formed and spindle microtubules are present (prior out-of-scope context: interphase replication and prophase complete).",
+          "end_condition": "Sister chromatids are attached via kinetochores to microtubules from opposing poles and oriented.",
+          "concurrent_with": [],
+          "after": []
+        },
+        "observables": [
+          {
+            "constraint_id": "OBS_bipolar_attachment_during_prometaphase",
+            "predicate": "relation_holds_during",
+            "relation_ref": "REL_microtubule_binds_kinetochore",
+            "source_role": "attaching_fiber",
+            "target_role": "binding_site",
+            "capability": "DETERMINISTIC",
+            "evidence_ids": [
+              "E_dcb0de9a22b0"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_dcb0de9a22b0",
+                "quote": "mitotic spindle microtubules from opposite poles attach to each sister chromatid at the kinetochore",
+                "location": "paragraph_28"
+              }
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "The proteins of the kinetochore attract and bind mitotic spindle microtubules.",
+            "location": "paragraph_27"
+          },
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "the chromosome will be oriented until the kinetochores of sister chromatids face the opposite poles.",
+            "location": "paragraph_27"
+          }
+        ],
+        "exceptions": []
+      },
+      {
+        "process_semantic_id": "PROC_metaphase_alignment",
+        "scientific_name": "metaphase alignment of the duplicated chromosome at the metaphase plate",
+        "action_category": "transport",
+        "participants": [
+          {
+            "role": "aligned_chromosome",
+            "entity_ref": "ENT_duplicated_chromosome"
+          },
+          {
+            "role": "alignment_plane",
+            "entity_ref": "ENT_spatial_landmark"
+          }
+        ],
+        "input_roles": [
+          "aligned_chromosome",
+          "alignment_plane"
+        ],
+        "output_roles": [
+          "aligned_chromosome"
+        ],
+        "preconditions": {
+          "bipolar_attachment": "Sister chromatids attached via kinetochores to microtubules from opposing poles.",
+          "cohesin_present": "Sister chromatids still tightly attached to each other by cohesin proteins."
+        },
+        "effects": {
+          "alignment": "The modeled duplicated chromosome is aligned at the metaphase plate.",
+          "scope_note": "Source states 'all the chromosomes' align; only the single modeled chromosome is instantiated. Maximal condensation noted in source but excluded from this proof."
+        },
+        "temporal_scope": {
+          "start_condition": "Chromosome has achieved bipolar kinetochore attachment.",
+          "end_condition": "Chromosome is aligned at the metaphase plate.",
+          "concurrent_with": [],
+          "after": [
+            "PROC_kinetochore_attachment_orientation"
+          ]
+        },
+        "observables": [
+          {
+            "constraint_id": "OBS_alignment_during_metaphase",
+            "predicate": "relation_holds_during",
+            "relation_ref": "REL_chromosome_at_metaphase_plate",
+            "source_role": "aligned_chromosome",
+            "target_role": "alignment_plane",
+            "capability": "DETERMINISTIC",
+            "evidence_ids": [
+              "E_dcb0de9a22b0"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_dcb0de9a22b0",
+                "quote": "all the chromosomes are aligned in a plane called the metaphase plate",
+                "location": "paragraph_29"
+              }
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "During metaphase , the “change phase,” all the chromosomes are aligned in a plane called the metaphase plate , or the equatorial plane, midway between the two poles of the cell.",
+            "location": "paragraph_29"
+          }
+        ],
+        "exceptions": []
+      },
+      {
+        "process_semantic_id": "PROC_anaphase_sister_separation",
+        "scientific_name": "anaphase breakdown of sister-chromatid connection and poleward movement",
+        "action_category": "separation",
+        "participants": [
+          {
+            "role": "separating_duplex",
+            "entity_ref": "ENT_duplicated_chromosome"
+          },
+          {
+            "role": "daughter_chromatids",
+            "entity_ref": "ENT_daughter_chromatid"
+          },
+          {
+            "role": "pulling_microtubules",
+            "entity_ref": "ENT_mitotic_spindle_microtubule"
+          },
+          {
+            "role": "destination_pole",
+            "entity_ref": "ENT_spatial_landmark"
+          }
+        ],
+        "input_roles": [
+          "separating_duplex",
+          "pulling_microtubules",
+          "destination_pole"
+        ],
+        "output_roles": [
+          "daughter_chromatids",
+          "destination_pole"
+        ],
+        "preconditions": {
+          "metaphase_alignment": "Duplicated chromosome aligned at the metaphase plate.",
+          "bipolar_attachment": "Sister chromatids attached via kinetochores to microtubules from opposing poles."
+        },
+        "effects": {
+          "connection_breakdown": "The connection between the sister chromatids breaks down (molecular mechanism of breakdown not modeled).",
+          "separation": "The two sister chromatids become two distinct daughter chromatids (now called chromosomes).",
+          "poleward_movement": "The microtubules pull the chromosomes toward opposite poles."
+        },
+        "temporal_scope": {
+          "start_condition": "Duplicated chromosome aligned at metaphase plate with bipolar kinetochore attachment.",
+          "end_condition": "Sister chromatids separated into two distinct daughter chromatids moving toward opposite poles.",
+          "concurrent_with": [],
+          "after": [
+            "PROC_metaphase_alignment"
+          ]
+        },
+        "observables": [
+          {
+            "constraint_id": "OBS_connection_breakdown_after_alignment",
+            "predicate": "event_precedes",
+            "ordered_process_ids": [
+              "PROC_metaphase_alignment",
+              "PROC_anaphase_sister_separation"
+            ],
+            "capability": "PARTIAL",
+            "evidence_ids": [
+              "E_dcb0de9a22b0"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_dcb0de9a22b0",
+                "quote": "In anaphase, the connection between the sister chromatids breaks down, and the microtubules pull the chromosomes toward opposite poles.",
+                "location": "paragraph_28"
+              }
+            ]
+          },
+          {
+            "constraint_id": "OBS_two_daughter_chromatids_after_separation",
+            "predicate": "state_transition_allowed",
+            "state_key": "sister_chromatid_attachment",
+            "to_value": "separated",
+            "precondition": {
+              "metaphase_alignment": "Duplicated chromosome aligned at metaphase plate."
+            },
+            "capability": "PARTIAL",
+            "evidence_ids": [
+              "E_dcb0de9a22b0"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_dcb0de9a22b0",
+                "quote": "Each chromatid, now called a chromosome, is pulled rapidly toward the centrosome to which its microtubule is attached.",
+                "location": "paragraph_30"
+              }
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "During anaphase , the “upward phase,” the cohesin proteins degrade, and the sister chromatids separate at the centromere.",
+            "location": "paragraph_30"
+          },
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "In anaphase, the connection between the sister chromatids breaks down, and the microtubules pull the chromosomes toward opposite poles.",
+            "location": "paragraph_28"
+          }
+        ],
+        "exceptions": [
+          {
+            "note": "Source also states 'the cohesin proteins degrade' (paragraph_30); this molecular mechanism is acknowledged but deliberately not modeled as a causal agent in this schematic model."
+          }
+        ]
+      }
+    ],
+    "unresolved_questions": [
+      {
+        "question": "The exact molecular mechanism by which the sister-chromatid connection breaks down (e.g., cohesin cleavage by separase) is not modeled; only the observable breakdown is asserted.",
+        "status": "unresolved"
+      },
+      {
+        "question": "Precise timing and duration of prometaphase, metaphase, and anaphase are not specified in the retrieved passages.",
+        "status": "unresolved"
+      },
+      {
+        "question": "Whether the spindle assembly checkpoint is required for anaphase onset is not explicitly stated in the retrieved passages.",
+        "status": "unresolved"
+      },
+      {
+        "question": "Whether phase order (metaphase alignment before anaphase separation) constitutes a strict per-chromosome mechanistic precondition is not explicitly stated; modeled as schematic phase order.",
+        "status": "unresolved"
+      }
+    ]
+  },
+  "review": {
+    "decision": "REVISE",
+    "issues": [
+      {
+        "target_id": "ENT_duplicated_chromosome",
+        "reason": "The entity is defined as a single 'duplicated chromosome: sister chromatid pair' with cardinality 1, but the source describes 'identical pairs of DNA molecules—sister chromatids' and later says 'the sister chromatids separate at the centromere' and 'each chromatid, now called a chromosome.' The model correctly notes a single pair is instantiated, but the entity conflates the whole duplicated chromosome with the joined sister-chromatid pair. This is a real biological ambiguity: a duplicated chromosome is a single chromosome consisting of two sister chromatids, not two chromosomes. The model's entity type and name are acceptable if the simplification explicitly states that one duplicated chromosome = one sister-chromatid pair. However, the relation REL_kinetochore_part_of_chromatid targets ENT_duplicated_chromosome as if kinetochores are part of the whole duplicated chromosome, when source says each sister chromatid develops a kinetochore. This part_of relation is too coarse and could mislead about which structure bears the kinetochore. Revise the relation target to a sister chromatid entity or explicitly split the duplicated chromosome into two sister chromatid components.",
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ]
+      },
+      {
+        "target_id": "REL_chromosome_at_metaphase_plate",
+        "reason": "The relation definition says 'the duplicated chromosome is aligned at the metaphase plate' during metaphase. The source says 'all the chromosomes are aligned in a plane called the metaphase plate.' The model explicitly restricts to one modeled chromosome, which is an acceptable teaching simplification only if clearly delimited. However, the relation as written asserts alignment of a single duplicated chromosome at the metaphase plate without qualifying that the source's statement is about all chromosomes. The simplification note covers this, but the observable OBS_alignment_during_metaphase uses the same relation and quotes 'all the chromosomes are aligned' while the subject is one chromosome. This is a scope mismatch between quoted source and modeled observable. Revise the observable or relation to state that the modeled single duplicated chromosome is aligned at the metaphase plate as an instantiation of the source's 'all chromosomes' statement, or mark the observable as PARTIAL with explicit scope limitation.",
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ]
+      },
+      {
+        "target_id": "PROC_anaphase_sister_separation",
+        "reason": "The process effects include 'connection_breakdown: The connection between the sister chromatids breaks down (molecular mechanism of breakdown not modeled)' and 'poleward_movement: The microtubules pull the chromosomes toward opposite poles.' The source states in paragraph_30: 'the cohesin proteins degrade, and the sister chromatids separate at the centromere' and 'Each chromatid, now called a chromosome, is pulled rapidly toward the centrosome to which its microtubule is attached.' The model's exceptions note acknowledges cohesin degradation but deliberately excludes it as a causal agent. This is a teaching simplification, not necessarily misleading, because the observable breakdown is asserted without claiming mechanism. However, the process name and scientific_name say 'breakdown of sister-chromatid connection' while the source explicitly names cohesin protein degradation as the mechanism. The model must honestly delimit what it proves: it proves observable separation, not the causal role of cohesin. The simplification note does this, but the process effects should not phrase 'connection breaks down' as if it were a modeled causal event without stating that the molecular cause is out of scope. Revise to label the breakdown as an observed transition whose molecular mechanism (cohesin degradation) is excluded, and ensure no observable claims causal sufficiency of microtubule pulling alone.",
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ]
+      },
+      {
+        "target_id": "OBS_connection_breakdown_after_alignment",
+        "reason": "This observable uses predicate 'event_precedes' with ordered_process_ids PROC_metaphase_alignment then PROC_anaphase_sister_separation. The source does not explicitly state that metaphase alignment is a strict precondition for anaphase separation; it describes phases in sequence. The model's unresolved_questions note this uncertainty. The observable is marked PARTIAL, which is appropriate, but the predicate 'event_precedes' asserts a temporal order that the source presents as phase order, not necessarily a mechanistic precondition. The reason field should state that the source supports phase order but not strict causal precedence. Revise the observable reason to delimit it as schematic phase order, not a proven causal prerequisite.",
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ]
+      },
+      {
+        "target_id": "PROC_kinetochore_attachment_orientation",
+        "reason": "The process effects state 'Kinetochore microtubules from opposite poles attach to the two sister chromatids' and 'Chromosome is oriented so that kinetochores of sister chromatids face opposite poles.' The source paragraph_28 says 'mitotic spindle microtubules from opposite poles attach to each sister chromatid at the kinetochore' and paragraph_27 says 'the chromosome will be oriented until the kinetochores of sister chromatids face the opposite poles.' The model's entity ENT_mitotic_spindle_microtubule has cardinality 2, representing microtubules from opposite poles. The observable OBS_bipolar_attachment_during_prometaphase uses relation REL_microtubule_binds_kinetochore with source_role attaching_fiber and target_role binding_site, capability DETERMINISTIC. The source entails that microtubules from opposite poles attach to each sister chromatid at the kinetochore, so the relation is source-supported. However, the relation definition says 'Mitotic spindle microtubules from opposite poles bind to kinetochores of sister chromatids' without specifying one microtubule per kinetochore or that each sister chromatid's kinetochore binds microtubules from the pole it faces. The model's spatial landmark entity includes poles, but the relation does not link each microtubule to a specific pole in the observable. This is a minor omission; the observable still preserves the meaning that opposite-pole microtubules attach to sister chromatids at kinetochores. No revision required beyond clarifying that the observable checks attachment of microtubules from opposite poles to the two sister chromatids' kinetochores, not merely any microtubule-kinetochore binding.",
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ]
+      }
+    ],
+    "observable_reviews": [
+      {
+        "constraint_id": "OBS_bipolar_attachment_during_prometaphase",
+        "decision": "PASS",
+        "reason": "Source paragraph_28 entails that mitotic spindle microtubules from opposite poles attach to each sister chromatid at the kinetochore. The observable checks the relation REL_microtubule_binds_kinetochore during prometaphase, with source_role attaching_fiber and target_role binding_site. The computational observable preserves the meaning that microtubules from opposite poles bind kinetochores of the sister chromatids. Cardinality of microtubules is 2, consistent with opposite poles. Scope is source-supported."
+      },
+      {
+        "constraint_id": "OBS_alignment_during_metaphase",
+        "decision": "INSUFFICIENT_EVIDENCE",
+        "reason": "Source paragraph_29 states 'all the chromosomes are aligned in a plane called the metaphase plate.' The model instantiates only one duplicated chromosome, so the observable checks that one chromosome is aligned at the metaphase plate. This is a scope mismatch: the source statement is about all chromosomes, and the model's simplification note acknowledges this. However, the observable's support quote uses the 'all chromosomes' sentence while the subject is one chromosome. Direct source entailment for a single chromosome being aligned is not explicit; the source says all are aligned, which entails each is aligned, so the narrow observable is source-supported if properly delimited. The observable reason should state it is checking an instantiation of the universal statement for the single modeled chromosome. As written, the reason field asserts alignment of the single chromosome without noting the universal source scope. Mark INSUFFICIENT_EVIDENCE pending explicit scope delimitation in the observable reason and relation definition."
+      },
+      {
+        "constraint_id": "OBS_connection_breakdown_after_alignment",
+        "decision": "PASS",
+        "reason": "Source paragraph_28 states 'In anaphase, the connection between the sister chromatids breaks down, and the microtubules pull the chromosomes toward opposite poles.' Source paragraph_30 states 'the cohesin proteins degrade, and the sister chromatids separate at the centromere.' The observable checks that the connection breakdown event is preceded by metaphase alignment using ordered_process_ids. The source describes metaphase before anaphase in phase order, and the model marks the observable PARTIAL. The computational observable preserves the phase-order meaning, not a strict causal precondition. The molecular mechanism of breakdown is not modeled, but the observable does not claim it. Source entails the observable breakdown and phase order. PASS with the understanding that phase order is schematic, as noted in unresolved_questions."
+      },
+      {
+        "constraint_id": "OBS_two_daughter_chromatids_after_separation",
+        "decision": "PASS",
+        "reason": "Source paragraph_30 states 'the sister chromatids separate at the centromere' and 'Each chromatid, now called a chromosome, is pulled rapidly toward the centrosome to which its microtubule is attached.' The observable checks a state transition from attached to separated, with precondition metaphase alignment. The source entails separation into two distinct chromatids now called chromosomes, and poleward movement. The model uses two persistent daughter chromatid entities, which honestly represents the source's 'each chromatid, now called a chromosome.' The molecular mechanism of cohesin degradation is acknowledged but not modeled; the observable does not claim it. Source entails the state transition and the resulting two daughter chromatids. PASS."
+      }
+    ],
+    "scope_review": "The proposed model covers prometaphase kinetochore attachment and orientation, metaphase alignment, and anaphase sister separation for a single duplicated chromosome in eukaryotic cells. The source evidence supports the general sequence and the key observable events: microtubules from opposite poles attach to sister chromatids at kinetochores; chromosomes align at the metaphase plate; the connection between sister chromatids breaks down in anaphase and microtubules pull chromatids toward opposite poles. The model explicitly excludes interphase replication, prophase events, telophase, cytokinesis, spindle assembly checkpoint regulation, and molecular cohesin degradation. These exclusions are appropriate for the stated teaching scope. The main simplifications—modeling one chromosome pair, representing separation as a duplex splitting into two persistent daughter chromatids, and omitting the molecular mechanism of cohesin degradation—are acknowledged. However, the model has scope mismatches: (1) the relation REL_kinetochore_part_of_chromatid targets the whole duplicated chromosome rather than a sister chromatid, which could mislead about kinetochore location; (2) the alignment observable quotes the universal 'all chromosomes' statement while checking a single chromosome without explicit scope delimitation in the observable reason; (3) the process PROC_anaphase_sister_separation effects phrase 'connection breaks down' without clearly stating that the molecular cause (cohesin degradation) is excluded from the proof; (4) the event-precedes observable asserts phase order that the source presents as sequence, not strict causal precondition, and the reason should delimit this. These issues require revision to ensure the model honestly delimits what it proves and does not overstate source entailment. The model need not simulate molecular chemistry, but it must not claim causal sufficiency of microtubule pulling alone for separation, nor imply that the single modeled chromosome's alignment is directly stated in the source without the universal quantifier context. No major biological falsehood is present, but the precision of scope and relation targeting must be improved.",
+    "model_hash": "26586be50d4b55d6326f4ab167695e4b667d0d41146885c32701eea802b56cde",
+    "separate_request": true,
+    "independent_provider": false
+  }
+}

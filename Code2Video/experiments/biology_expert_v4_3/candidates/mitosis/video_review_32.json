@@ -1,0 +1,51 @@
+{
+  "science": {
+    "decision": "PASS",
+    "issues": []
+  },
+  "visual": {
+    "decision": "PASS",
+    "issues": []
+  },
+  "scope_review": "Single duplicated chromosome (one sister-chromatid pair) is the only modeled chromosome, consistent with the declared scope; 'all chromosomes' source statements are instantiated for this pair only. Excluded processes are respected: no interphase replication, no nuclear-envelope/centrosome dynamics, no telophase/cytokinesis, no spindle-checkpoint, and no molecular cohesin cleavage — the 4.2–7.8 s caption explicitly states 'Molecular cleavage not shown,' matching the exclusion. The earlier endpoint's specific claim of LABEL DOUBLING is NOT substantiated by the actual decoded pixels: every label (Pole, Microtubule, Sister_A, Sister_B, Metaphase plate, and the bottom caption) renders as a single crisp instance in all eight frames, with no ghost/offset/double-stamped text. No visual doubling, overlap, or clipping is present. Scene is read as a schematic, not a molecular structure; no audio required.",
+  "visible_evidence": [
+    {
+      "time": "0.2",
+      "observation": "Two pink sister-chromatid bars joined at center, each with a yellow kinetochore dot at the centromeric region; left microtubule binds left kinetochore, right microtubule binds right kinetochore (bipolar orientation). All labels single; no doubling. Caption: kinetochores bind microtubules from opposite poles."
+    },
+    {
+      "time": "1.2",
+      "observation": "Joined pair centered on the vertical metaphase-plate line (aligned at equatorial plane). Labels Sister_A (bottom), Sister_B (top), Pole, Microtubule, Metaphase plate each appear once. Caption: duplicated chromosome aligns at metaphase plate."
+    },
+    {
+      "time": "2.2",
+      "observation": "Pair still straddling the metaphase-plate line; kinetochores and microtubule attachments unchanged. Single label instances; no doubling."
+    },
+    {
+      "time": "3.2",
+      "observation": "Joined pair at the plate, slight positional shift only; identities Sister_A/Sister_B stable. No label doubling."
+    },
+    {
+      "time": "4.2",
+      "observation": "Gap opens between the two chromatids (connection breakdown as observable transition); each retains its yellow kinetochore and its poleward microtubule. Caption notes molecular cleavage not shown. Labels single."
+    },
+    {
+      "time": "5.2",
+      "observation": "Sister_A moved left toward left pole, Sister_B right toward right pole; each chromatid's kinetochore remains attached to its own pole's microtubule. Continuous sister identities preserved. No doubling."
+    },
+    {
+      "time": "6.2",
+      "observation": "Further poleward migration; Sister_A near left, Sister_B near right, microtubules tracking the moving kinetochores. All labels single and contained in frame."
+    },
+    {
+      "time": "7.2",
+      "observation": "Sister_A adjacent to left pole, Sister_B adjacent to right pole; correct poleward movement with correct kinetochore-microtubule attachments. No label doubling or clipping."
+    },
+    {
+      "time": "7.8",
+      "observation": "Final state consistent with 7.2; separated daughter chromatids at opposite poles. All labels render once; the alleged label-doubling defect is absent."
+    }
+  ],
+  "video_sha256": "c035449dc554645baf35a11b7855b8d0a85253ea2d06af39bf780bdde32e9f2d",
+  "scene_sha256": "e1d84bb392a6a1c2150b3dbd3a276c3fe618ba347c75c5b84bb606eea7a491bc"
+}

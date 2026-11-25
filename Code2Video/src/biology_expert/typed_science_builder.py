@@ -45,7 +45,13 @@ class TypedScienceModelBuilder:
   for e in retrieval['evidence']:
    sources.append({k:e[k] for k in ['evidence_id','url','title']}|{'passages':e['passages'][:28]})
   model=parse_json(self.gateway.request('deepseek','typed_scientific_model_build',prompt+json.dumps({'task':task,'schema':schema,'sources':sources},ensure_ascii=False)))
-  validate_typed_model(model,retrieval['evidence']);return model
+  try:validate_typed_model(model,retrieval['evidence'])
+  except Exception as error:
+   # A separate bounded repair request changes the candidate, never a frozen model.
+   repair='Repair this candidate JSON against the SAME evidence and schema. Return complete JSON only. Fix structural reference/quote errors, do not invent scientific facts. input_roles/output_roles must be participant role strings declared in that process, not entity IDs. Exact support quotes/locations required. Error: '+str(error)
+   model=parse_json(self.gateway.request('deepseek','typed_model_schema_repair',repair+json.dumps({'candidate':model,'schema':schema,'sources':sources},ensure_ascii=False)))
+   validate_typed_model(model,retrieval['evidence'])
+  return model
 
 class TypedScienceModelReviewer:
  def __init__(self,gateway):self.gateway=gateway

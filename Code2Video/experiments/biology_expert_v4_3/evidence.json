@@ -1,6 +1,503 @@
 {
-  "evidence": [],
-  "unresolved_claims": [],
-  "retrieval_status": "NOT_EXECUTED_PENDING_AUTHORIZATION",
-  "reason": "Scientific discovery/model steps are staged; no historic source/blueprint used as new generated result"
+  "evidence": [
+    {
+      "topic": "dna_replication",
+      "evidence_id": "E_d826e3e9d749",
+      "source_url": "https://openstax.org/books/biology-2e/pages/14-3-basics-of-dna-replication",
+      "title": "14.3 Basics of DNA Replication - Biology 2e | OpenStax",
+      "content_sha256": "c906783a23b4a7971c6628849d6df7f4c5f3fba0065b97d9ca12aae843a4fa62",
+      "retrieval_status": "RETRIEVED",
+      "support": []
+    },
+    {
+      "topic": "dna_replication",
+      "evidence_id": "E_d8ffea5a5785",
+      "source_url": "https://openstax.org/books/biology-2e/pages/14-5-dna-replication-in-eukaryotes",
+      "title": "14.5 DNA Replication in Eukaryotes - Biology 2e | OpenStax",
+      "content_sha256": "ff30253eb084c1944c86844790ccf2b6f06c512c2b1406395f6ad0e911342627",
+      "retrieval_status": "RETRIEVED",
+      "support": [
+        {
+          "item_id": "ENT_RNA_PRIMER",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "Primers are formed by the enzyme primase, and using the primer, DNA pol can start synthesis.",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "ENT_PRIMASE",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "Primers are formed by the enzyme primase, and using the primer, DNA pol can start synthesis.",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "ENT_POL_ALPHA",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "DNA pol α adds a short (20 to 30 nucleotides) DNA fragment to the RNA primer on both strands, and then hands off to a second polymerase.",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "ENT_POL_DELTA",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "While the leading strand is continuously synthesized by the enzyme pol ε , the lagging strand is synthesized by pol δ .",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "ENT_RNASE_H",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "The displaced primer RNA is then removed by RNase H (AKA flap endonuclease ) and replaced with DNA nucleotides.",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "ENT_DNA_LIGASE",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond.",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "ENT_LAGGING_DNA_PRODUCT",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "the lagging strand is synthesized by pol δ .",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "ENT_GAP_SUBSTRATE",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond.",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "REL_PRIMASE_FORMS_PRIMER",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "Primers are formed by the enzyme primase, and using the primer, DNA pol can start synthesis.",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "REL_POL_ALPHA_EXTENDS_PRIMER",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "DNA pol α adds a short (20 to 30 nucleotides) DNA fragment to the RNA primer on both strands, and then hands off to a second polymerase.",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "REL_POL_DELTA_SYNTHESIZES_LAGGING_DNA",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "While the leading strand is continuously synthesized by the enzyme pol ε , the lagging strand is synthesized by pol δ .",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "REL_POL_DELTA_DISPLACES_PRIMER",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "As pol δ runs into the primer RNA on the lagging strand, it displaces it from the DNA template.",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "REL_RNASE_H_REMOVES_PRIMER",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "The displaced primer RNA is then removed by RNase H (AKA flap endonuclease ) and replaced with DNA nucleotides.",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "REL_LIGASE_SEALS_GAP",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond.",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "PROC_PRIMER_FORMATION",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "Primers are formed by the enzyme primase, and using the primer, DNA pol can start synthesis.",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "PROC_POL_ALPHA_EXTENSION",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "DNA pol α adds a short (20 to 30 nucleotides) DNA fragment to the RNA primer on both strands, and then hands off to a second polymerase.",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "PROC_POL_DELTA_EXTENSION",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "As pol δ runs into the primer RNA on the lagging strand, it displaces it from the DNA template.",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "PROC_PRIMER_REMOVAL",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "The displaced primer RNA is then removed by RNase H (AKA flap endonuclease ) and replaced with DNA nucleotides.",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "PROC_LIGATION",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "The Okazaki fragments in the lagging strand are joined after the replacement of the RNA primers with DNA. The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond.",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "OBS_PRIMER_FORMED",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "Primers are formed by the enzyme primase, and using the primer, DNA pol can start synthesis.",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "OBS_ALPHA_EXTENDS_PRIMER",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "DNA pol α adds a short (20 to 30 nucleotides) DNA fragment to the RNA primer on both strands, and then hands off to a second polymerase.",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "OBS_DELTA_SYNTHESIZES_LAGGING_DNA",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "While the leading strand is continuously synthesized by the enzyme pol ε , the lagging strand is synthesized by pol δ .",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "OBS_DELTA_DISPLACES_PRIMER",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "As pol δ runs into the primer RNA on the lagging strand, it displaces it from the DNA template.",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "OBS_PRIMER_REMOVED",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "The displaced primer RNA is then removed by RNase H (AKA flap endonuclease ) and replaced with DNA nucleotides.",
+          "location": "paragraph_4"
+        },
+        {
+          "item_id": "OBS_GAPS_SEALED",
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond.",
+          "location": "paragraph_4"
+        }
+      ]
+    },
+    {
+      "topic": "mitosis",
+      "evidence_id": "E_dcb0de9a22b0",
+      "source_url": "https://openstax.org/books/biology-ap-courses/pages/10-2-the-cell-cycle",
+      "title": "10.2 The Cell Cycle - Biology for AP® Courses | OpenStax",
+      "content_sha256": "ce489eef42e92d12d9fc4696ec7d0d561ca2de5b3a18e22af6a4ec29ee432529",
+      "retrieval_status": "RETRIEVED",
+      "support": [
+        {
+          "item_id": "ENT_duplicated_chromosome",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "identical pairs of DNA molecules—sister chromatids—that are firmly attached at the centromeric region",
+          "location": "paragraph_17"
+        },
+        {
+          "item_id": "ENT_duplicated_chromosome",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "The sister chromatids are still tightly attached to each other by cohesin proteins.",
+          "location": "paragraph_29"
+        },
+        {
+          "item_id": "ENT_sister_chromatid",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "Each sister chromatid develops a protein structure called a kinetochore in the centromeric region",
+          "location": "paragraph_27"
+        },
+        {
+          "item_id": "ENT_sister_chromatid",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "mitotic spindle microtubules from opposite poles attach to each sister chromatid at the kinetochore",
+          "location": "paragraph_28"
+        },
+        {
+          "item_id": "ENT_daughter_chromatid",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "Each chromatid, now called a chromosome, is pulled rapidly toward the centrosome to which its microtubule is attached.",
+          "location": "paragraph_30"
+        },
+        {
+          "item_id": "ENT_kinetochore",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "Each sister chromatid develops a protein structure called a kinetochore in the centromeric region",
+          "location": "paragraph_27"
+        },
+        {
+          "item_id": "ENT_mitotic_spindle_microtubule",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "The proteins of the kinetochore attract and bind mitotic spindle microtubules.",
+          "location": "paragraph_27"
+        },
+        {
+          "item_id": "ENT_mitotic_spindle_microtubule",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "mitotic spindle microtubules from opposite poles attach to each sister chromatid at the kinetochore",
+          "location": "paragraph_28"
+        },
+        {
+          "item_id": "ENT_spatial_landmark",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "a plane called the metaphase plate , or the equatorial plane, midway between the two poles of the cell",
+          "location": "paragraph_29"
+        },
+        {
+          "item_id": "ENT_spatial_landmark",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "the kinetochores of sister chromatids face the opposite poles.",
+          "location": "paragraph_27"
+        },
+        {
+          "item_id": "REL_kinetochore_part_of_sister_chromatid",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "Each sister chromatid develops a protein structure called a kinetochore in the centromeric region",
+          "location": "paragraph_27"
+        },
+        {
+          "item_id": "REL_sister_chromatid_part_of_duplicated_chromosome",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "identical pairs of DNA molecules—sister chromatids—that are firmly attached at the centromeric region",
+          "location": "paragraph_17"
+        },
+        {
+          "item_id": "REL_microtubule_binds_kinetochore",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "The proteins of the kinetochore attract and bind mitotic spindle microtubules.",
+          "location": "paragraph_27"
+        },
+        {
+          "item_id": "REL_microtubule_binds_kinetochore",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "mitotic spindle microtubules from opposite poles attach to each sister chromatid at the kinetochore",
+          "location": "paragraph_28"
+        },
+        {
+          "item_id": "REL_duplicated_chromosome_at_metaphase_plate",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "all the chromosomes are aligned in a plane called the metaphase plate , or the equatorial plane, midway between the two poles of the cell.",
+          "location": "paragraph_29"
+        },
+        {
+          "item_id": "PROC_kinetochore_attachment_orientation",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "The proteins of the kinetochore attract and bind mitotic spindle microtubules.",
+          "location": "paragraph_27"
+        },
+        {
+          "item_id": "PROC_kinetochore_attachment_orientation",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "the chromosome will be oriented until the kinetochores of sister chromatids face the opposite poles.",
+          "location": "paragraph_27"
+        },
+        {
+          "item_id": "PROC_metaphase_alignment",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "During metaphase , the “change phase,” all the chromosomes are aligned in a plane called the metaphase plate , or the equatorial plane, midway between the two poles of the cell.",
+          "location": "paragraph_29"
+        },
+        {
+          "item_id": "PROC_anaphase_sister_separation",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "During anaphase , the “upward phase,” the cohesin proteins degrade, and the sister chromatids separate at the centromere.",
+          "location": "paragraph_30"
+        },
+        {
+          "item_id": "PROC_anaphase_sister_separation",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "In anaphase, the connection between the sister chromatids breaks down, and the microtubules pull the chromosomes toward opposite poles.",
+          "location": "paragraph_28"
+        },
+        {
+          "item_id": "OBS_bipolar_attachment_during_prometaphase",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "mitotic spindle microtubules from opposite poles attach to each sister chromatid at the kinetochore",
+          "location": "paragraph_28"
+        },
+        {
+          "item_id": "OBS_alignment_during_metaphase",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "all the chromosomes are aligned in a plane called the metaphase plate",
+          "location": "paragraph_29"
+        },
+        {
+          "item_id": "OBS_connection_breakdown_after_alignment",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "In anaphase, the connection between the sister chromatids breaks down, and the microtubules pull the chromosomes toward opposite poles.",
+          "location": "paragraph_28"
+        },
+        {
+          "item_id": "OBS_two_daughter_chromatids_after_separation",
+          "evidence_id": "E_dcb0de9a22b0",
+          "quote": "Each chromatid, now called a chromosome, is pulled rapidly toward the centrosome to which its microtubule is attached.",
+          "location": "paragraph_30"
+        }
+      ]
+    },
+    {
+      "topic": "vesicle_transport",
+      "evidence_id": "E_9af4c0e6bde1",
+      "source_url": "https://openstax.org/books/biology-2e/pages/4-5-the-cytoskeleton",
+      "title": "4.5 The Cytoskeleton - Biology 2e | OpenStax",
+      "content_sha256": "694c8a895f2040cb919de839049f7cf5895ab77a2b3980bd7186027af2c5c202",
+      "retrieval_status": "RETRIEVED",
+      "support": [
+        {
+          "item_id": "ent_microtubule",
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "As their name implies, microtubules are small hollow tubes.",
+          "location": "paragraph_12"
+        },
+        {
+          "item_id": "ent_microtubule",
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "Polymerized dimers of α-tubulin and β-tubulin, two globular proteins, comprise the microtubule's walls",
+          "location": "paragraph_12"
+        },
+        {
+          "item_id": "ent_microtubule",
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "provide a track along which vesicles move through the cell",
+          "location": "paragraph_12"
+        },
+        {
+          "item_id": "ent_vesicle",
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "provide a track along which vesicles move through the cell",
+          "location": "paragraph_12"
+        },
+        {
+          "item_id": "ent_vesicle",
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "allow cytoplasm and vesicles to move within the cell",
+          "location": "paragraph_1"
+        },
+        {
+          "item_id": "ent_cytoskeleton",
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "Collectively, scientists call this network of protein fibers the cytoskeleton .",
+          "location": "paragraph_1"
+        },
+        {
+          "item_id": "ent_cytoskeleton",
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "There are three types of fibers within the cytoskeleton: microfilaments, intermediate filaments, and microtubules",
+          "location": "paragraph_1"
+        },
+        {
+          "item_id": "rel_cytoskeleton_contains_microtubule",
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "There are three types of fibers within the cytoskeleton: microfilaments, intermediate filaments, and microtubules",
+          "location": "paragraph_1"
+        },
+        {
+          "item_id": "rel_microtubule_track_for_vesicle",
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "provide a track along which vesicles move through the cell",
+          "location": "paragraph_12"
+        },
+        {
+          "item_id": "proc_microtubule_track_provision",
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "They help the cell resist compression, provide a track along which vesicles move through the cell, and pull replicated chromosomes to opposite ends of a dividing cell.",
+          "location": "paragraph_12"
+        },
+        {
+          "item_id": "proc_vesicle_transport_along_microtubule",
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "provide a track along which vesicles move through the cell",
+          "location": "paragraph_12"
+        },
+        {
+          "item_id": "proc_vesicle_transport_along_microtubule",
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "allow cytoplasm and vesicles to move within the cell",
+          "location": "paragraph_1"
+        },
+        {
+          "item_id": "obs_track_relation_during_transport",
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "provide a track along which vesicles move through the cell",
+          "location": "paragraph_12"
+        },
+        {
+          "item_id": "obs_vesicle_transport_relation",
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "provide a track along which vesicles move through the cell",
+          "location": "paragraph_12"
+        }
+      ]
+    }
+  ],
+  "unresolved_claims": [
+    {
+      "topic": "dna_replication",
+      "issues": [
+        {
+          "target_id": "ENT_RNASE_H",
+          "reason": "The model lists RNase H as definitively the enzyme that removes displaced primer, but the cited source literally equates 'RNase H (AKA flap endonuclease)', which is biologically misleading; RNase H and flap endonuclease (FEN1) are distinct activities. Modeling them as unresolved in notes is good, but ENT_RNASE_H's scientific_name and REL_RNASE_H_REMOVES_PRIMER assert a single specific identity that the source does not cleanly entail. Should name the entity as 'RNase H / flap endonuclease activity (identity unresolved)' to avoid false specificity.",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ]
+        },
+        {
+          "target_id": "PROC_POL_DELTA_EXTENSION",
+          "reason": "The source states pol α adds a short DNA fragment 'on both strands' and then hands off to a second polymerase; it does not specify that pol δ is the hand-off recipient on the lagging strand. The model's precondition 'polymerase hand-off after pol alpha' leading specifically to pol δ is an inference not directly entailed. Acceptable as a simplification only if explicitly flagged; currently presented as causal order.",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ]
+        },
+        {
+          "target_id": "PROC_PRIMER_REMOVAL",
+          "reason": "The source says displaced primer RNA is 'removed ... and replaced with DNA nucleotides.' The model excludes replacement synthesis as 'not modeled' but then makes PROC_LIGATION's precondition 'primers_replaced'. This creates a state gap: the observable for ligation depends on a replacement event the model explicitly does not represent, so OBS_GAPS_SEALED cannot be source-supported within the modeled state trajectory. Observable semantics do not preserve meaning across the omitted step.",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ]
+        },
+        {
+          "target_id": "OBS_DELTA_DISPLACES_PRIMER",
+          "reason": "Source says pol δ 'displaces it [primer RNA] from the DNA template' when it runs into it — a strand-displacement event. Model captures this as relation_holds_during with PARTIAL capability, but the displaced primer is listed as a participant 'displaced_target' of PROC_POL_DELTA_EXTENSION while the primer is also the substrate/removal target in PROC_PRIMER_REMOVAL. Participant identity/type across processes is inconsistent (primer as displaced target vs removed target), and the 'displaced' state is not a distinct modeled state.",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ]
+        },
+        {
+          "target_id": "ENT_GAP_SUBSTRATE",
+          "reason": "The model treats the 'remaining gap' as a nucleic_acid_region entity that DNA ligase seals, but the source's 'gaps that remain' refer to nicks/breaks between Okazaki fragments after primer replacement. Modeling it as a substrate entity with enzyme 'seals' relation is acceptable, but the model never represents the nicked phosphodiester-backbone state or its formation, so the observable OBS_GAPS_SEALED (gap_state transition) is not grounded in a represented prior state. Needs a defined nick state or explicit indeterminacy.",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "vesicle_transport",
+      "issues": [
+        {
+          "target_id": "proc_vesicle_transport_along_microtubule",
+          "reason": "Task explicitly requests motor-protein-dependent transport, but the model omits motor proteins as participants/actors and provides no causal mechanism. The cited passage only says microtubules 'provide a track along which vesicles move'; it does not state that vesicle movement is motor-protein dependent, nor that vesicles themselves move along tracks. The process as typed (vesicle + microtubule → vesicle moves) is not directly entailed and is biologically incomplete/misleading for the stated topic.",
+          "evidence_ids": [
+            "E_9af4c0e6bde1"
+          ]
+        },
+        {
+          "target_id": "obs_vesicle_transport_relation",
+          "reason": "Observable asserts relation 'serves_as_track_for' holds during transport as a DETERMINISTIC computational check, but source only makes a general statement about microtubules providing a track; it does not entail that a specific vesicle is on/along a microtubule at any observed time, nor persistence/order semantics. Scope overreach.",
+          "evidence_ids": [
+            "E_9af4c0e6bde1"
+          ]
+        },
+        {
+          "target_id": "scope.excluded_processes",
+          "reason": "Exclusion of 'motor protein identity and mechanism' is acceptable as a limitation, but the model still titles the topic as motor-protein-dependent transport while excluding the only mechanism that makes that title true. This creates a scope contradiction: the produced model cannot support the learner-facing claim in the task title. Either narrow the scope/title to 'microtubule-associated vesicle movement' or add motor-protein actors (kinesin/dynein) with separate evidence.",
+          "evidence_ids": [
+            "E_9af4c0e6bde1"
+          ]
+        },
+        {
+          "target_id": "ent_vesicle",
+          "reason": "Entity state 'moving'/'stationary' and support quote 'allow cytoplasm and vesicles to move within the cell' is cytoskeleton-level and does not entail vesicle state transitions along microtubules specifically. Participant identity/type ('membrane-bound cargo carrier') is not source-supported (vesicle type not specified).",
+          "evidence_ids": [
+            "E_9af4c0e6bde1"
+          ]
+        },
+        {
+          "target_id": "proc_microtubule_track_provision",
+          "reason": "This 'process' restates a structural capability as an interaction with concurrent transport; source does not describe a distinct process of track provision with start/end conditions tied to vesicle movement. It duplicates and inflates the single source assertion, risking a formal model that proves nothing beyond a paraphrase.",
+          "evidence_ids": [
+            "E_9af4c0e6bde1"
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -1,0 +1,30 @@
+{
+  "tag": "typed_visual6",
+  "committed": true,
+  "before": {
+    "success": true,
+    "tag": "typed_semantic_repair4",
+    "code_sha256": "7a7964c719eb88e2db862010676f4d382a825b65036b77ae0ad091373bf742f4",
+    "video_sha256": "49b3937fb10b6291e47b912ac9c4a7e36e410c51b94fd688ba32acd4e1bdb19d",
+    "duration_seconds": 8.0,
+    "renderer": "manim-0.19.0-full-render",
+    "trace_sha256": "de1ec62da76bff547a7fd5cead3bb4a9ade50d6cd2f17aad34b3e3cc543f7d4d",
+    "version": "/root/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/candidates/mitosis/render/versions/typed_semantic_repair4",
+    "code": "/root/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/candidates/mitosis/render/versions/typed_semantic_repair4/rendered_code.py",
+    "video": "/root/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/candidates/mitosis/render/versions/typed_semantic_repair4/video.mp4"
+  },
+  "started": 1795604490.6899872,
+  "after": {
+    "success": true,
+    "tag": "typed_visual6",
+    "code_sha256": "7a7964c719eb88e2db862010676f4d382a825b65036b77ae0ad091373bf742f4",
+    "video_sha256": "c035449dc554645baf35a11b7855b8d0a85253ea2d06af39bf780bdde32e9f2d",
+    "duration_seconds": 8.0,
+    "renderer": "manim-0.19.0-full-render",
+    "trace_sha256": "3a7d017d5bbdba2085a770e9109766807068b448d1d067f973f9d6e9efdc1fe4",
+    "version": "/root/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/candidates/mitosis/render/versions/typed_visual6",
+    "code": "/root/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/candidates/mitosis/render/versions/typed_visual6/rendered_code.py",
+    "video": "/root/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/candidates/mitosis/render/versions/typed_visual6/video.mp4"
+  },
+  "elapsed_seconds": 10.279
+}

@@ -1,0 +1,38 @@
+{
+  "topic_id": "vesicle_transport",
+  "scientific_queries": [
+    "kinesin dynein vesicle transport microtubule mechanism review",
+    "motor protein cargo adaptor vesicle transport microtubule directionality",
+    "intracellular transport microtubule polarity plus end minus end vesicle",
+    "ATP hydrolysis kinesin walking mechanism microtubule"
+  ],
+  "candidate_urls": [
+    "https://www.ncbi.nlm.nih.gov/books/NBK26866/",
+    "https://www.ncbi.nlm.nih.gov/books/NBK21052/",
+    "https://openstax.org/books/biology-2e/pages/4-5-the-cytoskeleton"
+  ],
+  "visual_queries": [
+    "microtubule plus minus end polarity motor protein vesicle motion high school schematic",
+    "kinesin walking hand over hand ATP hydrolysis microtubule diagram",
+    "dynein minus end directed vesicle transport microtubule schematic",
+    "cargo adaptor receptor motor protein vesicle linkage diagram"
+  ],
+  "visual_objects": [],
+  "visual_states": [],
+  "scope": {
+    "included": [
+      "microtubule polarity (plus/minus ends)",
+      "kinesin motor stepping toward plus end with ATP hydrolysis",
+      "dynein motor stepping toward minus end with ATP hydrolysis",
+      "motor-cargo adaptor linkage to vesicle",
+      "directionality of transport along microtubule tracks"
+    ],
+    "excluded": [
+      "detailed kinetic parameters of motor stepping",
+      "molecular structure of specific motor domains at atomic resolution",
+      "regulatory signaling pathways controlling motor activity",
+      "disease-specific mutations and clinical phenotypes",
+      "quantitative flux or transport rate measurements"
+    ]
+  }
+}

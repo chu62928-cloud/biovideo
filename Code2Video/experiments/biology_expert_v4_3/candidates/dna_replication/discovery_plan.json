@@ -1,0 +1,65 @@
+{
+  "topic_id": "dna_replication",
+  "scientific_queries": [
+    "eukaryotic DNA replication priming by DNA polymerase alpha primase mechanism",
+    "eukaryotic DNA polymerase delta epsilon leading lagging strand synthesis mechanism",
+    "eukaryotic Okazaki fragment maturation FEN1 RNase H1 DNA ligase I mechanism",
+    "eukaryotic DNA replication initiation origin licensing and priming site selection review",
+    "high school DNA replication priming extension maturation educational review"
+  ],
+  "candidate_urls": [
+    "https://www.ncbi.nlm.nih.gov/books/NBK26859/",
+    "https://www.ncbi.nlm.nih.gov/books/NBK26856/",
+    "https://www.khanacademy.org/science/biology/dna-as-the-genetic-material/dna-replication/a/dna-replication"
+  ],
+  "visual_queries": [
+    "eukaryotic DNA replication origin priming RNA primer DNA polymerase alpha schematic high school",
+    "leading strand lagging strand Okazaki fragment extension DNA polymerase delta epsilon schematic",
+    "Okazaki fragment maturation FEN1 RNase H1 DNA ligase I schematic high school",
+    "replication fork local events priming extension maturation diagram high school"
+  ],
+  "visual_objects": [
+    "DNA double helix",
+    "replication fork",
+    "parental DNA strands",
+    "newly synthesized DNA strands",
+    "RNA primer",
+    "DNA polymerase alpha-primase complex",
+    "DNA polymerase delta",
+    "DNA polymerase epsilon",
+    "Okazaki fragment",
+    "FEN1 nuclease",
+    "RNase H1",
+    "DNA ligase I",
+    "single-stranded DNA binding proteins",
+    "sliding clamp PCNA"
+  ],
+  "visual_states": [
+    "origin unwound",
+    "RNA primer synthesized",
+    "DNA polymerase extending primer",
+    "leading strand continuous synthesis",
+    "lagging strand discontinuous synthesis",
+    "Okazaki fragment displaced",
+    "RNA primer removed",
+    "gap sealed by DNA ligase"
+  ],
+  "scope": {
+    "included": [
+      "local eukaryotic replication priming by DNA polymerase alpha-primase",
+      "local extension by DNA polymerase epsilon on leading strand and delta on lagging strand",
+      "one local maturation event: Okazaki fragment RNA primer removal and ligation",
+      "distinction between RNA primer and DNA synthesis",
+      "high school schematic representation of local events"
+    ],
+    "excluded": [
+      "origin licensing and firing details",
+      "cell cycle regulation of replication",
+      "replication checkpoint control",
+      "telomere replication",
+      "histone deposition and chromatin assembly",
+      "detailed kinetic parameters or molecular structures",
+      "prokaryotic replication comparisons"
+    ]
+  }
+}
