@@ -1,0 +1,41 @@
+{
+  "science": {
+    "decision": "PASS",
+    "issues": [
+      "Kinetochore (yellow dot) lateral placement on the inner/center-facing side of each chromatid during anaphase (2.2s–4.2s) is geometrically inconsistent with poleward pulling: the microtubule arrives from the outer pole, so the attachment site should face the pole. Interpreted as a schematic simplification (dot marks centromere locus); not a blocking error because the microtubule–chromatid connection and correct poleward direction are unambiguous.",
+      "Prometaphase dynamic attachment/orientation is not shown as a process; the video opens in the already-aligned, already-attached metaphase state. Acceptable for a 5 s schematic but noted as a scope-coverage gap."
+    ]
+  },
+  "visual": {
+    "decision": "PASS",
+    "issues": [
+      "Chromatid shapes are flat vertical bars rather than the V/rod morphology typical of anaphase; acceptable as a deliberate schematic simplification.",
+      "No labels present (intentional per scope); no invented text detected."
+    ]
+  },
+  "scope_review": "Model scope is a single duplicated chromosome (one sister-chromatid pair) in a eukaryotic cell, covering prometaphase attachment, metaphase alignment, and anaphase separation. The video instantiates exactly this scope: one pink duplex → two daughter chromatids, two poles, one metaphase plate, two kinetochore microtubules. Excluded processes (cohesin cleavage, cytokinesis, nuclear envelope dynamics, checkpoint) are absent, as required. The deliberate single-chromosome scope is respected; no demand for molecular cleavage is made.",
+  "visible_evidence": [
+    {
+      "time": "0.2s",
+      "observation": "Video Observed: Pink X-shaped duplicated chromosome (two sister chromatids joined at centromere) centered on the vertical metaphase-plate line. Two yellow kinetochore dots at the centromeric region. Two horizontal microtubule lines extend from left and right blue poles to the kinetochores. Bipolar orientation and metaphase alignment confirmed."
+    },
+    {
+      "time": "1.2s",
+      "observation": "Video Observed: The joined pair has split into two distinct vertical pink bars with a visible gap at the former centromere. Each bar carries one yellow kinetochore dot. Microtubules remain connected from each pole. Early anaphase separation confirmed."
+    },
+    {
+      "time": "2.2s",
+      "observation": "Video Observed: Left chromatid has crossed to the left of the metaphase-plate line; right chromatid to the right. Each moves toward its respective pole. Microtubule segments have shortened compared to 0.2 s, consistent with anaphase-A depolymerization. Poleward direction correct."
+    },
+    {
+      "time": "3.2s",
+      "observation": "Video Observed: Continued poleward migration; chromatids approximately midway between metaphase plate and poles. Identity of the two daughter chromatids is continuous from prior frames (same color, shape, kinetochore). No new objects appear."
+    },
+    {
+      "time": "4.2s",
+      "observation": "Video Observed: Chromatids have approached their respective poles. Microtubule segments are at their shortest. All objects remain within frame bounds. No text, no extraneous entities. Final state consistent with late anaphase."
+    }
+  ],
+  "video_sha256": "4d433eb2815683d510802b4823fd94644b069944b4a6d97943564a24e1224009",
+  "scene_sha256": "a89e419695fb01914715902c209f11fc486591e3e1b9cf0c2a33f360b6ed073c"
+}

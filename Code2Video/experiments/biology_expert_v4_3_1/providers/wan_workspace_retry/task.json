@@ -1,0 +1,59 @@
+{
+  "provider": "wan",
+  "model_id": "wan3.0-video",
+  "request_sha256": "7efb2c6f79b2279bbcf5d91191a0a48533f670a3f1cf8dbb062d18aecb902d20",
+  "first_frame_sha256": "397789b3d06faef96aa3c974b8d83510fddbd0dd05975285158876504cd1da3b",
+  "last_frame_sha256": "9bc2da3ba1a57a7b929857e0d8243e6e1366fa78930e146e8c32edeaba51b488",
+  "prompt_sha256": "db1bc622d85041e9d466ff58dcad6420d515156a82bd0e2a45f4f9c51d0dde45",
+  "submission_status": "ACCEPTED",
+  "generation_status": "SUCCEEDED",
+  "task_id": "2783b818-02d0-442c-ad9e-785fdcfe411c",
+  "submitted_at": 1795617835.62965,
+  "estimate": {
+    "estimated_cny": 1.5,
+    "basis": "Official Beijing output seconds list price; actual billed cost may differ",
+    "actual_cost": null
+  },
+  "http_status": 200,
+  "response": {
+    "output": {
+      "task_id": "2783b818-02d0-442c-ad9e-785fdcfe411c",
+      "task_status": "PENDING"
+    },
+    "request_id": "175fd88a-875a-9757-8d78-6b00807134c5"
+  },
+  "last_query": 1795617896.3400333,
+  "query_http_status": 200,
+  "query_response": {
+    "request_id": "9410ac6c-a78d-954a-a7fe-837b7d64349e",
+    "model": "wan3.0-video",
+    "output": {
+      "task_id": "2783b818-02d0-442c-ad9e-785fdcfe411c",
+      "task_status": "SUCCEEDED",
+      "submit_time": "2026-11-25 22:43:56.007",
+      "scheduled_time": "2026-11-25 22:43:56.108",
+      "end_time": "2026-11-25 22:44:45.508",
+      "video_url": "[REDACTED_URL]",
+      "orig_prompt": "固定镜头、黑色背景的高中生物教学示意动画。严格保持首尾图中的同一对粉色姐妹染色单体、两个黄色动粒、左右蓝色纺锤极和各自连接的灰色微管。起初姐妹染色单体排列在中央赤道位置，然后同一对姐妹连续分离并向左右相反的纺锤极移动，左右身份保持不变。微管一端固定在相应纺锤极，另一端持续接触其对应动粒，随运动缩短。只表示一条复制染色体的示意分离，不表现分子切割机制。不得复制、增加、消除科学对象，不得交换连接，不得让两条染色单体融合或无依据变形。保持平面示意风格、清晰边界和连续运动；无文字、无字幕、无声音，不改变视角。"
+    },
+    "usage": {
+      "duration": 5.0,
+      "SR": 480,
+      "video_count": 1,
+      "output_video_duration": 5.0,
+      "input_video_duration": 0.0,
+      "fps": 30,
+      "ratio": "16:9"
+    }
+  },
+  "usage": {
+    "duration": 5.0,
+    "SR": 480,
+    "video_count": 1,
+    "output_video_duration": 5.0,
+    "input_video_duration": 0.0,
+    "fps": 30,
+    "ratio": "16:9"
+  },
+  "video_sha256": "4d433eb2815683d510802b4823fd94644b069944b4a6d97943564a24e1224009"
+}

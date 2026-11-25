@@ -77,3 +77,5 @@ VERIFIED：独立worktree /autodl-tmp/code2biovideo/biovideo-v4.3.1，基线aaee
 下一步：先读取providers/wan/task.json，确认权限错误后在百炼模型页开通/核对空间地域，不能重复提交既有run。DNA需专门独立来源解决核酸酶与替换执行者、nick/gap；囊泡需真正含机制正文的证据。通用有限状态检查不推断自由文本别名，历史初态未声明为REVIEW_INCOMPLETE而非自动科学FAIL。保留所有历史模型、视频、审核和失败响应。
 
 VERIFIED补充：用户提供业务空间域名后，已审核首尾图和用户原样纯文本示例各POST1次，均403 AccessDenied.Unpurchased，无task_id。累计3POST无生成。最后request_id39ad03bb-e778-991f-84d7-318140513158。后续先控制台核对空间/密钥权限，不能再说只试过旧域名。
+
+VERIFIED权限恢复：Wan workspace retry任务2783b818-02d0-442c-ad9e-785fdcfe411c真实SUCCEEDED，5秒480P30fps，完整解码通过。用户后续希望360P先试；480P已提交且为官方最低档，现导出640x360预览，无额外高清生成。独立Wan视频审核正在进行，见v431_wan_review.log；科学批准未定。视频SHA4d433eb2815683d510802b4823fd94644b069944b4a6d97943564a24e1224009。

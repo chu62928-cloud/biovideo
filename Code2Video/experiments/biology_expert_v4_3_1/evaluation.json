@@ -11,16 +11,24 @@
   "video_benchmark": {
     "wan_submission_attempted": true,
     "wan_model": "wan3.0-video",
-    "wan_access_status": "API_ACCESS_NOT_READY",
-    "wan_render_success": false,
-    "wan_error": "AccessDenied.Unpurchased",
+    "wan_access_status": "READY_CONFIRMED_BY_SUCCESS",
+    "wan_render_success": true,
+    "wan_error": null,
     "seedance_status": "NOT_SELECTED",
     "scientific_identity_pass": null,
     "temporal_consistency_pass": null,
-    "visual_quality_reviewed": false,
+    "visual_quality_reviewed": true,
     "human_review_completed": false,
     "workspace_endpoint_rechecked": true,
-    "exact_official_text_example_http_status": 403
+    "exact_official_text_example_http_status": 403,
+    "model_review_science": "PASS",
+    "model_review_visual": "PASS",
+    "joint_video_approved": false,
+    "remaining_review_issues": [
+      "Kinetochore (yellow dot) lateral placement on the inner/center-facing side of each chromatid during anaphase (2.2s–4.2s) is geometrically inconsistent with poleward pulling: the microtubule arrives from the outer pole, so the attachment site should face the pole. Interpreted as a schematic simplification (dot marks centromere locus); not a blocking error because the microtubule–chromatid connection and correct poleward direction are unambiguous.",
+      "Prometaphase dynamic attachment/orientation is not shown as a process; the video opens in the already-aligned, already-attached metaphase state. Acceptable for a 5 s schematic but noted as a scope-coverage gap."
+    ],
+    "note": "VLM PASS includes orientation warning and scope mismatch; keep candidate for user inspection, not full science approval."
   },
   "tests": {
     "historical_and_new_passed": 67,
@@ -37,14 +45,16 @@
     "reported_cost": null
   },
   "wan_requests": {
-    "generation_post": 3,
-    "tasks_created": 0,
+    "generation_post": 4,
+    "tasks_created": 1,
     "actual_cost": null,
     "estimated_if_success_cny": 1.5,
-    "billing_note": "No task ID returned. Actual charged amount not queried; do not assert free or billed."
+    "billing_note": "No task ID returned. Actual charged amount not queried; do not assert free or billed.",
+    "tasks_succeeded": 1,
+    "output_seconds": 5,
+    "output_resolution": 480
   },
   "remaining_blockers": [
-    "Wan3 model access denied; account model activation/entitlement required",
     "DNA scientific identity and state production remain REVISE",
     "Vesicle targeted evidence insufficient; initial candidate exact quote rejected",
     "Seedance real API adapter not implemented because user selected only Wan; dry-run stub present",
@@ -52,5 +62,12 @@
     "Evidence repair attempted but no independently approved new model achieved",
     "VLM evidence entailment and reference preparation used developer geometry interventions; not fully autonomous"
   ],
-  "final_status": "REVIEW_INCOMPLETE"
+  "final_status": "REVIEW_INCOMPLETE",
+  "preview": {
+    "width": 640,
+    "height": 360,
+    "fps": 30,
+    "duration": 5,
+    "source": "Downsampled actual480P Wan output; no additional generation"
+  }
 }
