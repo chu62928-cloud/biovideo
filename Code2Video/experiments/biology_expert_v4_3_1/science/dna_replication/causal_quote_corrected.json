@@ -1,0 +1,123 @@
+{
+  "model_sha256": "98b09ce8bd1c4d881223925817f4f0cc86bf74b0aabb6bb3713cf851a3ab3a48",
+  "status": "REVISE",
+  "issues": [
+    {
+      "issue_id": "CAUSAL_1",
+      "issue_type": "UNREACHABLE_PROCESS",
+      "affected_process_ids": [
+        "PROC_LIGATION"
+      ],
+      "status": "DETECTED",
+      "explanation": "No executable state path satisfies both dependencies and state predicates."
+    }
+  ],
+  "reachable_process_ids": [
+    "PROC_POL_ALPHA_EXTENSION",
+    "PROC_POL_DELTA_EXTENSION",
+    "PROC_PRIMER_FORMATION",
+    "PROC_PRIMER_REMOVAL"
+  ],
+  "witnesses": {
+    "PROC_PRIMER_FORMATION": {
+      "state_before": {
+        "template_available": "DNA has been made available as a template",
+        "primer_exists": "none",
+        "pol_alpha_handoff_complete": "none",
+        "primer_displaced": "none",
+        "primer_removed": "none",
+        "primer_replaced_with_dna": "none",
+        "gap_state": "none"
+      },
+      "state_after": {
+        "template_available": "DNA has been made available as a template",
+        "primer_exists": "RNA primer formed by primase",
+        "pol_alpha_handoff_complete": "none",
+        "primer_displaced": "none",
+        "primer_removed": "none",
+        "primer_replaced_with_dna": "none",
+        "gap_state": "none"
+      },
+      "completed_before": []
+    },
+    "PROC_POL_ALPHA_EXTENSION": {
+      "state_before": {
+        "template_available": "DNA has been made available as a template",
+        "primer_exists": "RNA primer formed by primase",
+        "pol_alpha_handoff_complete": "none",
+        "primer_displaced": "none",
+        "primer_removed": "none",
+        "primer_replaced_with_dna": "none",
+        "gap_state": "none"
+      },
+      "state_after": {
+        "template_available": "DNA has been made available as a template",
+        "primer_exists": "RNA primer formed by primase",
+        "pol_alpha_handoff_complete": "DNA polymerase alpha has added a short DNA fragment and handed off",
+        "primer_displaced": "none",
+        "primer_removed": "none",
+        "primer_replaced_with_dna": "none",
+        "gap_state": "none"
+      },
+      "completed_before": [
+        "PROC_PRIMER_FORMATION"
+      ]
+    },
+    "PROC_POL_DELTA_EXTENSION": {
+      "state_before": {
+        "template_available": "DNA has been made available as a template",
+        "primer_exists": "RNA primer formed by primase",
+        "pol_alpha_handoff_complete": "DNA polymerase alpha has added a short DNA fragment and handed off",
+        "primer_displaced": "none",
+        "primer_removed": "none",
+        "primer_replaced_with_dna": "none",
+        "gap_state": "none"
+      },
+      "state_after": {
+        "template_available": "DNA has been made available as a template",
+        "primer_exists": "RNA primer formed by primase",
+        "pol_alpha_handoff_complete": "DNA polymerase alpha has added a short DNA fragment and handed off",
+        "primer_displaced": "primer RNA displaced from DNA template by pol delta",
+        "primer_removed": "none",
+        "primer_replaced_with_dna": "none",
+        "gap_state": "none",
+        "okazaki_fragment_synthesized": "lagging strand DNA synthesized in a short stretch"
+      },
+      "completed_before": [
+        "PROC_POL_ALPHA_EXTENSION",
+        "PROC_PRIMER_FORMATION"
+      ]
+    },
+    "PROC_PRIMER_REMOVAL": {
+      "state_before": {
+        "template_available": "DNA has been made available as a template",
+        "primer_exists": "RNA primer formed by primase",
+        "pol_alpha_handoff_complete": "DNA polymerase alpha has added a short DNA fragment and handed off",
+        "primer_displaced": "primer RNA displaced from DNA template by pol delta",
+        "primer_removed": "none",
+        "primer_replaced_with_dna": "none",
+        "gap_state": "none",
+        "okazaki_fragment_synthesized": "lagging strand DNA synthesized in a short stretch"
+      },
+      "state_after": {
+        "template_available": "DNA has been made available as a template",
+        "primer_exists": "RNA primer formed by primase",
+        "pol_alpha_handoff_complete": "DNA polymerase alpha has added a short DNA fragment and handed off",
+        "primer_displaced": "primer RNA displaced from DNA template by pol delta",
+        "primer_removed": "displaced primer RNA removed",
+        "primer_replaced_with_dna": "source states replaced with DNA nucleotides; replacement synthesis is represented as a product state, not a separate process",
+        "gap_state": "none",
+        "okazaki_fragment_synthesized": "lagging strand DNA synthesized in a short stretch"
+      },
+      "completed_before": [
+        "PROC_POL_ALPHA_EXTENSION",
+        "PROC_POL_DELTA_EXTENSION",
+        "PROC_PRIMER_FORMATION"
+      ]
+    }
+  },
+  "states_explored": 5,
+  "exhaustive": true,
+  "limit": 4096,
+  "semantics": "Finite paths with exact state values, completion dependencies, once-per-process invocation; dynamic loops and unmodeled continuous chemistry not proven."
+}

@@ -1,7 +1,7 @@
 # 项目记忆
 
 ## Last verified
-2026-11-23，北京时间；SSH motion-data。最近完成Biology-Aware Code2Video V2 Section4，实际状态以报告/清单为准。
+2026-11-25，北京时间；SSH motion-data，当前V4.3.1 worktree。最新状态以本文件末尾V4.3.1条目与实验报告为准。
 
 ## Objective
 当前V3：一个BiologyExpertAgent、多工具、通用证据知识包、科学审核与受预算/状态机约束的最小返工闭环。只修一个Section事件，不重跑六节。V1/V2冻结。用户2026-11-24追加Qwen2次额度，须先诊断再重试；已执行1次有效重试。
@@ -70,3 +70,8 @@ VERIFIED：V4.1阶段已执行，25项离线测试通过。极性误报限定裁
 ## 2026-11-25 V4.3真实实验续跑检查点
 VERIFIED：worktree /autodl-tmp/code2biovideo/biovideo-v4.3。新8秒有丝分裂完整MP4、真实轨迹与关键帧已生成，sample_video.mp4 SHA256 c035449dc554645baf35a11b7855b8d0a85253ea2d06af39bf780bdde32e9f2d。模型独立审核PASS；运行1完整PASS/3部分验证；两类真实轨迹注错检出。Qwen完整视频科学PASS/视觉REVISE称重影，9张实际PNG审核双PASS；保留分歧，不联合批准。DNA/囊泡模型REVISE，整体REVIEW_INCOMPLETE。47测试通过，历史冻结文件变化0。真实DeepSeek30/Qwen4，输入216988输出93467词元，两次截断失败保留。用户最新取消建议次数上限，但不使用Wan/Seedance、不重置账本。细节以experiments/biology_expert_v4_3/{README.md,evaluation.json,manifest.json}为准。
 下一步：先处理typed_planner程序集父角色绑定代理问题与前置条件实际门禁，补几何观测；DNA来源存在RNaseH/FEN1表述歧义、未见囊泡主题缺马达证据。禁止把样本帧PASS或一条窄约束PASS当作全实验成功。当前无必要付费后台任务。
+
+## 2026-11-25 V4.3.1 / VP0已执行
+VERIFIED：独立worktree /autodl-tmp/code2biovideo/biovideo-v4.3.1，基线aaee5ca。用户明确选择Wan3并授权真实试调用，Seedance0。Wan首尾图经DeepSeek计划和开发者锚点准备、独立Qwen科学/视觉PASS；真实POST一次返回403 AccessDenied.Unpurchased，request_id223c94c4-9970-9519-ac3a-3d9e87c963f8，无task_id、无Wan视频，禁止自动重提交。现有密钥有效但模型权限未就绪；需账户控制台核对开通/业务空间/北京地域。
+通用可靠性审核/因果有限状态路径/定向检索/返工门禁接入现有Agent。DNA新候选精确引用修复后独立REVISE；囊泡候选精确引用失败且后续检索无进展；没有新增科学批准模型。新适配器真实重渲染124样本，关系观测248运行/107仅声明，像素仍未测量。67回归测试通过，最后20新增测试再过；冻结历史变化0。DeepSeek16、Qwen4，输入128194输出37161词元。Wan1次请求被拒，费用账单未知，Seedance仅dryrun stub。完整证据experiments/biology_expert_v4_3_1/README.md、evaluation.json、provider_runs.json。当前无必要后台任务。
+下一步：先读取providers/wan/task.json，确认权限错误后在百炼模型页开通/核对空间地域，不能重复提交既有run。DNA需专门独立来源解决核酸酶与替换执行者、nick/gap；囊泡需真正含机制正文的证据。通用有限状态检查不推断自由文本别名，历史初态未声明为REVIEW_INCOMPLETE而非自动科学FAIL。保留所有历史模型、视频、审核和失败响应。

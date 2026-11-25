@@ -76,7 +76,28 @@ class TypedScientificScene(BiologyScene):
   if hasattr(self,'typed_graph') and hasattr(self,'typed_observer_tick'):self.typed_observer_tick(dt)
  def capture_typed_geometry(self):
   if not hasattr(self,'semantic_objects'):return
-  objects={oid:{'instance_id':id(self.objects[oid]),'origin_id':obj['scientific_identity']['origin_id'],'entity_semantic_id':obj['entity_semantic_id'],'kind':obj['scientific_identity']['kind'],'visible':self.objects[oid] in self.mobjects,'center':self.objects[oid].get_center().tolist(),'anchors':{'center':self.objects[oid].get_center().tolist()}} for oid,obj in self.semantic_objects.items()}
-  self.typed_observations.append({'time':float(self.time),'objects':objects,'relations':copy.deepcopy(self.typed_relations),'state_variables':copy.deepcopy(self.typed_state),'active_events':sorted(self.active_typed_events),'participants':{e['event_id']:e['participant_bindings'] for e in self.typed_graph['events'] if e['event_id'] in self.active_typed_events}})
+  objects={}
+  for oid,obj in self.semantic_objects.items():
+   mob=self.objects[oid];points=mob.get_all_points();center=mob.get_center();low=mob.get_critical_point(DL);high=mob.get_critical_point(UR)
+   stroke=float(np.max(np.asarray(mob.get_stroke_opacity())));fill=float(np.max(np.asarray(mob.get_fill_opacity())));opacity=max(stroke,fill)
+   in_frame=high[0]>=-config.frame_width/2 and low[0]<=config.frame_width/2 and high[1]>=-config.frame_height/2 and low[1]<=config.frame_height/2
+   effective=max(float(mob.width),float(mob.height))>1e-5 and opacity>1e-3
+   anchors={'center':center.tolist()}
+   if len(points):anchors.update(start=mob.get_start().tolist(),end=mob.get_end().tolist())
+   objects[oid]={'instance_id':id(mob),'origin_id':obj['scientific_identity']['origin_id'],'entity_semantic_id':obj['entity_semantic_id'],'kind':obj['scientific_identity']['kind'],'visible':mob in self.mobjects and in_frame and effective,'membership_visible':mob in self.mobjects,'opacity':opacity,'in_frame':bool(in_frame),'effective_size':bool(effective),'bbox':[low.tolist(),high.tolist()],'center':center.tolist(),'anchors':anchors,'observation_level':'RUNTIME_OBSERVED'}
+  observed_relations=[]
+  for relation in self.typed_relations:
+   r=copy.deepcopy(relation);r['observation_level']='DECLARED_ONLY'
+   name='relation_'+r['semantic_id']+'_'+r['source']+'_'+r['target']
+   if name in self.objects:
+    edge=self.objects[name];r.update(observation_level='RUNTIME_OBSERVED',drawn_endpoints=[edge.get_start().tolist(),edge.get_end().tolist()],visible=edge in self.mobjects)
+   # A model-declared path association becomes runtime observed only when actual
+   # path end matches the expected target center, not from relation text alone.
+   for action in self.typed_graph.get('actions',[]):
+    dynamic=action.get('dynamic_path',{})
+    if action['object_id']==r['source'] and dynamic.get('target_object')==r['target']:
+     mob=self.objects[r['source']];distance=float(np.linalg.norm(mob.get_end()-self.objects[r['target']].get_center()));r.update(observation_level='RUNTIME_OBSERVED',drawn_endpoints=[mob.get_start().tolist(),mob.get_end().tolist()],target_distance=distance,endpoint_matches=distance<.05,visible=objects[r['source']]['visible'] and objects[r['target']]['visible'])
+   observed_relations.append(r)
+  self.typed_observations.append({'time':float(self.time),'objects':objects,'relations':observed_relations,'state_variables':copy.deepcopy(self.typed_state),'active_events':sorted(self.active_typed_events),'participants':{e['event_id']:e['participant_bindings'] for e in self.typed_graph['events'] if e['event_id'] in self.active_typed_events}})
  def tear_down(self):
   super().tear_down();p=Path('geometry_trace.json');data=json.loads(p.read_text());data.update(scientific_observations=self.typed_observations,events=[{'id':e['id'],'time':e['time']} for e in self.typed_markers if e['phase']=='started'],typed_event_markers=self.typed_markers,typed_model_hash=self.typed_graph['typed_model_hash'] if hasattr(self,'typed_graph') else None,adapter='generic_typed_scene_v43');p.write_text(json.dumps(data,indent=2))

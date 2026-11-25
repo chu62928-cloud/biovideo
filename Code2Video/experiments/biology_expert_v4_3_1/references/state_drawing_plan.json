@@ -1,0 +1,302 @@
+{
+  "first_frame": [
+    {
+      "id": "plane_metaphase",
+      "shape": "line",
+      "coordinates": [
+        640,
+        120,
+        640,
+        600
+      ],
+      "color": "#3a3a3a",
+      "width": 2
+    },
+    {
+      "id": "pole_left",
+      "shape": "ellipse",
+      "coordinates": [
+        80,
+        340,
+        120,
+        380
+      ],
+      "color": "#2a6fdb",
+      "width": 0
+    },
+    {
+      "id": "pole_right",
+      "shape": "ellipse",
+      "coordinates": [
+        1160,
+        340,
+        1200,
+        380
+      ],
+      "color": "#2a6fdb",
+      "width": 0
+    },
+    {
+      "id": "fiber_left",
+      "shape": "line",
+      "coordinates": [
+        100,
+        360,
+        605,
+        355
+      ],
+      "color": "#8a8a8a",
+      "width": 3
+    },
+    {
+      "id": "fiber_right",
+      "shape": "line",
+      "coordinates": [
+        675,
+        355,
+        1180,
+        360
+      ],
+      "color": "#8a8a8a",
+      "width": 3
+    },
+    {
+      "id": "chromatid_A",
+      "shape": "polygon",
+      "coordinates": [
+        [
+          610,
+          300
+        ],
+        [
+          635,
+          300
+        ],
+        [
+          640,
+          355
+        ],
+        [
+          635,
+          420
+        ],
+        [
+          610,
+          420
+        ],
+        [
+          605,
+          355
+        ]
+      ],
+      "color": "#e87ea6",
+      "width": 2
+    },
+    {
+      "id": "chromatid_B",
+      "shape": "polygon",
+      "coordinates": [
+        [
+          670,
+          300
+        ],
+        [
+          645,
+          300
+        ],
+        [
+          640,
+          355
+        ],
+        [
+          645,
+          420
+        ],
+        [
+          670,
+          420
+        ],
+        [
+          675,
+          355
+        ]
+      ],
+      "color": "#e87ea6",
+      "width": 2
+    },
+    {
+      "id": "kinetochore_A",
+      "shape": "ellipse",
+      "coordinates": [
+        598,
+        345,
+        612,
+        365
+      ],
+      "color": "#f2c200",
+      "width": 0
+    },
+    {
+      "id": "kinetochore_B",
+      "shape": "ellipse",
+      "coordinates": [
+        668,
+        345,
+        682,
+        365
+      ],
+      "color": "#f2c200",
+      "width": 0
+    }
+  ],
+  "last_frame": [
+    {
+      "id": "plane_metaphase",
+      "shape": "line",
+      "coordinates": [
+        640,
+        120,
+        640,
+        600
+      ],
+      "color": "#3a3a3a",
+      "width": 2
+    },
+    {
+      "id": "pole_left",
+      "shape": "ellipse",
+      "coordinates": [
+        80,
+        340,
+        120,
+        380
+      ],
+      "color": "#2a6fdb",
+      "width": 0
+    },
+    {
+      "id": "pole_right",
+      "shape": "ellipse",
+      "coordinates": [
+        1160,
+        340,
+        1200,
+        380
+      ],
+      "color": "#2a6fdb",
+      "width": 0
+    },
+    {
+      "id": "fiber_left",
+      "shape": "line",
+      "coordinates": [
+        100,
+        360,
+        305,
+        355
+      ],
+      "color": "#8a8a8a",
+      "width": 3
+    },
+    {
+      "id": "fiber_right",
+      "shape": "line",
+      "coordinates": [
+        975,
+        355,
+        1180,
+        360
+      ],
+      "color": "#8a8a8a",
+      "width": 3
+    },
+    {
+      "id": "chromatid_A",
+      "shape": "polygon",
+      "coordinates": [
+        [
+          310,
+          300
+        ],
+        [
+          335,
+          300
+        ],
+        [
+          340,
+          355
+        ],
+        [
+          335,
+          420
+        ],
+        [
+          310,
+          420
+        ],
+        [
+          305,
+          355
+        ]
+      ],
+      "color": "#e87ea6",
+      "width": 2
+    },
+    {
+      "id": "chromatid_B",
+      "shape": "polygon",
+      "coordinates": [
+        [
+          970,
+          300
+        ],
+        [
+          945,
+          300
+        ],
+        [
+          940,
+          355
+        ],
+        [
+          945,
+          420
+        ],
+        [
+          970,
+          420
+        ],
+        [
+          975,
+          355
+        ]
+      ],
+      "color": "#e87ea6",
+      "width": 2
+    },
+    {
+      "id": "kinetochore_A",
+      "shape": "ellipse",
+      "coordinates": [
+        298,
+        345,
+        312,
+        365
+      ],
+      "color": "#f2c200",
+      "width": 0
+    },
+    {
+      "id": "kinetochore_B",
+      "shape": "ellipse",
+      "coordinates": [
+        968,
+        345,
+        982,
+        365
+      ],
+      "color": "#f2c200",
+      "width": 0
+    }
+  ]
+}

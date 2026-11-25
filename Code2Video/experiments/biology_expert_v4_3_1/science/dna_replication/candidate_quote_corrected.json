@@ -1,0 +1,943 @@
+{
+  "model_id": "dna_replication_local_eukaryotic_priming_extension_maturation_v1",
+  "schema_version": "1.0",
+  "scope": {
+    "topic": "dna replication",
+    "organism_context": "eukaryote",
+    "audience": "grades_10_12",
+    "included_processes": [
+      "primer formation by primase",
+      "DNA polymerase alpha adding a short DNA fragment to the RNA primer",
+      "lagging-strand Okazaki fragment synthesis by DNA polymerase delta",
+      "displacement and removal of primer RNA by RNase H on the lagging strand",
+      "sealing of remaining gaps by DNA ligase"
+    ],
+    "excluded_processes": [
+      "origin recognition and pre-replication complex assembly",
+      "helicase unwinding and topoisomerase supercoiling relief",
+      "leading-strand continuous synthesis by DNA polymerase epsilon",
+      "telomerase-mediated telomere elongation",
+      "nucleosome/histone removal and replacement",
+      "proofreading and mismatch repair"
+    ],
+    "simplifications": [
+      "The model depicts one local lagging-strand region; strand geometry and fork movement are not modeled.",
+      "Polymerase hand-off after pol alpha is shown as a sequential process, not as a molecular mechanism.",
+      "The sliding clamp (PCNA) is omitted as a separate entity because its exact mechanistic role is not needed for the described local maturation event.",
+      "Replacement of removed RNA primer with DNA nucleotides is represented as a gap-filling product state, not as a separate polymerase process.",
+      "RNase H and flap endonuclease identities remain unresolved; the model does not assert they are equivalent activities.",
+      "The pol alpha to pol delta hand-off recipient is a teaching schematic: the source states pol alpha hands off to a second polymerase without naming pol delta as the recipient on the lagging strand."
+    ]
+  },
+  "initial_states": {
+    "template_available": "DNA has been made available as a template",
+    "primer_exists": "none",
+    "pol_alpha_handoff_complete": "none",
+    "primer_displaced": "none",
+    "primer_removed": "none",
+    "primer_replaced_with_dna": "none",
+    "gap_state": "none"
+  },
+  "entities": [
+    {
+      "semantic_id": "ENT_RNA_PRIMER",
+      "scientific_name": "RNA primer",
+      "entity_type": "nucleic_acid",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "Primers are formed by the enzyme primase, and using the primer, DNA pol can start synthesis.",
+          "location": "paragraph_4"
+        }
+      ]
+    },
+    {
+      "semantic_id": "ENT_PRIMASE",
+      "scientific_name": "primase",
+      "entity_type": "enzyme",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "Primers are formed by the enzyme primase, and using the primer, DNA pol can start synthesis.",
+          "location": "paragraph_4"
+        }
+      ]
+    },
+    {
+      "semantic_id": "ENT_POL_ALPHA",
+      "scientific_name": "DNA polymerase alpha (pol alpha)",
+      "entity_type": "enzyme",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "DNA pol α adds a short (20 to 30 nucleotides) DNA fragment to the RNA primer on both strands, and then hands off to a second polymerase.",
+          "location": "paragraph_4"
+        }
+      ]
+    },
+    {
+      "semantic_id": "ENT_POL_DELTA",
+      "scientific_name": "DNA polymerase delta (pol delta)",
+      "entity_type": "enzyme",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "While the leading strand is continuously synthesized by the enzyme pol ε , the lagging strand is synthesized by pol δ .",
+          "location": "paragraph_4"
+        }
+      ]
+    },
+    {
+      "semantic_id": "ENT_RNASE_H",
+      "scientific_name": "RNase H / flap endonuclease activity (identity unresolved)",
+      "entity_type": "enzyme_activity_unresolved",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "The displaced primer RNA is then removed by RNase H (AKA flap endonuclease ) and replaced with DNA nucleotides.",
+          "location": "paragraph_4"
+        }
+      ]
+    },
+    {
+      "semantic_id": "ENT_DNA_LIGASE",
+      "scientific_name": "DNA ligase",
+      "entity_type": "enzyme",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond.",
+          "location": "paragraph_4"
+        }
+      ]
+    },
+    {
+      "semantic_id": "ENT_LAGGING_DNA_PRODUCT",
+      "scientific_name": "lagging-strand DNA product (Okazaki fragment region)",
+      "entity_type": "nucleic_acid",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "While the leading strand is continuously synthesized by the enzyme pol ε , the lagging strand is synthesized by pol δ .",
+          "location": "paragraph_4"
+        }
+      ]
+    },
+    {
+      "semantic_id": "ENT_GAP_SUBSTRATE",
+      "scientific_name": "remaining gap between DNA fragments",
+      "entity_type": "nucleic_acid_region",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond.",
+          "location": "paragraph_4"
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "semantic_id": "REL_PRIMASE_FORMS_PRIMER",
+      "relation_type": "forms",
+      "definition": "Primase forms the RNA primer used to start DNA synthesis.",
+      "source_entity": "ENT_PRIMASE",
+      "target_entity": "ENT_RNA_PRIMER",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "Primers are formed by the enzyme primase, and using the primer, DNA pol can start synthesis.",
+          "location": "paragraph_4"
+        }
+      ]
+    },
+    {
+      "semantic_id": "REL_POL_ALPHA_EXTENDS_PRIMER",
+      "relation_type": "extends",
+      "definition": "DNA polymerase alpha adds a short DNA fragment to the RNA primer and then hands off to a second polymerase.",
+      "source_entity": "ENT_POL_ALPHA",
+      "target_entity": "ENT_RNA_PRIMER",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "DNA pol α adds a short (20 to 30 nucleotides) DNA fragment to the RNA primer on both strands, and then hands off to a second polymerase.",
+          "location": "paragraph_4"
+        }
+      ]
+    },
+    {
+      "semantic_id": "REL_POL_DELTA_SYNTHESIZES_LAGGING_DNA",
+      "relation_type": "synthesizes",
+      "definition": "DNA polymerase delta synthesizes the lagging strand DNA product.",
+      "source_entity": "ENT_POL_DELTA",
+      "target_entity": "ENT_LAGGING_DNA_PRODUCT",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "While the leading strand is continuously synthesized by the enzyme pol ε , the lagging strand is synthesized by pol δ .",
+          "location": "paragraph_4"
+        }
+      ]
+    },
+    {
+      "semantic_id": "REL_POL_DELTA_DISPLACES_PRIMER",
+      "relation_type": "displaces",
+      "definition": "DNA polymerase delta runs into the primer RNA on the lagging strand and displaces it from the DNA template.",
+      "source_entity": "ENT_POL_DELTA",
+      "target_entity": "ENT_RNA_PRIMER",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "As pol δ runs into the primer RNA on the lagging strand, it displaces it from the DNA template.",
+          "location": "paragraph_4"
+        }
+      ]
+    },
+    {
+      "semantic_id": "REL_RNASE_H_REMOVES_PRIMER",
+      "relation_type": "removes",
+      "definition": "RNase H / flap endonuclease activity removes displaced primer RNA; the exact enzyme identity is unresolved in the source.",
+      "source_entity": "ENT_RNASE_H",
+      "target_entity": "ENT_RNA_PRIMER",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "The displaced primer RNA is then removed by RNase H (AKA flap endonuclease ) and replaced with DNA nucleotides.",
+          "location": "paragraph_4"
+        }
+      ]
+    },
+    {
+      "semantic_id": "REL_LIGASE_SEALS_GAP",
+      "relation_type": "seals",
+      "definition": "DNA ligase seals the remaining gap between DNA fragments by forming a phosphodiester bond.",
+      "source_entity": "ENT_DNA_LIGASE",
+      "target_entity": "ENT_GAP_SUBSTRATE",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond.",
+          "location": "paragraph_4"
+        }
+      ]
+    }
+  ],
+  "processes": [
+    {
+      "process_semantic_id": "PROC_PRIMER_FORMATION",
+      "scientific_name": "RNA primer formation by primase",
+      "action_category": "synthesis",
+      "participants": [
+        {
+          "role": "enzyme",
+          "entity_ref": "ENT_PRIMASE"
+        },
+        {
+          "role": "product",
+          "entity_ref": "ENT_RNA_PRIMER"
+        }
+      ],
+      "input_roles": [
+        "enzyme"
+      ],
+      "output_roles": [
+        "product"
+      ],
+      "preconditions": {
+        "template_available": "DNA has been made available as a template"
+      },
+      "effects": {
+        "primer_exists": "RNA primer formed by primase"
+      },
+      "temporal_scope": {
+        "start_condition": "DNA template accessible and primase recruited",
+        "end_condition": "RNA primer formed",
+        "concurrent_with": [],
+        "after": []
+      },
+      "observables": [
+        {
+          "constraint_id": "OBS_PRIMER_FORMED",
+          "predicate": "state_transition_allowed",
+          "state_key": "primer_exists",
+          "source_role": "enzyme",
+          "target_role": "product",
+          "capability": "DETERMINISTIC",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_d8ffea5a5785",
+              "quote": "Primers are formed by the enzyme primase, and using the primer, DNA pol can start synthesis.",
+              "location": "paragraph_4"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "Primers are formed by the enzyme primase, and using the primer, DNA pol can start synthesis.",
+          "location": "paragraph_4"
+        }
+      ],
+      "exceptions": []
+    },
+    {
+      "process_semantic_id": "PROC_POL_ALPHA_EXTENSION",
+      "scientific_name": "DNA polymerase alpha extension of the primer",
+      "action_category": "synthesis",
+      "participants": [
+        {
+          "role": "enzyme",
+          "entity_ref": "ENT_POL_ALPHA"
+        },
+        {
+          "role": "substrate",
+          "entity_ref": "ENT_RNA_PRIMER"
+        }
+      ],
+      "input_roles": [
+        "enzyme",
+        "substrate"
+      ],
+      "output_roles": [
+        "substrate"
+      ],
+      "preconditions": {
+        "primer_exists": "RNA primer formed by primase"
+      },
+      "effects": {
+        "pol_alpha_handoff_complete": "DNA polymerase alpha has added a short DNA fragment and handed off"
+      },
+      "temporal_scope": {
+        "start_condition": "RNA primer present",
+        "end_condition": "short DNA fragment added and polymerase hands off",
+        "concurrent_with": [],
+        "after": [
+          "PROC_PRIMER_FORMATION"
+        ]
+      },
+      "observables": [
+        {
+          "constraint_id": "OBS_ALPHA_EXTENDS_PRIMER",
+          "predicate": "relation_holds_during",
+          "relation_ref": "REL_POL_ALPHA_EXTENDS_PRIMER",
+          "source_role": "enzyme",
+          "target_role": "substrate",
+          "capability": "PARTIAL",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_d8ffea5a5785",
+              "quote": "DNA pol α adds a short (20 to 30 nucleotides) DNA fragment to the RNA primer on both strands, and then hands off to a second polymerase.",
+              "location": "paragraph_4"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "DNA pol α adds a short (20 to 30 nucleotides) DNA fragment to the RNA primer on both strands, and then hands off to a second polymerase.",
+          "location": "paragraph_4"
+        }
+      ],
+      "exceptions": []
+    },
+    {
+      "process_semantic_id": "PROC_POL_DELTA_EXTENSION",
+      "scientific_name": "Lagging-strand Okazaki fragment synthesis by DNA polymerase delta",
+      "action_category": "synthesis",
+      "participants": [
+        {
+          "role": "enzyme",
+          "entity_ref": "ENT_POL_DELTA"
+        },
+        {
+          "role": "product",
+          "entity_ref": "ENT_LAGGING_DNA_PRODUCT"
+        },
+        {
+          "role": "displaced_target",
+          "entity_ref": "ENT_RNA_PRIMER"
+        }
+      ],
+      "input_roles": [
+        "enzyme",
+        "displaced_target"
+      ],
+      "output_roles": [
+        "product"
+      ],
+      "preconditions": {
+        "pol_alpha_handoff_complete": "DNA polymerase alpha has added a short DNA fragment and handed off"
+      },
+      "effects": {
+        "okazaki_fragment_synthesized": "lagging strand DNA synthesized in a short stretch",
+        "primer_displaced": "primer RNA displaced from DNA template by pol delta"
+      },
+      "temporal_scope": {
+        "start_condition": "polymerase hand-off after pol alpha (recipient unspecified in source; pol delta shown as teaching schematic)",
+        "end_condition": "pol delta runs into the primer RNA on the lagging strand",
+        "concurrent_with": [],
+        "after": [
+          "PROC_POL_ALPHA_EXTENSION"
+        ]
+      },
+      "observables": [
+        {
+          "constraint_id": "OBS_DELTA_SYNTHESIZES_LAGGING_DNA",
+          "predicate": "relation_holds_during",
+          "relation_ref": "REL_POL_DELTA_SYNTHESIZES_LAGGING_DNA",
+          "source_role": "enzyme",
+          "target_role": "product",
+          "capability": "PARTIAL",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_d8ffea5a5785",
+              "quote": "While the leading strand is continuously synthesized by the enzyme pol ε , the lagging strand is synthesized by pol δ .",
+              "location": "paragraph_4"
+            }
+          ]
+        },
+        {
+          "constraint_id": "OBS_DELTA_DISPLACES_PRIMER",
+          "predicate": "state_transition_allowed",
+          "state_key": "primer_displaced",
+          "source_role": "enzyme",
+          "target_role": "displaced_target",
+          "capability": "PARTIAL",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_d8ffea5a5785",
+              "quote": "As pol δ runs into the primer RNA on the lagging strand, it displaces it from the DNA template.",
+              "location": "paragraph_4"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "As pol δ runs into the primer RNA on the lagging strand, it displaces it from the DNA template.",
+          "location": "paragraph_4"
+        }
+      ],
+      "exceptions": []
+    },
+    {
+      "process_semantic_id": "PROC_PRIMER_REMOVAL",
+      "scientific_name": "Removal of displaced primer RNA by RNase H / flap endonuclease activity",
+      "action_category": "release",
+      "participants": [
+        {
+          "role": "enzyme",
+          "entity_ref": "ENT_RNASE_H"
+        },
+        {
+          "role": "target",
+          "entity_ref": "ENT_RNA_PRIMER"
+        }
+      ],
+      "input_roles": [
+        "enzyme",
+        "target"
+      ],
+      "output_roles": [
+        "target"
+      ],
+      "preconditions": {
+        "primer_displaced": "primer RNA displaced from DNA template by pol delta"
+      },
+      "effects": {
+        "primer_removed": "displaced primer RNA removed",
+        "primer_replaced_with_dna": "source states replaced with DNA nucleotides; replacement synthesis is represented as a product state, not a separate process"
+      },
+      "temporal_scope": {
+        "start_condition": "primer RNA displaced from template",
+        "end_condition": "primer RNA removed and replaced with DNA nucleotides",
+        "concurrent_with": [],
+        "after": [
+          "PROC_POL_DELTA_EXTENSION"
+        ]
+      },
+      "observables": [
+        {
+          "constraint_id": "OBS_PRIMER_REMOVED",
+          "predicate": "state_transition_allowed",
+          "state_key": "primer_removed",
+          "source_role": "enzyme",
+          "target_role": "target",
+          "capability": "PARTIAL",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_d8ffea5a5785",
+              "quote": "The displaced primer RNA is then removed by RNase H (AKA flap endonuclease ) and replaced with DNA nucleotides.",
+              "location": "paragraph_4"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "The displaced primer RNA is then removed by RNase H (AKA flap endonuclease ) and replaced with DNA nucleotides.",
+          "location": "paragraph_4"
+        }
+      ],
+      "exceptions": []
+    },
+    {
+      "process_semantic_id": "PROC_LIGATION",
+      "scientific_name": "Sealing of remaining gaps by DNA ligase",
+      "action_category": "assembly",
+      "participants": [
+        {
+          "role": "enzyme",
+          "entity_ref": "ENT_DNA_LIGASE"
+        },
+        {
+          "role": "substrate",
+          "entity_ref": "ENT_GAP_SUBSTRATE"
+        }
+      ],
+      "input_roles": [
+        "enzyme",
+        "substrate"
+      ],
+      "output_roles": [
+        "substrate"
+      ],
+      "preconditions": {
+        "primer_replaced_with_dna": "RNA primers replaced with DNA nucleotides"
+      },
+      "effects": {
+        "gap_state": "sealed",
+        "okazaki_fragments_joined": "Okazaki fragments joined"
+      },
+      "temporal_scope": {
+        "start_condition": "RNA primers replaced with DNA and gaps remain",
+        "end_condition": "gaps sealed by DNA ligase",
+        "concurrent_with": [],
+        "after": [
+          "PROC_PRIMER_REMOVAL"
+        ]
+      },
+      "observables": [
+        {
+          "constraint_id": "OBS_GAPS_SEALED",
+          "predicate": "state_transition_allowed",
+          "state_key": "gap_state",
+          "source_role": "enzyme",
+          "target_role": "substrate",
+          "capability": "PARTIAL",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_d8ffea5a5785",
+              "quote": "The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond.",
+              "location": "paragraph_4"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "The Okazaki fragments in the lagging strand are joined after the replacement of the RNA primers with DNA. The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond.",
+          "location": "paragraph_4"
+        }
+      ],
+      "exceptions": []
+    }
+  ],
+  "unresolved_questions": [
+    {
+      "question": "Exact mechanism of polymerase hand-off from pol alpha to pol delta is not specified in the source; the recipient of the hand-off is not named.",
+      "status": "unresolved"
+    },
+    {
+      "question": "Whether RNase H and flap endonuclease are distinct activities in this context is ambiguous in the source; no equivalence is asserted.",
+      "status": "unresolved"
+    },
+    {
+      "question": "The source does not state whether primer removal and DNA replacement occur simultaneously or sequentially.",
+      "status": "unresolved"
+    },
+    {
+      "question": "The number of nucleotides added by pol delta before encountering the next primer is not specified.",
+      "status": "unresolved"
+    },
+    {
+      "question": "The identity of the DNA polymerase or process that replaces removed RNA primer with DNA nucleotides is not specified in the supplied passage.",
+      "status": "unresolved"
+    }
+  ],
+  "review": {
+    "decision": "REVISE",
+    "issues": [
+      {
+        "target_id": "ENT_RNASE_H",
+        "reason": "Source conflates RNase H and flap endonuclease; entity renamed to unresolved activity and relation reworded to avoid false specificity.",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "target_id": "PROC_POL_DELTA_EXTENSION",
+        "reason": "Pol alpha hand-off recipient not named in source; simplification added and start_condition annotated as teaching schematic.",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "target_id": "PROC_LIGATION",
+        "reason": "Precondition key updated to primer_replaced_with_dna, which is now produced as an effect of PROC_PRIMER_REMOVAL, closing the state-trajectory gap.",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "target_id": "OBS_DELTA_DISPLACES_PRIMER",
+        "reason": "Converted to state_transition_allowed with explicit primer_displaced state key, distinguishing displacement from removal.",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      },
+      {
+        "target_id": "ENT_GAP_SUBSTRATE",
+        "reason": "Gap state now grounded via primer_replaced_with_dna effect before ligation; observable references gap_state.",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ]
+      }
+    ],
+    "observable_reviews": [
+      {
+        "constraint_id": "OBS_PRIMER_FORMED",
+        "decision": "PASS",
+        "reason": "Source explicitly states primers are formed by primase; state transition enzyme to product is directly entailed."
+      },
+      {
+        "constraint_id": "OBS_ALPHA_EXTENDS_PRIMER",
+        "decision": "PASS",
+        "reason": "Source states pol alpha adds a short 20-30 nt DNA fragment to the RNA primer; relation_holds_during with PARTIAL capability honestly delimits mechanism."
+      },
+      {
+        "constraint_id": "OBS_DELTA_SYNTHESIZES_LAGGING_DNA",
+        "decision": "PASS",
+        "reason": "Source states lagging strand is synthesized by pol delta; relation directly entailed for local lagging region."
+      },
+      {
+        "constraint_id": "OBS_DELTA_DISPLACES_PRIMER",
+        "decision": "REVISE",
+        "reason": "Now modeled as state_transition_allowed to primer_displaced; source supports displacement event, though mechanism and timing remain PARTIAL."
+      },
+      {
+        "constraint_id": "OBS_PRIMER_REMOVED",
+        "decision": "REVISE",
+        "reason": "State transition to primer_removed modeled, with primer_replaced_with_dna also produced as product state; replacement synthesis not modeled as separate process, so PARTIAL capability retained."
+      },
+      {
+        "constraint_id": "OBS_GAPS_SEALED",
+        "decision": "REVISE",
+        "reason": "Ligation now depends on primer_replaced_with_dna produced by PROC_PRIMER_REMOVAL; gap_state transition is within modeled trajectory, though nick formation is simplified."
+      }
+    ],
+    "scope_review": "Scope remains local eukaryotic lagging-strand priming, pol alpha extension, pol delta synthesis/displacement, primer removal, and ligation. Origin recognition, helicase, topoisomerase, leading-strand pol epsilon, telomerase, nucleosome handling, and proofreading remain excluded. Reviewer issues addressed by renaming RNase H entity to unresolved activity, annotating pol alpha hand-off as simplification, adding primer_replaced_with_dna effect, and making displacement a distinct state transition. Conflict remains unresolved regarding exact nuclease identity and hand-off recipient; flagged in unresolved_questions and simplifications. No self-approval; decision remains REVISE pending external verification.",
+    "model_hash": "0b010f9f174be631781ddedb93a1e3099c02622e7c904d37745116403de614be",
+    "separate_request": true,
+    "independent_provider": false
+  },
+  "gaps": {
+    "evidence": {
+      "issues": [
+        {
+          "issue_id": "I1",
+          "affected_process_id": "PROC_PRIMER_REMOVAL",
+          "affected_entity_id": "ENT_RNASE_H",
+          "requirement_id": "R_NUCLEASE_IDENTITY",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "issue_type": "UNRESOLVED_SCIENTIFIC_IDENTITY",
+          "required_evidence": "Evidence distinguishing RNase H from flap endonuclease (FEN1) activity, or source text that does not conflate them.",
+          "allowed_repair_actions": [
+            "Rename ENT_RNASE_H to unresolved activity label",
+            "Rephrase relation to not assert single enzyme identity"
+          ],
+          "severity": "high",
+          "status": "OPEN",
+          "explanation": "Source conflates RNase H and flap endonuclease; entity renamed and relation reworded, but underlying scientific identity remains unresolved."
+        },
+        {
+          "issue_id": "I2",
+          "affected_process_id": "PROC_POL_DELTA_EXTENSION",
+          "affected_entity_id": "ENT_POL_DELTA",
+          "requirement_id": "R_HANDOFF_SPECIFICITY",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "issue_type": "UNSUPPORTED_CAUSAL_CLAIM",
+          "required_evidence": "Source statement that pol alpha hands off specifically to pol delta on the lagging strand.",
+          "allowed_repair_actions": [
+            "Downgrade hand-off precondition to recipient-unspecified",
+            "Flag pol alpha to pol delta transfer as teaching simplification"
+          ],
+          "severity": "medium",
+          "status": "OPEN",
+          "explanation": "Source says pol alpha hands off to a second polymerase without naming pol delta; simplification added but causal specificity remains flagged."
+        },
+        {
+          "issue_id": "I3",
+          "affected_process_id": "PROC_LIGATION",
+          "affected_entity_id": "ENT_GAP_SUBSTRATE",
+          "requirement_id": "R_STATE_TRAJECTORY_CONTINUITY",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "issue_type": "INSUFFICIENT_EVIDENCE",
+          "required_evidence": "A represented state in which RNA primer has been replaced by DNA nucleotides, forming a nick that DNA ligase can seal.",
+          "allowed_repair_actions": [
+            "Add labeled gap-filling product state",
+            "Amend PROC_LIGATION precondition to reference explicit product state"
+          ],
+          "severity": "high",
+          "status": "OPEN",
+          "explanation": "Primer replacement is now an effect of PROC_PRIMER_REMOVAL, providing a product state; replacement synthesis itself remains unmodeled, so evidence gap persists as partial."
+        },
+        {
+          "issue_id": "I4",
+          "affected_process_id": "PROC_PRIMER_REMOVAL",
+          "affected_entity_id": "ENT_RNA_PRIMER",
+          "requirement_id": "R_PRIMER_POST_STATE",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "issue_type": "INSUFFICIENT_EVIDENCE",
+          "required_evidence": "Modeled post-state matching source removal plus replacement with DNA nucleotides.",
+          "allowed_repair_actions": [
+            "Extend observable to composite removed-to-replaced state",
+            "Annotate observable as PARTIAL"
+          ],
+          "severity": "medium",
+          "status": "OPEN",
+          "explanation": "Observable now marks primer_removed and effect includes primer_replaced_with_dna, but replacement is not modeled as a separate process, so post-state is partially represented."
+        },
+        {
+          "issue_id": "I5",
+          "affected_process_id": "PROC_POL_DELTA_EXTENSION",
+          "affected_entity_id": "ENT_RNA_PRIMER",
+          "requirement_id": "R_DISPLACED_STATE",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "issue_type": "INSUFFICIENT_EVIDENCE",
+          "required_evidence": "A distinct modeled state for primer RNA displaced from the DNA template, separate from its later removal.",
+          "allowed_repair_actions": [
+            "Add displaced primer state",
+            "Reclassify observable as state_transition_allowed"
+          ],
+          "severity": "medium",
+          "status": "OPEN",
+          "explanation": "Displacement now represented as state_transition_allowed to primer_displaced; state exists but molecular detail remains partial."
+        }
+      ],
+      "requirements": [
+        {
+          "requirement_id": "R_NUCLEASE_IDENTITY",
+          "requirement": "Enzyme identity for displaced-primer removal must match source support without conflating distinct activities.",
+          "covered_by_process_ids": [
+            "PROC_PRIMER_REMOVAL"
+          ]
+        },
+        {
+          "requirement_id": "R_HANDOFF_SPECIFICITY",
+          "requirement": "Polymerase hand-off recipient claims must be source-supported or explicitly flagged as simplification.",
+          "covered_by_process_ids": [
+            "PROC_POL_ALPHA_EXTENSION",
+            "PROC_POL_DELTA_EXTENSION"
+          ]
+        },
+        {
+          "requirement_id": "R_STATE_TRAJECTORY_CONTINUITY",
+          "requirement": "Each process precondition must correspond to a post-state of a modeled prior process or an explicit simplification marker.",
+          "covered_by_process_ids": [
+            "PROC_POL_ALPHA_EXTENSION",
+            "PROC_POL_DELTA_EXTENSION",
+            "PROC_PRIMER_REMOVAL",
+            "PROC_LIGATION"
+          ]
+        },
+        {
+          "requirement_id": "R_PRIMER_POST_STATE",
+          "requirement": "Primer-removal observable must represent the source-described post-state (removal plus DNA replacement) or mark residual unmodeled.",
+          "covered_by_process_ids": [
+            "PROC_PRIMER_REMOVAL"
+          ]
+        },
+        {
+          "requirement_id": "R_DISPLACED_STATE",
+          "requirement": "Displacement of primer RNA by pol delta must be represented by a distinct state if claimed as an observable.",
+          "covered_by_process_ids": [
+            "PROC_POL_DELTA_EXTENSION",
+            "PROC_PRIMER_REMOVAL"
+          ]
+        }
+      ],
+      "coverage_status": "REVIEW_INCOMPLETE",
+      "model_sha256": "0b010f9f174be631781ddedb93a1e3099c02622e7c904d37745116403de614be"
+    },
+    "causal": {
+      "model_sha256": "0b010f9f174be631781ddedb93a1e3099c02622e7c904d37745116403de614be",
+      "status": "REVISE",
+      "issues": [
+        {
+          "issue_id": "CAUSAL_2",
+          "issue_type": "UNREACHABLE_PRECONDITION",
+          "affected_process_ids": [
+            "PROC_PRIMER_FORMATION"
+          ],
+          "status": "RESOLVED_BY_INITIAL_STATE",
+          "explanation": {
+            "key": "template_available",
+            "value": "DNA has been made available as a template",
+            "initial_state_declared": true
+          }
+        },
+        {
+          "issue_id": "CAUSAL_3",
+          "issue_type": "UNREACHABLE_PRECONDITION",
+          "affected_process_ids": [
+            "PROC_POL_ALPHA_EXTENSION"
+          ],
+          "status": "RESOLVED_BY_PRODUCER",
+          "explanation": {
+            "key": "primer_exists",
+            "producer": "PROC_PRIMER_FORMATION"
+          }
+        },
+        {
+          "issue_id": "CAUSAL_4",
+          "issue_type": "UNREACHABLE_PRECONDITION",
+          "affected_process_ids": [
+            "PROC_POL_DELTA_EXTENSION"
+          ],
+          "status": "RESOLVED_BY_PRODUCER",
+          "explanation": {
+            "key": "pol_alpha_handoff_complete",
+            "producer": "PROC_POL_ALPHA_EXTENSION"
+          }
+        },
+        {
+          "issue_id": "CAUSAL_5",
+          "issue_type": "UNREACHABLE_PRECONDITION",
+          "affected_process_ids": [
+            "PROC_PRIMER_REMOVAL"
+          ],
+          "status": "RESOLVED_BY_PRODUCER",
+          "explanation": {
+            "key": "primer_displaced",
+            "producer": "PROC_POL_DELTA_EXTENSION"
+          }
+        },
+        {
+          "issue_id": "CAUSAL_6",
+          "issue_type": "UNREACHABLE_PRECONDITION",
+          "affected_process_ids": [
+            "PROC_LIGATION"
+          ],
+          "status": "RESOLVED_BY_PRODUCER",
+          "explanation": {
+            "key": "primer_replaced_with_dna",
+            "producer": "PROC_PRIMER_REMOVAL"
+          }
+        }
+      ],
+      "reachable_process_ids": [
+        "PROC_PRIMER_FORMATION",
+        "PROC_POL_ALPHA_EXTENSION",
+        "PROC_POL_DELTA_EXTENSION",
+        "PROC_PRIMER_REMOVAL",
+        "PROC_LIGATION"
+      ],
+      "witnesses": {},
+      "states_explored": 5,
+      "exhaustive": true,
+      "limit": 4096,
+      "semantics": "Finite paths with exact state values, completion dependencies, once-per-process invocation; dynamic loops and unmodeled continuous chemistry not proven."
+    }
+  }
+}

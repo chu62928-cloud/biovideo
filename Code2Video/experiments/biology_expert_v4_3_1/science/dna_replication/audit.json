@@ -1,0 +1,234 @@
+{
+  "evidence": {
+    "issues": [
+      {
+        "issue_id": "I1",
+        "affected_process_id": "PROC_PRIMER_REMOVAL",
+        "affected_entity_id": "ENT_RNASE_H",
+        "requirement_id": "R_NUCLEASE_IDENTITY",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "issue_type": "UNRESOLVED_SCIENTIFIC_IDENTITY",
+        "required_evidence": "Evidence distinguishing RNase H from flap endonuclease (FEN1) activity, or source text that does not conflate them.",
+        "allowed_repair_actions": [
+          "Rename ENT_RNASE_H to 'RNase H / flap endonuclease activity (identity unresolved)'",
+          "Rephrase REL_RNASE_H_REMOVES_PRIMER to not assert a single enzyme identity",
+          "Add explicit unresolved-status marker on the removal role"
+        ],
+        "severity": "high",
+        "status": "OPEN",
+        "explanation": "Source literally writes 'RNase H (AKA flap endonuclease )', which conflates two distinct activities. Model's own unresolved_questions note the ambiguity but the entity name and relation still assert a single identity, producing false specificity for grades 10–12."
+      },
+      {
+        "issue_id": "I2",
+        "affected_process_id": "PROC_POL_DELTA_EXTENSION",
+        "affected_entity_id": "ENT_POL_DELTA",
+        "requirement_id": "R_HANDOFF_SPECIFICITY",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "issue_type": "UNSUPPORTED_CAUSAL_CLAIM",
+        "required_evidence": "Source statement that pol α hands off specifically to pol δ on the lagging strand.",
+        "allowed_repair_actions": [
+          "Downgrade hand-off precondition to 'polymerase hand-off after pol α (recipient unspecified in source)'",
+          "Flag the pol α→pol δ transfer as a teaching simplification in model notes",
+          "Remove dependence of PROC_POL_DELTA_EXTENSION ordering on a specific recipient"
+        ],
+        "severity": "medium",
+        "status": "OPEN",
+        "explanation": "Source says pol α adds DNA 'on both strands' and 'hands off to a second polymerase' without naming pol δ as the lagging-strand recipient. Model presents pol α→pol δ sequence as causal order. Acceptable only if explicitly labeled as simplification."
+      },
+      {
+        "issue_id": "I3",
+        "affected_process_id": "PROC_LIGATION",
+        "affected_entity_id": "ENT_GAP_SUBSTRATE",
+        "requirement_id": "R_STATE_TRAJECTORY_CONTINUITY",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "issue_type": "INSUFFICIENT_EVIDENCE",
+        "required_evidence": "A represented state in which RNA primer has been replaced by DNA nucleotides, forming a nick that DNA ligase can seal.",
+        "allowed_repair_actions": [
+          "Add a labeled 'gap-filling product state' entity representing replacement of RNA by DNA",
+          "Amend PROC_LIGATION precondition to reference that explicit product state",
+          "Mark OBS_GAPS_SEALED as conditional on the unmodeled replacement step"
+        ],
+        "severity": "high",
+        "status": "OPEN",
+        "explanation": "Source requires primer RNA be 'replaced with DNA nucleotides' before ligation. Model explicitly excludes replacement synthesis from processes, yet PROC_LIGATION precondition requires 'primers_replaced'. OBS_GAPS_SEALED therefore cannot be verified within the modeled state trajectory."
+      },
+      {
+        "issue_id": "I4",
+        "affected_process_id": "PROC_PRIMER_REMOVAL",
+        "affected_entity_id": "ENT_RNA_PRIMER",
+        "requirement_id": "R_PRIMER_POST_STATE",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "issue_type": "INSUFFICIENT_EVIDENCE",
+        "required_evidence": "Modeled post-state matching source's 'removed and replaced with DNA nucleotides'.",
+        "allowed_repair_actions": [
+          "Extend OBS_PRIMER_REMOVED to a two-step or composite state (removed→replaced)",
+          "Add explicit 'replaced' terminal state for primer position",
+          "Annotate observable as PARTIAL with residual replacement unmodeled"
+        ],
+        "severity": "medium",
+        "status": "OPEN",
+        "explanation": "Source couples removal with replacement. Model asserts removal state transition but explicitly omits replacement, so the resulting primer_state is not the source-supported post-state."
+      },
+      {
+        "issue_id": "I5",
+        "affected_process_id": "PROC_POL_DELTA_EXTENSION",
+        "affected_entity_id": "ENT_RNA_PRIMER",
+        "requirement_id": "R_DISPLACED_STATE",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "issue_type": "INSUFFICIENT_EVIDENCE",
+        "required_evidence": "A distinct modeled state for primer RNA displaced from the DNA template, separate from its later removal.",
+        "allowed_repair_actions": [
+          "Add a 'displaced primer' state entity between displacement and removal",
+          "Split ENT_RNA_PRIMER participation into 'displaced' and 'removed' state variants",
+          "Reclassify OBS_DELTA_DISPLACES_PRIMER as state_transition_allowed with explicit before/after states"
+        ],
+        "severity": "medium",
+        "status": "OPEN",
+        "explanation": "Source describes pol δ displacing primer RNA from template as a distinct event; model lists primer as 'displaced_target' but defines no displaced state, so the relation_holds_during observable cannot distinguish displacement from removal."
+      }
+    ],
+    "requirements": [
+      {
+        "requirement_id": "R_NUCLEASE_IDENTITY",
+        "requirement": "Enzyme identity for displaced-primer removal must match source support without conflating distinct activities.",
+        "covered_by_process_ids": [
+          "PROC_PRIMER_REMOVAL"
+        ]
+      },
+      {
+        "requirement_id": "R_HANDOFF_SPECIFICITY",
+        "requirement": "Polymerase hand-off recipient claims must be source-supported or explicitly flagged as simplification.",
+        "covered_by_process_ids": [
+          "PROC_POL_ALPHA_EXTENSION",
+          "PROC_POL_DELTA_EXTENSION"
+        ]
+      },
+      {
+        "requirement_id": "R_STATE_TRAJECTORY_CONTINUITY",
+        "requirement": "Each process precondition must correspond to a post-state of a modeled prior process or an explicit simplification marker.",
+        "covered_by_process_ids": [
+          "PROC_POL_ALPHA_EXTENSION",
+          "PROC_POL_DELTA_EXTENSION",
+          "PROC_PRIMER_REMOVAL",
+          "PROC_LIGATION"
+        ]
+      },
+      {
+        "requirement_id": "R_PRIMER_POST_STATE",
+        "requirement": "Primer-removal observable must represent the source-described post-state (removal plus DNA replacement) or mark residual unmodeled.",
+        "covered_by_process_ids": [
+          "PROC_PRIMER_REMOVAL"
+        ]
+      },
+      {
+        "requirement_id": "R_DISPLACED_STATE",
+        "requirement": "Displacement of primer RNA by pol δ must be represented by a distinct state if claimed as an observable.",
+        "covered_by_process_ids": [
+          "PROC_POL_DELTA_EXTENSION",
+          "PROC_PRIMER_REMOVAL"
+        ]
+      }
+    ],
+    "coverage_status": "REVIEW_INCOMPLETE",
+    "model_sha256": "0b010f9f174be631781ddedb93a1e3099c02622e7c904d37745116403de614be"
+  },
+  "causal": {
+    "model_sha256": "0b010f9f174be631781ddedb93a1e3099c02622e7c904d37745116403de614be",
+    "status": "REVIEW_INCOMPLETE",
+    "issues": [
+      {
+        "issue_id": "CAUSAL_1",
+        "issue_type": "INITIAL_STATE_UNSPECIFIED",
+        "affected_process_ids": [],
+        "status": "DETECTED",
+        "explanation": "Historical model has no explicit initial_states; reachability is conditional, not automatically FAIL/PASS."
+      },
+      {
+        "issue_id": "CAUSAL_2",
+        "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+        "affected_process_ids": [
+          "PROC_PRIMER_FORMATION"
+        ],
+        "status": "DETECTED",
+        "explanation": {
+          "key": "template_available",
+          "value": "DNA has been made available as a template",
+          "producers": [],
+          "initial_state_declared": false
+        }
+      },
+      {
+        "issue_id": "CAUSAL_3",
+        "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+        "affected_process_ids": [
+          "PROC_POL_ALPHA_EXTENSION"
+        ],
+        "status": "DETECTED",
+        "explanation": {
+          "key": "primer_exists",
+          "value": "RNA primer formed by primase",
+          "producers": [],
+          "initial_state_declared": false
+        }
+      },
+      {
+        "issue_id": "CAUSAL_4",
+        "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+        "affected_process_ids": [
+          "PROC_POL_DELTA_EXTENSION"
+        ],
+        "status": "DETECTED",
+        "explanation": {
+          "key": "pol_alpha_handoff_complete",
+          "value": "DNA polymerase alpha has added a short DNA fragment and handed off",
+          "producers": [],
+          "initial_state_declared": false
+        }
+      },
+      {
+        "issue_id": "CAUSAL_5",
+        "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+        "affected_process_ids": [
+          "PROC_PRIMER_REMOVAL"
+        ],
+        "status": "DETECTED",
+        "explanation": {
+          "key": "primer_displaced",
+          "value": "primer RNA displaced from DNA template by pol delta",
+          "producers": [],
+          "initial_state_declared": false
+        }
+      },
+      {
+        "issue_id": "CAUSAL_6",
+        "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+        "affected_process_ids": [
+          "PROC_LIGATION"
+        ],
+        "status": "DETECTED",
+        "explanation": {
+          "key": "primers_replaced",
+          "value": "RNA primers replaced with DNA nucleotides",
+          "producers": [],
+          "initial_state_declared": false
+        }
+      }
+    ],
+    "reachable_process_ids": [],
+    "witnesses": {},
+    "states_explored": 1,
+    "exhaustive": true,
+    "limit": 4096,
+    "semantics": "Finite paths with exact state values, completion dependencies, once-per-process invocation; dynamic loops and unmodeled continuous chemistry not proven."
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "source_video": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/sample_video.mp4",
+  "source_sha256": "c035449dc554645baf35a11b7855b8d0a85253ea2d06af39bf780bdde32e9f2d",
+  "first_time": 3.2,
+  "last_time": 7.8,
+  "transform": "crop=854:180:0:150,scale=1280:270,pad=1280:720:0:225:black",
+  "license": "project original schematic; no imported third-party visual",
+  "note": "Mechanism-only crop removes teaching labels/captions for provider-neutral benchmark. Review required.",
+  "label_removal": "Black masks from actual registered label bbox at corresponding time; no mechanism redraw."
+}

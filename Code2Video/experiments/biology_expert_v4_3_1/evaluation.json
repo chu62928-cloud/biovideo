@@ -1,0 +1,54 @@
+{
+  "experiment": "V4.3.1_VP0",
+  "science": {
+    "topics_audited": 3,
+    "evidence_issues_detected": 11,
+    "new_models_approved": 0,
+    "original_mitosis_model_approved": true,
+    "models_still_revise": 2,
+    "models_pending_formal_initial_state_declaration": 3
+  },
+  "video_benchmark": {
+    "wan_submission_attempted": true,
+    "wan_model": "wan3.0-video",
+    "wan_access_status": "API_ACCESS_NOT_READY",
+    "wan_render_success": false,
+    "wan_error": "AccessDenied.Unpurchased",
+    "seedance_status": "NOT_SELECTED",
+    "scientific_identity_pass": null,
+    "temporal_consistency_pass": null,
+    "visual_quality_reviewed": false,
+    "human_review_completed": false
+  },
+  "tests": {
+    "historical_and_new_passed": 67,
+    "regression_seconds": 109.62,
+    "latest_reliability_only_passed": 20,
+    "latest_seconds": 0.33
+  },
+  "actual_model_usage": {
+    "deepseek_calls": 16,
+    "qwen_calls": 4,
+    "input_tokens": 128194,
+    "output_tokens": 37161,
+    "failed_model_requests": 0,
+    "reported_cost": null
+  },
+  "wan_requests": {
+    "generation_post": 1,
+    "tasks_created": 0,
+    "actual_cost": null,
+    "estimated_if_success_cny": 1.5,
+    "billing_note": "No task ID returned. Actual charged amount not queried; do not assert free or billed."
+  },
+  "remaining_blockers": [
+    "Wan3 model access denied; account model activation/entitlement required",
+    "DNA scientific identity and state production remain REVISE",
+    "Vesicle targeted evidence insufficient; initial candidate exact quote rejected",
+    "Seedance real API adapter not implemented because user selected only Wan; dry-run stub present",
+    "Finite state checker cannot infer free-text state aliases or continuous/loop chemistry",
+    "Evidence repair attempted but no independently approved new model achieved",
+    "VLM evidence entailment and reference preparation used developer geometry interventions; not fully autonomous"
+  ],
+  "final_status": "REVIEW_INCOMPLETE"
+}

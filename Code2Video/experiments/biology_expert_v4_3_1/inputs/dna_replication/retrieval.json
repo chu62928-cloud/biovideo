@@ -1,0 +1,28 @@
+{
+  "evidence": [],
+  "failures": [
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=eukaryotic%20DNA%20replication%20priming%20by%20DNA%20polymerase%20alpha%20primase%20mechanism&format=json&pageSize=2",
+      "error": "ReadTimeout"
+    },
+    {
+      "source": "public HTML discovery",
+      "error": "ValueError"
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26859/",
+      "error": "ValueError"
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26856/",
+      "error": "ValueError"
+    },
+    {
+      "url": "https://www.khanacademy.org/science/biology/dna-as-the-genetic-material/dna-replication/a/dna-replication",
+      "error": "ValueError"
+    }
+  ],
+  "search_records": [],
+  "research_status": "UNVERIFIED",
+  "discovery": "Agent planned queries + live bibliographic search + content fetch, no legacy topic catalogue"
+}

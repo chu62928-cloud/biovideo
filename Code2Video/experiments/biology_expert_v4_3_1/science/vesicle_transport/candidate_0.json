@@ -1,0 +1,442 @@
+{
+  "model_id": "vesicle_transport_microtubules_v2",
+  "schema_version": "1.0",
+  "scope": {
+    "topic": "Microtubule-associated, motor-protein-mediated intracellular vesicle movement (eukaryotic cells, general)",
+    "organism_context": "eukaryotic cells (general); organism specificity not restricted by retrieved passages",
+    "audience": "grades_10_12",
+    "included_processes": [
+      "microtubule track provision for vesicle movement",
+      "motor-protein-dependent vesicle transport along microtubules"
+    ],
+    "excluded_processes": [
+      "detailed kinesin/dynein mechanochemical stepping cycle and ATP-hydrolysis kinetics (not present in retrieved passages)",
+      "vesicle cargo selection and membrane fusion",
+      "microtubule assembly/disassembly dynamics",
+      "flagellar/ciliary motility using microtubules"
+    ],
+    "simplifications": [
+      "Motor proteins are represented as a required intermediary class (ent_motor_protein) on the basis of the task framing and the Reactome 'Kinesins' source title; the retrieved OpenStax passage alone establishes only that microtubules 'provide a track along which vesicles move through the cell' and does not name motor proteins or their mechanism.",
+      "The detailed stepwise mechanochemical cycle of kinesin/dynein is NOT modeled; only the causal role of a motor protein linking vesicle to microtubule is represented, and this is explicitly flagged as partially inferred from task framing rather than fully sourced.",
+      "Organism context is generalized to eukaryotic cells; the source passage does not restrict the statement to a specific organism, so this generalization is an inference, not an entailment.",
+      "Directionality (anterograde vs. retrograde) is not modeled because retrieved evidence does not specify it."
+    ]
+  },
+  "entities": [
+    {
+      "semantic_id": "ent_microtubule",
+      "scientific_name": "Microtubule",
+      "entity_type": "cytoskeletal polymer (hollow tube of α/β-tubulin dimers)",
+      "evidence_ids": [
+        "E_9af4c0e6bde1"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "As their name implies, microtubules are small hollow tubes.",
+          "location": "paragraph_12"
+        },
+        {
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "Polymerized dimers of α-tubulin and β-tubulin, two globular proteins, comprise the microtubule's walls",
+          "location": "paragraph_12"
+        },
+        {
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "provide a track along which vesicles move through the cell",
+          "location": "paragraph_12"
+        }
+      ],
+      "cardinality": 1,
+      "states": {
+        "present_as_track": "microtubule is present and available as a track for vesicle movement",
+        "absent": "microtubule is not present or not available as a track"
+      }
+    },
+    {
+      "semantic_id": "ent_vesicle",
+      "scientific_name": "Vesicle",
+      "entity_type": "membrane-bounded intracellular carrier (as used in the retrieved passage; membrane-bounded nature is an inference, see unresolved_questions)",
+      "evidence_ids": [
+        "E_9af4c0e6bde1"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "provide a track along which vesicles move through the cell",
+          "location": "paragraph_12"
+        },
+        {
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "allow cytoplasm and vesicles to move within the cell",
+          "location": "paragraph_1"
+        }
+      ],
+      "cardinality": 1,
+      "states": {
+        "at_start_position": "vesicle is at its initial position before microtubule-associated transport",
+        "in_transport": "vesicle is being moved along a microtubule by a motor protein",
+        "at_end_position": "vesicle has been moved along the microtubule to a new position"
+      }
+    },
+    {
+      "semantic_id": "ent_cytoskeleton",
+      "scientific_name": "Cytoskeleton",
+      "entity_type": "cellular protein fiber network",
+      "evidence_ids": [
+        "E_9af4c0e6bde1"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "Collectively, scientists call this network of protein fibers the cytoskeleton .",
+          "location": "paragraph_1"
+        },
+        {
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "There are three types of fibers within the cytoskeleton: microfilaments, intermediate filaments, and microtubules",
+          "location": "paragraph_1"
+        }
+      ],
+      "cardinality": 1,
+      "states": {
+        "present": "cytoskeleton is present"
+      }
+    },
+    {
+      "semantic_id": "ent_motor_protein",
+      "scientific_name": "Motor protein (kinesin/dynein class; specific identity not specified by retrieved transport passage)",
+      "entity_type": "ATP-dependent mechanochemical motor protein class",
+      "evidence_ids": [
+        "E_1feed90d4349",
+        "E_9af4c0e6bde1"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_1feed90d4349",
+          "quote": "Reactome | Kinesins",
+          "location": "paragraph_1"
+        },
+        {
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "provide a track along which vesicles move through the cell",
+          "location": "paragraph_12"
+        }
+      ],
+      "cardinality": 1,
+      "states": {
+        "engaged": "motor protein is engaged with the vesicle and the microtubule track",
+        "disengaged": "motor protein is not engaged with the vesicle/track"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "semantic_id": "rel_cytoskeleton_contains_microtubule",
+      "relation_type": "contains_component",
+      "definition": "The cytoskeleton contains microtubules as one of its three fiber types.",
+      "source_entity": "ent_cytoskeleton",
+      "target_entity": "ent_microtubule",
+      "evidence_ids": [
+        "E_9af4c0e6bde1"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "There are three types of fibers within the cytoskeleton: microfilaments, intermediate filaments, and microtubules",
+          "location": "paragraph_1"
+        }
+      ]
+    },
+    {
+      "semantic_id": "rel_microtubule_track_for_vesicle",
+      "relation_type": "serves_as_track_for",
+      "definition": "Microtubules provide a track along which vesicles move through the cell.",
+      "source_entity": "ent_microtubule",
+      "target_entity": "ent_vesicle",
+      "evidence_ids": [
+        "E_9af4c0e6bde1"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "provide a track along which vesicles move through the cell",
+          "location": "paragraph_12"
+        }
+      ]
+    },
+    {
+      "semantic_id": "rel_motor_protein_links_vesicle_to_microtubule",
+      "relation_type": "mediates_attachment_of",
+      "definition": "A motor protein mediates the attachment of a vesicle to a microtubule track, enabling motor-protein-dependent transport. NOTE: This relation is inferred from the task framing ('motor-protein-dependent') and the Reactome 'Kinesins' source title; the retrieved OpenStax passage does not itself name motor proteins. It is flagged as partially inferred in unresolved_questions.",
+      "source_entity": "ent_motor_protein",
+      "target_entity": "ent_vesicle",
+      "evidence_ids": [
+        "E_1feed90d4349",
+        "E_9af4c0e6bde1"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_1feed90d4349",
+          "quote": "Reactome | Kinesins",
+          "location": "paragraph_1"
+        },
+        {
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "provide a track along which vesicles move through the cell",
+          "location": "paragraph_12"
+        }
+      ]
+    }
+  ],
+  "initial_states": {
+    "ent_microtubule.present_as_track": true,
+    "ent_vesicle.at_start_position": true,
+    "ent_motor_protein.disengaged": true,
+    "ent_cytoskeleton.present": true
+  },
+  "processes": [
+    {
+      "process_semantic_id": "proc_microtubule_track_provision",
+      "scientific_name": "Microtubule track provision for vesicle movement",
+      "action_category": "interaction",
+      "participants": [
+        {
+          "role": "track_provider",
+          "entity_ref": "ent_microtubule"
+        },
+        {
+          "role": "cargo_guided",
+          "entity_ref": "ent_vesicle"
+        }
+      ],
+      "input_roles": [
+        "track_provider",
+        "cargo_guided"
+      ],
+      "output_roles": [
+        "track_provider",
+        "cargo_guided"
+      ],
+      "preconditions": {
+        "ent_microtubule.present_as_track": true
+      },
+      "effects": {
+        "rel_microtubule_track_for_vesicle_holds": true
+      },
+      "temporal_scope": {
+        "start_condition": "Microtubule is present and available as a track for vesicle movement.",
+        "end_condition": "Microtubule is no longer available as a track (e.g., disassembled) or vesicle movement along it ceases.",
+        "concurrent_with": [
+          "proc_vesicle_transport_along_microtubule"
+        ],
+        "after": []
+      },
+      "observables": [
+        {
+          "constraint_id": "obs_track_relation_during_transport",
+          "predicate": "relation_holds_during",
+          "relation_ref": "rel_microtubule_track_for_vesicle",
+          "source_role": "track_provider",
+          "target_role": "cargo_guided",
+          "capability": "PARTIAL",
+          "evidence_ids": [
+            "E_9af4c0e6bde1"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_9af4c0e6bde1",
+              "quote": "provide a track along which vesicles move through the cell",
+              "location": "paragraph_12"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "E_9af4c0e6bde1"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "They help the cell resist compression, provide a track along which vesicles move through the cell, and pull replicated chromosomes to opposite ends of a dividing cell.",
+          "location": "paragraph_12"
+        }
+      ],
+      "exceptions": [
+        {
+          "exception_id": "exc_track_absent",
+          "description": "If microtubules are not present or not serving as tracks, this provision does not hold.",
+          "evidence_ids": [
+            "E_9af4c0e6bde1"
+          ]
+        }
+      ]
+    },
+    {
+      "process_semantic_id": "proc_vesicle_transport_along_microtubule",
+      "scientific_name": "Motor-protein-dependent vesicle transport along microtubules",
+      "action_category": "transport",
+      "participants": [
+        {
+          "role": "cargo",
+          "entity_ref": "ent_vesicle"
+        },
+        {
+          "role": "track",
+          "entity_ref": "ent_microtubule"
+        },
+        {
+          "role": "motor",
+          "entity_ref": "ent_motor_protein"
+        }
+      ],
+      "input_roles": [
+        "cargo",
+        "track",
+        "motor"
+      ],
+      "output_roles": [
+        "cargo",
+        "track",
+        "motor"
+      ],
+      "preconditions": {
+        "ent_microtubule.present_as_track": true,
+        "ent_vesicle.at_start_position": true,
+        "ent_motor_protein.engaged": true
+      },
+      "effects": {
+        "ent_vesicle.at_end_position": true,
+        "ent_vesicle.in_transport": false,
+        "ent_motor_protein.disengaged": true
+      },
+      "temporal_scope": {
+        "start_condition": "A motor protein engages the vesicle and the microtubule track, and vesicle movement along the microtubule begins.",
+        "end_condition": "Vesicle movement along the microtubule ends (vesicle reaches a new position and/or motor disengages).",
+        "concurrent_with": [
+          "proc_microtubule_track_provision"
+        ],
+        "after": []
+      },
+      "observables": [
+        {
+          "constraint_id": "obs_vesicle_transport_relation",
+          "predicate": "relation_holds_during",
+          "relation_ref": "rel_microtubule_track_for_vesicle",
+          "source_role": "track",
+          "target_role": "cargo",
+          "capability": "PARTIAL",
+          "evidence_ids": [
+            "E_9af4c0e6bde1"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_9af4c0e6bde1",
+              "quote": "provide a track along which vesicles move through the cell",
+              "location": "paragraph_12"
+            }
+          ]
+        },
+        {
+          "constraint_id": "obs_motor_engagement_during_transport",
+          "predicate": "relation_holds_during",
+          "relation_ref": "rel_motor_protein_links_vesicle_to_microtubule",
+          "source_role": "motor",
+          "target_role": "cargo",
+          "capability": "UNSUPPORTED",
+          "evidence_ids": [
+            "E_1feed90d4349"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_1feed90d4349",
+              "quote": "Reactome | Kinesins",
+              "location": "paragraph_1"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "E_9af4c0e6bde1",
+        "E_1feed90d4349"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "provide a track along which vesicles move through the cell",
+          "location": "paragraph_12"
+        },
+        {
+          "evidence_id": "E_9af4c0e6bde1",
+          "quote": "allow cytoplasm and vesicles to move within the cell",
+          "location": "paragraph_1"
+        },
+        {
+          "evidence_id": "E_1feed90d4349",
+          "quote": "Reactome | Kinesins",
+          "location": "paragraph_1"
+        }
+      ],
+      "exceptions": [
+        {
+          "exception_id": "exc_no_track",
+          "description": "Vesicle transport along microtubules does not occur if no microtubule track is available.",
+          "evidence_ids": [
+            "E_9af4c0e6bde1"
+          ]
+        },
+        {
+          "exception_id": "exc_no_motor",
+          "description": "Motor-protein-dependent transport does not occur if no engaged motor protein is available (inference from task framing, not directly stated in retrieved passage).",
+          "evidence_ids": [
+            "E_1feed90d4349"
+          ]
+        }
+      ]
+    }
+  ],
+  "unresolved_questions": [
+    {
+      "question_id": "uq_motor_protein_identity",
+      "description": "The retrieved OpenStax passage states that microtubules provide a track for vesicle movement but does not name or describe motor proteins (e.g., kinesin, dynein) or their mechanochemical cycle. The Reactome 'Kinesins' source title supports the existence of kinesin as a motor-protein class, but the retrieved passage text does not establish kinesin's role in vesicle transport. Motor-protein dependence is therefore represented as a required intermediary class but remains partially inferred from task framing.",
+      "evidence_ids": [
+        "E_9af4c0e6bde1",
+        "E_1feed90d4349"
+      ],
+      "status": "unresolved"
+    },
+    {
+      "question_id": "uq_directionality",
+      "description": "The retrieved passages do not specify directionality (anterograde vs. retrograde) of vesicle transport along microtubules; this remains unresolved from the supplied evidence.",
+      "evidence_ids": [
+        "E_9af4c0e6bde1"
+      ],
+      "status": "unresolved"
+    },
+    {
+      "question_id": "uq_organism_specificity",
+      "description": "The retrieved passages do not restrict the microtubule-track statement for vesicles to a particular eukaryotic organism or cell type; organism scope is therefore generalized and unresolved.",
+      "evidence_ids": [
+        "E_9af4c0e6bde1"
+      ],
+      "status": "unresolved"
+    },
+    {
+      "question_id": "uq_vesicle_membrane_bound_nature",
+      "description": "The retrieved passage refers to 'vesicles' but does not define them as membrane-bounded; the 'membrane-bounded' characterization is an inference from general biological usage, not directly stated in the retrieved passage.",
+      "evidence_ids": [
+        "E_9af4c0e6bde1"
+      ],
+      "status": "unresolved"
+    },
+    {
+      "question_id": "uq_motor_mechanism_details",
+      "description": "The stepwise ATP-dependent mechanochemical cycle of motor proteins is not described in the retrieved passages and is excluded from the model; only the causal role of a motor protein linking vesicle to microtubule is represented.",
+      "evidence_ids": [
+        "E_9af4c0e6bde1",
+        "E_1feed90d4349"
+      ],
+      "status": "unresolved"
+    }
+  ]
+}

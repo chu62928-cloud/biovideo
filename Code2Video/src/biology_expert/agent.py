@@ -122,3 +122,14 @@ class BiologyExpertAgent:
   model=self._call('typed_science_model_builder',{'task':task,'retrieval':retrieval},'Build typed science','Retrieved evidence must produce explicit entity, process and observable semantics before scene planning.')
   review=self._call('typed_science_model_reviewer',{'model':model,'evidence':retrieval['evidence'],'task':task},'Independently verify typed model','Separate request checks exact source entailment, scope and computational meaning; generation is not approval.')
   return {'model':model,'review':review}
+
+ def enable_model_reliability(self):
+  from .model_reliability import EvidenceSufficiencyAuditor,ScientificCausalGraphValidator
+  for name,fn in [('evidence_sufficiency_auditor',EvidenceSufficiencyAuditor(self.gateway).audit),('scientific_causal_graph_validator',ScientificCausalGraphValidator().validate)]:
+   if name not in self.registry.tools:self.registry.register(name,fn)
+  return self
+ def audit_typed_reliability(self,task,model,evidence,prior_review=None):
+  self.enable_model_reliability()
+  evidence_result=self._call('evidence_sufficiency_auditor',dict(task=task,model=model,evidence=evidence,prior_review=prior_review),'Audit scientific model reliability','Check requirement coverage and explicit evidence gaps before repair.')
+  causal=self._call('scientific_causal_graph_validator',{'model':model},'Check state reachability','Explore state paths and completion dependencies independently of topic names.')
+  return {'evidence':evidence_result,'causal':causal}

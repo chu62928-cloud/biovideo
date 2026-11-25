@@ -1,0 +1,7 @@
+{
+  "source": "explicit_user_message",
+  "message": "用这个密钥试试能不能调用wan3.0，先按照任务书执行任务",
+  "wan_real_tasks": 1,
+  "seedance_real_tasks": 0,
+  "deepseek_qwen": "existing user authorization, actual calls ledger retained"
+}

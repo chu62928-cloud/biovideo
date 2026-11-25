@@ -1,0 +1,36 @@
+{
+  "repairs": [
+    {
+      "topic": "dna_replication",
+      "candidate_path": "science/dna_replication/candidate_quote_corrected.json",
+      "before_model_sha256": "fd46d160bb7d776ea09057d618b4a8d9b32765cf3d169c3e4feac4b1254f75f0",
+      "after_model_sha256": "0666c93972bd1970b66ba66627b08107608e7c32807469afb9cc7ce63e648d90",
+      "accepted": false,
+      "science_review": "REVISE",
+      "note": "See original patches, exact quote failures, evidence and review in science directory; no historical model replaced."
+    },
+    {
+      "topic": "dna_replication",
+      "candidate_path": "science/dna_replication/candidate_second_0.json",
+      "before_model_sha256": "fd46d160bb7d776ea09057d618b4a8d9b32765cf3d169c3e4feac4b1254f75f0",
+      "after_model_sha256": "116eb47005c57eac5f90246333fd78e98be942b0897f51189fe862af9cc13acb",
+      "accepted": false,
+      "science_review": "REVISE",
+      "note": "See original patches, exact quote failures, evidence and review in science directory; no historical model replaced."
+    },
+    {
+      "topic": "vesicle_transport",
+      "candidate_path": "science/vesicle_transport/candidate_0.json",
+      "before_model_sha256": "291dde59c5d239c3a6f8fab3b60789889dffedc0c633d704448ba879a01b15f2",
+      "after_model_sha256": "8d26d5e8b2880fd81f18c9589f2082f16ca151579b72e0be6dea2f03d770c1b1",
+      "accepted": false,
+      "science_review": "REVISE",
+      "note": "See original patches, exact quote failures, evidence and review in science directory; no historical model replaced."
+    }
+  ],
+  "automatic_model_commit": false,
+  "stop_reasons": [
+    "Bounded targeted retrieval without substantive new progress",
+    "Remaining science or exact-source failure"
+  ]
+}

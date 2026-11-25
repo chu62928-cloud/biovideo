@@ -1,0 +1,198 @@
+{
+  "gap_hash": "68fdefca4fbd6a7e18b255a6ed95df6cba3194959dd0606e87eb315787a37ad3",
+  "attempts": [
+    {
+      "plan": {
+        "candidate_urls": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK9903/",
+          "https://reactome.org/content/detail/R-HSA-983189",
+          "https://www.molbiolcell.org/doi/10.1091/mbc.E14-05-0993",
+          "https://www.ncbi.nlm.nih.gov/books/NBK26876/"
+        ],
+        "scientific_queries": "kinesin dynein motor proteins actively transport vesicles along microtubules in cells directionality mechanism",
+        "gap_mapping": [
+          {
+            "issue_id": "I1",
+            "question": "Which specific motor proteins (kinesin superfamily, cytoplasmic dynein) act as the ATP-driven actors moving vesicles along microtubules, and what evidence names them in this role?",
+            "strategy": "missing role — retrieve independent molecular-cell-biology specialist sources (textbook chapter, pathway database) that explicitly name motor proteins as vesicle-transport actors."
+          },
+          {
+            "issue_id": "I2",
+            "question": "What is the mechanism by which motor-protein ATPase activity generates directed force causing vesicle translocation along the microtubule lattice?",
+            "strategy": "causal mechanism — fetch a source that specifies motor-driven active transport rather than merely a structural track, to justify or revise the causal claim."
+          },
+          {
+            "issue_id": "I3",
+            "question": "How are transport vesicles defined as membrane-bound cargo carriers, and what observable state transitions (moving, stationary, paused, cargo-bound) are documented along microtubules?",
+            "strategy": "state production / organism scope — obtain source defining vesicle identity and observationally grounded state transitions to replace unsupported entity/states."
+          },
+          {
+            "issue_id": "I4",
+            "question": "Is microtubule track provision a distinct temporally bounded process or a standing structural capability concurrent with transport?",
+            "strategy": "state production — retrieve source clarifying whether microtubule availability is a precondition/capability rather than a bounded process, to decide merge vs revise temporal scope."
+          },
+          {
+            "issue_id": "I5",
+            "question": "What evidence establishes that a particular vesicle is associated with a particular microtubule during an observed transport interval (relation persistence at observable resolution)?",
+            "strategy": "organism scope / conflicting source — find single-molecule or live-imaging source describing vesicle–microtubule association during transport to downgrade or reframe deterministic observables."
+          },
+          {
+            "issue_id": "I6",
+            "question": "Do sources specify motor-protein identity and directionality (kinesin toward plus end, dynein toward minus end) sufficient to resolve the flagged uncertainties rather than leave them unresolved?",
+            "strategy": "missing role — retrieve source naming motors and directionality so unresolved identity can be resolved or explicitly propagated to title/scope."
+          },
+          {
+            "issue_id": "CAUSAL_2",
+            "question": "What declares or produces the initial condition 'microtubule_present' prior to track provision and transport?",
+            "strategy": "state production — source must establish microtubule presence as an initial condition or upstream process to fix unreachable precondition."
+          },
+          {
+            "issue_id": "CAUSAL_3",
+            "question": "What declares or produces 'microtubule_present_as_track' before transport, and is it an initial state or produced process?",
+            "strategy": "missing role / state production — retrieve source clarifying microtubule track availability as precondition vs produced state."
+          },
+          {
+            "issue_id": "CAUSAL_4",
+            "question": "What declares or produces 'vesicle_present' (cargo vesicle biogenesis or supply) prior to motor-driven transport?",
+            "strategy": "state production — source should identify upstream vesicle generation/trafficking origin so transport precondition is reachable."
+          }
+        ]
+      },
+      "retrieval": {
+        "evidence": [
+          {
+            "evidence_id": "E_1feed90d4349",
+            "url": "https://reactome.org/content/detail/R-HSA-983189",
+            "title": "Reactome | Kinesins",
+            "author_or_institution": "reactome.org",
+            "source_type": "retrieved_scientific_webpage",
+            "biological_scope": "Requires independent scope verification against quoted passages",
+            "accessed_utc": "2026-11-25T11:52:24Z",
+            "content_sha256": "672f037bccc43821363933ceef4565f68fac4fb51ea0454b03a5c4eca4ee90cd",
+            "saved_text": "/autodl-tmp/code2biovideo/biovideo-v4.3.1/Code2Video/experiments/biology_expert_v4_3_1/research/vesicle_transport/E_1feed90d4349.txt",
+            "passages": [
+              {
+                "location": "paragraph_1",
+                "text": "Lawrence, CJ , Dawe, RK , Christie, KR , Cleveland, DW , Dawson, SC , Endow, SA , Goldstein, LS , Goodson, HV , Hirokawa, N , Howard, J , Malmberg, RL , McIntosh, JR , Miki, H , Mitchison, TJ , Okada, Y , Reddy, AS , Saxton, WM , Schliwa, M , Scholey, JM , Vale, RD , Walczak, CE , Wordeman, L"
+              }
+            ],
+            "figures": [],
+            "fact_support": [],
+            "conflicts": [],
+            "trust_limitations": "Publisher authority and exact quotes do not establish entailment; independent contract review required",
+            "status": "RETRIEVED"
+          }
+        ],
+        "failures": [
+          {
+            "source": "public HTML discovery",
+            "error": "ValueError"
+          },
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK9903/",
+            "error": "ValueError"
+          },
+          {
+            "url": "https://www.molbiolcell.org/doi/10.1091/mbc.E14-05-0993",
+            "error": "HTTPError"
+          },
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK26876/",
+            "error": "ValueError"
+          }
+        ],
+        "search_records": [
+          {
+            "query": "k",
+            "service": "Europe PMC",
+            "results": [
+              {
+                "id": "42963254",
+                "source": "MED",
+                "pmid": "42963254",
+                "doi": "10.1016/j.jvoice.2026.03.037",
+                "title": "The Singing Voice Rehabilitation Specialist (SVRS) and Aligning Modern Practice with Updated Terminology: An Editorial.",
+                "authorString": "Ragan K, Rosenberg M.",
+                "journalTitle": "J Voice",
+                "pubYear": "2028",
+                "journalIssn": "0892-1997; 1873-4588; ",
+                "pageInfo": "S0892-1997(26)00154-2",
+                "pubType": "editorial",
+                "isOpenAccess": "N",
+                "inEPMC": "N",
+                "inPMC": "N",
+                "citedByCount": 0,
+                "hasReferences": "N",
+                "hasTextMinedTerms": "N",
+                "hasDbCrossReferences": "N",
+                "hasPDF": "N",
+                "hasBook": "N",
+                "hasSuppl": "N",
+                "hasLabsLinks": "N",
+                "hasTMAccessionNumbers": "N",
+                "firstPublicationDate": "2028-05-22",
+                "firstIndexDate": "2026-10-31"
+              },
+              {
+                "id": "42887130",
+                "source": "MED",
+                "pmid": "42887130",
+                "doi": "10.1016/j.esmoop.2026.108533",
+                "title": "Pan-Asian adapted ESMO Clinical Practice Guidelines for the diagnosis, treatment and follow-up of patients with early and locally advanced non-small-cell lung cancer.",
+                "authorString": "Hayashi H, Zer A, Kenmotsu H, Tachihara M, Cui J, Sutandyo N, Lokeshwar N, Lee GW, Voon PJ, Samala K, Ang MK, Chiu CH, Sriuranpong V, Reungwetwattana T, Liao BC, Soo RA, Ladrera GEI, Alip A, Kim HR, Basade M, Rumende CM, Wang J, Popat S, Lim E, Tsutani Y, Matsuo Y, Minami H, Leighl N.",
+                "journalTitle": "ESMO Open",
+                "issue": "11",
+                "journalVolume": "11",
+                "pubYear": "2027",
+                "journalIssn": "2059-7029",
+                "pageInfo": "108533",
+                "pubType": "practice guideline; journal article",
+                "isOpenAccess": "N",
+                "inEPMC": "N",
+                "inPMC": "N",
+                "citedByCount": 0,
+                "hasReferences": "Y",
+                "hasTextMinedTerms": "Y",
+                "hasDbCrossReferences": "N",
+                "hasPDF": "N",
+                "hasBook": "N",
+                "hasSuppl": "N",
+                "hasLabsLinks": "Y",
+                "hasTMAccessionNumbers": "N",
+                "firstPublicationDate": "2027-12-31",
+                "firstIndexDate": "2026-10-19"
+              }
+            ]
+          }
+        ],
+        "research_status": "RETRIEVED",
+        "discovery": "Agent planned queries + live bibliographic search + content fetch, no legacy topic catalogue"
+      },
+      "new_sources": 1
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E_1feed90d4349",
+      "url": "https://reactome.org/content/detail/R-HSA-983189",
+      "title": "Reactome | Kinesins",
+      "author_or_institution": "reactome.org",
+      "source_type": "retrieved_scientific_webpage",
+      "biological_scope": "Requires independent scope verification against quoted passages",
+      "accessed_utc": "2026-11-25T11:52:24Z",
+      "content_sha256": "672f037bccc43821363933ceef4565f68fac4fb51ea0454b03a5c4eca4ee90cd",
+      "saved_text": "/autodl-tmp/code2biovideo/biovideo-v4.3.1/Code2Video/experiments/biology_expert_v4_3_1/research/vesicle_transport/E_1feed90d4349.txt",
+      "passages": [
+        {
+          "location": "paragraph_1",
+          "text": "Lawrence, CJ , Dawe, RK , Christie, KR , Cleveland, DW , Dawson, SC , Endow, SA , Goldstein, LS , Goodson, HV , Hirokawa, N , Howard, J , Malmberg, RL , McIntosh, JR , Miki, H , Mitchison, TJ , Okada, Y , Reddy, AS , Saxton, WM , Schliwa, M , Scholey, JM , Vale, RD , Walczak, CE , Wordeman, L"
+        }
+      ],
+      "figures": [],
+      "fact_support": [],
+      "conflicts": [],
+      "trust_limitations": "Publisher authority and exact quotes do not establish entailment; independent contract review required",
+      "status": "RETRIEVED"
+    }
+  ]
+}

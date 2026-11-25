@@ -1,0 +1,44 @@
+{
+  "patches": [
+    {
+      "index": 6,
+      "support": [
+        {
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "While the leading strand is continuously synthesized by the enzyme pol ε , the lagging strand is synthesized by pol δ .",
+          "location": "paragraph_4"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "support": [
+        {
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "As pol δ runs into the primer RNA on the lagging strand, it displaces it from the DNA template.",
+          "location": "paragraph_4"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "support": [
+        {
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "As pol δ runs into the primer RNA on the lagging strand, it displaces it from the DNA template.",
+          "location": "paragraph_4"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "support": [
+        {
+          "evidence_id": "E_d8ffea5a5785",
+          "quote": "As pol δ runs into the primer RNA on the lagging strand, it displaces it from the DNA template.",
+          "location": "paragraph_4"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "gap_hash": "259cf9914824f3c7526a59169f47ff0b90f0fb609ca00488084368d9f9ef4f8c",
+  "attempts": [
+    {
+      "plan": {
+        "candidate_urls": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK26820/",
+          "https://www.molbiolcell.org/doi/10.1091/mbc.E13-10-0589",
+          "https://www.ncbi.nlm.nih.gov/books/NBK9932/",
+          "https://www.jneurosci.org/content/36/16/4511"
+        ],
+        "scientific_queries": "kinesin dynein motor proteins vesicle transport microtubules mechanism directionality review",
+        "gap_mapping": [
+          {
+            "issue_id": "I1",
+            "question": "Which specific motor proteins (kinesin, dynein) are identified as the actors moving vesicles along microtubules, and what exact passage names them?",
+            "strategy": "missing role — retrieve independent specialist or textbook source with explicit motor-protein actor statements"
+          },
+          {
+            "issue_id": "I2",
+            "question": "What evidence establishes that vesicle movement along microtubules is causally dependent on motor proteins rather than merely a structural track affordance?",
+            "strategy": "causal mechanism — obtain passage stating active, motor-driven transport, not just track presence"
+          },
+          {
+            "issue_id": "I3",
+            "question": "How is a transport vesicle defined as a membrane-bound cargo carrier, and what observable state transitions (moving/stationary) are documented along microtubules?",
+            "strategy": "organism/entity scope — find source defining vesicle identity and vesicle-specific state behavior on microtubules"
+          },
+          {
+            "issue_id": "I4",
+            "question": "Is microtubule track provision described as a temporally bounded process concurrent with vesicle transport, or only as a static structural capability?",
+            "strategy": "state production — retrieve passage specifying whether track provision has start/end conditions or is static"
+          },
+          {
+            "issue_id": "I5",
+            "question": "Does evidence state that a particular vesicle is on/along a specific microtubule during an observed interval, supporting deterministic temporal persistence?",
+            "strategy": "state production — locate passage with particular (not generic) track-vesicle relation at observable time resolution"
+          },
+          {
+            "issue_id": "I6",
+            "question": "What is the scientific identity and directionality of the motor proteins involved, and does evidence resolve kinesin/dynein identity sufficiently to support the 'motor-protein-dependent' title?",
+            "strategy": "conflicting source / unresolved identity — retrieve source naming specific motors and directionality to resolve or justify propagating uncertainty"
+          }
+        ]
+      },
+      "retrieval": {
+        "evidence": [],
+        "failures": [
+          {
+            "source": "public HTML discovery",
+            "error": "ValueError"
+          },
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK26820/",
+            "error": "ValueError"
+          },
+          {
+            "url": "https://www.molbiolcell.org/doi/10.1091/mbc.E13-10-0589",
+            "error": "HTTPError"
+          },
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK9932/",
+            "error": "ValueError"
+          },
+          {
+            "url": "https://www.jneurosci.org/content/36/16/4511",
+            "error": "HTTPError"
+          }
+        ],
+        "search_records": [
+          {
+            "query": "k",
+            "service": "Europe PMC",
+            "results": [
+              {
+                "id": "42963254",
+                "source": "MED",
+                "pmid": "42963254",
+                "doi": "10.1016/j.jvoice.2026.03.037",
+                "title": "The Singing Voice Rehabilitation Specialist (SVRS) and Aligning Modern Practice with Updated Terminology: An Editorial.",
+                "authorString": "Ragan K, Rosenberg M.",
+                "journalTitle": "J Voice",
+                "pubYear": "2028",
+                "journalIssn": "0892-1997; 1873-4588; ",
+                "pageInfo": "S0892-1997(26)00154-2",
+                "pubType": "editorial",
+                "isOpenAccess": "N",
+                "inEPMC": "N",
+                "inPMC": "N",
+                "citedByCount": 0,
+                "hasReferences": "N",
+                "hasTextMinedTerms": "N",
+                "hasDbCrossReferences": "N",
+                "hasPDF": "N",
+                "hasBook": "N",
+                "hasSuppl": "N",
+                "hasLabsLinks": "N",
+                "hasTMAccessionNumbers": "N",
+                "firstPublicationDate": "2028-05-22",
+                "firstIndexDate": "2026-10-31"
+              },
+              {
+                "id": "42887130",
+                "source": "MED",
+                "pmid": "42887130",
+                "doi": "10.1016/j.esmoop.2026.108533",
+                "title": "Pan-Asian adapted ESMO Clinical Practice Guidelines for the diagnosis, treatment and follow-up of patients with early and locally advanced non-small-cell lung cancer.",
+                "authorString": "Hayashi H, Zer A, Kenmotsu H, Tachihara M, Cui J, Sutandyo N, Lokeshwar N, Lee GW, Voon PJ, Samala K, Ang MK, Chiu CH, Sriuranpong V, Reungwetwattana T, Liao BC, Soo RA, Ladrera GEI, Alip A, Kim HR, Basade M, Rumende CM, Wang J, Popat S, Lim E, Tsutani Y, Matsuo Y, Minami H, Leighl N.",
+                "journalTitle": "ESMO Open",
+                "issue": "11",
+                "journalVolume": "11",
+                "pubYear": "2027",
+                "journalIssn": "2059-7029",
+                "pageInfo": "108533",
+                "pubType": "practice guideline; journal article",
+                "isOpenAccess": "N",
+                "inEPMC": "N",
+                "inPMC": "N",
+                "citedByCount": 0,
+                "hasReferences": "Y",
+                "hasTextMinedTerms": "Y",
+                "hasDbCrossReferences": "N",
+                "hasPDF": "N",
+                "hasBook": "N",
+                "hasSuppl": "N",
+                "hasLabsLinks": "Y",
+                "hasTMAccessionNumbers": "N",
+                "firstPublicationDate": "2027-12-31",
+                "firstIndexDate": "2026-10-19"
+              }
+            ]
+          }
+        ],
+        "research_status": "UNVERIFIED",
+        "discovery": "Agent planned queries + live bibliographic search + content fetch, no legacy topic catalogue"
+      },
+      "new_sources": 0
+    },
+    {
+      "plan": {
+        "candidate_urls": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK9961/",
+          "https://www.ncbi.nlm.nih.gov/books/NBK9932/",
+          "https://bio.libretexts.org/Bookshelves/Introductory_and_General_Biology/General_Biology_(Boundless)/05%3A_Structure_and_Function_of_Plasma_Membranes/5.06%3A_Cytoskeleton/5.6.03%3A_Microtubules",
+          "https://www.khanacademy.org/science/ap-biology/cell-structure-and-function/cytoskeleton-tour/a/microtubules-and-the-spindle-apparatus"
+        ],
+        "scientific_queries": [
+          "kinesin dynein motor protein vesicle transport microtubule mechanism directional cargo transport review"
+        ],
+        "gap_mapping": [
+          {
+            "issue_id": "I1",
+            "question": "Which motor proteins (kinesin, dynein) are explicitly identified as the actors driving vesicle transport along microtubules, and via what coupling to the vesicle?",
+            "strategy": "missing_role"
+          },
+          {
+            "issue_id": "I2",
+            "question": "What causal mechanism (motor-protein ATP-dependent stepping) supports the claim that vesicle movement along microtubules is motor-protein-dependent rather than a mere structural track affordance?",
+            "strategy": "causal_mechanism"
+          },
+          {
+            "issue_id": "I3",
+            "question": "How is a transport vesicle defined as a membrane-bound cargo carrier, and what observable state transitions (moving/stationary) are documented along microtubules?",
+            "strategy": "organism_scope"
+          },
+          {
+            "issue_id": "I4",
+            "question": "Is microtubule track provision a static structural capability or a temporally bounded process concurrent with transport, and what are its defined start/end conditions?",
+            "strategy": "state_production"
+          },
+          {
+            "issue_id": "I5",
+            "question": "What evidence establishes that a specific vesicle persists on a specific microtubule during an observed transport interval at observable time resolution?",
+            "strategy": "missing_role"
+          },
+          {
+            "issue_id": "I6",
+            "question": "Which specific motor proteins and directionality (plus-end kinesin, minus-end dynein) are resolved in specialist sources so the 'motor-protein-dependent' scope can be substantiated rather than flagged unresolved?",
+            "strategy": "conflicting_source"
+          },
+          {
+            "issue_id": "CAUSAL_1",
+            "question": "What initial-state declarations (microtubule_present, vesicle_present, motor protein available) are required to make transport preconditions reachable in a typed process model?",
+            "strategy": "state_production"
+          },
+          {
+            "issue_id": "CAUSAL_2",
+            "question": "Which process produces the precondition microtubule_present, and is it an initial state or a modeled upstream process?",
+            "strategy": "state_production"
+          },
+          {
+            "issue_id": "CAUSAL_3",
+            "question": "Which process produces microtubule_present_as_track for the transport process, and at what temporal scope?",
+            "strategy": "state_production"
+          },
+          {
+            "issue_id": "CAUSAL_4",
+            "question": "Which process produces vesicle_present (vesicle biogenesis/budding) upstream of transport, so the transport precondition is reachable?",
+            "strategy": "state_production"
+          },
+          {
+            "issue_id": "INSUFFICIENT_EVIDENCE",
+            "question": "What substantive independent specialist source provides exact mechanism paragraphs (motor protein, ATP hydrolysis, directional stepping, cargo attachment) rather than title-only pages?",
+            "strategy": "conflicting_source"
+          }
+        ]
+      },
+      "retrieval": {
+        "evidence": [],
+        "failures": [
+          {
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=kinesin%20dynein%20motor%20protein%20vesicle%20transport%20microtubule%20mechanism%20directional%20cargo%20transport%20review&format=json&pageSize=2",
+            "error": "ReadTimeout"
+          },
+          {
+            "source": "public HTML discovery",
+            "error": "ValueError"
+          },
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK9961/",
+            "error": "ValueError"
+          },
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK9932/",
+            "error": "ValueError"
+          },
+          {
+            "url": "https://bio.libretexts.org/Bookshelves/Introductory_and_General_Biology/General_Biology_(Boundless)/05%3A_Structure_and_Function_of_Plasma_Membranes/5.06%3A_Cytoskeleton/5.6.03%3A_Microtubules",
+            "error": "HTTPError"
+          },
+          {
+            "url": "https://www.khanacademy.org/science/ap-biology/cell-structure-and-function/cytoskeleton-tour/a/microtubules-and-the-spindle-apparatus",
+            "error": "ValueError"
+          }
+        ],
+        "search_records": [],
+        "research_status": "UNVERIFIED",
+        "discovery": "Agent planned queries + live bibliographic search + content fetch, no legacy topic catalogue"
+      },
+      "new_sources": 0
+    }
+  ],
+  "evidence": [],
+  "stop_reason": "NO_PROGRESS"
+}

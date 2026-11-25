@@ -1,0 +1,40 @@
+{
+  "runs": [
+    {
+      "provider": "wan",
+      "model_id": "wan3.0-video",
+      "request_sha256": "7efb2c6f79b2279bbcf5d91191a0a48533f670a3f1cf8dbb062d18aecb902d20",
+      "first_frame_sha256": "397789b3d06faef96aa3c974b8d83510fddbd0dd05975285158876504cd1da3b",
+      "last_frame_sha256": "9bc2da3ba1a57a7b929857e0d8243e6e1366fa78930e146e8c32edeaba51b488",
+      "prompt_sha256": "db1bc622d85041e9d466ff58dcad6420d515156a82bd0e2a45f4f9c51d0dde45",
+      "submission_status": "REJECTED",
+      "generation_status": "NOT_STARTED",
+      "task_id": null,
+      "submitted_at": 1795608102.2145584,
+      "estimate": {
+        "estimated_cny": 1.5,
+        "basis": "Official Beijing output seconds list price; actual billed cost may differ",
+        "actual_cost": null
+      },
+      "http_status": 403,
+      "response": {
+        "request_id": "223c94c4-9970-9519-ac3a-3d9e87c963f8",
+        "code": "AccessDenied.Unpurchased",
+        "message": "Access to model denied. Please make sure you are eligible for using the model."
+      },
+      "input_model_sha256": "6025f8b0e664ad88c12fcc931e7ef35998099e20250dc061ed34053be4427642",
+      "duration_requested": 5,
+      "resolution_requested": "480P",
+      "actual_duration": null,
+      "video_sha256": null,
+      "reported_cost": null,
+      "error": "AccessDenied.Unpurchased"
+    },
+    {
+      "provider": "seedance",
+      "submission_status": "NOT_SUBMITTED",
+      "generation_status": "NOT_TESTED",
+      "reason": "User selected Wan only"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "science": {
+    "decision": "REVISE",
+    "issues": [
+      "Kinetochore orientation is inverted in both frames: the two yellow kinetochore dots sit on the inner (center‑facing) edges of the sister chromatids, i.e. the sister kinetochores face each other rather than facing their respective opposite poles. This contradicts the required bipolar (amphitelic) geometry in which each sister's kinetochore faces the pole it is attached to.",
+      "Consequently the microtubule from each blue pole is drawn attaching to the center‑facing kinetochore of the nearer chromatid, so the fiber would have to pass behind/through the chromatid to reach its attachment site — a topologically inconsistent kinetochore‑microtubule attachment in both the aligned (frame 1) and separated (frame 2) states.",
+      "In frame 2 each separated chromatid should carry its kinetochore on the pole‑facing (outer) side as it moves poleward; the pixels show the kinetochore on the inner side, so 'each retaining correct attachment' is not satisfied on orientation."
+    ]
+  },
+  "visual": {
+    "decision": "PASS",
+    "issues": [
+      "Microtubules are rendered as a single continuous horizontal line through both kinetochores rather than as two distinct pole‑to‑kinetochore fibers, which makes the per‑pole attachment ambiguous and compounds the topology error noted under science."
+    ]
+  },
+  "observations": [
+    "Frame 1 (first): black field; two blue circular poles at left and right; a vertical thin line at center marking the equatorial/metaphase plane; two adjacent vertical pink bars (the joined sister‑chromatid pair) centered on that plane; one yellow kinetochore dot on the inner edge of each bar; a horizontal gray fiber line running from each pole through the kinetochores.",
+    "Frame 2 (last): same two blue poles; the two pink bars now displaced toward the left and right poles respectively; each bar carries a single yellow kinetochore dot on its inner (center‑facing) edge; the horizontal fiber from each pole connects to that inner dot; the vertical equatorial line remains in the center; exactly two chromatid entities are present (no extra copies).",
+    "Entity identity/topology across frames: the same two chromatid entities persist and separate to opposite poles (correct cardinality and no duplication), but the kinetochore‑facing direction is inconsistent with poleward orientation in both endpoints.",
+    "Cohesin cleavage is not depicted, consistent with the stated out‑of‑scope simplification; only the observable connection breakdown is implied."
+  ],
+  "limitations": [
+    "Only two endpoint frames were supplied; intermediate motion/direction cannot be verified, but the endpoint kinetochore topology already fails the bipolar‑attachment requirement, so motion verification is moot for the decision.",
+    "The schematic is low‑detail; the inner‑vs‑outer reading of each yellow kinetochore dot is the basis of the topology call and is the main source of the REVISE decision.",
+    "No molecular cohesin/separase mechanism is shown (deliberately out of scope); this is not counted as a defect."
+  ]
+}

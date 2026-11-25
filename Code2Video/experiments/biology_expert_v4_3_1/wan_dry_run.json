@@ -1,0 +1,16 @@
+{
+  "submission_status": "DRY_RUN",
+  "submitted": false,
+  "request_sha256": "7efb2c6f79b2279bbcf5d91191a0a48533f670a3f1cf8dbb062d18aecb902d20",
+  "capabilities": {
+    "valid": true,
+    "errors": [],
+    "entitlement": "REAL_SUBMISSION_REQUIRED",
+    "docs": "https://help.aliyun.com/zh/model-studio/wan3-video-generation-api-reference"
+  },
+  "estimate": {
+    "estimated_cny": 1.5,
+    "basis": "Official Beijing output seconds list price; actual billed cost may differ",
+    "actual_cost": null
+  }
+}

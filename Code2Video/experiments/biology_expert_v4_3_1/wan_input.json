@@ -1,0 +1,8 @@
+{
+  "prompt": "固定镜头、黑色背景的高中生物教学示意动画。严格保持首尾图中的同一对粉色姐妹染色单体、两个黄色动粒、左右蓝色纺锤极和各自连接的灰色微管。起初姐妹染色单体排列在中央赤道位置，然后同一对姐妹连续分离并向左右相反的纺锤极移动，左右身份保持不变。微管一端固定在相应纺锤极，另一端持续接触其对应动粒，随运动缩短。只表示一条复制染色体的示意分离，不表现分子切割机制。不得复制、增加、消除科学对象，不得交换连接，不得让两条染色单体融合或无依据变形。保持平面示意风格、清晰边界和连续运动；无文字、无字幕、无声音，不改变视角。",
+  "first_frame": "/autodl-tmp/code2biovideo/biovideo-v4.3.1/Code2Video/experiments/biology_expert_v4_3_1/references/first_frame.png",
+  "last_frame": "/autodl-tmp/code2biovideo/biovideo-v4.3.1/Code2Video/experiments/biology_expert_v4_3_1/references/last_frame.png",
+  "duration": 5,
+  "resolution": "480P",
+  "seed": 431
+}

@@ -1,0 +1,56 @@
+{
+  "samples": 124,
+  "issues": [],
+  "relation_evidence_counts": {
+    "RUNTIME_OBSERVED": 248,
+    "DECLARED_ONLY": 107
+  },
+  "object_evidence_levels": {
+    "pole_left": "RUNTIME_OBSERVED",
+    "pole_right": "RUNTIME_OBSERVED",
+    "metaphase_plate": "RUNTIME_OBSERVED",
+    "sister_chromatid_A": "RUNTIME_OBSERVED",
+    "sister_chromatid_B": "RUNTIME_OBSERVED",
+    "kinetochore_A": "RUNTIME_OBSERVED",
+    "kinetochore_B": "RUNTIME_OBSERVED",
+    "kmt_left": "RUNTIME_OBSERVED",
+    "kmt_right": "RUNTIME_OBSERVED"
+  },
+  "pixel_verification": "NOT_MEASURED",
+  "claim": "Runtime geometry visibility and endpoints only; no pixel or biological PASS inferred.",
+  "visual_dispute": {
+    "video_sha256": "c035449dc554645baf35a11b7855b8d0a85253ea2d06af39bf780bdde32e9f2d",
+    "verdict": "NOT_CORROBORATED",
+    "reason": "Exact decoded frames and original sampled-frame model review do not support claimed label doubling. No new reviewer vote used. All original conflicting opinions retained.",
+    "deterministic_registered_layout_checks": [
+      {
+        "time_requested": 1.2,
+        "trace_time": 1.1333333333333333,
+        "label_instances": 10,
+        "label_bbox_overlaps": [],
+        "source_frame": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/actual_frame_1.2.png",
+        "scope": "Registered label box overlap only; no pixel double-image detector"
+      },
+      {
+        "time_requested": 2.2,
+        "trace_time": 2.1333333333333333,
+        "label_instances": 10,
+        "label_bbox_overlaps": [],
+        "source_frame": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/actual_frame_2.2.png",
+        "scope": "Registered label box overlap only; no pixel double-image detector"
+      },
+      {
+        "time_requested": 4.2,
+        "trace_time": 4.133333333333338,
+        "label_instances": 10,
+        "label_bbox_overlaps": [],
+        "source_frame": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/actual_frame_4.2.png",
+        "scope": "Registered label box overlap only; no pixel double-image detector"
+      }
+    ],
+    "limitations": "Cannot conclude every-frame absence of image artifacts; sampled observations only."
+  },
+  "original_scene_ref": "../biology_expert_v4_3/sample_scene.json",
+  "replay_scene_sha256": "e1d84bb392a6a1c2150b3dbd3a276c3fe618ba347c75c5b84bb606eea7a491bc",
+  "trace_sha256": "526dc1e71069fcb738210b5ebf069c5c4e1575e888f0dfd60a65aec3f59ab7b5"
+}

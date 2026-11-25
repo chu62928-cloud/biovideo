@@ -1,0 +1,76 @@
+{
+  "decision": "REVISE",
+  "issues": [
+    {
+      "target_id": "PROC_POL_DELTA_EXTENSION",
+      "reason": "Source says pol alpha 'hands off to a second polymerase' and separately that the lagging strand is synthesized by pol delta; the model's precondition 'pol_alpha_handoff_complete' feeding pol delta as the named recipient is a teaching schematic, not a direct entailment. It is flagged as a simplification, but the causal edge should be marked schematic in the typed relation, not only in prose.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    },
+    {
+      "target_id": "ENT_RNASE_H",
+      "reason": "Source text conflates RNase H and flap endonuclease in one parenthetical; the model correctly labels identity unresolved, but the entity is still typed 'enzyme' and used as a single causal actor in PROC_PRIMER_REMOVAL. That overstates that a single resolved enzyme catalyzes removal; capability PARTIAL is not sufficient if the participant identity itself is unresolved.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    },
+    {
+      "target_id": "PROC_PRIMER_REMOVAL",
+      "reason": "Source states displaced primer RNA is removed and 'replaced with DNA nucleotides', but the model asserts primer_replaced_with_dna as an effect of the removal process without any modeled polymerase/gap-filling actor. Representing replacement as a product state without an actor is a teaching simplification that should be explicitly typed as unmodeled synthesis, otherwise it implies removal entails replacement.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    },
+    {
+      "target_id": "OBS_GAPS_SEALED",
+      "reason": "Ligase is stated to seal 'the gaps that remain' and form a phosphodiester bond, but the model's gap_state and ENT_GAP_SUBSTRATE do not distinguish a nick (single-strand break after replacement) from a gap (missing nucleotides). The observable's semantics are acceptable only if the simplified gap-vs-nick distinction is declared; currently it is not.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    },
+    {
+      "target_id": "PROC_PRIMER_FORMATION",
+      "reason": "Source says primers are formed by primase, but the model's initial_state 'primer_exists: none' combined with a single local primer process omits that on the lagging strand multiple primers are formed; for a local-region model this is acceptable, but the scope should state that only one primer event is modeled so 'none' is not read as genome-wide.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    }
+  ],
+  "observable_reviews": [
+    {
+      "constraint_id": "OBS_PRIMER_FORMED",
+      "decision": "PASS",
+      "reason": "Source directly states primers are formed by primase and DNA pol can then start synthesis; state transition enzyme->product is entailed for a local primer event."
+    },
+    {
+      "constraint_id": "OBS_ALPHA_EXTENDS_PRIMER",
+      "decision": "PASS",
+      "reason": "Source states pol alpha adds a short 20-30 nt DNA fragment to the RNA primer on both strands; relation_holds_during with PARTIAL capability honestly delimits the mechanism."
+    },
+    {
+      "constraint_id": "OBS_DELTA_SYNTHESIZES_LAGGING_DNA",
+      "decision": "PASS",
+      "reason": "Source states the lagging strand is synthesized by pol delta; directly entailed for the local lagging region."
+    },
+    {
+      "constraint_id": "OBS_DELTA_DISPLACES_PRIMER",
+      "decision": "REVISE",
+      "reason": "Source supports pol delta running into primer RNA and displacing it, but the model's state key 'primer_displaced' is produced as an effect of the same process that also synthesizes DNA; ordering within the process is not specified in source. Observable semantics should mark intra-process ordering as unmodeled."
+    },
+    {
+      "constraint_id": "OBS_PRIMER_REMOVED",
+      "decision": "REVISE",
+      "reason": "Source supports removal by RNase H/flap endonuclease and replacement with DNA nucleotides, but the observable asserts only primer_removed while the process effect also asserts primer_replaced_with_dna with no modeled replacement actor; the post-state is not fully source-supported as an automatic consequence of removal."
+    },
+    {
+      "constraint_id": "OBS_GAPS_SEALED",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "reason": "Source supports ligase sealing remaining gaps via phosphodiester bond, but the model does not distinguish gap from nick, and the source does not specify that replacement produces a ligatable nick in this local model; narrow observable semantics are only partially supported."
+    }
+  ],
+  "scope_review": "Scope (local eukaryotic lagging-strand priming, pol alpha extension, pol delta synthesis/displacement, primer removal, ligation) matches the task and excludes origins, helicase, topoisomerase, leading-strand pol epsilon, telomerase, nucleosomes, and proofreading. However, the model relies on two schematic moves that must be typed as such rather than asserted: (1) pol alpha hand-off recipient as pol delta; source names only 'a second polymerase' for the hand-off and separately assigns pol delta to lagging-strand synthesis. (2) primer removal => DNA replacement as a product state without a modeled gap-filling polymerase; source states replacement but the model provides no actor, so the effect should be marked unmodeled synthesis. Also, RNase H vs flap endonuclease identity is unresolved in source and should not be a single typed enzyme participant. Gap-vs-nick distinction for ligation is unaddressed. Model cannot receive PASS on these points; unrelated approved elements (primase, pol alpha extension, pol delta lagging synthesis) are preserved.",
+  "model_hash": "98b09ce8bd1c4d881223925817f4f0cc86bf74b0aabb6bb3713cf851a3ab3a48",
+  "separate_request": true,
+  "independent_provider": false
+}

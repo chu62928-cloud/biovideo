@@ -1,0 +1,344 @@
+{
+  "gap_hash": "451ede9b6b2933aedf577f72579ba49a11a35688cfb65350ffe396c8d84d75aa",
+  "attempts": [
+    {
+      "plan": {
+        "candidate_urls": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK26845/",
+          "https://www.ncbi.nlm.nih.gov/books/NBK9933/",
+          "https://www.jbc.org/article/S0021-9258(19)49775-8/fulltext",
+          "https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/rnase-h"
+        ],
+        "scientific_queries": [
+          "eukaryotic DNA replication lagging strand RNA primer removal RNase H1 FEN1 flap endonuclease pol delta displacement nick ligation review"
+        ],
+        "gap_mapping": [
+          {
+            "issue_id": "I1",
+            "question": "Which nuclease(s) remove RNA primers during eukaryotic lagging-strand DNA replication, and are RNase H and FEN1 distinct activities?",
+            "strategy": "missing_role"
+          },
+          {
+            "issue_id": "I2",
+            "question": "Does DNA polymerase alpha hand off specifically to DNA polymerase delta on the lagging strand, or is the recipient polymerase unspecified/context-dependent?",
+            "strategy": "conflicting_source"
+          },
+          {
+            "issue_id": "I3",
+            "question": "What intermediate state (nick with RNA replaced by DNA) is required before DNA ligase seals lagging-strand gaps?",
+            "strategy": "state_production"
+          },
+          {
+            "issue_id": "I4",
+            "question": "Is primer removal a single event or a coupled removal-and-replacement process forming a ligatable nick?",
+            "strategy": "state_production"
+          },
+          {
+            "issue_id": "I5",
+            "question": "Is primer RNA displaced from the template as a distinct state prior to its removal, and what is the mechanism?",
+            "strategy": "causal_mechanism"
+          }
+        ]
+      },
+      "retrieval": {
+        "evidence": [],
+        "failures": [
+          {
+            "source": "public HTML discovery",
+            "error": "ValueError"
+          },
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK26845/",
+            "error": "ValueError"
+          },
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK9933/",
+            "error": "ValueError"
+          },
+          {
+            "url": "https://www.jbc.org/article/S0021-9258(19)49775-8/fulltext",
+            "error": "HTTPError"
+          },
+          {
+            "url": "https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/rnase-h",
+            "error": "HTTPError"
+          }
+        ],
+        "search_records": [
+          {
+            "query": "eukaryotic DNA replication lagging strand RNA primer removal RNase H1 FEN1 flap endonuclease pol delta displacement nick ligation review",
+            "service": "Europe PMC",
+            "results": [
+              {
+                "id": "35879148",
+                "source": "MED",
+                "pmid": "35879148",
+                "pmcid": "PMC9867784",
+                "fullTextIdList": {
+                  "fullTextId": [
+                    "PMC9867784"
+                  ]
+                },
+                "doi": "10.1016/j.tcb.2022.06.014",
+                "title": "Okazaki fragment maturation: DNA flap dynamics for cell proliferation and survival.",
+                "authorString": "Sun H, Ma L, Tsai YF, Abeywardana T, Shen B, Zheng L.",
+                "journalTitle": "Trends Cell Biol",
+                "issue": "3",
+                "journalVolume": "33",
+                "pubYear": "2023",
+                "journalIssn": "0962-8924; 1879-3088; ",
+                "pageInfo": "221-234",
+                "pubType": "research-article; review; journal article; research support, n.i.h., extramural",
+                "isOpenAccess": "N",
+                "inEPMC": "Y",
+                "inPMC": "Y",
+                "citedByCount": 48,
+                "hasReferences": "Y",
+                "hasTextMinedTerms": "Y",
+                "hasDbCrossReferences": "N",
+                "hasPDF": "Y",
+                "hasBook": "N",
+                "hasSuppl": "N",
+                "hasLabsLinks": "Y",
+                "hasTMAccessionNumbers": "Y",
+                "tmAccessionTypeList": {
+                  "accessionType": [
+                    "doi"
+                  ]
+                },
+                "firstPublicationDate": "2022-07-22",
+                "firstIndexDate": "2022-07-26"
+              },
+              {
+                "id": "27093943",
+                "source": "MED",
+                "pmid": "27093943",
+                "pmcid": "PMC5445644",
+                "fullTextIdList": {
+                  "fullTextId": [
+                    "PMC5445644"
+                  ]
+                },
+                "doi": "10.1038/nrm.2016.37",
+                "title": "Processing ribonucleotides incorporated during eukaryotic DNA replication.",
+                "authorString": "Williams JS, Lujan SA, Kunkel TA.",
+                "journalTitle": "Nat Rev Mol Cell Biol",
+                "issue": "6",
+                "journalVolume": "17",
+                "pubYear": "2016",
+                "journalIssn": "1471-0072; 1471-0080; ",
+                "pageInfo": "350-363",
+                "pubType": "research-article; review; journal article",
+                "isOpenAccess": "N",
+                "inEPMC": "Y",
+                "inPMC": "Y",
+                "citedByCount": 166,
+                "hasReferences": "Y",
+                "hasTextMinedTerms": "Y",
+                "hasDbCrossReferences": "N",
+                "hasPDF": "Y",
+                "hasBook": "N",
+                "hasSuppl": "N",
+                "hasLabsLinks": "Y",
+                "hasTMAccessionNumbers": "Y",
+                "tmAccessionTypeList": {
+                  "accessionType": [
+                    "doi"
+                  ]
+                },
+                "firstPublicationDate": "2016-04-20",
+                "firstIndexDate": "2016-04-21"
+              }
+            ]
+          }
+        ],
+        "research_status": "UNVERIFIED",
+        "discovery": "Agent planned queries + live bibliographic search + content fetch, no legacy topic catalogue"
+      },
+      "new_sources": 0
+    },
+    {
+      "plan": {
+        "candidate_urls": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK9942/",
+          "https://www.jbc.org/article/S0021-9258(19)30110-4/fulltext",
+          "https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/rnase-h"
+        ],
+        "scientific_queries": [
+          "eukaryotic Okazaki fragment maturation RNase H1 FEN1 DNA polymerase delta strand displacement primer removal ligation mechanism"
+        ],
+        "gap_mapping": [
+          {
+            "issue_id": "I1",
+            "question": "In eukaryotic Okazaki fragment maturation, is the RNA primer removed by RNase H (ribonuclease H1/H2) alone, by FEN1 flap endonuclease alone, or by a sequential combination, and which activity is attributed to which enzyme?",
+            "strategy": "conflicting_source"
+          },
+          {
+            "issue_id": "I2",
+            "question": "After DNA polymerase alpha synthesizes a short RNA-DNA primer, which specific polymerase (delta or epsilon) is documented as the recipient of the hand-off on the lagging versus leading strand in eukaryotes?",
+            "strategy": "missing_role"
+          },
+          {
+            "issue_id": "I3",
+            "question": "What explicit molecular state (nick with DNA nucleotides replacing RNA, or flap intermediate) must be reached before DNA ligase I seals the lagging-strand nick, and what enzyme activities generate that state?",
+            "strategy": "state_production"
+          },
+          {
+            "issue_id": "I4",
+            "question": "Is RNA primer removal in eukaryotes a single event or a coupled removal-and-replacement process, and what is the terminal state of the primer position after maturation?",
+            "strategy": "causal_mechanism"
+          },
+          {
+            "issue_id": "I5",
+            "question": "Does DNA polymerase delta physically displace the RNA primer from the template as a distinct step before nuclease removal, and is a 'displaced primer' state experimentally distinguished from 'removed primer'?",
+            "strategy": "causal_mechanism"
+          },
+          {
+            "issue_id": "CAUSAL_1",
+            "question": "What initial state conditions (template availability, primer existence, polymerase hand-off) must be explicitly declared for the replication model's process chain to be reachable?",
+            "strategy": "state_production"
+          },
+          {
+            "issue_id": "CAUSAL_2",
+            "question": "Which upstream process or initial condition produces the 'template_available' precondition for primase-dependent primer formation in the local replication model?",
+            "strategy": "state_production"
+          },
+          {
+            "issue_id": "CAUSAL_3",
+            "question": "Which process produces the 'primer_exists' precondition required for DNA polymerase alpha extension, and is it modeled or assumed?",
+            "strategy": "state_production"
+          },
+          {
+            "issue_id": "CAUSAL_4",
+            "question": "Which process produces the 'pol_alpha_handoff_complete' precondition for polymerase delta extension, and is the hand-off recipient specified in authoritative sources?",
+            "strategy": "missing_role"
+          },
+          {
+            "issue_id": "CAUSAL_5",
+            "question": "Which process produces the 'primer_displaced' precondition for primer removal, and is displacement by polymerase delta an experimentally supported distinct step?",
+            "strategy": "causal_mechanism"
+          },
+          {
+            "issue_id": "CAUSAL_6",
+            "question": "Which process produces the 'primers_replaced' precondition for ligation, and what is the molecular identity of the replaced state?",
+            "strategy": "state_production"
+          }
+        ]
+      },
+      "retrieval": {
+        "evidence": [],
+        "failures": [
+          {
+            "source": "public HTML discovery",
+            "error": "ValueError"
+          },
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK9942/",
+            "error": "ValueError"
+          },
+          {
+            "url": "https://www.jbc.org/article/S0021-9258(19)30110-4/fulltext",
+            "error": "HTTPError"
+          },
+          {
+            "url": "https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/rnase-h",
+            "error": "HTTPError"
+          }
+        ],
+        "search_records": [
+          {
+            "query": "eukaryotic Okazaki fragment maturation RNase H1 FEN1 DNA polymerase delta strand displacement primer removal ligation mechanism",
+            "service": "Europe PMC",
+            "results": [
+              {
+                "id": "35879148",
+                "source": "MED",
+                "pmid": "35879148",
+                "pmcid": "PMC9867784",
+                "fullTextIdList": {
+                  "fullTextId": [
+                    "PMC9867784"
+                  ]
+                },
+                "doi": "10.1016/j.tcb.2022.06.014",
+                "title": "Okazaki fragment maturation: DNA flap dynamics for cell proliferation and survival.",
+                "authorString": "Sun H, Ma L, Tsai YF, Abeywardana T, Shen B, Zheng L.",
+                "journalTitle": "Trends Cell Biol",
+                "issue": "3",
+                "journalVolume": "33",
+                "pubYear": "2023",
+                "journalIssn": "0962-8924; 1879-3088; ",
+                "pageInfo": "221-234",
+                "pubType": "research-article; review; journal article; research support, n.i.h., extramural",
+                "isOpenAccess": "N",
+                "inEPMC": "Y",
+                "inPMC": "Y",
+                "citedByCount": 48,
+                "hasReferences": "Y",
+                "hasTextMinedTerms": "Y",
+                "hasDbCrossReferences": "N",
+                "hasPDF": "Y",
+                "hasBook": "N",
+                "hasSuppl": "N",
+                "hasLabsLinks": "Y",
+                "hasTMAccessionNumbers": "Y",
+                "tmAccessionTypeList": {
+                  "accessionType": [
+                    "doi"
+                  ]
+                },
+                "firstPublicationDate": "2022-07-22",
+                "firstIndexDate": "2022-07-26"
+              },
+              {
+                "id": "27093943",
+                "source": "MED",
+                "pmid": "27093943",
+                "pmcid": "PMC5445644",
+                "fullTextIdList": {
+                  "fullTextId": [
+                    "PMC5445644"
+                  ]
+                },
+                "doi": "10.1038/nrm.2016.37",
+                "title": "Processing ribonucleotides incorporated during eukaryotic DNA replication.",
+                "authorString": "Williams JS, Lujan SA, Kunkel TA.",
+                "journalTitle": "Nat Rev Mol Cell Biol",
+                "issue": "6",
+                "journalVolume": "17",
+                "pubYear": "2016",
+                "journalIssn": "1471-0072; 1471-0080; ",
+                "pageInfo": "350-363",
+                "pubType": "research-article; review; journal article",
+                "isOpenAccess": "N",
+                "inEPMC": "Y",
+                "inPMC": "Y",
+                "citedByCount": 166,
+                "hasReferences": "Y",
+                "hasTextMinedTerms": "Y",
+                "hasDbCrossReferences": "N",
+                "hasPDF": "Y",
+                "hasBook": "N",
+                "hasSuppl": "N",
+                "hasLabsLinks": "Y",
+                "hasTMAccessionNumbers": "Y",
+                "tmAccessionTypeList": {
+                  "accessionType": [
+                    "doi"
+                  ]
+                },
+                "firstPublicationDate": "2016-04-20",
+                "firstIndexDate": "2016-04-21"
+              }
+            ]
+          }
+        ],
+        "research_status": "UNVERIFIED",
+        "discovery": "Agent planned queries + live bibliographic search + content fetch, no legacy topic catalogue"
+      },
+      "new_sources": 0
+    }
+  ],
+  "evidence": [],
+  "stop_reason": "NO_PROGRESS"
+}
