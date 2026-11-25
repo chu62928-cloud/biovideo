@@ -1,0 +1,97 @@
+{
+  "experiment": "V4.2.1",
+  "topics": [
+    {
+      "roles_bound": 3,
+      "processes_bound": 2,
+      "runtime_checks_measured": 15,
+      "runtime_full_constraints_verified": 0,
+      "runtime_parent_constraints_partially_verified": 6,
+      "vlm_checks_supported": 8,
+      "scientific_mutations_valid": 6,
+      "scientific_mutations_detected": 6,
+      "mutation_scope": "required scientific participant identity continuity, not full chemical mechanism",
+      "coverage_status": "REVIEW_INCOMPLETE",
+      "contract_review": "REVISE",
+      "final_gate": "REVIEW_INCOMPLETE",
+      "model_calls": 0,
+      "topic": "dna_replication",
+      "static_structure_subchecks": 0,
+      "coverage_before_measured": 0,
+      "coverage_after_measured": 8,
+      "distinct_mutated_objects": 3,
+      "mutated_objects": [
+        "helicase",
+        "primase",
+        "rna_primer_leading"
+      ],
+      "identity_mutation_only": true,
+      "limitations": [
+        "Runtime identity observations are prerequisites of the unchanged contract, not its complete scientific meaning",
+        "No topic-specific rules or manual target-ID mapping used",
+        "No new model requests or videos"
+      ]
+    },
+    {
+      "roles_bound": 4,
+      "processes_bound": 2,
+      "runtime_checks_measured": 17,
+      "runtime_full_constraints_verified": 0,
+      "runtime_parent_constraints_partially_verified": 8,
+      "vlm_checks_supported": 7,
+      "scientific_mutations_valid": 8,
+      "scientific_mutations_detected": 8,
+      "mutation_scope": "required scientific participant identity continuity, not full chemical mechanism",
+      "coverage_status": "REVIEW_INCOMPLETE",
+      "contract_review": "PASS",
+      "final_gate": "REVIEW_INCOMPLETE",
+      "model_calls": 0,
+      "topic": "mitosis",
+      "static_structure_subchecks": 0,
+      "coverage_before_measured": 0,
+      "coverage_after_measured": 7,
+      "distinct_mutated_objects": 3,
+      "mutated_objects": [
+        "kinetochore_A",
+        "kinetochore_B",
+        "sister_A"
+      ],
+      "identity_mutation_only": true,
+      "limitations": [
+        "Runtime identity observations are prerequisites of the unchanged contract, not its complete scientific meaning",
+        "No topic-specific rules or manual target-ID mapping used",
+        "No new model requests or videos"
+      ]
+    },
+    {
+      "roles_bound": 10,
+      "processes_bound": 6,
+      "runtime_checks_measured": 0,
+      "runtime_full_constraints_verified": 0,
+      "runtime_parent_constraints_partially_verified": 0,
+      "vlm_checks_supported": 0,
+      "scientific_mutations_valid": 0,
+      "scientific_mutations_detected": 0,
+      "mutation_scope": "required scientific participant identity continuity, not full chemical mechanism",
+      "coverage_status": "REVIEW_INCOMPLETE",
+      "contract_review": "REVIEW_INCOMPLETE",
+      "final_gate": "REVIEW_INCOMPLETE",
+      "model_calls": 0,
+      "topic": "protein_translation",
+      "static_structure_subchecks": 7,
+      "coverage_before_measured": 0,
+      "coverage_after_measured": 0,
+      "distinct_mutated_objects": 0,
+      "mutated_objects": [],
+      "identity_mutation_only": true,
+      "limitations": [
+        "Runtime identity observations are prerequisites of the unchanged contract, not its complete scientific meaning",
+        "No topic-specific rules or manual target-ID mapping used",
+        "No new model requests or videos"
+      ]
+    }
+  ],
+  "paid_model_calls": 0,
+  "new_videos": 0,
+  "status": "ENGINEERING_INTEGRATED_SCIENTIFIC_REVIEW_INCOMPLETE"
+}

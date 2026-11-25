@@ -1,0 +1,16 @@
+group,topic,roles_bound,runtime_checks_measured,vlm_checks_supported,coverage_status,valid_mutations,detected,missed,false_positives
+G0,dna_replication,,,,REVIEW_INCOMPLETE,,,,
+G1,dna_replication,3,,,REVIEW_INCOMPLETE,,,,
+G2,dna_replication,3,15,,REVIEW_INCOMPLETE,,,,
+G3,dna_replication,3,15,8,REVIEW_INCOMPLETE,,,,
+G4,dna_replication,3,15,8,REVIEW_INCOMPLETE,6,6,0,0
+G0,mitosis,,,,REVIEW_INCOMPLETE,,,,
+G1,mitosis,4,,,REVIEW_INCOMPLETE,,,,
+G2,mitosis,4,17,,REVIEW_INCOMPLETE,,,,
+G3,mitosis,4,17,7,REVIEW_INCOMPLETE,,,,
+G4,mitosis,4,17,7,REVIEW_INCOMPLETE,8,8,0,0
+G0,protein_translation,,,,REVIEW_INCOMPLETE,,,,
+G1,protein_translation,10,,,REVIEW_INCOMPLETE,,,,
+G2,protein_translation,10,0,,REVIEW_INCOMPLETE,,,,
+G3,protein_translation,10,0,0,REVIEW_INCOMPLETE,,,,
+G4,protein_translation,10,0,0,REVIEW_INCOMPLETE,0,0,0,0

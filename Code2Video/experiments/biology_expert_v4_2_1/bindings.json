@@ -1,0 +1,3216 @@
+{
+  "dna_replication": {
+    "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+    "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+    "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+    "bindings": [
+      {
+        "role": "replication_fork",
+        "kind": "entity",
+        "object_ids": [],
+        "event_ids": [],
+        "status": "UNRESOLVED",
+        "method": "insufficient_metadata",
+        "evidence": [],
+        "anchors": {},
+        "candidates": []
+      },
+      {
+        "role": "helicase_enzyme",
+        "kind": "entity",
+        "object_ids": [
+          "helicase"
+        ],
+        "event_ids": [],
+        "status": "BOUND",
+        "method": "combined_identity_and_property_fields",
+        "evidence": [
+          {
+            "matched_fields": [],
+            "identity": {
+              "name": "Helicase",
+              "kind": "enzyme",
+              "origin_id": "helicase"
+            },
+            "properties": {
+              "role": "helicase",
+              "representation_precision": "schematic hexagon, not molecular structure"
+            },
+            "metadata_registered": true,
+            "observed_in_trace": true,
+            "relations": [
+              {
+                "source": "helicase",
+                "target": "template_leading",
+                "type": "active_site",
+                "target_anchor": "junction",
+                "offset": [
+                  0,
+                  0.32,
+                  0
+                ]
+              }
+            ]
+          }
+        ],
+        "anchors": {
+          "helicase": [
+            "center"
+          ]
+        },
+        "candidates": [
+          {
+            "object_id": "helicase",
+            "score": 0.95,
+            "method": "combined_identity_and_property_fields",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "Helicase",
+                "kind": "enzyme",
+                "origin_id": "helicase"
+              },
+              "properties": {
+                "role": "helicase",
+                "representation_precision": "schematic hexagon, not molecular structure"
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": [
+                {
+                  "source": "helicase",
+                  "target": "template_leading",
+                  "type": "active_site",
+                  "target_anchor": "junction",
+                  "offset": [
+                    0,
+                    0.32,
+                    0
+                  ]
+                }
+              ]
+            },
+            "anchors": [
+              "center"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "primase_enzyme",
+        "kind": "entity",
+        "object_ids": [
+          "primase"
+        ],
+        "event_ids": [],
+        "status": "BOUND",
+        "method": "combined_identity_and_property_fields",
+        "evidence": [
+          {
+            "matched_fields": [],
+            "identity": {
+              "name": "RNA primase",
+              "kind": "enzyme",
+              "origin_id": "primase"
+            },
+            "properties": {
+              "role": "Synthesizes short RNA primers to initiate DNA synthesis; does not perform DNA polymerase activity"
+            },
+            "metadata_registered": true,
+            "observed_in_trace": true,
+            "relations": []
+          }
+        ],
+        "anchors": {
+          "primase": [
+            "center"
+          ]
+        },
+        "candidates": [
+          {
+            "object_id": "primase",
+            "score": 0.95,
+            "method": "combined_identity_and_property_fields",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "RNA primase",
+                "kind": "enzyme",
+                "origin_id": "primase"
+              },
+              "properties": {
+                "role": "Synthesizes short RNA primers to initiate DNA synthesis; does not perform DNA polymerase activity"
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": []
+            },
+            "anchors": [
+              "center"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "rna_primer",
+        "kind": "entity",
+        "object_ids": [
+          "rna_primer_leading",
+          "rna_primer_lagging_1",
+          "rna_primer_lagging_2"
+        ],
+        "event_ids": [],
+        "status": "BOUND",
+        "method": "combined_identity_and_property_fields",
+        "evidence": [
+          {
+            "matched_fields": [],
+            "identity": {
+              "name": "rna primer leading",
+              "kind": "RNA_primer",
+              "origin_id": "rna_primer_leading"
+            },
+            "properties": {
+              "material": "RNA",
+              "endpoint_labels": {
+                "start": "5'",
+                "end": "3'"
+              },
+              "growth_port": "end",
+              "biological_role": "RNA initiation; DNA extension starts at primer 3prime and continues away from primer toward growing DNA 3prime"
+            },
+            "metadata_registered": true,
+            "observed_in_trace": true,
+            "relations": [
+              {
+                "source": "rna_primer_leading",
+                "target": "new_leading",
+                "type": "primer_extension_continuity",
+                "source_anchor": "end",
+                "target_anchor": "start",
+                "activation_condition": "both visible; primer relation removed when primer removed"
+              }
+            ]
+          },
+          {
+            "matched_fields": [],
+            "identity": {
+              "name": "rna primer lagging 1",
+              "kind": "RNA_primer",
+              "origin_id": "rna_primer_lagging_1"
+            },
+            "properties": {
+              "material": "RNA",
+              "endpoint_labels": {
+                "start": "3'",
+                "end": "5'"
+              },
+              "growth_port": "start",
+              "biological_role": "RNA initiation; DNA extension starts at primer 3prime and continues away from primer toward growing DNA 3prime"
+            },
+            "metadata_registered": true,
+            "observed_in_trace": true,
+            "relations": [
+              {
+                "source": "rna_primer_lagging_1",
+                "target": "fragment_1",
+                "type": "primer_extension_continuity",
+                "source_anchor": "start",
+                "target_anchor": "start",
+                "activation_condition": "both visible; primer relation removed when primer removed"
+              }
+            ]
+          },
+          {
+            "matched_fields": [],
+            "identity": {
+              "name": "rna primer lagging 2",
+              "kind": "RNA_primer",
+              "origin_id": "rna_primer_lagging_2"
+            },
+            "properties": {
+              "material": "RNA",
+              "endpoint_labels": {
+                "start": "3'",
+                "end": "5'"
+              },
+              "growth_port": "start",
+              "biological_role": "RNA initiation; DNA extension starts at primer 3prime and continues away from primer toward growing DNA 3prime"
+            },
+            "metadata_registered": true,
+            "observed_in_trace": true,
+            "relations": [
+              {
+                "source": "rna_primer_lagging_2",
+                "target": "fragment_2",
+                "type": "primer_extension_continuity",
+                "source_anchor": "start",
+                "target_anchor": "start",
+                "activation_condition": "both visible; primer relation removed when primer removed"
+              }
+            ]
+          }
+        ],
+        "anchors": {
+          "rna_primer_leading": [
+            "center",
+            "start",
+            "end"
+          ],
+          "rna_primer_lagging_1": [
+            "center",
+            "start",
+            "end"
+          ],
+          "rna_primer_lagging_2": [
+            "center",
+            "start",
+            "end"
+          ]
+        },
+        "candidates": [
+          {
+            "object_id": "rna_primer_leading",
+            "score": 0.95,
+            "method": "combined_identity_and_property_fields",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "rna primer leading",
+                "kind": "RNA_primer",
+                "origin_id": "rna_primer_leading"
+              },
+              "properties": {
+                "material": "RNA",
+                "endpoint_labels": {
+                  "start": "5'",
+                  "end": "3'"
+                },
+                "growth_port": "end",
+                "biological_role": "RNA initiation; DNA extension starts at primer 3prime and continues away from primer toward growing DNA 3prime"
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": [
+                {
+                  "source": "rna_primer_leading",
+                  "target": "new_leading",
+                  "type": "primer_extension_continuity",
+                  "source_anchor": "end",
+                  "target_anchor": "start",
+                  "activation_condition": "both visible; primer relation removed when primer removed"
+                }
+              ]
+            },
+            "anchors": [
+              "center",
+              "start",
+              "end"
+            ]
+          },
+          {
+            "object_id": "rna_primer_lagging_1",
+            "score": 0.95,
+            "method": "combined_identity_and_property_fields",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "rna primer lagging 1",
+                "kind": "RNA_primer",
+                "origin_id": "rna_primer_lagging_1"
+              },
+              "properties": {
+                "material": "RNA",
+                "endpoint_labels": {
+                  "start": "3'",
+                  "end": "5'"
+                },
+                "growth_port": "start",
+                "biological_role": "RNA initiation; DNA extension starts at primer 3prime and continues away from primer toward growing DNA 3prime"
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": [
+                {
+                  "source": "rna_primer_lagging_1",
+                  "target": "fragment_1",
+                  "type": "primer_extension_continuity",
+                  "source_anchor": "start",
+                  "target_anchor": "start",
+                  "activation_condition": "both visible; primer relation removed when primer removed"
+                }
+              ]
+            },
+            "anchors": [
+              "center",
+              "start",
+              "end"
+            ]
+          },
+          {
+            "object_id": "rna_primer_lagging_2",
+            "score": 0.95,
+            "method": "combined_identity_and_property_fields",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "rna primer lagging 2",
+                "kind": "RNA_primer",
+                "origin_id": "rna_primer_lagging_2"
+              },
+              "properties": {
+                "material": "RNA",
+                "endpoint_labels": {
+                  "start": "3'",
+                  "end": "5'"
+                },
+                "growth_port": "start",
+                "biological_role": "RNA initiation; DNA extension starts at primer 3prime and continues away from primer toward growing DNA 3prime"
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": [
+                {
+                  "source": "rna_primer_lagging_2",
+                  "target": "fragment_2",
+                  "type": "primer_extension_continuity",
+                  "source_anchor": "start",
+                  "target_anchor": "start",
+                  "activation_condition": "both visible; primer relation removed when primer removed"
+                }
+              ]
+            },
+            "anchors": [
+              "center",
+              "start",
+              "end"
+            ]
+          },
+          {
+            "object_id": "primase",
+            "score": 0.4,
+            "method": "lexical_candidate_only",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "RNA primase",
+                "kind": "enzyme",
+                "origin_id": "primase"
+              },
+              "properties": {
+                "role": "Synthesizes short RNA primers to initiate DNA synthesis; does not perform DNA polymerase activity"
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": []
+            },
+            "anchors": [
+              "center"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "dna_pol_alpha",
+        "kind": "entity",
+        "object_ids": [],
+        "event_ids": [],
+        "status": "UNRESOLVED",
+        "method": "insufficient_metadata",
+        "evidence": [],
+        "anchors": {},
+        "candidates": []
+      },
+      {
+        "role": "dna_pol_epsilon",
+        "kind": "entity",
+        "object_ids": [],
+        "event_ids": [],
+        "status": "AMBIGUOUS",
+        "method": "insufficient_metadata",
+        "evidence": [],
+        "anchors": {},
+        "candidates": [
+          {
+            "object_id": "polymerase_leading",
+            "score": 0.5333333333333333,
+            "method": "lexical_candidate_only",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "Pol epsilon",
+                "kind": "enzyme",
+                "origin_id": "polymerase_leading"
+              },
+              "properties": {
+                "role": "Pol epsilon"
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": []
+            },
+            "anchors": [
+              "center"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "dna_pol_delta",
+        "kind": "entity",
+        "object_ids": [],
+        "event_ids": [],
+        "status": "AMBIGUOUS",
+        "method": "insufficient_metadata",
+        "evidence": [],
+        "anchors": {},
+        "candidates": [
+          {
+            "object_id": "polymerase_lagging",
+            "score": 0.5333333333333333,
+            "method": "lexical_candidate_only",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "Pol delta",
+                "kind": "enzyme",
+                "origin_id": "polymerase_lagging"
+              },
+              "properties": {
+                "role": "Pol delta"
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": []
+            },
+            "anchors": [
+              "center"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "leading_strand",
+        "kind": "entity",
+        "object_ids": [],
+        "event_ids": [],
+        "status": "AMBIGUOUS",
+        "method": "insufficient_metadata",
+        "evidence": [],
+        "anchors": {},
+        "candidates": [
+          {
+            "object_id": "template_leading",
+            "score": 0.4,
+            "method": "lexical_candidate_only",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "template leading",
+                "kind": "parental_strand",
+                "origin_id": "template_leading"
+              },
+              "properties": {
+                "polarity": [
+                  "3'",
+                  "5'"
+                ],
+                "parent_assembly": "replication_fork",
+                "endpoint_labels": {
+                  "start": "3'",
+                  "end": "5'"
+                }
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": [
+                {
+                  "source": "template_leading",
+                  "target": "template_lagging",
+                  "type": "paired_parental_region",
+                  "source_anchor": "pair_0",
+                  "target_anchor": "pair_0",
+                  "draw_link": "pairing_rung_0"
+                },
+                {
+                  "source": "template_leading",
+                  "target": "template_lagging",
+                  "type": "paired_parental_region",
+                  "source_anchor": "pair_1",
+                  "target_anchor": "pair_1",
+                  "draw_link": "pairing_rung_1"
+                },
+                {
+                  "source": "template_leading",
+                  "target": "template_lagging",
+                  "type": "paired_parental_region",
+                  "source_anchor": "pair_2",
+                  "target_anchor": "pair_2",
+                  "draw_link": "pairing_rung_2"
+                },
+                {
+                  "source": "template_leading",
+                  "target": "template_lagging",
+                  "type": "paired_parental_region",
+                  "source_anchor": "pair_3",
+                  "target_anchor": "pair_3",
+                  "draw_link": "pairing_rung_3"
+                },
+                {
+                  "source": "template_leading",
+                  "target": "template_lagging",
+                  "type": "paired_parental_region",
+                  "source_anchor": "pair_4",
+                  "target_anchor": "pair_4",
+                  "draw_link": "pairing_rung_4"
+                }
+              ]
+            },
+            "anchors": [
+              "center",
+              "start",
+              "end",
+              "junction",
+              "pair_0",
+              "pair_1",
+              "pair_2",
+              "pair_3",
+              "pair_4",
+              "pair_5",
+              "pair_6",
+              "pair_7"
+            ]
+          },
+          {
+            "object_id": "rna_primer_leading",
+            "score": 0.4,
+            "method": "lexical_candidate_only",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "rna primer leading",
+                "kind": "RNA_primer",
+                "origin_id": "rna_primer_leading"
+              },
+              "properties": {
+                "material": "RNA",
+                "endpoint_labels": {
+                  "start": "5'",
+                  "end": "3'"
+                },
+                "growth_port": "end",
+                "biological_role": "RNA initiation; DNA extension starts at primer 3prime and continues away from primer toward growing DNA 3prime"
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": [
+                {
+                  "source": "rna_primer_leading",
+                  "target": "new_leading",
+                  "type": "primer_extension_continuity",
+                  "source_anchor": "end",
+                  "target_anchor": "start",
+                  "activation_condition": "both visible; primer relation removed when primer removed"
+                }
+              ]
+            },
+            "anchors": [
+              "center",
+              "start",
+              "end"
+            ]
+          },
+          {
+            "object_id": "new_leading",
+            "score": 0.4,
+            "method": "lexical_candidate_only",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "new leading",
+                "kind": "nascent_strand",
+                "origin_id": "new_leading"
+              },
+              "properties": {
+                "material": "DNA",
+                "endpoint_labels": {
+                  "start": "5'",
+                  "end": "3'"
+                },
+                "growth_port": "end",
+                "template_id": "template_leading",
+                "polarity_evidence_ids": [
+                  "X_7574276a",
+                  "X_bf28604c"
+                ]
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": [
+                {
+                  "source": "rna_primer_leading",
+                  "target": "new_leading",
+                  "type": "primer_extension_continuity",
+                  "source_anchor": "end",
+                  "target_anchor": "start",
+                  "activation_condition": "both visible; primer relation removed when primer removed"
+                }
+              ]
+            },
+            "anchors": [
+              "center",
+              "start",
+              "end"
+            ]
+          },
+          {
+            "object_id": "polymerase_leading",
+            "score": 0.4,
+            "method": "lexical_candidate_only",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "Pol epsilon",
+                "kind": "enzyme",
+                "origin_id": "polymerase_leading"
+              },
+              "properties": {
+                "role": "Pol epsilon"
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": []
+            },
+            "anchors": [
+              "center"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "lagging_strand",
+        "kind": "entity",
+        "object_ids": [],
+        "event_ids": [],
+        "status": "AMBIGUOUS",
+        "method": "insufficient_metadata",
+        "evidence": [],
+        "anchors": {},
+        "candidates": [
+          {
+            "object_id": "template_lagging",
+            "score": 0.4,
+            "method": "lexical_candidate_only",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "template lagging",
+                "kind": "parental_strand",
+                "origin_id": "template_lagging"
+              },
+              "properties": {
+                "polarity": [
+                  "5'",
+                  "3'"
+                ],
+                "parent_assembly": "replication_fork",
+                "endpoint_labels": {
+                  "start": "5'",
+                  "end": "3'"
+                }
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": [
+                {
+                  "source": "template_leading",
+                  "target": "template_lagging",
+                  "type": "paired_parental_region",
+                  "source_anchor": "pair_0",
+                  "target_anchor": "pair_0",
+                  "draw_link": "pairing_rung_0"
+                },
+                {
+                  "source": "template_leading",
+                  "target": "template_lagging",
+                  "type": "paired_parental_region",
+                  "source_anchor": "pair_1",
+                  "target_anchor": "pair_1",
+                  "draw_link": "pairing_rung_1"
+                },
+                {
+                  "source": "template_leading",
+                  "target": "template_lagging",
+                  "type": "paired_parental_region",
+                  "source_anchor": "pair_2",
+                  "target_anchor": "pair_2",
+                  "draw_link": "pairing_rung_2"
+                },
+                {
+                  "source": "template_leading",
+                  "target": "template_lagging",
+                  "type": "paired_parental_region",
+                  "source_anchor": "pair_3",
+                  "target_anchor": "pair_3",
+                  "draw_link": "pairing_rung_3"
+                },
+                {
+                  "source": "template_leading",
+                  "target": "template_lagging",
+                  "type": "paired_parental_region",
+                  "source_anchor": "pair_4",
+                  "target_anchor": "pair_4",
+                  "draw_link": "pairing_rung_4"
+                }
+              ]
+            },
+            "anchors": [
+              "center",
+              "start",
+              "end",
+              "junction",
+              "pair_0",
+              "pair_1",
+              "pair_2",
+              "pair_3",
+              "pair_4",
+              "pair_5",
+              "pair_6",
+              "pair_7"
+            ]
+          },
+          {
+            "object_id": "rna_primer_lagging_1",
+            "score": 0.4,
+            "method": "lexical_candidate_only",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "rna primer lagging 1",
+                "kind": "RNA_primer",
+                "origin_id": "rna_primer_lagging_1"
+              },
+              "properties": {
+                "material": "RNA",
+                "endpoint_labels": {
+                  "start": "3'",
+                  "end": "5'"
+                },
+                "growth_port": "start",
+                "biological_role": "RNA initiation; DNA extension starts at primer 3prime and continues away from primer toward growing DNA 3prime"
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": [
+                {
+                  "source": "rna_primer_lagging_1",
+                  "target": "fragment_1",
+                  "type": "primer_extension_continuity",
+                  "source_anchor": "start",
+                  "target_anchor": "start",
+                  "activation_condition": "both visible; primer relation removed when primer removed"
+                }
+              ]
+            },
+            "anchors": [
+              "center",
+              "start",
+              "end"
+            ]
+          },
+          {
+            "object_id": "rna_primer_lagging_2",
+            "score": 0.4,
+            "method": "lexical_candidate_only",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "rna primer lagging 2",
+                "kind": "RNA_primer",
+                "origin_id": "rna_primer_lagging_2"
+              },
+              "properties": {
+                "material": "RNA",
+                "endpoint_labels": {
+                  "start": "3'",
+                  "end": "5'"
+                },
+                "growth_port": "start",
+                "biological_role": "RNA initiation; DNA extension starts at primer 3prime and continues away from primer toward growing DNA 3prime"
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": [
+                {
+                  "source": "rna_primer_lagging_2",
+                  "target": "fragment_2",
+                  "type": "primer_extension_continuity",
+                  "source_anchor": "start",
+                  "target_anchor": "start",
+                  "activation_condition": "both visible; primer relation removed when primer removed"
+                }
+              ]
+            },
+            "anchors": [
+              "center",
+              "start",
+              "end"
+            ]
+          },
+          {
+            "object_id": "polymerase_lagging",
+            "score": 0.4,
+            "method": "lexical_candidate_only",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "Pol delta",
+                "kind": "enzyme",
+                "origin_id": "polymerase_lagging"
+              },
+              "properties": {
+                "role": "Pol delta"
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": []
+            },
+            "anchors": [
+              "center"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "okazaki_fragment",
+        "kind": "entity",
+        "object_ids": [],
+        "event_ids": [],
+        "status": "AMBIGUOUS",
+        "method": "insufficient_metadata",
+        "evidence": [],
+        "anchors": {},
+        "candidates": [
+          {
+            "object_id": "fragment_1",
+            "score": 0.4,
+            "method": "lexical_candidate_only",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "fragment 1",
+                "kind": "nascent_strand",
+                "origin_id": "fragment_1"
+              },
+              "properties": {
+                "material": "DNA",
+                "endpoint_labels": {
+                  "start": "5'",
+                  "end": "3'"
+                },
+                "growth_port": "end",
+                "template_id": "template_lagging",
+                "polarity_evidence_ids": [
+                  "X_7574276a",
+                  "X_bf28604c"
+                ]
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": [
+                {
+                  "source": "rna_primer_lagging_1",
+                  "target": "fragment_1",
+                  "type": "primer_extension_continuity",
+                  "source_anchor": "start",
+                  "target_anchor": "start",
+                  "activation_condition": "both visible; primer relation removed when primer removed"
+                }
+              ]
+            },
+            "anchors": [
+              "center",
+              "start",
+              "end"
+            ]
+          },
+          {
+            "object_id": "fragment_2",
+            "score": 0.4,
+            "method": "lexical_candidate_only",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "fragment 2",
+                "kind": "nascent_strand",
+                "origin_id": "fragment_2"
+              },
+              "properties": {
+                "material": "DNA",
+                "endpoint_labels": {
+                  "start": "5'",
+                  "end": "3'"
+                },
+                "growth_port": "end",
+                "template_id": "template_lagging",
+                "polarity_evidence_ids": [
+                  "X_7574276a",
+                  "X_bf28604c"
+                ]
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": [
+                {
+                  "source": "rna_primer_lagging_2",
+                  "target": "fragment_2",
+                  "type": "primer_extension_continuity",
+                  "source_anchor": "start",
+                  "target_anchor": "start",
+                  "activation_condition": "both visible; primer relation removed when primer removed"
+                }
+              ]
+            },
+            "anchors": [
+              "center",
+              "start",
+              "end"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "rnase_h_enzyme",
+        "kind": "entity",
+        "object_ids": [],
+        "event_ids": [],
+        "status": "UNRESOLVED",
+        "method": "insufficient_metadata",
+        "evidence": [],
+        "anchors": {},
+        "candidates": []
+      },
+      {
+        "role": "dna_ligase_enzyme",
+        "kind": "entity",
+        "object_ids": [],
+        "event_ids": [],
+        "status": "AMBIGUOUS",
+        "method": "insufficient_metadata",
+        "evidence": [],
+        "anchors": {},
+        "candidates": [
+          {
+            "object_id": "primase",
+            "score": 0.4,
+            "method": "lexical_candidate_only",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "RNA primase",
+                "kind": "enzyme",
+                "origin_id": "primase"
+              },
+              "properties": {
+                "role": "Synthesizes short RNA primers to initiate DNA synthesis; does not perform DNA polymerase activity"
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": []
+            },
+            "anchors": [
+              "center"
+            ]
+          },
+          {
+            "object_id": "ligase",
+            "score": 0.4,
+            "method": "lexical_candidate_only",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "Ligase",
+                "kind": "enzyme",
+                "origin_id": "ligase"
+              },
+              "properties": {
+                "role": "Ligase"
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": []
+            },
+            "anchors": [
+              "center"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "phosphodiester_bond",
+        "kind": "entity",
+        "object_ids": [],
+        "event_ids": [],
+        "status": "UNRESOLVED",
+        "method": "insufficient_metadata",
+        "evidence": [],
+        "anchors": {},
+        "candidates": []
+      },
+      {
+        "role": "fork_opening",
+        "kind": "process",
+        "object_ids": [],
+        "event_ids": [
+          "event_1_fork"
+        ],
+        "status": "BOUND",
+        "method": "explicit_event_or_process_role",
+        "evidence": [
+          {
+            "event_id": "event_1_fork",
+            "score": 0.5,
+            "process_ids": [
+              "open_fork"
+            ],
+            "exact": false
+          }
+        ],
+        "candidates": [
+          {
+            "event_id": "event_1_fork",
+            "score": 0.5,
+            "process_ids": [
+              "open_fork"
+            ],
+            "exact": false
+          }
+        ]
+      },
+      {
+        "role": "rna_priming",
+        "kind": "process",
+        "object_ids": [],
+        "event_ids": [
+          "event_2_priming"
+        ],
+        "status": "BOUND",
+        "method": "explicit_event_or_process_role",
+        "evidence": [
+          {
+            "event_id": "event_2_priming",
+            "score": 0.5,
+            "process_ids": [
+              "prime"
+            ],
+            "exact": false
+          }
+        ],
+        "candidates": [
+          {
+            "event_id": "event_2_priming",
+            "score": 0.5,
+            "process_ids": [
+              "prime"
+            ],
+            "exact": false
+          }
+        ]
+      },
+      {
+        "role": "leading_strand_synthesis",
+        "kind": "process",
+        "object_ids": [],
+        "event_ids": [],
+        "status": "UNRESOLVED",
+        "method": "insufficient_event_semantics",
+        "evidence": [],
+        "candidates": []
+      },
+      {
+        "role": "lagging_strand_synthesis",
+        "kind": "process",
+        "object_ids": [],
+        "event_ids": [],
+        "status": "UNRESOLVED",
+        "method": "insufficient_event_semantics",
+        "evidence": [],
+        "candidates": []
+      },
+      {
+        "role": "primer_replacement",
+        "kind": "process",
+        "object_ids": [],
+        "event_ids": [],
+        "status": "UNRESOLVED",
+        "method": "insufficient_event_semantics",
+        "evidence": [],
+        "candidates": []
+      },
+      {
+        "role": "nick_sealing",
+        "kind": "process",
+        "object_ids": [],
+        "event_ids": [],
+        "status": "UNRESOLVED",
+        "method": "insufficient_event_semantics",
+        "evidence": [],
+        "candidates": []
+      }
+    ],
+    "unresolved_roles": [
+      "replication_fork",
+      "dna_pol_alpha",
+      "rnase_h_enzyme",
+      "phosphodiester_bond",
+      "leading_strand_synthesis",
+      "lagging_strand_synthesis",
+      "primer_replacement",
+      "nick_sealing"
+    ],
+    "ambiguous_roles": [
+      "dna_pol_epsilon",
+      "dna_pol_delta",
+      "leading_strand",
+      "lagging_strand",
+      "okazaki_fragment",
+      "dna_ligase_enzyme"
+    ]
+  },
+  "mitosis": {
+    "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+    "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+    "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+    "bindings": [
+      {
+        "role": "duplicated_chromosome",
+        "kind": "entity",
+        "object_ids": [],
+        "event_ids": [],
+        "status": "UNRESOLVED",
+        "method": "insufficient_metadata",
+        "evidence": [],
+        "anchors": {},
+        "candidates": []
+      },
+      {
+        "role": "sister_chromatid_a",
+        "kind": "entity",
+        "object_ids": [
+          "sister_A"
+        ],
+        "event_ids": [],
+        "status": "BOUND",
+        "method": "combined_identity_and_property_fields",
+        "evidence": [
+          {
+            "matched_fields": [],
+            "identity": {
+              "name": "Chromatid A",
+              "kind": "chromatid",
+              "origin_id": "sister_A"
+            },
+            "properties": {
+              "current_role": "sister_chromatid",
+              "sister_id": "sister_B",
+              "centromeric_region": "centromere anchor; persists after cohesion cleavage"
+            },
+            "metadata_registered": true,
+            "observed_in_trace": true,
+            "relations": [
+              {
+                "source": "sister_A",
+                "target": "sister_B",
+                "type": "sister_cohesion",
+                "source_anchor": "centromere",
+                "target_anchor": "centromere",
+                "scientific_relation": "sister_cohesion_via_cohesin"
+              },
+              {
+                "source": "kinetochore_A",
+                "target": "sister_A",
+                "type": "attachment",
+                "target_anchor": "centromere",
+                "scientific_relation": "kinetochore_at_centromere"
+              },
+              {
+                "source": "kinetochore_A",
+                "target": "sister_A",
+                "type": "kinetochore_at_centromere",
+                "source_anchor": "center",
+                "target_anchor": "centromere"
+              },
+              {
+                "source": "sister_A",
+                "target": "sister_B",
+                "type": "sister_cohesion",
+                "source_anchor": "centromere",
+                "target_anchor": "centromere",
+                "scientific_relation": "sister_cohesion_via_cohesin"
+              },
+              {
+                "source": "kinetochore_A",
+                "target": "sister_A",
+                "type": "attachment",
+                "target_anchor": "centromere",
+                "scientific_relation": "kinetochore_at_centromere"
+              }
+            ]
+          }
+        ],
+        "anchors": {
+          "sister_A": [
+            "center",
+            "start",
+            "end",
+            "kinetochore_site",
+            "centromere"
+          ]
+        },
+        "candidates": [
+          {
+            "object_id": "sister_A",
+            "score": 0.95,
+            "method": "combined_identity_and_property_fields",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "Chromatid A",
+                "kind": "chromatid",
+                "origin_id": "sister_A"
+              },
+              "properties": {
+                "current_role": "sister_chromatid",
+                "sister_id": "sister_B",
+                "centromeric_region": "centromere anchor; persists after cohesion cleavage"
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": [
+                {
+                  "source": "sister_A",
+                  "target": "sister_B",
+                  "type": "sister_cohesion",
+                  "source_anchor": "centromere",
+                  "target_anchor": "centromere",
+                  "scientific_relation": "sister_cohesion_via_cohesin"
+                },
+                {
+                  "source": "kinetochore_A",
+                  "target": "sister_A",
+                  "type": "attachment",
+                  "target_anchor": "centromere",
+                  "scientific_relation": "kinetochore_at_centromere"
+                },
+                {
+                  "source": "kinetochore_A",
+                  "target": "sister_A",
+                  "type": "kinetochore_at_centromere",
+                  "source_anchor": "center",
+                  "target_anchor": "centromere"
+                },
+                {
+                  "source": "sister_A",
+                  "target": "sister_B",
+                  "type": "sister_cohesion",
+                  "source_anchor": "centromere",
+                  "target_anchor": "centromere",
+                  "scientific_relation": "sister_cohesion_via_cohesin"
+                },
+                {
+                  "source": "kinetochore_A",
+                  "target": "sister_A",
+                  "type": "attachment",
+                  "target_anchor": "centromere",
+                  "scientific_relation": "kinetochore_at_centromere"
+                }
+              ]
+            },
+            "anchors": [
+              "center",
+              "start",
+              "end",
+              "kinetochore_site",
+              "centromere"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "sister_chromatid_b",
+        "kind": "entity",
+        "object_ids": [
+          "sister_B"
+        ],
+        "event_ids": [],
+        "status": "BOUND",
+        "method": "combined_identity_and_property_fields",
+        "evidence": [
+          {
+            "matched_fields": [],
+            "identity": {
+              "name": "Chromatid B",
+              "kind": "chromatid",
+              "origin_id": "sister_B"
+            },
+            "properties": {
+              "current_role": "sister_chromatid",
+              "sister_id": "sister_A",
+              "centromeric_region": "centromere anchor; persists after cohesion cleavage"
+            },
+            "metadata_registered": true,
+            "observed_in_trace": true,
+            "relations": [
+              {
+                "source": "sister_A",
+                "target": "sister_B",
+                "type": "sister_cohesion",
+                "source_anchor": "centromere",
+                "target_anchor": "centromere",
+                "scientific_relation": "sister_cohesion_via_cohesin"
+              },
+              {
+                "source": "kinetochore_B",
+                "target": "sister_B",
+                "type": "attachment",
+                "target_anchor": "centromere",
+                "scientific_relation": "kinetochore_at_centromere"
+              },
+              {
+                "source": "kinetochore_B",
+                "target": "sister_B",
+                "type": "kinetochore_at_centromere",
+                "source_anchor": "center",
+                "target_anchor": "centromere"
+              },
+              {
+                "source": "sister_A",
+                "target": "sister_B",
+                "type": "sister_cohesion",
+                "source_anchor": "centromere",
+                "target_anchor": "centromere",
+                "scientific_relation": "sister_cohesion_via_cohesin"
+              },
+              {
+                "source": "kinetochore_B",
+                "target": "sister_B",
+                "type": "attachment",
+                "target_anchor": "centromere",
+                "scientific_relation": "kinetochore_at_centromere"
+              }
+            ]
+          }
+        ],
+        "anchors": {
+          "sister_B": [
+            "center",
+            "start",
+            "end",
+            "kinetochore_site",
+            "centromere"
+          ]
+        },
+        "candidates": [
+          {
+            "object_id": "sister_B",
+            "score": 0.95,
+            "method": "combined_identity_and_property_fields",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "Chromatid B",
+                "kind": "chromatid",
+                "origin_id": "sister_B"
+              },
+              "properties": {
+                "current_role": "sister_chromatid",
+                "sister_id": "sister_A",
+                "centromeric_region": "centromere anchor; persists after cohesion cleavage"
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": [
+                {
+                  "source": "sister_A",
+                  "target": "sister_B",
+                  "type": "sister_cohesion",
+                  "source_anchor": "centromere",
+                  "target_anchor": "centromere",
+                  "scientific_relation": "sister_cohesion_via_cohesin"
+                },
+                {
+                  "source": "kinetochore_B",
+                  "target": "sister_B",
+                  "type": "attachment",
+                  "target_anchor": "centromere",
+                  "scientific_relation": "kinetochore_at_centromere"
+                },
+                {
+                  "source": "kinetochore_B",
+                  "target": "sister_B",
+                  "type": "kinetochore_at_centromere",
+                  "source_anchor": "center",
+                  "target_anchor": "centromere"
+                },
+                {
+                  "source": "sister_A",
+                  "target": "sister_B",
+                  "type": "sister_cohesion",
+                  "source_anchor": "centromere",
+                  "target_anchor": "centromere",
+                  "scientific_relation": "sister_cohesion_via_cohesin"
+                },
+                {
+                  "source": "kinetochore_B",
+                  "target": "sister_B",
+                  "type": "attachment",
+                  "target_anchor": "centromere",
+                  "scientific_relation": "kinetochore_at_centromere"
+                }
+              ]
+            },
+            "anchors": [
+              "center",
+              "start",
+              "end",
+              "kinetochore_site",
+              "centromere"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "kinetochore_a",
+        "kind": "entity",
+        "object_ids": [
+          "kinetochore_A"
+        ],
+        "event_ids": [],
+        "status": "BOUND",
+        "method": "explicit_identity_or_origin",
+        "evidence": [
+          {
+            "matched_fields": [
+              "kinetochore_A",
+              "kinetochore A",
+              "kinetochore_A"
+            ],
+            "identity": {
+              "name": "kinetochore A",
+              "kind": "kinetochore",
+              "origin_id": "kinetochore_A"
+            },
+            "properties": {
+              "role": "kinetochore at centromere",
+              "faces_pole": "pole_left"
+            },
+            "metadata_registered": true,
+            "observed_in_trace": true,
+            "relations": [
+              {
+                "source": "kinetochore_A",
+                "target": "sister_A",
+                "type": "attachment",
+                "target_anchor": "centromere",
+                "scientific_relation": "kinetochore_at_centromere"
+              },
+              {
+                "source": "kinetochore_A",
+                "target": "sister_A",
+                "type": "kinetochore_at_centromere",
+                "source_anchor": "center",
+                "target_anchor": "centromere"
+              },
+              {
+                "source": "kinetochore_A",
+                "target": "sister_A",
+                "type": "attachment",
+                "target_anchor": "centromere",
+                "scientific_relation": "kinetochore_at_centromere"
+              },
+              {
+                "source": "kinetochore_A",
+                "target": "sister_A",
+                "type": "kinetochore_at_centromere",
+                "source_anchor": "center",
+                "target_anchor": "centromere"
+              }
+            ]
+          }
+        ],
+        "anchors": {
+          "kinetochore_A": [
+            "center"
+          ]
+        },
+        "candidates": [
+          {
+            "object_id": "sister_A",
+            "score": 0.4,
+            "method": "lexical_candidate_only",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "Chromatid A",
+                "kind": "chromatid",
+                "origin_id": "sister_A"
+              },
+              "properties": {
+                "current_role": "sister_chromatid",
+                "sister_id": "sister_B",
+                "centromeric_region": "centromere anchor; persists after cohesion cleavage"
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": [
+                {
+                  "source": "sister_A",
+                  "target": "sister_B",
+                  "type": "sister_cohesion",
+                  "source_anchor": "centromere",
+                  "target_anchor": "centromere",
+                  "scientific_relation": "sister_cohesion_via_cohesin"
+                },
+                {
+                  "source": "kinetochore_A",
+                  "target": "sister_A",
+                  "type": "attachment",
+                  "target_anchor": "centromere",
+                  "scientific_relation": "kinetochore_at_centromere"
+                },
+                {
+                  "source": "kinetochore_A",
+                  "target": "sister_A",
+                  "type": "kinetochore_at_centromere",
+                  "source_anchor": "center",
+                  "target_anchor": "centromere"
+                },
+                {
+                  "source": "sister_A",
+                  "target": "sister_B",
+                  "type": "sister_cohesion",
+                  "source_anchor": "centromere",
+                  "target_anchor": "centromere",
+                  "scientific_relation": "sister_cohesion_via_cohesin"
+                },
+                {
+                  "source": "kinetochore_A",
+                  "target": "sister_A",
+                  "type": "attachment",
+                  "target_anchor": "centromere",
+                  "scientific_relation": "kinetochore_at_centromere"
+                }
+              ]
+            },
+            "anchors": [
+              "center",
+              "start",
+              "end",
+              "kinetochore_site",
+              "centromere"
+            ]
+          },
+          {
+            "object_id": "kinetochore_A",
+            "score": 1.0,
+            "method": "explicit_identity_or_origin",
+            "evidence": {
+              "matched_fields": [
+                "kinetochore_A",
+                "kinetochore A",
+                "kinetochore_A"
+              ],
+              "identity": {
+                "name": "kinetochore A",
+                "kind": "kinetochore",
+                "origin_id": "kinetochore_A"
+              },
+              "properties": {
+                "role": "kinetochore at centromere",
+                "faces_pole": "pole_left"
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": [
+                {
+                  "source": "kinetochore_A",
+                  "target": "sister_A",
+                  "type": "attachment",
+                  "target_anchor": "centromere",
+                  "scientific_relation": "kinetochore_at_centromere"
+                },
+                {
+                  "source": "kinetochore_A",
+                  "target": "sister_A",
+                  "type": "kinetochore_at_centromere",
+                  "source_anchor": "center",
+                  "target_anchor": "centromere"
+                },
+                {
+                  "source": "kinetochore_A",
+                  "target": "sister_A",
+                  "type": "attachment",
+                  "target_anchor": "centromere",
+                  "scientific_relation": "kinetochore_at_centromere"
+                },
+                {
+                  "source": "kinetochore_A",
+                  "target": "sister_A",
+                  "type": "kinetochore_at_centromere",
+                  "source_anchor": "center",
+                  "target_anchor": "centromere"
+                }
+              ]
+            },
+            "anchors": [
+              "center"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "kinetochore_b",
+        "kind": "entity",
+        "object_ids": [
+          "kinetochore_B"
+        ],
+        "event_ids": [],
+        "status": "BOUND",
+        "method": "explicit_identity_or_origin",
+        "evidence": [
+          {
+            "matched_fields": [
+              "kinetochore_B",
+              "kinetochore B",
+              "kinetochore_B"
+            ],
+            "identity": {
+              "name": "kinetochore B",
+              "kind": "kinetochore",
+              "origin_id": "kinetochore_B"
+            },
+            "properties": {
+              "role": "kinetochore at centromere",
+              "faces_pole": "pole_right"
+            },
+            "metadata_registered": true,
+            "observed_in_trace": true,
+            "relations": [
+              {
+                "source": "kinetochore_B",
+                "target": "sister_B",
+                "type": "attachment",
+                "target_anchor": "centromere",
+                "scientific_relation": "kinetochore_at_centromere"
+              },
+              {
+                "source": "kinetochore_B",
+                "target": "sister_B",
+                "type": "kinetochore_at_centromere",
+                "source_anchor": "center",
+                "target_anchor": "centromere"
+              },
+              {
+                "source": "kinetochore_B",
+                "target": "sister_B",
+                "type": "attachment",
+                "target_anchor": "centromere",
+                "scientific_relation": "kinetochore_at_centromere"
+              },
+              {
+                "source": "kinetochore_B",
+                "target": "sister_B",
+                "type": "kinetochore_at_centromere",
+                "source_anchor": "center",
+                "target_anchor": "centromere"
+              }
+            ]
+          }
+        ],
+        "anchors": {
+          "kinetochore_B": [
+            "center"
+          ]
+        },
+        "candidates": [
+          {
+            "object_id": "sister_B",
+            "score": 0.4,
+            "method": "lexical_candidate_only",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "Chromatid B",
+                "kind": "chromatid",
+                "origin_id": "sister_B"
+              },
+              "properties": {
+                "current_role": "sister_chromatid",
+                "sister_id": "sister_A",
+                "centromeric_region": "centromere anchor; persists after cohesion cleavage"
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": [
+                {
+                  "source": "sister_A",
+                  "target": "sister_B",
+                  "type": "sister_cohesion",
+                  "source_anchor": "centromere",
+                  "target_anchor": "centromere",
+                  "scientific_relation": "sister_cohesion_via_cohesin"
+                },
+                {
+                  "source": "kinetochore_B",
+                  "target": "sister_B",
+                  "type": "attachment",
+                  "target_anchor": "centromere",
+                  "scientific_relation": "kinetochore_at_centromere"
+                },
+                {
+                  "source": "kinetochore_B",
+                  "target": "sister_B",
+                  "type": "kinetochore_at_centromere",
+                  "source_anchor": "center",
+                  "target_anchor": "centromere"
+                },
+                {
+                  "source": "sister_A",
+                  "target": "sister_B",
+                  "type": "sister_cohesion",
+                  "source_anchor": "centromere",
+                  "target_anchor": "centromere",
+                  "scientific_relation": "sister_cohesion_via_cohesin"
+                },
+                {
+                  "source": "kinetochore_B",
+                  "target": "sister_B",
+                  "type": "attachment",
+                  "target_anchor": "centromere",
+                  "scientific_relation": "kinetochore_at_centromere"
+                }
+              ]
+            },
+            "anchors": [
+              "center",
+              "start",
+              "end",
+              "kinetochore_site",
+              "centromere"
+            ]
+          },
+          {
+            "object_id": "kinetochore_B",
+            "score": 1.0,
+            "method": "explicit_identity_or_origin",
+            "evidence": {
+              "matched_fields": [
+                "kinetochore_B",
+                "kinetochore B",
+                "kinetochore_B"
+              ],
+              "identity": {
+                "name": "kinetochore B",
+                "kind": "kinetochore",
+                "origin_id": "kinetochore_B"
+              },
+              "properties": {
+                "role": "kinetochore at centromere",
+                "faces_pole": "pole_right"
+              },
+              "metadata_registered": true,
+              "observed_in_trace": true,
+              "relations": [
+                {
+                  "source": "kinetochore_B",
+                  "target": "sister_B",
+                  "type": "attachment",
+                  "target_anchor": "centromere",
+                  "scientific_relation": "kinetochore_at_centromere"
+                },
+                {
+                  "source": "kinetochore_B",
+                  "target": "sister_B",
+                  "type": "kinetochore_at_centromere",
+                  "source_anchor": "center",
+                  "target_anchor": "centromere"
+                },
+                {
+                  "source": "kinetochore_B",
+                  "target": "sister_B",
+                  "type": "attachment",
+                  "target_anchor": "centromere",
+                  "scientific_relation": "kinetochore_at_centromere"
+                },
+                {
+                  "source": "kinetochore_B",
+                  "target": "sister_B",
+                  "type": "kinetochore_at_centromere",
+                  "source_anchor": "center",
+                  "target_anchor": "centromere"
+                }
+              ]
+            },
+            "anchors": [
+              "center"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "spindle_pole_a",
+        "kind": "entity",
+        "object_ids": [],
+        "event_ids": [],
+        "status": "UNRESOLVED",
+        "method": "insufficient_metadata",
+        "evidence": [],
+        "anchors": {},
+        "candidates": []
+      },
+      {
+        "role": "spindle_pole_b",
+        "kind": "entity",
+        "object_ids": [],
+        "event_ids": [],
+        "status": "UNRESOLVED",
+        "method": "insufficient_metadata",
+        "evidence": [],
+        "anchors": {},
+        "candidates": []
+      },
+      {
+        "role": "metaphase_plate",
+        "kind": "entity",
+        "object_ids": [],
+        "event_ids": [],
+        "status": "UNRESOLVED",
+        "method": "insufficient_metadata",
+        "evidence": [],
+        "anchors": {},
+        "candidates": []
+      },
+      {
+        "role": "cohesin",
+        "kind": "entity",
+        "object_ids": [],
+        "event_ids": [],
+        "status": "UNRESOLVED",
+        "method": "insufficient_metadata",
+        "evidence": [],
+        "anchors": {},
+        "candidates": []
+      },
+      {
+        "role": "metaphase_alignment",
+        "kind": "process",
+        "object_ids": [],
+        "event_ids": [
+          "metaphase"
+        ],
+        "status": "BOUND",
+        "method": "explicit_event_or_process_role",
+        "evidence": [
+          {
+            "event_id": "metaphase",
+            "score": 0.5,
+            "process_ids": [
+              "bipolar_attachment"
+            ],
+            "exact": false
+          }
+        ],
+        "candidates": [
+          {
+            "event_id": "metaphase",
+            "score": 0.5,
+            "process_ids": [
+              "bipolar_attachment"
+            ],
+            "exact": false
+          }
+        ]
+      },
+      {
+        "role": "anaphase_separation",
+        "kind": "process",
+        "object_ids": [],
+        "event_ids": [
+          "anaphase"
+        ],
+        "status": "BOUND",
+        "method": "explicit_event_or_process_role",
+        "evidence": [
+          {
+            "event_id": "anaphase",
+            "score": 0.5,
+            "process_ids": [
+              "chromatid_separation"
+            ],
+            "exact": false
+          }
+        ],
+        "candidates": [
+          {
+            "event_id": "anaphase",
+            "score": 0.5,
+            "process_ids": [
+              "chromatid_separation"
+            ],
+            "exact": false
+          }
+        ]
+      }
+    ],
+    "unresolved_roles": [
+      "duplicated_chromosome",
+      "spindle_pole_a",
+      "spindle_pole_b",
+      "metaphase_plate",
+      "cohesin"
+    ],
+    "ambiguous_roles": []
+  },
+  "protein_translation": {
+    "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+    "scene_sha256": "bc65148fa74e95b8c7749a194623fb312d7f0d88dd8c3d921443f3ccec7d32ca",
+    "trace_sha256": null,
+    "bindings": [
+      {
+        "role": "mRNA_template",
+        "kind": "entity",
+        "object_ids": [
+          "OBJ_mRNA"
+        ],
+        "event_ids": [],
+        "status": "BOUND",
+        "method": "explicit_identity_or_origin",
+        "evidence": [
+          {
+            "matched_fields": [
+              "mRNA template",
+              "mRNA_template"
+            ],
+            "identity": {
+              "name": "mRNA template",
+              "kind": "nucleic_acid",
+              "origin_id": "entity_mRNA_template"
+            },
+            "properties": {
+              "direction": "5' to 3'",
+              "features": [
+                "Shine-Dalgarno sequence in bacterial example",
+                "start codon AUG",
+                "codons",
+                "stop codon UAA/UAG/UGA"
+              ]
+            },
+            "metadata_registered": false,
+            "observed_in_trace": false,
+            "relations": [
+              {
+                "source": "OBJ_S30",
+                "target": "OBJ_mRNA",
+                "type": "binds_mRNA_template"
+              },
+              {
+                "source": "OBJ_INITIATOR_TRNA",
+                "target": "OBJ_mRNA",
+                "type": "anticodon_pairs_with_AUG_start_codon"
+              },
+              {
+                "source": "OBJ_CHARGED_TRNA",
+                "target": "OBJ_mRNA",
+                "type": "anticodon_pairs_with_codon_in_A_site"
+              },
+              {
+                "source": "OBJ_RELEASE_FACTOR",
+                "target": "OBJ_mRNA",
+                "type": "recognizes_stop_codon_in_A_site"
+              }
+            ]
+          }
+        ],
+        "anchors": {
+          "OBJ_mRNA": [
+            "5' end",
+            "Shine-Dalgarno sequence",
+            "AUG start codon",
+            "codon in A site",
+            "stop codon in A site",
+            "3' end"
+          ]
+        },
+        "candidates": [
+          {
+            "object_id": "OBJ_mRNA",
+            "score": 1.0,
+            "method": "explicit_identity_or_origin",
+            "evidence": {
+              "matched_fields": [
+                "mRNA template",
+                "mRNA_template"
+              ],
+              "identity": {
+                "name": "mRNA template",
+                "kind": "nucleic_acid",
+                "origin_id": "entity_mRNA_template"
+              },
+              "properties": {
+                "direction": "5' to 3'",
+                "features": [
+                  "Shine-Dalgarno sequence in bacterial example",
+                  "start codon AUG",
+                  "codons",
+                  "stop codon UAA/UAG/UGA"
+                ]
+              },
+              "metadata_registered": false,
+              "observed_in_trace": false,
+              "relations": [
+                {
+                  "source": "OBJ_S30",
+                  "target": "OBJ_mRNA",
+                  "type": "binds_mRNA_template"
+                },
+                {
+                  "source": "OBJ_INITIATOR_TRNA",
+                  "target": "OBJ_mRNA",
+                  "type": "anticodon_pairs_with_AUG_start_codon"
+                },
+                {
+                  "source": "OBJ_CHARGED_TRNA",
+                  "target": "OBJ_mRNA",
+                  "type": "anticodon_pairs_with_codon_in_A_site"
+                },
+                {
+                  "source": "OBJ_RELEASE_FACTOR",
+                  "target": "OBJ_mRNA",
+                  "type": "recognizes_stop_codon_in_A_site"
+                }
+              ]
+            },
+            "anchors": [
+              "5' end",
+              "Shine-Dalgarno sequence",
+              "AUG start codon",
+              "codon in A site",
+              "stop codon in A site",
+              "3' end"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "ribosome_small_subunit",
+        "kind": "entity",
+        "object_ids": [
+          "OBJ_S30"
+        ],
+        "event_ids": [],
+        "status": "BOUND",
+        "method": "explicit_identity_or_origin",
+        "evidence": [
+          {
+            "matched_fields": [
+              "ribosome_small_subunit"
+            ],
+            "identity": {
+              "name": "small ribosomal subunit (30S, E. coli example)",
+              "kind": "ribonucleoprotein_complex",
+              "origin_id": "entity_ribosome_small_subunit"
+            },
+            "properties": {
+              "organism_example": "E. coli 30S",
+              "function": "binds mRNA and anchors via Shine-Dalgarno interaction"
+            },
+            "metadata_registered": false,
+            "observed_in_trace": false,
+            "relations": [
+              {
+                "source": "OBJ_S30",
+                "target": "OBJ_mRNA",
+                "type": "binds_mRNA_template"
+              },
+              {
+                "source": "OBJ_SHINE_DALGARNO",
+                "target": "OBJ_S30",
+                "type": "base_pairs_with_rRNA_anchoring_30S"
+              }
+            ]
+          }
+        ],
+        "anchors": {
+          "OBJ_S30": [
+            "mRNA binding surface",
+            "rRNA complementarity to Shine-Dalgarno sequence"
+          ]
+        },
+        "candidates": [
+          {
+            "object_id": "OBJ_S30",
+            "score": 1.0,
+            "method": "explicit_identity_or_origin",
+            "evidence": {
+              "matched_fields": [
+                "ribosome_small_subunit"
+              ],
+              "identity": {
+                "name": "small ribosomal subunit (30S, E. coli example)",
+                "kind": "ribonucleoprotein_complex",
+                "origin_id": "entity_ribosome_small_subunit"
+              },
+              "properties": {
+                "organism_example": "E. coli 30S",
+                "function": "binds mRNA and anchors via Shine-Dalgarno interaction"
+              },
+              "metadata_registered": false,
+              "observed_in_trace": false,
+              "relations": [
+                {
+                  "source": "OBJ_S30",
+                  "target": "OBJ_mRNA",
+                  "type": "binds_mRNA_template"
+                },
+                {
+                  "source": "OBJ_SHINE_DALGARNO",
+                  "target": "OBJ_S30",
+                  "type": "base_pairs_with_rRNA_anchoring_30S"
+                }
+              ]
+            },
+            "anchors": [
+              "mRNA binding surface",
+              "rRNA complementarity to Shine-Dalgarno sequence"
+            ]
+          },
+          {
+            "object_id": "OBJ_L50",
+            "score": 0.5333333333333333,
+            "method": "lexical_candidate_only",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "large ribosomal subunit (50S, E. coli example)",
+                "kind": "ribonucleoprotein_complex",
+                "origin_id": "entity_ribosome_large_subunit"
+              },
+              "properties": {
+                "organism_example": "E. coli 50S",
+                "function": "binds tRNAs, contains peptidyl transferase ribozyme"
+              },
+              "metadata_registered": false,
+              "observed_in_trace": false,
+              "relations": [
+                {
+                  "source": "OBJ_L50",
+                  "target": "OBJ_RIBOSOME",
+                  "type": "assembles_with_S30_to_form_intact_ribosome"
+                }
+              ]
+            },
+            "anchors": [
+              "A site",
+              "P site",
+              "E site",
+              "peptidyl transferase center"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "ribosome_large_subunit",
+        "kind": "entity",
+        "object_ids": [
+          "OBJ_L50"
+        ],
+        "event_ids": [],
+        "status": "BOUND",
+        "method": "explicit_identity_or_origin",
+        "evidence": [
+          {
+            "matched_fields": [
+              "ribosome_large_subunit"
+            ],
+            "identity": {
+              "name": "large ribosomal subunit (50S, E. coli example)",
+              "kind": "ribonucleoprotein_complex",
+              "origin_id": "entity_ribosome_large_subunit"
+            },
+            "properties": {
+              "organism_example": "E. coli 50S",
+              "function": "binds tRNAs, contains peptidyl transferase ribozyme"
+            },
+            "metadata_registered": false,
+            "observed_in_trace": false,
+            "relations": [
+              {
+                "source": "OBJ_L50",
+                "target": "OBJ_RIBOSOME",
+                "type": "assembles_with_S30_to_form_intact_ribosome"
+              }
+            ]
+          }
+        ],
+        "anchors": {
+          "OBJ_L50": [
+            "A site",
+            "P site",
+            "E site",
+            "peptidyl transferase center"
+          ]
+        },
+        "candidates": [
+          {
+            "object_id": "OBJ_S30",
+            "score": 0.5333333333333333,
+            "method": "lexical_candidate_only",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "small ribosomal subunit (30S, E. coli example)",
+                "kind": "ribonucleoprotein_complex",
+                "origin_id": "entity_ribosome_small_subunit"
+              },
+              "properties": {
+                "organism_example": "E. coli 30S",
+                "function": "binds mRNA and anchors via Shine-Dalgarno interaction"
+              },
+              "metadata_registered": false,
+              "observed_in_trace": false,
+              "relations": [
+                {
+                  "source": "OBJ_S30",
+                  "target": "OBJ_mRNA",
+                  "type": "binds_mRNA_template"
+                },
+                {
+                  "source": "OBJ_SHINE_DALGARNO",
+                  "target": "OBJ_S30",
+                  "type": "base_pairs_with_rRNA_anchoring_30S"
+                }
+              ]
+            },
+            "anchors": [
+              "mRNA binding surface",
+              "rRNA complementarity to Shine-Dalgarno sequence"
+            ]
+          },
+          {
+            "object_id": "OBJ_L50",
+            "score": 1.0,
+            "method": "explicit_identity_or_origin",
+            "evidence": {
+              "matched_fields": [
+                "ribosome_large_subunit"
+              ],
+              "identity": {
+                "name": "large ribosomal subunit (50S, E. coli example)",
+                "kind": "ribonucleoprotein_complex",
+                "origin_id": "entity_ribosome_large_subunit"
+              },
+              "properties": {
+                "organism_example": "E. coli 50S",
+                "function": "binds tRNAs, contains peptidyl transferase ribozyme"
+              },
+              "metadata_registered": false,
+              "observed_in_trace": false,
+              "relations": [
+                {
+                  "source": "OBJ_L50",
+                  "target": "OBJ_RIBOSOME",
+                  "type": "assembles_with_S30_to_form_intact_ribosome"
+                }
+              ]
+            },
+            "anchors": [
+              "A site",
+              "P site",
+              "E site",
+              "peptidyl transferase center"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "intact_ribosome",
+        "kind": "entity",
+        "object_ids": [
+          "OBJ_RIBOSOME"
+        ],
+        "event_ids": [],
+        "status": "BOUND",
+        "method": "explicit_identity_or_origin",
+        "evidence": [
+          {
+            "matched_fields": [
+              "intact ribosome",
+              "intact_ribosome"
+            ],
+            "identity": {
+              "name": "intact ribosome",
+              "kind": "assembled_ribonucleoprotein_complex",
+              "origin_id": "entity_intact_ribosome"
+            },
+            "properties": {
+              "composition": "small + large subunit",
+              "sites": [
+                "A",
+                "P",
+                "E"
+              ]
+            },
+            "metadata_registered": false,
+            "observed_in_trace": false,
+            "relations": [
+              {
+                "source": "OBJ_L50",
+                "target": "OBJ_RIBOSOME",
+                "type": "assembles_with_S30_to_form_intact_ribosome"
+              }
+            ]
+          }
+        ],
+        "anchors": {
+          "OBJ_RIBOSOME": [
+            "A site",
+            "P site",
+            "E site",
+            "mRNA channel"
+          ]
+        },
+        "candidates": [
+          {
+            "object_id": "OBJ_S30",
+            "score": 0.4,
+            "method": "lexical_candidate_only",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "small ribosomal subunit (30S, E. coli example)",
+                "kind": "ribonucleoprotein_complex",
+                "origin_id": "entity_ribosome_small_subunit"
+              },
+              "properties": {
+                "organism_example": "E. coli 30S",
+                "function": "binds mRNA and anchors via Shine-Dalgarno interaction"
+              },
+              "metadata_registered": false,
+              "observed_in_trace": false,
+              "relations": [
+                {
+                  "source": "OBJ_S30",
+                  "target": "OBJ_mRNA",
+                  "type": "binds_mRNA_template"
+                },
+                {
+                  "source": "OBJ_SHINE_DALGARNO",
+                  "target": "OBJ_S30",
+                  "type": "base_pairs_with_rRNA_anchoring_30S"
+                }
+              ]
+            },
+            "anchors": [
+              "mRNA binding surface",
+              "rRNA complementarity to Shine-Dalgarno sequence"
+            ]
+          },
+          {
+            "object_id": "OBJ_L50",
+            "score": 0.4,
+            "method": "lexical_candidate_only",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "large ribosomal subunit (50S, E. coli example)",
+                "kind": "ribonucleoprotein_complex",
+                "origin_id": "entity_ribosome_large_subunit"
+              },
+              "properties": {
+                "organism_example": "E. coli 50S",
+                "function": "binds tRNAs, contains peptidyl transferase ribozyme"
+              },
+              "metadata_registered": false,
+              "observed_in_trace": false,
+              "relations": [
+                {
+                  "source": "OBJ_L50",
+                  "target": "OBJ_RIBOSOME",
+                  "type": "assembles_with_S30_to_form_intact_ribosome"
+                }
+              ]
+            },
+            "anchors": [
+              "A site",
+              "P site",
+              "E site",
+              "peptidyl transferase center"
+            ]
+          },
+          {
+            "object_id": "OBJ_RIBOSOME",
+            "score": 1.0,
+            "method": "explicit_identity_or_origin",
+            "evidence": {
+              "matched_fields": [
+                "intact ribosome",
+                "intact_ribosome"
+              ],
+              "identity": {
+                "name": "intact ribosome",
+                "kind": "assembled_ribonucleoprotein_complex",
+                "origin_id": "entity_intact_ribosome"
+              },
+              "properties": {
+                "composition": "small + large subunit",
+                "sites": [
+                  "A",
+                  "P",
+                  "E"
+                ]
+              },
+              "metadata_registered": false,
+              "observed_in_trace": false,
+              "relations": [
+                {
+                  "source": "OBJ_L50",
+                  "target": "OBJ_RIBOSOME",
+                  "type": "assembles_with_S30_to_form_intact_ribosome"
+                }
+              ]
+            },
+            "anchors": [
+              "A site",
+              "P site",
+              "E site",
+              "mRNA channel"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "charged_tRNA",
+        "kind": "entity",
+        "object_ids": [
+          "OBJ_CHARGED_TRNA"
+        ],
+        "event_ids": [],
+        "status": "BOUND",
+        "method": "explicit_identity_or_origin",
+        "evidence": [
+          {
+            "matched_fields": [
+              "charged_tRNA"
+            ],
+            "identity": {
+              "name": "charged aminoacyl-tRNA",
+              "kind": "aminoacyl_trna",
+              "origin_id": "entity_charged_tRNA"
+            },
+            "properties": {
+              "function": "carries amino acid and anticodon",
+              "entry_site": "A site"
+            },
+            "metadata_registered": false,
+            "observed_in_trace": false,
+            "relations": [
+              {
+                "source": "OBJ_CHARGED_TRNA",
+                "target": "OBJ_mRNA",
+                "type": "anticodon_pairs_with_codon_in_A_site"
+              },
+              {
+                "source": "OBJ_GROWING_POLYPEPTIDE",
+                "target": "OBJ_CHARGED_TRNA",
+                "type": "linked_to_P_site_tRNA_until_translocation"
+              }
+            ]
+          }
+        ],
+        "anchors": {
+          "OBJ_CHARGED_TRNA": [
+            "anticodon",
+            "amino-acid attachment end",
+            "A site",
+            "P site",
+            "E site"
+          ]
+        },
+        "candidates": [
+          {
+            "object_id": "OBJ_INITIATOR_TRNA",
+            "score": 0.5333333333333333,
+            "method": "lexical_candidate_only",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "initiator tRNA (fMet-tRNA_fMet in E. coli; Met-tRNAi in eukaryotes)",
+                "kind": "aminoacyl_trna",
+                "origin_id": "entity_initiator_tRNA"
+              },
+              "properties": {
+                "bacterial_example": "fMet-tRNA_fMet",
+                "eukaryotic_example": "Met-tRNAi",
+                "entry_site": "P site directly"
+              },
+              "metadata_registered": false,
+              "observed_in_trace": false,
+              "relations": [
+                {
+                  "source": "OBJ_INITIATOR_TRNA",
+                  "target": "OBJ_mRNA",
+                  "type": "anticodon_pairs_with_AUG_start_codon"
+                }
+              ]
+            },
+            "anchors": [
+              "anticodon",
+              "amino-acid attachment end",
+              "P site"
+            ]
+          },
+          {
+            "object_id": "OBJ_CHARGED_TRNA",
+            "score": 1.0,
+            "method": "explicit_identity_or_origin",
+            "evidence": {
+              "matched_fields": [
+                "charged_tRNA"
+              ],
+              "identity": {
+                "name": "charged aminoacyl-tRNA",
+                "kind": "aminoacyl_trna",
+                "origin_id": "entity_charged_tRNA"
+              },
+              "properties": {
+                "function": "carries amino acid and anticodon",
+                "entry_site": "A site"
+              },
+              "metadata_registered": false,
+              "observed_in_trace": false,
+              "relations": [
+                {
+                  "source": "OBJ_CHARGED_TRNA",
+                  "target": "OBJ_mRNA",
+                  "type": "anticodon_pairs_with_codon_in_A_site"
+                },
+                {
+                  "source": "OBJ_GROWING_POLYPEPTIDE",
+                  "target": "OBJ_CHARGED_TRNA",
+                  "type": "linked_to_P_site_tRNA_until_translocation"
+                }
+              ]
+            },
+            "anchors": [
+              "anticodon",
+              "amino-acid attachment end",
+              "A site",
+              "P site",
+              "E site"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "initiator_tRNA",
+        "kind": "entity",
+        "object_ids": [
+          "OBJ_INITIATOR_TRNA"
+        ],
+        "event_ids": [],
+        "status": "BOUND",
+        "method": "explicit_identity_or_origin",
+        "evidence": [
+          {
+            "matched_fields": [
+              "initiator_tRNA"
+            ],
+            "identity": {
+              "name": "initiator tRNA (fMet-tRNA_fMet in E. coli; Met-tRNAi in eukaryotes)",
+              "kind": "aminoacyl_trna",
+              "origin_id": "entity_initiator_tRNA"
+            },
+            "properties": {
+              "bacterial_example": "fMet-tRNA_fMet",
+              "eukaryotic_example": "Met-tRNAi",
+              "entry_site": "P site directly"
+            },
+            "metadata_registered": false,
+            "observed_in_trace": false,
+            "relations": [
+              {
+                "source": "OBJ_INITIATOR_TRNA",
+                "target": "OBJ_mRNA",
+                "type": "anticodon_pairs_with_AUG_start_codon"
+              }
+            ]
+          }
+        ],
+        "anchors": {
+          "OBJ_INITIATOR_TRNA": [
+            "anticodon",
+            "amino-acid attachment end",
+            "P site"
+          ]
+        },
+        "candidates": [
+          {
+            "object_id": "OBJ_INITIATOR_TRNA",
+            "score": 1.0,
+            "method": "explicit_identity_or_origin",
+            "evidence": {
+              "matched_fields": [
+                "initiator_tRNA"
+              ],
+              "identity": {
+                "name": "initiator tRNA (fMet-tRNA_fMet in E. coli; Met-tRNAi in eukaryotes)",
+                "kind": "aminoacyl_trna",
+                "origin_id": "entity_initiator_tRNA"
+              },
+              "properties": {
+                "bacterial_example": "fMet-tRNA_fMet",
+                "eukaryotic_example": "Met-tRNAi",
+                "entry_site": "P site directly"
+              },
+              "metadata_registered": false,
+              "observed_in_trace": false,
+              "relations": [
+                {
+                  "source": "OBJ_INITIATOR_TRNA",
+                  "target": "OBJ_mRNA",
+                  "type": "anticodon_pairs_with_AUG_start_codon"
+                }
+              ]
+            },
+            "anchors": [
+              "anticodon",
+              "amino-acid attachment end",
+              "P site"
+            ]
+          },
+          {
+            "object_id": "OBJ_CHARGED_TRNA",
+            "score": 0.5333333333333333,
+            "method": "lexical_candidate_only",
+            "evidence": {
+              "matched_fields": [],
+              "identity": {
+                "name": "charged aminoacyl-tRNA",
+                "kind": "aminoacyl_trna",
+                "origin_id": "entity_charged_tRNA"
+              },
+              "properties": {
+                "function": "carries amino acid and anticodon",
+                "entry_site": "A site"
+              },
+              "metadata_registered": false,
+              "observed_in_trace": false,
+              "relations": [
+                {
+                  "source": "OBJ_CHARGED_TRNA",
+                  "target": "OBJ_mRNA",
+                  "type": "anticodon_pairs_with_codon_in_A_site"
+                },
+                {
+                  "source": "OBJ_GROWING_POLYPEPTIDE",
+                  "target": "OBJ_CHARGED_TRNA",
+                  "type": "linked_to_P_site_tRNA_until_translocation"
+                }
+              ]
+            },
+            "anchors": [
+              "anticodon",
+              "amino-acid attachment end",
+              "A site",
+              "P site",
+              "E site"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "growing_polypeptide",
+        "kind": "entity",
+        "object_ids": [
+          "OBJ_GROWING_POLYPEPTIDE"
+        ],
+        "event_ids": [],
+        "status": "BOUND",
+        "method": "explicit_identity_or_origin",
+        "evidence": [
+          {
+            "matched_fields": [
+              "growing polypeptide",
+              "growing_polypeptide"
+            ],
+            "identity": {
+              "name": "growing polypeptide",
+              "kind": "polypeptide_chain",
+              "origin_id": "entity_growing_polypeptide"
+            },
+            "properties": {
+              "direction": "N terminus to C terminus",
+              "linkage": "linked to P-site tRNA until translocation"
+            },
+            "metadata_registered": false,
+            "observed_in_trace": false,
+            "relations": [
+              {
+                "source": "OBJ_GROWING_POLYPEPTIDE",
+                "target": "OBJ_CHARGED_TRNA",
+                "type": "linked_to_P_site_tRNA_until_translocation"
+              }
+            ]
+          }
+        ],
+        "anchors": {
+          "OBJ_GROWING_POLYPEPTIDE": [
+            "N terminus",
+            "C terminus",
+            "P-site tRNA linkage"
+          ]
+        },
+        "candidates": [
+          {
+            "object_id": "OBJ_GROWING_POLYPEPTIDE",
+            "score": 1.0,
+            "method": "explicit_identity_or_origin",
+            "evidence": {
+              "matched_fields": [
+                "growing polypeptide",
+                "growing_polypeptide"
+              ],
+              "identity": {
+                "name": "growing polypeptide",
+                "kind": "polypeptide_chain",
+                "origin_id": "entity_growing_polypeptide"
+              },
+              "properties": {
+                "direction": "N terminus to C terminus",
+                "linkage": "linked to P-site tRNA until translocation"
+              },
+              "metadata_registered": false,
+              "observed_in_trace": false,
+              "relations": [
+                {
+                  "source": "OBJ_GROWING_POLYPEPTIDE",
+                  "target": "OBJ_CHARGED_TRNA",
+                  "type": "linked_to_P_site_tRNA_until_translocation"
+                }
+              ]
+            },
+            "anchors": [
+              "N terminus",
+              "C terminus",
+              "P-site tRNA linkage"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "release_factor",
+        "kind": "entity",
+        "object_ids": [
+          "OBJ_RELEASE_FACTOR"
+        ],
+        "event_ids": [],
+        "status": "BOUND",
+        "method": "explicit_identity_or_origin",
+        "evidence": [
+          {
+            "matched_fields": [
+              "release factor",
+              "release_factor"
+            ],
+            "identity": {
+              "name": "release factor",
+              "kind": "protein",
+              "origin_id": "entity_release_factor"
+            },
+            "properties": {
+              "function": "recognizes stop codon in A site and triggers release"
+            },
+            "metadata_registered": false,
+            "observed_in_trace": false,
+            "relations": [
+              {
+                "source": "OBJ_RELEASE_FACTOR",
+                "target": "OBJ_mRNA",
+                "type": "recognizes_stop_codon_in_A_site"
+              }
+            ]
+          }
+        ],
+        "anchors": {
+          "OBJ_RELEASE_FACTOR": [
+            "A site",
+            "stop codon"
+          ]
+        },
+        "candidates": [
+          {
+            "object_id": "OBJ_RELEASE_FACTOR",
+            "score": 1.0,
+            "method": "explicit_identity_or_origin",
+            "evidence": {
+              "matched_fields": [
+                "release factor",
+                "release_factor"
+              ],
+              "identity": {
+                "name": "release factor",
+                "kind": "protein",
+                "origin_id": "entity_release_factor"
+              },
+              "properties": {
+                "function": "recognizes stop codon in A site and triggers release"
+              },
+              "metadata_registered": false,
+              "observed_in_trace": false,
+              "relations": [
+                {
+                  "source": "OBJ_RELEASE_FACTOR",
+                  "target": "OBJ_mRNA",
+                  "type": "recognizes_stop_codon_in_A_site"
+                }
+              ]
+            },
+            "anchors": [
+              "A site",
+              "stop codon"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "initiation_factors",
+        "kind": "entity",
+        "object_ids": [
+          "OBJ_INITIATION_FACTORS"
+        ],
+        "event_ids": [],
+        "status": "BOUND",
+        "method": "explicit_identity_or_origin",
+        "evidence": [
+          {
+            "matched_fields": [
+              "initiation factors",
+              "initiation_factors"
+            ],
+            "identity": {
+              "name": "initiation factors",
+              "kind": "protein_complex",
+              "origin_id": "entity_initiation_factors"
+            },
+            "properties": {
+              "bacterial_example": "three initiation factors",
+              "function": "help initiation complex assemble"
+            },
+            "metadata_registered": false,
+            "observed_in_trace": false,
+            "relations": []
+          }
+        ],
+        "anchors": {
+          "OBJ_INITIATION_FACTORS": [
+            "initiation complex"
+          ]
+        },
+        "candidates": [
+          {
+            "object_id": "OBJ_INITIATION_FACTORS",
+            "score": 1.0,
+            "method": "explicit_identity_or_origin",
+            "evidence": {
+              "matched_fields": [
+                "initiation factors",
+                "initiation_factors"
+              ],
+              "identity": {
+                "name": "initiation factors",
+                "kind": "protein_complex",
+                "origin_id": "entity_initiation_factors"
+              },
+              "properties": {
+                "bacterial_example": "three initiation factors",
+                "function": "help initiation complex assemble"
+              },
+              "metadata_registered": false,
+              "observed_in_trace": false,
+              "relations": []
+            },
+            "anchors": [
+              "initiation complex"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "shine_dalgarno_sequence",
+        "kind": "entity",
+        "object_ids": [
+          "OBJ_SHINE_DALGARNO"
+        ],
+        "event_ids": [],
+        "status": "BOUND",
+        "method": "explicit_identity_or_origin",
+        "evidence": [
+          {
+            "matched_fields": [
+              "Shine-Dalgarno sequence",
+              "shine_dalgarno_sequence"
+            ],
+            "identity": {
+              "name": "Shine-Dalgarno sequence",
+              "kind": "rna_motif",
+              "origin_id": "entity_shine_dalgarno_sequence"
+            },
+            "properties": {
+              "location": "upstream of first AUG in E. coli mRNA",
+              "function": "base-pairs with rRNA to anchor 30S subunit"
+            },
+            "metadata_registered": false,
+            "observed_in_trace": false,
+            "relations": [
+              {
+                "source": "OBJ_SHINE_DALGARNO",
+                "target": "OBJ_S30",
+                "type": "base_pairs_with_rRNA_anchoring_30S"
+              }
+            ]
+          }
+        ],
+        "anchors": {
+          "OBJ_SHINE_DALGARNO": [
+            "upstream mRNA leader",
+            "rRNA contact"
+          ]
+        },
+        "candidates": [
+          {
+            "object_id": "OBJ_SHINE_DALGARNO",
+            "score": 1.0,
+            "method": "explicit_identity_or_origin",
+            "evidence": {
+              "matched_fields": [
+                "Shine-Dalgarno sequence",
+                "shine_dalgarno_sequence"
+              ],
+              "identity": {
+                "name": "Shine-Dalgarno sequence",
+                "kind": "rna_motif",
+                "origin_id": "entity_shine_dalgarno_sequence"
+              },
+              "properties": {
+                "location": "upstream of first AUG in E. coli mRNA",
+                "function": "base-pairs with rRNA to anchor 30S subunit"
+              },
+              "metadata_registered": false,
+              "observed_in_trace": false,
+              "relations": [
+                {
+                  "source": "OBJ_SHINE_DALGARNO",
+                  "target": "OBJ_S30",
+                  "type": "base_pairs_with_rRNA_anchoring_30S"
+                }
+              ]
+            },
+            "anchors": [
+              "upstream mRNA leader",
+              "rRNA contact"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "initiation",
+        "kind": "process",
+        "object_ids": [],
+        "event_ids": [
+          "EV_initiation_complex_assembly"
+        ],
+        "status": "BOUND",
+        "method": "explicit_event_or_process_role",
+        "evidence": [
+          {
+            "event_id": "EV_initiation_complex_assembly",
+            "score": 1.0,
+            "process_ids": [],
+            "exact": true
+          }
+        ],
+        "candidates": [
+          {
+            "event_id": "EV_initiation_complex_assembly",
+            "score": 1.0,
+            "process_ids": [],
+            "exact": true
+          }
+        ]
+      },
+      {
+        "role": "codon_anticodon_recognition",
+        "kind": "process",
+        "object_ids": [],
+        "event_ids": [
+          "EV_first_elongation_trna_entry"
+        ],
+        "status": "BOUND",
+        "method": "explicit_event_or_process_role",
+        "evidence": [
+          {
+            "event_id": "EV_first_elongation_trna_entry",
+            "score": 1.0,
+            "process_ids": [],
+            "exact": true
+          }
+        ],
+        "candidates": [
+          {
+            "event_id": "EV_first_elongation_trna_entry",
+            "score": 1.0,
+            "process_ids": [],
+            "exact": true
+          }
+        ]
+      },
+      {
+        "role": "elongation_cycle",
+        "kind": "process",
+        "object_ids": [],
+        "event_ids": [],
+        "status": "AMBIGUOUS",
+        "method": "insufficient_event_semantics",
+        "evidence": [],
+        "candidates": [
+          {
+            "event_id": "EV_first_elongation_trna_entry",
+            "score": 0.5,
+            "process_ids": [],
+            "exact": false
+          },
+          {
+            "event_id": "EV_e_site_release",
+            "score": 1.0,
+            "process_ids": [],
+            "exact": true
+          },
+          {
+            "event_id": "EV_elongation_repeat",
+            "score": 1.0,
+            "process_ids": [],
+            "exact": true
+          }
+        ]
+      },
+      {
+        "role": "peptide_bond_formation",
+        "kind": "process",
+        "object_ids": [],
+        "event_ids": [
+          "EV_peptide_bond_formation"
+        ],
+        "status": "BOUND",
+        "method": "explicit_event_or_process_role",
+        "evidence": [
+          {
+            "event_id": "EV_peptide_bond_formation",
+            "score": 1.0,
+            "process_ids": [],
+            "exact": true
+          }
+        ],
+        "candidates": [
+          {
+            "event_id": "EV_peptide_bond_formation",
+            "score": 1.0,
+            "process_ids": [],
+            "exact": true
+          }
+        ]
+      },
+      {
+        "role": "translocation",
+        "kind": "process",
+        "object_ids": [],
+        "event_ids": [
+          "EV_translocation"
+        ],
+        "status": "BOUND",
+        "method": "explicit_event_or_process_role",
+        "evidence": [
+          {
+            "event_id": "EV_translocation",
+            "score": 1.0,
+            "process_ids": [],
+            "exact": true
+          }
+        ],
+        "candidates": [
+          {
+            "event_id": "EV_translocation",
+            "score": 1.0,
+            "process_ids": [],
+            "exact": true
+          }
+        ]
+      },
+      {
+        "role": "termination",
+        "kind": "process",
+        "object_ids": [],
+        "event_ids": [
+          "EV_termination"
+        ],
+        "status": "BOUND",
+        "method": "explicit_event_or_process_role",
+        "evidence": [
+          {
+            "event_id": "EV_termination",
+            "score": 1.0,
+            "process_ids": [],
+            "exact": true
+          }
+        ],
+        "candidates": [
+          {
+            "event_id": "EV_termination",
+            "score": 1.0,
+            "process_ids": [],
+            "exact": true
+          }
+        ]
+      },
+      {
+        "role": "polyribosome_formation",
+        "kind": "process",
+        "object_ids": [],
+        "event_ids": [
+          "EV_peptide_bond_formation"
+        ],
+        "status": "BOUND",
+        "method": "explicit_event_or_process_role",
+        "evidence": [
+          {
+            "event_id": "EV_peptide_bond_formation",
+            "score": 0.5,
+            "process_ids": [],
+            "exact": false
+          }
+        ],
+        "candidates": [
+          {
+            "event_id": "EV_peptide_bond_formation",
+            "score": 0.5,
+            "process_ids": [],
+            "exact": false
+          }
+        ]
+      }
+    ],
+    "unresolved_roles": [],
+    "ambiguous_roles": [
+      "elongation_cycle"
+    ]
+  }
+}

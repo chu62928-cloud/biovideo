@@ -1,0 +1,5 @@
+dna_replication/
+mitosis/
+protein_translation/
+*.zip
+**/__pycache__/

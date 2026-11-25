@@ -1,0 +1,4244 @@
+{
+  "dna_replication": {
+    "runtime": {
+      "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+      "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+      "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+      "checks": [
+        {
+          "constraint_id": "C1",
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+          "verification_method": "runtime_trace",
+          "object_ids": [
+            "helicase"
+          ],
+          "event_ids": [
+            "event_1_fork"
+          ],
+          "observed_interval": [
+            0.0,
+            5.999999999999998
+          ],
+          "observations_checked": 119,
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "subchecks": [
+            {
+              "subcheck_id": "C1::identity::helicase",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "helicase"
+              ],
+              "observed_interval": [
+                0.0,
+                5.999999999999998
+              ],
+              "observations_checked": 119,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "helicase",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            }
+          ],
+          "status": "PARTIALLY_VERIFIED",
+          "full_constraint_verified": false
+        },
+        {
+          "constraint_id": "C2",
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+          "verification_method": "runtime_trace",
+          "object_ids": [
+            "primase",
+            "rna_primer_leading",
+            "rna_primer_lagging_1",
+            "rna_primer_lagging_2"
+          ],
+          "event_ids": [
+            "event_2_priming"
+          ],
+          "observed_interval": [
+            6.133333333333331,
+            12.13333333333331
+          ],
+          "observations_checked": 182,
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "subchecks": [
+            {
+              "subcheck_id": "C2::identity::primase",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "primase"
+              ],
+              "observed_interval": [
+                6.133333333333331,
+                10.466666666666649
+              ],
+              "observations_checked": 88,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "primase",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            },
+            {
+              "subcheck_id": "C2::identity::rna_primer_leading",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "rna_primer_leading"
+              ],
+              "observed_interval": [
+                7.533333333333326,
+                12.13333333333331
+              ],
+              "observations_checked": 94,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "rna_primer_leading",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            }
+          ],
+          "status": "PARTIALLY_VERIFIED",
+          "full_constraint_verified": false
+        },
+        {
+          "constraint_id": "C3",
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+          "verification_method": "runtime_trace",
+          "object_ids": [],
+          "event_ids": [],
+          "observed_interval": null,
+          "observations_checked": 0,
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "subchecks": [],
+          "status": "AMBIGUOUS_BINDING",
+          "full_constraint_verified": false,
+          "reason": "No reliably bound participants"
+        },
+        {
+          "constraint_id": "C4",
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+          "verification_method": "runtime_trace",
+          "object_ids": [
+            "rna_primer_leading",
+            "rna_primer_lagging_1",
+            "rna_primer_lagging_2"
+          ],
+          "event_ids": [],
+          "observed_interval": [
+            7.533333333333326,
+            31.93333333333324
+          ],
+          "observations_checked": 983,
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "subchecks": [
+            {
+              "subcheck_id": "C4::identity::rna_primer_leading",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "rna_primer_leading"
+              ],
+              "observed_interval": [
+                7.533333333333326,
+                31.93333333333324
+              ],
+              "observations_checked": 570,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "rna_primer_leading",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            },
+            {
+              "subcheck_id": "C4::identity::rna_primer_lagging_1",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "rna_primer_lagging_1"
+              ],
+              "observed_interval": [
+                18.53333333333329,
+                25.933333333333263
+              ],
+              "observations_checked": 179,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "rna_primer_lagging_1",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            },
+            {
+              "subcheck_id": "C4::identity::rna_primer_lagging_2",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "rna_primer_lagging_2"
+              ],
+              "observed_interval": [
+                22.199999999999942,
+                31.93333333333324
+              ],
+              "observations_checked": 234,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "rna_primer_lagging_2",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            }
+          ],
+          "status": "PARTIALLY_VERIFIED",
+          "full_constraint_verified": false
+        },
+        {
+          "constraint_id": "C5",
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+          "verification_method": "runtime_trace",
+          "object_ids": [
+            "rna_primer_leading",
+            "rna_primer_lagging_1",
+            "rna_primer_lagging_2"
+          ],
+          "event_ids": [],
+          "observed_interval": [
+            7.533333333333326,
+            31.93333333333324
+          ],
+          "observations_checked": 983,
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "subchecks": [
+            {
+              "subcheck_id": "C5::identity::rna_primer_leading",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "rna_primer_leading"
+              ],
+              "observed_interval": [
+                7.533333333333326,
+                31.93333333333324
+              ],
+              "observations_checked": 570,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "rna_primer_leading",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            },
+            {
+              "subcheck_id": "C5::identity::rna_primer_lagging_1",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "rna_primer_lagging_1"
+              ],
+              "observed_interval": [
+                18.53333333333329,
+                25.933333333333263
+              ],
+              "observations_checked": 179,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "rna_primer_lagging_1",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            },
+            {
+              "subcheck_id": "C5::identity::rna_primer_lagging_2",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "rna_primer_lagging_2"
+              ],
+              "observed_interval": [
+                22.199999999999942,
+                31.93333333333324
+              ],
+              "observations_checked": 234,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "rna_primer_lagging_2",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            }
+          ],
+          "status": "PARTIALLY_VERIFIED",
+          "full_constraint_verified": false
+        },
+        {
+          "constraint_id": "C6",
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+          "verification_method": "runtime_trace",
+          "object_ids": [
+            "rna_primer_leading",
+            "rna_primer_lagging_1",
+            "rna_primer_lagging_2"
+          ],
+          "event_ids": [],
+          "observed_interval": [
+            7.533333333333326,
+            31.93333333333324
+          ],
+          "observations_checked": 983,
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "subchecks": [
+            {
+              "subcheck_id": "C6::identity::rna_primer_leading",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "rna_primer_leading"
+              ],
+              "observed_interval": [
+                7.533333333333326,
+                31.93333333333324
+              ],
+              "observations_checked": 570,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "rna_primer_leading",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            },
+            {
+              "subcheck_id": "C6::identity::rna_primer_lagging_1",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "rna_primer_lagging_1"
+              ],
+              "observed_interval": [
+                18.53333333333329,
+                25.933333333333263
+              ],
+              "observations_checked": 179,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "rna_primer_lagging_1",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            },
+            {
+              "subcheck_id": "C6::identity::rna_primer_lagging_2",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "rna_primer_lagging_2"
+              ],
+              "observed_interval": [
+                22.199999999999942,
+                31.93333333333324
+              ],
+              "observations_checked": 234,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "rna_primer_lagging_2",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            }
+          ],
+          "status": "PARTIALLY_VERIFIED",
+          "full_constraint_verified": false
+        },
+        {
+          "constraint_id": "C7",
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+          "verification_method": "runtime_trace",
+          "object_ids": [
+            "rna_primer_leading",
+            "rna_primer_lagging_1",
+            "rna_primer_lagging_2"
+          ],
+          "event_ids": [],
+          "observed_interval": [
+            7.533333333333326,
+            31.93333333333324
+          ],
+          "observations_checked": 983,
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "subchecks": [
+            {
+              "subcheck_id": "C7::identity::rna_primer_leading",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "rna_primer_leading"
+              ],
+              "observed_interval": [
+                7.533333333333326,
+                31.93333333333324
+              ],
+              "observations_checked": 570,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "rna_primer_leading",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            },
+            {
+              "subcheck_id": "C7::identity::rna_primer_lagging_1",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "rna_primer_lagging_1"
+              ],
+              "observed_interval": [
+                18.53333333333329,
+                25.933333333333263
+              ],
+              "observations_checked": 179,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "rna_primer_lagging_1",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            },
+            {
+              "subcheck_id": "C7::identity::rna_primer_lagging_2",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "rna_primer_lagging_2"
+              ],
+              "observed_interval": [
+                22.199999999999942,
+                31.93333333333324
+              ],
+              "observations_checked": 234,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "rna_primer_lagging_2",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            }
+          ],
+          "status": "PARTIALLY_VERIFIED",
+          "full_constraint_verified": false
+        },
+        {
+          "constraint_id": "C8",
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+          "verification_method": "runtime_trace",
+          "object_ids": [],
+          "event_ids": [],
+          "observed_interval": null,
+          "observations_checked": 0,
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "subchecks": [],
+          "status": "AMBIGUOUS_BINDING",
+          "full_constraint_verified": false,
+          "reason": "No reliably bound participants"
+        }
+      ],
+      "measured_observations": [
+        {
+          "subcheck_id": "C1::identity::helicase",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "helicase"
+          ],
+          "observed_interval": [
+            0.0,
+            5.999999999999998
+          ],
+          "observations_checked": 119,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "helicase",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C1",
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C2::identity::primase",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "primase"
+          ],
+          "observed_interval": [
+            6.133333333333331,
+            10.466666666666649
+          ],
+          "observations_checked": 88,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "primase",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C2",
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C2::identity::rna_primer_leading",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "rna_primer_leading"
+          ],
+          "observed_interval": [
+            7.533333333333326,
+            12.13333333333331
+          ],
+          "observations_checked": 94,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "rna_primer_leading",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C2",
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C4::identity::rna_primer_leading",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "rna_primer_leading"
+          ],
+          "observed_interval": [
+            7.533333333333326,
+            31.93333333333324
+          ],
+          "observations_checked": 570,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "rna_primer_leading",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C4",
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C4::identity::rna_primer_lagging_1",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "rna_primer_lagging_1"
+          ],
+          "observed_interval": [
+            18.53333333333329,
+            25.933333333333263
+          ],
+          "observations_checked": 179,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "rna_primer_lagging_1",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C4",
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C4::identity::rna_primer_lagging_2",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "rna_primer_lagging_2"
+          ],
+          "observed_interval": [
+            22.199999999999942,
+            31.93333333333324
+          ],
+          "observations_checked": 234,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "rna_primer_lagging_2",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C4",
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C5::identity::rna_primer_leading",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "rna_primer_leading"
+          ],
+          "observed_interval": [
+            7.533333333333326,
+            31.93333333333324
+          ],
+          "observations_checked": 570,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "rna_primer_leading",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C5",
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C5::identity::rna_primer_lagging_1",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "rna_primer_lagging_1"
+          ],
+          "observed_interval": [
+            18.53333333333329,
+            25.933333333333263
+          ],
+          "observations_checked": 179,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "rna_primer_lagging_1",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C5",
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C5::identity::rna_primer_lagging_2",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "rna_primer_lagging_2"
+          ],
+          "observed_interval": [
+            22.199999999999942,
+            31.93333333333324
+          ],
+          "observations_checked": 234,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "rna_primer_lagging_2",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C5",
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C6::identity::rna_primer_leading",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "rna_primer_leading"
+          ],
+          "observed_interval": [
+            7.533333333333326,
+            31.93333333333324
+          ],
+          "observations_checked": 570,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "rna_primer_leading",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C6",
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C6::identity::rna_primer_lagging_1",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "rna_primer_lagging_1"
+          ],
+          "observed_interval": [
+            18.53333333333329,
+            25.933333333333263
+          ],
+          "observations_checked": 179,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "rna_primer_lagging_1",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C6",
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C6::identity::rna_primer_lagging_2",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "rna_primer_lagging_2"
+          ],
+          "observed_interval": [
+            22.199999999999942,
+            31.93333333333324
+          ],
+          "observations_checked": 234,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "rna_primer_lagging_2",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C6",
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C7::identity::rna_primer_leading",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "rna_primer_leading"
+          ],
+          "observed_interval": [
+            7.533333333333326,
+            31.93333333333324
+          ],
+          "observations_checked": 570,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "rna_primer_leading",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C7",
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C7::identity::rna_primer_lagging_1",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "rna_primer_lagging_1"
+          ],
+          "observed_interval": [
+            18.53333333333329,
+            25.933333333333263
+          ],
+          "observations_checked": 179,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "rna_primer_lagging_1",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C7",
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C7::identity::rna_primer_lagging_2",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "rna_primer_lagging_2"
+          ],
+          "observed_interval": [
+            22.199999999999942,
+            31.93333333333324
+          ],
+          "observations_checked": 234,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "rna_primer_lagging_2",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C7",
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "full_constraint_verified": false
+        }
+      ]
+    },
+    "semantic": [
+      {
+        "constraint_id": "C1",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "video_sha256": "c1a999fce2b3f1abadfd14b3cefa429cbf672a2a5de124c16a93b0b2b49baf46",
+        "review_model": "qwen3.8-27b",
+        "verification_method": "video_semantic_review",
+        "status": "PASS",
+        "evidence_status": "SUPPORTED_VIDEO_OBSERVATION",
+        "observed_interval": [
+          0.0,
+          5.0
+        ],
+        "observed_objects_or_events": "0.0-5.0 s: Y-shaped fork with pink hexagon 'Helicase' at the junction; two antiparallel templates (top 3'→5', bottom 5'→3') separated left of the junction and base-paired (rungs) right of it. Fork structure and helicase-at-fork relation hold.",
+        "reference_evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "uncertainty": [
+          "No independent replication-fork reference illustration was actually retrieved; REF_446c6c6b5b and REF_9ca1076572 captions refer to telomerase and a person photo, so they were not used as visual ground truth.",
+          "No external asset was imported into the generated work; comparison relies on the OpenStax text passage (E_d8ffea5a5785) for scientific ground truth and on the generated frames for visible mechanism.",
+          "Polarity and directionality (leading 5'→3' toward fork; lagging 5'→3' away from fork, each fragment with its own primer) were verified directly from on-frame 5'/3' labels, not from references."
+        ],
+        "raw_check": {
+          "constraint_id": "C1",
+          "status": "PASS",
+          "observation": "0.0-5.0 s: Y-shaped fork with pink hexagon 'Helicase' at the junction; two antiparallel templates (top 3'→5', bottom 5'→3') separated left of the junction and base-paired (rungs) right of it. Fork structure and helicase-at-fork relation hold."
+        },
+        "limitation": "Model-reported interval, not per-frame deterministic measurement"
+      },
+      {
+        "constraint_id": "C2",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "video_sha256": "c1a999fce2b3f1abadfd14b3cefa429cbf672a2a5de124c16a93b0b2b49baf46",
+        "review_model": "qwen3.8-27b",
+        "verification_method": "video_semantic_review",
+        "status": "PASS",
+        "evidence_status": "SUPPORTED_VIDEO_OBSERVATION",
+        "observed_interval": [
+          6.0,
+          25.0
+        ],
+        "observed_objects_or_events": "6.0-11.0 s RNA primase lays an orange primer on the top template (labeled 5'→3'); 12.0-18.0 s Pol ε extends it. 18.0-19.0 s primase on bottom template; 19.0-25.0 s Pol δ extends. Priming precedes extension on both strands; pol α handoff simplified per caption (allowed).",
+        "reference_evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "uncertainty": [
+          "No independent replication-fork reference illustration was actually retrieved; REF_446c6c6b5b and REF_9ca1076572 captions refer to telomerase and a person photo, so they were not used as visual ground truth.",
+          "No external asset was imported into the generated work; comparison relies on the OpenStax text passage (E_d8ffea5a5785) for scientific ground truth and on the generated frames for visible mechanism.",
+          "Polarity and directionality (leading 5'→3' toward fork; lagging 5'→3' away from fork, each fragment with its own primer) were verified directly from on-frame 5'/3' labels, not from references."
+        ],
+        "raw_check": {
+          "constraint_id": "C2",
+          "status": "PASS",
+          "observation": "6.0-11.0 s RNA primase lays an orange primer on the top template (labeled 5'→3'); 12.0-18.0 s Pol ε extends it. 18.0-19.0 s primase on bottom template; 19.0-25.0 s Pol δ extends. Priming precedes extension on both strands; pol α handoff simplified per caption (allowed)."
+        },
+        "limitation": "Model-reported interval, not per-frame deterministic measurement"
+      },
+      {
+        "constraint_id": "C3",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "video_sha256": "c1a999fce2b3f1abadfd14b3cefa429cbf672a2a5de124c16a93b0b2b49baf46",
+        "review_model": "qwen3.8-27b",
+        "verification_method": "video_semantic_review",
+        "status": "PASS",
+        "evidence_status": "SUPPORTED_VIDEO_OBSERVATION",
+        "observed_interval": [
+          12.0,
+          18.0
+        ],
+        "observed_objects_or_events": "12.0-18.0 s: Pol ε continuously extends the green leading strand 5'→3' toward the advancing fork on the top template (antiparallel to its 3'→5' template). Continuous leading synthesis holds.",
+        "reference_evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "uncertainty": [
+          "No independent replication-fork reference illustration was actually retrieved; REF_446c6c6b5b and REF_9ca1076572 captions refer to telomerase and a person photo, so they were not used as visual ground truth.",
+          "No external asset was imported into the generated work; comparison relies on the OpenStax text passage (E_d8ffea5a5785) for scientific ground truth and on the generated frames for visible mechanism.",
+          "Polarity and directionality (leading 5'→3' toward fork; lagging 5'→3' away from fork, each fragment with its own primer) were verified directly from on-frame 5'/3' labels, not from references."
+        ],
+        "raw_check": {
+          "constraint_id": "C3",
+          "status": "PASS",
+          "observation": "12.0-18.0 s: Pol ε continuously extends the green leading strand 5'→3' toward the advancing fork on the top template (antiparallel to its 3'→5' template). Continuous leading synthesis holds."
+        },
+        "limitation": "Model-reported interval, not per-frame deterministic measurement"
+      },
+      {
+        "constraint_id": "C4",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "video_sha256": "c1a999fce2b3f1abadfd14b3cefa429cbf672a2a5de124c16a93b0b2b49baf46",
+        "review_model": "qwen3.8-27b",
+        "verification_method": "video_semantic_review",
+        "status": "PASS",
+        "evidence_status": "SUPPORTED_VIDEO_OBSERVATION",
+        "observed_interval": [
+          19.0,
+          25.0
+        ],
+        "observed_objects_or_events": "19.0-25.0 s: Pol δ extends two separate lagging fragments, each initiated by its own orange primer, growing 5'→3' away from the fork on the bottom template (3'→5' new-strand orientation, antiparallel to 5'→3' template). Discontinuous Okazaki synthesis holds.",
+        "reference_evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "uncertainty": [
+          "No independent replication-fork reference illustration was actually retrieved; REF_446c6c6b5b and REF_9ca1076572 captions refer to telomerase and a person photo, so they were not used as visual ground truth.",
+          "No external asset was imported into the generated work; comparison relies on the OpenStax text passage (E_d8ffea5a5785) for scientific ground truth and on the generated frames for visible mechanism.",
+          "Polarity and directionality (leading 5'→3' toward fork; lagging 5'→3' away from fork, each fragment with its own primer) were verified directly from on-frame 5'/3' labels, not from references."
+        ],
+        "raw_check": {
+          "constraint_id": "C4",
+          "status": "PASS",
+          "observation": "19.0-25.0 s: Pol δ extends two separate lagging fragments, each initiated by its own orange primer, growing 5'→3' away from the fork on the bottom template (3'→5' new-strand orientation, antiparallel to 5'→3' template). Discontinuous Okazaki synthesis holds."
+        },
+        "limitation": "Model-reported interval, not per-frame deterministic measurement"
+      },
+      {
+        "constraint_id": "C5",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "video_sha256": "c1a999fce2b3f1abadfd14b3cefa429cbf672a2a5de124c16a93b0b2b49baf46",
+        "review_model": "qwen3.8-27b",
+        "verification_method": "video_semantic_review",
+        "status": "PASS",
+        "evidence_status": "SUPPORTED_VIDEO_OBSERVATION",
+        "observed_interval": [
+          25.0,
+          29.0
+        ],
+        "observed_objects_or_events": "25.0-29.0 s: Pol δ at the junction between two lagging fragments; the intervening orange RNA is removed and replaced by green DNA in a single visible step. Order (pol δ → primer displacement/removal → replacement) holds; RNase H not a separate glyph (allowed simplification, see issues).",
+        "reference_evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "uncertainty": [
+          "No independent replication-fork reference illustration was actually retrieved; REF_446c6c6b5b and REF_9ca1076572 captions refer to telomerase and a person photo, so they were not used as visual ground truth.",
+          "No external asset was imported into the generated work; comparison relies on the OpenStax text passage (E_d8ffea5a5785) for scientific ground truth and on the generated frames for visible mechanism.",
+          "Polarity and directionality (leading 5'→3' toward fork; lagging 5'→3' away from fork, each fragment with its own primer) were verified directly from on-frame 5'/3' labels, not from references."
+        ],
+        "raw_check": {
+          "constraint_id": "C5",
+          "status": "PASS",
+          "observation": "25.0-29.0 s: Pol δ at the junction between two lagging fragments; the intervening orange RNA is removed and replaced by green DNA in a single visible step. Order (pol δ → primer displacement/removal → replacement) holds; RNase H not a separate glyph (allowed simplification, see issues)."
+        },
+        "limitation": "Model-reported interval, not per-frame deterministic measurement"
+      },
+      {
+        "constraint_id": "C6",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "video_sha256": "c1a999fce2b3f1abadfd14b3cefa429cbf672a2a5de124c16a93b0b2b49baf46",
+        "review_model": "qwen3.8-27b",
+        "verification_method": "video_semantic_review",
+        "status": "PASS",
+        "evidence_status": "SUPPORTED_VIDEO_OBSERVATION",
+        "observed_interval": [
+          30.0,
+          31.0
+        ],
+        "observed_objects_or_events": "By 30.0-31.0 s the previously orange RNA segment between the left lagging fragments is gone and replaced by continuous green DNA; rna_primer_removed = true is visible.",
+        "reference_evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "uncertainty": [
+          "No independent replication-fork reference illustration was actually retrieved; REF_446c6c6b5b and REF_9ca1076572 captions refer to telomerase and a person photo, so they were not used as visual ground truth.",
+          "No external asset was imported into the generated work; comparison relies on the OpenStax text passage (E_d8ffea5a5785) for scientific ground truth and on the generated frames for visible mechanism.",
+          "Polarity and directionality (leading 5'→3' toward fork; lagging 5'→3' away from fork, each fragment with its own primer) were verified directly from on-frame 5'/3' labels, not from references."
+        ],
+        "raw_check": {
+          "constraint_id": "C6",
+          "status": "PASS",
+          "observation": "By 30.0-31.0 s the previously orange RNA segment between the left lagging fragments is gone and replaced by continuous green DNA; rna_primer_removed = true is visible."
+        },
+        "limitation": "Model-reported interval, not per-frame deterministic measurement"
+      },
+      {
+        "constraint_id": "C7",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "video_sha256": "c1a999fce2b3f1abadfd14b3cefa429cbf672a2a5de124c16a93b0b2b49baf46",
+        "review_model": "qwen3.8-27b",
+        "verification_method": "video_semantic_review",
+        "status": "PASS",
+        "evidence_status": "SUPPORTED_VIDEO_OBSERVATION",
+        "observed_interval": [
+          30.0,
+          31.0
+        ],
+        "observed_objects_or_events": "30.0-31.0 s: yellow 'Ligase' appears at the nick between adjacent Okazaki fragments only after the RNA removal/replacement step, i.e. primer removal precedes ligase sealing.",
+        "reference_evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "uncertainty": [
+          "No independent replication-fork reference illustration was actually retrieved; REF_446c6c6b5b and REF_9ca1076572 captions refer to telomerase and a person photo, so they were not used as visual ground truth.",
+          "No external asset was imported into the generated work; comparison relies on the OpenStax text passage (E_d8ffea5a5785) for scientific ground truth and on the generated frames for visible mechanism.",
+          "Polarity and directionality (leading 5'→3' toward fork; lagging 5'→3' away from fork, each fragment with its own primer) were verified directly from on-frame 5'/3' labels, not from references."
+        ],
+        "raw_check": {
+          "constraint_id": "C7",
+          "status": "PASS",
+          "observation": "30.0-31.0 s: yellow 'Ligase' appears at the nick between adjacent Okazaki fragments only after the RNA removal/replacement step, i.e. primer removal precedes ligase sealing."
+        },
+        "limitation": "Model-reported interval, not per-frame deterministic measurement"
+      },
+      {
+        "constraint_id": "C8",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "video_sha256": "c1a999fce2b3f1abadfd14b3cefa429cbf672a2a5de124c16a93b0b2b49baf46",
+        "review_model": "qwen3.8-27b",
+        "verification_method": "video_semantic_review",
+        "status": "PASS",
+        "evidence_status": "SUPPORTED_VIDEO_OBSERVATION",
+        "observed_interval": [
+          31.0,
+          31.0
+        ],
+        "observed_objects_or_events": "31.0 s: ligase positioned at the junction and the two green fragments are now continuous (nick closed). The phosphodiester bond is implied by the sealed nick rather than drawn as a bond symbol, acceptable for a grades-10-12 schematic.",
+        "reference_evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "uncertainty": [
+          "No independent replication-fork reference illustration was actually retrieved; REF_446c6c6b5b and REF_9ca1076572 captions refer to telomerase and a person photo, so they were not used as visual ground truth.",
+          "No external asset was imported into the generated work; comparison relies on the OpenStax text passage (E_d8ffea5a5785) for scientific ground truth and on the generated frames for visible mechanism.",
+          "Polarity and directionality (leading 5'→3' toward fork; lagging 5'→3' away from fork, each fragment with its own primer) were verified directly from on-frame 5'/3' labels, not from references."
+        ],
+        "raw_check": {
+          "constraint_id": "C8",
+          "status": "PASS",
+          "observation": "31.0 s: ligase positioned at the junction and the two green fragments are now continuous (nick closed). The phosphodiester bond is implied by the sealed nick rather than drawn as a bond symbol, acceptable for a grades-10-12 schematic."
+        },
+        "limitation": "Model-reported interval, not per-frame deterministic measurement"
+      }
+    ],
+    "coverage": {
+      "topic_id": "dna_replication",
+      "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+      "uncovered_items": [],
+      "unsupported_checks": [],
+      "critical_gaps": [],
+      "contract_goal_coverage": {
+        "decision": "REVIEW_INCOMPLETE",
+        "missing_goals": [
+          "No constraint or coverage item enforces the user-required 'no whole-genome completion claim' exclusion at the visual/script level; unresolved_questions notes it but no blocking check exists.",
+          "No constraint enforces the exclusion of telomere/telomerase content, though source paragraph_5 contains telomere material that must be kept out of the Section4 video.",
+          "Verification primitive 'relation'/'event_order' on VLM does not prove chemical-level claims (phosphodiester bond formation) or ATP hydrolysis; appropriate to keep uncertain, but goal coverage should record these as simplifications requiring stated caveats.",
+          "No constraint checks that the scene remains limited to one local fork (scope locality), only that a fork exists."
+        ]
+      },
+      "actual_observation_coverage": 8,
+      "checks_total": 8,
+      "entities_total": 12,
+      "entities_covered": 12,
+      "relations_total": 0,
+      "relations_covered": 0,
+      "processes_total": 6,
+      "processes_covered": 6,
+      "temporal_constraints_total": 2,
+      "temporal_constraints_covered": 2,
+      "persistent_relations_total": 2,
+      "persistent_relations_covered": 2,
+      "decision": "REVIEW_INCOMPLETE",
+      "partially_observed_constraints": 6,
+      "semantic_observations_supported": 8
+    }
+  },
+  "mitosis": {
+    "runtime": {
+      "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+      "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+      "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+      "checks": [
+        {
+          "constraint_id": "C1",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "object_ids": [
+            "sister_A",
+            "sister_B"
+          ],
+          "event_ids": [
+            "metaphase"
+          ],
+          "observed_interval": [
+            0.0,
+            5.999999999999998
+          ],
+          "observations_checked": 256,
+          "evidence_ids": [
+            "E_70c610899421"
+          ],
+          "subchecks": [
+            {
+              "subcheck_id": "C1::identity::sister_A",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "sister_A"
+              ],
+              "observed_interval": [
+                0.0,
+                5.999999999999998
+              ],
+              "observations_checked": 128,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "sister_A",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            },
+            {
+              "subcheck_id": "C1::identity::sister_B",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "sister_B"
+              ],
+              "observed_interval": [
+                0.0,
+                5.999999999999998
+              ],
+              "observations_checked": 128,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "sister_B",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            }
+          ],
+          "status": "PARTIALLY_VERIFIED",
+          "full_constraint_verified": false
+        },
+        {
+          "constraint_id": "C2",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "object_ids": [
+            "sister_A",
+            "sister_B"
+          ],
+          "event_ids": [
+            "metaphase"
+          ],
+          "observed_interval": [
+            0.0,
+            5.999999999999998
+          ],
+          "observations_checked": 384,
+          "evidence_ids": [
+            "E_70c610899421"
+          ],
+          "subchecks": [
+            {
+              "subcheck_id": "C2::identity::sister_A",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "sister_A"
+              ],
+              "observed_interval": [
+                0.0,
+                5.999999999999998
+              ],
+              "observations_checked": 128,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "sister_A",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            },
+            {
+              "subcheck_id": "C2::identity::sister_B",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "sister_B"
+              ],
+              "observed_interval": [
+                0.0,
+                5.999999999999998
+              ],
+              "observations_checked": 128,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "sister_B",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            },
+            {
+              "subcheck_id": "C2::relation::sister_A::sister_B::sister_cohesion",
+              "primitive": "persistent_relation",
+              "status": "PASS",
+              "object_ids": [
+                "sister_A",
+                "sister_B"
+              ],
+              "event_ids": [
+                "metaphase"
+              ],
+              "observed_interval": [
+                0.0,
+                5.999999999999998
+              ],
+              "observations_checked": 128,
+              "evidence": {
+                "relation": "sister_cohesion",
+                "violations": [],
+                "distances": [
+                  {
+                    "time": 0.0,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 0.0,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 0.06666666666666667,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 0.13333333333333333,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 0.2,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 0.2,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 0.26666666666666666,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 0.3333333333333333,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 0.39999999999999997,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 0.39999999999999997,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 0.4666666666666666,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 0.5333333333333333,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 0.6,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 0.6666666666666666,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 0.6666666666666666,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 0.7333333333333333,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 0.7999999999999999,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 0.8666666666666666,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 0.8666666666666666,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 0.9333333333333332,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 0.9999999999999999,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 1.0666666666666667,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 1.1333333333333333,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 1.1333333333333333,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 1.2,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 1.2,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 1.2,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 1.2666666666666666,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 1.3333333333333333,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 1.4,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 1.4,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 1.4666666666666666,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 1.5333333333333332,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 1.5999999999999999,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 1.5999999999999999,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 1.6666666666666665,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 1.7333333333333332,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 1.7999999999999998,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 1.8666666666666665,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 1.8666666666666665,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 1.9333333333333331,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 1.9999999999999998,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 2.0666666666666664,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 2.0666666666666664,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 2.1333333333333333,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 2.2,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 2.266666666666667,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 2.333333333333334,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 2.333333333333334,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 2.400000000000001,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 2.400000000000001,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 2.400000000000001,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 2.4666666666666677,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 2.5333333333333345,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 2.6000000000000014,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 2.6000000000000014,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 2.6666666666666683,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 2.733333333333335,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 2.800000000000002,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 2.800000000000002,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 2.866666666666669,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 2.933333333333336,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 3.0000000000000027,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 3.0666666666666695,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 3.0666666666666695,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 3.1333333333333364,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 3.2000000000000033,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 3.26666666666667,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 3.26666666666667,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 3.333333333333337,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 3.400000000000004,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 3.466666666666671,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 3.5333333333333377,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 3.5333333333333377,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 3.6000000000000045,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 3.6000000000000045,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 3.6000000000000045,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 3.6666666666666714,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 3.7333333333333383,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 3.800000000000005,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 3.800000000000005,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 3.866666666666672,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 3.933333333333339,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 4.000000000000005,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 4.000000000000005,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 4.066666666666672,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 4.133333333333338,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 4.200000000000005,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 4.266666666666671,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 4.266666666666671,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 4.3333333333333375,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 4.400000000000004,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 4.46666666666667,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 4.46666666666667,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 4.533333333333337,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 4.600000000000003,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 4.66666666666667,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 4.733333333333336,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 4.733333333333336,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 4.8000000000000025,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 4.8000000000000025,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 4.8000000000000025,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 4.8000000000000025,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 4.866666666666669,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 4.933333333333335,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 5.000000000000002,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 5.000000000000002,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 5.066666666666668,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 5.133333333333335,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 5.200000000000001,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 5.200000000000001,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 5.2666666666666675,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 5.333333333333334,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 5.4,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 5.466666666666667,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 5.466666666666667,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 5.533333333333333,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 5.6,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 5.666666666666666,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 5.666666666666666,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 5.7333333333333325,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 5.799999999999999,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 5.866666666666665,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 5.933333333333332,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 5.933333333333332,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 5.999999999999998,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 5.999999999999998,
+                    "distance": 0.44
+                  },
+                  {
+                    "time": 5.999999999999998,
+                    "distance": 0.44
+                  }
+                ],
+                "registered_lifetime": [
+                  0.0,
+                  5.999999999999998
+                ]
+              },
+              "scope": "Measured registered relationship continuity within observed lifecycle, not complete catalytic mechanism"
+            }
+          ],
+          "status": "PARTIALLY_VERIFIED",
+          "full_constraint_verified": false
+        },
+        {
+          "constraint_id": "C3",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "object_ids": [
+            "kinetochore_A"
+          ],
+          "event_ids": [
+            "metaphase"
+          ],
+          "observed_interval": [
+            0.0,
+            5.999999999999998
+          ],
+          "observations_checked": 128,
+          "evidence_ids": [
+            "E_70c610899421",
+            "E_dcb0de9a22b0"
+          ],
+          "subchecks": [
+            {
+              "subcheck_id": "C3::identity::kinetochore_A",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "kinetochore_A"
+              ],
+              "observed_interval": [
+                0.0,
+                5.999999999999998
+              ],
+              "observations_checked": 128,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "kinetochore_A",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            }
+          ],
+          "status": "PARTIALLY_VERIFIED",
+          "full_constraint_verified": false
+        },
+        {
+          "constraint_id": "C4",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "object_ids": [
+            "kinetochore_B"
+          ],
+          "event_ids": [
+            "metaphase"
+          ],
+          "observed_interval": [
+            0.0,
+            5.999999999999998
+          ],
+          "observations_checked": 128,
+          "evidence_ids": [
+            "E_70c610899421",
+            "E_dcb0de9a22b0"
+          ],
+          "subchecks": [
+            {
+              "subcheck_id": "C4::identity::kinetochore_B",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "kinetochore_B"
+              ],
+              "observed_interval": [
+                0.0,
+                5.999999999999998
+              ],
+              "observations_checked": 128,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "kinetochore_B",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            }
+          ],
+          "status": "PARTIALLY_VERIFIED",
+          "full_constraint_verified": false
+        },
+        {
+          "constraint_id": "C5",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "object_ids": [
+            "sister_A",
+            "sister_B"
+          ],
+          "event_ids": [
+            "anaphase"
+          ],
+          "observed_interval": [
+            5.999999999999998,
+            11.999999999999977
+          ],
+          "observations_checked": 242,
+          "evidence_ids": [
+            "E_70c610899421",
+            "E_dcb0de9a22b0"
+          ],
+          "subchecks": [
+            {
+              "subcheck_id": "C5::identity::sister_A",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "sister_A"
+              ],
+              "observed_interval": [
+                5.999999999999998,
+                11.999999999999977
+              ],
+              "observations_checked": 121,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "sister_A",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            },
+            {
+              "subcheck_id": "C5::identity::sister_B",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "sister_B"
+              ],
+              "observed_interval": [
+                5.999999999999998,
+                11.999999999999977
+              ],
+              "observations_checked": 121,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "sister_B",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            }
+          ],
+          "status": "PARTIALLY_VERIFIED",
+          "full_constraint_verified": false
+        },
+        {
+          "constraint_id": "C6",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "object_ids": [
+            "sister_A",
+            "sister_B"
+          ],
+          "event_ids": [
+            "anaphase"
+          ],
+          "observed_interval": [
+            5.999999999999998,
+            11.999999999999977
+          ],
+          "observations_checked": 242,
+          "evidence_ids": [
+            "E_70c610899421",
+            "E_dcb0de9a22b0"
+          ],
+          "subchecks": [
+            {
+              "subcheck_id": "C6::identity::sister_A",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "sister_A"
+              ],
+              "observed_interval": [
+                5.999999999999998,
+                11.999999999999977
+              ],
+              "observations_checked": 121,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "sister_A",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            },
+            {
+              "subcheck_id": "C6::identity::sister_B",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "sister_B"
+              ],
+              "observed_interval": [
+                5.999999999999998,
+                11.999999999999977
+              ],
+              "observations_checked": 121,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "sister_B",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            }
+          ],
+          "status": "PARTIALLY_VERIFIED",
+          "full_constraint_verified": false
+        },
+        {
+          "constraint_id": "C7",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "object_ids": [
+            "sister_A",
+            "sister_B"
+          ],
+          "event_ids": [
+            "metaphase"
+          ],
+          "observed_interval": [
+            0.0,
+            5.999999999999998
+          ],
+          "observations_checked": 256,
+          "evidence_ids": [
+            "E_70c610899421"
+          ],
+          "subchecks": [
+            {
+              "subcheck_id": "C7::identity::sister_A",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "sister_A"
+              ],
+              "observed_interval": [
+                0.0,
+                5.999999999999998
+              ],
+              "observations_checked": 128,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "sister_A",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            },
+            {
+              "subcheck_id": "C7::identity::sister_B",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "sister_B"
+              ],
+              "observed_interval": [
+                0.0,
+                5.999999999999998
+              ],
+              "observations_checked": 128,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "sister_B",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            }
+          ],
+          "status": "PARTIALLY_VERIFIED",
+          "full_constraint_verified": false
+        },
+        {
+          "constraint_id": "C8",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "object_ids": [
+            "kinetochore_A",
+            "kinetochore_B",
+            "sister_A",
+            "sister_B"
+          ],
+          "event_ids": [
+            "metaphase"
+          ],
+          "observed_interval": [
+            0.0,
+            5.999999999999998
+          ],
+          "observations_checked": 512,
+          "evidence_ids": [
+            "E_70c610899421",
+            "E_dcb0de9a22b0"
+          ],
+          "subchecks": [
+            {
+              "subcheck_id": "C8::identity::kinetochore_A",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "kinetochore_A"
+              ],
+              "observed_interval": [
+                0.0,
+                5.999999999999998
+              ],
+              "observations_checked": 128,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "kinetochore_A",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            },
+            {
+              "subcheck_id": "C8::identity::kinetochore_B",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "kinetochore_B"
+              ],
+              "observed_interval": [
+                0.0,
+                5.999999999999998
+              ],
+              "observations_checked": 128,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "kinetochore_B",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            },
+            {
+              "subcheck_id": "C8::identity::sister_A",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "sister_A"
+              ],
+              "observed_interval": [
+                0.0,
+                5.999999999999998
+              ],
+              "observations_checked": 128,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "sister_A",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            },
+            {
+              "subcheck_id": "C8::identity::sister_B",
+              "primitive": "identity",
+              "status": "PASS",
+              "object_ids": [
+                "sister_B"
+              ],
+              "observed_interval": [
+                0.0,
+                5.999999999999998
+              ],
+              "observations_checked": 128,
+              "evidence": {
+                "violations": [],
+                "expected_origin": "sister_B",
+                "source": "actual_runtime_instance_and_origin"
+              },
+              "scope": "Identity continuity only; does not prove biochemical role"
+            }
+          ],
+          "status": "PARTIALLY_VERIFIED",
+          "full_constraint_verified": false
+        }
+      ],
+      "measured_observations": [
+        {
+          "subcheck_id": "C1::identity::sister_A",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "sister_A"
+          ],
+          "observed_interval": [
+            0.0,
+            5.999999999999998
+          ],
+          "observations_checked": 128,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "sister_A",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C1",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_70c610899421"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C1::identity::sister_B",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "sister_B"
+          ],
+          "observed_interval": [
+            0.0,
+            5.999999999999998
+          ],
+          "observations_checked": 128,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "sister_B",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C1",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_70c610899421"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C2::identity::sister_A",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "sister_A"
+          ],
+          "observed_interval": [
+            0.0,
+            5.999999999999998
+          ],
+          "observations_checked": 128,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "sister_A",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C2",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_70c610899421"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C2::identity::sister_B",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "sister_B"
+          ],
+          "observed_interval": [
+            0.0,
+            5.999999999999998
+          ],
+          "observations_checked": 128,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "sister_B",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C2",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_70c610899421"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C2::relation::sister_A::sister_B::sister_cohesion",
+          "primitive": "persistent_relation",
+          "status": "PASS",
+          "object_ids": [
+            "sister_A",
+            "sister_B"
+          ],
+          "event_ids": [
+            "metaphase"
+          ],
+          "observed_interval": [
+            0.0,
+            5.999999999999998
+          ],
+          "observations_checked": 128,
+          "evidence": {
+            "relation": "sister_cohesion",
+            "violations": [],
+            "distances": [
+              {
+                "time": 0.0,
+                "distance": 0.44
+              },
+              {
+                "time": 0.0,
+                "distance": 0.44
+              },
+              {
+                "time": 0.06666666666666667,
+                "distance": 0.44
+              },
+              {
+                "time": 0.13333333333333333,
+                "distance": 0.44
+              },
+              {
+                "time": 0.2,
+                "distance": 0.44
+              },
+              {
+                "time": 0.2,
+                "distance": 0.44
+              },
+              {
+                "time": 0.26666666666666666,
+                "distance": 0.44
+              },
+              {
+                "time": 0.3333333333333333,
+                "distance": 0.44
+              },
+              {
+                "time": 0.39999999999999997,
+                "distance": 0.44
+              },
+              {
+                "time": 0.39999999999999997,
+                "distance": 0.44
+              },
+              {
+                "time": 0.4666666666666666,
+                "distance": 0.44
+              },
+              {
+                "time": 0.5333333333333333,
+                "distance": 0.44
+              },
+              {
+                "time": 0.6,
+                "distance": 0.44
+              },
+              {
+                "time": 0.6666666666666666,
+                "distance": 0.44
+              },
+              {
+                "time": 0.6666666666666666,
+                "distance": 0.44
+              },
+              {
+                "time": 0.7333333333333333,
+                "distance": 0.44
+              },
+              {
+                "time": 0.7999999999999999,
+                "distance": 0.44
+              },
+              {
+                "time": 0.8666666666666666,
+                "distance": 0.44
+              },
+              {
+                "time": 0.8666666666666666,
+                "distance": 0.44
+              },
+              {
+                "time": 0.9333333333333332,
+                "distance": 0.44
+              },
+              {
+                "time": 0.9999999999999999,
+                "distance": 0.44
+              },
+              {
+                "time": 1.0666666666666667,
+                "distance": 0.44
+              },
+              {
+                "time": 1.1333333333333333,
+                "distance": 0.44
+              },
+              {
+                "time": 1.1333333333333333,
+                "distance": 0.44
+              },
+              {
+                "time": 1.2,
+                "distance": 0.44
+              },
+              {
+                "time": 1.2,
+                "distance": 0.44
+              },
+              {
+                "time": 1.2,
+                "distance": 0.44
+              },
+              {
+                "time": 1.2666666666666666,
+                "distance": 0.44
+              },
+              {
+                "time": 1.3333333333333333,
+                "distance": 0.44
+              },
+              {
+                "time": 1.4,
+                "distance": 0.44
+              },
+              {
+                "time": 1.4,
+                "distance": 0.44
+              },
+              {
+                "time": 1.4666666666666666,
+                "distance": 0.44
+              },
+              {
+                "time": 1.5333333333333332,
+                "distance": 0.44
+              },
+              {
+                "time": 1.5999999999999999,
+                "distance": 0.44
+              },
+              {
+                "time": 1.5999999999999999,
+                "distance": 0.44
+              },
+              {
+                "time": 1.6666666666666665,
+                "distance": 0.44
+              },
+              {
+                "time": 1.7333333333333332,
+                "distance": 0.44
+              },
+              {
+                "time": 1.7999999999999998,
+                "distance": 0.44
+              },
+              {
+                "time": 1.8666666666666665,
+                "distance": 0.44
+              },
+              {
+                "time": 1.8666666666666665,
+                "distance": 0.44
+              },
+              {
+                "time": 1.9333333333333331,
+                "distance": 0.44
+              },
+              {
+                "time": 1.9999999999999998,
+                "distance": 0.44
+              },
+              {
+                "time": 2.0666666666666664,
+                "distance": 0.44
+              },
+              {
+                "time": 2.0666666666666664,
+                "distance": 0.44
+              },
+              {
+                "time": 2.1333333333333333,
+                "distance": 0.44
+              },
+              {
+                "time": 2.2,
+                "distance": 0.44
+              },
+              {
+                "time": 2.266666666666667,
+                "distance": 0.44
+              },
+              {
+                "time": 2.333333333333334,
+                "distance": 0.44
+              },
+              {
+                "time": 2.333333333333334,
+                "distance": 0.44
+              },
+              {
+                "time": 2.400000000000001,
+                "distance": 0.44
+              },
+              {
+                "time": 2.400000000000001,
+                "distance": 0.44
+              },
+              {
+                "time": 2.400000000000001,
+                "distance": 0.44
+              },
+              {
+                "time": 2.4666666666666677,
+                "distance": 0.44
+              },
+              {
+                "time": 2.5333333333333345,
+                "distance": 0.44
+              },
+              {
+                "time": 2.6000000000000014,
+                "distance": 0.44
+              },
+              {
+                "time": 2.6000000000000014,
+                "distance": 0.44
+              },
+              {
+                "time": 2.6666666666666683,
+                "distance": 0.44
+              },
+              {
+                "time": 2.733333333333335,
+                "distance": 0.44
+              },
+              {
+                "time": 2.800000000000002,
+                "distance": 0.44
+              },
+              {
+                "time": 2.800000000000002,
+                "distance": 0.44
+              },
+              {
+                "time": 2.866666666666669,
+                "distance": 0.44
+              },
+              {
+                "time": 2.933333333333336,
+                "distance": 0.44
+              },
+              {
+                "time": 3.0000000000000027,
+                "distance": 0.44
+              },
+              {
+                "time": 3.0666666666666695,
+                "distance": 0.44
+              },
+              {
+                "time": 3.0666666666666695,
+                "distance": 0.44
+              },
+              {
+                "time": 3.1333333333333364,
+                "distance": 0.44
+              },
+              {
+                "time": 3.2000000000000033,
+                "distance": 0.44
+              },
+              {
+                "time": 3.26666666666667,
+                "distance": 0.44
+              },
+              {
+                "time": 3.26666666666667,
+                "distance": 0.44
+              },
+              {
+                "time": 3.333333333333337,
+                "distance": 0.44
+              },
+              {
+                "time": 3.400000000000004,
+                "distance": 0.44
+              },
+              {
+                "time": 3.466666666666671,
+                "distance": 0.44
+              },
+              {
+                "time": 3.5333333333333377,
+                "distance": 0.44
+              },
+              {
+                "time": 3.5333333333333377,
+                "distance": 0.44
+              },
+              {
+                "time": 3.6000000000000045,
+                "distance": 0.44
+              },
+              {
+                "time": 3.6000000000000045,
+                "distance": 0.44
+              },
+              {
+                "time": 3.6000000000000045,
+                "distance": 0.44
+              },
+              {
+                "time": 3.6666666666666714,
+                "distance": 0.44
+              },
+              {
+                "time": 3.7333333333333383,
+                "distance": 0.44
+              },
+              {
+                "time": 3.800000000000005,
+                "distance": 0.44
+              },
+              {
+                "time": 3.800000000000005,
+                "distance": 0.44
+              },
+              {
+                "time": 3.866666666666672,
+                "distance": 0.44
+              },
+              {
+                "time": 3.933333333333339,
+                "distance": 0.44
+              },
+              {
+                "time": 4.000000000000005,
+                "distance": 0.44
+              },
+              {
+                "time": 4.000000000000005,
+                "distance": 0.44
+              },
+              {
+                "time": 4.066666666666672,
+                "distance": 0.44
+              },
+              {
+                "time": 4.133333333333338,
+                "distance": 0.44
+              },
+              {
+                "time": 4.200000000000005,
+                "distance": 0.44
+              },
+              {
+                "time": 4.266666666666671,
+                "distance": 0.44
+              },
+              {
+                "time": 4.266666666666671,
+                "distance": 0.44
+              },
+              {
+                "time": 4.3333333333333375,
+                "distance": 0.44
+              },
+              {
+                "time": 4.400000000000004,
+                "distance": 0.44
+              },
+              {
+                "time": 4.46666666666667,
+                "distance": 0.44
+              },
+              {
+                "time": 4.46666666666667,
+                "distance": 0.44
+              },
+              {
+                "time": 4.533333333333337,
+                "distance": 0.44
+              },
+              {
+                "time": 4.600000000000003,
+                "distance": 0.44
+              },
+              {
+                "time": 4.66666666666667,
+                "distance": 0.44
+              },
+              {
+                "time": 4.733333333333336,
+                "distance": 0.44
+              },
+              {
+                "time": 4.733333333333336,
+                "distance": 0.44
+              },
+              {
+                "time": 4.8000000000000025,
+                "distance": 0.44
+              },
+              {
+                "time": 4.8000000000000025,
+                "distance": 0.44
+              },
+              {
+                "time": 4.8000000000000025,
+                "distance": 0.44
+              },
+              {
+                "time": 4.8000000000000025,
+                "distance": 0.44
+              },
+              {
+                "time": 4.866666666666669,
+                "distance": 0.44
+              },
+              {
+                "time": 4.933333333333335,
+                "distance": 0.44
+              },
+              {
+                "time": 5.000000000000002,
+                "distance": 0.44
+              },
+              {
+                "time": 5.000000000000002,
+                "distance": 0.44
+              },
+              {
+                "time": 5.066666666666668,
+                "distance": 0.44
+              },
+              {
+                "time": 5.133333333333335,
+                "distance": 0.44
+              },
+              {
+                "time": 5.200000000000001,
+                "distance": 0.44
+              },
+              {
+                "time": 5.200000000000001,
+                "distance": 0.44
+              },
+              {
+                "time": 5.2666666666666675,
+                "distance": 0.44
+              },
+              {
+                "time": 5.333333333333334,
+                "distance": 0.44
+              },
+              {
+                "time": 5.4,
+                "distance": 0.44
+              },
+              {
+                "time": 5.466666666666667,
+                "distance": 0.44
+              },
+              {
+                "time": 5.466666666666667,
+                "distance": 0.44
+              },
+              {
+                "time": 5.533333333333333,
+                "distance": 0.44
+              },
+              {
+                "time": 5.6,
+                "distance": 0.44
+              },
+              {
+                "time": 5.666666666666666,
+                "distance": 0.44
+              },
+              {
+                "time": 5.666666666666666,
+                "distance": 0.44
+              },
+              {
+                "time": 5.7333333333333325,
+                "distance": 0.44
+              },
+              {
+                "time": 5.799999999999999,
+                "distance": 0.44
+              },
+              {
+                "time": 5.866666666666665,
+                "distance": 0.44
+              },
+              {
+                "time": 5.933333333333332,
+                "distance": 0.44
+              },
+              {
+                "time": 5.933333333333332,
+                "distance": 0.44
+              },
+              {
+                "time": 5.999999999999998,
+                "distance": 0.44
+              },
+              {
+                "time": 5.999999999999998,
+                "distance": 0.44
+              },
+              {
+                "time": 5.999999999999998,
+                "distance": 0.44
+              }
+            ],
+            "registered_lifetime": [
+              0.0,
+              5.999999999999998
+            ]
+          },
+          "scope": "Measured registered relationship continuity within observed lifecycle, not complete catalytic mechanism",
+          "parent_constraint_id": "C2",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_70c610899421"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C3::identity::kinetochore_A",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "kinetochore_A"
+          ],
+          "observed_interval": [
+            0.0,
+            5.999999999999998
+          ],
+          "observations_checked": 128,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "kinetochore_A",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C3",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_70c610899421",
+            "E_dcb0de9a22b0"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C4::identity::kinetochore_B",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "kinetochore_B"
+          ],
+          "observed_interval": [
+            0.0,
+            5.999999999999998
+          ],
+          "observations_checked": 128,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "kinetochore_B",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C4",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_70c610899421",
+            "E_dcb0de9a22b0"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C5::identity::sister_A",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "sister_A"
+          ],
+          "observed_interval": [
+            5.999999999999998,
+            11.999999999999977
+          ],
+          "observations_checked": 121,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "sister_A",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C5",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_70c610899421",
+            "E_dcb0de9a22b0"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C5::identity::sister_B",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "sister_B"
+          ],
+          "observed_interval": [
+            5.999999999999998,
+            11.999999999999977
+          ],
+          "observations_checked": 121,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "sister_B",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C5",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_70c610899421",
+            "E_dcb0de9a22b0"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C6::identity::sister_A",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "sister_A"
+          ],
+          "observed_interval": [
+            5.999999999999998,
+            11.999999999999977
+          ],
+          "observations_checked": 121,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "sister_A",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C6",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_70c610899421",
+            "E_dcb0de9a22b0"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C6::identity::sister_B",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "sister_B"
+          ],
+          "observed_interval": [
+            5.999999999999998,
+            11.999999999999977
+          ],
+          "observations_checked": 121,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "sister_B",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C6",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_70c610899421",
+            "E_dcb0de9a22b0"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C7::identity::sister_A",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "sister_A"
+          ],
+          "observed_interval": [
+            0.0,
+            5.999999999999998
+          ],
+          "observations_checked": 128,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "sister_A",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C7",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_70c610899421"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C7::identity::sister_B",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "sister_B"
+          ],
+          "observed_interval": [
+            0.0,
+            5.999999999999998
+          ],
+          "observations_checked": 128,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "sister_B",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C7",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_70c610899421"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C8::identity::kinetochore_A",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "kinetochore_A"
+          ],
+          "observed_interval": [
+            0.0,
+            5.999999999999998
+          ],
+          "observations_checked": 128,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "kinetochore_A",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C8",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_70c610899421",
+            "E_dcb0de9a22b0"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C8::identity::kinetochore_B",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "kinetochore_B"
+          ],
+          "observed_interval": [
+            0.0,
+            5.999999999999998
+          ],
+          "observations_checked": 128,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "kinetochore_B",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C8",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_70c610899421",
+            "E_dcb0de9a22b0"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C8::identity::sister_A",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "sister_A"
+          ],
+          "observed_interval": [
+            0.0,
+            5.999999999999998
+          ],
+          "observations_checked": 128,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "sister_A",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C8",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_70c610899421",
+            "E_dcb0de9a22b0"
+          ],
+          "full_constraint_verified": false
+        },
+        {
+          "subcheck_id": "C8::identity::sister_B",
+          "primitive": "identity",
+          "status": "PASS",
+          "object_ids": [
+            "sister_B"
+          ],
+          "observed_interval": [
+            0.0,
+            5.999999999999998
+          ],
+          "observations_checked": 128,
+          "evidence": {
+            "violations": [],
+            "expected_origin": "sister_B",
+            "source": "actual_runtime_instance_and_origin"
+          },
+          "scope": "Identity continuity only; does not prove biochemical role",
+          "parent_constraint_id": "C8",
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c",
+          "verification_method": "runtime_trace",
+          "evidence_ids": [
+            "E_70c610899421",
+            "E_dcb0de9a22b0"
+          ],
+          "full_constraint_verified": false
+        }
+      ]
+    },
+    "semantic": [
+      {
+        "constraint_id": "C1",
+        "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+        "video_sha256": "3ac1a0c4dbbcaea4298a7bec4fee92acab29a1999d62823c8bdee3df36071708",
+        "review_model": "qwen3.8-27b",
+        "verification_method": "video_semantic_review",
+        "status": "PASS",
+        "evidence_status": "SUPPORTED_VIDEO_OBSERVATION",
+        "observed_interval": [
+          0.0,
+          5.2
+        ],
+        "observed_objects_or_events": "Two sister chromatids (Sister A green, Sister B orange) are joined at the centromere as one duplicated chromosome at center, t=0.0–5.2s.",
+        "reference_evidence_ids": [
+          "E_70c610899421"
+        ],
+        "uncertainty": [
+          "No reference video exists; comparison uses static OpenStax illustrations (REF_5c388a09b4, REF_4ab08ec831) whose captions are not independent pixel verification.",
+          "References are simplified high-school schematics and may not match the generated video's exact geometry.",
+          "Cohesin and the metaphase plate are molecular/planar concepts not directly resolvable in the generated frames, so those relations rely on captions + spatial inference."
+        ],
+        "raw_check": {
+          "constraint_id": "C1",
+          "status": "PASS",
+          "observation": "Two sister chromatids (Sister A green, Sister B orange) are joined at the centromere as one duplicated chromosome at center, t=0.0–5.2s."
+        },
+        "limitation": "Model-reported interval, not per-frame deterministic measurement"
+      },
+      {
+        "constraint_id": "C2",
+        "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+        "video_sha256": "3ac1a0c4dbbcaea4298a7bec4fee92acab29a1999d62823c8bdee3df36071708",
+        "review_model": "qwen3.8-27b",
+        "verification_method": "video_semantic_review",
+        "status": "UNCERTAIN",
+        "evidence_status": "SUPPORTED_VIDEO_OBSERVATION",
+        "observed_interval": [
+          5.2,
+          6.2
+        ],
+        "observed_objects_or_events": "Sisters remain physically joined at the centromere through t=5.2s and the caption 'Sister cohesion is released' appears at t=6.2s; cohesin itself is not directly visible, so the connected-by-cohesin relation is inferred.",
+        "reference_evidence_ids": [
+          "E_70c610899421"
+        ],
+        "uncertainty": [
+          "No reference video exists; comparison uses static OpenStax illustrations (REF_5c388a09b4, REF_4ab08ec831) whose captions are not independent pixel verification.",
+          "References are simplified high-school schematics and may not match the generated video's exact geometry.",
+          "Cohesin and the metaphase plate are molecular/planar concepts not directly resolvable in the generated frames, so those relations rely on captions + spatial inference."
+        ],
+        "raw_check": {
+          "constraint_id": "C2",
+          "status": "UNCERTAIN",
+          "observation": "Sisters remain physically joined at the centromere through t=5.2s and the caption 'Sister cohesion is released' appears at t=6.2s; cohesin itself is not directly visible, so the connected-by-cohesin relation is inferred."
+        },
+        "limitation": "Model-reported interval, not per-frame deterministic measurement"
+      },
+      {
+        "constraint_id": "C3",
+        "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+        "video_sha256": "3ac1a0c4dbbcaea4298a7bec4fee92acab29a1999d62823c8bdee3df36071708",
+        "review_model": "qwen3.8-27b",
+        "verification_method": "video_semantic_review",
+        "status": "PASS",
+        "evidence_status": "SUPPORTED_VIDEO_OBSERVATION",
+        "observed_interval": [
+          0.0,
+          1.2
+        ],
+        "observed_objects_or_events": "Left pole→kinetochore_A microtubule line visible from t=1.2s onward (absent at t=0.0s).",
+        "reference_evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ],
+        "uncertainty": [
+          "No reference video exists; comparison uses static OpenStax illustrations (REF_5c388a09b4, REF_4ab08ec831) whose captions are not independent pixel verification.",
+          "References are simplified high-school schematics and may not match the generated video's exact geometry.",
+          "Cohesin and the metaphase plate are molecular/planar concepts not directly resolvable in the generated frames, so those relations rely on captions + spatial inference."
+        ],
+        "raw_check": {
+          "constraint_id": "C3",
+          "status": "PASS",
+          "observation": "Left pole→kinetochore_A microtubule line visible from t=1.2s onward (absent at t=0.0s)."
+        },
+        "limitation": "Model-reported interval, not per-frame deterministic measurement"
+      },
+      {
+        "constraint_id": "C4",
+        "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+        "video_sha256": "3ac1a0c4dbbcaea4298a7bec4fee92acab29a1999d62823c8bdee3df36071708",
+        "review_model": "qwen3.8-27b",
+        "verification_method": "video_semantic_review",
+        "status": "PASS",
+        "evidence_status": "SUPPORTED_VIDEO_OBSERVATION",
+        "observed_interval": [
+          1.2,
+          1.2
+        ],
+        "observed_objects_or_events": "Right pole→kinetochore_B microtubule line visible from t=1.2s onward, giving bipolar attachment.",
+        "reference_evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ],
+        "uncertainty": [
+          "No reference video exists; comparison uses static OpenStax illustrations (REF_5c388a09b4, REF_4ab08ec831) whose captions are not independent pixel verification.",
+          "References are simplified high-school schematics and may not match the generated video's exact geometry.",
+          "Cohesin and the metaphase plate are molecular/planar concepts not directly resolvable in the generated frames, so those relations rely on captions + spatial inference."
+        ],
+        "raw_check": {
+          "constraint_id": "C4",
+          "status": "PASS",
+          "observation": "Right pole→kinetochore_B microtubule line visible from t=1.2s onward, giving bipolar attachment."
+        },
+        "limitation": "Model-reported interval, not per-frame deterministic measurement"
+      },
+      {
+        "constraint_id": "C5",
+        "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+        "video_sha256": "3ac1a0c4dbbcaea4298a7bec4fee92acab29a1999d62823c8bdee3df36071708",
+        "review_model": "qwen3.8-27b",
+        "verification_method": "video_semantic_review",
+        "status": "PASS",
+        "evidence_status": "SUPPORTED_VIDEO_OBSERVATION",
+        "observed_interval": [
+          9.2,
+          11.2
+        ],
+        "observed_objects_or_events": "After release, Daughter A (green) moves toward the left pole and Daughter B (orange) toward the right pole at t=9.2–11.2s, matching kinetochore_A→pole_left / kinetochore_B→pole_right.",
+        "reference_evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ],
+        "uncertainty": [
+          "No reference video exists; comparison uses static OpenStax illustrations (REF_5c388a09b4, REF_4ab08ec831) whose captions are not independent pixel verification.",
+          "References are simplified high-school schematics and may not match the generated video's exact geometry.",
+          "Cohesin and the metaphase plate are molecular/planar concepts not directly resolvable in the generated frames, so those relations rely on captions + spatial inference."
+        ],
+        "raw_check": {
+          "constraint_id": "C5",
+          "status": "PASS",
+          "observation": "After release, Daughter A (green) moves toward the left pole and Daughter B (orange) toward the right pole at t=9.2–11.2s, matching kinetochore_A→pole_left / kinetochore_B→pole_right."
+        },
+        "limitation": "Model-reported interval, not per-frame deterministic measurement"
+      },
+      {
+        "constraint_id": "C6",
+        "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+        "video_sha256": "3ac1a0c4dbbcaea4298a7bec4fee92acab29a1999d62823c8bdee3df36071708",
+        "review_model": "qwen3.8-27b",
+        "verification_method": "video_semantic_review",
+        "status": "PASS",
+        "evidence_status": "SUPPORTED_VIDEO_OBSERVATION",
+        "observed_interval": [
+          6.2,
+          10.2
+        ],
+        "observed_objects_or_events": "Cohesion-release caption at t=6.2s precedes visible sister separation at t=9.2–10.2s, satisfying cohesin_degradation → sister_separation ordering.",
+        "reference_evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ],
+        "uncertainty": [
+          "No reference video exists; comparison uses static OpenStax illustrations (REF_5c388a09b4, REF_4ab08ec831) whose captions are not independent pixel verification.",
+          "References are simplified high-school schematics and may not match the generated video's exact geometry.",
+          "Cohesin and the metaphase plate are molecular/planar concepts not directly resolvable in the generated frames, so those relations rely on captions + spatial inference."
+        ],
+        "raw_check": {
+          "constraint_id": "C6",
+          "status": "PASS",
+          "observation": "Cohesion-release caption at t=6.2s precedes visible sister separation at t=9.2–10.2s, satisfying cohesin_degradation → sister_separation ordering."
+        },
+        "limitation": "Model-reported interval, not per-frame deterministic measurement"
+      },
+      {
+        "constraint_id": "C7",
+        "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+        "video_sha256": "3ac1a0c4dbbcaea4298a7bec4fee92acab29a1999d62823c8bdee3df36071708",
+        "review_model": "qwen3.8-27b",
+        "verification_method": "video_semantic_review",
+        "status": "PASS",
+        "evidence_status": "SUPPORTED_VIDEO_OBSERVATION",
+        "observed_interval": [
+          0.0,
+          5.2
+        ],
+        "observed_objects_or_events": "Chromatids are aligned midway between the two poles (equatorial position) during t=0.0–5.2s.",
+        "reference_evidence_ids": [
+          "E_70c610899421"
+        ],
+        "uncertainty": [
+          "No reference video exists; comparison uses static OpenStax illustrations (REF_5c388a09b4, REF_4ab08ec831) whose captions are not independent pixel verification.",
+          "References are simplified high-school schematics and may not match the generated video's exact geometry.",
+          "Cohesin and the metaphase plate are molecular/planar concepts not directly resolvable in the generated frames, so those relations rely on captions + spatial inference."
+        ],
+        "raw_check": {
+          "constraint_id": "C7",
+          "status": "PASS",
+          "observation": "Chromatids are aligned midway between the two poles (equatorial position) during t=0.0–5.2s."
+        },
+        "limitation": "Model-reported interval, not per-frame deterministic measurement"
+      },
+      {
+        "constraint_id": "C8",
+        "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+        "video_sha256": "3ac1a0c4dbbcaea4298a7bec4fee92acab29a1999d62823c8bdee3df36071708",
+        "review_model": "qwen3.8-27b",
+        "verification_method": "video_semantic_review",
+        "status": "PASS",
+        "evidence_status": "SUPPORTED_VIDEO_OBSERVATION",
+        "observed_interval": [
+          1.2,
+          5.2
+        ],
+        "observed_objects_or_events": "The two centromeric kinetochore beads face the opposite poles (left bead toward left pole, right bead toward right pole) at t=1.2–5.2s.",
+        "reference_evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ],
+        "uncertainty": [
+          "No reference video exists; comparison uses static OpenStax illustrations (REF_5c388a09b4, REF_4ab08ec831) whose captions are not independent pixel verification.",
+          "References are simplified high-school schematics and may not match the generated video's exact geometry.",
+          "Cohesin and the metaphase plate are molecular/planar concepts not directly resolvable in the generated frames, so those relations rely on captions + spatial inference."
+        ],
+        "raw_check": {
+          "constraint_id": "C8",
+          "status": "PASS",
+          "observation": "The two centromeric kinetochore beads face the opposite poles (left bead toward left pole, right bead toward right pole) at t=1.2–5.2s."
+        },
+        "limitation": "Model-reported interval, not per-frame deterministic measurement"
+      }
+    ],
+    "coverage": {
+      "topic_id": "mitosis",
+      "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+      "uncovered_items": [
+        {
+          "item_id": "entity_sister_chromatids",
+          "kind": "entity",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "entity_cohesin",
+          "kind": "entity",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "persistent_sister_connection_metaphase",
+          "kind": "persistent",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        }
+      ],
+      "unsupported_checks": [],
+      "critical_gaps": [
+        {
+          "item_id": "entity_sister_chromatids",
+          "kind": "entity",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "entity_cohesin",
+          "kind": "entity",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "persistent_sister_connection_metaphase",
+          "kind": "persistent",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        }
+      ],
+      "contract_goal_coverage": {
+        "decision": "PASS",
+        "missing_goals": []
+      },
+      "actual_observation_coverage": 7,
+      "checks_total": 8,
+      "entities_total": 5,
+      "entities_covered": 3,
+      "relations_total": 1,
+      "relations_covered": 1,
+      "processes_total": 2,
+      "processes_covered": 2,
+      "temporal_constraints_total": 1,
+      "temporal_constraints_covered": 1,
+      "persistent_relations_total": 1,
+      "persistent_relations_covered": 0,
+      "decision": "REVIEW_INCOMPLETE",
+      "partially_observed_constraints": 8,
+      "semantic_observations_supported": 7
+    }
+  },
+  "protein_translation": {
+    "runtime": {
+      "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+      "scene_sha256": "bc65148fa74e95b8c7749a194623fb312d7f0d88dd8c3d921443f3ccec7d32ca",
+      "trace_sha256": null,
+      "checks": [
+        {
+          "constraint_id": "C1",
+          "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+          "scene_sha256": "bc65148fa74e95b8c7749a194623fb312d7f0d88dd8c3d921443f3ccec7d32ca",
+          "trace_sha256": null,
+          "verification_method": "runtime_trace",
+          "object_ids": [
+            "OBJ_RIBOSOME",
+            "OBJ_S30",
+            "OBJ_L50"
+          ],
+          "event_ids": [],
+          "observed_interval": null,
+          "observations_checked": 0,
+          "evidence_ids": [
+            "E_a415a44ba2f3"
+          ],
+          "subchecks": [],
+          "status": "NOT_MEASURED",
+          "full_constraint_verified": false,
+          "static_evidence": {
+            "check": "role_registration",
+            "status": "PASS",
+            "object_ids": [
+              "OBJ_RIBOSOME",
+              "OBJ_S30",
+              "OBJ_L50"
+            ],
+            "source": "scene_graph_only",
+            "constraint_semantics_verified": false
+          },
+          "static_subchecks": [
+            {
+              "primitive": "structural_relation_registration",
+              "status": "PASS",
+              "relations": [
+                {
+                  "source": "OBJ_L50",
+                  "target": "OBJ_RIBOSOME",
+                  "type": "assembles_with_S30_to_form_intact_ribosome"
+                }
+              ],
+              "scope": "Actual planned graph edges among bound contract participants; semantic relation correctness not established"
+            }
+          ],
+          "reason": "No actual runtime observations"
+        },
+        {
+          "constraint_id": "C2",
+          "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+          "scene_sha256": "bc65148fa74e95b8c7749a194623fb312d7f0d88dd8c3d921443f3ccec7d32ca",
+          "trace_sha256": null,
+          "verification_method": "runtime_trace",
+          "object_ids": [
+            "OBJ_RIBOSOME",
+            "OBJ_CHARGED_TRNA",
+            "OBJ_mRNA"
+          ],
+          "event_ids": [],
+          "observed_interval": null,
+          "observations_checked": 0,
+          "evidence_ids": [
+            "E_a415a44ba2f3"
+          ],
+          "subchecks": [],
+          "status": "NOT_MEASURED",
+          "full_constraint_verified": false,
+          "static_evidence": {
+            "check": "role_registration",
+            "status": "PASS",
+            "object_ids": [
+              "OBJ_RIBOSOME",
+              "OBJ_CHARGED_TRNA",
+              "OBJ_mRNA"
+            ],
+            "source": "scene_graph_only",
+            "constraint_semantics_verified": false
+          },
+          "static_subchecks": [
+            {
+              "primitive": "structural_relation_registration",
+              "status": "PASS",
+              "relations": [
+                {
+                  "source": "OBJ_CHARGED_TRNA",
+                  "target": "OBJ_mRNA",
+                  "type": "anticodon_pairs_with_codon_in_A_site"
+                }
+              ],
+              "scope": "Actual planned graph edges among bound contract participants; semantic relation correctness not established"
+            }
+          ],
+          "reason": "No actual runtime observations"
+        },
+        {
+          "constraint_id": "C3",
+          "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+          "scene_sha256": "bc65148fa74e95b8c7749a194623fb312d7f0d88dd8c3d921443f3ccec7d32ca",
+          "trace_sha256": null,
+          "verification_method": "runtime_trace",
+          "object_ids": [
+            "OBJ_CHARGED_TRNA",
+            "OBJ_mRNA",
+            "OBJ_RIBOSOME"
+          ],
+          "event_ids": [],
+          "observed_interval": null,
+          "observations_checked": 0,
+          "evidence_ids": [
+            "E_a415a44ba2f3"
+          ],
+          "subchecks": [],
+          "status": "NOT_MEASURED",
+          "full_constraint_verified": false,
+          "static_evidence": {
+            "check": "role_registration",
+            "status": "PASS",
+            "object_ids": [
+              "OBJ_CHARGED_TRNA",
+              "OBJ_mRNA",
+              "OBJ_RIBOSOME"
+            ],
+            "source": "scene_graph_only",
+            "constraint_semantics_verified": false
+          },
+          "static_subchecks": [
+            {
+              "primitive": "structural_relation_registration",
+              "status": "PASS",
+              "relations": [
+                {
+                  "source": "OBJ_CHARGED_TRNA",
+                  "target": "OBJ_mRNA",
+                  "type": "anticodon_pairs_with_codon_in_A_site"
+                }
+              ],
+              "scope": "Actual planned graph edges among bound contract participants; semantic relation correctness not established"
+            }
+          ],
+          "reason": "No actual runtime observations"
+        },
+        {
+          "constraint_id": "C4",
+          "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+          "scene_sha256": "bc65148fa74e95b8c7749a194623fb312d7f0d88dd8c3d921443f3ccec7d32ca",
+          "trace_sha256": null,
+          "verification_method": "runtime_trace",
+          "object_ids": [
+            "OBJ_S30",
+            "OBJ_L50",
+            "OBJ_mRNA",
+            "OBJ_INITIATOR_TRNA"
+          ],
+          "event_ids": [],
+          "observed_interval": null,
+          "observations_checked": 0,
+          "evidence_ids": [
+            "E_a415a44ba2f3"
+          ],
+          "subchecks": [],
+          "status": "NOT_MEASURED",
+          "full_constraint_verified": false,
+          "static_evidence": {
+            "check": "role_registration",
+            "status": "PASS",
+            "object_ids": [
+              "OBJ_S30",
+              "OBJ_L50",
+              "OBJ_mRNA",
+              "OBJ_INITIATOR_TRNA"
+            ],
+            "source": "scene_graph_only",
+            "constraint_semantics_verified": false
+          },
+          "static_subchecks": [
+            {
+              "primitive": "structural_relation_registration",
+              "status": "PASS",
+              "relations": [
+                {
+                  "source": "OBJ_S30",
+                  "target": "OBJ_mRNA",
+                  "type": "binds_mRNA_template"
+                },
+                {
+                  "source": "OBJ_INITIATOR_TRNA",
+                  "target": "OBJ_mRNA",
+                  "type": "anticodon_pairs_with_AUG_start_codon"
+                }
+              ],
+              "scope": "Actual planned graph edges among bound contract participants; semantic relation correctness not established"
+            }
+          ],
+          "reason": "No actual runtime observations"
+        },
+        {
+          "constraint_id": "C5",
+          "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+          "scene_sha256": "bc65148fa74e95b8c7749a194623fb312d7f0d88dd8c3d921443f3ccec7d32ca",
+          "trace_sha256": null,
+          "verification_method": "runtime_trace",
+          "object_ids": [
+            "OBJ_S30",
+            "OBJ_L50"
+          ],
+          "event_ids": [],
+          "observed_interval": null,
+          "observations_checked": 0,
+          "evidence_ids": [
+            "E_a415a44ba2f3"
+          ],
+          "subchecks": [],
+          "status": "NOT_MEASURED",
+          "full_constraint_verified": false,
+          "static_evidence": {
+            "check": "role_registration",
+            "status": "PASS",
+            "object_ids": [
+              "OBJ_S30",
+              "OBJ_L50"
+            ],
+            "source": "scene_graph_only",
+            "constraint_semantics_verified": false
+          },
+          "reason": "No actual runtime observations"
+        },
+        {
+          "constraint_id": "C6",
+          "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+          "scene_sha256": "bc65148fa74e95b8c7749a194623fb312d7f0d88dd8c3d921443f3ccec7d32ca",
+          "trace_sha256": null,
+          "verification_method": "runtime_trace",
+          "object_ids": [
+            "OBJ_GROWING_POLYPEPTIDE",
+            "OBJ_CHARGED_TRNA"
+          ],
+          "event_ids": [],
+          "observed_interval": null,
+          "observations_checked": 0,
+          "evidence_ids": [
+            "E_a415a44ba2f3"
+          ],
+          "subchecks": [],
+          "status": "NOT_MEASURED",
+          "full_constraint_verified": false,
+          "static_evidence": {
+            "check": "role_registration",
+            "status": "PASS",
+            "object_ids": [
+              "OBJ_GROWING_POLYPEPTIDE",
+              "OBJ_CHARGED_TRNA"
+            ],
+            "source": "scene_graph_only",
+            "constraint_semantics_verified": false
+          },
+          "static_subchecks": [
+            {
+              "primitive": "structural_relation_registration",
+              "status": "PASS",
+              "relations": [
+                {
+                  "source": "OBJ_GROWING_POLYPEPTIDE",
+                  "target": "OBJ_CHARGED_TRNA",
+                  "type": "linked_to_P_site_tRNA_until_translocation"
+                }
+              ],
+              "scope": "Actual planned graph edges among bound contract participants; semantic relation correctness not established"
+            }
+          ],
+          "reason": "No actual runtime observations"
+        },
+        {
+          "constraint_id": "C7",
+          "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+          "scene_sha256": "bc65148fa74e95b8c7749a194623fb312d7f0d88dd8c3d921443f3ccec7d32ca",
+          "trace_sha256": null,
+          "verification_method": "runtime_trace",
+          "object_ids": [
+            "OBJ_mRNA",
+            "OBJ_GROWING_POLYPEPTIDE"
+          ],
+          "event_ids": [],
+          "observed_interval": null,
+          "observations_checked": 0,
+          "evidence_ids": [
+            "E_a415a44ba2f3"
+          ],
+          "subchecks": [],
+          "status": "NOT_MEASURED",
+          "full_constraint_verified": false,
+          "static_evidence": {
+            "check": "role_registration",
+            "status": "PASS",
+            "object_ids": [
+              "OBJ_mRNA",
+              "OBJ_GROWING_POLYPEPTIDE"
+            ],
+            "source": "scene_graph_only",
+            "constraint_semantics_verified": false
+          },
+          "reason": "No actual runtime observations"
+        },
+        {
+          "constraint_id": "C8",
+          "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+          "scene_sha256": "bc65148fa74e95b8c7749a194623fb312d7f0d88dd8c3d921443f3ccec7d32ca",
+          "trace_sha256": null,
+          "verification_method": "runtime_trace",
+          "object_ids": [
+            "OBJ_RELEASE_FACTOR",
+            "OBJ_RIBOSOME",
+            "OBJ_mRNA",
+            "OBJ_GROWING_POLYPEPTIDE"
+          ],
+          "event_ids": [],
+          "observed_interval": null,
+          "observations_checked": 0,
+          "evidence_ids": [
+            "E_a415a44ba2f3"
+          ],
+          "subchecks": [],
+          "status": "NOT_MEASURED",
+          "full_constraint_verified": false,
+          "static_evidence": {
+            "check": "role_registration",
+            "status": "PASS",
+            "object_ids": [
+              "OBJ_RELEASE_FACTOR",
+              "OBJ_RIBOSOME",
+              "OBJ_mRNA",
+              "OBJ_GROWING_POLYPEPTIDE"
+            ],
+            "source": "scene_graph_only",
+            "constraint_semantics_verified": false
+          },
+          "static_subchecks": [
+            {
+              "primitive": "structural_relation_registration",
+              "status": "PASS",
+              "relations": [
+                {
+                  "source": "OBJ_RELEASE_FACTOR",
+                  "target": "OBJ_mRNA",
+                  "type": "recognizes_stop_codon_in_A_site"
+                }
+              ],
+              "scope": "Actual planned graph edges among bound contract participants; semantic relation correctness not established"
+            }
+          ],
+          "reason": "No actual runtime observations"
+        },
+        {
+          "constraint_id": "C9",
+          "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+          "scene_sha256": "bc65148fa74e95b8c7749a194623fb312d7f0d88dd8c3d921443f3ccec7d32ca",
+          "trace_sha256": null,
+          "verification_method": "runtime_trace",
+          "object_ids": [
+            "OBJ_SHINE_DALGARNO",
+            "OBJ_S30",
+            "OBJ_mRNA"
+          ],
+          "event_ids": [],
+          "observed_interval": null,
+          "observations_checked": 0,
+          "evidence_ids": [
+            "E_a415a44ba2f3"
+          ],
+          "subchecks": [],
+          "status": "NOT_MEASURED",
+          "full_constraint_verified": false,
+          "static_evidence": {
+            "check": "role_registration",
+            "status": "PASS",
+            "object_ids": [
+              "OBJ_SHINE_DALGARNO",
+              "OBJ_S30",
+              "OBJ_mRNA"
+            ],
+            "source": "scene_graph_only",
+            "constraint_semantics_verified": false
+          },
+          "static_subchecks": [
+            {
+              "primitive": "structural_relation_registration",
+              "status": "PASS",
+              "relations": [
+                {
+                  "source": "OBJ_S30",
+                  "target": "OBJ_mRNA",
+                  "type": "binds_mRNA_template"
+                },
+                {
+                  "source": "OBJ_SHINE_DALGARNO",
+                  "target": "OBJ_S30",
+                  "type": "base_pairs_with_rRNA_anchoring_30S"
+                }
+              ],
+              "scope": "Actual planned graph edges among bound contract participants; semantic relation correctness not established"
+            }
+          ],
+          "reason": "No actual runtime observations"
+        }
+      ],
+      "measured_observations": []
+    },
+    "semantic": [],
+    "coverage": {
+      "topic_id": "protein_translation",
+      "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+      "uncovered_items": [
+        {
+          "item_id": "entity_mRNA_template",
+          "kind": "entity",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "entity_ribosome_small_subunit",
+          "kind": "entity",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "entity_ribosome_large_subunit",
+          "kind": "entity",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "entity_intact_ribosome",
+          "kind": "entity",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "entity_charged_tRNA",
+          "kind": "entity",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "entity_initiator_tRNA",
+          "kind": "entity",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "entity_growing_polypeptide",
+          "kind": "entity",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "entity_release_factor",
+          "kind": "entity",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "entity_initiation_factors",
+          "kind": "entity",
+          "critical": false,
+          "reason": "No rule"
+        },
+        {
+          "item_id": "entity_shine_dalgarno_sequence",
+          "kind": "entity",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "process_initiation",
+          "kind": "process",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "process_codon_anticodon_recognition",
+          "kind": "process",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "process_elongation_cycle",
+          "kind": "process",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "process_peptide_bond_formation",
+          "kind": "process",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "process_translocation",
+          "kind": "process",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "process_termination",
+          "kind": "process",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "process_polyribosome_formation",
+          "kind": "process",
+          "critical": false,
+          "reason": "No rule"
+        },
+        {
+          "item_id": "relation_anticodon_codon_pairing",
+          "kind": "relation",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "relation_polypeptide_linked_to_P_site_tRNA",
+          "kind": "relation",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "relation_shine_dalgarno_anchoring",
+          "kind": "relation",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "temporal_elongation_order",
+          "kind": "temporal",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "temporal_initiation_order",
+          "kind": "temporal",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "persistent_polypeptide_tRNA_link",
+          "kind": "persistent",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        }
+      ],
+      "unsupported_checks": [],
+      "critical_gaps": [
+        {
+          "item_id": "entity_mRNA_template",
+          "kind": "entity",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "entity_ribosome_small_subunit",
+          "kind": "entity",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "entity_ribosome_large_subunit",
+          "kind": "entity",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "entity_intact_ribosome",
+          "kind": "entity",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "entity_charged_tRNA",
+          "kind": "entity",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "entity_initiator_tRNA",
+          "kind": "entity",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "entity_growing_polypeptide",
+          "kind": "entity",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "entity_release_factor",
+          "kind": "entity",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "entity_shine_dalgarno_sequence",
+          "kind": "entity",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "process_initiation",
+          "kind": "process",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "process_codon_anticodon_recognition",
+          "kind": "process",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "process_elongation_cycle",
+          "kind": "process",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "process_peptide_bond_formation",
+          "kind": "process",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "process_translocation",
+          "kind": "process",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "process_termination",
+          "kind": "process",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "relation_anticodon_codon_pairing",
+          "kind": "relation",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "relation_polypeptide_linked_to_P_site_tRNA",
+          "kind": "relation",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "relation_shine_dalgarno_anchoring",
+          "kind": "relation",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "temporal_elongation_order",
+          "kind": "temporal",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "temporal_initiation_order",
+          "kind": "temporal",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        },
+        {
+          "item_id": "persistent_polypeptide_tRNA_link",
+          "kind": "persistent",
+          "critical": true,
+          "reason": "Rule absent/unsupported/unmeasured"
+        }
+      ],
+      "contract_goal_coverage": {
+        "decision": "REVIEW_INCOMPLETE",
+        "missing_goals": [
+          "The contract does not include any constraint or coverage requirement for organism-specific initiation simplifications as a distinct reviewable artifact; it lists them in scope and unresolved questions but does not require a specific visual/text label or check confirming that bacterial vs eukaryotic initiation differences are explicitly marked as simplifications in the storyboard.",
+          "No constraint ensures that the storyboard clearly distinguishes that the Shine-Dalgarno mechanism is bacterial-specific and not eukaryotic; C9 has an exception note but no verification requirement that the exception is visually or textually communicated.",
+          "No constraint addresses the user goal to 'identify organism-specific initiation simplifications' as an output requirement independent of correctness of individual steps."
+        ]
+      },
+      "actual_observation_coverage": 0,
+      "checks_total": 9,
+      "entities_total": 10,
+      "entities_covered": 0,
+      "relations_total": 3,
+      "relations_covered": 0,
+      "processes_total": 7,
+      "processes_covered": 0,
+      "temporal_constraints_total": 2,
+      "temporal_constraints_covered": 0,
+      "persistent_relations_total": 1,
+      "persistent_relations_covered": 0,
+      "decision": "REVIEW_INCOMPLETE",
+      "partially_observed_constraints": 0,
+      "semantic_observations_supported": 0
+    }
+  }
+}
