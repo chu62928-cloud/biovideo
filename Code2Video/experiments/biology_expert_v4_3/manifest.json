@@ -183,7 +183,7 @@
     "full_regression_log": "............................................                             [100%]\n44 passed in 107.15s (0:01:47)\n",
     "categories": "new model/planner synthetic fixtures; old real-trace tests remain explicitly historical"
   },
-  "git_commit": "8b2af6bdc68a7f5ef55e0849bf48ead1106d759c",
+  "git_commit": "1553626b7589f8f8481dd1c8a4b3fdf7fcbc4b6e",
   "source_hashes": {
     "Code2Video/src/biology_expert/typed_science_builder.py": "676647e0672c657896024292c85f9a8504b242e37bb961f58b3d38dce4ab4b9b",
     "Code2Video/src/scientific_scene/typed_planner.py": "9ca067cd12ad8693c7a6e5386076dbf62f2225251e21e010e725388842881e44",

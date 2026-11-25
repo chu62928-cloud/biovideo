@@ -27,3 +27,5 @@ sample_video.mp4、sample_scene.json、sample_trace.json、keyframes.jpg同版�
 先修通用程序集绑定、前置条件真实执行门禁和几何观测覆盖；为DNA与囊泡补充独立来源，继续审核。当前不建议扩展六节：跨主题两组完整编译验收尚未达到。用户已取消建议调用上限，费用账本不重置；不调用Wan或Seedance。
 
 真实API用量：{"deepseek_calls": 30, "qwen_calls": 4, "input_tokens": 216988, "output_tokens": 93467, "cost": null, "cost_note": "API does not report actual charged amount; no invented monetary cost", "failed_calls": 2}
+
+源码提交：1553626b7589f8f8481dd1c8a4b3fdf7fcbc4b6e。交付清单在后续提交中绑定该源码版本。
