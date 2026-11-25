@@ -1,0 +1,399 @@
+{
+  "dna_replication": {
+    "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+    "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+    "contract_review": "REVISE",
+    "diagnostic_only": true,
+    "compiled_constraints": [
+      {
+        "constraint_id": "C1",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "full_semantics": false,
+        "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+        "contract_review": "REVISE"
+      },
+      {
+        "constraint_id": "C2",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "full_semantics": false,
+        "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+        "contract_review": "REVISE"
+      },
+      {
+        "constraint_id": "C3",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "full_semantics": false,
+        "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+        "contract_review": "REVISE"
+      },
+      {
+        "constraint_id": "C4",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "full_semantics": false,
+        "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+        "contract_review": "REVISE"
+      },
+      {
+        "constraint_id": "C5",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "full_semantics": false,
+        "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+        "contract_review": "REVISE"
+      },
+      {
+        "constraint_id": "C6",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "full_semantics": false,
+        "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+        "contract_review": "REVISE"
+      },
+      {
+        "constraint_id": "C7",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "full_semantics": false,
+        "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+        "contract_review": "REVISE"
+      },
+      {
+        "constraint_id": "C8",
+        "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "full_semantics": false,
+        "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+        "contract_review": "REVISE"
+      }
+    ],
+    "capabilities": [
+      "connection_holds_until",
+      "event_precedes",
+      "relation_holds_during",
+      "state_transition_allowed"
+    ]
+  },
+  "mitosis": {
+    "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+    "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+    "contract_review": "PASS",
+    "diagnostic_only": false,
+    "compiled_constraints": [
+      {
+        "constraint_id": "C1",
+        "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_70c610899421"
+        ],
+        "full_semantics": false,
+        "reason": "Existing primitive arguments do not express a complete typed temporal predicate; missing explicit relation/event/state semantics",
+        "contract_review": "PASS"
+      },
+      {
+        "constraint_id": "C2",
+        "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_70c610899421"
+        ],
+        "full_semantics": false,
+        "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+        "contract_review": "PASS"
+      },
+      {
+        "constraint_id": "C3",
+        "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ],
+        "full_semantics": false,
+        "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+        "contract_review": "PASS"
+      },
+      {
+        "constraint_id": "C4",
+        "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ],
+        "full_semantics": false,
+        "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+        "contract_review": "PASS"
+      },
+      {
+        "constraint_id": "C5",
+        "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ],
+        "full_semantics": false,
+        "reason": "Existing primitive arguments do not express a complete typed temporal predicate; missing explicit relation/event/state semantics",
+        "contract_review": "PASS"
+      },
+      {
+        "constraint_id": "C6",
+        "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ],
+        "full_semantics": false,
+        "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+        "contract_review": "PASS"
+      },
+      {
+        "constraint_id": "C7",
+        "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_70c610899421"
+        ],
+        "full_semantics": false,
+        "reason": "Existing primitive arguments do not express a complete typed temporal predicate; missing explicit relation/event/state semantics",
+        "contract_review": "PASS"
+      },
+      {
+        "constraint_id": "C8",
+        "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ],
+        "full_semantics": false,
+        "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+        "contract_review": "PASS"
+      }
+    ],
+    "capabilities": [
+      "connection_holds_until",
+      "event_precedes",
+      "relation_holds_during",
+      "state_transition_allowed"
+    ]
+  },
+  "protein_translation": {
+    "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+    "scene_sha256": "bc65148fa74e95b8c7749a194623fb312d7f0d88dd8c3d921443f3ccec7d32ca",
+    "contract_review": "REVIEW_INCOMPLETE",
+    "diagnostic_only": true,
+    "compiled_constraints": [
+      {
+        "constraint_id": "C1",
+        "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ],
+        "full_semantics": false,
+        "reason": "Existing primitive arguments do not express a complete typed temporal predicate; missing explicit relation/event/state semantics",
+        "contract_review": "REVIEW_INCOMPLETE"
+      },
+      {
+        "constraint_id": "C2",
+        "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ],
+        "full_semantics": false,
+        "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+        "contract_review": "REVIEW_INCOMPLETE"
+      },
+      {
+        "constraint_id": "C3",
+        "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ],
+        "full_semantics": false,
+        "reason": "Existing primitive arguments do not express a complete typed temporal predicate; missing explicit relation/event/state semantics",
+        "contract_review": "REVIEW_INCOMPLETE"
+      },
+      {
+        "constraint_id": "C4",
+        "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ],
+        "full_semantics": false,
+        "reason": "Existing primitive arguments do not express a complete typed temporal predicate; missing explicit relation/event/state semantics",
+        "contract_review": "REVIEW_INCOMPLETE"
+      },
+      {
+        "constraint_id": "C5",
+        "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ],
+        "full_semantics": false,
+        "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+        "contract_review": "REVIEW_INCOMPLETE"
+      },
+      {
+        "constraint_id": "C6",
+        "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ],
+        "full_semantics": false,
+        "reason": "Existing primitive arguments do not express a complete typed temporal predicate; missing explicit relation/event/state semantics",
+        "contract_review": "REVIEW_INCOMPLETE"
+      },
+      {
+        "constraint_id": "C7",
+        "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ],
+        "full_semantics": false,
+        "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+        "contract_review": "REVIEW_INCOMPLETE"
+      },
+      {
+        "constraint_id": "C8",
+        "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "AMBIGUOUS_SEMANTICS",
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ],
+        "full_semantics": false,
+        "reason": "Existing primitive arguments do not express a complete typed temporal predicate; missing explicit relation/event/state semantics",
+        "contract_review": "REVIEW_INCOMPLETE"
+      },
+      {
+        "constraint_id": "C9",
+        "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+        "predicate": null,
+        "participants": {},
+        "expected_interval": null,
+        "compile_status": "UNSUPPORTED",
+        "evidence_ids": [
+          "E_a415a44ba2f3"
+        ],
+        "full_semantics": false,
+        "reason": "Declared exceptions require explicit executable applicability; not ignored",
+        "contract_review": "REVIEW_INCOMPLETE"
+      }
+    ],
+    "capabilities": [
+      "connection_holds_until",
+      "event_precedes",
+      "relation_holds_during",
+      "state_transition_allowed"
+    ]
+  }
+}

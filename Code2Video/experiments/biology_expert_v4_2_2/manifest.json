@@ -1,0 +1,189 @@
+{
+  "experiment": "V4.2.2",
+  "baseline_commit": "160063900bfa1450b27e8285b48b3d07b72a8d75",
+  "git_commit": "160063900bfa1450b27e8285b48b3d07b72a8d75",
+  "inputs": [
+    {
+      "topic": "dna_replication",
+      "kind": "contract",
+      "path": "/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v4_2/contracts/dna_replication/scientific_contract.json",
+      "exists": true,
+      "sha256": "f7b8abf5665633ffe9ecb16f167092e6e51e4330a1923b1c9347685dfe7bbead",
+      "origin": "Historical input",
+      "rerendered": false
+    },
+    {
+      "topic": "dna_replication",
+      "kind": "contract_review",
+      "path": "/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v4_2/contracts/dna_replication/contract_review.json",
+      "exists": true,
+      "sha256": "99d260f05b9767aef2e9fa0ad595f2df2d2b44ba1510d58d3d0a0c84996372e5",
+      "origin": "Historical input",
+      "rerendered": false
+    },
+    {
+      "topic": "dna_replication",
+      "kind": "scene",
+      "path": "/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/B4_expert_repair/scene_graph.json",
+      "exists": true,
+      "sha256": "ca8397f9bd1d30700226a98662c280ab16bf3a836e7b49ff818da71ce73cc1c6",
+      "origin": "Historical input",
+      "rerendered": false
+    },
+    {
+      "topic": "dna_replication",
+      "kind": "trace",
+      "path": "/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/B4_expert_repair/geometry_trace.json",
+      "exists": true,
+      "sha256": "4a791161cdc3157e4cd9382ff6d00f902c359685bb793ef334e6a4f7e49cb0b8",
+      "origin": "Historical input",
+      "rerendered": false
+    },
+    {
+      "topic": "dna_replication",
+      "kind": "video",
+      "path": "/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/B4_expert_repair/video.mp4",
+      "sha256": "c1a999fce2b3f1abadfd14b3cefa429cbf672a2a5de124c16a93b0b2b49baf46",
+      "duration": 31.933333,
+      "rerendered": false
+    },
+    {
+      "topic": "mitosis",
+      "kind": "contract",
+      "path": "/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v4_2/contracts/mitosis/scientific_contract.json",
+      "exists": true,
+      "sha256": "37a3789498d08d966570082432d82d5c77f75662ed064b7e3ea153ac0e17cfd8",
+      "origin": "Historical input",
+      "rerendered": false
+    },
+    {
+      "topic": "mitosis",
+      "kind": "contract_review",
+      "path": "/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v4_2/contracts/mitosis/contract_review.json",
+      "exists": true,
+      "sha256": "f48d48fdcfb8cc3aa339cab3f447757fce4d45fefcf8f2c5a8a076e06eb7adca",
+      "origin": "Historical input",
+      "rerendered": false
+    },
+    {
+      "topic": "mitosis",
+      "kind": "scene",
+      "path": "/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/M1_mitosis/scene_graph.json",
+      "exists": true,
+      "sha256": "f72306a4a412a55f8dd999880ff0f998a6db2b271a021a8c9e6b43bb2f9e6b71",
+      "origin": "Historical input",
+      "rerendered": false
+    },
+    {
+      "topic": "mitosis",
+      "kind": "trace",
+      "path": "/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/M1_mitosis/geometry_trace.json",
+      "exists": true,
+      "sha256": "9cff39e0e65ec253ae5d3d61ebf73ab04a8ae6e11f75e5d9eb159dd15fda4659",
+      "origin": "Historical input",
+      "rerendered": false
+    },
+    {
+      "topic": "mitosis",
+      "kind": "video",
+      "path": "/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/M1_mitosis/video.mp4",
+      "sha256": "3ac1a0c4dbbcaea4298a7bec4fee92acab29a1999d62823c8bdee3df36071708",
+      "duration": 12.0,
+      "rerendered": false
+    },
+    {
+      "topic": "protein_translation",
+      "kind": "contract",
+      "path": "/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v4_2/contracts/protein_translation/scientific_contract.json",
+      "exists": true,
+      "sha256": "2ee35aeeec25290f2eef8ded11f2b629b5ee1d2f073b998f084beec1d12ae587",
+      "origin": "Historical input",
+      "rerendered": false
+    },
+    {
+      "topic": "protein_translation",
+      "kind": "contract_review",
+      "path": "/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v4_2/contracts/protein_translation/contract_review.json",
+      "exists": true,
+      "sha256": "d4badd7f23c374b29e32b290d4636fdfc58f409ff58af7e20d99ba3120e5ab10",
+      "origin": "Historical input",
+      "rerendered": false
+    },
+    {
+      "topic": "protein_translation",
+      "kind": "scene",
+      "path": "/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v4_2/contracts/protein_translation/generated_scene_graph.json",
+      "exists": true,
+      "sha256": "dc6c04a4639641816b75e53ac2987f203201e75f0de167f2b7093649f0797494",
+      "origin": "Historical input",
+      "rerendered": false
+    },
+    {
+      "topic": "protein_translation",
+      "kind": "trace",
+      "path": null,
+      "exists": false,
+      "sha256": null,
+      "origin": "Historical input",
+      "rerendered": false
+    }
+  ],
+  "paid_model_calls": 0,
+  "baseline_metrics": {
+    "path": "/autodl-tmp/code2biovideo/biovideo-v4.2.2/Code2Video/experiments/biology_expert_v4_2_1/results.json",
+    "sha256": "3c0b899331be37f805d3eab7bb6d392dc98f393c2b2586fddadf9d5f877787c8",
+    "origin": "Frozen baseline tracked in Git 1600639"
+  },
+  "historical_inputs_unchanged": true,
+  "source_hashes": {
+    "Code2Video/src/biology_expert/__init__.py": "5650f67175a95b62d21381d9b9675cca1e9ecc8f0ee750cd1e899702e06f0e67",
+    "Code2Video/src/biology_expert/__main__.py": "7cea1d6978f39d5712520f044a69306af9100ca2bfb6ca12591203c557eb6df1",
+    "Code2Video/src/biology_expert/agent.py": "f9ca53e3a6f747081c746413ed7e46024db576cc7d165b00132c34c05972bb60",
+    "Code2Video/src/biology_expert/contract_builder.py": "bce3e91e451cc82c2f28e36d889c156d33b83af5601f12641eb8b9b6aec49ccc",
+    "Code2Video/src/biology_expert/contract_cli.py": "c800ae4d5b346f5e0e3a4526c3d6654cdef3d633acdf07c512fcbac5d72cab3e",
+    "Code2Video/src/biology_expert/contracts.py": "ab17b6d7f3f9accedf0683667970524b8bb8dcda1a01559b2ec9cda0cbdd0c92",
+    "Code2Video/src/biology_expert/observation_adapter.py": "01a8e1641acd1b272566598149f7a09689ac7ebf676a77f14249de9f7d8d4063",
+    "Code2Video/src/biology_expert/providers.py": "a5315e8ba37708b47bb5d0f99285ae7eeda0ae393d03af4c0d241439bc948302",
+    "Code2Video/src/biology_expert/qwen_science.py": "c5806e4ce4cbafe44bd0da7881244655dea7222eb3f6fa991c3790b7e4fec79d",
+    "Code2Video/src/biology_expert/repair.py": "de7099bab73f8fcc32ef7b5dc5ccfc2584f0b1134134e663aeee90751cc0d128",
+    "Code2Video/src/biology_expert/role_binder.py": "0bdf3f3fa855d92d27881491afa4d8aa4b805ddd966360a5cfe2d595861a5067",
+    "Code2Video/src/biology_expert/schemas.py": "13718c9f0d5fb6d239a865340ac270d5adebd44b2dd764a3a893d2e488d4a042",
+    "Code2Video/src/biology_expert/state.py": "09302ad26be8899a1fae3107942231ce07e597d47b40a9516f23cc92317e9644",
+    "Code2Video/src/biology_expert/tool_registry.py": "596ecde4918e4b4238198fd3a4e89694297f94bbfee7ee4f02b744b28f646b88",
+    "Code2Video/src/biology_expert/workflow.py": "bb4a0de221d85cfe253a93f68813059643bd93130b36f5d04da3ddf5635eba59",
+    "Code2Video/src/biology_expert/contract_compiler.py": "15c3eceba8d6c904272790c12e807a03994b7bac895ad70a0721f79a4180585d",
+    "Code2Video/src/biology_expert/temporal_validator.py": "7022ed2e80048f2a62d0421a7c3e3086044b7eb04715d53540745356fdc54ef6"
+  },
+  "tests": {
+    "passed": 32,
+    "failed": 0,
+    "real_trace_tests": 2,
+    "synthetic_temporal_tests": true
+  },
+  "tail_frame_evidence": [
+    {
+      "path": "/autodl-tmp/code2biovideo/biovideo-v4.2.2/Code2Video/experiments/biology_expert_v4_2_2/dna_replication_last_frame.png",
+      "sha256": "008dbf366bb84ad4548515360c2e600ec3dacfbb724b70d1baee1ed78fdec89d"
+    },
+    {
+      "path": "/autodl-tmp/code2biovideo/biovideo-v4.2.2/Code2Video/experiments/biology_expert_v4_2_2/mitosis_last_frame.png",
+      "sha256": "cb59e9a2d24032477caa253dd11582b3fcf925f0f66cdd46f05a62f2b0be1117"
+    },
+    {
+      "path": "/autodl-tmp/code2biovideo/biovideo-v4.2.2/Code2Video/experiments/biology_expert_v4_2_2/mitosis_tail_10.png",
+      "sha256": "48dd34ca819e3f9c1cf537112fcdfb3b0fba59b0b918b696c327824c32fe20a9"
+    },
+    {
+      "path": "/autodl-tmp/code2biovideo/biovideo-v4.2.2/Code2Video/experiments/biology_expert_v4_2_2/mitosis_tail_10.5.png",
+      "sha256": "74301361c5debc0fd25927d1eb499ef8da653711748bff2774e050b5c6387497"
+    },
+    {
+      "path": "/autodl-tmp/code2biovideo/biovideo-v4.2.2/Code2Video/experiments/biology_expert_v4_2_2/mitosis_tail_11.png",
+      "sha256": "c1ca25cbb60fbfbbbf75918be9c2ce8355f43b5797262f3423cda0dc40eb51da"
+    },
+    {
+      "path": "/autodl-tmp/code2biovideo/biovideo-v4.2.2/Code2Video/experiments/biology_expert_v4_2_2/mitosis_tail_11.5.png",
+      "sha256": "95a8abd6be1f6a5c2016b974d4f9b60f6f7607a06df61bfc05fd2073a23194fa"
+    }
+  ]
+}

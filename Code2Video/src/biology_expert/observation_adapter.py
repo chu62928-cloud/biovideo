@@ -34,28 +34,7 @@ class RuntimeObservationAdapter:
     lifecycle.append({'subcheck_id':c['constraint_id']+'::identity::'+oid,'primitive':'identity','status':'FAIL' if bad else 'PASS','object_ids':[oid],'observed_interval':[samples[0]['time'],samples[-1]['time']],'observations_checked':len(samples),'evidence':{'violations':bad,'expected_origin':first.get('origin_id'),'source':'actual_runtime_instance_and_origin'},'scope':'Identity continuity only; does not prove biochemical role'})
    # Persistent interaction can be measured when exact participants are bound and runtime
    # explicitly registers an active relation. Never infer a relation synonym from topic.
-   if c['type']=='PERSISTENT_RELATION' and len(ids)>=2:
-    pairs={}
-    for f in relevant:
-     for rel in f.get('relations',[]):
-      if rel.get('source') in ids and rel.get('target') in ids:
-       key=(rel['source'],rel['target'],rel['type'],rel.get('source_anchor','center'),rel.get('target_anchor','center'))
-       pairs[key]=rel
-    for key,rel in pairs.items():
-     a,b,kind,sa,ta=key
-     active=[f for f in relevant if f.get('objects',{}).get(a,{}).get('visible') and f.get('objects',{}).get(b,{}).get('visible')]
-     if not active:continue
-     # Full visibility interval is declared operational applicability; expected relation
-     # may not exist until the first registered attachment, so use observed lifetime endpoints.
-     established=[j for j,f in enumerate(active) if any(r.get('source')==a and r.get('target')==b and r.get('type')==kind for r in f.get('relations',[]))]
-     if not established:continue
-     measured=active[min(established):max(established)+1];violations=[];distances=[]
-     for f in measured:
-      found=any(r.get('source')==a and r.get('target')==b and r.get('type')==kind for r in f.get('relations',[]))
-      if not found:violations.append({'time':f['time'],'reason':'registered_relation_missing'})
-      aa=f['objects'][a];bb=f['objects'][b];p=aa.get('anchors',{}).get(sa,aa.get('center'));q=bb.get('anchors',{}).get(ta,bb.get('center'))
-      if p and q:distances.append({'time':f['time'],'distance':math.dist(p,[x+y for x,y in zip(q,rel.get('offset',[0,0,0]))])})
-     lifecycle.append({'subcheck_id':c['constraint_id']+'::relation::'+'::'.join(key[:3]),'primitive':'persistent_relation','status':'FAIL' if violations else 'PASS','object_ids':[a,b],'event_ids':evs,'observed_interval':[measured[0]['time'],measured[-1]['time']],'observations_checked':len(measured),'evidence':{'relation':kind,'violations':violations,'distances':distances,'registered_lifetime':[measured[0]['time'],measured[-1]['time']]},'scope':'Measured registered relationship continuity within observed lifecycle, not complete catalytic mechanism'})
+   # Persistent mechanism checks use independently resolved intervals in temporal_validator.
    base['subchecks']=lifecycle
    if lifecycle:
     base['status']='FAIL' if any(x['status']=='FAIL' for x in lifecycle) else 'PARTIALLY_VERIFIED'
@@ -73,7 +52,7 @@ class SemanticObservationAdapter:
    observation=r.get('observation','');numbers=re.findall(r'(\d+(?:\.\d+)?)\s*(?:[-–]\s*(\d+(?:\.\d+)?))?\s*s\b',observation)
    interval=[min(float(n[0]) for n in numbers),max(float(n[1] or n[0]) for n in numbers)] if numbers else None
    valid=not mismatch and bool(observation.strip()) and interval is not None and r.get('status') in ['PASS','FAIL','UNCERTAIN','NOT_MEASURED']
-   out.append({'constraint_id':cid,'contract_hash':digest(contract),'video_sha256':video_sha256,'review_model':model,'verification_method':'video_semantic_review','status':r.get('status') if valid else 'NOT_MEASURED','evidence_status':'SUPPORTED_VIDEO_OBSERVATION' if valid else 'VERSION_CONFLICT' if mismatch else 'INSUFFICIENT_VIDEO_EVIDENCE','observed_interval':interval if valid else None,'observed_objects_or_events':observation if valid else None,'reference_evidence_ids':c['evidence_ids'],'uncertainty':review.get('reference_comparison',{}).get('limitations',[]),'raw_check':r,'limitation':'Model-reported interval, not per-frame deterministic measurement'})
+   out.append({'constraint_id':cid,'contract_hash':digest(contract),'video_sha256':video_sha256,'review_model':model,'verification_method':'video_semantic_review','status':r.get('status') if valid else 'NOT_MEASURED','evidence_status':'TIMESTAMP_MATCHED' if valid else 'VERSION_CONFLICT' if mismatch else 'INSUFFICIENT_VIDEO_EVIDENCE','evidence_level':'TIMESTAMP_MATCHED' if valid else 'MODEL_CLAIM_ONLY','independently_frame_verified':False,'observed_interval':interval if valid else None,'observed_objects_or_events':observation if valid else None,'reference_evidence_ids':c['evidence_ids'],'uncertainty':review.get('reference_comparison',{}).get('limitations',[]),'raw_check':r,'limitation':'Model-reported interval, not per-frame deterministic measurement'})
   return out
 
 def merged_coverage(contract,runtime,semantic,goal_review=None):
@@ -82,7 +61,7 @@ def merged_coverage(contract,runtime,semantic,goal_review=None):
   s=sem.get(c['constraint_id']);status=c['status'];refs=[]
   if status=='FAIL':refs=['runtime_trace']
   elif s and s['status']=='FAIL':status='FAIL';refs=['video_semantic_review']
-  elif s and s['status']=='PASS':status='PASS';refs=['video_semantic_review']
+  elif s and s['status']=='PASS' and s.get('evidence_level') in ['FRAME_SEMANTICALLY_REVIEWED','RUNTIME_CORROBORATED']:status='PASS';refs=['video_semantic_review']
   # Partial trace prerequisites are reported separately; do not satisfy full coverage.
   checks.append({'check_id':c['constraint_id'],'status':status,'observation_refs':refs,'partial_observation_refs':['runtime_trace'] if c['subchecks'] else []})
  cov=ScientificCoverageAuditor().audit(contract,{'checks':checks},goal_review)

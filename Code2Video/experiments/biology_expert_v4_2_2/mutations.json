@@ -1,0 +1,185 @@
+{
+  "dna_replication": {
+    "cases": [
+      {
+        "mutation_type": "RELATION_TERMINATED_EARLY",
+        "valid_sample": false,
+        "baseline_status": "NOT_MEASURED",
+        "mutated_status": "NOT_TESTED",
+        "detected": null,
+        "reason": "No fully compiled source-supported real baseline PASS for this predicate"
+      },
+      {
+        "mutation_type": "EVENT_ORDER_REVERSED",
+        "valid_sample": false,
+        "baseline_status": "NOT_MEASURED",
+        "mutated_status": "NOT_TESTED",
+        "detected": null,
+        "reason": "No fully compiled source-supported real baseline PASS for this predicate"
+      },
+      {
+        "mutation_type": "CONNECTION_TARGET_CHANGED",
+        "valid_sample": false,
+        "baseline_status": "NOT_MEASURED",
+        "mutated_status": "NOT_TESTED",
+        "detected": null,
+        "reason": "No fully compiled source-supported real baseline PASS for this predicate"
+      },
+      {
+        "mutation_type": "STATE_PRECONDITION_VIOLATED",
+        "valid_sample": false,
+        "baseline_status": "NOT_MEASURED",
+        "mutated_status": "NOT_TESTED",
+        "detected": null,
+        "reason": "No fully compiled source-supported real baseline PASS for this predicate"
+      }
+    ],
+    "negative_controls": [
+      {
+        "type": "color",
+        "unchanged_scientific_results": true,
+        "false_positive": false,
+        "scope": "visual-only metadata, no scientific event interval changed"
+      },
+      {
+        "type": "label_position",
+        "unchanged_scientific_results": true,
+        "false_positive": false,
+        "scope": "visual-only metadata, no scientific event interval changed"
+      },
+      {
+        "type": "noncritical_visual_duration",
+        "unchanged_scientific_results": true,
+        "false_positive": false,
+        "scope": "visual-only metadata, no scientific event interval changed"
+      }
+    ],
+    "source": "actual_runtime_trace",
+    "distinct_valid_mutation_types": 0,
+    "valid_mutations": 0,
+    "detected": 0,
+    "false_positives": 0
+  },
+  "mitosis": {
+    "cases": [
+      {
+        "mutation_type": "RELATION_TERMINATED_EARLY",
+        "valid_sample": false,
+        "baseline_status": "NOT_MEASURED",
+        "mutated_status": "NOT_TESTED",
+        "detected": null,
+        "reason": "No fully compiled source-supported real baseline PASS for this predicate"
+      },
+      {
+        "mutation_type": "EVENT_ORDER_REVERSED",
+        "valid_sample": false,
+        "baseline_status": "NOT_MEASURED",
+        "mutated_status": "NOT_TESTED",
+        "detected": null,
+        "reason": "No fully compiled source-supported real baseline PASS for this predicate"
+      },
+      {
+        "mutation_type": "CONNECTION_TARGET_CHANGED",
+        "valid_sample": false,
+        "baseline_status": "NOT_MEASURED",
+        "mutated_status": "NOT_TESTED",
+        "detected": null,
+        "reason": "No fully compiled source-supported real baseline PASS for this predicate"
+      },
+      {
+        "mutation_type": "STATE_PRECONDITION_VIOLATED",
+        "valid_sample": false,
+        "baseline_status": "NOT_MEASURED",
+        "mutated_status": "NOT_TESTED",
+        "detected": null,
+        "reason": "No fully compiled source-supported real baseline PASS for this predicate"
+      }
+    ],
+    "negative_controls": [
+      {
+        "type": "color",
+        "unchanged_scientific_results": true,
+        "false_positive": false,
+        "scope": "visual-only metadata, no scientific event interval changed"
+      },
+      {
+        "type": "label_position",
+        "unchanged_scientific_results": true,
+        "false_positive": false,
+        "scope": "visual-only metadata, no scientific event interval changed"
+      },
+      {
+        "type": "noncritical_visual_duration",
+        "unchanged_scientific_results": true,
+        "false_positive": false,
+        "scope": "visual-only metadata, no scientific event interval changed"
+      }
+    ],
+    "source": "actual_runtime_trace",
+    "distinct_valid_mutation_types": 0,
+    "valid_mutations": 0,
+    "detected": 0,
+    "false_positives": 0
+  },
+  "protein_translation": {
+    "cases": [
+      {
+        "mutation_type": "RELATION_TERMINATED_EARLY",
+        "valid_sample": false,
+        "baseline_status": "NOT_MEASURED",
+        "mutated_status": "NOT_TESTED",
+        "detected": null,
+        "reason": "No fully compiled source-supported real baseline PASS for this predicate"
+      },
+      {
+        "mutation_type": "EVENT_ORDER_REVERSED",
+        "valid_sample": false,
+        "baseline_status": "NOT_MEASURED",
+        "mutated_status": "NOT_TESTED",
+        "detected": null,
+        "reason": "No fully compiled source-supported real baseline PASS for this predicate"
+      },
+      {
+        "mutation_type": "CONNECTION_TARGET_CHANGED",
+        "valid_sample": false,
+        "baseline_status": "NOT_MEASURED",
+        "mutated_status": "NOT_TESTED",
+        "detected": null,
+        "reason": "No fully compiled source-supported real baseline PASS for this predicate"
+      },
+      {
+        "mutation_type": "STATE_PRECONDITION_VIOLATED",
+        "valid_sample": false,
+        "baseline_status": "NOT_MEASURED",
+        "mutated_status": "NOT_TESTED",
+        "detected": null,
+        "reason": "No fully compiled source-supported real baseline PASS for this predicate"
+      }
+    ],
+    "negative_controls": [
+      {
+        "type": "color",
+        "unchanged_scientific_results": true,
+        "false_positive": false,
+        "scope": "visual-only metadata, no scientific event interval changed"
+      },
+      {
+        "type": "label_position",
+        "unchanged_scientific_results": true,
+        "false_positive": false,
+        "scope": "visual-only metadata, no scientific event interval changed"
+      },
+      {
+        "type": "noncritical_visual_duration",
+        "unchanged_scientific_results": true,
+        "false_positive": false,
+        "scope": "visual-only metadata, no scientific event interval changed"
+      }
+    ],
+    "source": "NO_RUNTIME_TRACE",
+    "distinct_valid_mutation_types": 0,
+    "valid_mutations": 0,
+    "detected": 0,
+    "false_positives": 0
+  }
+}

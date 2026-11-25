@@ -1,0 +1,736 @@
+{
+  "dna_replication": {
+    "temporal": {
+      "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+      "checks": [
+        {
+          "constraint_id": "C1",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+          "participants": {},
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a"
+        },
+        {
+          "constraint_id": "C2",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+          "participants": {},
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a"
+        },
+        {
+          "constraint_id": "C3",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+          "participants": {},
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a"
+        },
+        {
+          "constraint_id": "C4",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+          "participants": {},
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a"
+        },
+        {
+          "constraint_id": "C5",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+          "participants": {},
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a"
+        },
+        {
+          "constraint_id": "C6",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+          "participants": {},
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a"
+        },
+        {
+          "constraint_id": "C7",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+          "participants": {},
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a"
+        },
+        {
+          "constraint_id": "C8",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+          "participants": {},
+          "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+          "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+          "trace_sha256": "ab91b98eaaad3c3efca3bae52733ee69f30d0bbf7364af69696bb37baad35c5a"
+        }
+      ]
+    },
+    "vlm_evidence": [
+      {
+        "constraint_id": "C1",
+        "status": "PASS",
+        "evidence_level": "TIMESTAMP_MATCHED",
+        "independently_frame_semantically_reviewed": false,
+        "intervals": [
+          [
+            "0.0",
+            "5.0"
+          ]
+        ],
+        "contract_hash_match": true,
+        "video_hash_match": true,
+        "observation": "0.0-5.0 s: Y-shaped fork with pink hexagon 'Helicase' at the junction; two antiparallel templates (top 3'→5', bottom 5'→3') separated left of the junction and base-paired (rungs) right of it. Fork structure and helicase-at-fork relation hold.",
+        "limitations": "Model statement is not independent pixel confirmation",
+        "full_constraint_verified": false
+      },
+      {
+        "constraint_id": "C2",
+        "status": "PASS",
+        "evidence_level": "TIMESTAMP_MATCHED",
+        "independently_frame_semantically_reviewed": false,
+        "intervals": [
+          [
+            "6.0",
+            "11.0"
+          ],
+          [
+            "12.0",
+            "18.0"
+          ],
+          [
+            "18.0",
+            "19.0"
+          ],
+          [
+            "19.0",
+            "25.0"
+          ]
+        ],
+        "contract_hash_match": true,
+        "video_hash_match": true,
+        "observation": "6.0-11.0 s RNA primase lays an orange primer on the top template (labeled 5'→3'); 12.0-18.0 s Pol ε extends it. 18.0-19.0 s primase on bottom template; 19.0-25.0 s Pol δ extends. Priming precedes extension on both strands; pol α handoff simplified per caption (allowed).",
+        "limitations": "Model statement is not independent pixel confirmation",
+        "full_constraint_verified": false
+      },
+      {
+        "constraint_id": "C3",
+        "status": "PASS",
+        "evidence_level": "TIMESTAMP_MATCHED",
+        "independently_frame_semantically_reviewed": false,
+        "intervals": [
+          [
+            "12.0",
+            "18.0"
+          ]
+        ],
+        "contract_hash_match": true,
+        "video_hash_match": true,
+        "observation": "12.0-18.0 s: Pol ε continuously extends the green leading strand 5'→3' toward the advancing fork on the top template (antiparallel to its 3'→5' template). Continuous leading synthesis holds.",
+        "limitations": "Model statement is not independent pixel confirmation",
+        "full_constraint_verified": false
+      },
+      {
+        "constraint_id": "C4",
+        "status": "PASS",
+        "evidence_level": "TIMESTAMP_MATCHED",
+        "independently_frame_semantically_reviewed": false,
+        "intervals": [
+          [
+            "19.0",
+            "25.0"
+          ]
+        ],
+        "contract_hash_match": true,
+        "video_hash_match": true,
+        "observation": "19.0-25.0 s: Pol δ extends two separate lagging fragments, each initiated by its own orange primer, growing 5'→3' away from the fork on the bottom template (3'→5' new-strand orientation, antiparallel to 5'→3' template). Discontinuous Okazaki synthesis holds.",
+        "limitations": "Model statement is not independent pixel confirmation",
+        "full_constraint_verified": false
+      },
+      {
+        "constraint_id": "C5",
+        "status": "PASS",
+        "evidence_level": "TIMESTAMP_MATCHED",
+        "independently_frame_semantically_reviewed": false,
+        "intervals": [
+          [
+            "25.0",
+            "29.0"
+          ]
+        ],
+        "contract_hash_match": true,
+        "video_hash_match": true,
+        "observation": "25.0-29.0 s: Pol δ at the junction between two lagging fragments; the intervening orange RNA is removed and replaced by green DNA in a single visible step. Order (pol δ → primer displacement/removal → replacement) holds; RNase H not a separate glyph (allowed simplification, see issues).",
+        "limitations": "Model statement is not independent pixel confirmation",
+        "full_constraint_verified": false
+      },
+      {
+        "constraint_id": "C6",
+        "status": "PASS",
+        "evidence_level": "TIMESTAMP_MATCHED",
+        "independently_frame_semantically_reviewed": false,
+        "intervals": [
+          [
+            "30.0",
+            "31.0"
+          ]
+        ],
+        "contract_hash_match": true,
+        "video_hash_match": true,
+        "observation": "By 30.0-31.0 s the previously orange RNA segment between the left lagging fragments is gone and replaced by continuous green DNA; rna_primer_removed = true is visible.",
+        "limitations": "Model statement is not independent pixel confirmation",
+        "full_constraint_verified": false
+      },
+      {
+        "constraint_id": "C7",
+        "status": "PASS",
+        "evidence_level": "TIMESTAMP_MATCHED",
+        "independently_frame_semantically_reviewed": false,
+        "intervals": [
+          [
+            "30.0",
+            "31.0"
+          ]
+        ],
+        "contract_hash_match": true,
+        "video_hash_match": true,
+        "observation": "30.0-31.0 s: yellow 'Ligase' appears at the nick between adjacent Okazaki fragments only after the RNA removal/replacement step, i.e. primer removal precedes ligase sealing.",
+        "limitations": "Model statement is not independent pixel confirmation",
+        "full_constraint_verified": false
+      },
+      {
+        "constraint_id": "C8",
+        "status": "PASS",
+        "evidence_level": "TIMESTAMP_MATCHED",
+        "independently_frame_semantically_reviewed": false,
+        "intervals": [
+          [
+            "10",
+            "12"
+          ]
+        ],
+        "contract_hash_match": true,
+        "video_hash_match": true,
+        "observation": "31.0 s: ligase positioned at the junction and the two green fragments are now continuous (nick closed). The phosphodiester bond is implied by the sealed nick rather than drawn as a bond symbol, acceptable for a grades-10-12 schematic.",
+        "limitations": "Model statement is not independent pixel confirmation",
+        "full_constraint_verified": false
+      }
+    ]
+  },
+  "mitosis": {
+    "temporal": {
+      "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+      "checks": [
+        {
+          "constraint_id": "C1",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Existing primitive arguments do not express a complete typed temporal predicate; missing explicit relation/event/state semantics",
+          "participants": {},
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c"
+        },
+        {
+          "constraint_id": "C2",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+          "participants": {},
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c"
+        },
+        {
+          "constraint_id": "C3",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+          "participants": {},
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c"
+        },
+        {
+          "constraint_id": "C4",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+          "participants": {},
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c"
+        },
+        {
+          "constraint_id": "C5",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Existing primitive arguments do not express a complete typed temporal predicate; missing explicit relation/event/state semantics",
+          "participants": {},
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c"
+        },
+        {
+          "constraint_id": "C6",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+          "participants": {},
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c"
+        },
+        {
+          "constraint_id": "C7",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Existing primitive arguments do not express a complete typed temporal predicate; missing explicit relation/event/state semantics",
+          "participants": {},
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c"
+        },
+        {
+          "constraint_id": "C8",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+          "participants": {},
+          "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+          "scene_sha256": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+          "trace_sha256": "d0048cd9be2a0bec240cdc7cbc770548586a4dd37569b7993e23ad65719b035c"
+        }
+      ]
+    },
+    "vlm_evidence": [
+      {
+        "constraint_id": "C1",
+        "status": "PASS",
+        "evidence_level": "TIMESTAMP_MATCHED",
+        "independently_frame_semantically_reviewed": false,
+        "intervals": [
+          [
+            "0.0",
+            "5.2"
+          ]
+        ],
+        "contract_hash_match": true,
+        "video_hash_match": true,
+        "observation": "Two sister chromatids (Sister A green, Sister B orange) are joined at the centromere as one duplicated chromosome at center, t=0.0–5.2s.",
+        "limitations": "Model statement is not independent pixel confirmation",
+        "full_constraint_verified": false
+      },
+      {
+        "constraint_id": "C2",
+        "status": "UNCERTAIN",
+        "evidence_level": "MODEL_CLAIM_ONLY",
+        "independently_frame_semantically_reviewed": false,
+        "intervals": [],
+        "contract_hash_match": true,
+        "video_hash_match": true,
+        "observation": "Sisters remain physically joined at the centromere through t=5.2s and the caption 'Sister cohesion is released' appears at t=6.2s; cohesin itself is not directly visible, so the connected-by-cohesin relation is inferred.",
+        "limitations": "Model statement is not independent pixel confirmation",
+        "full_constraint_verified": false
+      },
+      {
+        "constraint_id": "C3",
+        "status": "PASS",
+        "evidence_level": "MODEL_CLAIM_ONLY",
+        "independently_frame_semantically_reviewed": false,
+        "intervals": [],
+        "contract_hash_match": true,
+        "video_hash_match": true,
+        "observation": "Left pole→kinetochore_A microtubule line visible from t=1.2s onward (absent at t=0.0s).",
+        "limitations": "Model statement is not independent pixel confirmation",
+        "full_constraint_verified": false
+      },
+      {
+        "constraint_id": "C4",
+        "status": "PASS",
+        "evidence_level": "MODEL_CLAIM_ONLY",
+        "independently_frame_semantically_reviewed": false,
+        "intervals": [],
+        "contract_hash_match": true,
+        "video_hash_match": true,
+        "observation": "Right pole→kinetochore_B microtubule line visible from t=1.2s onward, giving bipolar attachment.",
+        "limitations": "Model statement is not independent pixel confirmation",
+        "full_constraint_verified": false
+      },
+      {
+        "constraint_id": "C5",
+        "status": "PASS",
+        "evidence_level": "FRAME_EXTRACTED",
+        "independently_frame_semantically_reviewed": false,
+        "intervals": [
+          [
+            "9.2",
+            "11.2"
+          ]
+        ],
+        "contract_hash_match": true,
+        "video_hash_match": true,
+        "observation": "After release, Daughter A (green) moves toward the left pole and Daughter B (orange) toward the right pole at t=9.2–11.2s, matching kinetochore_A→pole_left / kinetochore_B→pole_right.",
+        "limitations": "Model statement is not independent pixel confirmation",
+        "full_constraint_verified": false
+      },
+      {
+        "constraint_id": "C6",
+        "status": "PASS",
+        "evidence_level": "FRAME_EXTRACTED",
+        "independently_frame_semantically_reviewed": false,
+        "intervals": [
+          [
+            "9.2",
+            "10.2"
+          ]
+        ],
+        "contract_hash_match": true,
+        "video_hash_match": true,
+        "observation": "Cohesion-release caption at t=6.2s precedes visible sister separation at t=9.2–10.2s, satisfying cohesin_degradation → sister_separation ordering.",
+        "limitations": "Model statement is not independent pixel confirmation",
+        "full_constraint_verified": false
+      },
+      {
+        "constraint_id": "C7",
+        "status": "PASS",
+        "evidence_level": "TIMESTAMP_MATCHED",
+        "independently_frame_semantically_reviewed": false,
+        "intervals": [
+          [
+            "0.0",
+            "5.2"
+          ]
+        ],
+        "contract_hash_match": true,
+        "video_hash_match": true,
+        "observation": "Chromatids are aligned midway between the two poles (equatorial position) during t=0.0–5.2s.",
+        "limitations": "Model statement is not independent pixel confirmation",
+        "full_constraint_verified": false
+      },
+      {
+        "constraint_id": "C8",
+        "status": "PASS",
+        "evidence_level": "TIMESTAMP_MATCHED",
+        "independently_frame_semantically_reviewed": false,
+        "intervals": [
+          [
+            "1.2",
+            "5.2"
+          ]
+        ],
+        "contract_hash_match": true,
+        "video_hash_match": true,
+        "observation": "The two centromeric kinetochore beads face the opposite poles (left bead toward left pole, right bead toward right pole) at t=1.2–5.2s.",
+        "limitations": "Model statement is not independent pixel confirmation",
+        "full_constraint_verified": false
+      }
+    ],
+    "grid_visual_investigation": {
+      "actual_video": "M1_mitosis/video.mp4",
+      "frames_extracted_seconds": [
+        10,
+        10.5,
+        11,
+        11.5,
+        11.85
+      ],
+      "reference_grid_sent_separately": true,
+      "finding": "Extracted actual MP4 frames at 10,10.5,11,11.5 and final frame show only mitosis, no Grid Visual. Separate review reference grid was submitted; model conflation is consistent with evidence, not proven internal cause.",
+      "limitation": "Sparse late-frame sample, not automatic all-pixel classification",
+      "manual_review": "Codex visually inspected extracted contact sheet and final frame",
+      "whole_video_pixel_proof": false
+    }
+  },
+  "protein_translation": {
+    "temporal": {
+      "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+      "checks": [
+        {
+          "constraint_id": "C1",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Existing primitive arguments do not express a complete typed temporal predicate; missing explicit relation/event/state semantics",
+          "participants": {},
+          "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+          "scene_sha256": "bc65148fa74e95b8c7749a194623fb312d7f0d88dd8c3d921443f3ccec7d32ca",
+          "trace_sha256": null
+        },
+        {
+          "constraint_id": "C2",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+          "participants": {},
+          "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+          "scene_sha256": "bc65148fa74e95b8c7749a194623fb312d7f0d88dd8c3d921443f3ccec7d32ca",
+          "trace_sha256": null
+        },
+        {
+          "constraint_id": "C3",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Existing primitive arguments do not express a complete typed temporal predicate; missing explicit relation/event/state semantics",
+          "participants": {},
+          "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+          "scene_sha256": "bc65148fa74e95b8c7749a194623fb312d7f0d88dd8c3d921443f3ccec7d32ca",
+          "trace_sha256": null
+        },
+        {
+          "constraint_id": "C4",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Existing primitive arguments do not express a complete typed temporal predicate; missing explicit relation/event/state semantics",
+          "participants": {},
+          "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+          "scene_sha256": "bc65148fa74e95b8c7749a194623fb312d7f0d88dd8c3d921443f3ccec7d32ca",
+          "trace_sha256": null
+        },
+        {
+          "constraint_id": "C5",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+          "participants": {},
+          "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+          "scene_sha256": "bc65148fa74e95b8c7749a194623fb312d7f0d88dd8c3d921443f3ccec7d32ca",
+          "trace_sha256": null
+        },
+        {
+          "constraint_id": "C6",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Existing primitive arguments do not express a complete typed temporal predicate; missing explicit relation/event/state semantics",
+          "participants": {},
+          "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+          "scene_sha256": "bc65148fa74e95b8c7749a194623fb312d7f0d88dd8c3d921443f3ccec7d32ca",
+          "trace_sha256": null
+        },
+        {
+          "constraint_id": "C7",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Contract requires semantic/visual judgment; no authorized deterministic equivalence",
+          "participants": {},
+          "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+          "scene_sha256": "bc65148fa74e95b8c7749a194623fb312d7f0d88dd8c3d921443f3ccec7d32ca",
+          "trace_sha256": null
+        },
+        {
+          "constraint_id": "C8",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Existing primitive arguments do not express a complete typed temporal predicate; missing explicit relation/event/state semantics",
+          "participants": {},
+          "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+          "scene_sha256": "bc65148fa74e95b8c7749a194623fb312d7f0d88dd8c3d921443f3ccec7d32ca",
+          "trace_sha256": null
+        },
+        {
+          "constraint_id": "C9",
+          "predicate": null,
+          "status": "UNSUPPORTED",
+          "full_constraint_verified": false,
+          "expected_interval": null,
+          "observed_interval": null,
+          "samples_checked": 0,
+          "sample_times": [],
+          "violations": [],
+          "evidence": [],
+          "reason": "Declared exceptions require explicit executable applicability; not ignored",
+          "participants": {},
+          "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+          "scene_sha256": "bc65148fa74e95b8c7749a194623fb312d7f0d88dd8c3d921443f3ccec7d32ca",
+          "trace_sha256": null
+        }
+      ]
+    }
+  }
+}
