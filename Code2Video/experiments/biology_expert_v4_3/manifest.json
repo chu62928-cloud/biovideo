@@ -169,5 +169,20 @@
     "qwen_calls": 0,
     "cost": null
   },
-  "paid_authorization": "PENDING_EXPLICIT_USER_RESPONSE"
+  "paid_authorization": "PENDING_EXPLICIT_USER_RESPONSE",
+  "historical_inputs_unchanged": true,
+  "tests": {
+    "new_synthetic": {
+      "passed": 12,
+      "failed": 0
+    },
+    "full_regression_log": "............................................                             [100%]\n44 passed in 107.15s (0:01:47)\n",
+    "categories": "new model/planner synthetic fixtures; old real-trace tests remain explicitly historical"
+  },
+  "git_commit": "26fa80d85468821725574712c3e3b6c4fdeaaec8",
+  "source_hashes": {
+    "Code2Video/src/biology_expert/typed_science_builder.py": "676647e0672c657896024292c85f9a8504b242e37bb961f58b3d38dce4ab4b9b",
+    "Code2Video/src/scientific_scene/typed_planner.py": "9ca067cd12ad8693c7a6e5386076dbf62f2225251e21e010e725388842881e44",
+    "Code2Video/src/scientific_scene/adapters/typed_manim_adapter.py": "edf14cc0a57aea64364c99d016c41cee649a607fe923e930158670f7c7384f1f"
+  }
 }
