@@ -1,0 +1,270 @@
+{
+  "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+  "baseline": {
+    "checks": [
+      {
+        "check_id": "C1",
+        "type": "STRUCTURAL",
+        "constraint_hash": "587def56a6dea6ad612060de2e485b5f517859949ebd070662a9386885db8c70",
+        "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+        "status": "UNSUPPORTED_CONSTRAINT",
+        "object_ids": [
+          "duplicated_chromosome",
+          "sister_chromatid_a",
+          "sister_chromatid_b"
+        ],
+        "evidence_ids": [
+          "E_70c610899421"
+        ],
+        "capability": "PARTIAL",
+        "observation_refs": [],
+        "reason": "Unsupported applicability condition"
+      },
+      {
+        "check_id": "C2",
+        "type": "PERSISTENT_RELATION",
+        "constraint_hash": "9212a5d2146ed318b5cfa2726609344c052defee5d3c550a55cb2b75d99c1f3b",
+        "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+        "status": "NOT_MEASURED",
+        "object_ids": [
+          "sister_chromatid_a",
+          "sister_chromatid_b",
+          "cohesin"
+        ],
+        "evidence_ids": [
+          "E_70c610899421"
+        ],
+        "capability": "VLM",
+        "observation_refs": [],
+        "reason": "Semantic/visual claim needs independent observation review"
+      },
+      {
+        "check_id": "C3",
+        "type": "STRUCTURAL",
+        "constraint_hash": "786382a46574b287353f611d987928db75f5c4cac27d97bc967d7c4aef1f731e",
+        "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+        "status": "NOT_MEASURED",
+        "object_ids": [
+          "kinetochore_a",
+          "spindle_pole_a"
+        ],
+        "evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ],
+        "capability": "VLM",
+        "observation_refs": [],
+        "reason": "Semantic/visual claim needs independent observation review"
+      },
+      {
+        "check_id": "C4",
+        "type": "STRUCTURAL",
+        "constraint_hash": "db58feffa73c6b3138745144ae74a0b6d15888158e6c097ceed7fb5a4f9954c2",
+        "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+        "status": "NOT_MEASURED",
+        "object_ids": [
+          "kinetochore_b",
+          "spindle_pole_b"
+        ],
+        "evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ],
+        "capability": "VLM",
+        "observation_refs": [],
+        "reason": "Semantic/visual claim needs independent observation review"
+      },
+      {
+        "check_id": "C5",
+        "type": "STRUCTURAL",
+        "constraint_hash": "92e4e90d5d1b427a2653bea0dd9b9dc33b94a5ca29bf9783659e42d89d67d261",
+        "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+        "status": "UNSUPPORTED_CONSTRAINT",
+        "object_ids": [
+          "sister_chromatid_a",
+          "sister_chromatid_b",
+          "spindle_pole_a",
+          "spindle_pole_b"
+        ],
+        "evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ],
+        "capability": "PARTIAL",
+        "observation_refs": [],
+        "reason": "Unsupported applicability condition"
+      },
+      {
+        "check_id": "C6",
+        "type": "TEMPORAL",
+        "constraint_hash": "047d55ebe7729eb7d701757b604322b1e66bae72eb74d71b10461b7f176298b2",
+        "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+        "status": "NOT_MEASURED",
+        "object_ids": [
+          "cohesin",
+          "sister_chromatid_a",
+          "sister_chromatid_b"
+        ],
+        "evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ],
+        "capability": "VLM",
+        "observation_refs": [],
+        "reason": "Semantic/visual claim needs independent observation review"
+      },
+      {
+        "check_id": "C7",
+        "type": "STATE",
+        "constraint_hash": "0c0e3a69d2b8db149663435de65da324b6ed028c4471f16daa1424276f8fe442",
+        "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+        "status": "UNSUPPORTED_CONSTRAINT",
+        "object_ids": [
+          "sister_chromatid_a",
+          "sister_chromatid_b"
+        ],
+        "evidence_ids": [
+          "E_70c610899421"
+        ],
+        "capability": "PARTIAL",
+        "observation_refs": [],
+        "reason": "Unsupported applicability condition"
+      },
+      {
+        "check_id": "C8",
+        "type": "STRUCTURAL",
+        "constraint_hash": "079d6fa0848f4dcbe776458fcd4a6b902514ea2173a6b57dd6bd3db1e899278c",
+        "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+        "status": "NOT_MEASURED",
+        "object_ids": [
+          "kinetochore_a",
+          "kinetochore_b",
+          "sister_chromatid_a",
+          "sister_chromatid_b"
+        ],
+        "evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ],
+        "capability": "VLM",
+        "observation_refs": [],
+        "reason": "Semantic/visual claim needs independent observation review"
+      }
+    ],
+    "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+    "decision": "REVIEW_INCOMPLETE"
+  },
+  "cases": [
+    {
+      "case_id": "MUT_C1",
+      "constraint_id": "C1",
+      "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+      "mutation_type": "disconnect_required_relation",
+      "expected": "FAIL",
+      "valid_sample": false,
+      "not_tested_reason": "No executable mutation for this constraint/observation",
+      "actual": "NOT_TESTED",
+      "detected": null,
+      "false_positive": null
+    },
+    {
+      "case_id": "MUT_C2",
+      "constraint_id": "C2",
+      "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+      "mutation_type": "early_terminate_relation",
+      "expected": "FAIL",
+      "valid_sample": false,
+      "not_tested_reason": "No executable mutation for this constraint/observation",
+      "actual": "NOT_TESTED",
+      "detected": null,
+      "false_positive": null
+    },
+    {
+      "case_id": "MUT_C3",
+      "constraint_id": "C3",
+      "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+      "mutation_type": "disconnect_required_relation",
+      "expected": "FAIL",
+      "valid_sample": false,
+      "not_tested_reason": "No executable mutation for this constraint/observation",
+      "actual": "NOT_TESTED",
+      "detected": null,
+      "false_positive": null
+    },
+    {
+      "case_id": "MUT_C4",
+      "constraint_id": "C4",
+      "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+      "mutation_type": "disconnect_required_relation",
+      "expected": "FAIL",
+      "valid_sample": false,
+      "not_tested_reason": "No executable mutation for this constraint/observation",
+      "actual": "NOT_TESTED",
+      "detected": null,
+      "false_positive": null
+    },
+    {
+      "case_id": "MUT_C5",
+      "constraint_id": "C5",
+      "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+      "mutation_type": "displace_endpoint_or_relation",
+      "expected": "FAIL",
+      "valid_sample": false,
+      "not_tested_reason": "No executable mutation for this constraint/observation",
+      "actual": "NOT_TESTED",
+      "detected": null,
+      "false_positive": null
+    },
+    {
+      "case_id": "MUT_C6",
+      "constraint_id": "C6",
+      "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+      "mutation_type": "reverse_event_order",
+      "expected": "FAIL",
+      "valid_sample": false,
+      "not_tested_reason": "Baseline constraint did not PASS; mutation efficacy unproven",
+      "actual": "NOT_MEASURED",
+      "detected": null,
+      "false_positive": false
+    },
+    {
+      "case_id": "MUT_C7",
+      "constraint_id": "C7",
+      "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+      "mutation_type": "wrong_event_state",
+      "expected": "FAIL",
+      "valid_sample": false,
+      "not_tested_reason": "Baseline constraint did not PASS; mutation efficacy unproven",
+      "actual": "UNSUPPORTED_CONSTRAINT",
+      "detected": null,
+      "false_positive": false
+    },
+    {
+      "case_id": "MUT_C8",
+      "constraint_id": "C8",
+      "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+      "mutation_type": "disconnect_required_relation",
+      "expected": "FAIL",
+      "valid_sample": false,
+      "not_tested_reason": "No executable mutation for this constraint/observation",
+      "actual": "NOT_TESTED",
+      "detected": null,
+      "false_positive": null
+    },
+    {
+      "case_id": "CONTROL_VISUAL_COLOR",
+      "constraint_id": null,
+      "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+      "mutation_type": "irrelevant_color",
+      "expected": "UNCHANGED",
+      "valid_sample": true,
+      "actual": "UNCHANGED",
+      "detected": true,
+      "false_positive": false
+    }
+  ],
+  "valid_cases": 1,
+  "detected": 0,
+  "missed": 0,
+  "false_positives": 0
+}

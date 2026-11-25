@@ -1,0 +1,4 @@
+﻿topic,constraints,contract_review,frozen,coverage,critical_gaps,actual_checks_measured,valid_science_mutations,detected,missed,false_positives,final_gate
+dna_replication,8,REVISE,False,REVIEW_INCOMPLETE,19,0,0,0,0,0,REVIEW_INCOMPLETE
+mitosis,8,REVIEW_INCOMPLETE,False,REVIEW_INCOMPLETE,10,0,0,0,0,0,REVIEW_INCOMPLETE
+protein_translation,9,REVIEW_INCOMPLETE,False,REVIEW_INCOMPLETE,21,0,0,0,0,0,REVIEW_INCOMPLETE

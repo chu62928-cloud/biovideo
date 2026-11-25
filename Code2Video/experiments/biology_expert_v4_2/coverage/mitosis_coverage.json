@@ -1,0 +1,150 @@
+{
+  "topic_id": "mitosis",
+  "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+  "uncovered_items": [
+    {
+      "item_id": "entity_duplicated_chromosome",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_sister_chromatids",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_kinetochores",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_spindle_poles",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_cohesin",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_metaphase_alignment",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_anaphase_separation",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "relation_opposite_pole_attachment",
+      "kind": "relation",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "temporal_cohesin_then_separation",
+      "kind": "temporal",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "persistent_sister_connection_metaphase",
+      "kind": "persistent",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    }
+  ],
+  "unsupported_checks": [
+    "C1",
+    "C5",
+    "C7"
+  ],
+  "critical_gaps": [
+    {
+      "item_id": "entity_duplicated_chromosome",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_sister_chromatids",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_kinetochores",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_spindle_poles",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "entity_cohesin",
+      "kind": "entity",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_metaphase_alignment",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "process_anaphase_separation",
+      "kind": "process",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "relation_opposite_pole_attachment",
+      "kind": "relation",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "temporal_cohesin_then_separation",
+      "kind": "temporal",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    },
+    {
+      "item_id": "persistent_sister_connection_metaphase",
+      "kind": "persistent",
+      "critical": true,
+      "reason": "Rule absent/unsupported/unmeasured"
+    }
+  ],
+  "contract_goal_coverage": {
+    "decision": "NOT_MEASURED",
+    "reason": "No independent user-goal/contract completeness review"
+  },
+  "actual_observation_coverage": 0,
+  "checks_total": 8,
+  "entities_total": 5,
+  "entities_covered": 0,
+  "relations_total": 1,
+  "relations_covered": 0,
+  "processes_total": 2,
+  "processes_covered": 0,
+  "temporal_constraints_total": 1,
+  "temporal_constraints_covered": 0,
+  "persistent_relations_total": 1,
+  "persistent_relations_covered": 0,
+  "decision": "REVIEW_INCOMPLETE"
+}

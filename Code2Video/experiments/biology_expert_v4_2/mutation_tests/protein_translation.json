@@ -7,7 +7,7 @@
         "type": "STRUCTURAL",
         "constraint_hash": "baa6baad653610c25c99d62c11d0767bdef1efd69e4b3115f96a64e34a47213c",
         "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
-        "status": "NOT_MEASURED",
+        "status": "UNSUPPORTED_CONSTRAINT",
         "object_ids": [
           "intact_ribosome",
           "ribosome_small_subunit",
@@ -18,8 +18,7 @@
         ],
         "capability": "DETERMINISTIC",
         "observation_refs": [],
-        "reason": null,
-        "observed": {}
+        "reason": "Unsupported applicability condition"
       },
       {
         "check_id": "C2",
@@ -44,7 +43,7 @@
         "type": "TEMPORAL",
         "constraint_hash": "e2fcd0f20599968aaf3ec8916a6ab3413740a3c6d30021b6c3cab1939e1f425b",
         "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
-        "status": "NOT_MEASURED",
+        "status": "UNSUPPORTED_CONSTRAINT",
         "object_ids": [
           "charged_tRNA",
           "mRNA_template",
@@ -55,15 +54,14 @@
         ],
         "capability": "PARTIAL",
         "observation_refs": [],
-        "reason": null,
-        "observed": {}
+        "reason": "Unsupported applicability condition"
       },
       {
         "check_id": "C4",
         "type": "TEMPORAL",
         "constraint_hash": "bda886af30e39acc15b6349c2d1f343a840b9d36e4ab26a0f2ebde134fe2504f",
         "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
-        "status": "NOT_MEASURED",
+        "status": "UNSUPPORTED_CONSTRAINT",
         "object_ids": [
           "ribosome_small_subunit",
           "ribosome_large_subunit",
@@ -75,8 +73,7 @@
         ],
         "capability": "PARTIAL",
         "observation_refs": [],
-        "reason": null,
-        "observed": {}
+        "reason": "Unsupported applicability condition"
       },
       {
         "check_id": "C5",
@@ -100,7 +97,7 @@
         "type": "PERSISTENT_RELATION",
         "constraint_hash": "7fb8bcfd746044ef469581c86da9bc77a04c64dff6cdda39995cdc8ee7dbbdfe",
         "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
-        "status": "NOT_MEASURED",
+        "status": "UNSUPPORTED_CONSTRAINT",
         "object_ids": [
           "growing_polypeptide",
           "charged_tRNA"
@@ -110,8 +107,7 @@
         ],
         "capability": "PARTIAL",
         "observation_refs": [],
-        "reason": null,
-        "observed": {}
+        "reason": "Unsupported applicability condition"
       },
       {
         "check_id": "C7",
@@ -135,7 +131,7 @@
         "type": "STATE",
         "constraint_hash": "5f574478b43a8fe9395917bff42708e0fbe58d63f4a51f446c418b0c1e5aff60",
         "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
-        "status": "NOT_MEASURED",
+        "status": "UNSUPPORTED_CONSTRAINT",
         "object_ids": [
           "release_factor",
           "intact_ribosome",
@@ -147,8 +143,7 @@
         ],
         "capability": "PARTIAL",
         "observation_refs": [],
-        "reason": null,
-        "observed": {}
+        "reason": "Unsupported applicability condition"
       },
       {
         "check_id": "C9",

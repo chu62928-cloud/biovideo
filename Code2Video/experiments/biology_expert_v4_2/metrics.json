@@ -1,0 +1,77 @@
+{
+  "topics": [
+    {
+      "topic": "dna_replication",
+      "constraints": 8,
+      "contract_review": "REVISE",
+      "frozen": false,
+      "coverage": "REVIEW_INCOMPLETE",
+      "critical_gaps": 19,
+      "actual_checks_measured": 0,
+      "valid_science_mutations": 0,
+      "detected": 0,
+      "missed": 0,
+      "false_positives": 0,
+      "final_gate": "REVIEW_INCOMPLETE"
+    },
+    {
+      "topic": "mitosis",
+      "constraints": 8,
+      "contract_review": "REVIEW_INCOMPLETE",
+      "frozen": false,
+      "coverage": "REVIEW_INCOMPLETE",
+      "critical_gaps": 10,
+      "actual_checks_measured": 0,
+      "valid_science_mutations": 0,
+      "detected": 0,
+      "missed": 0,
+      "false_positives": 0,
+      "final_gate": "REVIEW_INCOMPLETE"
+    },
+    {
+      "topic": "protein_translation",
+      "constraints": 9,
+      "contract_review": "REVIEW_INCOMPLETE",
+      "frozen": false,
+      "coverage": "REVIEW_INCOMPLETE",
+      "critical_gaps": 21,
+      "actual_checks_measured": 0,
+      "valid_science_mutations": 0,
+      "detected": 0,
+      "missed": 0,
+      "false_positives": 0,
+      "final_gate": "REVIEW_INCOMPLETE"
+    }
+  ],
+  "providers": {
+    "deepseek": {
+      "requests": 11,
+      "input_tokens": 78852,
+      "output_tokens": 28004
+    },
+    "qwen": {
+      "requests": 2,
+      "known_tokens": 0,
+      "token_usage_unknown": true,
+      "errors": [
+        "403 AccessDenied.Unpurchased (qwen4-max)",
+        "400 Arrearage (qwen3.8-27b)"
+      ]
+    }
+  },
+  "retrieval_requests": {
+    "scientific": 48,
+    "visual": 11
+  },
+  "visual_images_retrieved": 14,
+  "assets_imported": 0,
+  "inventory_actions": {
+    "KEEP": 1241,
+    "ARCHIVE": 9978,
+    "DELETE_CANDIDATE": 514,
+    "REFACTOR": 8
+  },
+  "historical_changed": [],
+  "bill_amount": null,
+  "status": "PARTIAL_EXECUTED_REVIEW_INCOMPLETE"
+}

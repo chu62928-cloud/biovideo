@@ -1,0 +1,6 @@
+group,meaning,result
+G0,Frozen V4.1 audit and approvals,"Historical SCIENCE_APPROVED, not V4.2 approval"
+G1,Dynamically built source-associated contracts,3 actual contracts; only 2 independent review requests; none frozen
+G2,Coverage auditor,Critical unmeasured semantic checks found in all topics
+G3,Generic mutation engine,Synthetic tests detect mutations; real-topic science mutations NOT_TESTED
+G4,Reference-aware complete video review,Actual reference figures retrieved; VLM blocked by permission/account errors

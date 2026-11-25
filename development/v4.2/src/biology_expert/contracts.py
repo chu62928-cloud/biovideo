@@ -41,10 +41,17 @@ class ConstraintExecutor:
     result.update(status='UNSUPPORTED_CONSTRAINT',reason='No generic primitive '+str(primitive));checks.append(result);continue
    if c['verification']['capability'] not in ['DETERMINISTIC','PARTIAL']:
     result['reason']='Semantic/visual claim needs independent observation review';checks.append(result);continue
+   if c.get('exceptions'):
+    result.update(status='UNSUPPORTED_CONSTRAINT',reason='Exception semantics are not yet executable; refusing to ignore declared exceptions');checks.append(result);continue
+   when=c.get('when',{})
+   allowed_when={'event_state','state_key','state_value'}
+   if set(when)-allowed_when:
+    result.update(status='UNSUPPORTED_CONSTRAINT',reason='Unsupported applicability condition');checks.append(result);continue
    relevant=frames
+   if when.get('state_key'):relevant=[f for f in relevant if f.get('state_variables',{}).get(when['state_key'])==when.get('state_value')]
    interval=c.get('applies_to',{}).get('event_role')
    if interval:
-    eid=bindings.get(interval,interval);relevant=[f for f in frames if f.get('current_event')==eid or eid in f.get('completed_events',[])]
+    eid=bindings.get(interval,interval);relevant=[f for f in frames if f.get('current_event')==eid]
    try:
     passed=None;observed={}
     if primitive=='exists':passed=bool(ids) and all(i in objects for i in ids);observed={'registered':sorted(objects)}

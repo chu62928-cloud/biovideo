@@ -1,0 +1,171 @@
+[
+  {
+    "event_role": "fork_opening",
+    "state": "helicase opens DNA helix; replication fork forms",
+    "relations": [
+      "helicase_enzyme opens helix",
+      "fork formed as DNA unwinds"
+    ],
+    "evidence_ids": [
+      "E_d8ffea5a5785"
+    ],
+    "quote": "A helicase using the energy from ATP hydrolysis opens up the DNA helix. Replication forks are formed at each replication origin as the DNA unwinds."
+  },
+  {
+    "event_role": "rna_priming_and_polymerase_involvement",
+    "state": "primase forms primers; DNA pol starts synthesis; pol α, δ, ε involved",
+    "relations": [
+      "primase → rna_primer",
+      "primer enables DNA pol synthesis",
+      "pol α adds short DNA then hands off"
+    ],
+    "evidence_ids": [
+      "E_d8ffea5a5785"
+    ],
+    "quote": "Primers are formed by the enzyme primase, and using the primer, DNA pol can start synthesis. Three major DNA polymerases are then involved: α, δ and ε. DNA pol α adds a short (20 to 30 nucleotides) DNA fragment to the RNA primer on both strands, and then hands off to a second polymerase."
+  },
+  {
+    "event_role": "leading_vs_lagging_synthesis",
+    "state": "leading continuous by pol ε; lagging by pol δ",
+    "relations": [
+      "pol ε → leading continuous",
+      "pol δ → lagging"
+    ],
+    "evidence_ids": [
+      "E_d8ffea5a5785"
+    ],
+    "quote": "While the leading strand is continuously synthesized by the enzyme pol ε , the lagging strand is synthesized by pol δ ."
+  },
+  {
+    "event_role": "primer_displacement_and_removal",
+    "state": "pol δ displaces primer RNA; RNase H removes it; replaced with DNA",
+    "relations": [
+      "pol δ displaces primer",
+      "RNase H removes displaced primer",
+      "DNA nucleotides replace primer"
+    ],
+    "evidence_ids": [
+      "E_d8ffea5a5785"
+    ],
+    "quote": "As pol δ runs into the primer RNA on the lagging strand, it displaces it from the DNA template. The displaced primer RNA is then removed by RNase H (AKA flap endonuclease ) and replaced with DNA nucleotides."
+  },
+  {
+    "event_role": "nick_sealing",
+    "state": "Okazaki fragments joined after primer replacement; ligase seals gaps forming phosphodiester bond",
+    "relations": [
+      "ligase seals gaps",
+      "ligase forms phosphodiester bond"
+    ],
+    "evidence_ids": [
+      "E_d8ffea5a5785"
+    ],
+    "quote": "The Okazaki fragments in the lagging strand are joined after the replacement of the RNA primers with DNA. The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond."
+  },
+  {
+    "event_role": "lagging_discontinuity_and_primer_initiation",
+    "state": "lagging synthesized in short stretches each initiated by separate primer",
+    "relations": [
+      "short stretches",
+      "each stretch separate primer"
+    ],
+    "evidence_ids": [
+      "E_d8ffea5a5785"
+    ],
+    "quote": "On the lagging strand, DNA is synthesized in short stretches, each of which is initiated by a separate primer."
+  },
+  {
+    "event_role": "initiation_complex_assembly",
+    "state": "E. coli initiation complex includes 30S, mRNA, three initiation factors, GTP, and fMet-tRNAfMet; Shine-Dalgarno anchors 30S; 50S joins to form intact ribosome",
+    "relations": [
+      "small_subunit_binds_mRNA",
+      "initiator_tRNA_enters_P_site",
+      "large_subunit_joins"
+    ],
+    "evidence_ids": [
+      "E_a415a44ba2f3"
+    ],
+    "quote": "In E. coli , this complex involves the small 30S ribosome, the mRNA template, three initiation factors that help the ribosome assemble correctly, guanosine triphosphate (GTP) that acts as an energy source, and a special initiator tRNA carrying N -formyl-methionine(fMet-tRNA fMet )"
+  },
+  {
+    "event_role": "initiator_tRNA_P_site_entry",
+    "state": "fMet-tRNAfMet or eukaryotic Met-tRNAi enters P site directly, leaving A site free",
+    "relations": [
+      "initiator_tRNA_enters_P_site",
+      "A_site_available_for_first_elongation_tRNA"
+    ],
+    "evidence_ids": [
+      "E_a415a44ba2f3"
+    ],
+    "quote": "During initiation complex formation, bacterial fMet−tRNA fMet or eukaryotic Met-tRNAi enters the P site directly without first entering the A site, providing a free A site ready to accept the tRNA corresponding to the first codon after the AUG."
+  },
+  {
+    "event_role": "elongation_translocation_cycle",
+    "state": "Charged tRNAs enter A site, shift to P site, then E site for removal; ribosome advances three bases in 3' direction",
+    "relations": [
+      "charged_tRNA_entry_at_A_site",
+      "translocation",
+      "tRNA_exit_from_E_site"
+    ],
+    "evidence_ids": [
+      "E_a415a44ba2f3"
+    ],
+    "quote": "During each translocation event, the charged tRNAs enter at the A site, then shift to the P site, and then finally to the E site for removal."
+  },
+  {
+    "event_role": "peptide_bond_formation",
+    "state": "Peptide bond forms between A-site amino acid amino group and P-site amino acid carboxyl group, catalyzed by peptidyl transferase",
+    "relations": [
+      "peptide_bond_formation",
+      "growing_polypeptide_remains_linked_to_P_site_tRNA_until_translocation"
+    ],
+    "evidence_ids": [
+      "E_a415a44ba2f3"
+    ],
+    "quote": "Peptide bonds form between the amino group of the amino acid attached to the A-site tRNA and the carboxyl group of the amino acid attached to the P-site tRNA. The formation of each peptide bond is catalyzed by peptidyl transferase, an RNA-based ribozyme that is integrated into the 50S ribosomal subunit."
+  },
+  {
+    "event_role": "E_site_tRNA_expulsion",
+    "state": "Former P-site tRNA enters E site, detaches from amino acid, and is expelled",
+    "relations": [
+      "tRNA_exit_from_E_site"
+    ],
+    "evidence_ids": [
+      "E_a415a44ba2f3"
+    ],
+    "quote": "As the ribosome steps across the mRNA, the former P-site tRNA enters the E site, detaches from the amino acid, and is expelled."
+  },
+  {
+    "event_role": "termination",
+    "state": "Stop codon in A site recognized by release factors; P-site amino acid detaches from tRNA; polypeptide released; subunits dissociate",
+    "relations": [
+      "release_factor_recognition",
+      "polypeptide_released_and_ribosome_dissociates"
+    ],
+    "evidence_ids": [
+      "E_a415a44ba2f3"
+    ],
+    "quote": "On aligning with the A site, these nonsense codons are recognized by release factors in prokaryotes and eukaryotes that result in the P-site amino acid detaching from its tRNA, releasing the newly made polypeptide."
+  },
+  {
+    "event_role": "shine_dalgarno_anchoring",
+    "state": "Shine-Dalgarno sequence upstream of first AUG base-pairs with rRNA and anchors 30S subunit",
+    "relations": [
+      "shine_dalgarno_base_pairs_with_rRNA_anchoring_30S_subunit"
+    ],
+    "evidence_ids": [
+      "E_a415a44ba2f3"
+    ],
+    "quote": "In E. coli mRNA, a leader sequence upstream of the first AUG codon, called the Shine-Dalgarno sequence (also known as the ribosomal binding site AGGAGG), interacts through complementary base pairing with the rRNA molecules that compose the ribosome. This interaction anchors the 30S ribosomal subunit at the correct location on the mRNA template."
+  },
+  {
+    "event_role": "polyribosome_context",
+    "state": "Multiple ribosomes translate one mRNA simultaneously; prokaryotes can couple transcription and translation",
+    "relations": [
+      "polyribosome_formation"
+    ],
+    "evidence_ids": [
+      "E_a415a44ba2f3"
+    ],
+    "quote": "Each mRNA molecule is simultaneously translated by many ribosomes, all synthesizing protein in the same direction: reading the mRNA from 5’ to 3’ and synthesizing the polypeptide from the N terminus to the C terminus. The complete structure containing an mRNA with multiple associated ribosomes is called a polyribosome (or polysome)."
+  }
+]

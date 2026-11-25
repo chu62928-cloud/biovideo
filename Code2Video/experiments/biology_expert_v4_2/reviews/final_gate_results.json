@@ -1,0 +1,38 @@
+[
+  {
+    "topic_id": "dna_replication",
+    "decision": "REVIEW_INCOMPLETE",
+    "contract_review": "REVISE",
+    "frozen": false,
+    "coverage": "REVIEW_INCOMPLETE",
+    "deterministic": "REVIEW_INCOMPLETE",
+    "video": "ERROR",
+    "reason": "Contract review not PASS and key observed science unmeasured; unavailable VLM cannot be replaced with mock",
+    "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+    "legacy_rules_used_for_build": false
+  },
+  {
+    "topic_id": "mitosis",
+    "decision": "REVIEW_INCOMPLETE",
+    "contract_review": "REVIEW_INCOMPLETE",
+    "frozen": false,
+    "coverage": "REVIEW_INCOMPLETE",
+    "deterministic": "REVIEW_INCOMPLETE",
+    "video": "ERROR",
+    "reason": "Contract review not PASS and key observed science unmeasured; unavailable VLM cannot be replaced with mock",
+    "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+    "legacy_rules_used_for_build": false
+  },
+  {
+    "topic_id": "protein_translation",
+    "decision": "REVIEW_INCOMPLETE",
+    "contract_review": "REVIEW_INCOMPLETE",
+    "frozen": false,
+    "coverage": "REVIEW_INCOMPLETE",
+    "deterministic": "REVIEW_INCOMPLETE",
+    "video": "NOT_MEASURED",
+    "reason": "Contract review not PASS and key observed science unmeasured; unavailable VLM cannot be replaced with mock",
+    "contract_hash": "58bb594541e9481f5a3d6439421cb8b4d6a1efc037b25797462973a019c4f533",
+    "legacy_rules_used_for_build": false
+  }
+]

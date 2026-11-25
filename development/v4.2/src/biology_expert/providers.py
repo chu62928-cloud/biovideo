@@ -25,6 +25,13 @@ class ModelGateway:
   acknowledged={cid for a in rows for cid in a['acknowledged_failed_calls']}
   self.stopped=any(r['status'] in {'error','pending'} and r.get('call_id') not in acknowledged for r in self.rows)
  def request(self,provider,purpose,prompt,video=None):
+  import fcntl
+  lock=self.root/'request.lock'
+  with lock.open('a') as handle:
+   fcntl.flock(handle,fcntl.LOCK_EX)
+   try:return self._request_locked(provider,purpose,prompt,video)
+   finally:fcntl.flock(handle,fcntl.LOCK_UN)
+ def _request_locked(self,provider,purpose,prompt,video=None):
   self.rows=json.loads(self.path.read_text()) if self.path.exists() else []
   blocking=[r for r in self.rows if r['status'] in {'error','pending'}]
   if blocking:

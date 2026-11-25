@@ -141,7 +141,13 @@
       "reason": "Rule absent/unsupported/unmeasured"
     }
   ],
-  "unsupported_checks": [],
+  "unsupported_checks": [
+    "C1",
+    "C3",
+    "C4",
+    "C6",
+    "C8"
+  ],
   "critical_gaps": [
     {
       "item_id": "entity_mRNA_template",
