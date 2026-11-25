@@ -1,3 +1,3 @@
 # V4.2
 
-部分执行，REVIEW_INCOMPLETE。先读RESULTS.md、PROJECT_STATUS.md。Qwen替换模型真实返回账户Arrearage，停止付费请求；尚未达到三主题科学审核完整验收。
+部分完成，最终审核不完整。充值后接口已恢复。最新结果见RESULTS.md末尾续验段与metrics.json；原阻塞段是历史快照。调用预算12/4已用满。

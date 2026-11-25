@@ -3,8 +3,8 @@
     {
       "check_id": "C1",
       "type": "STRUCTURAL",
-      "constraint_hash": "587def56a6dea6ad612060de2e485b5f517859949ebd070662a9386885db8c70",
-      "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+      "constraint_hash": "ec799c3fa8074fad88881f0b208b2861075c96fa474aca70feb5913588569474",
+      "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
       "status": "UNSUPPORTED_CONSTRAINT",
       "object_ids": [
         "duplicated_chromosome",
@@ -21,8 +21,8 @@
     {
       "check_id": "C2",
       "type": "PERSISTENT_RELATION",
-      "constraint_hash": "9212a5d2146ed318b5cfa2726609344c052defee5d3c550a55cb2b75d99c1f3b",
-      "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+      "constraint_hash": "58ed0d8b4a7264de1c997b92917cc84139809739c491fa698b19246fc2644245",
+      "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
       "status": "NOT_MEASURED",
       "object_ids": [
         "sister_chromatid_a",
@@ -39,8 +39,8 @@
     {
       "check_id": "C3",
       "type": "STRUCTURAL",
-      "constraint_hash": "786382a46574b287353f611d987928db75f5c4cac27d97bc967d7c4aef1f731e",
-      "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+      "constraint_hash": "f3f38105855b0c8ededcd0348a26afd60a0996f9cd6eea1001f036cda941a1b8",
+      "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
       "status": "NOT_MEASURED",
       "object_ids": [
         "kinetochore_a",
@@ -57,8 +57,8 @@
     {
       "check_id": "C4",
       "type": "STRUCTURAL",
-      "constraint_hash": "db58feffa73c6b3138745144ae74a0b6d15888158e6c097ceed7fb5a4f9954c2",
-      "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+      "constraint_hash": "48c68c64008b39b3324a040e56ef0bff483525bcddbfebc79de38579308d1287",
+      "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
       "status": "NOT_MEASURED",
       "object_ids": [
         "kinetochore_b",
@@ -75,8 +75,8 @@
     {
       "check_id": "C5",
       "type": "STRUCTURAL",
-      "constraint_hash": "92e4e90d5d1b427a2653bea0dd9b9dc33b94a5ca29bf9783659e42d89d67d261",
-      "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+      "constraint_hash": "825af45909f1f713c83dc70aed891edfd1a8b4686e7161ee27758e71b0e7e97c",
+      "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
       "status": "UNSUPPORTED_CONSTRAINT",
       "object_ids": [
         "sister_chromatid_a",
@@ -95,8 +95,8 @@
     {
       "check_id": "C6",
       "type": "TEMPORAL",
-      "constraint_hash": "047d55ebe7729eb7d701757b604322b1e66bae72eb74d71b10461b7f176298b2",
-      "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+      "constraint_hash": "72eb6e12f9c99197a651d8cfeeaf8ec9ce69f2718c0791461c7c9273f14a9ce5",
+      "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
       "status": "NOT_MEASURED",
       "object_ids": [
         "cohesin",
@@ -114,8 +114,8 @@
     {
       "check_id": "C7",
       "type": "STATE",
-      "constraint_hash": "0c0e3a69d2b8db149663435de65da324b6ed028c4471f16daa1424276f8fe442",
-      "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+      "constraint_hash": "5578a4becb7cbdc3d29d582cb7023e7532f167da6f4aeacd15a706acd3d4e735",
+      "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
       "status": "UNSUPPORTED_CONSTRAINT",
       "object_ids": [
         "sister_chromatid_a",
@@ -131,8 +131,8 @@
     {
       "check_id": "C8",
       "type": "STRUCTURAL",
-      "constraint_hash": "079d6fa0848f4dcbe776458fcd4a6b902514ea2173a6b57dd6bd3db1e899278c",
-      "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+      "constraint_hash": "c426972ff272ce6f6d1a4a462fd7e95b322922d56e7c33ae45b17cce26e1994d",
+      "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
       "status": "NOT_MEASURED",
       "object_ids": [
         "kinetochore_a",
@@ -149,6 +149,6 @@
       "reason": "Semantic/visual claim needs independent observation review"
     }
   ],
-  "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+  "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
   "decision": "REVIEW_INCOMPLETE"
 }

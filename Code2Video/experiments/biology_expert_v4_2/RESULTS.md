@@ -90,3 +90,56 @@ Qwen4-max真实403 AccessDenied.Unpurchased。用户要求换qwen3.8-27b后真�
 
 ## 建议
 当前不宜接入六章节自动生成或启动Wan/Seedance对照。先恢复账户，补足契约审查与实际观察能力，证明新主题至少一个独立科学错误能被自动检出。V4.1批准不代表V4.2通过。
+
+## 充值后真实续验（2026-11-25）
+用户确认充值后，保留失败记录、原调用次数与原预算，恢复qwen3.8-27b；两次实际完整视频请求均成功。DNA视频PASS，但契约REVISE未冻结、覆盖不完整；有丝分裂独立契约复核PASS并冻结，完整视频REVISE，覆盖仍不完整；均无V4.2最终批准。
+
+有丝分裂视频意见：
+[
+  {
+    "constraint_id": null,
+    "description": "Off-topic frame: the final 'Grid Visual' frame (SVM/ML classification text + A1–F6 dot grid) is unrelated to mitosis and outside scope; it is a leaked/placeholder asset that breaks the scientific narrative and must be removed.",
+    "evidence_ids": []
+  },
+  {
+    "constraint_id": "C3",
+    "description": "At t=0.0s only the left pole→kinetochore microtubule is drawn while the caption already asserts 'Opposite-pole attachment'; the right microtubule appears only at t=1.2s. Transient inconsistency between caption and visible attachment.",
+    "evidence_ids": []
+  },
+  {
+    "constraint_id": "C2",
+    "description": "Cohesin is never rendered as a visible molecular complex; the sister connection is only implied by the chromatids staying joined at the centromere until ~6s plus the caption 'Sister cohesion is released'. Acceptable for grades 10-12 but the persistent cohesin relation is inferred, not shown.",
+    "evidence_ids": [
+      "E_70c610899421"
+    ]
+  },
+  {
+    "constraint_id": "C7",
+    "description": "The metaphase plate is not depicted as a plane/structure; alignment is only implied by the chromatids sitting midway between the two poles. No misleading physical membrane is shown, so ambiguity is low but the plane itself is absent.",
+    "evidence_ids": [
+      "E_70c610899421"
+    ]
+  }
+]
+
+最新用量（覆盖前文旧阶段快照）：
+{
+  "deepseek": {
+    "requests": 12,
+    "successful": 12,
+    "failed": 0,
+    "known_input_tokens": 83878,
+    "known_output_tokens": 29211,
+    "failed_usage_unknown": false
+  },
+  "qwen": {
+    "requests": 4,
+    "successful": 2,
+    "failed": 2,
+    "known_input_tokens": 53462,
+    "known_output_tokens": 8043,
+    "failed_usage_unknown": true
+  }
+}
+
+账户阻塞已解除。目前阻塞是本轮12/4调用上限已用满，以及科学约束到实际观察映射、契约完整性及有效错误注入尚未达到验收要求。不得把视频PASS代替最终科学批准。

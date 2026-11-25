@@ -1,3 +1,5 @@
 {
-  "status": "NOT_FROZEN"
+  "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+  "immutable_path": "/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v4_2/contracts/mitosis/frozen/676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a.json",
+  "approval_invalidated_on_change": true
 }

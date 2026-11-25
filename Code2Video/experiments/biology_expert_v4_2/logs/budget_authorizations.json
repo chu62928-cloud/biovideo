@@ -1,0 +1,13 @@
+[
+  {
+    "authorization_id": "account_recharged_20261125_retry",
+    "source": "explicit_user_message",
+    "provider": "qwen",
+    "additional_requests": 0,
+    "acknowledged_failed_calls": [
+      "v3_05",
+      "v42_13_5477588f"
+    ],
+    "reason": "User confirms recharge; resume within original four-request ceiling without resetting failed usage"
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "model": "qwen3.8-27b",
+  "video_sha256": "c1a999fce2b3f1abadfd14b3cefa429cbf672a2a5de124c16a93b0b2b49baf46",
+  "profile": {
+    "max_completion_tokens": 12000,
+    "thinking_budget": 4096
+  },
+  "retry_count": 0
+}

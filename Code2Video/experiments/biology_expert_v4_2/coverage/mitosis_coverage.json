@@ -1,6 +1,6 @@
 {
   "topic_id": "mitosis",
-  "contract_hash": "4e6635ff4287031b64117505377aa0e41295a72cb7ae98c54f95c9eeb6a82edd",
+  "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
   "uncovered_items": [
     {
       "item_id": "entity_duplicated_chromosome",
@@ -131,8 +131,8 @@
     }
   ],
   "contract_goal_coverage": {
-    "decision": "NOT_MEASURED",
-    "reason": "No independent user-goal/contract completeness review"
+    "decision": "PASS",
+    "missing_goals": []
   },
   "actual_observation_coverage": 0,
   "checks_total": 8,

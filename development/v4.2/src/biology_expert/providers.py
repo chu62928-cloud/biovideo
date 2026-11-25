@@ -33,7 +33,10 @@ class ModelGateway:
    finally:fcntl.flock(handle,fcntl.LOCK_UN)
  def _request_locked(self,provider,purpose,prompt,video=None):
   self.rows=json.loads(self.path.read_text()) if self.path.exists() else []
-  blocking=[r for r in self.rows if r['status'] in {'error','pending'}]
+  authpath=self.root/'budget_authorizations.json'
+  auths=json.loads(authpath.read_text()) if authpath.exists() else []
+  acknowledged={cid for a in auths for cid in a.get('acknowledged_failed_calls',[])}
+  blocking=[r for r in self.rows if r['status'] in {'error','pending'} and r.get('call_id') not in acknowledged]
   if blocking:
    # A confirmed provider-specific 403 does not make other providers' state uncertain.
    if any((r['provider']==provider and r.get('requested_model')==os.environ.get('QWEN_MODEL' if provider=='qwen' else 'DEEPSEEK_MODEL')) or r.get('http_status')!=403 for r in blocking):raise RuntimeError('Prior uncertain/failed API state for this provider; paid requests stopped')

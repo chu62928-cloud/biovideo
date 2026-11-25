@@ -12,13 +12,14 @@
       "detected": 0,
       "missed": 0,
       "false_positives": 0,
-      "final_gate": "REVIEW_INCOMPLETE"
+      "final_gate": "REVIEW_INCOMPLETE",
+      "video_review": "PASS"
     },
     {
       "topic": "mitosis",
       "constraints": 8,
-      "contract_review": "REVIEW_INCOMPLETE",
-      "frozen": false,
+      "contract_review": "PASS",
+      "frozen": true,
       "coverage": "REVIEW_INCOMPLETE",
       "critical_gaps": 10,
       "actual_checks_measured": 0,
@@ -26,7 +27,8 @@
       "detected": 0,
       "missed": 0,
       "false_positives": 0,
-      "final_gate": "REVIEW_INCOMPLETE"
+      "final_gate": "REVIEW_INCOMPLETE",
+      "video_review": "REVISE"
     },
     {
       "topic": "protein_translation",
@@ -40,23 +42,26 @@
       "detected": 0,
       "missed": 0,
       "false_positives": 0,
-      "final_gate": "REVIEW_INCOMPLETE"
+      "final_gate": "REVIEW_INCOMPLETE",
+      "video_review": "NOT_MEASURED"
     }
   ],
   "providers": {
     "deepseek": {
-      "requests": 11,
-      "input_tokens": 78852,
-      "output_tokens": 28004
+      "requests": 12,
+      "successful": 12,
+      "failed": 0,
+      "known_input_tokens": 83878,
+      "known_output_tokens": 29211,
+      "failed_usage_unknown": false
     },
     "qwen": {
-      "requests": 2,
-      "known_tokens": 0,
-      "token_usage_unknown": true,
-      "errors": [
-        "403 AccessDenied.Unpurchased (qwen4-max)",
-        "400 Arrearage (qwen3.8-27b)"
-      ]
+      "requests": 4,
+      "successful": 2,
+      "failed": 2,
+      "known_input_tokens": 53462,
+      "known_output_tokens": 8043,
+      "failed_usage_unknown": true
     }
   },
   "retrieval_requests": {

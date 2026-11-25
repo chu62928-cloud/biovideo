@@ -5,8 +5,10 @@
   "frozen": false,
   "coverage": "REVIEW_INCOMPLETE",
   "deterministic": "REVIEW_INCOMPLETE",
-  "video": "ERROR",
-  "reason": "Contract review not PASS and key observed science unmeasured; unavailable VLM cannot be replaced with mock",
+  "ir_semantic": "PASS",
+  "video": "PASS",
   "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
-  "legacy_rules_used_for_build": false
+  "legacy_rules_used_for_build": false,
+  "legacy_scene_used_only_after_contract": true,
+  "new_topic_rendered": null
 }

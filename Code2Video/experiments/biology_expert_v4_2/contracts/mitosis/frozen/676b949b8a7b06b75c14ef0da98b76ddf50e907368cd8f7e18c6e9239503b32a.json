@@ -1,0 +1,732 @@
+{
+  "contract": {
+    "contract_id": "mitosis_metaphase_anaphase_contract_v1",
+    "topic_id": "mitosis",
+    "scope": {
+      "user_request": "Review a grades10-12 video of one duplicated chromosome aligning with opposite-pole kinetochore attachment, then cohesion release and existing sister separation. No replication, homolog pairing or cytokinesis in scope.",
+      "audience": "grades_10_12",
+      "included": [
+        "one duplicated chromosome at metaphase",
+        "sister chromatids aligned at metaphase plate",
+        "kinetochore microtubules attaching to opposite poles",
+        "cohesin degradation at anaphase onset",
+        "separation of existing sister chromatids toward opposite poles"
+      ],
+      "excluded": [
+        "DNA replication",
+        "homolog pairing",
+        "cytokinesis"
+      ]
+    },
+    "scientific_entities": [
+      {
+        "role": "duplicated_chromosome",
+        "description": "A chromosome consisting of two sister chromatids joined at the centromere during metaphase.",
+        "evidence_ids": [
+          "E_70c610899421"
+        ]
+      },
+      {
+        "role": "sister_chromatid_a",
+        "description": "One of the two identical copies of a duplicated chromosome, attached to one pole's kinetochore microtubules.",
+        "evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ]
+      },
+      {
+        "role": "sister_chromatid_b",
+        "description": "The other identical copy of a duplicated chromosome, attached to the opposite pole's kinetochore microtubules.",
+        "evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ]
+      },
+      {
+        "role": "kinetochore_a",
+        "description": "Protein structure at the centromere of sister chromatid a that binds spindle microtubules from one pole.",
+        "evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ]
+      },
+      {
+        "role": "kinetochore_b",
+        "description": "Protein structure at the centromere of sister chromatid b that binds spindle microtubules from the opposite pole.",
+        "evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ]
+      },
+      {
+        "role": "spindle_pole_a",
+        "description": "One centrosome at one end of the mitotic spindle.",
+        "evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ]
+      },
+      {
+        "role": "spindle_pole_b",
+        "description": "The other centrosome at the opposite end of the mitotic spindle.",
+        "evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ]
+      },
+      {
+        "role": "metaphase_plate",
+        "description": "The equatorial plane roughly midway between the two spindle poles where chromosomes align during metaphase.",
+        "evidence_ids": [
+          "E_70c610899421"
+        ]
+      },
+      {
+        "role": "cohesin",
+        "description": "Protein complex that holds sister chromatids together until anaphase onset.",
+        "evidence_ids": [
+          "E_70c610899421"
+        ]
+      }
+    ],
+    "required_processes": [
+      {
+        "role": "metaphase_alignment",
+        "description": "Chromosomes align at the metaphase plate with sister chromatids attached to opposite poles.",
+        "evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ]
+      },
+      {
+        "role": "anaphase_separation",
+        "description": "Cohesin degrades and sister chromatids separate toward opposite poles.",
+        "evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ]
+      }
+    ],
+    "required_observations": [
+      "one duplicated chromosome aligned at the metaphase plate",
+      "sister chromatids attached to kinetochore microtubules from opposite poles",
+      "cohesin degradation at anaphase onset",
+      "sister chromatids separating and moving toward opposite poles"
+    ],
+    "constraints": [
+      {
+        "constraint_id": "C1",
+        "type": "STRUCTURAL",
+        "participant_roles": [
+          "duplicated_chromosome",
+          "sister_chromatid_a",
+          "sister_chromatid_b"
+        ],
+        "applies_to": {
+          "process": "metaphase_alignment"
+        },
+        "when": {
+          "state": "metaphase"
+        },
+        "must_hold": {
+          "relation": "component_of",
+          "source_anchor": "sister_chromatid_a",
+          "target_anchor": "duplicated_chromosome"
+        },
+        "exceptions": [],
+        "evidence_ids": [
+          "E_70c610899421"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_70c610899421",
+            "quote": "each sister chromatid rests on one side of the plate"
+          }
+        ],
+        "verification": {
+          "methods": [
+            "scene_graph"
+          ],
+          "capability": "PARTIAL",
+          "primitive": "relation"
+        },
+        "severity": "critical",
+        "verification_status": "INDEPENDENTLY_VERIFIED",
+        "disputed": false
+      },
+      {
+        "constraint_id": "C2",
+        "type": "PERSISTENT_RELATION",
+        "participant_roles": [
+          "sister_chromatid_a",
+          "sister_chromatid_b",
+          "cohesin"
+        ],
+        "applies_to": {
+          "process": "metaphase_alignment"
+        },
+        "when": {
+          "state": "metaphase"
+        },
+        "must_hold": {
+          "relation": "connected_by",
+          "source_anchor": "sister_chromatid_a",
+          "target_anchor": "sister_chromatid_b"
+        },
+        "exceptions": [],
+        "evidence_ids": [
+          "E_70c610899421"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_70c610899421",
+            "quote": "The sister chromatids are still tightly attached to each other by cohesin proteins."
+          }
+        ],
+        "verification": {
+          "methods": [
+            "video_semantic_review",
+            "human"
+          ],
+          "capability": "VLM",
+          "primitive": "persistent_relation"
+        },
+        "severity": "critical",
+        "verification_status": "INDEPENDENTLY_VERIFIED",
+        "disputed": false
+      },
+      {
+        "constraint_id": "C3",
+        "type": "STRUCTURAL",
+        "participant_roles": [
+          "kinetochore_a",
+          "spindle_pole_a"
+        ],
+        "applies_to": {
+          "process": "metaphase_alignment"
+        },
+        "when": {
+          "state": "metaphase"
+        },
+        "must_hold": {
+          "relation": "attached_to",
+          "source_anchor": "kinetochore_a",
+          "target_anchor": "spindle_pole_a"
+        },
+        "exceptions": [],
+        "evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_70c610899421",
+            "quote": "Eventually, all the sister chromatids will be attached via their kinetochores to microtubules from opposing poles."
+          }
+        ],
+        "verification": {
+          "methods": [
+            "video_semantic_review",
+            "human"
+          ],
+          "capability": "VLM",
+          "primitive": "relation"
+        },
+        "severity": "critical",
+        "verification_status": "INDEPENDENTLY_VERIFIED",
+        "disputed": false
+      },
+      {
+        "constraint_id": "C4",
+        "type": "STRUCTURAL",
+        "participant_roles": [
+          "kinetochore_b",
+          "spindle_pole_b"
+        ],
+        "applies_to": {
+          "process": "metaphase_alignment"
+        },
+        "when": {
+          "state": "metaphase"
+        },
+        "must_hold": {
+          "relation": "attached_to",
+          "source_anchor": "kinetochore_b",
+          "target_anchor": "spindle_pole_b"
+        },
+        "exceptions": [],
+        "evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_70c610899421",
+            "quote": "Eventually, all the sister chromatids will be attached via their kinetochores to microtubules from opposing poles."
+          }
+        ],
+        "verification": {
+          "methods": [
+            "video_semantic_review",
+            "human"
+          ],
+          "capability": "VLM",
+          "primitive": "relation"
+        },
+        "severity": "critical",
+        "verification_status": "INDEPENDENTLY_VERIFIED",
+        "disputed": false
+      },
+      {
+        "constraint_id": "C5",
+        "type": "STRUCTURAL",
+        "participant_roles": [
+          "sister_chromatid_a",
+          "sister_chromatid_b",
+          "spindle_pole_a",
+          "spindle_pole_b"
+        ],
+        "applies_to": {
+          "process": "anaphase_separation"
+        },
+        "when": {
+          "state": "anaphase"
+        },
+        "must_hold": {
+          "a_start": "sister_chromatid_a",
+          "a_end": "spindle_pole_a",
+          "b_start": "sister_chromatid_b",
+          "b_end": "spindle_pole_b",
+          "min": 0.0,
+          "max": 1.0
+        },
+        "exceptions": [],
+        "evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_70c610899421",
+            "quote": "Each chromatid, now called a single chromosome, is pulled rapidly toward the centrosome to which its microtubule is attached."
+          }
+        ],
+        "verification": {
+          "methods": [
+            "runtime_trace",
+            "video_semantic_review"
+          ],
+          "capability": "PARTIAL",
+          "primitive": "direction"
+        },
+        "severity": "major",
+        "verification_status": "INDEPENDENTLY_VERIFIED",
+        "disputed": false
+      },
+      {
+        "constraint_id": "C6",
+        "type": "TEMPORAL",
+        "participant_roles": [
+          "cohesin",
+          "sister_chromatid_a",
+          "sister_chromatid_b"
+        ],
+        "applies_to": {
+          "process": "anaphase_separation"
+        },
+        "when": {
+          "state": "anaphase"
+        },
+        "must_hold": {
+          "ordered_roles": [
+            "cohesin_degradation",
+            "sister_separation"
+          ]
+        },
+        "exceptions": [],
+        "evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_70c610899421",
+            "quote": "The cohesin proteins degrade, and the sister chromatids separate at the centromere."
+          }
+        ],
+        "verification": {
+          "methods": [
+            "event_order",
+            "video_semantic_review"
+          ],
+          "capability": "VLM",
+          "primitive": "event_order"
+        },
+        "severity": "critical",
+        "verification_status": "INDEPENDENTLY_VERIFIED",
+        "disputed": false
+      },
+      {
+        "constraint_id": "C7",
+        "type": "STATE",
+        "participant_roles": [
+          "sister_chromatid_a",
+          "sister_chromatid_b"
+        ],
+        "applies_to": {
+          "process": "metaphase_alignment"
+        },
+        "when": {
+          "state": "metaphase"
+        },
+        "must_hold": {
+          "key": "aligned_at_metaphase_plate",
+          "value": true
+        },
+        "exceptions": [],
+        "evidence_ids": [
+          "E_70c610899421"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_70c610899421",
+            "quote": "Chromosomes are aligned at the “equatorial plate”"
+          }
+        ],
+        "verification": {
+          "methods": [
+            "scene_graph",
+            "video_semantic_review"
+          ],
+          "capability": "PARTIAL",
+          "primitive": "state"
+        },
+        "severity": "major",
+        "verification_status": "INDEPENDENTLY_VERIFIED",
+        "disputed": false
+      },
+      {
+        "constraint_id": "C8",
+        "type": "STRUCTURAL",
+        "participant_roles": [
+          "kinetochore_a",
+          "kinetochore_b",
+          "sister_chromatid_a",
+          "sister_chromatid_b"
+        ],
+        "applies_to": {
+          "process": "metaphase_alignment"
+        },
+        "when": {
+          "state": "prometaphase_to_metaphase"
+        },
+        "must_hold": {
+          "relation": "face_opposite_poles",
+          "source_anchor": "kinetochore_a",
+          "target_anchor": "kinetochore_b"
+        },
+        "exceptions": [],
+        "evidence_ids": [
+          "E_70c610899421",
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_70c610899421",
+            "quote": "the chromosome will be oriented until the kinetochores of sister chromatids face the opposite poles"
+          }
+        ],
+        "verification": {
+          "methods": [
+            "scene_graph",
+            "human"
+          ],
+          "capability": "VLM",
+          "primitive": "relation"
+        },
+        "severity": "major",
+        "verification_status": "INDEPENDENTLY_VERIFIED",
+        "disputed": false
+      }
+    ],
+    "evidence_refs": [
+      "E_70c610899421",
+      "E_dcb0de9a22b0"
+    ],
+    "visual_references": [
+      "REF_5c388a09b4",
+      "REF_4ab08ec831"
+    ],
+    "coverage_requirements": [
+      {
+        "item_id": "entity_duplicated_chromosome",
+        "kind": "entity",
+        "constraint_ids": [
+          "C1"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "entity_sister_chromatids",
+        "kind": "entity",
+        "constraint_ids": [
+          "C1",
+          "C2",
+          "C7"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "entity_kinetochores",
+        "kind": "entity",
+        "constraint_ids": [
+          "C3",
+          "C4",
+          "C8"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "entity_spindle_poles",
+        "kind": "entity",
+        "constraint_ids": [
+          "C3",
+          "C4",
+          "C5"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "entity_cohesin",
+        "kind": "entity",
+        "constraint_ids": [
+          "C2",
+          "C6"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "process_metaphase_alignment",
+        "kind": "process",
+        "constraint_ids": [
+          "C1",
+          "C3",
+          "C4",
+          "C7",
+          "C8"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "process_anaphase_separation",
+        "kind": "process",
+        "constraint_ids": [
+          "C5",
+          "C6"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "relation_opposite_pole_attachment",
+        "kind": "relation",
+        "constraint_ids": [
+          "C3",
+          "C4",
+          "C8"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "temporal_cohesin_then_separation",
+        "kind": "temporal",
+        "constraint_ids": [
+          "C6"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "persistent_sister_connection_metaphase",
+        "kind": "persistent",
+        "constraint_ids": [
+          "C2"
+        ],
+        "critical": true
+      }
+    ],
+    "unresolved_questions": [
+      {
+        "question": "Does the video explicitly show cohesin protein degradation, or only infer it from sister chromatid separation?",
+        "reason": "Cohesin is a molecular complex not directly visible at light microscopy level; visual semantics may simplify.",
+        "evidence_ids": [
+          "E_70c610899421"
+        ]
+      },
+      {
+        "question": "Does the animation depict the metaphase plate as a physical structure rather than a plane?",
+        "reason": "Metaphase plate is an equatorial plane, not a membrane or organelle; visual ambiguity may mislead.",
+        "evidence_ids": [
+          "E_70c610899421"
+        ]
+      },
+      {
+        "question": "Is the chromosome count and ploidy context appropriate for grades 10-12 without implying homolog pairing?",
+        "reason": "User excluded homolog pairing; need to verify no pairing shown.",
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ]
+      }
+    ],
+    "verification_plan": {
+      "methods": [
+        "scene_graph",
+        "video_semantic_review",
+        "runtime_trace",
+        "human"
+      ],
+      "steps": [
+        "Use scene_graph to check presence of one duplicated chromosome with two sister chromatids aligned at a plane.",
+        "Use video_semantic_review to confirm kinetochore microtubules attach to opposite poles.",
+        "Use runtime_trace or event_order to verify cohesin degradation precedes sister separation.",
+        "Use human review to adjudicate molecular visibility of cohesin and metaphase plate representation."
+      ],
+      "pass_conditions": "All critical constraints have verification_status SOURCE_SUPPORTED or better with no blocking issues; unresolved questions documented but not contradicting scope."
+    }
+  },
+  "hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+  "review": {
+    "decision": "PASS",
+    "semantic_review": {
+      "decision": "PASS",
+      "constraint_reviews": [
+        {
+          "constraint_id": "C1",
+          "status": "SUPPORTED",
+          "reason": "The quoted passage explicitly states each sister chromatid rests on one side of the plate, implying they are components of the duplicated chromosome at metaphase. The relation component_of is a reasonable abstraction for a grades 10-12 educational context.",
+          "evidence_ids": [
+            "E_70c610899421"
+          ]
+        },
+        {
+          "constraint_id": "C2",
+          "status": "SUPPORTED",
+          "reason": "The passage explicitly says sister chromatids are still tightly attached to each other by cohesin proteins at metaphase. The connected_by relation with cohesin as mediator is directly entailed.",
+          "evidence_ids": [
+            "E_70c610899421"
+          ]
+        },
+        {
+          "constraint_id": "C3",
+          "status": "SUPPORTED",
+          "reason": "The passage states that eventually all sister chromatids are attached via kinetochores to microtubules from opposing poles. This directly supports kinetochore_a attached_to spindle_pole_a as a simplified relation, appropriate for the audience.",
+          "evidence_ids": [
+            "E_70c610899421"
+          ]
+        },
+        {
+          "constraint_id": "C4",
+          "status": "SUPPORTED",
+          "reason": "Same passage supports attachment of the other sister chromatid's kinetochore to the opposite pole. The abstraction is consistent with the source.",
+          "evidence_ids": [
+            "E_70c610899421"
+          ]
+        },
+        {
+          "constraint_id": "C5",
+          "status": "SUPPORTED",
+          "reason": "The passage describes each chromatid being pulled rapidly toward the centrosome to which its microtubule is attached. The direction relation between sister chromatids and opposite poles is directly supported, though the fractional min/max bounds are a modeling choice.",
+          "evidence_ids": [
+            "E_70c610899421"
+          ]
+        },
+        {
+          "constraint_id": "C6",
+          "status": "SUPPORTED",
+          "reason": "The passage explicitly orders cohesin degradation before sister chromatid separation at anaphase onset. The event_order constraint is directly entailed.",
+          "evidence_ids": [
+            "E_70c610899421"
+          ]
+        },
+        {
+          "constraint_id": "C7",
+          "status": "SUPPORTED",
+          "reason": "The passage states chromosomes are aligned at the equatorial plate during metaphase. The state key aligned_at_metaphase_plate is a faithful abstraction.",
+          "evidence_ids": [
+            "E_70c610899421"
+          ]
+        },
+        {
+          "constraint_id": "C8",
+          "status": "SUPPORTED",
+          "reason": "The passage states the chromosome will be oriented until kinetochores of sister chromatids face opposite poles. The face_opposite_poles relation is directly supported.",
+          "evidence_ids": [
+            "E_70c610899421"
+          ]
+        }
+      ],
+      "goal_coverage": {
+        "decision": "PASS",
+        "missing_goals": []
+      },
+      "issues": [
+        {
+          "issue": "Cohesin degradation is a molecular event not directly visible at light microscopy; the video may need to use a simplified visual metaphor or label. This is a teaching simplification, not a misleading error, provided it is clarified.",
+          "severity": "minor",
+          "related_constraint_ids": [
+            "C6"
+          ]
+        },
+        {
+          "issue": "The metaphase plate is an imaginary plane, not a physical structure; if the animation depicts it as a solid barrier or membrane, that would be misleading. Human review should confirm correct representation.",
+          "severity": "minor",
+          "related_constraint_ids": [
+            "C7"
+          ]
+        },
+        {
+          "issue": "The contract does not explicitly forbid showing homolog pairing, but the user excluded it. The video must avoid depicting homolog pairing during metaphase/anaphase of mitosis. Human review should verify.",
+          "severity": "major",
+          "related_constraint_ids": [
+            "C1",
+            "C2",
+            "C7"
+          ]
+        }
+      ],
+      "reference_events": [
+        {
+          "event_role": "metaphase_alignment",
+          "state": "chromosomes aligned at equatorial plate, sister chromatids attached to opposite poles, cohesin holding sisters together",
+          "relations": [
+            "component_of",
+            "connected_by",
+            "attached_to",
+            "aligned_at_metaphase_plate",
+            "face_opposite_poles"
+          ],
+          "evidence_ids": [
+            "E_70c610899421"
+          ],
+          "quote": "Metaphase – The mitotic spindle is fully developed and centrosomes are at opposite poles. Chromosomes are aligned at the “equatorial plate”, and each sister chromatid rests on one side of the plate, with spindle fibers attached to them."
+        },
+        {
+          "event_role": "anaphase_separation",
+          "state": "cohesin degraded, sister chromatids separate and move toward opposite centrosomes",
+          "relations": [
+            "event_order(cohesin_degradation, sister_separation)",
+            "direction(sister_chromatid_a toward spindle_pole_a)",
+            "direction(sister_chromatid_b toward spindle_pole_b)"
+          ],
+          "evidence_ids": [
+            "E_70c610899421"
+          ],
+          "quote": "Anaphase (“upward phase”): The cohesin proteins degrade, and the sister chromatids separate at the centromere. Each chromatid, now called a single chromosome, is pulled rapidly toward the centrosome to which its microtubule is attached."
+        }
+      ]
+    },
+    "quote_errors": [],
+    "independent_request": true,
+    "independent_provider": false,
+    "limitation": "Separate request using same provider, not independent scientist; source entailment is explicit",
+    "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "decision": "REVISE",
+  "issues": [
+    {
+      "constraint_id": null,
+      "description": "Off-topic frame: the final 'Grid Visual' frame (SVM/ML classification text + A1–F6 dot grid) is unrelated to mitosis and outside scope; it is a leaked/placeholder asset that breaks the scientific narrative and must be removed.",
+      "evidence_ids": []
+    },
+    {
+      "constraint_id": "C3",
+      "description": "At t=0.0s only the left pole→kinetochore microtubule is drawn while the caption already asserts 'Opposite-pole attachment'; the right microtubule appears only at t=1.2s. Transient inconsistency between caption and visible attachment.",
+      "evidence_ids": []
+    },
+    {
+      "constraint_id": "C2",
+      "description": "Cohesin is never rendered as a visible molecular complex; the sister connection is only implied by the chromatids staying joined at the centromere until ~6s plus the caption 'Sister cohesion is released'. Acceptable for grades 10-12 but the persistent cohesin relation is inferred, not shown.",
+      "evidence_ids": [
+        "E_70c610899421"
+      ]
+    },
+    {
+      "constraint_id": "C7",
+      "description": "The metaphase plate is not depicted as a plane/structure; alignment is only implied by the chromatids sitting midway between the two poles. No misleading physical membrane is shown, so ambiguity is low but the plane itself is absent.",
+      "evidence_ids": [
+        "E_70c610899421"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "constraint_id": "C1",
+      "status": "PASS",
+      "observation": "Two sister chromatids (Sister A green, Sister B orange) are joined at the centromere as one duplicated chromosome at center, t=0.0–5.2s."
+    },
+    {
+      "constraint_id": "C2",
+      "status": "UNCERTAIN",
+      "observation": "Sisters remain physically joined at the centromere through t=5.2s and the caption 'Sister cohesion is released' appears at t=6.2s; cohesin itself is not directly visible, so the connected-by-cohesin relation is inferred."
+    },
+    {
+      "constraint_id": "C3",
+      "status": "PASS",
+      "observation": "Left pole→kinetochore_A microtubule line visible from t=1.2s onward (absent at t=0.0s)."
+    },
+    {
+      "constraint_id": "C4",
+      "status": "PASS",
+      "observation": "Right pole→kinetochore_B microtubule line visible from t=1.2s onward, giving bipolar attachment."
+    },
+    {
+      "constraint_id": "C5",
+      "status": "PASS",
+      "observation": "After release, Daughter A (green) moves toward the left pole and Daughter B (orange) toward the right pole at t=9.2–11.2s, matching kinetochore_A→pole_left / kinetochore_B→pole_right."
+    },
+    {
+      "constraint_id": "C6",
+      "status": "PASS",
+      "observation": "Cohesion-release caption at t=6.2s precedes visible sister separation at t=9.2–10.2s, satisfying cohesin_degradation → sister_separation ordering."
+    },
+    {
+      "constraint_id": "C7",
+      "status": "PASS",
+      "observation": "Chromatids are aligned midway between the two poles (equatorial position) during t=0.0–5.2s."
+    },
+    {
+      "constraint_id": "C8",
+      "status": "PASS",
+      "observation": "The two centromeric kinetochore beads face the opposite poles (left bead toward left pole, right bead toward right pole) at t=1.2–5.2s."
+    }
+  ],
+  "reference_comparison": {
+    "new_evidence": [
+      "A non-mitosis 'Grid Visual' SVM/ML frame appears at the end of the video, with no counterpart in any retrieved reference; this is new, out-of-scope visual content."
+    ],
+    "missing_video_reference": true,
+    "limitations": [
+      "No reference video exists; comparison uses static OpenStax illustrations (REF_5c388a09b4, REF_4ab08ec831) whose captions are not independent pixel verification.",
+      "References are simplified high-school schematics and may not match the generated video's exact geometry.",
+      "Cohesin and the metaphase plate are molecular/planar concepts not directly resolvable in the generated frames, so those relations rely on captions + spatial inference."
+    ]
+  },
+  "contract_hash": "676b949b8a7b06b75c14ef0da98b76ddf50e907368cd8f7e18c6e9239503b32a",
+  "video_sha256": "3ac1a0c4dbbcaea4298a7bec4fee92acab29a1999d62823c8bdee3df36071708",
+  "mode": "FULL_VIDEO_WITH_RETRIEVED_REFERENCE_CONTEXT"
+}

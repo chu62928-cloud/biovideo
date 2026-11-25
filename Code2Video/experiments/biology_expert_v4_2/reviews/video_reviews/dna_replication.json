@@ -1,6 +1,80 @@
 {
-  "decision": "ERROR",
-  "error": "AccessDenied.Unpurchased",
-  "reason": "Confirmed model access 403; no retry or fake review",
-  "checks": []
+  "decision": "PASS",
+  "issues": [
+    {
+      "constraint_id": "C5",
+      "description": "RNase H is not depicted as a distinct labeled enzyme glyph; primer removal is conveyed only by the caption 'Remove RNA' plus the visible disappearance of the intervening orange RNA and its replacement by green DNA. This matches the contract's allowed simplification to a single removal step, so it is non-blocking, but the enzyme identity is not independently visible.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    },
+    {
+      "constraint_id": "C2",
+      "description": "DNA pol α is not shown as a separate enzyme; the pol α→pol ε/δ handoff is explicitly stated as simplified in the on-screen caption. Within excluded scope / unresolved-question tolerance, non-blocking.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    },
+    {
+      "constraint_id": null,
+      "description": "Retrieved reference images are mismatched to the topic: REF_446c6c6b5b caption describes telomerase and REF_9ca1076572 is a photo of Elizabeth Blackburn, neither an independent replication-fork illustration. They cannot serve as a pixel/visual ground truth for the generated fork; only the OpenStax text passage was used as scientific ground truth.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "constraint_id": "C1",
+      "status": "PASS",
+      "observation": "0.0-5.0 s: Y-shaped fork with pink hexagon 'Helicase' at the junction; two antiparallel templates (top 3'→5', bottom 5'→3') separated left of the junction and base-paired (rungs) right of it. Fork structure and helicase-at-fork relation hold."
+    },
+    {
+      "constraint_id": "C2",
+      "status": "PASS",
+      "observation": "6.0-11.0 s RNA primase lays an orange primer on the top template (labeled 5'→3'); 12.0-18.0 s Pol ε extends it. 18.0-19.0 s primase on bottom template; 19.0-25.0 s Pol δ extends. Priming precedes extension on both strands; pol α handoff simplified per caption (allowed)."
+    },
+    {
+      "constraint_id": "C3",
+      "status": "PASS",
+      "observation": "12.0-18.0 s: Pol ε continuously extends the green leading strand 5'→3' toward the advancing fork on the top template (antiparallel to its 3'→5' template). Continuous leading synthesis holds."
+    },
+    {
+      "constraint_id": "C4",
+      "status": "PASS",
+      "observation": "19.0-25.0 s: Pol δ extends two separate lagging fragments, each initiated by its own orange primer, growing 5'→3' away from the fork on the bottom template (3'→5' new-strand orientation, antiparallel to 5'→3' template). Discontinuous Okazaki synthesis holds."
+    },
+    {
+      "constraint_id": "C5",
+      "status": "PASS",
+      "observation": "25.0-29.0 s: Pol δ at the junction between two lagging fragments; the intervening orange RNA is removed and replaced by green DNA in a single visible step. Order (pol δ → primer displacement/removal → replacement) holds; RNase H not a separate glyph (allowed simplification, see issues)."
+    },
+    {
+      "constraint_id": "C6",
+      "status": "PASS",
+      "observation": "By 30.0-31.0 s the previously orange RNA segment between the left lagging fragments is gone and replaced by continuous green DNA; rna_primer_removed = true is visible."
+    },
+    {
+      "constraint_id": "C7",
+      "status": "PASS",
+      "observation": "30.0-31.0 s: yellow 'Ligase' appears at the nick between adjacent Okazaki fragments only after the RNA removal/replacement step, i.e. primer removal precedes ligase sealing."
+    },
+    {
+      "constraint_id": "C8",
+      "status": "PASS",
+      "observation": "31.0 s: ligase positioned at the junction and the two green fragments are now continuous (nick closed). The phosphodiester bond is implied by the sealed nick rather than drawn as a bond symbol, acceptable for a grades-10-12 schematic."
+    }
+  ],
+  "reference_comparison": {
+    "new_evidence": [],
+    "missing_video_reference": true,
+    "limitations": [
+      "No independent replication-fork reference illustration was actually retrieved; REF_446c6c6b5b and REF_9ca1076572 captions refer to telomerase and a person photo, so they were not used as visual ground truth.",
+      "No external asset was imported into the generated work; comparison relies on the OpenStax text passage (E_d8ffea5a5785) for scientific ground truth and on the generated frames for visible mechanism.",
+      "Polarity and directionality (leading 5'→3' toward fork; lagging 5'→3' away from fork, each fragment with its own primer) were verified directly from on-frame 5'/3' labels, not from references."
+    ]
+  },
+  "contract_hash": "a5c5802a1e8d2fa499f8e6962ee14907499c982b627dfa1379762f4188111e7d",
+  "video_sha256": "c1a999fce2b3f1abadfd14b3cefa429cbf672a2a5de124c16a93b0b2b49baf46",
+  "mode": "FULL_VIDEO_WITH_RETRIEVED_REFERENCE_CONTEXT"
 }

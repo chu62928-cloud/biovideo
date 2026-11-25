@@ -150,7 +150,7 @@
         "primitive": "relation"
       },
       "severity": "critical",
-      "verification_status": "SOURCE_SUPPORTED",
+      "verification_status": "INDEPENDENTLY_VERIFIED",
       "disputed": false
     },
     {
@@ -191,7 +191,7 @@
         "primitive": "persistent_relation"
       },
       "severity": "critical",
-      "verification_status": "SOURCE_SUPPORTED",
+      "verification_status": "INDEPENDENTLY_VERIFIED",
       "disputed": false
     },
     {
@@ -232,7 +232,7 @@
         "primitive": "relation"
       },
       "severity": "critical",
-      "verification_status": "SOURCE_SUPPORTED",
+      "verification_status": "INDEPENDENTLY_VERIFIED",
       "disputed": false
     },
     {
@@ -273,7 +273,7 @@
         "primitive": "relation"
       },
       "severity": "critical",
-      "verification_status": "SOURCE_SUPPORTED",
+      "verification_status": "INDEPENDENTLY_VERIFIED",
       "disputed": false
     },
     {
@@ -319,7 +319,7 @@
         "primitive": "direction"
       },
       "severity": "major",
-      "verification_status": "SOURCE_SUPPORTED",
+      "verification_status": "INDEPENDENTLY_VERIFIED",
       "disputed": false
     },
     {
@@ -362,7 +362,7 @@
         "primitive": "event_order"
       },
       "severity": "critical",
-      "verification_status": "SOURCE_SUPPORTED",
+      "verification_status": "INDEPENDENTLY_VERIFIED",
       "disputed": false
     },
     {
@@ -401,7 +401,7 @@
         "primitive": "state"
       },
       "severity": "major",
-      "verification_status": "SOURCE_SUPPORTED",
+      "verification_status": "INDEPENDENTLY_VERIFIED",
       "disputed": false
     },
     {
@@ -444,7 +444,7 @@
         "primitive": "relation"
       },
       "severity": "major",
-      "verification_status": "SOURCE_SUPPORTED",
+      "verification_status": "INDEPENDENTLY_VERIFIED",
       "disputed": false
     }
   ],
