@@ -1,0 +1,153 @@
+{
+  "all_passed": true,
+  "api_calls": 0,
+  "fixture_note": "Handwritten tiny fixture animations are environment/transaction tests only, never A1/A2 Agent results.",
+  "tests": [
+    {
+      "name": "historical_indent_reproduced_section2",
+      "pass": true,
+      "evidence": "Exact historical source and feedback replayed against original GridCodeModifier"
+    },
+    {
+      "name": "historical_indent_reproduced_section4",
+      "pass": true,
+      "evidence": "Exact historical source and feedback replayed against original GridCodeModifier"
+    },
+    {
+      "name": "indentation_not_committed",
+      "pass": true,
+      "evidence": {
+        "tag": "bad_indent",
+        "committed": false,
+        "before": {
+          "success": true,
+          "tag": "initial_fixture",
+          "code_sha256": "b4221e3d274851178b7be669d9f8e75fe2fc67b787ae0b6c496931c2949d3184",
+          "video_sha256": "937cb682eac7f3c24e06f314b11b4e845ae38da27f3fc02b75db65bc4bfef7db",
+          "duration_seconds": 0.466667,
+          "renderer": "manim-0.19.0-full-render",
+          "trace_sha256": "dbfcd49cb48b43bfca864cbfca99e5d1626db4d717d7e45e7c1b0651d6324e32",
+          "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture",
+          "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture/rendered_code.py",
+          "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture/video.mp4"
+        },
+        "started": 1795428306.1391857,
+        "error_type": "IndentationError",
+        "error": "unindent does not match any outer indentation level (<unknown>, line 6)",
+        "after": {
+          "success": true,
+          "tag": "initial_fixture",
+          "code_sha256": "b4221e3d274851178b7be669d9f8e75fe2fc67b787ae0b6c496931c2949d3184",
+          "video_sha256": "937cb682eac7f3c24e06f314b11b4e845ae38da27f3fc02b75db65bc4bfef7db",
+          "duration_seconds": 0.466667,
+          "renderer": "manim-0.19.0-full-render",
+          "trace_sha256": "dbfcd49cb48b43bfca864cbfca99e5d1626db4d717d7e45e7c1b0651d6324e32",
+          "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture",
+          "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture/rendered_code.py",
+          "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture/video.mp4"
+        },
+        "elapsed_seconds": 0.001
+      }
+    },
+    {
+      "name": "render_failure_rolls_back_code_and_video",
+      "pass": true,
+      "evidence": {
+        "tag": "render_exception",
+        "committed": false,
+        "before": {
+          "success": true,
+          "tag": "initial_fixture",
+          "code_sha256": "b4221e3d274851178b7be669d9f8e75fe2fc67b787ae0b6c496931c2949d3184",
+          "video_sha256": "937cb682eac7f3c24e06f314b11b4e845ae38da27f3fc02b75db65bc4bfef7db",
+          "duration_seconds": 0.466667,
+          "renderer": "manim-0.19.0-full-render",
+          "trace_sha256": "dbfcd49cb48b43bfca864cbfca99e5d1626db4d717d7e45e7c1b0651d6324e32",
+          "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture",
+          "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture/rendered_code.py",
+          "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture/video.mp4"
+        },
+        "started": 1795428306.142648,
+        "error_type": "AssertionError",
+        "error": "Full Manim render failed; see stderr.log",
+        "after": {
+          "success": true,
+          "tag": "initial_fixture",
+          "code_sha256": "b4221e3d274851178b7be669d9f8e75fe2fc67b787ae0b6c496931c2949d3184",
+          "video_sha256": "937cb682eac7f3c24e06f314b11b4e845ae38da27f3fc02b75db65bc4bfef7db",
+          "duration_seconds": 0.466667,
+          "renderer": "manim-0.19.0-full-render",
+          "trace_sha256": "dbfcd49cb48b43bfca864cbfca99e5d1626db4d717d7e45e7c1b0651d6324e32",
+          "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture",
+          "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture/rendered_code.py",
+          "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture/video.mp4"
+        },
+        "elapsed_seconds": 1.788
+      }
+    },
+    {
+      "name": "paired_hashes_match_manifest",
+      "pass": true,
+      "evidence": {
+        "success": true,
+        "tag": "initial_fixture",
+        "code_sha256": "b4221e3d274851178b7be669d9f8e75fe2fc67b787ae0b6c496931c2949d3184",
+        "video_sha256": "937cb682eac7f3c24e06f314b11b4e845ae38da27f3fc02b75db65bc4bfef7db",
+        "duration_seconds": 0.466667,
+        "renderer": "manim-0.19.0-full-render",
+        "trace_sha256": "dbfcd49cb48b43bfca864cbfca99e5d1626db4d717d7e45e7c1b0651d6324e32",
+        "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture",
+        "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture/rendered_code.py",
+        "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture/video.mp4"
+      }
+    },
+    {
+      "name": "unknown_object_rejected",
+      "pass": true,
+      "evidence": "No model or arbitrary line edit was called"
+    },
+    {
+      "name": "next_round_reads_new_verified_pair",
+      "pass": true,
+      "evidence": {
+        "success": true,
+        "tag": "valid_function_repair",
+        "code_sha256": "64fddb370e22768c5fdc8e846698c845e00a602cfa7fd89e54675f9f2f082457",
+        "video_sha256": "c528797e811f88fccf23b2c2e3a8b09dc15e86708e654fe4e48ccb3974c20c12",
+        "duration_seconds": 0.466667,
+        "renderer": "manim-0.19.0-full-render",
+        "trace_sha256": "dbfcd49cb48b43bfca864cbfca99e5d1626db4d717d7e45e7c1b0651d6324e32",
+        "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/valid_function_repair",
+        "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/valid_function_repair/rendered_code.py",
+        "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/valid_function_repair/video.mp4"
+      }
+    },
+    {
+      "name": "binding_switch_only_checks_current_site",
+      "pass": true,
+      "evidence": {
+        "out_of_frame": [],
+        "label_overlaps": [],
+        "binding_violations": [],
+        "sudden_jumps": [],
+        "note": "Geometry heuristics; intentional occlusion and fade transitions need human review."
+      }
+    },
+    {
+      "name": "group_visibility_tracks_drawn_children",
+      "pass": true,
+      "evidence": "A registered group can be visible via individually added children without being a top-level scene object"
+    },
+    {
+      "name": "historical_DNA_helicase_regression_detected",
+      "pass": true,
+      "evidence": {
+        "bbox_separation_scene_units": {
+          "baseline": 0.0,
+          "regressed": 2.3125
+        },
+        "method": "Full historical animations rendered under isolation, AST observer only; not a scientific correctness score"
+      }
+    }
+  ]
+}

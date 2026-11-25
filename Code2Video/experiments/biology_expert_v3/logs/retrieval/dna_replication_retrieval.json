@@ -1,0 +1,157 @@
+{
+  "evidence": [
+    {
+      "evidence_id": "E_d8ffea5a57",
+      "url": "https://openstax.org/books/biology-2e/pages/14-5-dna-replication-in-eukaryotes",
+      "title": "14.5 DNA Replication in Eukaryotes - Biology 2e | OpenStax",
+      "publisher": "OpenStax, Rice University",
+      "license": "CC BY 4.0; see source page; attribution required",
+      "accessed_utc": "2026-11-24T03:44:28Z",
+      "content_sha256": "ff30253eb084c1944c86844790ccf2b6f06c512c2b1406395f6ad0e911342627",
+      "status": "RETRIEVED",
+      "passages": [
+        {
+          "location": "paragraph selection 1; exact text searchable in saved source",
+          "text": "The essential steps of replication are the same as in prokaryotes. Before replication can start, the DNA has to be made available as a template. Eukaryotic DNA is bound to basic proteins known as histones to form structures called nucleosomes. Histones must be removed and then replaced during the replication process, which helps to account for the lower replication rate in eukaryotes. The chromatin (the complex between DNA and proteins) may undergo some chemical modifications, so that the DNA may be able to slide off the proteins or be accessible to the enzymes of the DNA replication machinery. At the origin of replication, a pre-replication complex is made with other initiator proteins. Helicase and other proteins are then recruited to start the replication process ( Table 14.2 )."
+        },
+        {
+          "location": "paragraph selection 2; exact text searchable in saved source",
+          "text": "Unlike prokaryotic chromosomes, eukaryotic chromosomes are linear. As you’ve learned, the enzyme DNA pol can add nucleotides only in the 5' to 3' direction. In the leading strand, synthesis continues until the end of the chromosome is reached. On the lagging strand, DNA is synthesized in short stretches, each of which is initiated by a separate primer. When the replication fork reaches the end of the linear chromosome, there is no way to replace the primer on the 5’ end of the lagging strand. The DNA at the ends of the chromosome thus remains unpaired, and over time these ends, called telomeres, may get progressively shorter as cells continue to divide."
+        },
+        {
+          "location": "paragraph selection 3; exact text searchable in saved source",
+          "text": "Eukaryotic genomes are much more complex and larger in size than prokaryotic genomes. Eukaryotes also have a number of different linear chromosomes. The human genome has 3 billion base pairs per haploid set of chromosomes, and 6 billion base pairs are replicated during the S phase of the cell cycle. There are multiple origins of replication on each eukaryotic chromosome; humans can have up to 100,000 origins of replication across the genome. The rate of replication is approximately 100 nucleotides per second, much slower than prokaryotic replication. In yeast, which is a eukaryote, special sequences known as autonomously replicating sequences (ARS) are found on the chromosomes. These are equivalent to the origin of replication in E. coli ."
+        },
+        {
+          "location": "paragraph selection 4; exact text searchable in saved source",
+          "text": "The number of DNA polymerases in eukaryotes is much more than in prokaryotes: 14 are known, of which five are known to have major roles during replication and have been well studied. They are known as pol α , pol β , pol γ , pol δ , and pol ε ."
+        },
+        {
+          "location": "paragraph selection 5; exact text searchable in saved source",
+          "text": "A helicase using the energy from ATP hydrolysis opens up the DNA helix. Replication forks are formed at each replication origin as the DNA unwinds. The opening of the double helix causes over-winding, or supercoiling, in the DNA ahead of the replication fork. These are resolved with the action of topoisomerases. Primers are formed by the enzyme primase, and using the primer, DNA pol can start synthesis. Three major DNA polymerases are then involved: α, δ and ε. DNA pol α adds a short (20 to 30 nucleotides) DNA fragment to the RNA primer on both strands, and then hands off to a second polymerase. While the leading strand is continuously synthesized by the enzyme pol ε , the lagging strand is synthesized by pol δ . A sliding clamp protein known as PCNA (proliferating cell nuclear antigen) holds the DNA pol in place so that it does not slide off the DNA. As pol δ runs into the primer RNA on the lagging strand, it displaces it from the DNA template. The displaced primer RNA is then removed by RNase H (AKA flap endonuclease ) and replaced with DNA nucleotides. The Okazaki fragments in the lagging strand are joined after the replacement of the RNA primers with DNA. The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond."
+        },
+        {
+          "location": "paragraph selection 6; exact text searchable in saved source",
+          "text": "Telomeres comprise repetitive sequences that code for no particular gene. In humans, a six-base-pair sequence, TTAGGG, is repeated 100 to 1000 times in the telomere regions. In a way, these telomeres protect the genes from getting deleted as cells continue to divide. The telomeres are added to the ends of chromosomes by a separate enzyme, telomerase ( Figure 14.16 ), whose discovery helped in the understanding of how these repetitive chromosome ends are maintained. The telomerase enzyme contains a catalytic part and a built-in RNA template. It attaches to the end of the chromosome, and DNA nucleotides complementary to the RNA template are added on the 3' end of the DNA strand. Once the 3' end of the lagging strand template is sufficiently elongated, DNA polymerase can add the nucleotides complementary to the ends of the chromosomes. Thus, the ends of the chromosomes are replicated."
+        },
+        {
+          "location": "paragraph selection 7; exact text searchable in saved source",
+          "text": "In 2010, scientists found that telomerase can reverse some age-related conditions in mice. This may have potential in regenerative medicine. 2 Telomerase-deficient mice were used in these studies; these mice have tissue atrophy, stem cell depletion, organ system failure, and impaired tissue injury responses. Telomerase reactivation in these mice caused extension of telomeres, reduced DNA damage, reversed neurodegeneration, and improved the function of the testes, spleen, and intestines. Thus, telomere reactivation may have potential for treating age-related diseases in humans."
+        },
+        {
+          "location": "paragraph selection 8; exact text searchable in saved source",
+          "text": "By the end of this section, you will be able to do the following:"
+        },
+        {
+          "location": "paragraph selection 9; exact text searchable in saved source",
+          "text": "Telomerase is typically active in germ cells and adult stem cells. It is not active in adult somatic cells. For their discovery of telomerase and its action, Elizabeth Blackburn, Carol W. Greider, and Jack W. Szostak ( Figure 14.16 ) received the Nobel Prize for Medicine and Physiology in 2009. Later research using HeLa cells (obtained from Henrietta Lacks)  confirmed that telomerase is present in human cells. And in 2001, researchers including Diane L. Wright found that telomerase is necessary for cells in human embryos to rapidly proliferate."
+        },
+        {
+          "location": "paragraph selection 10; exact text searchable in saved source",
+          "text": "Cells that undergo cell division continue to have their telomeres shortened because most somatic cells do not make telomerase. This essentially means that telomere shortening is associated with aging. With the advent of modern medicine, preventative health care, and healthier lifestyles, the human life span has increased, and there is an increasing demand for people to look younger and have a better quality of life as they grow older."
+        },
+        {
+          "location": "paragraph selection 11; exact text searchable in saved source",
+          "text": "Cancer is characterized by uncontrolled cell division of abnormal cells. The cells accumulate mutations, proliferate uncontrollably, and can migrate to different parts of the body through a process called metastasis. Scientists have observed that cancerous cells have considerably shortened telomeres and that telomerase is active in these cells. Interestingly, only after the telomeres were shortened in the cancer cells did the telomerase become active. If the action of telomerase in these cells can be inhibited by drugs during cancer therapy, then the cancerous cells could potentially be stopped from further division."
+        },
+        {
+          "location": "paragraph selection 12; exact text searchable in saved source",
+          "text": "Access for free at https://openstax.org/books/biology-2e/pages/1-introduction"
+        }
+      ]
+    },
+    {
+      "evidence_id": "E_be5ade748a",
+      "url": "https://openstax.org/books/concepts-biology/pages/9-2-dna-replication",
+      "title": "9.2 DNA Replication - Concepts of Biology | OpenStax",
+      "publisher": "OpenStax, Rice University",
+      "license": "CC BY 4.0; see source page; attribution required",
+      "accessed_utc": "2026-11-24T03:44:30Z",
+      "content_sha256": "5e7dad7eabc90a7746acbf7d0a63b422410ae157204f9a6a28e0e0bb3ea861c5",
+      "status": "RETRIEVED",
+      "passages": [
+        {
+          "location": "paragraph selection 1; exact text searchable in saved source",
+          "text": "Because eukaryotic genomes are very complex, DNA replication is a very complicated process that involves several enzymes and other proteins. It occurs in three main stages: initiation, elongation, and termination."
+        },
+        {
+          "location": "paragraph selection 2; exact text searchable in saved source",
+          "text": "Recall that eukaryotic DNA is bound to proteins known as histones to form structures called nucleosomes. During initiation, the DNA is made accessible to the proteins and enzymes involved in the replication process. How does the replication machinery know where on the DNA double helix to begin? It turns out that there are specific nucleotide sequences called origins of replication at which replication begins. Certain proteins bind to the origin of replication while an enzyme called helicase unwinds and opens up the DNA helix. As the DNA opens up, Y-shaped structures called replication forks are formed ( Figure 9.10 ). Two replication forks are formed at the origin of replication, and these get extended in both directions as replication proceeds. There are multiple origins of replication on the eukaryotic chromosome, such that replication can occur simultaneously from several places in the genome."
+        },
+        {
+          "location": "paragraph selection 3; exact text searchable in saved source",
+          "text": "Because eukaryotic chromosomes are linear, DNA replication comes to the end of a line in eukaryotic chromosomes. As you have learned, the DNA polymerase enzyme can add nucleotides in only one direction. In the leading strand, synthesis continues until the end of the chromosome is reached; however, on the lagging strand there is no place for a primer to be made for the DNA fragment to be copied at the end of the chromosome. This presents a problem for the cell because the ends remain unpaired, and over time these ends get progressively shorter as cells continue to divide. The ends of the linear chromosomes are known as telomeres , which have repetitive sequences that do not code for a particular gene. As a consequence, it is telomeres that are shortened with each round of DNA replication instead of genes. For example, in humans, a six base-pair sequence, TTAGGG, is repeated 100 to 1000 times. The discovery of the enzyme telomerase ( Figure 9.11 ) helped in the understanding of how chromosome ends are maintained. The telomerase attaches to the end of the chromosome, and complementary bases to the RNA template are added on the end of the DNA strand. Once the lagging strand template is sufficiently elongated, DNA polymerase can now add nucleotides that are complementary to the ends of the chromosomes. Thus, the ends of the chromosomes are replicated."
+        },
+        {
+          "location": "paragraph selection 4; exact text searchable in saved source",
+          "text": "Recall that the prokaryotic chromosome is a circular molecule with a less extensive coiling structure than eukaryotic chromosomes. The eukaryotic chromosome is linear and highly coiled around proteins. While there are many similarities in the DNA replication process, these structural differences necessitate some differences in the DNA replication process in these two life forms."
+        },
+        {
+          "location": "paragraph selection 5; exact text searchable in saved source",
+          "text": "DNA replication has been extremely well-studied in prokaryotes, primarily because of the small size of the genome and large number of variants available. Escherichia coli has 4.6 million base pairs in a single circular chromosome, and all of it gets replicated in approximately 42 minutes, starting from a single origin of replication and proceeding around the chromosome in both directions. This means that approximately 1000 nucleotides are added per second. The process is much more rapid than in eukaryotes. Table 9.1 summarizes the differences between prokaryotic and eukaryotic replications."
+        },
+        {
+          "location": "paragraph selection 6; exact text searchable in saved source",
+          "text": "When a cell divides, it is important that each daughter cell receives an identical copy of the DNA. This is accomplished by the process of DNA replication. The replication of DNA occurs during the synthesis phase, or S phase, of the cell cycle, before the cell enters mitosis or meiosis."
+        },
+        {
+          "location": "paragraph selection 7; exact text searchable in saved source",
+          "text": "During DNA replication, each of the two strands that make up the double helix serves as a template from which new strands are copied. The new strand will be complementary to the parental or “old” strand. Each new double strand consists of one parental strand and one new daughter strand. This is known as semiconservative replication . When two DNA copies are formed, they have an identical sequence of nucleotide bases and are divided equally into two daughter cells."
+        },
+        {
+          "location": "paragraph selection 8; exact text searchable in saved source",
+          "text": "During elongation, an enzyme called DNA polymerase adds DNA nucleotides to the 3' end of the template. Because DNA polymerase can only add new nucleotides at the end of a backbone, a primer sequence, which provides this starting point, is added with complementary RNA nucleotides. This primer is removed later, and the nucleotides are replaced with DNA nucleotides. One strand, which is complementary to the parental DNA strand, is synthesized continuously toward the replication fork so the polymerase can add nucleotides in this direction. This continuously synthesized strand is known as the leading strand . Because DNA polymerase can only synthesize DNA in a 5' to 3' direction, the other new strand is put together in short pieces called Okazaki fragments . The Okazaki fragments each require a primer made of RNA to start the synthesis. The strand with the Okazaki fragments is known as the lagging strand . As synthesis proceeds, an enzyme removes the RNA primer, which is then replaced with DNA nucleotides, and the gaps between fragments are sealed by an enzyme called DNA ligase ."
+        },
+        {
+          "location": "paragraph selection 9; exact text searchable in saved source",
+          "text": "The process of DNA replication can be summarized as follows:"
+        },
+        {
+          "location": "paragraph selection 10; exact text searchable in saved source",
+          "text": "DNA polymerase can make mistakes while adding nucleotides. It edits the DNA by proofreading every newly added base. Incorrect bases are removed and replaced by the correct base, and then polymerization continues ( Figure 9.13 a ). Most mistakes are corrected during replication, although when this does not happen, the mismatch repair mechanism is employed. Mismatch repair enzymes recognize the wrongly incorporated base and excise it from the DNA, replacing it with the correct base ( Figure 9.13 b ). In yet another type of repair, nucleotide excision repair , the DNA double strand is unwound and separated, the incorrect bases are removed along with a few bases on the 5' and 3' end, and these are replaced by copying the template with the help of DNA polymerase ( Figure 9.13 c ). Nucleotide excision repair is particularly important in correcting thymine dimers, which are primarily caused by ultraviolet light. In a thymine dimer, two thymine nucleotides adjacent to each other on one strand are covalently bonded to each other rather than their complementary bases. If the dimer is not removed and repaired it will lead to a mutation. Individuals with flaws in their nucleotide excision repair genes show extreme sensitivity to sunlight and develop skin cancers early in life."
+        },
+        {
+          "location": "paragraph selection 11; exact text searchable in saved source",
+          "text": "The elucidation of the structure of the double helix provided a hint as to how DNA is copied. Recall that adenine nucleotides pair with thymine nucleotides, and cytosine with guanine. This means that the two strands are complementary to each other. For example, a strand of DNA with a nucleotide sequence of AGTCATGA will have a complementary strand with the sequence TCAGTACT ( Figure 9.8 )."
+        },
+        {
+          "location": "paragraph selection 12; exact text searchable in saved source",
+          "text": "Because of the complementarity of the two strands, having one strand means that it is possible to recreate the other strand. This model for replication suggests that the two strands of the double helix separate during replication, and each strand serves as a template from which the new complementary strand is copied ( Figure 9.9 )."
+        }
+      ]
+    },
+    {
+      "evidence_id": "PMID_35320688",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35320688/",
+      "title": "The Initiation of Eukaryotic DNA Replication.",
+      "publisher": "Annual review of biochemistry",
+      "license": "Publisher copyright; short research excerpts only",
+      "accessed_utc": "2026-11-24T03:44:32Z",
+      "status": "RETRIEVED",
+      "content_sha256": "ed2f6759a61617a5890852175fa7d70b07aaf0718afd9ba4dd698bcbbc987803",
+      "passages": [
+        {
+          "location": "PubMed abstract",
+          "text": "DNA replication in eukaryotic cells initiates from large numbers of sites called replication origins. Initiation of replication from these origins must be tightly controlled to ensure the entire genome is precisely duplicated in each cell cycle. This is accomplished through the regulation of the first two steps in replication: loading and activation of the replicative DNA helicase. Here we describe what is known about the mechanism and regulation of these two reactions from a genetic, biochemical, and structural perspective, focusing on recent progress using proteins from budding yeast."
+        }
+      ]
+    },
+    {
+      "evidence_id": "PMID_28301743",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28301743/",
+      "title": "Eukaryotic DNA Replication Fork.",
+      "publisher": "Annual review of biochemistry",
+      "license": "Publisher copyright; short research excerpts only",
+      "accessed_utc": "2026-11-24T03:44:32Z",
+      "status": "RETRIEVED",
+      "content_sha256": "e5a4f832e26cd4b46167130a40c6c596e80fdb5c986853a56a8c2ce7b1045e95",
+      "passages": [
+        {
+          "location": "PubMed abstract",
+          "text": "This review focuses on the biogenesis and composition of the eukaryotic DNA replication fork, with an emphasis on the enzymes that synthesize DNA and repair discontinuities on the lagging strand of the replication fork. Physical and genetic methodologies aimed at understanding these processes are discussed. The preponderance of evidence supports a model in which DNA polymerase ε (Pol ε) carries out the bulk of leading strand DNA synthesis at an undisturbed replication fork. DNA polymerases α and δ carry out the initiation of Okazaki fragment synthesis and its elongation and maturation, respectively. This review also discusses alternative proposals, including cellular processes during which alternative forks may be utilized, and new biochemical studies with purified proteins that are aimed at reconstituting leading and lagging strand DNA synthesis separately and as an integrated replication fork."
+        }
+      ]
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,13 @@
+{
+  "mode": "original_video",
+  "requested_model": "gemini-3.1-pro-preview",
+  "max_tokens": 2500,
+  "retries": 0,
+  "timestamp_utc": "2026-11-23T05:41:14Z",
+  "status": "error",
+  "error_type": "InternalServerError",
+  "http_status": 503,
+  "elapsed_seconds": 11.262,
+  "configured_base_url": "https://apiclaude.cc/v1/",
+  "actual_request_url": "https://apiclaude.cc/v1/chat/completions"
+}

@@ -1,0 +1,5766 @@
+{
+  "validation/dna_ir_review.json": {
+    "review_id": "V4-IR-5e1b7c5963",
+    "stage": "SCENE_IR",
+    "decision": "REVISE",
+    "issues": [
+      {
+        "issue_id": "ISS-01-primase-pol-alpha-conflation",
+        "severity": "blocker",
+        "description": "The enzyme object 'primase' is labeled 'Primase / Pol alpha'. In the standard teaching model, primase (an RNA polymerase) synthesizes the RNA primer, while Pol α (DNA polymerase alpha) extends the primer with a short DNA segment before handoff to Pol ε or Pol δ. Conflating them into one labeled object misrepresents the priming step and the Pol α role supported by F5.",
+        "root_cause_stage": "SCENE_IR",
+        "target_objects": [
+          "primase"
+        ],
+        "target_events": [
+          "event_2_priming",
+          "event_4_two_modes"
+        ],
+        "repair_scope": "Separate the primase and Pol α labels/roles. Either use a single 'Primase' label for RNA primer synthesis only, or add a distinct short-DNA synthesis step for Pol α; do not label one enzyme as both.",
+        "acceptance_criteria": [
+          "Primase object label does not claim to be Pol α.",
+          "If Pol α is shown, it is a distinct step/object that extends the RNA primer with DNA before polymerase handoff.",
+          "Event captions for priming and fragment synthesis do not attribute Pol α activity to primase."
+        ]
+      },
+      {
+        "issue_id": "ISS-02-lagging-fragment-extend-direction-conflict",
+        "severity": "blocker",
+        "description": "Fragment_1 and fragment_2 are extended with the growing end moving left (negative x), consistent with constraint growth_fragment_1/2 unit_vector [-1,0,0]. However, the objects' endpoint_labels declare the 3' end at the right-side 'end' anchor, and the extension moves the right-side 'end' anchor leftward. Under the standard antiparallel model, lagging-strand DNA synthesis proceeds 5'→3' away from the fork on the left side; the growing 3' end should move leftward, but the fragment's 3' label is on the right terminus, creating an internal polarity/geometry inconsistency unless the fragment is drawn with its 5' end on the right.",
+        "root_cause_stage": "SCENE_IR",
+        "target_objects": [
+          "fragment_1",
+          "fragment_2",
+          "gap_fill"
+        ],
+        "target_events": [
+          "event_4_two_modes",
+          "event_5_maturation"
+        ],
+        "repair_scope": "Reconcile fragment endpoint labels with the shown growth direction and template polarity. Either relabel the growing end as 3' and place it on the left, or flip the fragment geometry so the 3' end is the leftward-growing terminus.",
+        "acceptance_criteria": [
+          "For each lagging nascent fragment, the anchor labeled 3' coincides with the growing end that actually moves during extension.",
+          "Fragment extension direction remains opposite to leading-strand extension and consistent with antiparallel template polarity.",
+          "The 5'→3' synthesis direction is unambiguously readable from labels and motion."
+        ]
+      },
+      {
+        "issue_id": "ISS-03-maturation-connect-gapfill-fragment1",
+        "severity": "major",
+        "description": "The maturation step connects gap_fill 'end' anchor to fragment_1 'start' anchor to seal a nick. However, fragment_1 was previously extended leftward from its start anchor, so its 'start' anchor is the rightmost (origin) end, while gap_fill is extended from its start at x≈-0.6 to its end at x≈-1.2. The adjacent endpoints for ligation should be gap_fill end and fragment_1's leftward growing end, not fragment_1 start. The declared connection may join non-adjacent endpoints, creating a topology error.",
+        "root_cause_stage": "SCENE_IR",
+        "target_objects": [
+          "gap_fill",
+          "fragment_1",
+          "ligase"
+        ],
+        "target_events": [
+          "event_5_maturation"
+        ],
+        "repair_scope": "Correct the connect target anchors so ligation joins the actual adjacent nick between the filled gap and the 3' end of fragment_1 (or the appropriate downstream fragment end), and update the sealed_actual_nick constraint accordingly.",
+        "acceptance_criteria": [
+          "The ligation connection uses geometrically adjacent endpoints (distance within tolerance at the time of connection).",
+          "The connected ends correspond to the nick expected after RNA removal and gap fill.",
+          "Postcondition relation sealed_nick refers to the corrected adjacent pair."
+        ]
+      }
+    ],
+    "notes": [
+      "Static state-transition checks passed, but those checks do not validate biological labels or endpoint polarity; the issues above are scientific IR problems.",
+      "Event ordering (fork opening → priming → leading extension → lagging fragment synthesis → maturation) is broadly consistent with the teaching model and the cited facts.",
+      "Pol ε leading-strand label is appropriately hedged as the common model; no claim of absolute exclusivity is made. Keep that hedge in captions.",
+      "The declared simplification allows omitting RNase H/FEN1 details; do not demand those steps, but the Pol α/primase distinction and nick adjacency should still be corrected.",
+      "Because a blocker remains, scientific PASS is not permitted."
+    ],
+    "checks": [
+      {
+        "check_id": "schema_references",
+        "category": "schema",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {
+          "errors": []
+        },
+        "expected_condition": "All references exist and facts were verified",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_1_fork_open_fork_0",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "template_leading",
+          "template_lagging"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "X_bf28604c"
+        ],
+        "observed_evidence": {
+          "action_id": "event_1_fork_open_fork_0",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "opened"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_2_priming_prime_0",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "primase"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5"
+        ],
+        "observed_evidence": {
+          "action_id": "event_2_priming_prime_0",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "opened"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_2_priming_prime_1",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "rna_primer_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5"
+        ],
+        "observed_evidence": {
+          "action_id": "event_2_priming_prime_1",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "opened"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_2_priming_prime_2",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "primase"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5"
+        ],
+        "observed_evidence": {
+          "action_id": "event_2_priming_prime_2",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "opened"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_2_priming_prime_3",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5"
+        ],
+        "observed_evidence": {
+          "action_id": "event_2_priming_prime_3",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_0",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_0",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_1",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_leading",
+          "new_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_1",
+          "committed": true,
+          "operation": "attach",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_2",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "new_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_2",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_3",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "new_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_3",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_4",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "new_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_4",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_5",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "new_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_5",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_6",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "new_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_6",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_7",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "new_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_7",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_8",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "new_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_8",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_9",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "new_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_9",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_10",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_leading",
+          "new_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_10",
+          "committed": true,
+          "operation": "detach",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_11",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_11",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_12",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_12",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_0",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "primase"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_0",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_1",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "rna_primer_lagging_1"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_1",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_2",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "primase"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_2",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_3",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_3",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_4",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging",
+          "fragment_1"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_4",
+          "committed": true,
+          "operation": "attach",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_5",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "fragment_1"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_5",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_6",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "fragment_1"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_6",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_7",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "fragment_1"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_7",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_8",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "fragment_1"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_8",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_9",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging",
+          "fragment_1"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_9",
+          "committed": true,
+          "operation": "detach",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_10",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_10",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_11",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "primase"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_11",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_12",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "rna_primer_lagging_2"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_12",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_13",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "primase"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_13",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_14",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_14",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_15",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging",
+          "fragment_2"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_15",
+          "committed": true,
+          "operation": "attach",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_16",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "fragment_2"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_16",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_17",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "fragment_2"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_17",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_18",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "fragment_2"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_18",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_19",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "fragment_2"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_19",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_20",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging",
+          "fragment_2"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_20",
+          "committed": true,
+          "operation": "detach",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_21",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_21",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_0",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_0",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_1",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "rna_primer_lagging_1"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_1",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_2",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_2",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_3",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging",
+          "gap_fill"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_3",
+          "committed": true,
+          "operation": "attach",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_4",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "gap_fill"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_4",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_5",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "gap_fill"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_5",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_6",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "gap_fill"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_6",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_7",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "gap_fill"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_7",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_8",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging",
+          "gap_fill"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_8",
+          "committed": true,
+          "operation": "detach",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_9",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_9",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_10",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "ligase"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_10",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_11",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "ligase",
+          "gap_fill"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_11",
+          "committed": true,
+          "operation": "attach",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_12",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "gap_fill",
+          "fragment_1"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_12",
+          "committed": true,
+          "operation": "connect",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_13",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "ligase",
+          "gap_fill"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_13",
+          "committed": true,
+          "operation": "detach",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_14",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "ligase"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_14",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      }
+    ],
+    "scene_hash": "756b94a5ca29aa8655f2a99fc53431b81fc8c5e07928e63561548119920e0790"
+  },
+  "validation/dna_repaired_ir_review.json": {
+    "review_id": "V4-IR-a952c2a607",
+    "stage": "SCENE_IR",
+    "decision": "REVISE",
+    "issues": [
+      {
+        "issue_id": "polarity_label_conflict",
+        "severity": "blocker",
+        "description": "模板链端点标签与运动机制矛盾：template_leading 标记 start=3'，end=5'，但 event_3 中 new_leading 的 3' 端（end）从左侧起点向右推进，这与 'DNA polymerase extends 5'→3'，且新生链与模板反平行' 的约束相冲突。按当前标签，leading 链的合成方向应朝左，而非朝右。template_lagging 的 5'→3' 标签与 fragment_1/fragment_2 向左延伸方向一致，进一步凸显 leading 侧的不一致。该极性错误会直接误导 5'→3' 方向性教学。",
+        "root_cause_stage": "SCENE_IR",
+        "target_objects": [
+          "template_leading",
+          "template_lagging",
+          "new_leading",
+          "fragment_1",
+          "fragment_2",
+          "gap_fill"
+        ],
+        "target_events": [
+          "event_3_extension",
+          "event_4_two_modes",
+          "event_5_maturation"
+        ],
+        "repair_scope": "修正 template_leading 端点标签，使 leading 新生链的 3' 端生长方向与反平行规则一致；同步核对 template_lagging 标签、in-growth_direction 约束及配对 rung 的 5'/3' 标注。只改受影响的极性标签/约束，不重建动画。",
+        "acceptance_criteria": [
+          "template_leading 与 new_leading 的端点标签满足新生链 5'→3' 生长方向与模板反平行：即 new_leading 的 end 为 3'，其生长方向与 template_leading 的 5'→3' 方向一致。",
+          "template_lagging 与 fragment_1/fragment_2/gap_fill 的端点标签满足 Pol δ 在滞后模板上以 5'→3' 合成短片段。",
+          "所有 growth_direction 约束的 unit_vector 与修正后的端点标签一致，且 new_leading 实际生长轨迹通过 polarity_basis 校验。"
+        ]
+      },
+      {
+        "issue_id": "primase_label_mislabels_pol_alpha",
+        "severity": "major",
+        "description": "Primase 对象 scientific_identity.name 为 'Primase / Pol alpha'，但可视化 label 仅为 'Primase'。虽然教学简化已声明 Primase 代表 RNA 引发活性、Pol α 短 DNA 交接被省略，但对象名同时声称 'Pol alpha' 会造成标签与教学模型不一致；且 F5 明确 Pol α 负责 Okazaki 片段起始。建议统一标签，避免在对象层引入模糊权威。",
+        "root_cause_stage": "SCENE_IR",
+        "target_objects": [
+          "primase"
+        ],
+        "target_events": [
+          "event_2_priming",
+          "event_4_two_modes"
+        ],
+        "repair_scope": "仅修正该对象的 scientific_identity.name 或可视化 label，使其与简化声明一致（例如 'Primase (RNA primer)'），不改事件结构。",
+        "acceptance_criteria": [
+          "Primase 对象的名称/标签与其承担的教学角色一致，不再同时声称 Pol α。",
+          "简化声明中关于 Pol α 交接被省略的说明与对象标签不冲突。"
+        ]
+      },
+      {
+        "issue_id": "replication_origin_and_licensing_omitted",
+        "severity": "minor",
+        "description": "该片段展示单一局部复制叉的引发、延伸与成熟，但未呈现真核生物多复制起点起始及每细胞周期只复制一次的调控（F1、F2、F3）。若最终故事板涉及全基因组复制或复制起点，则缺失会造成机制不完整；当前仅作为局部叉的简化可接受，但需在旁白/字幕中明确说明此片段不涉及起点选择与 licensing 控制，避免学生误以为单一叉即代表真核复制起始全貌。",
+        "root_cause_stage": "KNOWLEDGE",
+        "target_objects": [],
+        "target_events": [
+          "event_1_fork"
+        ],
+        "repair_scope": "补充字幕/旁白声明或调整教学范围描述；不要求新增动画进程。",
+        "acceptance_criteria": [
+          "教学材料明确说明本片段仅展示单个局部复制叉，不涵盖真核多起点起始或 licensing 调控。",
+          "若教学目标包含起始调控，则需另行提供含 F1–F3 内容的场景，而非在本片段强行加入。"
+        ]
+      }
+    ],
+    "notes": [
+      "静态确定性检查（schema_references、所有 state_transition）均 PASS，但极性标签矛盾属于科学语义阻断，不能因 deterministic 检查通过而放行。",
+      "F4 的 Pol ε 主导前导链合成是模型级结论，已保留 'undisturbed fork' 限定，当前简化声明可接受。",
+      "F5/F6 的 Pol α 起始、Pol δ 延伸/成熟与场景一致；RNase H/FEN1 被省略属于已声明的教学简化。",
+      "锚点连接：sealed_actual_nick 与 fill_starts_at_downstream_3prime 的端点相邻需在修正极性标签后重新校验实际坐标。"
+    ],
+    "checks": [
+      {
+        "check_id": "schema_references",
+        "category": "schema",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {
+          "errors": []
+        },
+        "expected_condition": "All references exist and facts were verified",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_1_fork_open_fork_0",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "template_leading",
+          "template_lagging"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "X_bf28604c"
+        ],
+        "observed_evidence": {
+          "action_id": "event_1_fork_open_fork_0",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "opened"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_2_priming_prime_0",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "primase"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5"
+        ],
+        "observed_evidence": {
+          "action_id": "event_2_priming_prime_0",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "opened"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_2_priming_prime_1",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "rna_primer_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5"
+        ],
+        "observed_evidence": {
+          "action_id": "event_2_priming_prime_1",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "opened"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_2_priming_prime_2",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "primase"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5"
+        ],
+        "observed_evidence": {
+          "action_id": "event_2_priming_prime_2",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "opened"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_2_priming_prime_3",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5"
+        ],
+        "observed_evidence": {
+          "action_id": "event_2_priming_prime_3",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_0",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_0",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_1",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_leading",
+          "new_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_1",
+          "committed": true,
+          "operation": "attach",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_2",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "new_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_2",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_3",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "new_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_3",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_4",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "new_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_4",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_5",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "new_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_5",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_6",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "new_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_6",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_7",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "new_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_7",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_8",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "new_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_8",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_9",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "new_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_9",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_10",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_leading",
+          "new_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_10",
+          "committed": true,
+          "operation": "detach",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_11",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_11",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "primed"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_3_extension_continuous_extension_12",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_3_extension_continuous_extension_12",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_0",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "primase"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_0",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_1",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "rna_primer_lagging_1"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_1",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_2",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "primase"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_2",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_3",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_3",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_4",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging",
+          "fragment_1"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_4",
+          "committed": true,
+          "operation": "attach",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_5",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "fragment_1"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_5",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_6",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "fragment_1"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_6",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_7",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "fragment_1"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_7",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_8",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "fragment_1"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_8",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_9",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging",
+          "fragment_1"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_9",
+          "committed": true,
+          "operation": "detach",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_10",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_10",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_11",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "primase"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_11",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_12",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "rna_primer_lagging_2"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_12",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_13",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "primase"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_13",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_14",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_14",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_15",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging",
+          "fragment_2"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_15",
+          "committed": true,
+          "operation": "attach",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_16",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "fragment_2"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_16",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_17",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "fragment_2"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_17",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_18",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "fragment_2"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_18",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_19",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "fragment_2"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_19",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_20",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging",
+          "fragment_2"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_20",
+          "committed": true,
+          "operation": "detach",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_4_two_modes_fragment_synthesis_21",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F5",
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_4_two_modes_fragment_synthesis_21",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "elongating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_0",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_0",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_1",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "rna_primer_lagging_1"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_1",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_2",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_2",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_3",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging",
+          "gap_fill"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_3",
+          "committed": true,
+          "operation": "attach",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_4",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "gap_fill"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_4",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_5",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "gap_fill"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_5",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_6",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "gap_fill"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_6",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_7",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "gap_fill"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_7",
+          "committed": true,
+          "operation": "extend",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_8",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging",
+          "gap_fill"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_8",
+          "committed": true,
+          "operation": "detach",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_9",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "polymerase_lagging"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_9",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_10",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "ligase"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_10",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_11",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "ligase",
+          "gap_fill"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_11",
+          "committed": true,
+          "operation": "attach",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_12",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "gap_fill",
+          "fragment_1"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_12",
+          "committed": true,
+          "operation": "connect",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_13",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "ligase",
+          "gap_fill"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_13",
+          "committed": true,
+          "operation": "detach",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "event_5_maturation_maturation_14",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "ligase"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6",
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "action_id": "event_5_maturation_maturation_14",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "maturing"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      }
+    ],
+    "scene_hash": "71fe477176734cbc9970ce4392fdcf36a80da25e43438f82b35ac5d3ad2cfc63"
+  },
+  "validation/mitosis_ir_review.json": {
+    "review_id": "V4-IR-bf8864c14b",
+    "stage": "SCENE_IR",
+    "decision": "REVISE",
+    "issues": [
+      {
+        "issue_id": "ISS-1",
+        "severity": "major",
+        "description": "Metaphase event caption states the duplicated chromosome 'aligns at the metaphase plate', but no state transition or visual update actually positions the chromatids at the metaphase plate (x=0/equator). The assembly begins with chromatids already centered at x≈±0.285; there is no move/align action. Either the caption overclaims an unshown event, or geometry lacks an alignment action. Also the 'aligned' phase is set with no position invariant backing it, so the deterministic label 'aligned' is unverified.",
+        "root_cause_stage": "SCENE_IR",
+        "target_objects": [
+          "sister_A",
+          "sister_B",
+          "mitotic_spindle_chromosome_set"
+        ],
+        "target_events": [
+          "metaphase"
+        ],
+        "repair_scope": "Add an explicit alignment transition (or amend caption) so that 'aligned at metaphase plate' is represented by geometry and/or a state change with a verifiable precondition; keep schematic fidelity.",
+        "acceptance_criteria": [
+          "Metaphase event either includes an alignment operation moving chromatids to the equatorial plane, or its caption removes 'aligns at the metaphase plate' claim.",
+          "If alignment is shown, a constraint confirms chromatid centers are near the metaphase plate (x≈0) after metaphase.",
+          "phase='aligned' postcondition is tied to a checkable positional invariant."
+        ]
+      },
+      {
+        "issue_id": "ISS-2",
+        "severity": "major",
+        "description": "Transition ordering conflict: metaphase_bipolar_attachment_0 and _1 make microtubules visible; _2/_3 create 'bipolar_attachment' relations connecting pole_left→kinetochore_A and pole_right→kinetochore_B. However the connection constraints (left/right_attachment_measured) test coincidence between microtubule endpoints and kinetochore centers, while the connect operation targets pole/kinetochore objects, not microtubule/kinetochore. The 'genuine adjacent endpoints' condition (microtubule end ↔ kinetochore center) is not guaranteed by construction; the drawn link uses anchors on pole and kinetochore, not the microtubule strand endpoints. This can yield visually broken or misattached spindle fibers.",
+        "root_cause_stage": "SCENE_IR",
+        "target_objects": [
+          "microtubule_left",
+          "microtubule_right",
+          "kinetochore_A",
+          "kinetochore_B",
+          "pole_left",
+          "pole_right"
+        ],
+        "target_events": [
+          "metaphase"
+        ],
+        "repair_scope": "Reconcile the connect semantics: either draw the microtubule from its own endpoint to the kinetochore (using microtubule strand 'end' anchor), or make the connect target the microtubule object so the measured endpoint constraints are structurally enforced.",
+        "acceptance_criteria": [
+          "The connect operation's source/target and draw_link are consistent so that the drawn microtubule endpoint coincides with the kinetochore center.",
+          "left_attachment_measured and right_attachment_measured pass against the actual rendered link geometry.",
+          "No pole-anchored link is represented as a microtubule-kinetochore attachment without the microtubule reaching the kinetochore."
+        ]
+      },
+      {
+        "issue_id": "ISS-3",
+        "severity": "minor",
+        "description": "Anaphase split transition relabels sister_A/sister_B as 'Daughter A'/'Daughter B' and sets current_role='daughter_chromosome', but anaphase is described as 'existing chromatids, now daughter chromosomes, move to opposite poles'. The daughter_role_A constraint checks sister_A only; no symmetric check for sister_B, and no constraint verifying that after anaphase each daughter chromosome remains attached to its respective pole via the bipolar_attachment relation (relations are created on pole→kinetochore, not chromatid). Post-separation attachment continuity (kinetochore still at pole-facing side; chromatid still tethered) is not constrained, so a visually detached daughter could pass deterministically.",
+        "root_cause_stage": "SCENE_IR",
+        "target_objects": [
+          "sister_A",
+          "sister_B",
+          "kinetochore_A",
+          "kinetochore_B"
+        ],
+        "target_events": [
+          "anaphase"
+        ],
+        "repair_scope": "Add symmetric daughter-role constraints for both chromatids and a post-anaphase constraint that each kinetochore/chromatid retains attachment to its pole during poleward movement; do not remove the declared teaching simplification.",
+        "acceptance_criteria": [
+          "daughter_role constraints exist for both sister_A and sister_B after anaphase.",
+          "A post-anaphase check confirms sister_A/kinetochore_A remains associated with pole_left and sister_B/kinetochore_B with pole_right (or the caption states the schematic omits tethering).",
+          "No chromatid visually detaches from its spindle attachment without an explicit simplified-omission note."
+        ]
+      }
+    ],
+    "notes": [
+      "Roles 'sister_chromatid' → 'daughter_chromosome' match the common teaching model (F3, F8); centromere/kinetochore and spindle are declared schematic simplifications, acceptable for grades 10–12.",
+      "Event order metaphase→anaphase is correct; anaphase split preconditions correctly require aligned phase, bipolar attachments, and sister cohesion before release (F5).",
+      "No DNA replication/homolog pairing demand is made—consistent with declared teaching scope; S-phase facts (F1, F2) are out of clip scope and not required.",
+      "The duplicate block in scientific_simplifications (four entries repeated twice) is harmless but worth deduplicating at assembly."
+    ],
+    "checks": [
+      {
+        "check_id": "schema_references",
+        "category": "schema",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {
+          "errors": []
+        },
+        "expected_condition": "All references exist and facts were verified",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "metaphase_bipolar_attachment_0",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "microtubule_left"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "F5"
+        ],
+        "observed_evidence": {
+          "action_id": "metaphase_bipolar_attachment_0",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "unattached"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "metaphase_bipolar_attachment_1",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "microtubule_right"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "F5"
+        ],
+        "observed_evidence": {
+          "action_id": "metaphase_bipolar_attachment_1",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "unattached"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "metaphase_bipolar_attachment_2",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "pole_left",
+          "kinetochore_A"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "F5"
+        ],
+        "observed_evidence": {
+          "action_id": "metaphase_bipolar_attachment_2",
+          "committed": true,
+          "operation": "connect",
+          "state": {
+            "phase": "unattached"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "metaphase_bipolar_attachment_3",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "pole_right",
+          "kinetochore_B"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "F5"
+        ],
+        "observed_evidence": {
+          "action_id": "metaphase_bipolar_attachment_3",
+          "committed": true,
+          "operation": "connect",
+          "state": {
+            "phase": "unattached"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "metaphase_bipolar_attachment_4",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "F5"
+        ],
+        "observed_evidence": {
+          "action_id": "metaphase_bipolar_attachment_4",
+          "committed": true,
+          "operation": "transform_state",
+          "state": {
+            "phase": "aligned"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "anaphase_chromatid_separation_0",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "sister_A",
+          "sister_B"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F3",
+          "F5",
+          "F8"
+        ],
+        "observed_evidence": {
+          "action_id": "anaphase_chromatid_separation_0",
+          "committed": true,
+          "operation": "split",
+          "state": {
+            "phase": "separating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "anaphase_chromatid_separation_1",
+        "category": "state_transition",
+        "status": "PASS",
+        "object_ids": [
+          "sister_A",
+          "sister_B"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F3",
+          "F5",
+          "F8"
+        ],
+        "observed_evidence": {
+          "action_id": "anaphase_chromatid_separation_1",
+          "committed": true,
+          "operation": "move_along_path",
+          "state": {
+            "phase": "separating"
+          }
+        },
+        "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      }
+    ],
+    "scene_hash": "8f955d2e3367c9b1bf69e31746777fe57ad2f09182b76f207fd2962410b7394c"
+  },
+  "groups/A2_scene_graph_fsm/scientific_video_review.json": {
+    "review_id": "V4-VIDEO-78995c7173",
+    "stage": "RENDERED_VIDEO",
+    "decision": "REVISE",
+    "issues": [
+      {
+        "issue_id": "S1",
+        "severity": "minor",
+        "description": "open_fork updates template points (y ±1.2) but leaves declared center [0.5,±0.15]; measured center offset 0.525 persists all events (expected_observed_states FAIL). Rendered fork geometry and antiparallel labels are correct, so this is stale IR bookkeeping, not a mechanism error.",
+        "root_cause_stage": "SCENE_IR",
+        "target_objects": [
+          "template_leading",
+          "template_lagging"
+        ],
+        "target_events": [
+          "event_1_fork"
+        ],
+        "repair_scope": "assembly_geometry",
+        "acceptance_criteria": [
+          "After event_1_fork, declared center equals mean of updated points; expected_observed_states center distance <0.01 for both templates"
+        ]
+      },
+      {
+        "issue_id": "S2",
+        "severity": "minor",
+        "description": "During event_3_extension, polymerase_leading center trails new_leading 3' end by ~0.107 units (actual_active_site_bindings FAIL), i.e. enzyme drawn slightly behind the growing tip while extension direction itself is correct (+x, toward fork). Tracking lag only; no polarity or primer-order violation.",
+        "root_cause_stage": "ANIMATION_IMPLEMENTATION",
+        "target_objects": [
+          "polymerase_leading",
+          "new_leading"
+        ],
+        "target_events": [
+          "event_3_extension"
+        ],
+        "repair_scope": "affected_event",
+        "acceptance_criteria": [
+          "Bound enzyme center coincides with new_leading end anchor (distance <=0.03) at every sampled frame while active_site relation exists"
+        ]
+      }
+    ],
+    "notes": [
+      "Measured mechanism passes: primer-before-extension enforced; leading grows +x toward junction on 3'->5' template; fragment_1/fragment_2 and gap_fill grow -x on 5'->3' template; gap_fill starts at fragment_2 3' end (dist ~0) and seals adjacent nick to fragment_1 start (dist 0.0).",
+      "Exactly two parental strands; identities stable; event order fork->prime->extend->fragments->maturation verified.",
+      "Remaining orange primers and omitted RNaseH/FEN1 are declared simplifications, not errors; captions do not claim completed replication.",
+      "Final grid frame carries unrelated SVM text; treated as spatial-reference artifact, not part of the replication claim—confirm it is not in the delivered MP4."
+    ],
+    "checks": [
+      {
+        "check_id": "registered_scientific_identity",
+        "category": "identity",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {
+          "missing": [],
+          "unexpected_scientific_ids": []
+        },
+        "expected_condition": "",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "object_instance_continuity",
+        "category": "identity",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {
+          "violations": [],
+          "tracked_objects": 13
+        },
+        "expected_condition": "",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "actual_event_order",
+        "category": "event_order",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {
+          "events": [
+            "event_1_fork",
+            "event_2_priming",
+            "event_3_extension",
+            "event_4_two_modes",
+            "event_5_maturation"
+          ]
+        },
+        "expected_condition": "",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "exactly_two_parental_strands",
+        "category": "topology",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [
+          "X_bf28604c"
+        ],
+        "observed_evidence": {
+          "count": 2
+        },
+        "expected_condition": "",
+        "description": "",
+        "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+      },
+      {
+        "check_id": "stable_components",
+        "category": "identity",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {},
+        "expected_condition": "",
+        "description": "",
+        "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+      },
+      {
+        "check_id": "growth_new_leading",
+        "category": "mechanism",
+        "status": "PASS",
+        "object_ids": [
+          "new_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "X_7574276a",
+          "X_bf28604c"
+        ],
+        "observed_evidence": {
+          "actual_endpoints": [
+            [
+              13.266666666666639,
+              [
+                -3.407,
+                0.73698,
+                0.0
+              ]
+            ],
+            [
+              13.466666666666638,
+              [
+                -3.1340000000000003,
+                0.69876,
+                0.0
+              ]
+            ],
+            [
+              13.533333333333305,
+              [
+                -3.0500000000000003,
+                0.687,
+                0.0
+              ]
+            ],
+            [
+              13.733333333333304,
+              [
+                -2.7683333333333335,
+                0.6475666666666666,
+                0.0
+              ]
+            ],
+            [
+              13.933333333333303,
+              [
+                -2.4866666666666672,
+                0.6081333333333333,
+                0.0
+              ]
+            ],
+            [
+              13.99999999999997,
+              [
+                -2.4000000000000004,
+                0.596,
+                0.0
+              ]
+            ],
+            [
+              14.199999999999969,
+              [
+                -2.118333333333333,
+                0.5565666666666667,
+                0.0
+              ]
+            ],
+            [
+              14.399999999999968,
+              [
+                -1.8366666666666664,
+                0.5171333333333332,
+                0.0
+              ]
+            ],
+            [
+              14.466666666666635,
+              [
+                -1.75,
+                0.5049999999999999,
+                0.0
+              ]
+            ],
+            [
+              14.666666666666634,
+              [
+                -1.4683333333333335,
+                0.4655666666666666,
+                0.0
+              ]
+            ],
+            [
+              14.866666666666633,
+              [
+                -1.1866666666666668,
+                0.42613333333333325,
+                0.0
+              ]
+            ],
+            [
+              14.9333333333333,
+              [
+                -1.1,
+                0.4139999999999999,
+                0.0
+              ]
+            ],
+            [
+              15.133333333333299,
+              [
+                -0.8183333333333335,
+                0.3745666666666666,
+                0.0
+              ]
+            ],
+            [
+              15.333333333333298,
+              [
+                -0.5366666666666668,
+                0.3351333333333333,
+                0.0
+              ]
+            ],
+            [
+              15.399999999999965,
+              [
+                -0.4500000000000002,
+                0.32299999999999995,
+                0.0
+              ]
+            ],
+            [
+              15.599999999999964,
+              [
+                -0.16833333333333336,
+                0.2835666666666666,
+                0.0
+              ]
+            ],
+            [
+              15.799999999999963,
+              [
+                0.1133333333333335,
+                0.2441333333333332,
+                0.0
+              ]
+            ],
+            [
+              15.86666666666663,
+              [
+                0.20000000000000018,
+                0.23199999999999987,
+                0.0
+              ]
+            ],
+            [
+              16.06666666666663,
+              [
+                0.4816666666666666,
+                0.19256666666666655,
+                0.0
+              ]
+            ],
+            [
+              16.26666666666663,
+              [
+                0.7633333333333331,
+                0.15313333333333323,
+                0.0
+              ]
+            ],
+            [
+              16.333333333333297,
+              [
+                0.8499999999999996,
+                0.1409999999999999,
+                0.0
+              ]
+            ],
+            [
+              16.533333333333296,
+              [
+                1.1316666666666664,
+                0.10156666666666653,
+                0.0
+              ]
+            ],
+            [
+              16.733333333333295,
+              [
+                1.4133333333333333,
+                0.062133333333333166,
+                0.0
+              ]
+            ],
+            [
+              16.79999999999996,
+              [
+                1.5,
+                0.04999999999999982,
+                0.0
+              ]
+            ]
+          ],
+          "step_projections": [
+            0.2729999999999997,
+            0.08400000000000007,
+            0.28166666666666673,
+            0.2816666666666663,
+            0.08666666666666689,
+            0.2816666666666672,
+            0.28166666666666673,
+            0.08666666666666645,
+            0.2816666666666665,
+            0.28166666666666673,
+            0.08666666666666667,
+            0.2816666666666666,
+            0.2816666666666666,
+            0.08666666666666667,
+            0.28166666666666684,
+            0.28166666666666684,
+            0.08666666666666668,
+            0.2816666666666664,
+            0.2816666666666665,
+            0.08666666666666656,
+            0.28166666666666673,
+            0.28166666666666695,
+            0.08666666666666667
+          ],
+          "coordinate_rule_fact_ids": [
+            "X_7574276a",
+            "X_bf28604c"
+          ],
+          "rule_polarity_basis": {
+            "template_object": "template_leading",
+            "template_5prime_side": "right",
+            "nascent_3prime_port": "end",
+            "diagram_open_region": "left of x2.5"
+          }
+        },
+        "expected_condition": "Actual growing-end trajectory must follow the fact-bound antiparallel polarity rule",
+        "description": "",
+        "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+      },
+      {
+        "check_id": "growth_fragment_1",
+        "category": "mechanism",
+        "status": "PASS",
+        "object_ids": [
+          "fragment_1"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "X_7574276a",
+          "X_bf28604c"
+        ],
+        "observed_evidence": {
+          "actual_endpoints": [
+            [
+              20.066666666666617,
+              [
+                -1.627,
+                -0.48777999999999994,
+                0.0
+              ]
+            ],
+            [
+              20.19999999999995,
+              [
+                -1.775,
+                -0.5085,
+                0.0
+              ]
+            ],
+            [
+              20.39999999999995,
+              [
+                -2.1966666666666663,
+                -0.5675333333333332,
+                0.0
+              ]
+            ],
+            [
+              20.53333333333328,
+              [
+                -2.3499999999999996,
+                -0.5889999999999999,
+                0.0
+              ]
+            ],
+            [
+              20.73333333333328,
+              [
+                -2.7716666666666665,
+                -0.6480333333333334,
+                0.0
+              ]
+            ],
+            [
+              20.866666666666614,
+              [
+                -2.925,
+                -0.6695,
+                0.0
+              ]
+            ],
+            [
+              21.066666666666613,
+              [
+                -3.3466666666666667,
+                -0.7285333333333334,
+                0.0
+              ]
+            ],
+            [
+              21.199999999999946,
+              [
+                -3.5,
+                -0.75,
+                0.0
+              ]
+            ]
+          ],
+          "step_projections": [
+            0.1479999999999999,
+            0.4216666666666664,
+            0.15333333333333332,
+            0.42166666666666686,
+            0.15333333333333332,
+            0.42166666666666686,
+            0.15333333333333332
+          ],
+          "coordinate_rule_fact_ids": [
+            "X_7574276a",
+            "X_bf28604c"
+          ],
+          "rule_polarity_basis": {
+            "template_object": "template_lagging",
+            "template_5prime_side": "left",
+            "nascent_3prime_port": "end",
+            "diagram_open_region": "left of x2.5"
+          }
+        },
+        "expected_condition": "Actual growing-end trajectory must follow the fact-bound antiparallel polarity rule",
+        "description": "",
+        "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+      },
+      {
+        "check_id": "growth_fragment_2",
+        "category": "mechanism",
+        "status": "PASS",
+        "object_ids": [
+          "fragment_2"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "X_7574276a",
+          "X_bf28604c"
+        ],
+        "observed_evidence": {
+          "actual_endpoints": [
+            [
+              23.73333333333327,
+              [
+                0.783,
+                -0.15037999999999987,
+                0.0
+              ]
+            ],
+            [
+              23.866666666666603,
+              [
+                0.675,
+                -0.16549999999999987,
+                0.0
+              ]
+            ],
+            [
+              24.066666666666602,
+              [
+                0.3633333333333334,
+                -0.20913333333333323,
+                0.0
+              ]
+            ],
+            [
+              24.199999999999935,
+              [
+                0.2500000000000001,
+                -0.22499999999999987,
+                0.0
+              ]
+            ],
+            [
+              24.399999999999935,
+              [
+                -0.061666666666666536,
+                -0.2686333333333332,
+                0.0
+              ]
+            ],
+            [
+              24.533333333333267,
+              [
+                -0.17499999999999982,
+                -0.28449999999999986,
+                0.0
+              ]
+            ],
+            [
+              24.733333333333267,
+              [
+                -0.4866666666666666,
+                -0.32813333333333317,
+                0.0
+              ]
+            ],
+            [
+              24.8666666666666,
+              [
+                -0.5999999999999999,
+                -0.34399999999999986,
+                0.0
+              ]
+            ]
+          ],
+          "step_projections": [
+            0.10799999999999998,
+            0.31166666666666665,
+            0.11333333333333329,
+            0.31166666666666665,
+            0.11333333333333329,
+            0.31166666666666676,
+            0.11333333333333329
+          ],
+          "coordinate_rule_fact_ids": [
+            "X_7574276a",
+            "X_bf28604c"
+          ],
+          "rule_polarity_basis": {
+            "template_object": "template_lagging",
+            "template_5prime_side": "left",
+            "nascent_3prime_port": "end",
+            "diagram_open_region": "left of x2.5"
+          }
+        },
+        "expected_condition": "Actual growing-end trajectory must follow the fact-bound antiparallel polarity rule",
+        "description": "",
+        "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+      },
+      {
+        "check_id": "growth_gap_fill",
+        "category": "mechanism",
+        "status": "PASS",
+        "object_ids": [
+          "gap_fill"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "X_7574276a",
+          "X_bf28604c"
+        ],
+        "observed_evidence": {
+          "actual_endpoints": [
+            [
+              27.26666666666659,
+              [
+                -0.6633333333333333,
+                -0.35286666666666655,
+                0.0
+              ]
+            ],
+            [
+              27.533333333333257,
+              [
+                -0.75,
+                -0.3649999999999999,
+                0.0
+              ]
+            ],
+            [
+              27.599999999999923,
+              [
+                -0.7749999999999999,
+                -0.36849999999999994,
+                0.0
+              ]
+            ],
+            [
+              27.799999999999923,
+              [
+                -0.8499999999999999,
+                -0.37899999999999995,
+                0.0
+              ]
+            ],
+            [
+              27.933333333333255,
+              [
+                -0.8999999999999999,
+                -0.386,
+                0.0
+              ]
+            ],
+            [
+              28.133333333333255,
+              [
+                -0.9749999999999999,
+                -0.39649999999999996,
+                0.0
+              ]
+            ],
+            [
+              28.333333333333254,
+              [
+                -1.0499999999999998,
+                -0.4069999999999999,
+                0.0
+              ]
+            ],
+            [
+              28.466666666666587,
+              [
+                -1.0999999999999999,
+                -0.4139999999999999,
+                0.0
+              ]
+            ],
+            [
+              28.733333333333253,
+              [
+                -1.2,
+                -0.42799999999999994,
+                0.0
+              ]
+            ]
+          ],
+          "step_projections": [
+            0.08666666666666667,
+            0.02499999999999991,
+            0.07499999999999996,
+            0.050000000000000044,
+            0.07499999999999996,
+            0.07499999999999996,
+            0.050000000000000044,
+            0.10000000000000009
+          ],
+          "coordinate_rule_fact_ids": [
+            "X_7574276a",
+            "X_bf28604c"
+          ],
+          "rule_polarity_basis": {
+            "template_object": "template_lagging",
+            "template_5prime_side": "left",
+            "nascent_3prime_port": "end",
+            "diagram_open_region": "left of x2.5"
+          }
+        },
+        "expected_condition": "Actual growing-end trajectory must follow the fact-bound antiparallel polarity rule",
+        "description": "",
+        "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+      },
+      {
+        "check_id": "sealed_actual_nick",
+        "category": "connection",
+        "status": "PASS",
+        "object_ids": [
+          "gap_fill",
+          "fragment_1"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6"
+        ],
+        "observed_evidence": {
+          "measured_distance": 0.0,
+          "a": [
+            -1.2,
+            -0.42799999999999994,
+            0.0
+          ],
+          "b": [
+            -1.2,
+            -0.42799999999999994,
+            0.0
+          ],
+          "time": 32.06666666666658
+        },
+        "expected_condition": "",
+        "description": "",
+        "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+      },
+      {
+        "check_id": "fill_starts_at_downstream_3prime",
+        "category": "connection",
+        "status": "PASS",
+        "object_ids": [
+          "gap_fill",
+          "fragment_2"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "measured_distance": 1.1102230246251565e-16,
+          "a": [
+            -0.6,
+            -0.34399999999999986,
+            0.0
+          ],
+          "b": [
+            -0.5999999999999999,
+            -0.34399999999999986,
+            0.0
+          ],
+          "time": 32.06666666666658
+        },
+        "expected_condition": "",
+        "description": "",
+        "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+      },
+      {
+        "check_id": "expected_observed_states",
+        "category": "execution",
+        "status": "FAIL",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {
+          "mismatches": [
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 5.999999999999998
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 5.999999999999998
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 7.533333333333326
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 7.533333333333326
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 9.066666666666654
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 9.066666666666654
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 10.599999999999982
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 10.599999999999982
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 12.13333333333331
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 12.13333333333331
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 12.599999999999975
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 12.599999999999975
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 13.06666666666664
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 13.06666666666664
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 13.533333333333305
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 13.533333333333305
+            },
+            {
+              "object_id": "polymerase_leading",
+              "anchor": "center",
+              "distance": 0.08481920537236842,
+              "time": 13.533333333333305
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 13.99999999999997
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 13.99999999999997
+            },
+            {
+              "object_id": "polymerase_leading",
+              "anchor": "center",
+              "distance": 0.08751187855879296,
+              "time": 13.99999999999997
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 14.466666666666635
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 14.466666666666635
+            },
+            {
+              "object_id": "polymerase_leading",
+              "anchor": "center",
+              "distance": 0.08751187855879253,
+              "time": 14.466666666666635
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 14.9333333333333
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 14.9333333333333
+            },
+            {
+              "object_id": "polymerase_leading",
+              "anchor": "center",
+              "distance": 0.08751187855879275,
+              "time": 14.9333333333333
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 15.399999999999965
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 15.399999999999965
+            },
+            {
+              "object_id": "polymerase_leading",
+              "anchor": "center",
+              "distance": 0.08751187855879275,
+              "time": 15.399999999999965
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 15.86666666666663
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 15.86666666666663
+            },
+            {
+              "object_id": "polymerase_leading",
+              "anchor": "center",
+              "distance": 0.08751187855879275,
+              "time": 15.86666666666663
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 16.333333333333297
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 16.333333333333297
+            },
+            {
+              "object_id": "polymerase_leading",
+              "anchor": "center",
+              "distance": 0.08751187855879264,
+              "time": 16.333333333333297
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 16.79999999999996
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 16.79999999999996
+            },
+            {
+              "object_id": "polymerase_leading",
+              "anchor": "center",
+              "distance": 0.08751187855879275,
+              "time": 16.79999999999996
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 17.266666666666627
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 17.266666666666627
+            },
+            {
+              "object_id": "polymerase_leading",
+              "anchor": "center",
+              "distance": 0.08751187855879275,
+              "time": 17.266666666666627
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 17.73333333333329
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 17.73333333333329
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 18.199999999999957
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 18.199999999999957
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 18.53333333333329
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 18.53333333333329
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 18.86666666666662
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 18.86666666666662
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 19.199999999999953
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 19.199999999999953
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 19.533333333333285
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 19.533333333333285
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 19.866666666666617
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 19.866666666666617
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 20.19999999999995
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 20.19999999999995
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 20.53333333333328
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 20.53333333333328
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 20.866666666666614
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 20.866666666666614
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 21.199999999999946
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 21.199999999999946
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 21.533333333333278
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 21.533333333333278
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 21.86666666666661
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 21.86666666666661
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 22.199999999999942
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 22.199999999999942
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 22.533333333333275
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 22.533333333333275
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 22.866666666666607
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 22.866666666666607
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 23.19999999999994
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 23.19999999999994
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 23.53333333333327
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 23.53333333333327
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 23.866666666666603
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 23.866666666666603
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 24.199999999999935
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 24.199999999999935
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 24.533333333333267
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 24.533333333333267
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 24.8666666666666
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 24.8666666666666
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 25.199999999999932
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 25.199999999999932
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 25.533333333333264
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 25.533333333333264
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 25.933333333333263
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 25.933333333333263
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 26.33333333333326
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 26.33333333333326
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 26.73333333333326
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 26.73333333333326
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 27.13333333333326
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 27.13333333333326
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 27.533333333333257
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 27.533333333333257
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 27.933333333333255
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 27.933333333333255
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 28.333333333333254
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 28.333333333333254
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 28.733333333333253
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 28.733333333333253
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 29.13333333333325
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 29.13333333333325
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 29.53333333333325
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 29.53333333333325
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 29.93333333333325
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 29.93333333333325
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 30.333333333333247
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 30.333333333333247
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 30.733333333333245
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 30.733333333333245
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 31.133333333333244
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 31.133333333333244
+            },
+            {
+              "object_id": "template_leading",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 31.533333333333243
+            },
+            {
+              "object_id": "template_lagging",
+              "anchor": "center",
+              "distance": 0.5249999999999999,
+              "time": 31.533333333333243
+            }
+          ],
+          "snapshot_count": 55
+        },
+        "expected_condition": "Actual transformed anchors and visibility match committed expected states",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "actual_active_site_bindings",
+        "category": "connection",
+        "status": "FAIL",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {
+          "violations": [
+            {
+              "object_id": "polymerase_leading",
+              "time": 13.266666666666639,
+              "distance": 0.10413913548496312
+            },
+            {
+              "object_id": "polymerase_leading",
+              "time": 13.733333333333304,
+              "distance": 0.10744513978607317
+            },
+            {
+              "object_id": "polymerase_leading",
+              "time": 14.199999999999969,
+              "distance": 0.1074451397860732
+            },
+            {
+              "object_id": "polymerase_leading",
+              "time": 14.666666666666634,
+              "distance": 0.10744513978607363
+            },
+            {
+              "object_id": "polymerase_leading",
+              "time": 15.133333333333299,
+              "distance": 0.1074451397860733
+            },
+            {
+              "object_id": "polymerase_leading",
+              "time": 15.599999999999964,
+              "distance": 0.10744513978607337
+            },
+            {
+              "object_id": "polymerase_leading",
+              "time": 16.06666666666663,
+              "distance": 0.1074451397860733
+            },
+            {
+              "object_id": "polymerase_leading",
+              "time": 16.533333333333296,
+              "distance": 0.10744513978607363
+            }
+          ]
+        },
+        "expected_condition": "Visible bound objects follow actual target anchors including declared offset",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "visible_coverage",
+        "category": "coverage",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {
+          "unregistered_visible": []
+        },
+        "expected_condition": "",
+        "description": "All adapter-created scientific and decorative objects registered; arbitrary Coder-added objects checked separately",
+        "suggested_repair_stage": "SCENE_IR"
+      }
+    ],
+    "scene_hash": "756b94a5ca29aa8655f2a99fc53431b81fc8c5e07928e63561548119920e0790",
+    "video_sha256": "a3064252c8842d0e664207469ee904172b7ae0a0d85fb7b74b6550f4cb1b65ae",
+    "code_sha256": "460c467748338a47712726275983d0e28cf8501b76839133136667e5c5cf4228",
+    "full_video": true
+  },
+  "groups/A3_expert_repair/scientific_video_review.json": {
+    "review_id": "V4-VIDEO-385c631a37",
+    "stage": "RENDERED_VIDEO",
+    "decision": "PASS",
+    "issues": [
+      {
+        "issue_id": "SCI-1",
+        "severity": "minor",
+        "description": "After maturation the fill is a separate object: gap_fill.end is sealed to fragment_1.start, but no covalent/continuous relation joins fragment_2.end to gap_fill.start (anchors coincident, distance ~1e-16). Biologically Pol delta extends fragment_2's 3'-OH, so the daughter strand should be one continuous chain, not two abutting pieces.",
+        "root_cause_stage": "SCENE_IR",
+        "target_objects": [
+          "fragment_2",
+          "gap_fill"
+        ],
+        "target_events": [
+          "event_5_maturation"
+        ],
+        "repair_scope": "process_rule",
+        "acceptance_criteria": [
+          "Declare continuous_strand/covalent relation fragment_2.end–gap_fill.start (or extend fragment_2 itself), so post-maturation lagging strand has exactly one unsealed nick count = 0."
+        ]
+      },
+      {
+        "issue_id": "SCI-2",
+        "severity": "minor",
+        "description": "Polarity readability: at fork-closed frames the 3'/5' endpoint labels of the two templates overlap each other, and later the green nascent 3' labels sit on the blue template strokes. Direction is measurable from anchors, but a viewer cannot reliably read antiparallel polarity from the picture alone.",
+        "root_cause_stage": "ANIMATION_IMPLEMENTATION",
+        "target_objects": [
+          "template_leading",
+          "template_lagging",
+          "new_leading",
+          "fragment_1"
+        ],
+        "target_events": [
+          "event_1_fork",
+          "event_3_extension"
+        ],
+        "repair_scope": "assembly_geometry",
+        "acceptance_criteria": [
+          "Endpoint labels separated by >=0.15 scene units from any stroke and from each other in every frame; no label glyph overlaps a strand."
+        ]
+      }
+    ],
+    "notes": [
+      "Measured, not inferred: new_leading growing end moves +x (toward junction x=2.5) on template_leading whose 5' end is right; fragment_1/fragment_2/gap_fill move -x on template_lagging whose 5' end is left. Both consistent with 5'->3' synthesis plus antiparallel templates (X_7574276a, X_bf28604c).",
+      "Primer-before-extension holds in actual states: rna_primer_leading visible before first new_leading extend; each lagging primer visible before its fragment extends; Pol delta fills only after rna_primer_lagging_1 is hidden.",
+      "Nick sealing is genuine: gap_fill.end and fragment_1.start measured distance 0.0 at t=32.07; fill start coincides with fragment_2 3' end (1e-16), i.e. fill proceeds from the downstream 3'-OH leftward, correct polarity.",
+      "Identity/topology stable: 13 tracked instances, exactly 2 parental strands, no unregistered visible objects; event order matches declared order.",
+      "Model-level status kept separate from measurement: Pol epsilon on leading / Pol delta on lagging is the taught undisturbed-fork model (F4-F6), not proven by the on-screen labels; primase label abstracts Pol alpha handoff.",
+      "Accepted declared simplifications, not errors: camera-fixed junction, leading RNA primer and rna_primer_lagging_2 left unprocessed, caption claims only one local nick sealed - no genome-completion claim.",
+      "The supplied grid/SVM image is an unrelated spatial reference; it carries no replication content and was not scored."
+    ],
+    "checks": [
+      {
+        "check_id": "registered_scientific_identity",
+        "category": "identity",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {
+          "missing": [],
+          "unexpected_scientific_ids": []
+        },
+        "expected_condition": "",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "object_instance_continuity",
+        "category": "identity",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {
+          "violations": [],
+          "tracked_objects": 13
+        },
+        "expected_condition": "",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "actual_event_order",
+        "category": "event_order",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {
+          "events": [
+            "event_1_fork",
+            "event_2_priming",
+            "event_3_extension",
+            "event_4_two_modes",
+            "event_5_maturation"
+          ]
+        },
+        "expected_condition": "",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "exactly_two_parental_strands",
+        "category": "topology",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [
+          "X_bf28604c"
+        ],
+        "observed_evidence": {
+          "count": 2
+        },
+        "expected_condition": "",
+        "description": "",
+        "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+      },
+      {
+        "check_id": "stable_components",
+        "category": "identity",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {},
+        "expected_condition": "",
+        "description": "",
+        "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+      },
+      {
+        "check_id": "growth_new_leading",
+        "category": "mechanism",
+        "status": "PASS",
+        "object_ids": [
+          "new_leading"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "X_7574276a",
+          "X_bf28604c"
+        ],
+        "observed_evidence": {
+          "actual_endpoints": [
+            [
+              13.266666666666639,
+              [
+                -3.407,
+                0.73698,
+                0.0
+              ]
+            ],
+            [
+              13.466666666666638,
+              [
+                -3.1340000000000003,
+                0.69876,
+                0.0
+              ]
+            ],
+            [
+              13.533333333333305,
+              [
+                -3.0500000000000003,
+                0.687,
+                0.0
+              ]
+            ],
+            [
+              13.733333333333304,
+              [
+                -2.7683333333333335,
+                0.6475666666666666,
+                0.0
+              ]
+            ],
+            [
+              13.933333333333303,
+              [
+                -2.4866666666666672,
+                0.6081333333333333,
+                0.0
+              ]
+            ],
+            [
+              13.99999999999997,
+              [
+                -2.4000000000000004,
+                0.596,
+                0.0
+              ]
+            ],
+            [
+              14.199999999999969,
+              [
+                -2.118333333333333,
+                0.5565666666666667,
+                0.0
+              ]
+            ],
+            [
+              14.399999999999968,
+              [
+                -1.8366666666666664,
+                0.5171333333333332,
+                0.0
+              ]
+            ],
+            [
+              14.466666666666635,
+              [
+                -1.75,
+                0.5049999999999999,
+                0.0
+              ]
+            ],
+            [
+              14.666666666666634,
+              [
+                -1.4683333333333335,
+                0.4655666666666666,
+                0.0
+              ]
+            ],
+            [
+              14.866666666666633,
+              [
+                -1.1866666666666668,
+                0.42613333333333325,
+                0.0
+              ]
+            ],
+            [
+              14.9333333333333,
+              [
+                -1.1,
+                0.4139999999999999,
+                0.0
+              ]
+            ],
+            [
+              15.133333333333299,
+              [
+                -0.8183333333333335,
+                0.3745666666666666,
+                0.0
+              ]
+            ],
+            [
+              15.333333333333298,
+              [
+                -0.5366666666666668,
+                0.3351333333333333,
+                0.0
+              ]
+            ],
+            [
+              15.399999999999965,
+              [
+                -0.4500000000000002,
+                0.32299999999999995,
+                0.0
+              ]
+            ],
+            [
+              15.599999999999964,
+              [
+                -0.16833333333333336,
+                0.2835666666666666,
+                0.0
+              ]
+            ],
+            [
+              15.799999999999963,
+              [
+                0.1133333333333335,
+                0.2441333333333332,
+                0.0
+              ]
+            ],
+            [
+              15.86666666666663,
+              [
+                0.20000000000000018,
+                0.23199999999999987,
+                0.0
+              ]
+            ],
+            [
+              16.06666666666663,
+              [
+                0.4816666666666666,
+                0.19256666666666655,
+                0.0
+              ]
+            ],
+            [
+              16.26666666666663,
+              [
+                0.7633333333333331,
+                0.15313333333333323,
+                0.0
+              ]
+            ],
+            [
+              16.333333333333297,
+              [
+                0.8499999999999996,
+                0.1409999999999999,
+                0.0
+              ]
+            ],
+            [
+              16.533333333333296,
+              [
+                1.1316666666666664,
+                0.10156666666666653,
+                0.0
+              ]
+            ],
+            [
+              16.733333333333295,
+              [
+                1.4133333333333333,
+                0.062133333333333166,
+                0.0
+              ]
+            ],
+            [
+              16.79999999999996,
+              [
+                1.5,
+                0.04999999999999982,
+                0.0
+              ]
+            ]
+          ],
+          "step_projections": [
+            0.2729999999999997,
+            0.08400000000000007,
+            0.28166666666666673,
+            0.2816666666666663,
+            0.08666666666666689,
+            0.2816666666666672,
+            0.28166666666666673,
+            0.08666666666666645,
+            0.2816666666666665,
+            0.28166666666666673,
+            0.08666666666666667,
+            0.2816666666666666,
+            0.2816666666666666,
+            0.08666666666666667,
+            0.28166666666666684,
+            0.28166666666666684,
+            0.08666666666666668,
+            0.2816666666666664,
+            0.2816666666666665,
+            0.08666666666666656,
+            0.28166666666666673,
+            0.28166666666666695,
+            0.08666666666666667
+          ],
+          "coordinate_rule_fact_ids": [
+            "X_7574276a",
+            "X_bf28604c"
+          ],
+          "rule_polarity_basis": {
+            "template_object": "template_leading",
+            "template_5prime_side": "right",
+            "nascent_3prime_port": "end",
+            "diagram_open_region": "left of x2.5"
+          }
+        },
+        "expected_condition": "Actual growing-end trajectory must follow the fact-bound antiparallel polarity rule",
+        "description": "",
+        "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+      },
+      {
+        "check_id": "growth_fragment_1",
+        "category": "mechanism",
+        "status": "PASS",
+        "object_ids": [
+          "fragment_1"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "X_7574276a",
+          "X_bf28604c"
+        ],
+        "observed_evidence": {
+          "actual_endpoints": [
+            [
+              20.066666666666617,
+              [
+                -1.627,
+                -0.48777999999999994,
+                0.0
+              ]
+            ],
+            [
+              20.19999999999995,
+              [
+                -1.775,
+                -0.5085,
+                0.0
+              ]
+            ],
+            [
+              20.39999999999995,
+              [
+                -2.1966666666666663,
+                -0.5675333333333332,
+                0.0
+              ]
+            ],
+            [
+              20.53333333333328,
+              [
+                -2.3499999999999996,
+                -0.5889999999999999,
+                0.0
+              ]
+            ],
+            [
+              20.73333333333328,
+              [
+                -2.7716666666666665,
+                -0.6480333333333334,
+                0.0
+              ]
+            ],
+            [
+              20.866666666666614,
+              [
+                -2.925,
+                -0.6695,
+                0.0
+              ]
+            ],
+            [
+              21.066666666666613,
+              [
+                -3.3466666666666667,
+                -0.7285333333333334,
+                0.0
+              ]
+            ],
+            [
+              21.199999999999946,
+              [
+                -3.5,
+                -0.75,
+                0.0
+              ]
+            ]
+          ],
+          "step_projections": [
+            0.1479999999999999,
+            0.4216666666666664,
+            0.15333333333333332,
+            0.42166666666666686,
+            0.15333333333333332,
+            0.42166666666666686,
+            0.15333333333333332
+          ],
+          "coordinate_rule_fact_ids": [
+            "X_7574276a",
+            "X_bf28604c"
+          ],
+          "rule_polarity_basis": {
+            "template_object": "template_lagging",
+            "template_5prime_side": "left",
+            "nascent_3prime_port": "end",
+            "diagram_open_region": "left of x2.5"
+          }
+        },
+        "expected_condition": "Actual growing-end trajectory must follow the fact-bound antiparallel polarity rule",
+        "description": "",
+        "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+      },
+      {
+        "check_id": "growth_fragment_2",
+        "category": "mechanism",
+        "status": "PASS",
+        "object_ids": [
+          "fragment_2"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "X_7574276a",
+          "X_bf28604c"
+        ],
+        "observed_evidence": {
+          "actual_endpoints": [
+            [
+              23.73333333333327,
+              [
+                0.783,
+                -0.15037999999999987,
+                0.0
+              ]
+            ],
+            [
+              23.866666666666603,
+              [
+                0.675,
+                -0.16549999999999987,
+                0.0
+              ]
+            ],
+            [
+              24.066666666666602,
+              [
+                0.3633333333333334,
+                -0.20913333333333323,
+                0.0
+              ]
+            ],
+            [
+              24.199999999999935,
+              [
+                0.2500000000000001,
+                -0.22499999999999987,
+                0.0
+              ]
+            ],
+            [
+              24.399999999999935,
+              [
+                -0.061666666666666536,
+                -0.2686333333333332,
+                0.0
+              ]
+            ],
+            [
+              24.533333333333267,
+              [
+                -0.17499999999999982,
+                -0.28449999999999986,
+                0.0
+              ]
+            ],
+            [
+              24.733333333333267,
+              [
+                -0.4866666666666666,
+                -0.32813333333333317,
+                0.0
+              ]
+            ],
+            [
+              24.8666666666666,
+              [
+                -0.5999999999999999,
+                -0.34399999999999986,
+                0.0
+              ]
+            ]
+          ],
+          "step_projections": [
+            0.10799999999999998,
+            0.31166666666666665,
+            0.11333333333333329,
+            0.31166666666666665,
+            0.11333333333333329,
+            0.31166666666666676,
+            0.11333333333333329
+          ],
+          "coordinate_rule_fact_ids": [
+            "X_7574276a",
+            "X_bf28604c"
+          ],
+          "rule_polarity_basis": {
+            "template_object": "template_lagging",
+            "template_5prime_side": "left",
+            "nascent_3prime_port": "end",
+            "diagram_open_region": "left of x2.5"
+          }
+        },
+        "expected_condition": "Actual growing-end trajectory must follow the fact-bound antiparallel polarity rule",
+        "description": "",
+        "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+      },
+      {
+        "check_id": "growth_gap_fill",
+        "category": "mechanism",
+        "status": "PASS",
+        "object_ids": [
+          "gap_fill"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "X_7574276a",
+          "X_bf28604c"
+        ],
+        "observed_evidence": {
+          "actual_endpoints": [
+            [
+              27.26666666666659,
+              [
+                -0.6633333333333333,
+                -0.35286666666666655,
+                0.0
+              ]
+            ],
+            [
+              27.533333333333257,
+              [
+                -0.75,
+                -0.3649999999999999,
+                0.0
+              ]
+            ],
+            [
+              27.599999999999923,
+              [
+                -0.7749999999999999,
+                -0.36849999999999994,
+                0.0
+              ]
+            ],
+            [
+              27.799999999999923,
+              [
+                -0.8499999999999999,
+                -0.37899999999999995,
+                0.0
+              ]
+            ],
+            [
+              27.933333333333255,
+              [
+                -0.8999999999999999,
+                -0.386,
+                0.0
+              ]
+            ],
+            [
+              28.133333333333255,
+              [
+                -0.9749999999999999,
+                -0.39649999999999996,
+                0.0
+              ]
+            ],
+            [
+              28.333333333333254,
+              [
+                -1.0499999999999998,
+                -0.4069999999999999,
+                0.0
+              ]
+            ],
+            [
+              28.466666666666587,
+              [
+                -1.0999999999999999,
+                -0.4139999999999999,
+                0.0
+              ]
+            ],
+            [
+              28.733333333333253,
+              [
+                -1.2,
+                -0.42799999999999994,
+                0.0
+              ]
+            ]
+          ],
+          "step_projections": [
+            0.08666666666666667,
+            0.02499999999999991,
+            0.07499999999999996,
+            0.050000000000000044,
+            0.07499999999999996,
+            0.07499999999999996,
+            0.050000000000000044,
+            0.10000000000000009
+          ],
+          "coordinate_rule_fact_ids": [
+            "X_7574276a",
+            "X_bf28604c"
+          ],
+          "rule_polarity_basis": {
+            "template_object": "template_lagging",
+            "template_5prime_side": "left",
+            "nascent_3prime_port": "end",
+            "diagram_open_region": "left of x2.5"
+          }
+        },
+        "expected_condition": "Actual growing-end trajectory must follow the fact-bound antiparallel polarity rule",
+        "description": "",
+        "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+      },
+      {
+        "check_id": "sealed_actual_nick",
+        "category": "connection",
+        "status": "PASS",
+        "object_ids": [
+          "gap_fill",
+          "fragment_1"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F6"
+        ],
+        "observed_evidence": {
+          "measured_distance": 0.0,
+          "a": [
+            -1.2,
+            -0.42799999999999994,
+            0.0
+          ],
+          "b": [
+            -1.2,
+            -0.42799999999999994,
+            0.0
+          ],
+          "time": 32.06666666666658
+        },
+        "expected_condition": "",
+        "description": "",
+        "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+      },
+      {
+        "check_id": "fill_starts_at_downstream_3prime",
+        "category": "connection",
+        "status": "PASS",
+        "object_ids": [
+          "gap_fill",
+          "fragment_2"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "X_7574276a"
+        ],
+        "observed_evidence": {
+          "measured_distance": 1.1102230246251565e-16,
+          "a": [
+            -0.6,
+            -0.34399999999999986,
+            0.0
+          ],
+          "b": [
+            -0.5999999999999999,
+            -0.34399999999999986,
+            0.0
+          ],
+          "time": 32.06666666666658
+        },
+        "expected_condition": "",
+        "description": "",
+        "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+      },
+      {
+        "check_id": "expected_observed_states",
+        "category": "execution",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {
+          "mismatches": [],
+          "snapshot_count": 55
+        },
+        "expected_condition": "Actual transformed anchors and visibility match committed expected states",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "actual_active_site_bindings",
+        "category": "connection",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {
+          "violations": []
+        },
+        "expected_condition": "Visible bound objects follow actual target anchors including declared offset",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "visible_coverage",
+        "category": "coverage",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {
+          "unregistered_visible": []
+        },
+        "expected_condition": "",
+        "description": "All adapter-created scientific and decorative objects registered; arbitrary Coder-added objects checked separately",
+        "suggested_repair_stage": "SCENE_IR"
+      }
+    ],
+    "scene_hash": "71fe477176734cbc9970ce4392fdcf36a80da25e43438f82b35ac5d3ad2cfc63",
+    "video_sha256": "91f575b17b07e3178688ce2b50d70d4603564d508c6ac5fe9be2a2dfeab17ace",
+    "code_sha256": "460c467748338a47712726275983d0e28cf8501b76839133136667e5c5cf4228",
+    "full_video": true
+  },
+  "groups/B1_mitosis/scientific_video_review.json": {
+    "review_id": "V4-VIDEO-d2be164670",
+    "stage": "RENDERED_VIDEO",
+    "decision": "REVISE",
+    "issues": [
+      {
+        "issue_id": "S1",
+        "severity": "major",
+        "description": "Measured frames show the drawn microtubule tip separating from its kinetochore during poleward motion: t=9.67 kinetochore_A x=-0.844 vs microtubule_left end -1.583 (gap 0.74); t=11.13 gap 0.66; frames 10.2s/11.2s show a visible break. Attachment is only re-coincident at 13s, so anaphase movement appears to occur while detached.",
+        "root_cause_stage": "ANIMATION_IMPLEMENTATION",
+        "target_objects": [
+          "microtubule_left",
+          "microtubule_right",
+          "kinetochore_A",
+          "kinetochore_B"
+        ],
+        "target_events": [
+          "anaphase_chromatid_separation_1"
+        ],
+        "repair_scope": "affected_event",
+        "acceptance_criteria": [
+          "anchor distance(microtubule_left.end, kinetochore_A.center) <= 0.04 at every sampled time in anaphase",
+          "same for microtubule_right/kinetochore_B",
+          "no visible gap in any frame while bipolar_attachment relation exists"
+        ]
+      },
+      {
+        "issue_id": "S2",
+        "severity": "minor",
+        "description": "Chromatid chevrons point equatorward (sister_A apex x=-0.12, arms x=-0.45), so during leftward anaphase motion the arms lead poleward and the kinetochore region trails. Real anaphase-A geometry has kinetochore leading with arms trailing toward the equator. Schematic, but the drawn shape contradicts the direction of travel.",
+        "root_cause_stage": "ASSEMBLY",
+        "target_objects": [
+          "sister_A",
+          "sister_B"
+        ],
+        "target_events": [
+          "anaphase_chromatid_separation_1"
+        ],
+        "repair_scope": "assembly_geometry",
+        "acceptance_criteria": [
+          "apex/kinetochore side of each chromatid is nearer its destination pole than arm tips throughout anaphase"
+        ]
+      },
+      {
+        "issue_id": "S3",
+        "severity": "minor",
+        "description": "Event captions are clipped at both frame edges (e.g. 'er kinetochores attach...', '...metaphase p'), so the stated mechanism text cannot be fully read; moving labels also overlap ('Daughter B' doubling at 9-11s). Readability only; does not alter mechanism.",
+        "root_cause_stage": "ANIMATION_IMPLEMENTATION",
+        "target_objects": [
+          "sister_A",
+          "sister_B"
+        ],
+        "target_events": [
+          "metaphase",
+          "anaphase"
+        ],
+        "repair_scope": "affected_event",
+        "acceptance_criteria": [
+          "full caption text inside frame margins",
+          "no overlapping label glyphs at any sampled time"
+        ]
+      }
+    ],
+    "notes": [
+      "Verified from trajectory, not labels: two persistent chromatid instances (no cloning), sister_cohesion removed only after phase=aligned and both bipolar_attachment relations exist; centers move monotonically -0.285->-2.8 and +0.285->+2.8 toward opposite poles.",
+      "Measured metaphase/final anchor coincidence 0.0 supports genuine bipolar attachment; role change to daughter_chromosome is metadata, not geometric proof.",
+      "S-phase replication, centrosome duplication, telophase and cytokinesis are out of scope for this clip and not judged; single duplicated chromosome is a declared simplification.",
+      "Grid/SVM reference image is unrelated to this topic and was ignored."
+    ],
+    "checks": [
+      {
+        "check_id": "registered_scientific_identity",
+        "category": "identity",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {
+          "missing": [],
+          "unexpected_scientific_ids": []
+        },
+        "expected_condition": "",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "object_instance_continuity",
+        "category": "identity",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {
+          "violations": [],
+          "tracked_objects": 8
+        },
+        "expected_condition": "",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "actual_event_order",
+        "category": "event_order",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {
+          "events": [
+            "metaphase",
+            "anaphase"
+          ]
+        },
+        "expected_condition": "",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "stable_components",
+        "category": "identity",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {},
+        "expected_condition": "",
+        "description": "",
+        "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+      },
+      {
+        "check_id": "two_objects_no_cloning",
+        "category": "identity",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {
+          "count": 2
+        },
+        "expected_condition": "",
+        "description": "",
+        "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+      },
+      {
+        "check_id": "left_attachment_measured",
+        "category": "connection",
+        "status": "PASS",
+        "object_ids": [
+          "microtubule_left",
+          "kinetochore_A"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "F5"
+        ],
+        "observed_evidence": {
+          "measured_distance": 0.0,
+          "a": [
+            -2.8,
+            0.0,
+            0.0
+          ],
+          "b": [
+            -2.8,
+            0.0,
+            0.0
+          ],
+          "time": 12.999999999999973
+        },
+        "expected_condition": "",
+        "description": "",
+        "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+      },
+      {
+        "check_id": "right_attachment_measured",
+        "category": "connection",
+        "status": "PASS",
+        "object_ids": [
+          "microtubule_right",
+          "kinetochore_B"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F4",
+          "F5"
+        ],
+        "observed_evidence": {
+          "measured_distance": 0.0,
+          "a": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "b": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "time": 12.999999999999973
+        },
+        "expected_condition": "",
+        "description": "",
+        "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+      },
+      {
+        "check_id": "daughter_role_A",
+        "category": "identity",
+        "status": "PASS",
+        "object_ids": [
+          "sister_A"
+        ],
+        "event_ids": [],
+        "evidence_ids": [
+          "F8"
+        ],
+        "observed_evidence": {
+          "observed_role_metadata": "daughter_chromosome",
+          "limitation": "Semantic role is not inferable from geometry alone"
+        },
+        "expected_condition": "",
+        "description": "",
+        "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+      },
+      {
+        "check_id": "expected_observed_states",
+        "category": "execution",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {
+          "mismatches": [],
+          "snapshot_count": 7
+        },
+        "expected_condition": "Actual transformed anchors and visibility match committed expected states",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "actual_active_site_bindings",
+        "category": "connection",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {
+          "violations": []
+        },
+        "expected_condition": "Visible bound objects follow actual target anchors including declared offset",
+        "description": "",
+        "suggested_repair_stage": "SCENE_IR"
+      },
+      {
+        "check_id": "visible_coverage",
+        "category": "coverage",
+        "status": "PASS",
+        "object_ids": [],
+        "event_ids": [],
+        "evidence_ids": [],
+        "observed_evidence": {
+          "unregistered_visible": []
+        },
+        "expected_condition": "",
+        "description": "All adapter-created scientific and decorative objects registered; arbitrary Coder-added objects checked separately",
+        "suggested_repair_stage": "SCENE_IR"
+      }
+    ],
+    "scene_hash": "8f955d2e3367c9b1bf69e31746777fe57ad2f09182b76f207fd2962410b7394c",
+    "video_sha256": "846598e9899ed29fa1527e04a61a8c3f47f9cdadd3015f4ba8914c22513a7fca",
+    "code_sha256": "2d19df844dde1e4c9f8ecbfee732ceae47cd072a2ab265331b8276e51cebdf19",
+    "full_video": true
+  }
+}

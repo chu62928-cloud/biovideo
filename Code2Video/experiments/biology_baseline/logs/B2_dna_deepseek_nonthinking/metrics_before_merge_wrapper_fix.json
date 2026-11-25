@@ -1,0 +1,35 @@
+{
+  "label": "B2_dna_deepseek_nonthinking",
+  "topic": "DNA replication in eukaryotic cells",
+  "output_dir": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells",
+  "requested_model": "deepseek-flash",
+  "critic": false,
+  "assets": false,
+  "start_utc": "2026-11-23T04:12:30Z",
+  "status": "partial_or_failed",
+  "sections": 6,
+  "successful_sections": 6,
+  "section_videos": {
+    "section_1": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/media/videos/section_1/480p15/Section1Scene.mp4",
+    "section_2": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/media/videos/section_2/480p15/Section2Scene.mp4",
+    "section_3": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/media/videos/section_3/480p15/Section3Scene.mp4",
+    "section_4": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/media/videos/section_4/480p15/Section4Scene.mp4",
+    "section_5": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/media/videos/section_5/480p15/Section5Scene.mp4",
+    "section_6": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/media/videos/section_6/480p15/Section6Scene.mp4"
+  },
+  "video": null,
+  "elapsed_seconds": 326.836,
+  "api_attempts": 9,
+  "api_retries": 0,
+  "usage": {
+    "prompt_tokens": 18231,
+    "completion_tokens": 26828,
+    "total_tokens": 45059
+  },
+  "models": [
+    "deepseek-flash"
+  ],
+  "render_attempts": 7,
+  "render_attempt_successes": 6,
+  "render_retries": 1
+}

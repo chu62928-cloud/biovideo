@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+**/api_config.json
+**/__pycache__/
+**/.cache/
+*.mp4
+*.zip
+env/
+conda-pkgs/
+texlive/

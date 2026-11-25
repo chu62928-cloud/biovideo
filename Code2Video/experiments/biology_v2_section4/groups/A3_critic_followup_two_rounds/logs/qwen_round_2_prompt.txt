@@ -1,0 +1,63 @@
+
+1. ANALYSIS REQUIREMENTS:
+- Analyze this Manim educational video ONLY for layout and spatial positioning issues.
+- Use the provided reference image for precise spatial analysis.
+- Focus on eliminating overlaps, obstructions, and optimizing grid space utilization.
+
+2. Content Context:
+- Title: DNA Replication in Eukaryotic Cells — Priming, Leading and Lagging Strand Synthesis
+- Lecture Lines: 
+- Current Grid Occupancy: V2 whole-frame scene; use object IDs and actual geometry below, not the historical right-half grid coordinates.
+
+3. Visual Anchor System (6*6 grid, right side only):
+```
+lecture |  A1  A2  A3  A4  A5  A6
+        |  B1  B2  B3  B4  B5  B6
+        |  C1  C2  C3  C4  C5  C6
+        |  D1  D2  D3  D4  D5  D6
+        |  E1  E2  E3  E4  E5  E6
+        |  F1  F2  F3  F4  F5  F6
+```
+- Point positioning (point, one-word label): self.place_at_grid(obj, 'B2', scale_factor=0.8)
+- Area positioning (over-two-words label, fomula, group): self.place_in_area(obj, 'A1', 'C3', scale_factor=0.7)
+
+4. LAYOUT ASSESSMENT (Check ALL):
+- Obstruction: Animations blocking left-side lecture notes [ATTENTION]
+- Overlap: Animation elements (formulas, labels, shapes) overlapping
+- Off-screen: Elements cut off or outside visible area [ESPECIALLY for LONG LABEL]
+- Grid violations: Poor grid space utilization
+- Check if there are any elements that should fade out but do not
+
+5. MANDATORY CONSTRAINTS:
+- Color: Provide hexadecimal color codes for unclear colors.
+- Font/Scale: Adjust font sizes and asset scales for grid positions.
+- Consistency: Do not apply any animation to the lecture lines except for color changes; The lecture lines and title's size and position must remain unchanged.
+- Asset: Only adjust Existing PNG assets' size and position.
+- Proximity: Ensure labels stay within 1 grid unit of their objects.
+
+6. IMPORTANT: Output MUST follow this exact JSON structure:
+{
+    "layout": {
+        "has_issues": true,
+        "improvements": [
+            {
+                "problem": "Specific issue description (concise)",
+                "solution": "Line X: self.place_at_grid() or self.place_in_area()",
+                "line_number": X,
+                "object_affected": "obj_name"
+            },
+            ...
+        ]
+    }
+}
+
+7. SOLUTION REQUIREMENTS:
+- Provide specific grid coordinates in solutions
+- List up to 3 layout problems that most affect the visual experience!
+- Do not give the video timestamp
+- Give concise problem descriptions but detailed, actionable solutions
+- Subsequent solution positions should not overlap with previous solution positions
+
+V2 EXTENSION (replaces line-number solution output only; original visual-overlap/bounds requirements still apply): inspect molecular-label association, identity/continuity across time, enzyme-active-site contact, and distinguishability of template vs nascent DNA. The scene uses the full frame rather than the old left lecture panel. Original GRID image is only a spatial reference, not a command to force right-half layout. Do NOT invent line numbers or variable names. Use only actual object_id values from the inventory. Return JSON containing both "layout":{"has_issues":bool,"improvements":[]} and "issues":[{"object_id":"known ID","issue_type":"overlap|bounds|label_relation|continuity|enzyme_contact|strand_confusion","current_state":{},"target_constraint":{},"suggested_change":"..."}]. At most 3 important issues. Do not assert scientific correctness from this layout inspection alone. Preserve strand polarities and RNA-removal→DNA-fill→nick-sealing order.
+ACTUAL OBJECT INVENTORY:
+{"title_text": {"role": "label"}, "caption_text": {"role": "label"}, "template_leading": {"role": "molecule", "strand": "template", "polarity": "3to5"}, "template_lagging": {"role": "molecule", "strand": "template", "polarity": "5to3"}, "replication_fork": {"role": "anchor"}, "template_end_labels": {"role": "label"}, "primase_label": {"role": "label"}, "primase": {"role": "molecule", "enzyme": "primase"}, "rna_primer_lead_00": {"role": "nucleotide", "strand": "leading", "material": "RNA", "fragment": "leading"}, "rna_primer_lead_01": {"role": "nucleotide", "strand": "leading", "material": "RNA", "fragment": "leading"}, "rna_primer_lead_02": {"role": "nucleotide", "strand": "leading", "material": "RNA", "fragment": "leading"}, "rna_primer_lead_03": {"role": "nucleotide", "strand": "leading", "material": "RNA", "fragment": "leading"}, "rna_primer": {"role": "molecule", "material": "RNA", "strand": "leading"}, "rna_primer_lead_3prime": {"role": "label"}, "dna_polymerase_leading_label": {"role": "label"}, "lead_active_anchor": {"role": "anchor"}, "dna_polymerase_leading": {"role": "molecule", "enzyme": "polymerase", "strand": "leading"}, "incoming_nucleotide_label": {"role": "label"}, "incoming_nucleotide": {"role": "molecule", "material": "DNA", "strand": "leading"}, "nucleotide_leading_00": {"role": "nucleotide", "strand": "leading", "fragment": "leading", "material": "DNA"}, "nucleotide_leading_01": {"role": "nucleotide", "strand": "leading", "fragment": "leading", "material": "DNA"}, "nucleotide_leading_02": {"role": "nucleotide", "strand": "leading", "fragment": "leading", "material": "DNA"}, "nucleotide_leading_03": {"role": "nucleotide", "strand": "leading", "fragment": "leading", "material": "DNA"}, "nucleotide_leading_04": {"role": "nucleotide", "strand": "leading", "fragment": "leading", "material": "DNA"}, "nucleotide_leading_05": {"role": "nucleotide", "strand": "leading", "fragment": "leading", "material": "DNA"}, "nucleotide_leading_06": {"role": "nucleotide", "strand": "leading", "fragment": "leading", "material": "DNA"}, "nucleotide_leading_07": {"role": "nucleotide", "strand": "leading", "fragment": "leading", "material": "DNA"}, "nucleotide_leading_08": {"role": "nucleotide", "strand": "leading", "fragment": "leading", "material": "DNA"}, "nucleotide_leading_09": {"role": "nucleotide", "strand": "leading", "fragment": "leading", "material": "DNA"}, "nucleotide_leading_10": {"role": "nucleotide", "strand": "leading", "fragment": "leading", "material": "DNA"}, "nucleotide_leading_11": {"role": "nucleotide", "strand": "leading", "fragment": "leading", "material": "DNA"}, "nucleotide_leading_12": {"role": "nucleotide", "strand": "leading", "fragment": "leading", "material": "DNA"}, "nucleotide_leading_13": {"role": "nucleotide", "strand": "leading", "fragment": "leading", "material": "DNA"}, "nucleotide_leading_14": {"role": "nucleotide", "strand": "leading", "fragment": "leading", "material": "DNA"}, "new_leading_strand": {"role": "molecule", "strand": "leading", "material": "DNA"}, "new_leading_3prime": {"role": "label"}, "rna_primer_lagging_1_00": {"role": "nucleotide", "strand": "lagging", "material": "RNA", "fragment": "okazaki_1"}, "rna_primer_lagging_1_01": {"role": "nucleotide", "strand": "lagging", "material": "RNA", "fragment": "okazaki_1"}, "rna_primer_lagging_1_02": {"role": "nucleotide", "strand": "lagging", "material": "RNA", "fragment": "okazaki_1"}, "rna_primer_lagging_1": {"role": "molecule", "material": "RNA", "strand": "lagging"}, "primase_lagging_label": {"role": "label"}, "lag1_active_anchor": {"role": "anchor"}, "dna_polymerase_lagging_label": {"role": "label"}, "dna_polymerase_lagging": {"role": "molecule", "enzyme": "polymerase", "strand": "lagging"}, "okazaki_fragment_1_00": {"role": "nucleotide", "strand": "lagging", "fragment": "okazaki_1", "material": "DNA"}, "okazaki_fragment_1_01": {"role": "nucleotide", "strand": "lagging", "fragment": "okazaki_1", "material": "DNA"}, "okazaki_fragment_1_02": {"role": "nucleotide", "strand": "lagging", "fragment": "okazaki_1", "material": "DNA"}, "okazaki_fragment_1_03": {"role": "nucleotide", "strand": "lagging", "fragment": "okazaki_1", "material": "DNA"}, "okazaki_fragment": {"role": "molecule", "strand": "lagging", "fragment": "okazaki_1", "material": "DNA"}, "rna_primer_lagging_2_00": {"role": "nucleotide", "strand": "lagging", "material": "RNA", "fragment": "okazaki_2"}, "rna_primer_lagging_2_01": {"role": "nucleotide", "strand": "lagging", "material": "RNA", "fragment": "okazaki_2"}, "rna_primer_lagging_2_02": {"role": "nucleotide", "strand": "lagging", "material": "RNA", "fragment": "okazaki_2"}, "rna_primer_lagging_2": {"role": "molecule", "material": "RNA", "strand": "lagging"}, "lag2_active_anchor": {"role": "anchor"}, "dna_polymerase_lagging_2_label": {"role": "label"}, "dna_polymerase_lagging_2": {"role": "molecule", "enzyme": "polymerase", "strand": "lagging"}, "okazaki_fragment_2_00": {"role": "nucleotide", "strand": "lagging", "fragment": "okazaki_2", "material": "DNA"}, "okazaki_fragment_2_01": {"role": "nucleotide", "strand": "lagging", "fragment": "okazaki_2", "material": "DNA"}, "okazaki_fragment_2_02": {"role": "nucleotide", "strand": "lagging", "fragment": "okazaki_2", "material": "DNA"}, "okazaki_fragment_2": {"role": "molecule", "strand": "lagging", "fragment": "okazaki_2", "material": "DNA"}, "new_lagging_strand": {"role": "molecule", "strand": "lagging", "material": "mixed"}, "new_lagging_3prime": {"role": "label"}, "gap_label": {"role": "label"}, "dna_polymerase_fill_label": {"role": "label"}, "dna_polymerase_fill": {"role": "molecule", "enzyme": "polymerase", "strand": "lagging"}, "fill_dna_00": {"role": "nucleotide", "strand": "lagging", "fragment": "okazaki_1", "material": "DNA"}, "fill_dna_01": {"role": "nucleotide", "strand": "lagging", "fragment": "okazaki_1", "material": "DNA"}, "fill_dna_02": {"role": "nucleotide", "strand": "lagging", "fragment": "okazaki_1", "material": "DNA"}, "dna_ligase_label": {"role": "label"}, "dna_ligase": {"role": "molecule", "enzyme": "ligase"}}

@@ -1,0 +1,7 @@
+{
+  "agent_change_only_critic_request_routing": true,
+  "existing_llm_provider_code_unchanged": true,
+  "prompts_unchanged_vs_upstream": true,
+  "api_config_unchanged_vs_upstream": true,
+  "original_shell_runner_unchanged": true
+}

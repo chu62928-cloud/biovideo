@@ -1,0 +1,91 @@
+ 
+    You are a professional education Explainer and Animator, expert at converting mathematical teaching outlines into storyboard scripts suitable for the Manim animation system.
+
+    ## Task
+    Convert the following teaching outline into a detailed step-by-step storyboard script:
+
+    {
+  "topic": "Linear Transformations and Matrices",
+  "target_audience": "Undergraduate students beginning linear algebra, or advanced high school students with basic vector and coordinate knowledge",
+  "sections": [
+    {
+      "id": "section_1",
+      "title": "Prerequisite Warm-Up: Vectors on a Grid",
+      "content": "Duration ~0:00–0:40. Briefly recall that a 2D vector can be drawn as an arrow or written as coordinates, and that the standard basis vectors e1=(1,0) and e2=(0,1) define the grid. Introduce the visual setup: a friendly robot mascot stands at a point on a coordinate grid. Emphasize that every position is a combination of basis directions. Animation: the grid fades in, the robot appears at a point, and its position vector is drawn from the origin.",
+      "example": "Robot position v=(2,1) means v=2e1+1e2: move 2 units right and 1 unit up. Show the arrow v and the parallelogram formed by 2e1 and 1e2."
+    },
+    {
+      "id": "section_2",
+      "title": "What Makes a Transformation Linear?",
+      "content": "Duration ~0:40–1:35. Define a linear transformation T on 2D vectors as a rule satisfying T(u+v)=T(u)+T(v) and T(cu)=cT(u). Visually explain the consequences: the origin stays fixed, straight grid lines remain straight, parallel lines stay parallel, and equal spacing is preserved. Contrast with a non-example such as translation, which moves the origin. Animation: a square grid smoothly rotates, stretches, or shears while the origin remains fixed; then a non-linear warp bends the grid to show the difference.",
+      "example": "Let T(x,y)=(2x,y). This stretches the plane horizontally by factor 2. The robot at (2,1) moves to (4,1), and nearby grid squares become wider rectangles."
+    },
+    {
+      "id": "section_3",
+      "title": "A Matrix Is a Transformation Recipe",
+      "content": "Duration ~1:35–2:25. Introduce a 2×2 matrix A=[[a,b],[c,d]]. Explain that its columns are exactly where the basis vectors go: column 1 is T(e1), column 2 is T(e2). Therefore Av=x(column 1)+y(column 2). Emphasize this key idea: a matrix stores the images of the basis vectors, and linearity determines all other vectors. Animation: highlight e1 and e2, then animate them moving to the two matrix columns; show a general vector built as a weighted sum of those columns.",
+      "example": "For A=[[2,0],[0,1]], e1=(1,0) maps to (2,0) and e2=(0,1) maps to (0,1). So A(2,1)=2(2,0)+1(0,1)=(4,1)."
+    },
+    {
+      "id": "section_4",
+      "title": "Matrix–Vector Multiplication in Action",
+      "content": "Duration ~2:25–3:20. Show the matrix–vector product as both an algebraic calculation and a geometric combination of columns. Use color coding: x times column 1 plus y times column 2. Then apply a rotation matrix to a vector. Animation: the original vector rotates 90° about the origin, while the column-combination construction happens side by side to confirm the result.",
+      "example": "Let A=[[0,-1],[1,0]], which rotates vectors 90° counterclockwise, and let v=(2,1). Then Av=(0·2+(-1)·1, 1·2+0·1)=(-1,2). Equivalently, Av=2(0,1)+1(-1,0)=(-1,2). Animate v rotating from (2,1) to (-1,2)."
+    },
+    {
+      "id": "section_5",
+      "title": "Gallery of Geometric Effects",
+      "content": "Duration ~3:20–4:20. Rapidly visualize common linear transformations and their matrices: scaling, rotation, shear, and reflection. Keep the same robot or simple shape under each transformation so learners compare effects. Emphasize that different matrices create different visual motions, but all obey the same linear rules. Animation: split screen shows the matrix entries and the matching motion of the grid and mascot.",
+      "example": "Scaling A=[[2,0],[0,2]] doubles the robot's distance from the origin; rotation A=[[0,-1],[1,0]] turns it 90°; shear A=[[1,1],[0,1]] slants the grid; reflection A=[[1,0],[0,-1]] flips it across the x-axis."
+    },
+    {
+      "id": "section_6",
+      "title": "Recap and Mini Application",
+      "content": "Duration ~4:20–5:00. Summarize three critical ideas: linear transformations preserve vector addition and scalar multiplication; a matrix records the images of basis vectors; and Av is a weighted combination of the matrix columns. End with a short application in animation or game graphics: a character's sprite is rotated, scaled, or reflected by applying a matrix to every vertex. Animation: the robot waves, and the same matrix is applied to its hat, arm, and body points to show a whole-object transformation.",
+      "example": "In a game, rotate a robot's pointing direction v=(1,0) by 90° using A=[[0,-1],[1,0]]. The result is Av=(0,1), so the robot now points upward. Applying A to all vertices rotates the entire robot consistently."
+    }
+  ]
+}
+    
+    ## Storyboard Requirements
+    
+    ### Content Structure
+    - For key sections (max 3 sections), use up to 5 lecture lines along with their corresponding 5 animations to provide a logically coherent explanation. Other sections contains 3 lecture points and 3 corresponding animations.
+    - In key sections, assets not forbiddened.
+    - Must keep each lecture line brief [NO MORE THAN 10 WORDS FOR ONE LINE].
+    - Animation steps must closely correspond to lecture points.
+    - Do not apply any animation to lecture lines except for changing the color of corresponding line when its related animation is presented.
+
+    ### Visual Design
+    - Colors: Background fixed at #000000, use ligt color for contrast.
+    - IMPORTANT: Provide hexadecimal codes for colors.
+    - Element Labeling: Assign clear colors and labels near all elements (formulas, etc.).
+
+    ### Animation Effects
+    - Basic Animations: Appearance, movement, color changes, fade in/out, scaling.
+    - Emphasis Effects: Flashing, color changes, bolding to highlight key knowledge points.
+
+    ### Constraints
+    - No panels or 3D methods.
+    - Avoid coordinate axes unless absolutely necessary.
+    - Focus animations on visualizing concepts that are difficult to grasp from lecture lines alone.
+    - Ensure that all animations are easy to understand.
+    - Do not involve any external elements (such as SVGs or other assets that require downloading or dependencies).
+
+    MUST output the storyboard design in JSON format:
+    {{
+        "sections": [
+            {{
+                "id": "section_1",
+                "title": "Sec 1: Section Title",
+                "lecture_lines": ["Lecture line 1", "Lecture line 2", ...],
+                "animations": [
+                    "Animation step 1: ...",
+                    "Animation step 2: ...",
+                    ...
+                ]
+            }},
+            ...
+        ]
+    }}
+    

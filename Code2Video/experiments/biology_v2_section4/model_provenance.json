@@ -1,0 +1,18 @@
+[
+  {
+    "group": "A1_mechanism",
+    "accepted_source_response": "deepseek_02",
+    "exact_animation_source_match": true,
+    "sha256": "9cb0faf383aaa908be17ac47069cd597c3615731e4f3c93c96cff9c049536e4f",
+    "human_animation_code_edits": false,
+    "infrastructure_changes_disclosed": true
+  },
+  {
+    "group": "A2_mechanism_assets",
+    "accepted_source_response": "deepseek_06",
+    "exact_animation_source_match": true,
+    "sha256": "e5f38e4e57705e32e86a8e689e4a4d0b57a2a390322e8c7aeefb9218dab696cf",
+    "human_animation_code_edits": false,
+    "infrastructure_changes_disclosed": true
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "tag": "all_eight_svg_fixture",
+  "committed": true,
+  "before": null,
+  "started": 1795427479.9206295,
+  "after": {
+    "success": true,
+    "tag": "all_eight_svg_fixture",
+    "code_sha256": "3c29766d076b06c436d43d806d7d02e838caec3e87de3e3c1f626f63d34652e0",
+    "video_sha256": "64740a3d438568674110a40c86cb647d299a5eea40d66e084c4b1453dd34893b",
+    "duration_seconds": 1.0,
+    "renderer": "manim-0.19.0-full-render",
+    "trace_sha256": "d953893a39784deefebf2edb5b901da9fbf5453c2f1db04cc9910476342dc6f2",
+    "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/svg_loading/versions/all_eight_svg_fixture",
+    "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/svg_loading/versions/all_eight_svg_fixture/rendered_code.py",
+    "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/svg_loading/versions/all_eight_svg_fixture/video.mp4"
+  },
+  "elapsed_seconds": 3.34
+}

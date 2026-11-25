@@ -1,0 +1,139 @@
+{
+  "group": "A1_mechanism",
+  "experiment_success": true,
+  "valid_video": true,
+  "new_render": true,
+  "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/groups/A1_mechanism/video.mp4",
+  "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/groups/A1_mechanism/rendered_code.py",
+  "video_sha256": "539370b925ceb5b83062235a710dd7afa6d69f6b203485fd4b5382a4c9684782",
+  "code_sha256": "9cb0faf383aaa908be17ac47069cd597c3615731e4f3c93c96cff9c049536e4f",
+  "duration_seconds": 26.866667,
+  "resolution": "854x480",
+  "fps": "15/1",
+  "audio_present": false,
+  "coder_calls": 3,
+  "critic_calls": 0,
+  "known_prompt_tokens": 28283,
+  "known_completion_tokens": 18025,
+  "unknown_usage_calls": 0,
+  "transaction_attempts": 5,
+  "transaction_commits": 2,
+  "failed_candidates_or_rollbacks": 3,
+  "interrupted_attempts": [],
+  "measured_active_seconds": 121.325,
+  "time_definition": "Sum of recorded API and transaction wall times; excludes human inspection/pauses; interrupted attempt time may be unavailable.",
+  "human_animation_code_edits": false,
+  "layout_metrics": {
+    "out_of_frame": 0,
+    "label_overlaps": 0,
+    "binding_violations": 0,
+    "sudden_jumps": 4
+  },
+  "registered_labels": 0,
+  "label_detection_status": "uncertain: generated code did not register text labels",
+  "mechanism_evidence": {
+    "first_RNA": 3.6000000000000045,
+    "first_DNA": 8.933333333333321,
+    "fill_nucleotides": [
+      {
+        "id": "nucleotide_lagging_fill_1_01",
+        "role": "nucleotide",
+        "strand": "lagging",
+        "fragment": "lagging_1",
+        "material": "DNA",
+        "first_visible": 19.533333333333285,
+        "last_visible": 26.866666666666593,
+        "final_x": 0.6799999999999998
+      },
+      {
+        "id": "nucleotide_lagging_fill_1_02",
+        "role": "nucleotide",
+        "strand": "lagging",
+        "fragment": "lagging_1",
+        "material": "DNA",
+        "first_visible": 19.533333333333285,
+        "last_visible": 26.866666666666593,
+        "final_x": 1.4899999999999998
+      },
+      {
+        "id": "nucleotide_lagging_fill_1_03",
+        "role": "nucleotide",
+        "strand": "lagging",
+        "fragment": "lagging_1",
+        "material": "DNA",
+        "first_visible": 19.79999999999995,
+        "last_visible": 26.866666666666593,
+        "final_x": 2.3
+      }
+    ],
+    "actual_event_markers": [
+      {
+        "id": "event_1_fork",
+        "time": 0.0
+      },
+      {
+        "id": "event_2_priming",
+        "time": 2.733333333333335
+      },
+      {
+        "id": "event_3_extension",
+        "time": 8.066666666666658
+      },
+      {
+        "id": "event_4_two_modes",
+        "time": 11.866666666666644
+      },
+      {
+        "id": "event_5_maturation",
+        "time": 17.39999999999996
+      }
+    ]
+  },
+  "comparison_frame_times": {
+    "event_1_fork": 1.3666666666666676,
+    "event_2_priming": 5.399999999999997,
+    "event_3_extension": 9.96666666666665,
+    "event_4_two_modes": 14.6333333333333,
+    "event_5_maturation": 22.133333499999978
+  },
+  "SVG_asset_types_in_code": [],
+  "completed_full_render_attempts": 5,
+  "verified_full_render_outputs": 5,
+  "render_success_rate": 1.0,
+  "experiment_failed_update_rollbacks": 0,
+  "render_attempt_details": [
+    {
+      "tag": "checker_fixed_replay_candidate_2",
+      "full_video_decodes": true,
+      "committed": true
+    },
+    {
+      "tag": "coder_attempt_1",
+      "full_video_decodes": true,
+      "committed": false
+    },
+    {
+      "tag": "coder_attempt_2",
+      "full_video_decodes": true,
+      "committed": false
+    },
+    {
+      "tag": "coder_attempt_3",
+      "full_video_decodes": true,
+      "committed": false
+    },
+    {
+      "tag": "group_visibility_observer_replay",
+      "full_video_decodes": true,
+      "committed": true
+    }
+  ],
+  "engineering_success": true,
+  "fully_mechanism_validated": false,
+  "ready_for_teaching_without_review": false,
+  "biological_check_summary": {
+    "pass": 5,
+    "fail": 2,
+    "uncertain": 1
+  }
+}

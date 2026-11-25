@@ -1,0 +1,8 @@
+{
+  "original_model_call": "v3_05",
+  "original_generation_attempt": 2,
+  "new_generation_attempt": false,
+  "new_deepseek_request": false,
+  "adaptation": "Uniform dedent then AST-extract exact generated loop; preserve original exception and two-attempt count",
+  "source_response_sha256": "ede0828e1415dd36d2a99edf5fc506a9498be2d81e07f073ba2ab30ec41ff7d3"
+}

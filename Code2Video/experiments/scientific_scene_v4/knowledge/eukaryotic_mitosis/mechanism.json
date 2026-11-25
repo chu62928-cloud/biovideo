@@ -1,0 +1,114 @@
+{
+  "events": [
+    {
+      "event_id": "M1",
+      "description": "S phase: DNA replication creates sister chromatids attached at centromeres; centrosome duplication begins.",
+      "fact_ids": [
+        "F1",
+        "F2"
+      ],
+      "roles": [
+        "DNA replication machinery",
+        "sister chromatids",
+        "centromere",
+        "centrosome"
+      ],
+      "constraints": [
+        "Replication occurs during interphase, not during mitosis"
+      ]
+    },
+    {
+      "event_id": "M2",
+      "description": "G2: centrosome duplication completes; energy and proteins for chromosome manipulation are synthesized.",
+      "fact_ids": [
+        "F2"
+      ],
+      "roles": [
+        "centrosomes",
+        "energy stores",
+        "cytoskeleton"
+      ],
+      "constraints": [
+        "Final preparations must complete before mitosis entry"
+      ]
+    },
+    {
+      "event_id": "M3",
+      "description": "Prometaphase: nuclear envelope fragments; kinetochores bind spindle microtubules; sister kinetochores orient to opposite poles.",
+      "fact_ids": [
+        "F4",
+        "F8"
+      ],
+      "roles": [
+        "nuclear envelope",
+        "kinetochore",
+        "mitotic spindle",
+        "microtubules"
+      ],
+      "constraints": [
+        "Kinetochores of sister chromatids must face opposite poles"
+      ]
+    },
+    {
+      "event_id": "M4",
+      "description": "Metaphase checkpoint: spindle checkpoint monitors attachment of all sister chromatids to microtubules from opposite poles before anaphase.",
+      "fact_ids": [
+        "F5"
+      ],
+      "roles": [
+        "spindle checkpoint",
+        "kinetochores",
+        "spindle fibers"
+      ],
+      "constraints": [
+        "Anaphase separation is irreversible; cycle does not proceed until attachments are correct"
+      ]
+    },
+    {
+      "event_id": "M5",
+      "description": "Anaphase: spindle-driven motions separate duplicated chromosomes into two distinct sets moved toward opposite ends of the cell.",
+      "fact_ids": [
+        "F8",
+        "F3"
+      ],
+      "roles": [
+        "mitotic spindle",
+        "motor enzymes",
+        "chromosomes"
+      ],
+      "constraints": [
+        "Requires controlled microtubule dynamics and motor enzyme activity"
+      ]
+    },
+    {
+      "event_id": "M6",
+      "description": "Telophase: chromosomes decondense, spindles break down, nuclear envelopes reform; nuclear division completes.",
+      "fact_ids": [
+        "F6",
+        "F3"
+      ],
+      "roles": [
+        "chromosomes",
+        "mitotic spindle",
+        "nuclear envelope"
+      ],
+      "constraints": [
+        "Events of early mitosis are reversed"
+      ]
+    },
+    {
+      "event_id": "M7",
+      "description": "Cytokinesis: physical separation of cytoplasmic components into two daughter cells; may be absent, yielding multinucleate cells.",
+      "fact_ids": [
+        "F7"
+      ],
+      "roles": [
+        "cytoplasmic components",
+        "daughter cells"
+      ],
+      "constraints": [
+        "Cytokinesis is distinct from nuclear division and can occur separately"
+      ]
+    }
+  ]
+}

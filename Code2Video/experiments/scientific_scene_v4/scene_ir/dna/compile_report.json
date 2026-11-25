@@ -1,0 +1,56 @@
+{
+  "schema_pass": true,
+  "references_pass": true,
+  "scientific_gate": "PENDING_EXPERT_REVIEW",
+  "plan": {
+    "events": [
+      {
+        "event_id": "event_1_fork",
+        "caption": "One fork, two antiparallel templates",
+        "process_ids": [
+          "open_fork"
+        ],
+        "duration": 6.0
+      },
+      {
+        "event_id": "event_2_priming",
+        "caption": "Primase makes an RNA starting point",
+        "process_ids": [
+          "prime"
+        ],
+        "duration": 6.0
+      },
+      {
+        "event_id": "event_3_extension",
+        "caption": "DNA polymerase extends 5' to 3'",
+        "process_ids": [
+          "continuous_extension"
+        ],
+        "duration": 6.0
+      },
+      {
+        "event_id": "event_4_two_modes",
+        "caption": "Continuous leading; short lagging fragments",
+        "process_ids": [
+          "fragment_synthesis"
+        ],
+        "duration": 6.0
+      },
+      {
+        "event_id": "event_5_maturation",
+        "caption": "Remove RNA, fill DNA, then seal a nick",
+        "process_ids": [
+          "maturation"
+        ],
+        "duration": 6.0
+      }
+    ],
+    "scientific_simplifications": [
+      "Schematic, not molecular structure or scale. One local fork, no chromosome-end/telomerase claim.",
+      "Primase/Pol alpha label abstracts RNA initiation and short DNA handoff; individual RNaseH/FEN1 steps omitted.",
+      "Show one local primer maturation only; other orange primers remain, final caption must not claim all replication completed.",
+      "Parent fork is camera-fixed; synthesis stays on its opened left side. Pol epsilon is the common undisturbed leading-strand teaching model, not an absolute exclusion of Pol delta.",
+      "Direction constraint is derived from verified5to3/antiparallel facts plus displayed template endpoints, not a universal sign of x."
+    ]
+  }
+}

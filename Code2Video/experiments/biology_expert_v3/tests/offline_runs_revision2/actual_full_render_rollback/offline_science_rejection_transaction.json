@@ -1,0 +1,32 @@
+{
+  "tag": "offline_science_rejection",
+  "committed": false,
+  "before": {
+    "success": true,
+    "tag": "group_visibility_observer_replay",
+    "code_sha256": "e5f38e4e57705e32e86a8e689e4a4d0b57a2a390322e8c7aeefb9218dab696cf",
+    "video_sha256": "4154b5fef41c8552ea8fe42b06d346a1a3fb2b02888b66db35238b3bd4cb5459",
+    "duration_seconds": 33.466667,
+    "renderer": "manim-0.19.0-full-render",
+    "trace_sha256": "2cdefcd22e4b3f327f783bd7ceb9aea9d00843decea156a0d2f00c79c43be364",
+    "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v3/tests/offline_runs_revision2/actual_full_render_rollback/versions/fixture_baseline",
+    "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v3/tests/offline_runs_revision2/actual_full_render_rollback/versions/fixture_baseline/rendered_code.py",
+    "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v3/tests/offline_runs_revision2/actual_full_render_rollback/versions/fixture_baseline/video.mp4"
+  },
+  "started": 1795492067.2707088,
+  "error_type": "ValueError",
+  "error": "OFFLINE injected science-gate failure after real full render",
+  "after": {
+    "success": true,
+    "tag": "group_visibility_observer_replay",
+    "code_sha256": "e5f38e4e57705e32e86a8e689e4a4d0b57a2a390322e8c7aeefb9218dab696cf",
+    "video_sha256": "4154b5fef41c8552ea8fe42b06d346a1a3fb2b02888b66db35238b3bd4cb5459",
+    "duration_seconds": 33.466667,
+    "renderer": "manim-0.19.0-full-render",
+    "trace_sha256": "2cdefcd22e4b3f327f783bd7ceb9aea9d00843decea156a0d2f00c79c43be364",
+    "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v3/tests/offline_runs_revision2/actual_full_render_rollback/versions/fixture_baseline",
+    "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v3/tests/offline_runs_revision2/actual_full_render_rollback/versions/fixture_baseline/rendered_code.py",
+    "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v3/tests/offline_runs_revision2/actual_full_render_rollback/versions/fixture_baseline/video.mp4"
+  },
+  "elapsed_seconds": 15.587
+}

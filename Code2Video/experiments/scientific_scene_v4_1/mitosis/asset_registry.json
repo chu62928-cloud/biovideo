@@ -1,0 +1,15 @@
+{
+  "assets": [
+    {
+      "asset_id": "rounded_chromatid_schematic",
+      "object_name": "sister chromatid",
+      "format": "editable curve",
+      "author": "Project original schematic",
+      "source_url": null,
+      "license": "CC0-1.0",
+      "editable": true,
+      "scientific_accuracy_status": "NEEDS_VIDEO_REVIEW",
+      "representation_precision": "schematic"
+    }
+  ]
+}

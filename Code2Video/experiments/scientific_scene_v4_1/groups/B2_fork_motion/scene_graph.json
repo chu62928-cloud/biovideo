@@ -1,0 +1,5705 @@
+{
+  "scene_id": "dna_fork_advance",
+  "topic_id": "dna_replication",
+  "audience": "grades_10_12",
+  "objects": [
+    {
+      "object_id": "template_leading",
+      "object_type": "parental_strand",
+      "scientific_identity": {
+        "name": "template leading",
+        "kind": "parental_strand",
+        "origin_id": "template_leading"
+      },
+      "scientific_properties": {
+        "polarity": [
+          "3'",
+          "5'"
+        ],
+        "parent_assembly": "replication_fork",
+        "endpoint_labels": {
+          "start": "3'",
+          "end": "5'"
+        }
+      },
+      "asset_id": "strand",
+      "visual_representation": {
+        "visible": true,
+        "color": "#4FC3F7",
+        "label": null,
+        "points": [
+          [
+            -5,
+            1.2,
+            0
+          ],
+          [
+            0.6,
+            0.15,
+            0
+          ],
+          [
+            6,
+            0.15,
+            0
+          ]
+        ],
+        "center": [
+          0.5,
+          0.15,
+          0.0
+        ]
+      },
+      "anchors": {
+        "center": {
+          "kind": "center"
+        },
+        "start": {
+          "kind": "point",
+          "index": 0
+        },
+        "end": {
+          "kind": "point",
+          "index": -1
+        },
+        "junction": {
+          "kind": "point",
+          "index": 1
+        },
+        "pair_0": {
+          "kind": "between",
+          "a": 1,
+          "b": 2,
+          "alpha": 0.0
+        },
+        "pair_1": {
+          "kind": "between",
+          "a": 1,
+          "b": 2,
+          "alpha": 0.14285714285714285
+        },
+        "pair_2": {
+          "kind": "between",
+          "a": 1,
+          "b": 2,
+          "alpha": 0.2857142857142857
+        },
+        "pair_3": {
+          "kind": "between",
+          "a": 1,
+          "b": 2,
+          "alpha": 0.42857142857142855
+        },
+        "pair_4": {
+          "kind": "between",
+          "a": 1,
+          "b": 2,
+          "alpha": 0.5714285714285714
+        },
+        "pair_5": {
+          "kind": "between",
+          "a": 1,
+          "b": 2,
+          "alpha": 0.7142857142857143
+        },
+        "pair_6": {
+          "kind": "between",
+          "a": 1,
+          "b": 2,
+          "alpha": 0.8571428571428571
+        },
+        "pair_7": {
+          "kind": "between",
+          "a": 1,
+          "b": 2,
+          "alpha": 1.0
+        }
+      },
+      "editable_properties": [
+        "visible",
+        "color",
+        "label",
+        "points",
+        "center"
+      ],
+      "evidence_ids": [
+        "F4",
+        "F5",
+        "F6",
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "object_id": "template_lagging",
+      "object_type": "parental_strand",
+      "scientific_identity": {
+        "name": "template lagging",
+        "kind": "parental_strand",
+        "origin_id": "template_lagging"
+      },
+      "scientific_properties": {
+        "polarity": [
+          "5'",
+          "3'"
+        ],
+        "parent_assembly": "replication_fork",
+        "endpoint_labels": {
+          "start": "5'",
+          "end": "3'"
+        }
+      },
+      "asset_id": "strand",
+      "visual_representation": {
+        "visible": true,
+        "color": "#4FC3F7",
+        "label": null,
+        "points": [
+          [
+            -5,
+            -1.2,
+            0
+          ],
+          [
+            0.6,
+            -0.15,
+            0
+          ],
+          [
+            6,
+            -0.15,
+            0
+          ]
+        ],
+        "center": [
+          0.5,
+          -0.15,
+          0.0
+        ]
+      },
+      "anchors": {
+        "center": {
+          "kind": "center"
+        },
+        "start": {
+          "kind": "point",
+          "index": 0
+        },
+        "end": {
+          "kind": "point",
+          "index": -1
+        },
+        "junction": {
+          "kind": "point",
+          "index": 1
+        },
+        "pair_0": {
+          "kind": "between",
+          "a": 1,
+          "b": 2,
+          "alpha": 0.0
+        },
+        "pair_1": {
+          "kind": "between",
+          "a": 1,
+          "b": 2,
+          "alpha": 0.14285714285714285
+        },
+        "pair_2": {
+          "kind": "between",
+          "a": 1,
+          "b": 2,
+          "alpha": 0.2857142857142857
+        },
+        "pair_3": {
+          "kind": "between",
+          "a": 1,
+          "b": 2,
+          "alpha": 0.42857142857142855
+        },
+        "pair_4": {
+          "kind": "between",
+          "a": 1,
+          "b": 2,
+          "alpha": 0.5714285714285714
+        },
+        "pair_5": {
+          "kind": "between",
+          "a": 1,
+          "b": 2,
+          "alpha": 0.7142857142857143
+        },
+        "pair_6": {
+          "kind": "between",
+          "a": 1,
+          "b": 2,
+          "alpha": 0.8571428571428571
+        },
+        "pair_7": {
+          "kind": "between",
+          "a": 1,
+          "b": 2,
+          "alpha": 1.0
+        }
+      },
+      "editable_properties": [
+        "visible",
+        "color",
+        "label",
+        "points",
+        "center"
+      ],
+      "evidence_ids": [
+        "F4",
+        "F5",
+        "F6",
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "object_id": "rna_primer_leading",
+      "object_type": "RNA_primer",
+      "scientific_identity": {
+        "name": "rna primer leading",
+        "kind": "RNA_primer",
+        "origin_id": "rna_primer_leading"
+      },
+      "scientific_properties": {
+        "material": "RNA",
+        "endpoint_labels": {}
+      },
+      "asset_id": "strand",
+      "visual_representation": {
+        "visible": true,
+        "color": "#FFB74D",
+        "label": null,
+        "stroke_width": 7,
+        "endpoint_label_offset": [
+          0,
+          -0.25,
+          0
+        ],
+        "points": [
+          [
+            -4.3,
+            0.8619999999999999,
+            0
+          ],
+          [
+            -3.7,
+            0.778,
+            0
+          ]
+        ],
+        "center": [
+          -4.0,
+          0.82,
+          0.0
+        ]
+      },
+      "anchors": {
+        "center": {
+          "kind": "center"
+        },
+        "start": {
+          "kind": "point",
+          "index": 0
+        },
+        "end": {
+          "kind": "point",
+          "index": -1
+        }
+      },
+      "editable_properties": [
+        "visible",
+        "color",
+        "label",
+        "stroke_width",
+        "endpoint_label_offset",
+        "points",
+        "center"
+      ],
+      "evidence_ids": [
+        "F4",
+        "F5",
+        "F6",
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "object_id": "rna_primer_lagging_1",
+      "object_type": "RNA_primer",
+      "scientific_identity": {
+        "name": "rna primer lagging 1",
+        "kind": "RNA_primer",
+        "origin_id": "rna_primer_lagging_1"
+      },
+      "scientific_properties": {
+        "material": "RNA",
+        "endpoint_labels": {},
+        "parent_template": "template_lagging"
+      },
+      "asset_id": "strand",
+      "visual_representation": {
+        "visible": false,
+        "color": "#FFB74D",
+        "label": null,
+        "stroke_width": 7,
+        "endpoint_label_offset": [
+          0,
+          -0.25,
+          0
+        ],
+        "points": [
+          [
+            -1.2,
+            -0.42799999999999994,
+            0
+          ],
+          [
+            -0.6,
+            -0.34399999999999986,
+            0
+          ]
+        ],
+        "center": [
+          -0.8999999999999999,
+          -0.3859999999999999,
+          0.0
+        ]
+      },
+      "anchors": {
+        "center": {
+          "kind": "center"
+        },
+        "start": {
+          "kind": "point",
+          "index": 0
+        },
+        "end": {
+          "kind": "point",
+          "index": -1
+        }
+      },
+      "editable_properties": [
+        "visible",
+        "color",
+        "label",
+        "stroke_width",
+        "endpoint_label_offset",
+        "points",
+        "center"
+      ],
+      "evidence_ids": [
+        "F4",
+        "F5",
+        "F6",
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "object_id": "rna_primer_lagging_2",
+      "object_type": "RNA_primer",
+      "scientific_identity": {
+        "name": "rna primer lagging 2",
+        "kind": "RNA_primer",
+        "origin_id": "rna_primer_lagging_2"
+      },
+      "scientific_properties": {
+        "material": "RNA",
+        "endpoint_labels": {},
+        "parent_template": "template_lagging"
+      },
+      "asset_id": "strand",
+      "visual_representation": {
+        "visible": false,
+        "color": "#FFB74D",
+        "label": null,
+        "stroke_width": 7,
+        "endpoint_label_offset": [
+          0,
+          -0.25,
+          0
+        ],
+        "points": [
+          [
+            1.1,
+            -0.10599999999999998,
+            0
+          ],
+          [
+            1.7,
+            -0.021999999999999797,
+            0
+          ]
+        ],
+        "center": [
+          1.4,
+          -0.06399999999999989,
+          0.0
+        ]
+      },
+      "anchors": {
+        "center": {
+          "kind": "center"
+        },
+        "start": {
+          "kind": "point",
+          "index": 0
+        },
+        "end": {
+          "kind": "point",
+          "index": -1
+        }
+      },
+      "editable_properties": [
+        "visible",
+        "color",
+        "label",
+        "stroke_width",
+        "endpoint_label_offset",
+        "points",
+        "center"
+      ],
+      "evidence_ids": [
+        "F4",
+        "F5",
+        "F6",
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "object_id": "new_leading",
+      "object_type": "nascent_strand",
+      "scientific_identity": {
+        "name": "new leading",
+        "kind": "nascent_strand",
+        "origin_id": "new_leading"
+      },
+      "scientific_properties": {
+        "material": "DNA",
+        "endpoint_labels": {
+          "start": "5'",
+          "end": "3'"
+        },
+        "growth_port": "end",
+        "template_id": "template_leading",
+        "polarity_evidence_ids": [
+          "X_7574276a",
+          "X_bf28604c"
+        ]
+      },
+      "asset_id": "strand",
+      "visual_representation": {
+        "visible": true,
+        "color": "#69F0AE",
+        "label": null,
+        "stroke_width": 7,
+        "endpoint_label_offset": [
+          0,
+          0.24,
+          0
+        ],
+        "points": [
+          [
+            -3.7,
+            0.778,
+            0
+          ],
+          [
+            0.2,
+            0.232,
+            0
+          ]
+        ],
+        "center": [
+          -1.1,
+          0.4139999999999999,
+          0.0
+        ]
+      },
+      "anchors": {
+        "center": {
+          "kind": "center"
+        },
+        "start": {
+          "kind": "point",
+          "index": 0
+        },
+        "end": {
+          "kind": "point",
+          "index": -1
+        }
+      },
+      "editable_properties": [
+        "visible",
+        "color",
+        "label",
+        "stroke_width",
+        "endpoint_label_offset",
+        "points",
+        "center"
+      ],
+      "evidence_ids": [
+        "F4",
+        "F5",
+        "F6",
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "object_id": "fragment_1",
+      "object_type": "nascent_strand",
+      "scientific_identity": {
+        "name": "fragment 1",
+        "kind": "nascent_strand",
+        "origin_id": "fragment_1"
+      },
+      "scientific_properties": {
+        "material": "DNA",
+        "endpoint_labels": {
+          "start": "5'",
+          "end": "3'"
+        },
+        "growth_port": "end",
+        "template_id": "template_lagging",
+        "polarity_evidence_ids": [
+          "X_7574276a",
+          "X_bf28604c"
+        ],
+        "parent_template": "template_lagging"
+      },
+      "asset_id": "strand",
+      "visual_representation": {
+        "visible": false,
+        "color": "#69F0AE",
+        "label": null,
+        "stroke_width": 7,
+        "endpoint_label_offset": [
+          0,
+          -0.25,
+          0
+        ],
+        "points": [
+          [
+            -1.2,
+            -0.42799999999999994,
+            0
+          ],
+          [
+            -1.22,
+            -0.43079999999999985,
+            0
+          ]
+        ],
+        "center": [
+          -1.21,
+          -0.4293999999999999,
+          0.0
+        ]
+      },
+      "anchors": {
+        "center": {
+          "kind": "center"
+        },
+        "start": {
+          "kind": "point",
+          "index": 0
+        },
+        "end": {
+          "kind": "point",
+          "index": -1
+        }
+      },
+      "editable_properties": [
+        "visible",
+        "color",
+        "label",
+        "stroke_width",
+        "endpoint_label_offset",
+        "points",
+        "center"
+      ],
+      "evidence_ids": [
+        "F4",
+        "F5",
+        "F6",
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "object_id": "fragment_2",
+      "object_type": "nascent_strand",
+      "scientific_identity": {
+        "name": "fragment 2",
+        "kind": "nascent_strand",
+        "origin_id": "fragment_2"
+      },
+      "scientific_properties": {
+        "material": "DNA",
+        "endpoint_labels": {
+          "start": "5'",
+          "end": "3'"
+        },
+        "growth_port": "end",
+        "template_id": "template_lagging",
+        "polarity_evidence_ids": [
+          "X_7574276a",
+          "X_bf28604c"
+        ],
+        "parent_template": "template_lagging"
+      },
+      "asset_id": "strand",
+      "visual_representation": {
+        "visible": false,
+        "color": "#69F0AE",
+        "label": null,
+        "stroke_width": 7,
+        "endpoint_label_offset": [
+          0,
+          -0.25,
+          0
+        ],
+        "points": [
+          [
+            1.1,
+            -0.10599999999999998,
+            0
+          ],
+          [
+            1.08,
+            -0.1087999999999999,
+            0
+          ]
+        ],
+        "center": [
+          1.09,
+          -0.10739999999999994,
+          0.0
+        ]
+      },
+      "anchors": {
+        "center": {
+          "kind": "center"
+        },
+        "start": {
+          "kind": "point",
+          "index": 0
+        },
+        "end": {
+          "kind": "point",
+          "index": -1
+        }
+      },
+      "editable_properties": [
+        "visible",
+        "color",
+        "label",
+        "stroke_width",
+        "endpoint_label_offset",
+        "points",
+        "center"
+      ],
+      "evidence_ids": [
+        "F4",
+        "F5",
+        "F6",
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "object_id": "gap_fill",
+      "object_type": "nascent_strand",
+      "scientific_identity": {
+        "name": "gap fill",
+        "kind": "nascent_strand",
+        "origin_id": "gap_fill"
+      },
+      "scientific_properties": {
+        "material": "DNA",
+        "endpoint_labels": {
+          "start": "5'",
+          "end": "3'"
+        },
+        "growth_port": "end",
+        "template_id": "template_lagging",
+        "polarity_evidence_ids": [
+          "X_7574276a",
+          "X_bf28604c"
+        ]
+      },
+      "asset_id": "strand",
+      "visual_representation": {
+        "visible": false,
+        "color": "#69F0AE",
+        "label": null,
+        "stroke_width": 7,
+        "endpoint_label_offset": [
+          0,
+          -0.25,
+          0
+        ],
+        "points": [
+          [
+            -0.6,
+            -0.34399999999999986,
+            0
+          ],
+          [
+            -0.62,
+            -0.3467999999999999,
+            0
+          ]
+        ],
+        "center": [
+          -0.61,
+          -0.3453999999999999,
+          0.0
+        ]
+      },
+      "anchors": {
+        "center": {
+          "kind": "center"
+        },
+        "start": {
+          "kind": "point",
+          "index": 0
+        },
+        "end": {
+          "kind": "point",
+          "index": -1
+        }
+      },
+      "editable_properties": [
+        "visible",
+        "color",
+        "label",
+        "stroke_width",
+        "endpoint_label_offset",
+        "points",
+        "center"
+      ],
+      "evidence_ids": [
+        "F4",
+        "F5",
+        "F6",
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "object_id": "primase",
+      "object_type": "enzyme",
+      "scientific_identity": {
+        "name": "Primase / Pol alpha",
+        "kind": "enzyme",
+        "origin_id": "primase"
+      },
+      "scientific_properties": {
+        "role": "Primase / Pol alpha"
+      },
+      "asset_id": "primase",
+      "visual_representation": {
+        "visible": false,
+        "color": "#4FC3F7",
+        "label": "Primase / Pol alpha",
+        "label_side": "up",
+        "width": 0.44,
+        "center": [
+          -4.0,
+          0.8200000000000001,
+          0
+        ]
+      },
+      "anchors": {
+        "center": {
+          "kind": "center"
+        }
+      },
+      "editable_properties": [
+        "visible",
+        "color",
+        "label",
+        "label_side",
+        "width",
+        "center"
+      ],
+      "evidence_ids": [
+        "F4",
+        "F5",
+        "F6",
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "object_id": "polymerase_leading",
+      "object_type": "enzyme",
+      "scientific_identity": {
+        "name": "Pol epsilon",
+        "kind": "enzyme",
+        "origin_id": "polymerase_leading"
+      },
+      "scientific_properties": {
+        "role": "Pol epsilon"
+      },
+      "asset_id": "dna_polymerase",
+      "visual_representation": {
+        "visible": false,
+        "color": "#4FC3F7",
+        "label": "Pol epsilon",
+        "label_side": "up",
+        "width": 0.48,
+        "center": [
+          1.5,
+          0.04999999999999982,
+          0
+        ]
+      },
+      "anchors": {
+        "center": {
+          "kind": "center"
+        }
+      },
+      "editable_properties": [
+        "visible",
+        "color",
+        "label",
+        "label_side",
+        "width",
+        "center"
+      ],
+      "evidence_ids": [
+        "F4",
+        "F5",
+        "F6",
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "object_id": "polymerase_lagging",
+      "object_type": "enzyme",
+      "scientific_identity": {
+        "name": "Pol delta",
+        "kind": "enzyme",
+        "origin_id": "polymerase_lagging"
+      },
+      "scientific_properties": {
+        "role": "Pol delta"
+      },
+      "asset_id": "dna_polymerase",
+      "visual_representation": {
+        "visible": false,
+        "color": "#4FC3F7",
+        "label": "Pol delta",
+        "label_side": "down",
+        "width": 0.48,
+        "center": [
+          -1.2,
+          -0.42799999999999994,
+          0
+        ]
+      },
+      "anchors": {
+        "center": {
+          "kind": "center"
+        }
+      },
+      "editable_properties": [
+        "visible",
+        "color",
+        "label",
+        "label_side",
+        "width",
+        "center"
+      ],
+      "evidence_ids": [
+        "F4",
+        "F5",
+        "F6",
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "object_id": "ligase",
+      "object_type": "enzyme",
+      "scientific_identity": {
+        "name": "Ligase",
+        "kind": "enzyme",
+        "origin_id": "ligase"
+      },
+      "scientific_properties": {
+        "role": "Ligase"
+      },
+      "asset_id": "dna_ligase",
+      "visual_representation": {
+        "visible": false,
+        "color": "#4FC3F7",
+        "label": "Ligase",
+        "label_side": "down",
+        "width": 0.48,
+        "center": [
+          -1.2,
+          -0.42799999999999994,
+          0
+        ]
+      },
+      "anchors": {
+        "center": {
+          "kind": "center"
+        }
+      },
+      "editable_properties": [
+        "visible",
+        "color",
+        "label",
+        "label_side",
+        "width",
+        "center"
+      ],
+      "evidence_ids": [
+        "F4",
+        "F5",
+        "F6",
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "object_id": "helicase",
+      "object_type": "enzyme",
+      "scientific_identity": {
+        "name": "Helicase",
+        "kind": "enzyme",
+        "origin_id": "helicase"
+      },
+      "scientific_properties": {
+        "role": "helicase",
+        "representation_precision": "schematic"
+      },
+      "asset_id": "primase",
+      "visual_representation": {
+        "visible": true,
+        "color": "#4FC3F7",
+        "label": "Helicase",
+        "label_side": "up",
+        "width": 0.38,
+        "center": [
+          0.6,
+          0.15,
+          0
+        ]
+      },
+      "anchors": {
+        "center": {
+          "kind": "center"
+        }
+      },
+      "editable_properties": [
+        "visible",
+        "color",
+        "label",
+        "label_side",
+        "width",
+        "center"
+      ],
+      "evidence_ids": [
+        "F4",
+        "F5",
+        "F6",
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    }
+  ],
+  "assemblies": [
+    {
+      "assembly_id": "replication_fork",
+      "assembly_type": "replication_fork",
+      "component_ids": [
+        "template_leading",
+        "template_lagging",
+        "rna_primer_leading",
+        "rna_primer_lagging_1",
+        "rna_primer_lagging_2",
+        "new_leading",
+        "fragment_1",
+        "fragment_2",
+        "gap_fill",
+        "primase",
+        "polymerase_leading",
+        "polymerase_lagging",
+        "ligase",
+        "helicase"
+      ],
+      "relations": [
+        {
+          "source": "template_leading",
+          "target": "template_lagging",
+          "type": "paired_parental_region",
+          "source_anchor": "pair_0",
+          "target_anchor": "pair_0",
+          "draw_link": "pairing_rung_0"
+        },
+        {
+          "source": "template_leading",
+          "target": "template_lagging",
+          "type": "paired_parental_region",
+          "source_anchor": "pair_1",
+          "target_anchor": "pair_1",
+          "draw_link": "pairing_rung_1"
+        },
+        {
+          "source": "template_leading",
+          "target": "template_lagging",
+          "type": "paired_parental_region",
+          "source_anchor": "pair_2",
+          "target_anchor": "pair_2",
+          "draw_link": "pairing_rung_2"
+        },
+        {
+          "source": "template_leading",
+          "target": "template_lagging",
+          "type": "paired_parental_region",
+          "source_anchor": "pair_3",
+          "target_anchor": "pair_3",
+          "draw_link": "pairing_rung_3"
+        },
+        {
+          "source": "template_leading",
+          "target": "template_lagging",
+          "type": "paired_parental_region",
+          "source_anchor": "pair_4",
+          "target_anchor": "pair_4",
+          "draw_link": "pairing_rung_4"
+        },
+        {
+          "source": "template_leading",
+          "target": "template_lagging",
+          "type": "paired_parental_region",
+          "source_anchor": "pair_5",
+          "target_anchor": "pair_5",
+          "draw_link": "pairing_rung_5"
+        },
+        {
+          "source": "template_leading",
+          "target": "template_lagging",
+          "type": "paired_parental_region",
+          "source_anchor": "pair_6",
+          "target_anchor": "pair_6",
+          "draw_link": "pairing_rung_6"
+        },
+        {
+          "source": "template_leading",
+          "target": "template_lagging",
+          "type": "paired_parental_region",
+          "source_anchor": "pair_7",
+          "target_anchor": "pair_7",
+          "draw_link": "pairing_rung_7"
+        },
+        {
+          "source": "helicase",
+          "target": "template_leading",
+          "type": "active_site",
+          "target_anchor": "junction",
+          "offset": [
+            0,
+            0.32,
+            0
+          ]
+        }
+      ],
+      "state_variables": {
+        "phase": "elongating"
+      },
+      "anchor_points": {
+        "junction_upper": {
+          "object_id": "template_leading",
+          "anchor": "junction"
+        },
+        "ligation_site": {
+          "object_id": "fragment_1",
+          "anchor": "start"
+        }
+      },
+      "visual_representation": {
+        "fidelity": "schematic",
+        "editable": true
+      },
+      "allowed_transitions": [
+        "open_fork",
+        "prime",
+        "continuous_extension",
+        "fragment_synthesis",
+        "maturation",
+        "advance_replication_fork"
+      ],
+      "invariants": [
+        {
+          "constraint_id": "stable_components",
+          "predicate": "identity_unchanged",
+          "object_ids": []
+        },
+        {
+          "constraint_id": "exactly_two_parental_strands",
+          "predicate": "count_kind",
+          "object_ids": [],
+          "kind": "parental_strand",
+          "count": 2
+        }
+      ],
+      "evidence_ids": [
+        "F4",
+        "F5",
+        "F6",
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "source": "template_leading",
+      "target": "template_lagging",
+      "type": "paired_parental_region",
+      "source_anchor": "pair_0",
+      "target_anchor": "pair_0",
+      "draw_link": "pairing_rung_0"
+    },
+    {
+      "source": "template_leading",
+      "target": "template_lagging",
+      "type": "paired_parental_region",
+      "source_anchor": "pair_1",
+      "target_anchor": "pair_1",
+      "draw_link": "pairing_rung_1"
+    },
+    {
+      "source": "template_leading",
+      "target": "template_lagging",
+      "type": "paired_parental_region",
+      "source_anchor": "pair_2",
+      "target_anchor": "pair_2",
+      "draw_link": "pairing_rung_2"
+    },
+    {
+      "source": "template_leading",
+      "target": "template_lagging",
+      "type": "paired_parental_region",
+      "source_anchor": "pair_3",
+      "target_anchor": "pair_3",
+      "draw_link": "pairing_rung_3"
+    },
+    {
+      "source": "template_leading",
+      "target": "template_lagging",
+      "type": "paired_parental_region",
+      "source_anchor": "pair_4",
+      "target_anchor": "pair_4",
+      "draw_link": "pairing_rung_4"
+    },
+    {
+      "source": "template_leading",
+      "target": "template_lagging",
+      "type": "paired_parental_region",
+      "source_anchor": "pair_5",
+      "target_anchor": "pair_5",
+      "draw_link": "pairing_rung_5"
+    },
+    {
+      "source": "template_leading",
+      "target": "template_lagging",
+      "type": "paired_parental_region",
+      "source_anchor": "pair_6",
+      "target_anchor": "pair_6",
+      "draw_link": "pairing_rung_6"
+    },
+    {
+      "source": "template_leading",
+      "target": "template_lagging",
+      "type": "paired_parental_region",
+      "source_anchor": "pair_7",
+      "target_anchor": "pair_7",
+      "draw_link": "pairing_rung_7"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "advance_fork",
+      "caption": "Helicase opens parental DNA; the leading 3-prime end grows toward the fork",
+      "transition_ids": [
+        "progress_0",
+        "progress_1",
+        "progress_2",
+        "progress_3",
+        "progress_4",
+        "progress_5",
+        "progress_6",
+        "progress_7",
+        "progress_8",
+        "progress_9",
+        "progress_10",
+        "progress_11",
+        "progress_12",
+        "progress_13",
+        "progress_14",
+        "progress_15",
+        "progress_16",
+        "progress_17",
+        "progress_18",
+        "progress_19",
+        "progress_20",
+        "progress_21",
+        "progress_22",
+        "progress_23",
+        "progress_24",
+        "progress_25",
+        "progress_26",
+        "progress_27",
+        "progress_28",
+        "progress_29",
+        "progress_30",
+        "progress_31",
+        "progress_32",
+        "progress_33",
+        "progress_34",
+        "progress_35",
+        "progress_36",
+        "progress_37",
+        "progress_38",
+        "progress_39",
+        "progress_40",
+        "progress_41",
+        "progress_42",
+        "progress_43",
+        "progress_44",
+        "progress_45",
+        "progress_46",
+        "progress_47",
+        "progress_48",
+        "progress_49",
+        "progress_50",
+        "progress_51"
+      ],
+      "duration": 9.16
+    }
+  ],
+  "state_transitions": [
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                0.6625,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                0.6625,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                0.26249999999999996,
+                -0.025827814569536645,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.025,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_0",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                0.725,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                0.725,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                0.32499999999999996,
+                -0.026637554585152934,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.05,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_1",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                0.7875000000000001,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                0.7875000000000001,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                0.38750000000000007,
+                -0.027429805615550862,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.075,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_2",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                0.8500000000000001,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                0.8500000000000001,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                0.45000000000000007,
+                -0.028205128205128438,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.1,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_3",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                0.9125000000000001,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                0.9125000000000001,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                0.5125000000000001,
+                -0.028964059196617598,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.125,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_4",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                0.975,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                0.975,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                0.575,
+                -0.02970711297071138,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.15,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_5",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                1.0374999999999999,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                1.0374999999999999,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                0.6374999999999998,
+                -0.03043478260869592,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.175,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_6",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                1.1,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                1.1,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                0.7000000000000001,
+                -0.031147540983606725,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.2,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_7",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "rna_primer_lagging_1"
+      ],
+      "params": {
+        "visual_updates": {
+          "rna_primer_lagging_1": {
+            "visible": true,
+            "points": [
+              [
+                -0.6,
+                -0.19262295081967196,
+                0
+              ],
+              [
+                -1.2,
+                -0.29590163934426217,
+                0
+              ]
+            ]
+          }
+        }
+      },
+      "transition_id": "progress_8",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.18,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "extend",
+      "targets": [
+        "fragment_1"
+      ],
+      "params": {
+        "points": [
+          [
+            -1.2,
+            -0.29590163934426217,
+            0
+          ],
+          [
+            -1.42,
+            -0.33377049180327856,
+            0
+          ]
+        ]
+      },
+      "transition_id": "progress_9",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [
+        {
+          "constraint_id": "primer_before_fragment_1",
+          "predicate": "visible",
+          "object_ids": [
+            "rna_primer_lagging_1"
+          ]
+        }
+      ],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.08,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "extend",
+      "targets": [
+        "fragment_1"
+      ],
+      "params": {
+        "points": [
+          [
+            -1.2,
+            -0.29590163934426217,
+            0
+          ],
+          [
+            -1.64,
+            -0.37163934426229495,
+            0
+          ]
+        ]
+      },
+      "transition_id": "progress_10",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [
+        {
+          "constraint_id": "primer_before_fragment_1",
+          "predicate": "visible",
+          "object_ids": [
+            "rna_primer_lagging_1"
+          ]
+        }
+      ],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.08,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "extend",
+      "targets": [
+        "fragment_1"
+      ],
+      "params": {
+        "points": [
+          [
+            -1.2,
+            -0.29590163934426217,
+            0
+          ],
+          [
+            -1.8599999999999999,
+            -0.40950819672131133,
+            0
+          ]
+        ]
+      },
+      "transition_id": "progress_11",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [
+        {
+          "constraint_id": "primer_before_fragment_1",
+          "predicate": "visible",
+          "object_ids": [
+            "rna_primer_lagging_1"
+          ]
+        }
+      ],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.08,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "extend",
+      "targets": [
+        "fragment_1"
+      ],
+      "params": {
+        "points": [
+          [
+            -1.2,
+            -0.29590163934426217,
+            0
+          ],
+          [
+            -2.08,
+            -0.4473770491803277,
+            0
+          ]
+        ]
+      },
+      "transition_id": "progress_12",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [
+        {
+          "constraint_id": "primer_before_fragment_1",
+          "predicate": "visible",
+          "object_ids": [
+            "rna_primer_lagging_1"
+          ]
+        }
+      ],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.08,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "extend",
+      "targets": [
+        "fragment_1"
+      ],
+      "params": {
+        "points": [
+          [
+            -1.2,
+            -0.29590163934426217,
+            0
+          ],
+          [
+            -2.3,
+            -0.4852459016393442,
+            0
+          ]
+        ]
+      },
+      "transition_id": "progress_13",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [
+        {
+          "constraint_id": "primer_before_fragment_1",
+          "predicate": "visible",
+          "object_ids": [
+            "rna_primer_lagging_1"
+          ]
+        }
+      ],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.08,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                1.1625,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                1.1625,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                0.7625000000000001,
+                -0.03184584178499006,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.225,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_14",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                1.225,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                1.225,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                0.8250000000000001,
+                -0.03253012048192794,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.25,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_15",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                1.2875,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                1.2875,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                0.8875000000000001,
+                -0.0332007952286284,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.275,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_16",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                1.3499999999999999,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                1.3499999999999999,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                0.9499999999999998,
+                -0.03385826771653566,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.3,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_17",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                1.4125,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                1.4125,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                1.0125000000000002,
+                -0.03450292397660837,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.325,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_18",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                1.475,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                1.475,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                1.0750000000000002,
+                -0.03513513513513533,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.35,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_19",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                1.5375,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                1.5375,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                1.1375000000000002,
+                -0.03575525812619518,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.375,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_20",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                1.6,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                1.6,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                1.2000000000000002,
+                -0.03636363636363649,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.4,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_21",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                1.6624999999999999,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                1.6624999999999999,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                1.2624999999999997,
+                -0.03696060037523463,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.425,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_22",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                1.725,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                1.725,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                1.3250000000000002,
+                -0.03754646840148712,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.45,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_23",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                1.7874999999999999,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                1.7874999999999999,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                1.3874999999999997,
+                -0.03812154696132597,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.475,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_24",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                1.85,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                1.85,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                1.4500000000000002,
+                -0.0386861313868615,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.5,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_25",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                1.9125,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                1.9125,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                1.5125000000000002,
+                -0.03924050632911413,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.525,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_26",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                1.9750000000000003,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                1.9750000000000003,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                1.5750000000000002,
+                -0.03978494623655915,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.55,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_27",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "rna_primer_lagging_2"
+      ],
+      "params": {
+        "visual_updates": {
+          "rna_primer_lagging_2": {
+            "visible": true,
+            "points": [
+              [
+                1.7,
+                0.0586021505376344,
+                0
+              ],
+              [
+                1.1,
+                -0.0317204301075269,
+                0
+              ]
+            ]
+          }
+        }
+      },
+      "transition_id": "progress_28",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.18,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "extend",
+      "targets": [
+        "fragment_2"
+      ],
+      "params": {
+        "points": [
+          [
+            1.1,
+            -0.0317204301075269,
+            0
+          ],
+          [
+            0.8800000000000001,
+            -0.06483870967741934,
+            0
+          ]
+        ]
+      },
+      "transition_id": "progress_29",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [
+        {
+          "constraint_id": "primer_before_fragment_2",
+          "predicate": "visible",
+          "object_ids": [
+            "rna_primer_lagging_2"
+          ]
+        }
+      ],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.08,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "extend",
+      "targets": [
+        "fragment_2"
+      ],
+      "params": {
+        "points": [
+          [
+            1.1,
+            -0.0317204301075269,
+            0
+          ],
+          [
+            0.6600000000000001,
+            -0.09795698924731178,
+            0
+          ]
+        ]
+      },
+      "transition_id": "progress_30",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [
+        {
+          "constraint_id": "primer_before_fragment_2",
+          "predicate": "visible",
+          "object_ids": [
+            "rna_primer_lagging_2"
+          ]
+        }
+      ],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.08,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "extend",
+      "targets": [
+        "fragment_2"
+      ],
+      "params": {
+        "points": [
+          [
+            1.1,
+            -0.0317204301075269,
+            0
+          ],
+          [
+            0.44000000000000006,
+            -0.13107526881720433,
+            0
+          ]
+        ]
+      },
+      "transition_id": "progress_31",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [
+        {
+          "constraint_id": "primer_before_fragment_2",
+          "predicate": "visible",
+          "object_ids": [
+            "rna_primer_lagging_2"
+          ]
+        }
+      ],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.08,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "extend",
+      "targets": [
+        "fragment_2"
+      ],
+      "params": {
+        "points": [
+          [
+            1.1,
+            -0.0317204301075269,
+            0
+          ],
+          [
+            0.22000000000000008,
+            -0.16419354838709677,
+            0
+          ]
+        ]
+      },
+      "transition_id": "progress_32",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [
+        {
+          "constraint_id": "primer_before_fragment_2",
+          "predicate": "visible",
+          "object_ids": [
+            "rna_primer_lagging_2"
+          ]
+        }
+      ],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.08,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "extend",
+      "targets": [
+        "fragment_2"
+      ],
+      "params": {
+        "points": [
+          [
+            1.1,
+            -0.0317204301075269,
+            0
+          ],
+          [
+            0.0,
+            -0.1973118279569892,
+            0
+          ]
+        ]
+      },
+      "transition_id": "progress_33",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [
+        {
+          "constraint_id": "primer_before_fragment_2",
+          "predicate": "visible",
+          "object_ids": [
+            "rna_primer_lagging_2"
+          ]
+        }
+      ],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.08,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                2.0375,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                2.0375,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                1.6375000000000002,
+                -0.04031971580817062,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.575,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_34",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                2.0999999999999996,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                2.0999999999999996,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                1.6999999999999997,
+                -0.04084507042253527,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.6,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_35",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                2.1625,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                2.1625,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                1.7625000000000002,
+                -0.041361256544502845,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.625,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_36",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                2.225,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                2.225,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                1.8250000000000002,
+                -0.04186851211072673,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.65,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_37",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                2.2875,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                2.2875,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                1.8875000000000002,
+                -0.042367066895368954,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.675,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_38",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                2.35,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                2.35,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                1.9500000000000002,
+                -0.04285714285714304,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.7,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_39",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                2.4125,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                2.4125,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                2.0125,
+                -0.04333895446880287,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.725,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_40",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                2.475,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                2.475,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                2.075,
+                -0.04381270903010048,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.75,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_41",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                2.5375,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                2.5375,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                2.1375,
+                -0.04427860696517427,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.775,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_42",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                2.6000000000000005,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                2.6000000000000005,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                2.2000000000000006,
+                -0.0447368421052633,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.8,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_43",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                2.6625,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                2.6625,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                2.2625,
+                -0.045187601957585866,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.825,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_44",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                2.7249999999999996,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                2.7249999999999996,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                2.3249999999999997,
+                -0.04563106796116512,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.85,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_45",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                2.7875,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                2.7875,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                2.3875,
+                -0.046067415730337236,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.875,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_46",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                2.85,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                2.85,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                2.45,
+                -0.046496815286624305,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.9,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_47",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                2.9125,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                2.9125,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                2.5125,
+                -0.04691943127962106,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.925,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_48",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                2.9749999999999996,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                2.9749999999999996,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                2.5749999999999997,
+                -0.04733542319749218,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.95,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_49",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                3.0375,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                3.0375,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                2.6375,
+                -0.04774494556765174,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 0.975,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_50",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                3.1,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              0.675,
+              0
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                3.1,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ],
+            "center": [
+              0.5,
+              -0.675,
+              0
+            ]
+          },
+          "new_leading": {
+            "points": [
+              [
+                -3.7,
+                0.778,
+                0
+              ],
+              [
+                2.7,
+                -0.048148148148148384,
+                0
+              ]
+            ],
+            "visible": true
+          },
+          "primase": {
+            "visible": false
+          }
+        },
+        "state_updates": {
+          "progress": 1.0,
+          "phase": "elongating"
+        }
+      },
+      "transition_id": "progress_51",
+      "process_id": "advance_replication_fork",
+      "assembly_id": "replication_fork",
+      "preconditions": [],
+      "postconditions": [],
+      "invariants": [],
+      "duration": 0.2,
+      "evidence_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "constraint_id": "exactly_two_parental_strands",
+      "predicate": "count_kind",
+      "object_ids": [],
+      "kind": "parental_strand",
+      "count": 2,
+      "category": "topology",
+      "evidence_ids": [
+        "X_bf28604c"
+      ]
+    },
+    {
+      "constraint_id": "stable_components",
+      "predicate": "identity_unchanged",
+      "object_ids": [],
+      "category": "identity"
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "strand",
+      "format": "polyline",
+      "color": "#4FC3F7",
+      "fidelity": "schematic",
+      "provenance": {
+        "source_type": "original_schematic",
+        "source_url": null,
+        "license": "CC0-1.0"
+      },
+      "editable": [
+        "points",
+        "color",
+        "stroke_width"
+      ],
+      "connectable_ports": [
+        "start",
+        "end"
+      ]
+    },
+    {
+      "asset_id": "bead",
+      "format": "circle",
+      "color": "#FFDD55",
+      "fidelity": "schematic",
+      "provenance": {
+        "source_type": "original_schematic",
+        "source_url": null,
+        "license": "CC0-1.0"
+      },
+      "editable": [
+        "center",
+        "radius"
+      ],
+      "connectable_ports": [
+        "center"
+      ]
+    },
+    {
+      "asset_id": "primase",
+      "format": "svg",
+      "path": "dna/primase.svg",
+      "color": "#55DDEE",
+      "fidelity": "schematic",
+      "provenance": {
+        "source_type": "V2_original_schematic",
+        "source_url": null,
+        "license": "CC0-1.0"
+      },
+      "editable": [
+        "center",
+        "width",
+        "label"
+      ],
+      "connectable_ports": [
+        "active_site"
+      ]
+    },
+    {
+      "asset_id": "dna_polymerase",
+      "format": "svg",
+      "path": "dna/dna_polymerase.svg",
+      "color": "#55DDEE",
+      "fidelity": "schematic",
+      "provenance": {
+        "source_type": "V2_original_schematic",
+        "source_url": null,
+        "license": "CC0-1.0"
+      },
+      "editable": [
+        "center",
+        "width",
+        "label"
+      ],
+      "connectable_ports": [
+        "active_site"
+      ]
+    },
+    {
+      "asset_id": "dna_ligase",
+      "format": "svg",
+      "path": "dna/dna_ligase.svg",
+      "color": "#55DDEE",
+      "fidelity": "schematic",
+      "provenance": {
+        "source_type": "V2_original_schematic",
+        "source_url": null,
+        "license": "CC0-1.0"
+      },
+      "editable": [
+        "center",
+        "width",
+        "label"
+      ],
+      "connectable_ports": [
+        "active_site"
+      ]
+    }
+  ],
+  "evidence_refs": [
+    "F4",
+    "F5",
+    "F6",
+    "X_7574276a",
+    "X_bf28604c"
+  ],
+  "event_order": [],
+  "scientific_simplifications": [
+    "Schematic, not molecular structure or scale. One local fork, no chromosome-end/telomerase claim.",
+    "Primase/Pol alpha label abstracts RNA initiation and short DNA handoff; individual RNaseH/FEN1 steps omitted.",
+    "Show one local primer maturation only; other orange primers remain, final caption must not claim all replication completed.",
+    "Parent fork is camera-fixed; synthesis stays on its opened left side. Pol epsilon is the common undisturbed leading-strand teaching model, not an absolute exclusion of Pol delta.",
+    "Direction constraint is derived from verified5to3/antiparallel facts plus displayed template endpoints, not a universal sign of x.",
+    "Schematic, not molecular structure or scale. One local fork, no chromosome-end/telomerase claim.",
+    "Primase/Pol alpha label abstracts RNA initiation and short DNA handoff; individual RNaseH/FEN1 steps omitted.",
+    "Show one local primer maturation only; other orange primers remain, final caption must not claim all replication completed.",
+    "Parent fork is camera-fixed; synthesis stays on its opened left side. Pol epsilon is the common undisturbed leading-strand teaching model, not an absolute exclusion of Pol delta.",
+    "Direction constraint is derived from verified5to3/antiparallel facts plus displayed template endpoints, not a universal sign of x."
+  ],
+  "provenance": {
+    "plan_origin": "REAL_LLM",
+    "blueprint_hash": "21f31033334b96b9c422a56b39974ff0e573e3cdb177e94d97ee27bcb151a4d9",
+    "knowledge_hash": "5512c5ee96cf5fe8ba7481eb1f2350f7ceee638caad9f596942e9a8550f473a6",
+    "prompt_storyboard_hash": "db850a9a390083cabe60371ea3153eb9611257b53266f2f6bcc17521a8caac87"
+  },
+  "title": "A local replication fork advances",
+  "review_context": {
+    "course_outline": {
+      "section2": "Replication origins and licensing",
+      "section4": "Local fork priming, extension and maturation"
+    },
+    "current_section": 4,
+    "previously_covered_concepts": [
+      "origins",
+      "licensing"
+    ],
+    "required_concepts": [
+      "local fork",
+      "priming",
+      "antiparallel extension",
+      "one local maturation"
+    ],
+    "allowed_simplifications": [
+      "Schematic, not molecular structure or scale. One local fork, no chromosome-end/telomerase claim.",
+      "Primase/Pol alpha label abstracts RNA initiation and short DNA handoff; individual RNaseH/FEN1 steps omitted.",
+      "Show one local primer maturation only; other orange primers remain, final caption must not claim all replication completed.",
+      "Parent fork is camera-fixed; synthesis stays on its opened left side. Pol epsilon is the common undisturbed leading-strand teaching model, not an absolute exclusion of Pol delta.",
+      "Direction constraint is derived from verified5to3/antiparallel facts plus displayed template endpoints, not a universal sign of x.",
+      "Schematic, not molecular structure or scale. One local fork, no chromosome-end/telomerase claim.",
+      "Primase/Pol alpha label abstracts RNA initiation and short DNA handoff; individual RNaseH/FEN1 steps omitted.",
+      "Show one local primer maturation only; other orange primers remain, final caption must not claim all replication completed.",
+      "Parent fork is camera-fixed; synthesis stays on its opened left side. Pol epsilon is the common undisturbed leading-strand teaching model, not an absolute exclusion of Pol delta.",
+      "Direction constraint is derived from verified5to3/antiparallel facts plus displayed template endpoints, not a universal sign of x."
+    ]
+  },
+  "progress_contract": {
+    "process": "advance_replication_fork",
+    "coordinate_frame": "local polyline tangent; endpoint remains fixed",
+    "start": 0.6,
+    "end": 3.1,
+    "expected_unwound_increase": 2.5,
+    "engine": "ProgressDrivenTransition",
+    "data_origin": "CODEX_PROCESS_ENGINEERING",
+    "duration": 10
+  }
+}

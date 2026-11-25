@@ -1,0 +1,36 @@
+--- before
++++ after
+@@ -14,7 +14,7 @@
+         self.lecture.to_edge(LEFT, buff=0.2)
+         self.add(self.lecture)
+ 
+-        # Define fine-grained animation grid (4x4 grid on right side)
++        # Define fine-grained animation grid (6x6 grid on right side)
+         self.grid = {}
+         rows = ["A", "B", "C", "D", "E", "F"]  # Top to bottom
+         cols = ["1", "2", "3", "4", "5", "6"]  # Left to right
+@@ -60,9 +60,7 @@
+ 
+         # === Animation for Lecture Line 1 ===
+         # DNA strand across grid B1..B6 area (centered vertically around B row)
+-        dna_y = self.grid["B1"][1]
+         dna_y = (self.grid["B1"][1] + self.grid["C1"][1]) / 2  # between B and C
+-
+         left_x = self.grid["A1"][0] + 0.1
+         right_x = self.grid["F6"][0] + 0.3
+ 
+@@ -143,14 +141,12 @@
+         for i, x in enumerate(ori_xs):
+             ring = Circle(radius=0.22, color="#FF8A65", stroke_width=4)
+             ring.move_to(np.array([x, dna_y, 0]))
+-            # small hole adjust: draw as ring via two circles? Keep simple circle outline
+             orcs.add(ring)
+             lab = Text("ORC", font_size=16, color="#FF8A65")
+             lab.next_to(ring, DOWN, buff=0.22)
+             orc_labels.add(lab)
+ 
+         # Start ORCs from left off-strand and slide into position
+-        start_offsets = [-0.6 + i * 0.15 for i in range(len(ori_xs))]
+         for i, ring in enumerate(orcs):
+             ring.move_to(np.array([self.grid["A1"][0] - 1.0, dna_y + 0.9, 0]))
+             orc_labels[i].move_to(np.array([self.grid["A1"][0] - 1.0, dna_y + 0.55, 0]))

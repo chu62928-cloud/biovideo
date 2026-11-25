@@ -1,0 +1,448 @@
+
+        You are an expert Manim Community Edition v0.19.0 developer. Fix the following code error with high precision.
+
+        **Error Analysis:**
+        - Error Type: ValueError
+        - Error Category: general
+        - Attempt: 1/3
+        - Strategy: focused_fix
+
+        **Error Message:**
+        ```
+        
+kpathsea: Running mktexfmt latex.fmt
+Can't locate mktexlsr.pl in @INC (@INC contains: /autodl-tmp/code2biovideo/env/share/tlpkg /autodl-tmp/code2biovideo/env/share/texmf-dist/scripts/texlive /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.34.0 /usr/local/share/perl/5.34.0 /usr/lib/x86_64-linux-gnu/perl5/5.34 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.34 /usr/share/perl/5.34 /usr/local/lib/site_perl) at /root/autodl-tmp/code2biovideo/env/bin/mktexfmt line 41.
+BEGIN failed--compilation aborted at /root/autodl-tmp/code2biovideo/env/bin/mktexfmt line 43.
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/cli/render/ │
+│ commands.py:125 in render                                                    │
+│                                                                              │
+│   122 │   │   │   try:                                                       │
+│   123 │   │   │   │   with tempconfig({}):                                   │
+│   124 │   │   │   │   │   scene = SceneClass()                               │
+│ ❱ 125 │   │   │   │   │   scene.render()                                     │
+│   126 │   │   │   except Exception:                                          │
+│   127 │   │   │   │   error_console.print_exception()                        │
+│   128 │   │   │   │   sys.exit(1)                                            │
+│                                                                              │
+│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/scene/scene │
+│ .py:237 in render                                                            │
+│                                                                              │
+│    234 │   │   """                                                           │
+│    235 │   │   self.setup()                                                  │
+│    236 │   │   try:                                                          │
+│ ❱  237 │   │   │   self.construct()                                          │
+│    238 │   │   except EndSceneEarlyException:                                │
+│    239 │   │   │   pass                                                      │
+│    240 │   │   except RerunSceneException:                                   │
+│                                                                              │
+│ /root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthin │
+│ king/0-Linear_transformations_and_matrices/section_2.py:116 in construct     │
+│                                                                              │
+│   113 │   │   e1_arrow = vec_arrow(plane1, (1, 0), "#4D9EFF")                │
+│   114 │   │   e2_arrow = vec_arrow(plane1, (0, 1), "#66FF66")                │
+│   115 │   │                                                                  │
+│ ❱ 116 │   │   e1_label = MathTex("e_1", font_size=24, color="#4D9EFF")       │
+│   117 │   │   e1_label.next_to(e1_arrow.get_end(), DOWN, buff=0.15)          │
+│   118 │   │   e2_label = MathTex("e_2", font_size=24, color="#66FF66")       │
+│   119 │   │   e2_label.next_to(e2_arrow.get_end(), RIGHT, buff=0.15)         │
+│                                                                              │
+│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/mobject/tex │
+│ t/tex_mobject.py:277 in __init__                                             │
+│                                                                              │
+│   274 │   │   self.brace_notation_split_occurred = False                     │
+│   275 │   │   self.tex_strings = self._break_up_tex_strings(tex_strings)     │
+│   276 │   │   try:                                                           │
+│ ❱ 277 │   │   │   super().__init__(                                          │
+│   278 │   │   │   │   self.arg_separator.join(self.tex_strings),             │
+│   279 │   │   │   │   tex_environment=self.tex_environment,                  │
+│   280 │   │   │   │   tex_template=self.tex_template,                        │
+│                                                                              │
+│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/mobject/tex │
+│ t/tex_mobject.py:80 in __init__                                              │
+│                                                                              │
+│    77 │   │                                                                  │
+│    78 │   │   assert isinstance(tex_string, str)                             │
+│    79 │   │   self.tex_string = tex_string                                   │
+│ ❱  80 │   │   file_name = tex_to_svg_file(                                   │
+│    81 │   │   │   self._get_modified_expression(tex_string),                 │
+│    82 │   │   │   environment=self.tex_environment,                          │
+│    83 │   │   │   tex_template=self.tex_template,                            │
+│                                                                              │
+│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/utils/tex_f │
+│ ile_writing.py:65 in tex_to_svg_file                                         │
+│                                                                              │
+│    62 │   if svg_file.exists():                                              │
+│    63 │   │   return svg_file                                                │
+│    64 │                                                                      │
+│ ❱  65 │   dvi_file = compile_tex(                                            │
+│    66 │   │   tex_file,                                                      │
+│    67 │   │   tex_template.tex_compiler,                                     │
+│    68 │   │   tex_template.output_format,                                    │
+│                                                                              │
+│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/utils/tex_f │
+│ ile_writing.py:211 in compile_tex                                            │
+│                                                                              │
+│   208 │   │   cp = subprocess.run(command, stdout=subprocess.DEVNULL)        │
+│   209 │   │   if cp.returncode != 0:                                         │
+│   210 │   │   │   log_file = tex_file.with_suffix(".log")                    │
+│ ❱ 211 │   │   │   print_all_tex_errors(log_file, tex_compiler, tex_file)     │
+│   212 │   │   │   raise ValueError(                                          │
+│   213 │   │   │   │   f"{tex_compiler} error converting to"                  │
+│   214 │   │   │   │   f" {output_format[1:]}. See log output above or"       │
+│                                                                              │
+│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/utils/tex_f │
+│ ile_writing.py:281 in print_all_tex_errors                                   │
+│                                                                              │
+│   278                                                                        │
+│   279 def print_all_tex_errors(log_file: Path, tex_compiler: str, tex_file:  │
+│   280 │   if not log_file.exists():                                          │
+│ ❱ 281 │   │   raise RuntimeError(                                            │
+│   282 │   │   │   f"{tex_compiler} failed but did not produce a log file. "  │
+│   283 │   │   │   "Check your LaTeX installation.",                          │
+│   284 │   │   )                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+RuntimeError: latex failed but did not produce a log file. Check your LaTeX 
+installation.
+
+        ```
+
+        **Current Code:**
+        ```python
+        from manim import *
+import numpy as np
+
+
+class TeachingScene(Scene):
+    def setup_layout(self, title_text, lecture_lines):
+        # BASE
+        self.camera.background_color = "#000000"
+        self.title = Text(title_text, font_size=28, color=WHITE).to_edge(UP)
+        self.add(self.title)
+
+        # Left-side lecture content (bullets with "-")
+        lecture_texts = [Text(line, font_size=22, color=WHITE) for line in lecture_lines]
+        self.lecture = VGroup(*lecture_texts).arrange(DOWN, aligned_edge=LEFT).scale(0.8)
+        self.lecture.to_edge(LEFT, buff=0.2)
+        self.add(self.lecture)
+
+        # Define fine-grained animation grid (4x4 grid on right side)
+        self.grid = {}
+        rows = ["A", "B", "C", "D", "E", "F"]  # Top to bottom
+        cols = ["1", "2", "3", "4", "5", "6"]  # Left to right
+
+        for i, row in enumerate(rows):
+            for j, col in enumerate(cols):
+                x = 0.5 + j * 1
+                y = 2.2 - i * 1
+                self.grid[f"{row}{col}"] = np.array([x, y, 0])
+
+    def place_at_grid(self, mobject, grid_pos, scale_factor=1.0):
+        mobject.scale(scale_factor)
+        mobject.move_to(self.grid[grid_pos])
+        return mobject
+
+    def place_in_area(self, mobject, top_left, bottom_right, scale_factor=1.0):
+        tl_pos = self.grid[top_left]
+        br_pos = self.grid[bottom_right]
+        
+        # Calculate center of the area
+        center_x = (tl_pos[0] + br_pos[0]) / 2
+        center_y = (tl_pos[1] + br_pos[1]) / 2
+        center = np.array([center_x, center_y, 0])
+        
+        mobject.scale(scale_factor)
+        mobject.move_to(center)
+        return mobject
+
+class Section2Scene(TeachingScene):
+    def construct(self):
+        self.setup_layout(
+            "Sec 2: From Transformation to Matrix: The Standard Matrix",
+            [
+                'Any linear transformation has a standard matrix.',
+                'Columns are images of basis vectors e1 and e2.',
+                'For T(x,y)=(2x+y, x-3y), compute T(e1) and T(e2).',
+                'T(e1)=(2,1), T(e2)=(1,-3).',
+                'Matrix A = [[2,1],[1,-3]] represents T.',
+            ],
+        )
+
+        # ------------------------------------------------------------------
+        # Helper: build a coordinate plane fitted into a grid area
+        # ------------------------------------------------------------------
+        def make_plane(top_left, bottom_right, x_range=(-3, 3), y_range=(-3, 3)):
+            tl = self.grid[top_left]
+            br = self.grid[bottom_right]
+            width = abs(br[0] - tl[0]) * 0.9
+            height = abs(tl[1] - br[1]) * 0.9
+            unit = min(width / (x_range[1] - x_range[0]),
+                       height / (y_range[1] - y_range[0]))
+            plane = NumberPlane(
+                x_range=[x_range[0], x_range[1], 1],
+                y_range=[y_range[0], y_range[1], 1],
+                x_length=(x_range[1] - x_range[0]) * unit,
+                y_length=(y_range[1] - y_range[0]) * unit,
+                background_line_style={
+                    "stroke_color": "#CCCCCC",
+                    "stroke_width": 1,
+                    "stroke_opacity": 0.6,
+                },
+                axis_config={"stroke_color": "#CCCCCC", "stroke_width": 1.5},
+            )
+            center_x = (tl[0] + br[0]) / 2
+            center_y = (tl[1] + br[1]) / 2
+            plane.move_to(np.array([center_x, center_y, 0]))
+            return plane, unit
+
+        # ------------------------------------------------------------------
+        # Animation step 1: Standard matrix statement + grid + e1, e2
+        # ------------------------------------------------------------------
+        standard_matrix_title = Text(
+            "Standard Matrix", font_size=30, color="#00FFFF"
+        )
+        self.place_at_grid(standard_matrix_title, 'A4', scale_factor=1.0)
+
+        statement = Text(
+            "T: R^n -> R^m has an m x n matrix A",
+            font_size=22, color="#FFFF99"
+        )
+        self.place_at_grid(statement, 'B4', scale_factor=1.0)
+
+        plane1, unit1 = make_plane('C1', 'F3', x_range=(-3, 3), y_range=(-3, 3))
+
+        origin1 = plane1.coords_to_point(0, 0)
+
+        def vec_arrow(plane, vec, color, unit_scale=1.0):
+            end = plane.coords_to_point(vec[0], vec[1])
+            return Arrow(
+                plane.coords_to_point(0, 0), end,
+                buff=0, color=color, stroke_width=4,
+                max_tip_length_to_length_ratio=0.2,
+            )
+
+        e1_arrow = vec_arrow(plane1, (1, 0), "#4D9EFF")
+        e2_arrow = vec_arrow(plane1, (0, 1), "#66FF66")
+
+        e1_label = MathTex("e_1", font_size=24, color="#4D9EFF")
+        e1_label.next_to(e1_arrow.get_end(), DOWN, buff=0.15)
+        e2_label = MathTex("e_2", font_size=24, color="#66FF66")
+        e2_label.next_to(e2_arrow.get_end(), RIGHT, buff=0.15)
+
+        self.play(Write(standard_matrix_title), run_time=0.8)
+        self.play(Write(statement), run_time=0.8)
+        # Lecture line 1 color
+        self.play(
+            self.lecture[0].animate.set_color("#00FFFF"),
+            Create(plane1),
+            run_time=1.0,
+        )
+        self.play(
+            GrowArrow(e1_arrow),
+            GrowArrow(e2_arrow),
+            run_time=1.0,
+        )
+        self.play(
+            Write(e1_label),
+            Write(e2_label),
+            run_time=0.6,
+        )
+        self.wait(0.4)
+
+        # ------------------------------------------------------------------
+        # Animation step 2: Highlight e1, e2; columns of A statement; transform
+        # ------------------------------------------------------------------
+        columns_statement = Text(
+            "Columns of A = images of basis vectors",
+            font_size=22, color="#FFFF99"
+        )
+        self.place_at_grid(columns_statement, 'B4', scale_factor=1.0)
+
+        self.play(
+            self.lecture[1].animate.set_color("#00FFFF"),
+            run_time=0.8,
+        )
+        self.play(
+            Transform(statement, columns_statement),
+            run_time=0.8,
+        )
+        # Flash e1 and e2
+        self.play(
+            e1_arrow.animate.set_color("#FFFFFF"),
+            e2_arrow.animate.set_color("#FFFFFF"),
+            run_time=0.3,
+        )
+        self.play(
+            e1_arrow.animate.set_color("#4D9EFF"),
+            e2_arrow.animate.set_color("#66FF66"),
+            run_time=0.3,
+        )
+
+        # T(e1) and T(e2) on the grid: T(e1)=(2,1), T(e2)=(1,-3)
+        te1_arrow = vec_arrow(plane1, (2, 1), "#FFA500")
+        te2_arrow = vec_arrow(plane1, (1, -3), "#CC66FF")
+
+        te1_label = MathTex("T(e_1)", font_size=22, color="#FFA500")
+        te1_label.next_to(te1_arrow.get_end(), UP, buff=0.15)
+        te2_label = MathTex("T(e_2)", font_size=22, color="#CC66FF")
+        te2_label.next_to(te2_arrow.get_end(), RIGHT, buff=0.15)
+
+        # Animate the transformation of arrows e1->T(e1) and e2->T(e2)
+        self.play(
+            Transform(e1_arrow.copy(), te1_arrow),
+            Transform(e2_arrow.copy(), te2_arrow),
+            run_time=1.2,
+        )
+        self.play(
+            GrowArrow(te1_arrow),
+            GrowArrow(te2_arrow),
+            run_time=1.0,
+        )
+        self.play(
+            Write(te1_label),
+            Write(te2_label),
+            run_time=0.6,
+        )
+        self.wait(0.4)
+
+        # ------------------------------------------------------------------
+        # Animation step 3: Transformation formula & computations
+        # ------------------------------------------------------------------
+        formula = MathTex(
+            "T(x,y) = (2x+y,\\ x-3y)",
+            font_size=28, color="#FFFF99"
+        )
+        self.place_at_grid(formula, 'C4', scale_factor=1.0)
+
+        self.play(
+            self.lecture[2].animate.set_color("#00FFFF"),
+            run_time=0.8,
+        )
+        self.play(Write(formula), run_time=1.0)
+
+        comp1 = MathTex(
+            "T(e_1) = (2\\cdot 1 + 0,\\ 1 - 3\\cdot 0) = (2,1)",
+            font_size=22, color="#99FF99"
+        )
+        self.place_at_grid(comp1, 'D4', scale_factor=1.0)
+
+        comp2 = MathTex(
+            "T(e_2) = (2\\cdot 0 + 1,\\ 0 - 3\\cdot 1) = (1,-3)",
+            font_size=22, color="#99FF99"
+        )
+        self.place_at_grid(comp2, 'E4', scale_factor=1.0)
+
+        self.play(Write(comp1), run_time=1.2)
+        self.play(Write(comp2), run_time=1.2)
+        self.wait(0.5)
+
+        # ------------------------------------------------------------------
+        # Animation step 4: Show computed vectors on the grid with labels
+        # ------------------------------------------------------------------
+        self.play(
+            self.lecture[3].animate.set_color("#00FFFF"),
+            run_time=0.8,
+        )
+        # Flash the computed vectors
+        self.play(
+            te1_arrow.animate.set_color("#FFD580"),
+            te2_arrow.animate.set_color("#E0B3FF"),
+            run_time=0.3,
+        )
+        self.play(
+            te1_arrow.animate.set_color("#FFA500"),
+            te2_arrow.animate.set_color("#CC66FF"),
+            run_time=0.3,
+        )
+        # Ensure labels are emphasized (no transform, just re-write color)
+        self.play(
+            te1_label.animate.set_color("#FFA500"),
+            te2_label.animate.set_color("#CC66FF"),
+            run_time=0.5,
+        )
+        self.wait(0.3)
+
+        # ------------------------------------------------------------------
+        # Animation step 5: Assemble matrix A with colored columns
+        # ------------------------------------------------------------------
+        self.play(
+            self.lecture[4].animate.set_color("#00FFFF"),
+            run_time=0.8,
+        )
+
+        matrix_bracket = Matrix(
+            [[2, 1], [1, -3]],
+            left_bracket="[",
+            right_bracket="]",
+        )
+        matrix_bracket.get_entries().set_color("#FFFF99")
+        # Color columns: first column orange, second purple
+        matrix_bracket.get_entries()[0].set_color("#FFA500")  # 2
+        matrix_bracket.get_entries()[1].set_color("#CC66FF")  # 1
+        matrix_bracket.get_entries()[2].set_color("#FFA500")  # 1
+        matrix_bracket.get_entries()[3].set_color("#CC66FF")  # -3
+        matrix_bracket.scale(1.0)
+
+        a_equals = MathTex("A =", font_size=36, color="#FFFF99")
+
+        matrix_group = VGroup(a_equals, matrix_bracket).arrange(RIGHT, buff=0.3)
+        self.place_at_grid(matrix_group, 'E4', scale_factor=1.0)
+
+        # Move the computation formulas above to make room (they were D4/E4)
+        # Reposition comps up into D4 and formula stays at C4; matrix at E4 area.
+        # Actually to avoid overlap, place matrix at 'E4' region but comps occupy D4/E4 -
+        # we shift comps to D4 and E4 is where matrix goes; use larger area.
+        # Instead place matrix in area E1-F6.
+        self.remove(matrix_group)
+        matrix_group = VGroup(a_equals, matrix_bracket).arrange(RIGHT, buff=0.3)
+        self.place_in_area(matrix_group, 'E1', 'F6', scale_factor=0.6)
+
+        self.play(Write(matrix_group), run_time=1.2)
+        self.wait(0.3)
+        # Flash to emphasize
+        self.play(
+            matrix_group.animate.set_opacity(0.5),
+            run_time=0.25,
+        )
+        self.play(
+            matrix_group.animate.set_opacity(1.0),
+            run_time=0.25,
+        )
+        self.play(
+            matrix_group.animate.set_opacity(0.5),
+            run_time=0.25,
+        )
+        self.play(
+            matrix_group.animate.set_opacity(1.0),
+            run_time=0.25,
+        )
+        self.wait(1.0)
+        ```
+
+        **Error Context:**
+        {
+  "line_number": 41,
+  "error_line": null,
+  "traceback": "\nkpathsea: Running mktexfmt latex.fmt\nCan't locate mktexlsr.pl in @INC (@INC contains: /autodl-tmp/code2biovideo/env/share/tlpkg /autodl-tmp/code2biovideo/env/share/texmf-dist/scripts/texlive /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.34.0 /usr/local/share/perl/5.34.0 /usr/lib/x86_64-linux-gnu/perl5/5.34 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.34 /usr/share/perl/5.34 /usr/local/lib/site_perl) at /root/autodl-tmp/code2biovideo/env/bin/mktexfmt line 41.\nBEGIN failed--compilation aborted at /root/autodl-tmp/code2biovideo/env/bin/mktexfmt line 43.\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 Traceback (most recent call last) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502 /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/cli/render/ \u2502\n\u2502 commands.py:125 in render                                                    \u2502\n\u2502                                                                              \u2502\n\u2502   122 \u2502   \u2502   \u2502   try:                                                       \u2502\n\u2502   123 \u2502   \u2502   \u2502   \u2502   with tempconfig({}):                                   \u2502\n\u2502   124 \u2502   \u2502   \u2502   \u2502   \u2502   scene = SceneClass()                               \u2502\n\u2502 \u2771 125 \u2502   \u2502   \u2502   \u2502   \u2502   scene.render()                                     \u2502\n\u2502   126 \u2502   \u2502   \u2502   except Exception:                                          \u2502\n\u2502   127 \u2502   \u2502   \u2502   \u2502   error_console.print_exception()                        \u2502\n\u2502   128 \u2502   \u2502   \u2502   \u2502   sys.exit(1)                                            \u2502\n\u2502                                                                              \u2502\n\u2502 /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/scene/scene \u2502\n\u2502 .py:237 in render                                                            \u2502\n\u2502                                                                              \u2502\n\u2502    234 \u2502   \u2502   \"\"\"                                                           \u2502\n\u2502    235 \u2502   \u2502   self.setup()                                                  \u2502\n\u2502    236 \u2502   \u2502   try:                                                          \u2502\n\u2502 \u2771  237 \u2502   \u2502   \u2502   self.construct()                                          \u2502\n\u2502    238 \u2502   \u2502   except EndSceneEarlyException:                                \u2502\n\u2502    239 \u2502   \u2502   \u2502   pass                                                      \u2502\n\u2502    240 \u2502   \u2502   except RerunSceneException:                                   \u2502\n\u2502                                                                              \u2502\n\u2502 /root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthin \u2502\n\u2502 king/0-Linear_transformations_and_matrices/section_2.py:116 in construct     \u2502\n\u2502                                                                              \u2502\n\u2502   113 \u2502   \u2502   e1_arrow = vec_arrow(plane1, (1, 0), \"#4D9EFF\")                \u2502\n\u2502   114 \u2502   \u2502   e2_arrow = vec_arrow(plane1, (0, 1), \"#66FF66\")                \u2502\n\u2502   115 \u2502   \u2502                                                                  \u2502\n\u2502 \u2771 116 \u2502   \u2502   e1_label = MathTex(\"e_1\", font_size=24, color=\"#4D9EFF\")       \u2502\n\u2502   117 \u2502   \u2502   e1_label.next_to(e1_arrow.get_end(), DOWN, buff=0.15)          \u2502\n\u2502   118 \u2502   \u2502   e2_label = MathTex(\"e_2\", font_size=24, color=\"#66FF66\")       \u2502\n\u2502   119 \u2502   \u2502   e2_label.next_to(e2_arrow.get_end(), RIGHT, buff=0.15)         \u2502\n\u2502                                                                              \u2502\n\u2502 /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/mobject/tex \u2502\n\u2502 t/tex_mobject.py:277 in __init__                                             \u2502\n\u2502                                                                              \u2502\n\u2502   274 \u2502   \u2502   self.brace_notation_split_occurred = False                     \u2502\n\u2502   275 \u2502   \u2502   self.tex_strings = self._break_up_tex_strings(tex_strings)     \u2502\n\u2502   276 \u2502   \u2502   try:                                                           \u2502\n\u2502 \u2771 277 \u2502   \u2502   \u2502   super().__init__(                                          \u2502\n\u2502   278 \u2502   \u2502   \u2502   \u2502   self.arg_separator.join(self.tex_strings),             \u2502\n\u2502   279 \u2502   \u2502   \u2502   \u2502   tex_environment=self.tex_environment,                  \u2502\n\u2502   280 \u2502   \u2502   \u2502   \u2502   tex_template=self.tex_template,                        \u2502\n\u2502                                                                              \u2502\n\u2502 /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/mobject/tex \u2502\n\u2502 t/tex_mobject.py:80 in __init__                                              \u2502\n\u2502                                                                              \u2502\n\u2502    77 \u2502   \u2502                                                                  \u2502\n\u2502    78 \u2502   \u2502   assert isinstance(tex_string, str)                             \u2502\n\u2502    79 \u2502   \u2502   self.tex_string = tex_string                                   \u2502\n\u2502 \u2771  80 \u2502   \u2502   file_name = tex_to_svg_file(                                   \u2502\n\u2502    81 \u2502   \u2502   \u2502   self._get_modified_expression(tex_string),                 \u2502\n\u2502    82 \u2502   \u2502   \u2502   environment=self.tex_environment,                          \u2502\n\u2502    83 \u2502   \u2502   \u2502   tex_template=self.tex_template,                            \u2502\n\u2502                                                                              \u2502\n\u2502 /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/utils/tex_f \u2502\n\u2502 ile_writing.py:65 in tex_to_svg_file                                         \u2502\n\u2502                                                                              \u2502\n\u2502    62 \u2502   if svg_file.exists():                                              \u2502\n\u2502    63 \u2502   \u2502   return svg_file                                                \u2502\n\u2502    64 \u2502                                                                      \u2502\n\u2502 \u2771  65 \u2502   dvi_file = compile_tex(                                            \u2502\n\u2502    66 \u2502   \u2502   tex_file,                                                      \u2502\n\u2502    67 \u2502   \u2502   tex_template.tex_compiler,                                     \u2502\n\u2502    68 \u2502   \u2502   tex_template.output_format,                                    \u2502\n\u2502                                                                              \u2502\n\u2502 /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/utils/tex_f \u2502\n\u2502 ile_writing.py:211 in compile_tex                                            \u2502\n\u2502                                                                              \u2502\n\u2502   208 \u2502   \u2502   cp = subprocess.run(command, stdout=subprocess.DEVNULL)        \u2502\n\u2502   209 \u2502   \u2502   if cp.returncode != 0:                                         \u2502\n\u2502   210 \u2502   \u2502   \u2502   log_file = tex_file.with_suffix(\".log\")                    \u2502\n\u2502 \u2771 211 \u2502   \u2502   \u2502   print_all_tex_errors(log_file, tex_compiler, tex_file)     \u2502\n\u2502   212 \u2502   \u2502   \u2502   raise ValueError(                                          \u2502\n\u2502   213 \u2502   \u2502   \u2502   \u2502   f\"{tex_compiler} error converting to\"                  \u2502\n\u2502   214 \u2502   \u2502   \u2502   \u2502   f\" {output_format[1:]}. See log output above or\"       \u2502\n\u2502                                                                              \u2502\n\u2502 /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/utils/tex_f \u2502\n\u2502 ile_writing.py:281 in print_all_tex_errors                                   \u2502\n\u2502                                                                              \u2502\n\u2502   278                                                                        \u2502\n\u2502   279 def print_all_tex_errors(log_file: Path, tex_compiler: str, tex_file:  \u2502\n\u2502   280 \u2502   if not log_file.exists():                                          \u2502\n\u2502 \u2771 281 \u2502   \u2502   raise RuntimeError(                                            \u2502\n\u2502   282 \u2502   \u2502   \u2502   f\"{tex_compiler} failed but did not produce a log file. \"  \u2502\n\u2502   283 \u2502   \u2502   \u2502   \"Check your LaTeX installation.\",                          \u2502\n\u2502   284 \u2502   \u2502   )                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\nRuntimeError: latex failed but did not produce a log file. Check your LaTeX \ninstallation.\n",
+  "specific_error": "installation."
+}
+
+        **Suggestions:**
+        - The value is incorrect. Check the validity of the parameter value
+        
+            **FOCUSED FIX (Attempt 1):**
+            - Only fix the specific error mentioned
+            - Maintain the original code structure
+            - Make minimal necessary changes
+            - Ensure all imports are correct for Manim CE v0.19.0
+            - Verify method names and parameters match the API
+            
+
+            **Requirements:**
+            1. Output ONLY the complete, fixed Python code
+            2. No explanations or comments outside the code
+            3. Ensure the code is syntactically correct
+            4. Test all variable names and method calls
+            5. Use proper Manim CE v0.19.0 syntax
+
+            **Code:**

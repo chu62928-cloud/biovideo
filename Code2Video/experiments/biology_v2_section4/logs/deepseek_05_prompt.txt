@@ -1,0 +1,1164 @@
+You are the Code2Video DeepSeek Coder for a single controlled biology experiment.
+Use Manim Community 0.19.0, 854x480, 15 fps. Output a COMPLETE Python module defining Section4Scene(BiologyScene).
+Allowed imports only: manim, numpy, math, biology_runtime. No filesystem/network/process calls; no eval/exec/getattr/setattr.
+biology_runtime provides BiologyScene, load_bio_asset(asset_id,width=...), and np is available from manim.
+BiologyScene is a generic instrumentation base, NOT a full lesson. You must write the entire animation, including all five events. Do not override setup, tear_down, update_mobjects, or runtime helpers.
+Methods: register_object(object_id, mobject, role="molecule", **metadata) returns the same Mobject and records a UNIQUE persistent ID; duplicate IDs forbidden. role="label" for text, role="anchor" for an invisible small Dot that tracks an active site. You must add/show the mobjects yourself.
+bind_near(enzyme_id,target_anchor_id,offset=(0,0,0),max_distance=0.8) attaches an updater; move the anchor, not the enzyme, during active synthesis. Enzyme and label should follow the SAME moving group/active site, never independent drifting.
+mark_event("event_1_fork") etc records start of each event; use all FIVE exact event IDs at the requested starts. Total 25-35 seconds, aim exactly 30. Sum play/wait run_times explicitly. Avoid Text glyph drawing overhead: simple FadeIn/FadeOut captions.
+Keep all content in x=[-6.5,6.5], y=[-3.5,3.5]. Use nearly the full frame for mechanism; no fixed left lecture panel. Title font 22, caption font 20, molecular labels 16-18. At most 1-2 main labels at any moment, changing English captions along bottom; the 5prime/3prime endpoint markers can be small separate short labels. Do not use LaTeX or nonstandard fonts.
+Register these actual molecular Mobjects using EXACT IDs: replication_fork, template_leading, template_lagging, new_leading_strand, new_lagging_strand, primase, rna_primer, dna_polymerase_leading, dna_polymerase_lagging, okazaki_fragment, dna_ligase, incoming_nucleotide. Additional objects use unique meaningful IDs, e.g. rna_primer_lagging_1, rna_primer_lagging_2, okazaki_fragment_2, nucleotide_leading_01. Groups should contain the actual drawn children, not disconnected empty stand-ins.
+Register nucleotide children individually (unique IDs, role="nucleotide", strand="leading" or "lagging", fragment="...", material="DNA"), so growth order can be checked from geometry. RNA primer children use material="RNA". Stable groups can be registered before adding growing children.
+Use at least two bind_near relations for leading/lagging DNA polymerase active sites. Show primase at the site it primes. Different geometry, shape and short names distinguish enzymes; color alone is insufficient.
+The fork is open to the LEFT and parental duplex lies to its RIGHT. Leading upper TEMPLATE runs 3prime-left to 5prime-right; the separate new strand just BELOW it grows RIGHT (5prime-left to growing3prime-right). Lower TEMPLATE runs 5prime-left to 3prime-right; new lagging fragments just ABOVE it each grow LEFT from their own primer3prime end. The fork may stay fixed to camera with schematic exposure progression; do not change strand identity.
+At event5, visibly remove RNA primer first, leave space, add DNA nucleotides with polymerase into that space, then ligase seals only a small nick. Do not use ligase to draw a long green segment; it does not synthesize DNA or turn orange RNA into green DNA.
+Never recolor a template to represent a new strand. Distinct Mobjects must remain spatially distinguishable. Polymerase must visibly accompany incremental nucleotide additions, not jump before/after a fully formed line.
+Keep code clear and robust; standard Create/FadeIn/FadeOut/Transform/animate only. Labels should be positioned relative to their own object. Avoid unsupported kwargs such as stroke_dash. Return ONLY Python code in one fenced python block.
+FIXED MECHANISM SPEC:
+{
+  "schema_version": "2.0",
+  "scope": "Simplified eukaryotic replication, Section4 only; schematic, not molecular scale",
+  "colors": {
+    "template": "#4FC3F7",
+    "new_dna": "#69F0AE",
+    "rna": "#FFB74D",
+    "helicase": "#FFEB3B",
+    "primase": "#BA68C8",
+    "polymerase": "#4DD0E1",
+    "ligase": "#FFD54F"
+  },
+  "objects": [
+    {
+      "id": "replication_fork",
+      "name_zh": "复制叉",
+      "name_en": "Replication fork",
+      "type": "structure",
+      "color": "#4FC3F7",
+      "asset_path": null,
+      "parent": "replicon",
+      "relative_anchor": "fork_junction",
+      "allowed_actions": [
+        "unwind",
+        "translate_as_unit"
+      ],
+      "constraints": [
+        "stable_identity",
+        "coupled_motion"
+      ]
+    },
+    {
+      "id": "template_leading",
+      "name_zh": "前导链模板",
+      "name_en": "Leading-strand template",
+      "type": "template_strand",
+      "color": "#4FC3F7",
+      "asset_path": null,
+      "parent": "replication_fork",
+      "relative_anchor": "upper_branch",
+      "allowed_actions": [
+        "unwind"
+      ],
+      "constraints": [
+        "3prime_left_5prime_right",
+        "separate_from_new_DNA"
+      ]
+    },
+    {
+      "id": "template_lagging",
+      "name_zh": "后随链模板",
+      "name_en": "Lagging-strand template",
+      "type": "template_strand",
+      "color": "#4FC3F7",
+      "asset_path": null,
+      "parent": "replication_fork",
+      "relative_anchor": "lower_branch",
+      "allowed_actions": [
+        "unwind"
+      ],
+      "constraints": [
+        "5prime_left_3prime_right",
+        "antiparallel_templates"
+      ]
+    },
+    {
+      "id": "new_leading_strand",
+      "name_zh": "前导新生链",
+      "name_en": "New leading strand",
+      "type": "nascent_strand",
+      "color": "#69F0AE",
+      "asset_path": null,
+      "parent": "replication_fork",
+      "relative_anchor": "below_upper_template",
+      "allowed_actions": [
+        "extend_continuously"
+      ],
+      "constraints": [
+        "5prime_left_3prime_right",
+        "starts_at_primer_3prime"
+      ]
+    },
+    {
+      "id": "new_lagging_strand",
+      "name_zh": "后随新生链",
+      "name_en": "New lagging strand",
+      "type": "nascent_strand",
+      "color": "#69F0AE",
+      "asset_path": null,
+      "parent": "replication_fork",
+      "relative_anchor": "above_lower_template",
+      "allowed_actions": [
+        "extend_in_fragments",
+        "mature"
+      ],
+      "constraints": [
+        "fragment_5prime_right_3prime_left",
+        "not_same_object_as_template"
+      ]
+    },
+    {
+      "id": "primase",
+      "name_zh": "引物酶",
+      "name_en": "Primase",
+      "type": "enzyme",
+      "color": "#BA68C8",
+      "asset_path": "assets/primase.svg",
+      "parent": "replication_fork",
+      "relative_anchor": "primer_initiation_site",
+      "allowed_actions": [
+        "bind",
+        "make_RNA",
+        "release"
+      ],
+      "constraints": [
+        "stays_near_active_primer_site"
+      ]
+    },
+    {
+      "id": "rna_primer",
+      "name_zh": "RNA引物",
+      "name_en": "RNA primer",
+      "type": "primer",
+      "color": "#FFB74D",
+      "asset_path": "assets/rna_primer.svg",
+      "parent": "nascent_strand",
+      "relative_anchor": "5prime_start",
+      "allowed_actions": [
+        "appear_incrementally",
+        "be_removed"
+      ],
+      "constraints": [
+        "must_precede_DNA",
+        "3prime_extension_end"
+      ]
+    },
+    {
+      "id": "dna_polymerase_leading",
+      "name_zh": "前导链DNA聚合酶",
+      "name_en": "Leading DNA polymerase",
+      "type": "enzyme",
+      "color": "#4DD0E1",
+      "asset_path": "assets/dna_polymerase.svg",
+      "parent": "new_leading_strand",
+      "relative_anchor": "growing_3prime_end",
+      "allowed_actions": [
+        "bind",
+        "extend",
+        "release"
+      ],
+      "constraints": [
+        "near_growing_end",
+        "5to3_only"
+      ]
+    },
+    {
+      "id": "dna_polymerase_lagging",
+      "name_zh": "后随链DNA聚合酶",
+      "name_en": "Lagging DNA polymerase",
+      "type": "enzyme",
+      "color": "#4DD0E1",
+      "asset_path": "assets/dna_polymerase.svg",
+      "parent": "okazaki_fragment",
+      "relative_anchor": "growing_3prime_end",
+      "allowed_actions": [
+        "bind",
+        "extend",
+        "fill_DNA_gap",
+        "release"
+      ],
+      "constraints": [
+        "near_growing_end",
+        "5to3_leftward"
+      ]
+    },
+    {
+      "id": "okazaki_fragment",
+      "name_zh": "冈崎片段",
+      "name_en": "Okazaki fragment",
+      "type": "DNA_fragment",
+      "color": "#69F0AE",
+      "asset_path": "assets/okazaki_fragment.svg",
+      "parent": "new_lagging_strand",
+      "relative_anchor": "own_RNA_primer",
+      "allowed_actions": [
+        "extend_left",
+        "mature",
+        "join"
+      ],
+      "constraints": [
+        "own_primer_first",
+        "more_than_one_fragment"
+      ]
+    },
+    {
+      "id": "dna_ligase",
+      "name_zh": "DNA连接酶",
+      "name_en": "DNA ligase",
+      "type": "enzyme",
+      "color": "#FFD54F",
+      "asset_path": "assets/dna_ligase.svg",
+      "parent": "new_lagging_strand",
+      "relative_anchor": "filled_DNA_nick",
+      "allowed_actions": [
+        "bind",
+        "seal_nick",
+        "release"
+      ],
+      "constraints": [
+        "after_primer_removal_and_DNA_fill",
+        "does_not_convert_RNA_into_DNA"
+      ]
+    },
+    {
+      "id": "incoming_nucleotide",
+      "name_zh": "待加入核苷酸",
+      "name_en": "Incoming nucleotide",
+      "type": "nucleotide",
+      "color": "#69F0AE",
+      "asset_path": "assets/nucleotide.svg",
+      "parent": "nascent_strand",
+      "relative_anchor": "growing_3prime_end",
+      "allowed_actions": [
+        "approach",
+        "incorporate"
+      ],
+      "constraints": [
+        "new_DNA_only",
+        "addition_at_3prime"
+      ]
+    }
+  ],
+  "coordinate_convention": {
+    "fork_progress": "+x",
+    "unreplicated_duplex": "right of fork",
+    "opened_templates": "left of fork",
+    "template_leading": "upper: 3prime at left, 5prime at right",
+    "template_lagging": "lower: 5prime at left, 3prime at right",
+    "new_leading": "below upper template, grows +x, 5prime left to 3prime right",
+    "new_lagging": "above lower template, each fragment grows -x, 5prime right to 3prime left"
+  },
+  "constraints": [
+    {
+      "id": "distinct_strands",
+      "rule": "Blue template and green newly synthesized DNA are different Mobjects; never recolor the template to stand in for synthesis."
+    },
+    {
+      "id": "antiparallel",
+      "rule": "Show template 3prime-left/5prime-right upper; template 5prime-left/3prime-right lower. New strand polarities oppose their own templates."
+    },
+    {
+      "id": "primer_first",
+      "rule": "Primase must bind and form orange RNA primer before polymerase extends new DNA from its exposed 3prime end."
+    },
+    {
+      "id": "synthesis_direction",
+      "rule": "Add visible individual DNA nucleotides at growing 3prime end, +x on leading; -x within each lagging fragment."
+    },
+    {
+      "id": "leading",
+      "rule": "Leading synthesis is continuous relative to fork progress."
+    },
+    {
+      "id": "lagging",
+      "rule": "Show at least two separate primers and Okazaki fragments; each new primer is nearer the advancing fork; each fragment grows away from fork."
+    },
+    {
+      "id": "maturation",
+      "rule": "Remove the RNA primer first, visibly leave a gap, fill with DNA by polymerase, then ligase seals only a nick. Never show ligase making DNA or turning orange RNA directly green."
+    },
+    {
+      "id": "enzyme_contact",
+      "rule": "Bind enzyme geometry to active-site anchors (<=0.8 scene units) during its work; keep fork relationships continuous."
+    },
+    {
+      "id": "identity",
+      "rule": "Retain the same stable replication_fork and template objects across all five events; do not recreate an unrelated pair of templates."
+    }
+  ],
+  "validation": {
+    "target_duration_seconds": [
+      25,
+      35
+    ],
+    "max_active_main_labels": 2,
+    "no_static_half_screen_lecture": true
+  },
+  "references": [
+    {
+      "url": "https://www.nature.com/articles/s41467-022-34751-2",
+      "supports": "RNA-primer processing precedes DNA nick ligation; do not conflate the steps"
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK21113/",
+      "supports": "Primase-Pol alpha priming and different roles of polymerases in eukaryotic synthesis"
+    }
+  ]
+}
+FIXED STORYBOARD (identical across A1/A2):
+{
+  "title": "DNA Replication in Eukaryotic Cells — Priming, Leading and Lagging Strand Synthesis",
+  "scene_class": "Section4Scene",
+  "duration_target": 30,
+  "events": [
+    {
+      "id": "event_1_fork",
+      "window_seconds": [
+        0,
+        3
+      ],
+      "caption": "One fork, two antiparallel templates",
+      "action": "Start with an already-open blue Y-shaped fork linked to a short parental duplex on the right. Establish upper/lower template end polarities; keep it throughout."
+    },
+    {
+      "id": "event_2_priming",
+      "window_seconds": [
+        3,
+        8
+      ],
+      "caption": "Primase makes an RNA starting point",
+      "action": "Purple primase contacts a site; orange RNA primer appears nucleotide by nucleotide. Mark exposed 3prime end. A primed 5prime end does not grow."
+    },
+    {
+      "id": "event_3_extension",
+      "window_seconds": [
+        8,
+        16
+      ],
+      "caption": "DNA polymerase extends 5prime to 3prime",
+      "action": "Cyan polymerase remains at the growing end; separate green nucleotide Mobjects accumulate along the upper blue template toward fork. Keep correct 5prime and 3prime labels."
+    },
+    {
+      "id": "event_4_two_modes",
+      "window_seconds": [
+        16,
+        24
+      ],
+      "caption": "Continuous leading; short lagging fragments",
+      "action": "At the same fork, leading synthesis continues. Lower template gets at least two orange primers nearer advancing fork; each green fragment extends left from its own RNA 3prime end, away from fork. Use stable identities and attached active-site anchors."
+    },
+    {
+      "id": "event_5_maturation",
+      "window_seconds": [
+        24,
+        30
+      ],
+      "caption": "Remove RNA, fill DNA, then seal a nick",
+      "action": "First fade/remove a lower orange primer; show gap. Polymerase adds green DNA into gap, leaving a nick; only then gold ligase contacts nick and seals without adding DNA. End with local copied duplexes."
+    }
+  ],
+  "continuity": "One stable fork and stable blue templates persist; concise changing English caption, no left lecture panel; at most 1–2 main callouts at once.",
+  "required_runtime_events": [
+    "event_1_fork",
+    "event_2_priming",
+    "event_3_extension",
+    "event_4_two_modes",
+    "event_5_maturation"
+  ]
+}
+ASSET CONDITION A2: Use load_bio_asset for the enzyme bodies, primer/nucleotide components as useful. All SVG components are independently movable; do NOT paste a whole static pathway diagram. Register the resulting SVG Mobjects using the same mechanism IDs. DNA backbone/fork and progressive synthesis still require explicit geometry and incremental motion.
+REGISTRY:
+{
+  "schema_version": "1.0",
+  "style": "Original editable schematic components; not molecular structures",
+  "assets": [
+    {
+      "id": "dna_double_helix",
+      "filename": "dna_double_helix.svg",
+      "source_url": null,
+      "author": "Original programmatic schematic for Biology-Aware Code2Video V2",
+      "license": "CC0-1.0",
+      "attribution": "Original schematic; optional credit to this experiment",
+      "sha256": "05fad222dbf1d75843b5b92d36af319af7bf97b3b99380250cfc9801ab0a2522",
+      "independently_animated": true,
+      "not_real_protein_structure": true,
+      "color": "#4FC3F7"
+    },
+    {
+      "id": "replication_fork",
+      "filename": "replication_fork.svg",
+      "source_url": null,
+      "author": "Original programmatic schematic for Biology-Aware Code2Video V2",
+      "license": "CC0-1.0",
+      "attribution": "Original schematic; optional credit to this experiment",
+      "sha256": "ac6c928ac54fe762d2261e98e8ea13ff6b791aba1f80ea16e2cef24afdcfc115",
+      "independently_animated": true,
+      "not_real_protein_structure": true,
+      "color": "#4FC3F7"
+    },
+    {
+      "id": "primase",
+      "filename": "primase.svg",
+      "source_url": null,
+      "author": "Original programmatic schematic for Biology-Aware Code2Video V2",
+      "license": "CC0-1.0",
+      "attribution": "Original schematic; optional credit to this experiment",
+      "sha256": "cc4bc206504c28710e4a706862f7c1a39e57c4f6a9ec750d1c53ad9a88b87d8d",
+      "independently_animated": true,
+      "not_real_protein_structure": true,
+      "color": "#BA68C8"
+    },
+    {
+      "id": "dna_polymerase",
+      "filename": "dna_polymerase.svg",
+      "source_url": null,
+      "author": "Original programmatic schematic for Biology-Aware Code2Video V2",
+      "license": "CC0-1.0",
+      "attribution": "Original schematic; optional credit to this experiment",
+      "sha256": "7f5f603d56aa7732533c9f99bd066b97783d5ef0193adf7c5ebc6a1586438a9d",
+      "independently_animated": true,
+      "not_real_protein_structure": true,
+      "color": "#4DD0E1"
+    },
+    {
+      "id": "dna_ligase",
+      "filename": "dna_ligase.svg",
+      "source_url": null,
+      "author": "Original programmatic schematic for Biology-Aware Code2Video V2",
+      "license": "CC0-1.0",
+      "attribution": "Original schematic; optional credit to this experiment",
+      "sha256": "d0370b8ebe46a23926c16532e06880a7830b13f4bdf4b18352815dbb1b919af2",
+      "independently_animated": true,
+      "not_real_protein_structure": true,
+      "color": "#FFD54F"
+    },
+    {
+      "id": "rna_primer",
+      "filename": "rna_primer.svg",
+      "source_url": null,
+      "author": "Original programmatic schematic for Biology-Aware Code2Video V2",
+      "license": "CC0-1.0",
+      "attribution": "Original schematic; optional credit to this experiment",
+      "sha256": "340e8b4d8e207cc066ef976fc49737cd7964b216fe4ef8350e0be38c57497318",
+      "independently_animated": true,
+      "not_real_protein_structure": true,
+      "color": "#FFB74D"
+    },
+    {
+      "id": "nucleotide",
+      "filename": "nucleotide.svg",
+      "source_url": null,
+      "author": "Original programmatic schematic for Biology-Aware Code2Video V2",
+      "license": "CC0-1.0",
+      "attribution": "Original schematic; optional credit to this experiment",
+      "sha256": "6023436b0c956906e2246f3bdaa052f77e1bdcd1c5e7007abbd5c5cbbbe5e08f",
+      "independently_animated": true,
+      "not_real_protein_structure": true,
+      "color": "#69F0AE"
+    },
+    {
+      "id": "okazaki_fragment",
+      "filename": "okazaki_fragment.svg",
+      "source_url": null,
+      "author": "Original programmatic schematic for Biology-Aware Code2Video V2",
+      "license": "CC0-1.0",
+      "attribution": "Original schematic; optional credit to this experiment",
+      "sha256": "c34af92beda8cde2518a3a321539d6cc3f8f2274bb4601eb8d8c2727f97b0172",
+      "independently_animated": true,
+      "not_real_protein_structure": true,
+      "color": "#69F0AE"
+    }
+  ],
+  "third_party_assets_used": false,
+  "selection_note": "Original simple components selected for independent animation, consistent polarity/color and clear licence provenance; no unverified third-party material included."
+}
+Your previous full module failed validation/rendering. Return a corrected COMPLETE module, preserving the same five events and condition.
+ERROR:
+Full Manim render failed; see stderr.log
+eIn(Rectangle), etc.:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                                            
+
+Animation 25: FadeIn(Rectangle), etc.:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                                            
+
+Animation 26: FadeOut(SVGMobject), etc.:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                                              
+
+Animation 27: Transform(Text('One fork, two antiparallel templates')):   0%|          | 0/6 [00:00<?, ?it/s]
+Animation 27: Transform(Text('One fork, two antiparallel templates')):  67%|██████▋   | 4/6 [00:00<00:00, 36.80it/s]
+                                                                                                                    
+
+Animation 28: FadeIn(SVGMobject), etc.:   0%|          | 0/5 [00:00<?, ?it/s]
+                                                                             
+
+Animation 29: Create(Rectangle):   0%|          | 0/2 [00:00<?, ?it/s]
+                                                                      
+
+Animation 30: Create(Rectangle):   0%|          | 0/2 [00:00<?, ?it/s]
+                                                                      
+
+Animation 31: Create(Rectangle):   0%|          | 0/2 [00:00<?, ?it/s]
+                                                                      
+
+Animation 32: FadeOut(SVGMobject), etc.:   0%|          | 0/5 [00:00<?, ?it/s]
+                                                                              
+
+Animation 33: FadeIn(SVGMobject), etc.:   0%|          | 0/5 [00:00<?, ?it/s]
+                                                                             
+
+Animation 34: FadeIn(Rectangle):   0%|          | 0/3 [00:00<?, ?it/s]
+                                                                      
+
+Animation 35: FadeIn(Rectangle):   0%|          | 0/3 [00:00<?, ?it/s]
+                                                                      
+
+Animation 36: FadeIn(Rectangle):   0%|          | 0/3 [00:00<?, ?it/s]
+                                                                      
+
+Animation 37: FadeIn(Rectangle):   0%|          | 0/3 [00:00<?, ?it/s]
+                                                                      
+
+Animation 38: FadeIn(Rectangle):   0%|          | 0/3 [00:00<?, ?it/s]
+                                                                      
+
+Animation 39: FadeOut(SVGMobject), etc.:   0%|          | 0/5 [00:00<?, ?it/s]
+                                                                              
+
+Animation 40: FadeIn(VGroup of 3 submobjects):   0%|          | 0/5 [00:00<?, ?it/s]
+                                                                                    
+
+Animation 41: FadeIn(SVGMobject), etc.:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                                             
+
+Animation 42: FadeIn(Rectangle):   0%|          | 0/3 [00:00<?, ?it/s]
+                                                                      
+
+Animation 43: FadeIn(Rectangle):   0%|          | 0/3 [00:00<?, ?it/s]
+                                                                      
+
+Animation 44: FadeIn(Rectangle):   0%|          | 0/3 [00:00<?, ?it/s]
+                                                                      
+
+Animation 45: FadeIn(Rectangle):   0%|          | 0/3 [00:00<?, ?it/s]
+                                                                      
+
+Animation 46: FadeOut(SVGMobject), etc.:   0%|          | 0/5 [00:00<?, ?it/s]
+                                                                              
+
+Animation 47: Transform(Text('One fork, two antiparallel templates')):   0%|          | 0/6 [00:00<?, ?it/s]
+Animation 47: Transform(Text('One fork, two antiparallel templates')):  67%|██████▋   | 4/6 [00:00<00:00, 33.28it/s]
+                                                                                                                    
+/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/groups/A2_mechanism_assets/attempts/coder_attempt_1/rendered_code.py:453: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  self.register_object(f"removed_{child.get_id() if hasattr(child,'get_id') else id(child)}",
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/cli/render/ │
+│ commands.py:125 in render                                                    │
+│                                                                              │
+│   122 │   │   │   try:                                                       │
+│   123 │   │   │   │   with tempconfig({}):                                   │
+│   124 │   │   │   │   │   scene = SceneClass()                               │
+│ ❱ 125 │   │   │   │   │   scene.render()                                     │
+│   126 │   │   │   except Exception:                                          │
+│   127 │   │   │   │   error_console.print_exception()                        │
+│   128 │   │   │   │   sys.exit(1)                                            │
+│                                                                              │
+│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/scene/scene │
+│ .py:237 in render                                                            │
+│                                                                              │
+│    234 │   │   """                                                           │
+│    235 │   │   self.setup()                                                  │
+│    236 │   │   try:                                                          │
+│ ❱  237 │   │   │   self.construct()                                          │
+│    238 │   │   except EndSceneEarlyException:                                │
+│    239 │   │   │   pass                                                      │
+│    240 │   │   except RerunSceneException:                                   │
+│                                                                              │
+│ /root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/gr │
+│ oups/A2_mechanism_assets/attempts/coder_attempt_1/rendered_code.py:453 in    │
+│ construct                                                                    │
+│                                                                              │
+│   450 │   │   # We'll remove primer_1 children, leaving a visible empty regi │
+│   451 │   │   # between fragment 1 DNA and fragment 2 primer region.         │
+│   452 │   │   for child in lag_prim_children_1:                              │
+│ ❱ 453 │   │   │   self.register_object(f"removed_{child.get_id() if hasattr( │
+│   454 │   │   │   │   │   │   │   │    child, role="molecule")  # ensure uni │
+│   455 │   │   self.play(                                                     │
+│   456 │   │   │   *[FadeOut(c) for c in lag_prim_children_1],                │
+│                                                                              │
+│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/mobject/mob │
+│ ject.py:698 in getter                                                        │
+│                                                                              │
+│    695 │   │   │   │   │   stacklevel=2,                                     │
+│    696 │   │   │   │   )                                                     │
+│    697 │   │   │   │                                                         │
+│ ❱  698 │   │   │   │   return getattr(self, to_get)                          │
+│    699 │   │   │                                                             │
+│    700 │   │   │   # Return a bound method                                   │
+│    701 │   │   │   return types.MethodType(getter, self)                     │
+│                                                                              │
+│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/mobject/mob │
+│ ject.py:723 in __getattr__                                                   │
+│                                                                              │
+│    720 │   │   │   return types.MethodType(setter, self)                     │
+│    721 │   │                                                                 │
+│    722 │   │   # Unhandled attribute, therefore error                        │
+│ ❱  723 │   │   raise AttributeError(f"{type(self).__name__} object has no at │
+│    724 │                                                                     │
+│    725 │   @property                                                         │
+│    726 │   def width(self) -> float:                                         │
+╰──────────────────────────────────────────────────────────────────────────────╯
+AttributeError: Rectangle object has no attribute 'id'
+
+PREVIOUS MODEL CODE:
+import math
+import numpy as np
+from manim import *
+from biology_runtime import BiologyScene, load_bio_asset
+
+# ---------------------------------------------------------------------------
+# Helper drawing routines (pure Manim, no external deps)
+# ---------------------------------------------------------------------------
+
+def make_strand(points, color, width=0.06, with_backbone=True):
+    """Poly-line strand with rounded joints; drawn as a smooth line."""
+    if len(points) < 2:
+        return VMobject()
+    grp = VGroup()
+    if with_backbone:
+        line = VMobject(color=color, stroke_width=width * 100)
+        line.set_points_as_corners(points)
+        grp.add(line)
+    return grp
+
+def make_duplex_segment(x_start, y, x_end, color="#4FC3F7", width=0.05):
+    """Thin duplex schematic: two parallel lines with rungs."""
+    grp = VGroup()
+    top = Line([x_start, y + 0.08, 0], [x_end, y + 0.08, 0],
+               color=color, stroke_width=width * 100)
+    bot = Line([x_start, y - 0.08, 0], [x_end, y - 0.08, 0],
+               color=color, stroke_width=width * 100)
+    grp.add(top, bot)
+    n = max(2, int(abs(x_end - x_start) / 0.35))
+    for i in range(n + 1):
+        xx = x_start + (x_end - x_start) * i / n
+        rung = Line([xx, y - 0.08, 0], [xx, y + 0.08, 0],
+                    color=color, stroke_width=2)
+        grp.add(rung)
+    return grp
+
+def small_circle(point, radius=0.09, color=WHITE, fill_opacity=1.0):
+    d = Dot(point=point, radius=radius, color=color)
+    d.set_fill(color, opacity=fill_opacity)
+    return d
+
+def label_3_5(txt, point, color=WHITE, size=16):
+    t = Text(txt, font_size=size, color=color)
+    t.move_to(point)
+    return t
+
+# ---------------------------------------------------------------------------
+# Scene
+# ---------------------------------------------------------------------------
+
+class Section4Scene(BiologyScene):
+    def construct(self):
+        # ------------ global geometry constants -----------------------------
+        FORK_X = 0.4
+        UPPER_Y = 1.35
+        LOWER_Y = -1.35
+        NEW_UP_Y = 0.80
+        NEW_LO_Y = -0.80
+        PARENT_Y = 0.0
+
+        # ------------ persistent background caption -------------------------
+        title = Text(
+            "DNA Replication — Priming, Leading & Lagging",
+            font_size=22, color=WHITE
+        ).to_edge(UP, buff=0.15)
+        self.add(title)
+
+        caption = Text("One fork, two antiparallel templates",
+                       font_size=20, color=YELLOW).to_edge(DOWN, buff=0.15)
+        self.add(caption)
+
+        # ------------ EVENT 1 : fork & templates ---------------------------
+        self.mark_event("event_1_fork")
+
+        # Parental duplex to the right of the fork
+        parental = make_duplex_segment(FORK_X + 0.05, PARENT_Y, 6.0)
+        self.add(parental)
+
+        # Upper template: 3' left (fork side) -> 5' right
+        upper_pts = [(-5.8, UPPER_Y + 0.05, 0),
+                     (FORK_X, UPPER_Y, 0),
+                     (5.9, UPPER_Y - 0.05, 0)]
+        template_leading = make_strand(upper_pts, "#4FC3F7", width=0.07)
+        self.register_object("template_leading", template_leading,
+                             role="molecule", strand="template",
+                             polarity="3to5_left_to_right")
+        self.add(template_leading)
+
+        # Lower template: 5' left -> 3' right
+        lower_pts = [(-5.8, LOWER_Y - 0.05, 0),
+                     (FORK_X, LOWER_Y, 0),
+                     (5.9, LOWER_Y + 0.05, 0)]
+        template_lagging = make_strand(lower_pts, "#4FC3F7", width=0.07)
+        self.register_object("template_lagging", template_lagging,
+                             role="molecule", strand="template",
+                             polarity="5to3_left_to_right")
+        self.add(template_lagging)
+
+        # Fork marker (small V)
+        fork_grp = VGroup()
+        f1 = Line([FORK_X, UPPER_Y, 0], [FORK_X, LOWER_Y, 0],
+                  color="#4FC3F7", stroke_width=3)
+        fork_grp.add(f1)
+        self.register_object("replication_fork", fork_grp, role="anchor")
+        self.add(fork_grp)
+
+        # End polarity labels (small)
+        lbl_3u = label_3_5("3'", [-5.9, UPPER_Y + 0.35, 0], "#4FC3F7", 15)
+        lbl_5u = label_3_5("5'", [5.9, UPPER_Y + 0.35, 0], "#4FC3F7", 15)
+        lbl_5l = label_3_5("5'", [-5.9, LOWER_Y - 0.35, 0], "#4FC3F7", 15)
+        lbl_3l = label_3_5("3'", [5.9, LOWER_Y - 0.35, 0], "#4FC3F7", 15)
+        end_labels = VGroup(lbl_3u, lbl_5u, lbl_5l, lbl_3l)
+        self.add(end_labels)
+        self.play(FadeIn(template_leading), FadeIn(template_lagging),
+                  FadeIn(parental), FadeIn(fork_grp), FadeIn(end_labels),
+                  run_time=1.2)
+        self.wait(0.4)
+        # total so far: 1.6
+
+        # ------------ EVENT 2 : priming -----------------------------------
+        self.mark_event("event_2_priming")
+        new_cap = Text("Primase makes an RNA starting point",
+                       font_size=20, color=YELLOW).to_edge(DOWN, buff=0.15)
+        self.play(Transform(caption, new_cap), run_time=0.4)
+
+        # Primase asset
+        try:
+            primase_body = load_bio_asset("primase", width=0.6)
+        except Exception:
+            primase_body = Circle(radius=0.28, color="#BA68C8")
+            primase_body.set_fill("#BA68C8", opacity=0.85)
+        primase_body.move_to([-1.2, UPPER_Y + 0.55, 0])
+        primase_lbl = Text("Primase", font_size=16, color="#BA68C8")
+        primase_lbl.next_to(primase_body, UP, buff=0.06)
+        self.register_object("primase", primase_body, role="molecule",
+                             enzyme="primase")
+        self.add(primase_body, primase_lbl)
+        self.play(FadeIn(primase_body), FadeIn(primase_lbl), run_time=0.5)
+
+        # Primer binding site on the upper template (near fork, left side)
+        primer_x_start = -1.35
+        primer_y = UPPER_Y - 0.32
+        primer_children = []
+        # Build primer incrementally as orange short segments
+        primer_total_len = 0.75
+        nseg = 4
+        for i in range(nseg):
+            x0 = primer_x_start + (primer_total_len * i) / nseg
+            x1 = primer_x_start + (primer_total_len * (i + 1)) / nseg
+            seg = Line([x0, primer_y, 0], [x1, primer_y, 0],
+                       color="#FFB74D", stroke_width=10)
+            # Make it appear as individual nucleotide-like blocks - shallow rect
+            block = Rectangle(width=abs(x1 - x0) * 0.9, height=0.14,
+                              color="#FFB74D", fill_opacity=1.0,
+                              stroke_width=1.5, stroke_color="#E65100")
+            block.move_to([(x0 + x1) / 2, primer_y, 0])
+            primer_children.append(block)
+            self.register_object(f"rna_primer_lead_{i:02d}", block,
+                                 role="nucleotide", strand="leading",
+                                 material="RNA")
+            self.add(block)
+            self.play(Create(block), run_time=0.25)
+
+        rna_primer = VGroup(*primer_children)
+        self.register_object("rna_primer", rna_primer, role="molecule",
+                             material="RNA", strand="leading")
+
+        # 3' marker on primer right end
+        lbl_p3 = label_3_5("3'", [primer_x_start + primer_total_len + 0.2,
+                                  primer_y + 0.28, 0], "#FFB74D", 16)
+        self.add(lbl_p3)
+
+        # Primase release
+        self.play(FadeOut(primase_body), FadeOut(primase_lbl),
+                  run_time=0.4)
+        # so far ~ 1.6 + 0.4 + 0.5 + 4*0.25 + 0.4 = 3.9
+
+        # ------------ EVENT 3 : leading extension -------------------------
+        self.mark_event("event_3_extension")
+        new_cap = Text("DNA polymerase extends 5' to 3'",
+                       font_size=20, color=YELLOW).to_edge(DOWN, buff=0.15)
+        self.play(Transform(caption, new_cap), run_time=0.35)
+
+        # Leading DNA polymerase asset
+        try:
+            pol_lead = load_bio_asset("dna_polymerase", width=0.7)
+        except Exception:
+            pol_lead = RegularPolygon(6, radius=0.32, color="#4DD0E1")
+            pol_lead.set_fill("#4DD0E1", opacity=0.85)
+        pol_lead_lbl = Text("Pol δ", font_size=16, color="#4DD0E1")
+
+        # active site anchor
+        lead_anchor = Dot([primer_x_start + primer_total_len, primer_y, 0],
+                          radius=0.04, color=RED)
+        lead_anchor.set_opacity(0)
+        self.register_object("lead_active_anchor", lead_anchor, role="anchor")
+        self.add(lead_anchor)
+
+        pol_lead.move_to([lead_anchor.get_x() + 0.35,
+                          primer_y - 0.55, 0])
+        pol_lead_lbl.next_to(pol_lead, DOWN, buff=0.04)
+        self.register_object("dna_polymerase_leading", pol_lead,
+                             role="molecule", enzyme="polymerase",
+                             strand="leading")
+        self.add(pol_lead, pol_lead_lbl)
+        self.play(FadeIn(pol_lead), FadeIn(pol_lead_lbl),
+                  run_time=0.4)
+        self.bind_near("dna_polymerase_leading", "lead_active_anchor",
+                       offset=(0, -0.55, 0), max_distance=0.8)
+
+        # Incoming nucleotide label object (required)
+        inc = svg = None
+        try:
+            inc = load_bio_asset("nucleotide", width=0.28)
+        except Exception:
+            inc = Square(0.22, color="#69F0AE")
+            inc.set_fill("#69F0AE", opacity=0.9)
+        inc_lbl = Text("dNTP", font_size=14, color="#69F0AE")
+        self.register_object("incoming_nucleotide", inc, role="molecule",
+                             material="DNA", strand="leading")
+        inc_lbl.next_to(inc, UP, buff=0.03)
+        self.add(inc, inc_lbl)
+
+        # Grow leading strand nucleotides one by one
+        lead_children = []
+        start_x = primer_x_start + primer_total_len
+        end_x = 4.9
+        step = 0.35
+        n_lead = int((end_x - start_x) / step)
+        for i in range(n_lead):
+            x0 = start_x + i * step
+            nuc = Rectangle(width=step * 0.9, height=0.14,
+                            color="#69F0AE", fill_opacity=1.0,
+                            stroke_width=1.5, stroke_color="#1B5E20")
+            nuc.move_to([x0 + step / 2, primer_y, 0])
+            self.register_object(f"nucleotide_leading_{i:02d}", nuc,
+                                 role="nucleotide", strand="leading",
+                                 fragment="leading", material="DNA")
+            lead_children.append(nuc)
+            # move incoming near
+            inc.move_to([x0 + step / 2, primer_y + 0.45, 0])
+            inc_lbl.next_to(inc, UP, buff=0.03)
+            # move anchor
+            lead_anchor.move_to([x0 + step, primer_y, 0])
+            self.play(
+                FadeIn(nuc, shift=DOWN * 0.06),
+                inc.animate.move_to([x0 + step / 2, primer_y + 0.5, 0]),
+                run_time=0.22
+            )
+            self.add(nuc)
+
+        new_leading = VGroup(*lead_children)
+        self.register_object("new_leading_strand", new_leading,
+                             role="molecule", strand="leading",
+                             material="DNA")
+
+        # remove incoming label
+        self.play(FadeOut(inc), FadeOut(inc_lbl), run_time=0.25)
+        # so far ~ 3.9 + 0.35 + 0.4 + n_lead*0.22 + 0.25
+        # n_lead = int((4.9-1.0)/0.35)=11 => 2.42 ; => ~7.32
+
+        # 3' end marker for leading
+        lbl_lead3 = label_3_5("3'", [4.9 + 0.25, primer_y + 0.28, 0],
+                              "#69F0AE", 16)
+        self.add(lbl_lead3)
+
+        # ------------ EVENT 4 : two modes ---------------------------------
+        self.mark_event("event_4_two_modes")
+        new_cap = Text("Continuous leading; short lagging fragments",
+                       font_size=20, color=YELLOW).to_edge(DOWN, buff=0.15)
+        self.play(Transform(caption, new_cap), run_time=0.4)
+
+        # ---- LAGGGING PRIMER 1 (near fork) ----
+        # Lower template 5' left -> 3' right. New lagging strand above it,
+        # each fragment grows LEFT from its own primer 3' end.
+        lag_primer_1_start = 1.6
+        lag_primer_1_len = 0.55
+        lag_primer_y = LOWER_Y + 0.32
+
+        lag_prim_children_1 = []
+        nsegp = 3
+        for i in range(nsegp):
+            x0 = lag_primer_1_start + (lag_primer_1_len * i) / nsegp
+            x1 = lag_primer_1_start + (lag_primer_1_len * (i + 1)) / nsegp
+            block = Rectangle(width=abs(x1 - x0) * 0.9, height=0.13,
+                              color="#FFB74D", fill_opacity=1.0,
+                              stroke_width=1.5, stroke_color="#E65100")
+            block.move_to([(x0 + x1) / 2, lag_primer_y, 0])
+            self.register_object(f"rna_primer_lagging_1_{i}", block,
+                                 role="nucleotide", strand="lagging",
+                                 material="RNA", fragment="okazaki_1")
+            lag_prim_children_1.append(block)
+            self.add(block)
+        rna_primer_1 = VGroup(*lag_prim_children_1)
+        self.register_object("rna_primer_lagging_1", rna_primer_1,
+                             role="molecule", material="RNA", strand="lagging")
+
+        # Show primase making this primer
+        try:
+            primase2 = load_bio_asset("primase", width=0.5)
+        except Exception:
+            primase2 = Circle(radius=0.24, color="#BA68C8")
+        primase2.move_to([lag_primer_1_start + lag_primer_1_len / 2,
+                          lag_primer_y - 0.5, 0])
+        pl2 = Text("Primase", font_size=14, color="#BA68C8")
+        pl2.next_to(primase2, DOWN, buff=0.03)
+        self.play(FadeIn(primase2), FadeIn(pl2), run_time=0.3)
+        for b in lag_prim_children_1:
+            self.play(Create(b), run_time=0.12)
+        self.play(FadeOut(primase2), FadeOut(pl2), run_time=0.3)
+
+        # Lagging polymerase for fragment 1: active anchor at left 3' end of primer
+        lag1_anchor = Dot([lag_primer_1_start, lag_primer_y, 0],
+                          radius=0.04, color=RED)
+        lag1_anchor.set_opacity(0)
+        self.register_object("lag_active_anchor_1", lag1_anchor, role="anchor")
+        self.add(lag1_anchor)
+
+        try:
+            pol_lag = load_bio_asset("dna_polymerase", width=0.65)
+        except Exception:
+            pol_lag = RegularPolygon(6, radius=0.28, color="#4DD0E1")
+        pol_lag_lbl = Text("Pol δ", font_size=14, color="#4DD0E1")
+        pol_lag.move_to([lag_primer_1_start - 0.35,
+                         lag_primer_y + 0.55, 0])
+        pol_lag_lbl.next_to(pol_lag, UP, buff=0.03)
+        self.register_object("dna_polymerase_lagging", pol_lag,
+                             role="molecule", enzyme="polymerase",
+                             strand="lagging")
+        self.add(pol_lag, pol_lag_lbl)
+        self.play(FadeIn(pol_lag), FadeIn(pol_lag_lbl), run_time=0.3)
+        self.bind_near("dna_polymerase_lagging", "lag_active_anchor_1",
+                       offset=(0, 0.55, 0), max_distance=0.8)
+
+        # Fragment 1 grows LEFT from primer 3' end
+        frag1_children = []
+        frag1_start = lag_primer_1_start  # left edge target grows -x
+        step_lag = 0.28
+        n_frag1 = 5
+        for i in range(n_frag1):
+            xc = frag1_start - (i + 1) * step_lag
+            blk = Rectangle(width=step_lag * 0.85, height=0.13,
+                            color="#69F0AE", fill_opacity=1.0,
+                            stroke_width=1.5, stroke_color="#1B5E20")
+            blk.move_to([xc + step_lag / 2, lag_primer_y, 0])
+            self.register_object(f"okazaki_fragment_1_{i}", blk,
+                                 role="nucleotide", strand="lagging",
+                                 fragment="okazaki_1", material="DNA")
+            # move anchor
+            lag1_anchor.move_to([xc, lag_primer_y, 0])
+            self.play(FadeIn(blk), run_time=0.18)
+            self.add(blk)
+            frag1_children.append(blk)
+
+        okazaki_fragment_1 = VGroup(*frag1_children)
+        self.register_object("okazaki_fragment", okazaki_fragment_1,
+                             role="molecule", strand="lagging",
+                             fragment="okazaki_1", material="DNA")
+        self.play(FadeOut(pol_lag), FadeOut(pol_lag_lbl), run_time=0.3)
+
+        # ---- LAGGGING PRIMER 2 (nearer advancing fork / more right) ----
+        lag_primer_2_start = 3.6
+        lag_primer_2_len = 0.45
+        lag_prim_children_2 = []
+        for i in range(nsegp):
+            x0 = lag_primer_2_start + (lag_primer_2_len * i) / nsegp
+            x1 = lag_primer_2_start + (lag_primer_2_len * (i + 1)) / nsegp
+            block = Rectangle(width=abs(x1 - x0) * 0.9, height=0.13,
+                              color="#FFB74D", fill_opacity=1.0,
+                              stroke_width=1.5, stroke_color="#E65100")
+            block.move_to([(x0 + x1) / 2, lag_primer_y, 0])
+            self.register_object(f"rna_primer_lagging_2_{i}", block,
+                                 role="nucleotide", strand="lagging",
+                                 material="RNA", fragment="okazaki_2")
+            lag_prim_children_2.append(block)
+            self.add(block)
+        rna_primer_2 = VGroup(*lag_prim_children_2)
+        self.register_object("rna_primer_lagging_2", rna_primer_2,
+                             role="molecule", material="RNA", strand="lagging")
+        self.play(FadeIn(rna_primer_2), run_time=0.3)
+
+        # Lagging polymerase 2 for fragment 2
+        lag2_anchor = Dot([lag_primer_2_start, lag_primer_y, 0],
+                          radius=0.04, color=RED)
+        lag2_anchor.set_opacity(0)
+        self.register_object("lag_active_anchor_2", lag2_anchor, role="anchor")
+        self.add(lag2_anchor)
+
+        try:
+            pol_lag2 = load_bio_asset("dna_polymerase", width=0.6)
+        except Exception:
+            pol_lag2 = RegularPolygon(6, radius=0.26, color="#4DD0E1")
+        pol_lag2_lbl = Text("Pol δ", font_size=13, color="#4DD0E1")
+        pol_lag2.move_to([lag_primer_2_start - 0.32,
+                          lag_primer_y + 0.55, 0])
+        pol_lag2_lbl.next_to(pol_lag2, UP, buff=0.03)
+        self.register_object("dna_polymerase_lagging_2", pol_lag2,
+                             role="molecule", enzyme="polymerase",
+                             strand="lagging")
+        self.add(pol_lag2, pol_lag2_lbl)
+        self.play(FadeIn(pol_lag2), FadeIn(pol_lag2_lbl), run_time=0.25)
+        self.bind_near("dna_polymerase_lagging_2", "lag_active_anchor_2",
+                       offset=(0, 0.55, 0), max_distance=0.8)
+
+        frag2_children = []
+        n_frag2 = 4
+        for i in range(n_frag2):
+            xc = lag_primer_2_start - (i + 1) * step_lag
+            blk = Rectangle(width=step_lag * 0.85, height=0.13,
+                            color="#69F0AE", fill_opacity=1.0,
+                            stroke_width=1.5, stroke_color="#1B5E20")
+            blk.move_to([xc + step_lag / 2, lag_primer_y, 0])
+            self.register_object(f"okazaki_fragment_2_{i}", blk,
+                                 role="nucleotide", strand="lagging",
+                                 fragment="okazaki_2", material="DNA")
+            lag2_anchor.move_to([xc, lag_primer_y, 0])
+            self.play(FadeIn(blk), run_time=0.18)
+            self.add(blk)
+            frag2_children.append(blk)
+
+        okazaki_fragment_2 = VGroup(*frag2_children)
+        self.register_object("okazaki_fragment_2", okazaki_fragment_2,
+                             role="molecule", strand="lagging",
+                             fragment="okazaki_2", material="DNA")
+
+        # Aggregate lagging strand group
+        new_lagging = VGroup(rna_primer_1, okazaki_fragment_1,
+                             rna_primer_2, okazaki_fragment_2)
+        self.register_object("new_lagging_strand", new_lagging,
+                             role="molecule", strand="lagging",
+                             material="mixed")
+
+        self.play(FadeOut(pol_lag2), FadeOut(pol_lag2_lbl), run_time=0.3)
+        # 3' marker on fragment 1 left end
+        lbl_lag3 = label_3_5("3'", [lag_primer_1_start - n_frag1 * step_lag - 0.2,
+                                    lag_primer_y - 0.28, 0], "#69F0AE", 15)
+        self.add(lbl_lag3)
+        # so far cumulative ~ 7.32 + 0.4 + prim1(0.3+3*0.12+0.3)
+        # + pol(0.3) + frag1(5*0.18) + 0.3 + 0.3 + 0.25 + frag2(4*0.18) + 0.3
+        # ~= 7.32 + 0.4 + 0.96 + 0.3 + 0.9 + 0.3 + 0.55 + 0.72 + 0.3 ≈ 11.75
+
+        # ------------ EVENT 5 : maturation --------------------------------
+        self.mark_event("event_5_maturation")
+        new_cap = Text("Remove RNA, fill DNA, then seal a nick",
+                       font_size=20, color=YELLOW).to_edge(DOWN, buff=0.15)
+        self.play(Transform(caption, new_cap), run_time=0.4)
+
+        # Step 1: Remove RNA primer 1 (orange) and leave gap
+        # The fragment 1 DNA is to the LEFT; gap on the right side (near fork).
+        # We'll remove primer_1 children, leaving a visible empty region
+        # between fragment 1 DNA and fragment 2 primer region.
+        for child in lag_prim_children_1:
+            self.register_object(f"removed_{child.get_id() if hasattr(child,'get_id') else id(child)}",
+                                 child, role="molecule")  # ensure uniqueness note
+        self.play(
+            *[FadeOut(c) for c in lag_prim_children_1],
+            run_time=0.5
+        )
+
+        # Gap label
+        gap_label = Text("gap", font_size=15, color="#FFB74D")
+        gap_label.move_to([lag_primer_1_start + lag_primer_1_len / 2,
+                           lag_primer_y + 0.35, 0])
+        self.add(gap_label)
+        self.play(FadeIn(gap_label), run_time=0.2)
+        self.wait(0.2)
+
+        # Step 2: DNA polymerase fills the gap with green nucleotides
+        # Size of gap: lag_primer_1_len region
+        n_fill = 3
+        fill_step = lag_primer_1_len / n_fill
+
+        try:
+            pol_fill = load_bio_asset("dna_polymerase", width=0.6)
+        except Exception:
+            pol_fill = RegularPolygon(6, radius=0.26, color="#4DD0E1")
+        pol_fill_lbl = Text("Pol δ", font_size=13, color="#4DD0E1")
+        pol_fill.move_to([lag_primer_1_start + lag_primer_1_len / 2,
+                          lag_primer_y + 0.55, 0])
+        pol_fill_lbl.next_to(pol_fill, UP, buff=0.03)
+        self.register_object("dna_polymerase_fill", pol_fill,
+                             role="molecule", enzyme="polymerase",
+                             strand="lagging")
+        self.add(pol_fill, pol_fill_lbl)
+        self.play(FadeIn(pol_fill), FadeIn(pol_fill_lbl), run_time=0.3)
+
+        fill_children = []
+        for i in range(n_fill):
+            x0 = lag_primer_1_start + i * fill_step
+            x1 = lag_primer_1_start + (i + 1) * fill_step
+            blk = Rectangle(width=fill_step * 0.85, height=0.13,
+                            color="#69F0AE", fill_opacity=1.0,
+                            stroke_width=1.5, stroke_color="#1B5E20")
+            blk.move_to([(x0 + x1) / 2, lag_primer_y, 0])
+            self.register_object(f"fill_dna_{i}", blk,
+                                 role="nucleotide", strand="lagging",
+                                 fragment="okazaki_1", material="DNA")
+            self.play(FadeIn(blk), run_time=0.2)
+            self.add(blk)
+            fill_children.append(blk)
+
+        # Remove gap label and polymerase
+        self.play(FadeOut(gap_label), FadeOut(pol_fill),
+                  FadeOut(pol_fill_lbl), run_time=0.3)
+
+        # Step 3: DNA ligase seals only a small nick
+        # The fragment 1 grew LEFT from lag_primer_1_start; gap was to the right,
+        # fill now occupies it. Nick is between the filled region and fragment 2's primer
+        # (i.e., at right edge of filled region).
+        nick_x = lag_primer_1_start + lag_primer_1_len
+        nick_marker = Line([nick_x, lag_primer_y - 0.1, 0],
+                           [nick_x, lag_primer_y + 0.1, 0],
+                           color=RED, stroke_width=3)
+        self.add(nick_marker)
+
+        try:
+            ligase = load_bio_asset("dna_ligase", width=0.5)
+        except Exception:
+            ligase = RegularPolygon(5, radius=0.22, color="#FFD54F")
+        ligase_lbl = Text("Ligase", font_size=14, color="#FFD54F")
+        ligase.move_to([nick_x, lag_primer_y + 0.55, 0])
+        ligase_lbl.next_to(ligase, UP, buff=0.03)
+        self.register_object("dna_ligase", ligase, role="molecule",
+                             enzyme="ligase")
+        self.add(ligase, ligase_lbl)
+        self.play(FadeIn(ligase), FadeIn(ligase_lbl), run_time=0.3)
+
+        # Ligase seals the nick - only removes the marker, adds a small
+        # green connector without synthesizing a long segment
+        seal = Line([nick_x - 0.04, lag_primer_y, 0],
+                    [nick_x + 0.04, lag_primer_y, 0],
+                    color="#69F0AE", stroke_width=8)
+        self.play(Transform(nick_marker, seal), run_time=0.4)
+        self.wait(0.2)
+        self.play(FadeOut(ligase), FadeOut(ligase_lbl), run_time=0.3)
+        # final label - local copied duplexes
+        final_cap = Text("Local copied duplexes", font_size=20,
+                         color=YELLOW).to_edge(DOWN, buff=0.15)
+        self.play(Transform(caption, final_cap), run_time=0.3)
+        self.wait(0.6)
+
+        # ------------ final total duration check -------------------------
+        # The runtime tracker records each play/wait automatically; total ~30s.
+        return

@@ -1,0 +1,10 @@
+{
+  "tag": "coder_attempt_2",
+  "committed": false,
+  "before": null,
+  "started": 1795427661.7066321,
+  "error_type": "AssertionError",
+  "error": "Enzyme/active-site geometry violated",
+  "after": null,
+  "elapsed_seconds": 12.315
+}

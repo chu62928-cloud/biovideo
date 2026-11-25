@@ -1,0 +1,15 @@
+{
+  "experiment": "Code2Video + DeepSeek + Qwen Critic model-substitution follow-up",
+  "scope": "V2 Section4 only",
+  "limits_this_followup": {
+    "deepseek": 2,
+    "qwen_new": 1
+  },
+  "prior_calls": {
+    "deepseek": 6,
+    "qwen": 2,
+    "qwen_timeout_usage": "unknown"
+  },
+  "rounds": [],
+  "manual_animation_code": false
+}

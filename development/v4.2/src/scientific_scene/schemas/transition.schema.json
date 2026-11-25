@@ -1,0 +1,85 @@
+{
+  "type": "object",
+  "required": [
+    "transition_id",
+    "process_id",
+    "assembly_id",
+    "operation",
+    "targets",
+    "params",
+    "duration",
+    "preconditions",
+    "postconditions",
+    "invariants",
+    "evidence_ids"
+  ],
+  "properties": {
+    "transition_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "process_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "assembly_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operation": {
+      "enum": [
+        "attach",
+        "detach",
+        "connect",
+        "disconnect",
+        "transform_state",
+        "move_along_path",
+        "extend",
+        "split",
+        "merge",
+        "replace_component"
+      ]
+    },
+    "targets": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "params": {
+      "type": "object"
+    },
+    "duration": {
+      "type": "number",
+      "minimum": 0.05,
+      "maximum": 20
+    },
+    "preconditions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "postconditions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "invariants": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "additionalProperties": true
+}

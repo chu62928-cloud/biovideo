@@ -1,0 +1,13 @@
+{
+  "status": "FAIL",
+  "fork_range": [
+    0.6,
+    3.4
+  ],
+  "duplex_before_after": [
+    5.4,
+    2.6
+  ],
+  "whole_scene_translation_excluded": false,
+  "frame_observations": 721
+}

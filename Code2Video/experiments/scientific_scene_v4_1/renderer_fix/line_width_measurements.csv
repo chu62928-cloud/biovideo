@@ -1,0 +1,6 @@
+time,column,blue_pixel_count,measurement_note
+0.2,160,3,Fixed-column raster probe; corner curvature and codec antialiasing affect width
+1.2,160,3,Fixed-column raster probe; corner curvature and codec antialiasing affect width
+2.2,160,3,Fixed-column raster probe; corner curvature and codec antialiasing affect width
+3.2,160,4,Fixed-column raster probe; corner curvature and codec antialiasing affect width
+4.2,160,3,Fixed-column raster probe; corner curvature and codec antialiasing affect width

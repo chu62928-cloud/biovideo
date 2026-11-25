@@ -1,0 +1,32 @@
+{
+  "tag": "render_exception",
+  "committed": false,
+  "before": {
+    "success": true,
+    "tag": "initial_fixture",
+    "code_sha256": "b4221e3d274851178b7be669d9f8e75fe2fc67b787ae0b6c496931c2949d3184",
+    "video_sha256": "725d0e6700ddbf6d6147b6250340af01a60cb692e76c13b32cec695b041bfc44",
+    "duration_seconds": 0.4,
+    "renderer": "manim-0.19.0-full-render",
+    "trace_sha256": "dce4fca7574258d9a320615f8dbed5a9b93303d55e35c51c479993ba9131c2fc",
+    "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795427794262492449/transaction/versions/initial_fixture",
+    "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795427794262492449/transaction/versions/initial_fixture/rendered_code.py",
+    "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795427794262492449/transaction/versions/initial_fixture/video.mp4"
+  },
+  "started": 1795427796.3034928,
+  "error_type": "AssertionError",
+  "error": "Full Manim render failed; see stderr.log",
+  "after": {
+    "success": true,
+    "tag": "initial_fixture",
+    "code_sha256": "b4221e3d274851178b7be669d9f8e75fe2fc67b787ae0b6c496931c2949d3184",
+    "video_sha256": "725d0e6700ddbf6d6147b6250340af01a60cb692e76c13b32cec695b041bfc44",
+    "duration_seconds": 0.4,
+    "renderer": "manim-0.19.0-full-render",
+    "trace_sha256": "dce4fca7574258d9a320615f8dbed5a9b93303d55e35c51c479993ba9131c2fc",
+    "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795427794262492449/transaction/versions/initial_fixture",
+    "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795427794262492449/transaction/versions/initial_fixture/rendered_code.py",
+    "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795427794262492449/transaction/versions/initial_fixture/video.mp4"
+  },
+  "elapsed_seconds": 1.529
+}

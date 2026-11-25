@@ -1,0 +1,250 @@
+{
+  "review_id": "V4-VIDEO-613fc52243",
+  "stage": "RENDERED_VIDEO",
+  "decision": "REVISE",
+  "issues": [
+    {
+      "issue_id": "SCI_LABEL_OVERLAP",
+      "severity": "major",
+      "description": "Sister A/B (later Daughter A/B) labels are both placed 'up' at centers only 0.44 apart, so they render as overlapping, unreadable text ('SistSister B', 'DauDaughter') from 0-9s. Chromatid identity is distinguishable only by color; the declared identities cannot be read, weakening verification of which sister attaches to which pole.",
+      "root_cause_stage": "SCENE_IR",
+      "target_objects": [
+        "sister_A",
+        "sister_B"
+      ],
+      "target_events": [
+        "metaphase",
+        "anaphase"
+      ],
+      "repair_scope": "assembly_geometry",
+      "acceptance_criteria": [
+        "Label bounding boxes of sister_A and sister_B do not intersect at any sampled time in metaphase or anaphase",
+        "Each full label string ('Sister A','Sister B','Daughter A','Daughter B') is legible in rendered frames",
+        "Label anchors continue to track their chromatid centers during separation motion"
+      ]
+    }
+  ],
+  "notes": [
+    "Mechanism verified: left pole attaches kinetochore_A/sister_A, right pole kinetochore_B/sister_B (measured endpoint distance 0.0); bipolar relations exist before split; sister_cohesion removed at ~6s while positions remain coincident, then monotonic poleward motion to +/-2.8 with kinetochores and microtubule ends tracking (0.0 gap). Two persistent chromatid instances, no cloning; role change to daughter_chromosome is metadata, consistent with F1/F5/F8.",
+    "Schematic single duplicated chromosome and outward-facing kinetochores are declared allowed simplifications, not errors.",
+    "Uncertainty: the final supplied image is an unrelated 'Grid Visual'/SVM slide with no registered IDs. Treated as the spatial reference grid per instructions; if it is actually appended to the delivered MP4, it is out-of-scope content requiring removal and human confirmation.",
+    "Early microtubule tips at +/-0.285 vs kinetochore +/-0.22 leave a ~0.065 transient gap before connect; within schematic tolerance and resolved on attachment, not flagged."
+  ],
+  "checks": [
+    {
+      "check_id": "registered_scientific_identity",
+      "category": "identity",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [],
+      "observed_evidence": {
+        "missing": [],
+        "unexpected_scientific_ids": []
+      },
+      "expected_condition": "",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "object_instance_continuity",
+      "category": "identity",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [],
+      "observed_evidence": {
+        "violations": [],
+        "tracked_objects": 8
+      },
+      "expected_condition": "",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "actual_event_order",
+      "category": "event_order",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [],
+      "observed_evidence": {
+        "events": [
+          "metaphase",
+          "anaphase"
+        ]
+      },
+      "expected_condition": "",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "stable_components",
+      "category": "identity",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [],
+      "observed_evidence": {},
+      "expected_condition": "",
+      "description": "",
+      "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+    },
+    {
+      "check_id": "two_objects_no_cloning",
+      "category": "identity",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [],
+      "observed_evidence": {
+        "count": 2
+      },
+      "expected_condition": "",
+      "description": "",
+      "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+    },
+    {
+      "check_id": "left_attachment_measured",
+      "category": "connection",
+      "status": "PASS",
+      "object_ids": [
+        "microtubule_left",
+        "kinetochore_A"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "F5"
+      ],
+      "observed_evidence": {
+        "measured_distance": 0.0,
+        "a": [
+          -2.8,
+          0.0,
+          0.0
+        ],
+        "b": [
+          -2.8,
+          0.0,
+          0.0
+        ],
+        "time": 11.999999999999977
+      },
+      "expected_condition": "",
+      "description": "",
+      "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+    },
+    {
+      "check_id": "right_attachment_measured",
+      "category": "connection",
+      "status": "PASS",
+      "object_ids": [
+        "microtubule_right",
+        "kinetochore_B"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "F5"
+      ],
+      "observed_evidence": {
+        "measured_distance": 0.0,
+        "a": [
+          2.8,
+          0.0,
+          0.0
+        ],
+        "b": [
+          2.8,
+          0.0,
+          0.0
+        ],
+        "time": 11.999999999999977
+      },
+      "expected_condition": "",
+      "description": "",
+      "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+    },
+    {
+      "check_id": "daughter_role_A",
+      "category": "identity",
+      "status": "PASS",
+      "object_ids": [
+        "sister_A"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F8"
+      ],
+      "observed_evidence": {
+        "observed_role_metadata": "daughter_chromosome",
+        "limitation": "Semantic role is not inferable from geometry alone"
+      },
+      "expected_condition": "",
+      "description": "",
+      "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+    },
+    {
+      "check_id": "expected_observed_states",
+      "category": "execution",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [],
+      "observed_evidence": {
+        "mismatches": [],
+        "snapshot_count": 7
+      },
+      "expected_condition": "Actual transformed anchors and visibility match committed expected states",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "actual_active_site_bindings",
+      "category": "connection",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [],
+      "observed_evidence": {
+        "violations": []
+      },
+      "expected_condition": "Visible bound objects follow actual target anchors including declared offset",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "continuous_drawn_connections",
+      "category": "topology",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [],
+      "observed_evidence": {
+        "violations": []
+      },
+      "expected_condition": "Every drawn connection endpoint follows its real target at every sampled time",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "visible_coverage",
+      "category": "coverage",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [],
+      "observed_evidence": {
+        "unregistered_visible": []
+      },
+      "expected_condition": "",
+      "description": "All adapter-created scientific and decorative objects registered; arbitrary Coder-added objects checked separately",
+      "suggested_repair_stage": "SCENE_IR"
+    }
+  ],
+  "scene_hash": "8892aff7d6c8cfe342269659257a0df3839332b22348004e7533903ad61cd95f",
+  "video_sha256": "272e2c1deb29d718ea0dfd3de55a5fb3ef889a90e97dd415946ec492cfac9e9a",
+  "code_sha256": "095607a211f2bb42bb11c099bf5fe6a3c5e7ae2ad64ea967789fcbfa9d9b45ad",
+  "full_video": true
+}

@@ -1,0 +1,67 @@
+{
+  "group": "B4_expert_repair",
+  "render_success": true,
+  "render_commit": "RENDER_COMMITTED",
+  "science_gate": "REVISE",
+  "video_path": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/B4_expert_repair/video.mp4",
+  "scene_hash": "24544fa7223f11bda97393790ebfa3263dcf4347131217eb8b5ef746857c2864",
+  "tag": "approval_asset_identity_14",
+  "video_sha256": "57f7142bb6ef1e0dc81c9530d92c18b2c5b007dad5d01bed859c38ed4c1936a5",
+  "code_sha256": "095607a211f2bb42bb11c099bf5fe6a3c5e7ae2ad64ea967789fcbfa9d9b45ad",
+  "trace_sha256": "0f8b0705bce2cbb1197e8f1c1a161d1ebff0bbfdce6dc8ac2e586e166378b104",
+  "duration_seconds": 31.933333,
+  "ir_review_decision": "REVISE",
+  "video_review_decision": "PASS",
+  "repair_approved": false,
+  "approval_evidence": {
+    "scene_hash": "24544fa7223f11bda97393790ebfa3263dcf4347131217eb8b5ef746857c2864",
+    "video_sha256": "57f7142bb6ef1e0dc81c9530d92c18b2c5b007dad5d01bed859c38ed4c1936a5",
+    "code_sha256": "095607a211f2bb42bb11c099bf5fe6a3c5e7ae2ad64ea967789fcbfa9d9b45ad",
+    "ir_review_id": "V4-IR-f11f287e25",
+    "video_review_id": "V4-VIDEO-a9fe45d122",
+    "unresolved_critical_ir": [
+      {
+        "issue_id": "POL-01-lagging-fragment-direction",
+        "severity": "blocker",
+        "description": "Lagging-strand synthesis is drawn backwards relative to the local template geometry. The lagging template runs 5' (left, x=-5) → 3' (right, x=6). Its daughters must therefore be synthesized right-to-left (5'→3' on the nascent strand, reading the template 3'→5'), i.e. growing-end motion toward decreasing x. Instead fragment_1 extends from x=-1.2 to x=-3.5 and fragment_2 from x=1.1 to x=-0.6, i.e. the growing 3' end moves toward the left while the polymerase reading is being asserted as aligning with the template reading vector — but the template reading vector at those local positions points to the right ([-5.77,…], [-6.43,…]) per the reported polarity check, and the 'reading_alignment_cosine' of 1.0 is computed against a template vector whose displayed polarity makes that reading 5'→3', not 3'→5'. In the current geometry the Okazaki fragments extend away from the fork on the lagging arm, which contradicts the standard teaching model (short pieces synthesized toward the fork, each initiated nearer the fork). The deterministic polarity PASS appears to inherit the same template-endpoint convention that is inconsistent with the drawn strand, so it does not rescue the biology.",
+        "root_cause_stage": "SCENE_IR",
+        "target_objects": [
+          "template_lagging",
+          "fragment_1",
+          "fragment_2",
+          "rna_primer_lagging_1",
+          "rna_primer_lagging_2"
+        ],
+        "target_events": [
+          "event_4_two_modes"
+        ],
+        "repair_scope": "Fix the lagging-template displayed polarity/labels (start 5' at left, end 3' at right) OR reverse the fragment extension vectors so the growing 3' end moves toward the fork for each fragment; ensure primer sits at each fragment's 5' (fork-distal) side. Re-derive growth direction constraints from the corrected template endpoints.",
+        "acceptance_criteria": [
+          "At every sampled frame during event_4_two_modes, each nascent lagging fragment's growing 3' end moves toward the fork junction (increasing x), and its 5' end is fork-distal.",
+          "Template_lagging endpoint labels, rna_primer 5'/3' labels, fragment growth direction and the DNA_STRAND_POLARITY local reading vector are mutually consistent at all sampled frames."
+        ]
+      },
+      {
+        "issue_id": "POL-02-leading-gap-fill-overshoot",
+        "severity": "major",
+        "description": "Maturation gap_fill grows from x=-0.6 to x=-1.2 (left), i.e. it synthesizes toward the ligation site on fragment_1's 5' end at x=-1.2, which is correct in principle for filling the gap left by the removed primer. However, the same event simultaneously asserts a covalent_continuity between fragment_2's end (-0.6) and gap_fill's start (-0.6) AND a sealed_nick between gap_fill's end (-1.2) and fragment_1's start (-1.2) — that is biologically fine — but the coupled 'connect_continuous_extension' transition requires anchor coincidence between fragment_2's end and gap_fill's start while gap_fill is still the newly extended object whose start was declared as its growing origin. The result is that a single strand is asserted continuous at both ends while the internal growing end is still at x=-1.2, forming a closed loop of continuity claims across a piece that the animation still treats as 'growing'. This is not a molecular error but a topology/continuity contradiction in the IR.",
+        "root_cause_stage": "SCENE_IR",
+        "target_objects": [
+          "gap_fill",
+          "fragment_1",
+          "fragment_2"
+        ],
+        "target_events": [
+          "event_5_maturation"
+        ],
+        "repair_scope": "Separate 'gap_fill grows then seals' into distinct transitions: only after gap_fill's 3' end reaches fragment_1's 5' should ligase seal the nick; the covalent_continuity to fragment_2 should be committed before growth starts. Do not require both coincidences in the same transition batch.",
+        "acceptance_criteria": [
+          "After event_5_maturation: gap_fill end coincident with fragment_1 start (sealed_nick), gap_fill start coincident with fragment_2 end (covalent_continuity), and no transition simultaneously extends and seals gap_fill.",
+          "No scientific claim of 'all lagging maturation complete' appears in caption; only one local maturation is shown."
+        ]
+      }
+    ],
+    "deterministic_all_pass": true,
+    "conflicts": []
+  }
+}

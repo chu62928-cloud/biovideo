@@ -1,0 +1,36 @@
+{
+  "id": "be300094-2724-49f7-bd81-79085b321149",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "```python\n        mobject.scale(scale_factor)\n        mobject.move_to(center)\n        return mobject\n\ndef _base_label(sub):\n    return Text(sub, font_size=24)\n\nclass Section2Scene(TeachingScene):\n    def construct(self):\n        self.setup_layout(\n```",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1795406187,
+  "model": "deepseek-flash",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+  "usage": {
+    "completion_tokens": 61,
+    "prompt_tokens": 5218,
+    "total_tokens": 5279,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 4706
+  }
+}

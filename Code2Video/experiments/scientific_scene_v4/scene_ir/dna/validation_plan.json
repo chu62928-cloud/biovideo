@@ -1,0 +1,155 @@
+[
+  {
+    "constraint_id": "exactly_two_parental_strands",
+    "predicate": "count_kind",
+    "object_ids": [],
+    "kind": "parental_strand",
+    "count": 2,
+    "category": "topology",
+    "evidence_ids": [
+      "X_bf28604c"
+    ]
+  },
+  {
+    "constraint_id": "stable_components",
+    "predicate": "identity_unchanged",
+    "object_ids": [],
+    "category": "identity"
+  },
+  {
+    "constraint_id": "growth_new_leading",
+    "predicate": "growth_direction",
+    "object_ids": [
+      "new_leading"
+    ],
+    "unit_vector": [
+      1,
+      0,
+      0
+    ],
+    "during_event": "event_3_extension",
+    "category": "mechanism",
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "polarity_basis": {
+      "template_object": "template_leading",
+      "template_5prime_side": "right",
+      "nascent_3prime_port": "end",
+      "diagram_open_region": "left of x2.5"
+    },
+    "description": "Actual growing-end trajectory must follow the fact-bound antiparallel polarity rule"
+  },
+  {
+    "constraint_id": "growth_fragment_1",
+    "predicate": "growth_direction",
+    "object_ids": [
+      "fragment_1"
+    ],
+    "unit_vector": [
+      -1,
+      0,
+      0
+    ],
+    "during_event": "event_4_two_modes",
+    "category": "mechanism",
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "polarity_basis": {
+      "template_object": "template_lagging",
+      "template_5prime_side": "left",
+      "nascent_3prime_port": "end",
+      "diagram_open_region": "left of x2.5"
+    },
+    "description": "Actual growing-end trajectory must follow the fact-bound antiparallel polarity rule"
+  },
+  {
+    "constraint_id": "growth_fragment_2",
+    "predicate": "growth_direction",
+    "object_ids": [
+      "fragment_2"
+    ],
+    "unit_vector": [
+      -1,
+      0,
+      0
+    ],
+    "during_event": "event_4_two_modes",
+    "category": "mechanism",
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "polarity_basis": {
+      "template_object": "template_lagging",
+      "template_5prime_side": "left",
+      "nascent_3prime_port": "end",
+      "diagram_open_region": "left of x2.5"
+    },
+    "description": "Actual growing-end trajectory must follow the fact-bound antiparallel polarity rule"
+  },
+  {
+    "constraint_id": "growth_gap_fill",
+    "predicate": "growth_direction",
+    "object_ids": [
+      "gap_fill"
+    ],
+    "unit_vector": [
+      -1,
+      0,
+      0
+    ],
+    "during_event": "event_5_maturation",
+    "category": "mechanism",
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "polarity_basis": {
+      "template_object": "template_lagging",
+      "template_5prime_side": "left",
+      "nascent_3prime_port": "end",
+      "diagram_open_region": "left of x2.5"
+    },
+    "description": "Actual growing-end trajectory must follow the fact-bound antiparallel polarity rule"
+  },
+  {
+    "constraint_id": "sealed_actual_nick",
+    "predicate": "anchor_coincident",
+    "object_ids": [
+      "gap_fill",
+      "fragment_1"
+    ],
+    "anchors": [
+      "end",
+      "start"
+    ],
+    "tolerance": 0.04,
+    "after_event": "event_5_maturation",
+    "category": "connection",
+    "evidence_ids": [
+      "F6"
+    ]
+  },
+  {
+    "constraint_id": "fill_starts_at_downstream_3prime",
+    "predicate": "anchor_coincident",
+    "object_ids": [
+      "gap_fill",
+      "fragment_2"
+    ],
+    "anchors": [
+      "start",
+      "end"
+    ],
+    "tolerance": 0.04,
+    "after_event": "event_5_maturation",
+    "category": "connection",
+    "evidence_ids": [
+      "X_7574276a"
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "tag": "checker_fixed_replay_candidate_2",
+  "committed": false,
+  "before": null,
+  "started": 1795427939.5961273,
+  "error_type": "AssertionError",
+  "error": "Duration outside requested range",
+  "after": null,
+  "elapsed_seconds": 12.292
+}

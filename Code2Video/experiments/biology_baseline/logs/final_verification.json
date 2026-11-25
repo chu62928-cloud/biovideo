@@ -1,0 +1,11 @@
+{
+  "verified_utc": "2026-11-23T04:41:56Z",
+  "credential_literal_matches_in_repo": 0,
+  "prompts_unchanged": true,
+  "calls": 35,
+  "total_tokens": 225009,
+  "videos_verified": [
+    "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/Linear_transformations_and_matrices.mp4",
+    "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/DNA_replication_in_eukaryotic_cells.mp4"
+  ]
+}

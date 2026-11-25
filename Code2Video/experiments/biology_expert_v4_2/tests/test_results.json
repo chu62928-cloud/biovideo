@@ -1,0 +1,52 @@
+{
+  "mode": "OFFLINE_SYNTHETIC_FIXTURES_NO_REAL_MODEL",
+  "results": [
+    {
+      "test": "generic_schema_and_normal_execution",
+      "passed": true
+    },
+    {
+      "test": "schema_missing_required_rejected",
+      "passed": true
+    },
+    {
+      "test": "unsupported_never_pass",
+      "passed": true
+    },
+    {
+      "test": "absent_observation_not_zero_errors",
+      "passed": true
+    },
+    {
+      "test": "deleted_rules_do_not_inflate_coverage",
+      "passed": true
+    },
+    {
+      "test": "automatic_mutations_detected_color_control_not_error",
+      "passed": true
+    },
+    {
+      "test": "contract_change_invalidates_approvals",
+      "passed": true
+    },
+    {
+      "test": "conflict_not_automatically_dismissed",
+      "passed": true
+    },
+    {
+      "test": "existing_single_agent_tools_and_different_routes_mock",
+      "passed": true
+    },
+    {
+      "test": "new_production_path_no_legacy_topic_rules",
+      "passed": true
+    },
+    {
+      "test": "generic_path_and_renderer_safety_preserved",
+      "passed": true
+    }
+  ],
+  "passed": 11,
+  "total": 11,
+  "all_passed": true
+}

@@ -1,0 +1,82 @@
+
+        You are an expert Manim Community Edition v0.19.0 developer. Fix the error in the following code block.
+
+        **Error Analysis:**
+        - Error Type: Unknown
+        - Error Category: syntax_error
+        - Fix Scope: single_line
+        - Suggested Fix: Check if the indentation is correct
+
+        **Error Message:**
+        ```
+        Traceback (most recent call last):
+  File "/root/autodl-tmp/code2biovideo/env/bin/manim", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/click/core.py", line 1653, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/click/core.py", line 1560, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/click/core.py", line 2054, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/click/core.py", line 1414, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/click/core.py", line 911, in invoke
+    return callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/cli/render/commands.py", line 121, in render
+    for SceneClass in scene_classes_from_file(file):
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/utils/module_ops.py", line 167, in scene_classes_from_file
+    module = get_module(file_path)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/utils/module_ops.py", line 67, in get_module
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/section_2.py", line 66
+    left_x = self.grid["A1"][0] + 0.1
+IndentationError: unexpected indent
+
+        ```
+
+        **Error Context:**
+        {
+  "line_number": 10,
+  "error_line": null,
+  "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/code2biovideo/env/bin/manim\", line 10, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/click/core.py\", line 1653, in __call__\n    return self.main(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/click/core.py\", line 1560, in main\n    rv = self.invoke(ctx)\n         ^^^^^^^^^^^^^^^^\n  File \"/autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/click/core.py\", line 2054, in invoke\n    return _process_result(sub_ctx.command.invoke(sub_ctx))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/click/core.py\", line 1414, in invoke\n    return ctx.invoke(self.callback, **ctx.params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/click/core.py\", line 911, in invoke\n    return callback(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/cli/render/commands.py\", line 121, in render\n    for SceneClass in scene_classes_from_file(file):\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/utils/module_ops.py\", line 167, in scene_classes_from_file\n    module = get_module(file_path)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"/autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/utils/module_ops.py\", line 67, in get_module\n    spec.loader.exec_module(module)\n  File \"<frozen importlib._bootstrap_external>\", line 936, in exec_module\n  File \"<frozen importlib._bootstrap_external>\", line 1074, in get_code\n  File \"<frozen importlib._bootstrap_external>\", line 1004, in source_to_code\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/section_2.py\", line 66\n    left_x = self.grid[\"A1\"][0] + 0.1\nIndentationError: unexpected indent\n",
+  "specific_error": "IndentationError: unexpected indent"
+}
+
+        **Suggestions:**
+        - Fix grammar errors and indentation issues
+
+        **Code Block to Fix:**
+        ```python
+            def setup_layout(self, title_text, lecture_lines):
+        # BASE
+        self.camera.background_color = "#000000"
+        self.title = Text(title_text, font_size=28, color=WHITE).to_edge(UP)
+        self.add(self.title)
+
+        # Left-side lecture content (bullets with "-")
+        lecture_texts = [Text(line, font_size=22, color=WHITE) for line in lecture_lines]
+        self.lecture = VGroup(*lecture_texts).arrange(DOWN, aligned_edge=LEFT).scale(0.8)
+        self.lecture.to_edge(LEFT, buff=0.2)
+        ```
+
+        **Requirements:**
+        1. Only fix the specific error mentioned
+        2. Maintain the original code structure and logic
+        3. Make minimal necessary changes
+        4. Ensure compatibility with Manim CE v0.19.0
+        5. Output ONLY the fixed Python code block
+
+        **Fixed Code:**
+        

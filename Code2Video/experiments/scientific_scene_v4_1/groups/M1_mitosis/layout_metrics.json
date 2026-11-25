@@ -1,0 +1,50 @@
+{
+  "out_of_frame": [],
+  "label_overlaps": [
+    {
+      "time": 0.0,
+      "objects": [
+        "label__sister_A",
+        "label__sister_B"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__sister_A",
+        "label__pole_left"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__sister_A",
+        "label__pole_right"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__sister_B",
+        "label__pole_left"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__sister_B",
+        "label__pole_right"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__pole_left",
+        "label__pole_right"
+      ]
+    }
+  ],
+  "binding_violations": [],
+  "sudden_jumps": [],
+  "note": "Geometry heuristics; intentional occlusion and fade transitions need human review."
+}

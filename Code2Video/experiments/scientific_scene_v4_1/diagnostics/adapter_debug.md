@@ -1,0 +1,3 @@
+# 路径诊断
+
+最小实际Manim探针确认：VMobject原始fill_opacity=0；调用set_opacity(1)后fill_opacity=1；再显式set_fill(opacity=0)后恢复0。两组stroke_width始终5且路径未闭合。Cairo会填充开放折线首尾隐式围成区域，因此三点开叉出现实心楔形。根因是可见性设置同时开启填充，不是描边参数或科学IR。PathGeometry覆盖透明度操作并强制填充0，以控制点插值保持身份与锚点。

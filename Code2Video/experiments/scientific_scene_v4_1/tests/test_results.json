@@ -1,0 +1,112 @@
+{
+  "all_passed": true,
+  "passed": 25,
+  "total": 25,
+  "includes_negative_controls": true,
+  "results": [
+    {
+      "test": "template_3left_5right_growth_right",
+      "passed": true
+    },
+    {
+      "test": "template_5left_3right_growth_left",
+      "passed": true
+    },
+    {
+      "test": "wrong_template_polarity_rejected",
+      "passed": true
+    },
+    {
+      "test": "wrong_addition_end_rejected",
+      "passed": true
+    },
+    {
+      "test": "rotations_preserve_science",
+      "passed": true
+    },
+    {
+      "test": "mirror_preserves_science",
+      "passed": true
+    },
+    {
+      "test": "missing_growth_port_uncertain",
+      "passed": true
+    },
+    {
+      "test": "unknown_evidence_uncertain",
+      "passed": true
+    },
+    {
+      "test": "V4_lagging_endpoints_independently_revalidated",
+      "passed": true
+    },
+    {
+      "test": "unannotated_V4_missing_contract_uncertain",
+      "passed": true
+    },
+    {
+      "test": "no_op_repair_does_not_render",
+      "passed": true
+    },
+    {
+      "test": "true_IR_fields_changed",
+      "passed": true
+    },
+    {
+      "test": "unrelated_object_patch_rejected_atomically",
+      "passed": true
+    },
+    {
+      "test": "specific_false_positive_adjudicated_other_issues_retained",
+      "passed": true
+    },
+    {
+      "test": "insufficient_contract_requires_human",
+      "passed": true
+    },
+    {
+      "test": "actual_PathMorph_no_fill_constant_width_identity",
+      "passed": true
+    },
+    {
+      "test": "progress_range_and_invariants",
+      "passed": true
+    },
+    {
+      "test": "missing_endpoint_rejected_before_commit_ablation",
+      "passed": true
+    },
+    {
+      "test": "all_rendered_frames_mitosis_connections_continuous",
+      "passed": true
+    },
+    {
+      "test": "actual_fork_growth_never_ahead_of_junction",
+      "passed": true
+    },
+    {
+      "test": "all_groups_persistent_object_instances",
+      "passed": true
+    },
+    {
+      "test": "actual_model_identity_and_process_fields_changed",
+      "passed": true
+    },
+    {
+      "test": "B4_expert_repair_final_hashes_and_runtime_gates",
+      "passed": true,
+      "runtime_checks": 16,
+      "scene_hash": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07"
+    },
+    {
+      "test": "M1_mitosis_final_hashes_and_runtime_gates",
+      "passed": true,
+      "runtime_checks": 12,
+      "scene_hash": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9"
+    },
+    {
+      "test": "new_hash_approved_only_with_matching_new_review",
+      "passed": true
+    }
+  ]
+}

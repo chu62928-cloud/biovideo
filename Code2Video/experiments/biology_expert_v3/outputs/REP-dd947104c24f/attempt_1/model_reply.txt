@@ -1,0 +1,19 @@
+```python
+        fill_children = []
+        for i in range(n_fill):
+            # Lower template 5'->3' runs left->right, nascent strand grows right->left.
+            # i=0 -> rightmost segment (adjacent to 3' end / existing fragment),
+            # i=1 -> middle, i=2 -> leftmost (adjacent to nick).
+            x0 = lag1_primer_start + (n_fill - 1 - i) * fill_step
+            x1 = x0 + fill_step
+            blk = make_block([(x0 + x1) / 2, LAG_Y, 0],
+                             fill_step * 0.85, 0.13, "#69F0AE", "#1B5E20")
+            self.register_object(f"fill_dna_{i:02d}", blk,
+                                 role="nucleotide", strand="lagging",
+                                 fragment="okazaki_1", material="DNA")
+            pol_fill.move_to([(x0 + x1) / 2, LAG_Y + 0.55, 0])
+            pol_fill_lbl.next_to(pol_fill, UP, buff=0.03)
+            self.play(FadeIn(blk), run_time=0.22)  # 3×0.22=0.66 -> 25.91
+            self.add(blk)
+            fill_children.append(blk)
+```

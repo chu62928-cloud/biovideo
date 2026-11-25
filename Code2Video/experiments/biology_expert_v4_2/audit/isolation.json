@@ -1,0 +1,8 @@
+{
+  "path": "/root/autodl-tmp/code2biovideo/Code2Video-v4.2-workspace",
+  "branch": "biology-expert-v4.2",
+  "checkout": "Initial worktree fetch blocked; stopped only newly created checkout. Independent repository with real source overlay used.",
+  "original_user_changes_preserved": true,
+  "source_snapshot": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v4_2/audit/source_snapshot",
+  "no_reset_original": true
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "test": "template_3left_5right_growth_right",
+    "passed": true
+  },
+  {
+    "test": "template_5left_3right_growth_left",
+    "passed": true
+  },
+  {
+    "test": "wrong_template_polarity_rejected",
+    "passed": true
+  },
+  {
+    "test": "wrong_addition_end_rejected",
+    "passed": true
+  },
+  {
+    "test": "rotations_preserve_science",
+    "passed": true
+  },
+  {
+    "test": "mirror_preserves_science",
+    "passed": true
+  },
+  {
+    "test": "missing_growth_port_uncertain",
+    "passed": true
+  },
+  {
+    "test": "unknown_evidence_uncertain",
+    "passed": true
+  },
+  {
+    "test": "V4_lagging_endpoints_independently_revalidated",
+    "passed": true
+  },
+  {
+    "test": "unannotated_V4_missing_contract_uncertain",
+    "passed": true
+  }
+]

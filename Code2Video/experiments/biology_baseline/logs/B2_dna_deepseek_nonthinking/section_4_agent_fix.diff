@@ -1,0 +1,17 @@
+--- initial_model_code
++++ agent_repaired_code
+@@ -264,12 +264,12 @@
+         )
+         
+         # Show gap between fragments
+-        gap_indicator = Line(
++        gap_indicator = DashedLine(
+             start=frag1.get_end(),
+             end=frag2.get_start(),
+             color="#FFAB91",
+             stroke_width=2,
+-            stroke_dash=5
++            dash_length=0.05
+         )
+         
+         gap_label = Text("Gap", font_size=14, color="#FFAB91")

@@ -1,0 +1,19 @@
+{
+  "tag": "group_fixture",
+  "committed": true,
+  "before": null,
+  "started": 1795428312.3180745,
+  "after": {
+    "success": true,
+    "tag": "group_fixture",
+    "code_sha256": "99bdbf2327cc4ec3379da1d9548d3870f3e0cdc764b75fdc90dbef6363e768ea",
+    "video_sha256": "bba64f358cec69e4b8c34e090b217b441d8dcdda9f29181480aa721ce0216edc",
+    "duration_seconds": 0.4,
+    "renderer": "manim-0.19.0-full-render",
+    "trace_sha256": "df9d9285825cabec9224236bfb06b3c8a5c3b4de811c307abb370d09059564f8",
+    "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/group_visibility/versions/group_fixture",
+    "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/group_visibility/versions/group_fixture/rendered_code.py",
+    "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/group_visibility/versions/group_fixture/video.mp4"
+  },
+  "elapsed_seconds": 2.19
+}

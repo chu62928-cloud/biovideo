@@ -1,0 +1,24 @@
+--- before
++++ after
+@@ -191,10 +191,10 @@
+ 
+         # Big number text: 3,000,000,000 bp
+         bp_text = Text("3,000,000,000 bp", font_size=32, color="#FF7043")
+-        self.place_at_grid(bp_text, 'C6', scale_factor=0.9)
++        self.place_in_area(bp_text, 'B6', 'D6', scale_factor=0.7)
+         # Small counter beside it; put it just below the bp text (still within 1 unit)
+         counter = Integer(0, font_size=22, color="#FF7043")
+-        self.place_at_grid(counter, 'D6', scale_factor=1.0)
++        self.place_at_grid(counter, 'E6', scale_factor=0.8)
+ 
+         # Flash in the bp text
+         self.play(FadeIn(bp_text, scale=1.2), run_time=0.5)
+@@ -291,7 +291,7 @@
+         shield = ShieldIcon(color="#4DD0E1")
+         self.place_at_grid(shield, 'C5', scale_factor=1.0)
+         acc_label = Text("Accuracy", font_size=24, color="#4DD0E1")
+-        self.place_at_grid(acc_label, 'B5', scale_factor=0.85)
++        self.place_in_area(acc_label, 'B5', 'B6', scale_factor=0.7)
+ 
+         # Arrows underneath each pointing up toward the icons
+         arrow_speed = Arrow(

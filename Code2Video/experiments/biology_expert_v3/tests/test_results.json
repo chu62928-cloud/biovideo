@@ -1,0 +1,200 @@
+{
+  "mode": "OFFLINE_NO_PAID_MODELS",
+  "total": 28,
+  "passed": 28,
+  "all_passed": true,
+  "tests": [
+    {
+      "test": "schema_rejects_missing_fields_and_illegal_decision",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "schema_error_is_not_pass",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "unapproved_upstream_blocks_gate",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "content_hash_dependency_invalidation_and_cache",
+      "passed": true,
+      "details": {
+        "unrelated_script_cache_preserved": true,
+        "code_and_release_invalidated": true
+      }
+    },
+    {
+      "test": "ERROR_cannot_release_video",
+      "passed": true,
+      "details": false
+    },
+    {
+      "test": "model_PASS_cannot_waive_blocker",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "missing_evidence_selects_retrieval",
+      "passed": true,
+      "details": {
+        "mode": "OFFLINE_MOCK",
+        "observed_situation": {
+          "has_evidence": false
+        }
+      }
+    },
+    {
+      "test": "known_execution_error_selects_repair",
+      "passed": true,
+      "details": {
+        "mode": "OFFLINE_MOCK",
+        "observed_situation": {
+          "has_evidence": true,
+          "measured_error": true
+        }
+      }
+    },
+    {
+      "test": "known_facts_ambiguous_video_selects_video",
+      "passed": true,
+      "details": {
+        "mode": "OFFLINE_MOCK",
+        "observed_situation": {
+          "has_evidence": true,
+          "visual_ambiguity": true
+        }
+      }
+    },
+    {
+      "test": "conflicting_claims_select_verifier",
+      "passed": true,
+      "details": {
+        "mode": "OFFLINE_MOCK",
+        "observed_situation": {
+          "has_evidence": true,
+          "conflict": true
+        }
+      }
+    },
+    {
+      "test": "arbitrary_tool_not_whitelisted",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "persistent_model_budget_blocks_ninth_request",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "uncertain_pending_request_stops_new_paid_calls",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "actual_historical_trace_detects_polarity_growth_contradiction",
+      "passed": true,
+      "details": {
+        "uses_real_V2_geometry": true,
+        "science_evidence": "MOCK; production must retrieve and verify"
+      }
+    },
+    {
+      "test": "missing_polarity_cannot_pass_on_x_only",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "generator_direction_declaration_cannot_override_actual_trace",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "repair_patch_AST_scope_and_iteration_guard",
+      "passed": true,
+      "details": {
+        "only_target_loop_changed": true,
+        "original_loop_line": 454,
+        "manual_animation_code": false
+      }
+    },
+    {
+      "test": "upstream_root_cause_routing_not_icon_move",
+      "passed": true,
+      "details": {
+        "routes_to_earliest_stage": true,
+        "unintegrated_generator_is_explicit": true
+      }
+    },
+    {
+      "test": "candidate_skill_never_auto_approved",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "real_full_render_scientific_rejection_rolls_back_atomic_pair",
+      "passed": true,
+      "details": {
+        "complete_real_render_before_rejection": true,
+        "exact_prior_pair_retained": true,
+        "candidate_preserved": true
+      }
+    },
+    {
+      "test": "regression_real_indented_model_reply_with_extra_initializer",
+      "passed": true,
+      "details": {
+        "saved_real_model_response_parsed_without_new_call": true
+      }
+    },
+    {
+      "test": "generic_polymerase_role_is_not_direction_fact",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "regression_case_insensitive_textbook_discovery",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "quote_normalization_does_not_change_scientific_direction",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "two_attempt_cap_persists_across_restart",
+      "passed": true,
+      "details": {
+        "third_model_request_prevented": true
+      }
+    },
+    {
+      "test": "tool_exception_returns_structured_ERROR",
+      "passed": true,
+      "details": {
+        "tool_failure_returns_schema_valid_ERROR": true
+      }
+    },
+    {
+      "test": "truncated_response_keeps_known_usage_and_stops",
+      "passed": true,
+      "details": {
+        "known_usage_preserved_on_invalid_output": true,
+        "paid_requests": 0
+      }
+    },
+    {
+      "test": "explicit_user_quota_extension_persists_without_history_reset",
+      "passed": true,
+      "details": {
+        "old_requests_preserved": true,
+        "duplicate_authorization_rejected": true
+      }
+    }
+  ]
+}

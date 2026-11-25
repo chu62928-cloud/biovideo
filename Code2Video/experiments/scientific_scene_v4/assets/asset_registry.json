@@ -1,0 +1,102 @@
+{
+  "assets": [
+    {
+      "asset_id": "strand",
+      "format": "polyline",
+      "color": "#4FC3F7",
+      "fidelity": "schematic",
+      "provenance": {
+        "source_type": "original_schematic",
+        "source_url": null,
+        "license": "CC0-1.0"
+      },
+      "editable": [
+        "points",
+        "color",
+        "stroke_width"
+      ],
+      "connectable_ports": [
+        "start",
+        "end"
+      ]
+    },
+    {
+      "asset_id": "bead",
+      "format": "circle",
+      "color": "#FFDD55",
+      "fidelity": "schematic",
+      "provenance": {
+        "source_type": "original_schematic",
+        "source_url": null,
+        "license": "CC0-1.0"
+      },
+      "editable": [
+        "center",
+        "radius"
+      ],
+      "connectable_ports": [
+        "center"
+      ]
+    },
+    {
+      "asset_id": "primase",
+      "format": "svg",
+      "path": "dna/primase.svg",
+      "color": "#55DDEE",
+      "fidelity": "schematic",
+      "provenance": {
+        "source_type": "V2_original_schematic",
+        "source_url": null,
+        "license": "CC0-1.0"
+      },
+      "editable": [
+        "center",
+        "width",
+        "label"
+      ],
+      "connectable_ports": [
+        "active_site"
+      ]
+    },
+    {
+      "asset_id": "dna_polymerase",
+      "format": "svg",
+      "path": "dna/dna_polymerase.svg",
+      "color": "#55DDEE",
+      "fidelity": "schematic",
+      "provenance": {
+        "source_type": "V2_original_schematic",
+        "source_url": null,
+        "license": "CC0-1.0"
+      },
+      "editable": [
+        "center",
+        "width",
+        "label"
+      ],
+      "connectable_ports": [
+        "active_site"
+      ]
+    },
+    {
+      "asset_id": "dna_ligase",
+      "format": "svg",
+      "path": "dna/dna_ligase.svg",
+      "color": "#55DDEE",
+      "fidelity": "schematic",
+      "provenance": {
+        "source_type": "V2_original_schematic",
+        "source_url": null,
+        "license": "CC0-1.0"
+      },
+      "editable": [
+        "center",
+        "width",
+        "label"
+      ],
+      "connectable_ports": [
+        "active_site"
+      ]
+    }
+  ]
+}

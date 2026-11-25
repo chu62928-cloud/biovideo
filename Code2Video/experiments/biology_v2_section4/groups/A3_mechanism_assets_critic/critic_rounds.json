@@ -1,0 +1,13 @@
+[
+  {
+    "round": 1,
+    "status": "API_timeout_no_feedback",
+    "committed": false,
+    "new_render": false,
+    "elapsed_seconds": 180.357
+  },
+  {
+    "round": 2,
+    "status": "skipped_due_to_round1_API_failure"
+  }
+]

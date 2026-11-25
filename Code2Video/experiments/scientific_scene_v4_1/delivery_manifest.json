@@ -1,0 +1,14 @@
+{
+  "RESULTS.md": "e8d9b85b4518f8170884c069275b9ffaef2449f8e2ac6a59d5119078291bda22",
+  "metrics.json": "fc9445bf2e01eb71a015d105ce2eb42def634c7a3b52986b6ae188b7dc21fbcb",
+  "metrics.csv": "e8b40c3331f827a116e5e896d99f685a47549f58818595d9af7094aaa955614c",
+  "V4_1_代码审核与日志.zip": "eb8bba7fef231fa7a94d85718b9bc4f881f6bd6d109fb1de98dae04b7f32266b",
+  "comparisons/dna_before_after.mp4": "9919de7b514d01d247c12cf94445c47b620856c8cc8e0242744da7bf8a61c9e4",
+  "comparisons/mitosis_before_after.mp4": "0588cc92d3f928887ad151f86f5c3d4af447edd484de1dd11b68c7a7dac9cb28",
+  "comparisons/dna_keyframes.jpg": "cfd89bb48e78cef632df607f196c8b7bcc55eec613f9793664e227f9a1694935",
+  "comparisons/mitosis_keyframes.jpg": "a2339ad512f8029d44f6bfb55e4794bae3c43f982cc0346a92c7b2094c0170a5",
+  "motion/fork_advance.mp4": "0d6e99eb055f465279c8f81cbcab1a0805fa74d25f9d6be5156fb67147bd2fc3",
+  "renderer_fix/path_geometry_regression.mp4": "9f3557b46682845f9896cd40edeb3f28ff4e8313c1a8e2d1f40a9b20c3da7a46",
+  "mitosis/mitosis_revised.mp4": "3ac1a0c4dbbcaea4298a7bec4fee92acab29a1999d62823c8bdee3df36071708",
+  "groups/B4_expert_repair/video.mp4": "c1a999fce2b3f1abadfd14b3cefa429cbf672a2a5de124c16a93b0b2b49baf46"
+}

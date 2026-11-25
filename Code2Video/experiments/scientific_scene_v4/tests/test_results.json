@@ -1,0 +1,207 @@
+{
+  "mode": "OFFLINE_NO_PAID_API",
+  "passed": 27,
+  "total": 27,
+  "all_passed": true,
+  "results": [
+    {
+      "test": "valid_scene_schemas_both_topics",
+      "passed": true,
+      "details": [
+        null,
+        null
+      ]
+    },
+    {
+      "test": "required_assembly_relationships_missing_rejected",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "unknown_object_reference_rejected",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "unknown_science_evidence_rejected",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "assembly_components_anchors_and_state_query",
+      "passed": true,
+      "details": [
+        13,
+        [
+          2.5,
+          0.15,
+          0
+        ],
+        {
+          "phase": "closed"
+        }
+      ]
+    },
+    {
+      "test": "DNA_legal_transitions_all_pre_post_invariants",
+      "passed": true,
+      "details": {
+        "steps": 55,
+        "final_state": {
+          "phase": "maturing"
+        }
+      }
+    },
+    {
+      "test": "mitosis_legal_transitions_preserve_two_sisters",
+      "passed": true,
+      "details": {
+        "steps": 7,
+        "final_state": {
+          "phase": "separating"
+        }
+      }
+    },
+    {
+      "test": "precondition_failure_rolls_back_state",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "extra_parental_strand_or_duplex_detected",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "wrong_growth_relative_to_injected_polarity_rule",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "ligase_cannot_seal_nonadjacent_endpoints",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "sister_separation_requires_alignment_and_bipolar_attachment",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "chromatid_identity_change_detected",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "invariant_postcondition_failure_atomic_rollback",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "all_ten_generic_operations_executable",
+      "passed": true,
+      "details": [
+        "attach",
+        "connect",
+        "detach",
+        "disconnect",
+        "extend",
+        "merge",
+        "move_along_path",
+        "replace_component",
+        "split",
+        "transform_state"
+      ]
+    },
+    {
+      "test": "same_core_no_topic_specific_branch",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "Pol_delta_origin_not_blindly_attributed_to_Planner",
+      "passed": true,
+      "details": {
+        "label": "Pol δ",
+        "first_observed_stage": "CODE",
+        "searched_stages": [
+          "PLANNER",
+          "STORYBOARD",
+          "CODE"
+        ],
+        "unobserved_stages_are_unknown": true
+      }
+    },
+    {
+      "test": "missing_observation_not_zero_violations",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "model_validated_flag_ignored",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "BiologyExpert_real_registry_scene_IR_tool_mock_semantics",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "Qwen_API_or_invalid_JSON_ERROR_never_PASS_mock",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "assembly_error_routes_to_assembly_not_layout_mock",
+      "passed": true,
+      "details": {
+        "mode": "OFFLINE routing fixture",
+        "upstream_repair_preserved": true
+      }
+    },
+    {
+      "test": "actual_repair_task_builder_preserves_root_layer",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "duplicate_or_out_of_order_plan_rejected",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "polyline_center_matches_actual_bounding_box",
+      "passed": true,
+      "details": true
+    },
+    {
+      "test": "actual_B1_connection_break_detected_over_time",
+      "passed": true,
+      "details": {
+        "actual_B1_temporal_failure_detected": true
+      }
+    },
+    {
+      "test": "generic_Manim_adapter_real_full_render_fixture",
+      "passed": true,
+      "details": {
+        "full_render": true,
+        "decode": true,
+        "mode": "OFFLINE_FIXTURE_NOT_EXPERIMENT",
+        "hashes": {
+          "success": true,
+          "tag": "offline_adapter",
+          "code_sha256": "5a93d051985c2752c0e31d6b2d1de22a91a53e858766a77a456c2b4c19f0389f",
+          "video_sha256": "4c6800815735a375a8bf054d48c9fb4aef41950d6169d207b25fe61210e813bb",
+          "duration_seconds": 7.333333,
+          "renderer": "manim-0.19.0-full-render",
+          "trace_sha256": "84727d8d57ef409c85f0aa29c5c1ab7e238bf9a3eca60652ec0d17720ab032ea",
+          "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/tests/offline_1obcqy_0/render_fixture/versions/offline_adapter",
+          "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/tests/offline_1obcqy_0/render_fixture/versions/offline_adapter/rendered_code.py",
+          "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/tests/offline_1obcqy_0/render_fixture/versions/offline_adapter/video.mp4"
+        }
+      }
+    }
+  ]
+}

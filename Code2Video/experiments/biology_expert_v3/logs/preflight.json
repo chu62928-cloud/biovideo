@@ -1,0 +1,14 @@
+{
+  "configuration_present": true,
+  "models": {
+    "DEEPSEEK_MODEL": "deepseek-flash",
+    "QWEN_MODEL": "qwen4-max"
+  },
+  "interface_probe": "First real task call counts toward budget; no extra paid ping",
+  "SDK_retries": 0,
+  "budget": {
+    "deepseek": 8,
+    "qwen": 2
+  },
+  "offline_test_total": 20
+}

@@ -1,0 +1,60 @@
+[
+  {
+    "repair_id": "REP-V4-1",
+    "issue_id": "S1",
+    "root_cause_stage": "SCENE_IR",
+    "target_objects": [
+      "template_leading",
+      "template_lagging"
+    ],
+    "target_events": [
+      "event_1_fork"
+    ],
+    "repair_scope": "assembly_geometry",
+    "preserve_constraints": [
+      "same persistent identities",
+      "same events",
+      "unaffected assembly components"
+    ],
+    "acceptance_criteria": [
+      "After event_1_fork, declared center equals mean of updated points; expected_observed_states center distance <0.01 for both templates"
+    ],
+    "required_validators": [
+      "schema",
+      "runtime",
+      "full_decode",
+      "full_video_science"
+    ],
+    "status": "NEEDS_HUMAN_REVIEW",
+    "description": "open_fork updates template points (y ±1.2) but leaves declared center [0.5,±0.15]; measured center offset 0.525 persists all events (expected_observed_states FAIL). Rendered fork geometry and antiparallel labels are correct, so this is stale IR bookkeeping, not a mechanism error."
+  },
+  {
+    "repair_id": "REP-V4-2",
+    "issue_id": "S2",
+    "root_cause_stage": "ANIMATION_IMPLEMENTATION",
+    "target_objects": [
+      "polymerase_leading",
+      "new_leading"
+    ],
+    "target_events": [
+      "event_3_extension"
+    ],
+    "repair_scope": "affected_event",
+    "preserve_constraints": [
+      "same persistent identities",
+      "same events",
+      "unaffected assembly components"
+    ],
+    "acceptance_criteria": [
+      "Bound enzyme center coincides with new_leading end anchor (distance <=0.03) at every sampled frame while active_site relation exists"
+    ],
+    "required_validators": [
+      "schema",
+      "runtime",
+      "full_decode",
+      "full_video_science"
+    ],
+    "status": "NEEDS_HUMAN_REVIEW",
+    "description": "During event_3_extension, polymerase_leading center trails new_leading 3' end by ~0.107 units (actual_active_site_bindings FAIL), i.e. enzyme drawn slightly behind the growing tip while extension direction itself is correct (+x, toward fork). Tracking lag only; no polarity or primer-order violation."
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "skill_id": "fix_bio_direction",
+  "status": "CANDIDATE_NOT_APPROVED",
+  "scope": "Instrumented antiparallel DNA gap-fill schematics only; not a universal x-direction rule",
+  "trigger": "Actual trace direction disagrees with observed template and nascent polarity",
+  "problem_type": "scientific_mechanism",
+  "repair_method": "Request a minimal Coder loop patch; compare unaffected AST; render completely; revalidate real temporal geometry",
+  "preserve_scientific_constraints": [
+    "approved_script",
+    "asset_identity",
+    "unaffected_events",
+    "non_target_AST",
+    "template polarity",
+    "extension at3prime",
+    "RNA removal before DNA fill before ligation"
+  ],
+  "verification_tools": [
+    "source_diff_scope",
+    "strand_polarity_check",
+    "growth_trace_check",
+    "rendered_video_review"
+  ],
+  "regression_tests": [
+    "real_indented_model_reply",
+    "actual_polarity_plus_growth_trace",
+    "non_target_AST_unchanged",
+    "full_science_rejection_retains_prior_pair"
+  ],
+  "experiment": {
+    "repair_id": "REP-dd947104c24f",
+    "review_id": "REV-f321d2b8982a",
+    "result": {
+      "targeted_direction_fixed": true,
+      "scientific_commit": false,
+      "regression_tests": [
+        "real_indented_model_reply",
+        "actual_polarity_plus_growth_trace",
+        "non_target_AST_unchanged",
+        "full_science_rejection_retains_prior_pair"
+      ],
+      "experiment_path": "/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v3/outputs/REP-dd947104c24f/attempt_2_format_replay"
+    }
+  },
+  "approval_required": true
+}

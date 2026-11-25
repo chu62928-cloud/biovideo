@@ -1,0 +1,27 @@
+{
+  "skill_id": "fix_mock",
+  "status": "CANDIDATE_NOT_APPROVED",
+  "scope": "Instrumented antiparallel DNA gap-fill schematics only; not a universal x-direction rule",
+  "trigger": "Actual trace direction disagrees with observed template and nascent polarity",
+  "problem_type": "fixture",
+  "repair_method": "Request a minimal Coder loop patch; compare unaffected AST; render completely; revalidate real temporal geometry",
+  "preserve_scientific_constraints": [
+    "template polarity",
+    "extension at3prime",
+    "RNA removal before DNA fill before ligation"
+  ],
+  "verification_tools": [],
+  "regression_tests": [
+    "fixture"
+  ],
+  "experiment": {
+    "repair_id": "REP-MOCK",
+    "review_id": "REV-MOCK",
+    "result": {
+      "regression_tests": [
+        "fixture"
+      ]
+    }
+  },
+  "approval_required": true
+}

@@ -1,0 +1,259 @@
+from manim import *
+import numpy as np
+
+
+class TeachingScene(Scene):
+    def setup_layout(self, title_text, lecture_lines):
+        # BASE
+        self.camera.background_color = "#000000"
+        self.title = Text(title_text, font_size=28, color=WHITE).to_edge(UP)
+        self.add(self.title)
+
+        # Left-side lecture content (bullets with "-")
+        lecture_texts = [Text(line, font_size=22, color=WHITE) for line in lecture_lines]
+        self.lecture = VGroup(*lecture_texts).arrange(DOWN, aligned_edge=LEFT).scale(0.8)
+        self.lecture.to_edge(LEFT, buff=0.2)
+        self.add(self.lecture)
+
+        # Define fine-grained animation grid (4x4 grid on right side)
+        self.grid = {}
+        rows = ["A", "B", "C", "D", "E", "F"]  # Top to bottom
+        cols = ["1", "2", "3", "4", "5", "6"]  # Left to right
+
+        for i, row in enumerate(rows):
+            for j, col in enumerate(cols):
+                x = 0.5 + j * 1
+                y = 2.2 - i * 1
+                self.grid[f"{row}{col}"] = np.array([x, y, 0])
+
+    def place_at_grid(self, mobject, grid_pos, scale_factor=1.0):
+        mobject.scale(scale_factor)
+        mobject.move_to(self.grid[grid_pos])
+        return mobject
+
+    def place_in_area(self, mobject, top_left, bottom_right, scale_factor=1.0):
+        tl_pos = self.grid[top_left]
+        br_pos = self.grid[bottom_right]
+        
+        # Calculate center of the area
+        center_x = (tl_pos[0] + br_pos[0]) / 2
+        center_y = (tl_pos[1] + br_pos[1]) / 2
+        center = np.array([center_x, center_y, 0])
+        
+        mobject.scale(scale_factor)
+        mobject.move_to(center)
+        return mobject
+
+class Section3Scene(TeachingScene):
+    def construct(self):
+        self.setup_layout(
+            "Sec 3: Unwinding the Double Helix: Helicase and Topoisomerase",
+            [
+                "Helicase unzips the DNA double helix.",
+                "Topoisomerase relieves twisting tension ahead.",
+                "Replication forks open bidirectionally.",
+            ],
+        )
+
+        # ---------- Helper: build a DNA helix as two intertwined sine strands ----------
+        def make_helix(length=5.0, n=80, amp=0.22, color_top="#4FC3F7",
+                       color_bot="#4FC3F7"):
+            top_pts, bot_pts = [], []
+            for i in range(n + 1):
+                t = i / n
+                x = -length / 2 + t * length
+                y_top = amp * np.sin(t * 2 * PI * 3)
+                y_bot = -amp * np.sin(t * 2 * PI * 3)
+                top_pts.append(np.array([x, y_top, 0]))
+                bot_pts.append(np.array([x, y_bot, 0]))
+            top = VMobject(color=color_top, stroke_width=6)
+            top.set_points_smoothly(top_pts)
+            bot = VMobject(color=color_bot, stroke_width=6)
+            bot.set_points_smoothly(bot_pts)
+            return VGroup(top, bot)
+
+        # ============================================================
+        # === Animation for Lecture Line 1 ===
+        # ============================================================
+        line1_target = self.lecture[0]
+        self.play(line1_target.animate.set_color("#4FC3F7"), run_time=0.4)
+
+        helix = make_helix(length=5.0, n=120, amp=0.22, color_top="#4FC3F7",
+                           color_bot="#4FC3F7")
+        self.place_in_area(helix, 'A1', 'C5', scale_factor=0.8)
+
+        self.play(Create(helix), run_time=1.2)
+        self.wait(0.3)
+
+        # Zipper-like helicase icon (yellow) sliding along splitting strands
+        helicase_body = RoundedRectangle(
+            width=0.5, height=1.1, corner_radius=0.15,
+            color="#FFEB3B", fill_opacity=0.85, stroke_width=2,
+        )
+        # zipper teeth
+        teeth = VGroup()
+        for k in range(5):
+            tooth = Triangle(color="#FFEB3B", fill_opacity=1, stroke_width=0).scale(0.09)
+            tooth.rotate(PI)
+            tooth.move_to(np.array([0, 0.35 - k * 0.18, 0]))
+            teeth.add(tooth)
+        zipper = VGroup(helicase_body, teeth)
+        zipper.scale(0.55)
+
+        helicase_label = Text("Helicase", font_size=20, color="#FFEB3B")
+
+        # Position helicase at left end of the helix and slide it to right of center
+        start_pos = helix.get_left() + RIGHT * 0.4
+        end_pos = helix.get_center() + RIGHT * 0.9
+        zipper.move_to(start_pos)
+        helicase_label.next_to(zipper, UP, buff=0.25)
+
+        self.play(FadeIn(zipper), Write(helicase_label), run_time=0.5)
+
+        # Animate strands splitting into a Y-fork as zipper moves right
+        top_strand_pts = []
+        bot_strand_pts = []
+        n = 40
+        fork_frac_final = 0.6
+
+        # Build the Y-fork design: left part joined, right part split (top up, bottom down)
+        def build_fork(split_frac):
+            top_pts, bot_pts = [], []
+            L = 5.0
+            for i in range(n + 1):
+                t = i / n
+                x = -L / 2 + t * L
+                if t <= split_frac:
+                    y_top = 0.22 * np.sin(t * 2 * PI * 3)
+                    y_bot = -0.22 * np.sin(t * 2 * PI * 3)
+                else:
+                    # transition into smooth Y-fork
+                    u = (t - split_frac) / (1 - split_frac)
+                    lift = 0.55 * u
+                    y_top = 0.22 * np.sin(t * 2 * PI * 3) * (1 - u) + lift
+                    y_bot = -0.22 * np.sin(t * 2 * PI * 3) * (1 - u) - lift
+                top_pts.append(np.array([x, y_top, 0]))
+                bot_pts.append(np.array([x, y_bot, 0]))
+            return top_pts, bot_pts
+
+        top_pts, bot_pts = build_fork(0.0)
+        top_mob = VMobject(color="#4FC3F7", stroke_width=6)
+        top_mob.set_points_smoothly(top_pts)
+        bot_mob = VMobject(color="#4FC3F7", stroke_width=6)
+        bot_mob.set_points_smoothly(bot_pts)
+        fork_group = VGroup(top_mob, bot_mob)
+        self.place_in_area(fork_group, 'D1', 'F6', scale_factor=0.7)
+
+        self.play(
+            Transform(helix, fork_group),
+            zipper.animate.move_to(end_pos),
+            helicase_label.animate.move_to(end_pos + UP * 0.6),
+            run_time=2.0,
+        )
+        self.wait(0.4)
+
+        # ============================================================
+        # === Animation for Lecture Line 2 ===
+        # ============================================================
+        line2_target = self.lecture[1]
+        self.play(line2_target.animate.set_color("#FF7043"), run_time=0.4)
+
+        # Tight coils ahead of the fork (top-right region, near D5/E5)
+        coil_center = self.grid["D5"]
+        coil_pts = []
+        coil_radius = 0.22
+        turns = 3
+        pts_per_turn = 20
+        for i in range(turns * pts_per_turn + 1):
+            t = i / (turns * pts_per_turn)
+            ang = t * turns * 2 * PI
+            r = coil_radius * (1 - 0.4 * t)
+            x = r * np.cos(ang)
+            y = t * 0.9 - 0.45 + r * np.sin(ang) * 0.35
+            coil_pts.append(np.array([x, y, 0]))
+        coils = VMobject(color="#FF7043", stroke_width=5)
+        coils.set_points_smoothly(coil_pts)
+        coils.move_to(coil_center)
+
+        self.play(Create(coils), run_time=0.8)
+        self.wait(0.2)
+
+        # Swivel icon for topoisomerase (orange)
+        swivel_circle = Circle(radius=0.28, color="#FF7043", stroke_width=3)
+        swivel_arrow = Arrow(
+            start=LEFT * 0.2 + UP * 0.03, end=RIGHT * 0.2 + UP * 0.03,
+            color="#FF7043", stroke_width=4, buff=0,
+        )
+        swivel = VGroup(swivel_circle, swivel_arrow)
+        swivel.move_to(coil_center + UP * 0.85)
+
+        topo_label = Text("Topoisomerase", font_size=18, color="#FF7043")
+        topo_label.next_to(swivel, RIGHT, buff=0.15)
+
+        self.play(FadeIn(swivel), Write(topo_label), run_time=0.5)
+
+        # Rotate swivel and relax coils into smooth green strand
+        relaxed_pts = []
+        for i in range(turns * pts_per_turn + 1):
+            t = i / (turns * pts_per_turn)
+            x = -0.45 + t * 0.9
+            y = 0.05 * np.sin(t * 2 * PI * 2)
+            relaxed_pts.append(np.array([x, y, 0]))
+        relaxed = VMobject(color="#81C784", stroke_width=5)
+        relaxed.set_points_smoothly(relaxed_pts)
+        relaxed.move_to(coil_center)
+
+        self.play(
+            Rotate(swivel, angle=2 * PI, about_point=coil_center + UP * 0.85),
+            Transform(coils, relaxed),
+            run_time=1.6,
+        )
+        self.wait(0.4)
+
+        # ============================================================
+        # === Animation for Lecture Line 3 ===
+        # ============================================================
+        line3_target = self.lecture[2]
+        self.play(line3_target.animate.set_color("#B3E5FC"), run_time=0.4)
+
+        # Origin marker
+        origin = self.grid["D3"]
+        origin_dot = Dot(origin, radius=0.07, color="#FFD54F")
+        origin_label = Text("Origin", font_size=18, color="#FFD54F")
+        origin_label.next_to(origin_dot, DOWN, buff=0.2)
+
+        self.play(FadeIn(origin_dot), Write(origin_label), run_time=0.4)
+
+        # Bidirectional arrows from origin
+        left_arrow = Arrow(
+            start=origin + LEFT * 0.15, end=origin + LEFT * 1.4,
+            color="#B3E5FC", stroke_width=5, buff=0,
+        )
+        right_arrow = Arrow(
+            start=origin + RIGHT * 0.15, end=origin + RIGHT * 1.4,
+            color="#B3E5FC", stroke_width=5, buff=0,
+        )
+
+        self.play(GrowArrow(left_arrow), GrowArrow(right_arrow), run_time=1.0)
+
+        # Replication fork labels at each end
+        fork_left_label = Text("Replication Fork", font_size=18, color="#FFD54F")
+        fork_left_label.next_to(left_arrow.get_end(), DOWN, buff=0.2)
+        fork_right_label = Text("Replication Fork", font_size=18, color="#FFD54F")
+        fork_right_label.next_to(right_arrow.get_end(), DOWN, buff=0.2)
+
+        self.play(
+            Write(fork_left_label), Write(fork_right_label),
+            run_time=0.8,
+        )
+
+        # Show small forks at each arrow tip
+        left_fork = make_helix(length=0.7, n=20, amp=0.08).move_to(left_arrow.get_end())
+        right_fork = make_helix(length=0.7, n=20, amp=0.08).move_to(right_arrow.get_end())
+
+        self.play(
+            FadeIn(left_fork, scale=0.6), FadeIn(right_fork, scale=0.6),
+            run_time=0.6,
+        )
+
+        self.wait(1.5)

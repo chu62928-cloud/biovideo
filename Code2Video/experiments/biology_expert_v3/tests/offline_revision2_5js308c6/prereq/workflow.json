@@ -1,0 +1,49 @@
+{
+  "artifacts": {},
+  "gates": {
+    "TOPIC_RESEARCH": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "KNOWLEDGE_GATE": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "SCRIPT_GATE": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "CAST_ASSET_GATE": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "STORYBOARD_GATE": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "CODE_GATE": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "RENDER": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "VIDEO_SCIENCE_GATE": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "VISUAL_CRITIC": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "FINAL_SCIENCE_GATE": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "APPROVED": {
+      "status": "PENDING",
+      "input_hash": null
+    }
+  }
+}

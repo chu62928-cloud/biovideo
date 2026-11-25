@@ -1,0 +1,13 @@
+{
+  "group": "B3_mechanism_fix",
+  "render_success": true,
+  "render_commit": "RENDER_COMMITTED",
+  "science_gate": "NEEDS_HUMAN_REVIEW",
+  "video_path": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/B3_mechanism_fix/video.mp4",
+  "scene_hash": "47c22529c233662a108388d93279bc38ee3fe95de04967e42c7c876f09ecb660",
+  "tag": "initial",
+  "video_sha256": "6adc131cd74516f1918b8fd44883a458221d4f51fe1d87ac509cfdc376481d4d",
+  "code_sha256": "095607a211f2bb42bb11c099bf5fe6a3c5e7ae2ad64ea967789fcbfa9d9b45ad",
+  "trace_sha256": "9c747d74a343db0f428e0f22ebdc4e353452a933c4657ddf16024cc863673bda",
+  "duration_seconds": 38.333333
+}

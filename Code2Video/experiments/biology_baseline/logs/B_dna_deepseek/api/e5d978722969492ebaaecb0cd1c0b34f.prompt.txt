@@ -1,0 +1,30 @@
+ 
+    As an outstanding instructional design expert, design a logically clear, step-by-step, example-driven teaching outline.
+
+    Knowledge Point: DNA replication in eukaryotic cells
+    
+
+    MUST output the teaching outline in JSON format as follows:
+    {
+        "topic": "Topic Name",
+        "target_audience": "Target Audience (e.g., high school students, university students, etc.)",
+        "sections": [
+            {
+                "id": "section_1",
+                "title": "Section Title",
+                "content": "Description of the section content",
+                "example": "XXX"
+            },
+            ...
+        ]
+    }
+
+    Requirements:
+    1. The total duration should be fixed at around 5 minutes.
+    2. The sections should be arranged in a progressive and logical order.
+    3. Emphasize key concepts and critical knowledge points.
+    4. When presenting mathematical concepts, prefer representations that integrate graphical elements to enhance comprehension.
+    5. The outline should be suitable for animation and visual presentation.
+    6. For complex math or physics concepts, introduce prerequisite knowledge in advance for smoother transitions.
+    7. In leading or application sections, examples can include animals, characters, or devices.
+    

@@ -1,0 +1,991 @@
+[
+  {
+    "task": {
+      "repair_id": "REP_primase_identity_mismatch",
+      "issue_id": "primase_identity_mismatch",
+      "root_cause_stage": "SCENE_IR",
+      "target_artifact": "scene_ir/dna_section4.json",
+      "target_object_ids": [
+        "primase"
+      ],
+      "target_fields": [
+        "scientific_identity.name",
+        "scientific_properties.role",
+        "visual_representation.label"
+      ],
+      "acceptance_criteria": [
+        "Identity, role and display explicitly describe RNA primase only",
+        "Pol alpha short DNA handoff stays a declared omission, not assigned to RNA primase",
+        "No unrelated scientific field changes"
+      ],
+      "status": "PENDING"
+    },
+    "field_acceptance": {
+      "status": "CANDIDATE_CREATED",
+      "changed": [
+        {
+          "object_id": "primase",
+          "field": "scientific_identity.name",
+          "before": "Primase / Pol alpha",
+          "after": "RNA primase"
+        },
+        {
+          "object_id": "primase",
+          "field": "scientific_properties.role",
+          "before": "Primase / Pol alpha",
+          "after": "Synthesizes short RNA primers to initiate DNA synthesis; does not perform DNA polymerase activity"
+        },
+        {
+          "object_id": "primase",
+          "field": "visual_representation.label",
+          "before": "Primase / Pol alpha",
+          "after": "RNA primase"
+        }
+      ],
+      "before_sha256": "65cf6bf55c9ca0f1f7073e5f18d401edc9ac7875af731f19b176205508882c1c",
+      "after_sha256": "d29152b820ac288c330540e2da8c9da8a0cf1283ea6cc5dad5016246dedf3e95",
+      "target_artifact": "scene_ir/dna_section4.json",
+      "requires_downstream_regeneration": true
+    },
+    "result": {
+      "group": "B4_expert_repair",
+      "render_success": true,
+      "render_commit": "RENDER_COMMITTED",
+      "science_gate": "REVISE",
+      "video_path": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/B4_expert_repair/video.mp4",
+      "scene_hash": "d29152b820ac288c330540e2da8c9da8a0cf1283ea6cc5dad5016246dedf3e95",
+      "tag": "initial",
+      "video_sha256": "eb443eea4fd4bf5627fe1269a9153680c56e6543bca262ec27c90999803447e3",
+      "code_sha256": "095607a211f2bb42bb11c099bf5fe6a3c5e7ae2ad64ea967789fcbfa9d9b45ad",
+      "trace_sha256": "5119455b1f1d24d2686263b2167d52af787e1b929cfbc62d7ad8f16ca503afa9",
+      "duration_seconds": 31.933333,
+      "ir_review_decision": "REVISE",
+      "video_review_decision": "REVISE",
+      "repair_attempts": 1,
+      "repair_approved": false,
+      "conflicts": [],
+      "publish_pointer": "B3_mechanism_fix",
+      "decision_basis": {
+        "ir_critical_remaining": [
+          {
+            "issue_id": "polarity-template-labels-fragment2",
+            "severity": "blocker",
+            "description": "Lagging nascent strand geometry contradicts the displayed template polarity. template_lagging endpoint_labels run start=5' -> end=3', and its 5' side is the left open region (constraint polarity_basis template_5prime_side=left). New DNA is synthesized 5'->3', so along the lagging branch the growing 3' end advances toward the left (toward the fork/origin of the segment already synthesized). fragment_2 starts at x=1.1 with 5' start and grows toward the left: extend events move its end from 1.08 to 0.25, -0.175, -0.60 — correct direction — BUT the attached primer rna_primer_lagging_2 sits at [1.1..1.7], i.e. to the RIGHT of fragment_2's 5' start. In a correct lagging diagram the primer occupies the 5' side of the nascent piece relative to the template's 3' (telomere-proximal) side... more concretely here the primer at x=1.1-1.7 is upstream on the 5' side while the template 3' side is right; the newly synthesized DNA extends leftward away from the primer, which is fine, but the physical adjacency labeling implies synthesis proceeds from the primer leftward, i.e. away from the fork, while the fork/'open region' is on the left. The primer is placed on the wrong side of the fork for that template cassette: for template_lagging with 5' left/3' right, a primase product laid down at the opened-left region should be left of previously synthesized DNA so that Pol extends rightward. Instead primer_lagging_1 at [-1.2..-0.6] is left of fragment_1 [-1.2 -> -3.5 growing left], meaning Pol delta on fragment_1 synthesizes LEFT away from its primer at -1.2. This makes the lagging strand extend in the same physical direction as the leading strand-of-approach for that template branch, i.e. wrong local path relative to the displayed 5' template end.",
+            "root_cause_stage": "SCENE_IR",
+            "target_objects": [
+              "template_lagging",
+              "fragment_1",
+              "fragment_2",
+              "rna_primer_lagging_1",
+              "rna_primer_lagging_2",
+              "polymerase_lagging"
+            ],
+            "target_events": [
+              "event_4_two_modes"
+            ],
+            "repair_scope": "Rule DNA_STRAND_POLARITY. With template_lagging labeled 5'(left)->3'(right), the lagging nascent piece reading 5'->3' must have its 5' primer end on the RIGHT (3'-template side) and its 3' growing end advancing toward the LEFT toward the fork. Reposition each primer at the right end of its fragment (e.g. fragment_2 primer at ~x=1.1 with DNA extending leftward is acceptable; fragment_1 primer must be at fragment_1's right/5' end, currently at x=-1.2 while it extends to -3.5 — this is already consistent for fragment_1). The blocking inconsistency is primer_lagging_2 at [1.1..1.7] plus fragment_2 extending leftward from 1.1 to -0.6: primer overlaps fragment_2's 5' start at x=1.1 fine, but then gap_fill is then called to fill between fragment_2 end (-0.6) and fragment_1 start (-1.2) — check that gap_fill grows leftward from -0.6 to -1.2 (it does, -0.6->-1.2), which is correct. So restrict repair: ensure each lagging fragment's 5' primer abuts its 5' end and its 3' growing end is the one nearer the fork. Verify fragments do not overlap and that primer/Pol delta active sites sit at the 3' growing end, not at the 5' primer end.",
+            "acceptance_criteria": [
+              "For template_lagging with start=5' at left and end=3' at right, every nascent lagging object's 5' start is its rightmost point adjacent to its RNA primer, and its 3' end (growth_port) advances leftward toward the fork junction while elongating.",
+              "No Pol delta active_site is attached to a 5' primer end; attach uses target_anchor=end (3' growing end).",
+              "fragment_1, fragment_2 and gap_fill tile contiguously left-to-right with non-overlapping spans, and gap_fill spans exactly the nick between fragment_2 end and fragment_1 start."
+            ]
+          },
+          {
+            "issue_id": "maturation-missing-pol-alpha-and-rnase",
+            "severity": "major",
+            "description": "Maturation event removes the RNA primer and fills the gap with Pol delta but never shows removal of the RNA primer bases nor the role of Pol α/primase–Pol α handoff. Allowed simplification explicitly permits omitting individual RNaseH/FEN1 steps (so absence of RNase H is fine), but the caption asserts 'Remove RNA, fill DNA, then seal a nick' while the animation only hides rna_primer_lagging_1 (transform_state visible:false) and grows gap_fill with Pol delta — no depicted base removal and gap_fill is placed between fragment_2 and fragment_1 which are distinct from the primer location. The result is a label/geometry mismatch: the primer disappears but the gap being filled is not where the primer was, so a viewer sees primer vanish and a nick elsewhere get filled.",
+            "root_cause_stage": "ASSEMBLY",
+            "target_objects": [
+              "rna_primer_lagging_1",
+              "gap_fill",
+              "fragment_1",
+              "fragment_2"
+            ],
+            "target_events": [
+              "event_5_maturation"
+            ],
+            "repair_scope": "Either (a) place gap_fill between fragment_2's 3' end and fragment_1's 5' side at the same x-span as rna_primer_lagging_1 (hide primer and fill its footprint), so 'remove RNA, fill DNA' is spatially truthful; or (b) change caption to 'fill the gap between fragments and seal the nick' and keep primer removal implicit. Also ensure fill uses Pol δ 5'->3' extending from the downstream 3' end (constraint fill_starts_at_downstream_3prime).",
+            "acceptance_criteria": [
+              "In event_5, the gap_fill interval coincides with the vacated rna_primer_lagging_1 interval (within 0.04 units) OR the caption no longer claims to show RNA removal that is not depicted.",
+              "gap_fill extend endpoints progress monotonically toward fragment_1 start and end within tolerance (0.04) of it before sealed_nick connect commits."
+            ]
+          }
+        ],
+        "deterministic_all_pass": true,
+        "polarity_all_pass": true,
+        "full_video": "REVISE"
+      }
+    },
+    "model_patch_response": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/B4_expert_repair/model_patch_response.json",
+    "published_candidate": false,
+    "original_preserved": true
+  },
+  {
+    "task": {
+      "repair_id": "REP_coupled_growth",
+      "issue_id": "S1",
+      "root_cause_stage": "PROCESS_TEMPLATE",
+      "target_artifact": "scene_ir/dna_section4.json",
+      "target_object_ids": [
+        "new_leading",
+        "template_leading",
+        "polymerase_leading"
+      ],
+      "target_fields": [
+        "state_transitions.params.visual_updates.new_leading.points"
+      ],
+      "acceptance_criteria": [
+        "Leading 3-prime end never ahead of open template arm",
+        "Growing end continues during advancing fork after initiation",
+        "Polymerase remains bound to end"
+      ],
+      "status": "PENDING"
+    },
+    "changes": [
+      {
+        "transition_id": "event_3_extension_continuous_extension_7",
+        "field": "params.points",
+        "before": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            0.20000000000000018,
+            0.95,
+            0
+          ]
+        ],
+        "after": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            0.16181818181818164,
+            0.95,
+            0
+          ]
+        ]
+      },
+      {
+        "transition_id": "event_3_extension_continuous_extension_8",
+        "field": "params.points",
+        "before": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            0.8499999999999996,
+            0.95,
+            0
+          ]
+        ],
+        "after": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            0.21272727272727243,
+            0.95,
+            0
+          ]
+        ]
+      },
+      {
+        "transition_id": "event_3_extension_continuous_extension_9",
+        "field": "params.points",
+        "before": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            1.5,
+            0.95,
+            0
+          ]
+        ],
+        "after": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            0.26363636363636367,
+            0.95,
+            0
+          ]
+        ]
+      },
+      {
+        "transition_id": "event_4_two_modes_fragment_synthesis_0",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              0.46727272727272706,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_4_two_modes_fragment_synthesis_1",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              0.5181818181818181,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_4_two_modes_fragment_synthesis_2",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              0.5690909090909089,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_4_two_modes_fragment_synthesis_3",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              0.6199999999999997,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_4_two_modes_fragment_synthesis_4",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              0.6709090909090905,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_4_two_modes_fragment_synthesis_5",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              0.7218181818181817,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_4_two_modes_fragment_synthesis_6",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              0.7727272727272725,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_4_two_modes_fragment_synthesis_7",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              0.8236363636363633,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_4_two_modes_fragment_synthesis_8",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              0.8745454545454545,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_4_two_modes_fragment_synthesis_9",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              0.9254545454545453,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_4_two_modes_fragment_synthesis_10",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              0.9763636363636361,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_4_two_modes_fragment_synthesis_11",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              1.0272727272727273,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_4_two_modes_fragment_synthesis_12",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              1.0781818181818181,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_4_two_modes_fragment_synthesis_13",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              1.129090909090909,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_4_two_modes_fragment_synthesis_14",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              1.1799999999999997,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_4_two_modes_fragment_synthesis_15",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              1.2309090909090905,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_4_two_modes_fragment_synthesis_16",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              1.2818181818181817,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_4_two_modes_fragment_synthesis_17",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              1.3327272727272725,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_4_two_modes_fragment_synthesis_18",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              1.3836363636363633,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_4_two_modes_fragment_synthesis_19",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              1.4345454545454541,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_4_two_modes_fragment_synthesis_20",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              1.485454545454545,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_4_two_modes_fragment_synthesis_21",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              1.5363636363636362,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_5_maturation_maturation_0",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              1.5872727272727274,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_5_maturation_maturation_1",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              1.6381818181818182,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_5_maturation_maturation_2",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              1.689090909090909,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_5_maturation_maturation_3",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              1.7399999999999998,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_5_maturation_maturation_4",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              1.7909090909090906,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_5_maturation_maturation_5",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              1.8418181818181814,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_5_maturation_maturation_6",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              1.8927272727272726,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_5_maturation_maturation_7",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              1.9436363636363634,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_5_maturation_maturation_8",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              1.9945454545454542,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_5_maturation_maturation_9",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              2.0454545454545454,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_5_maturation_maturation_10",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              2.096363636363636,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_5_maturation_maturation_11",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              2.147272727272727,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_5_maturation_maturation_12",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              2.198181818181818,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_5_maturation_maturation_13",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              2.249090909090909,
+              0.95,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "transition_id": "event_5_maturation_maturation_14",
+        "field": "params.visual_updates.new_leading",
+        "before": null,
+        "after": {
+          "visible": true,
+          "points": [
+            [
+              -3.7,
+              0.95,
+              0
+            ],
+            [
+              2.3,
+              0.95,
+              0
+            ]
+          ]
+        }
+      }
+    ],
+    "result": {
+      "group": "B4_expert_repair",
+      "render_success": true,
+      "render_commit": "RENDER_COMMITTED",
+      "science_gate": "NEEDS_HUMAN_REVIEW",
+      "video_path": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/B4_expert_repair/video.mp4",
+      "scene_hash": "37e72736bca59207fd4514fc6c8b49bf816710c0032c2998952473ef5e400b7d",
+      "tag": "process_repair_2",
+      "video_sha256": "49fdf7c05ae68e34e8af77ca053f3c8548f4b990ce04d7dd23686492d4cac485",
+      "code_sha256": "095607a211f2bb42bb11c099bf5fe6a3c5e7ae2ad64ea967789fcbfa9d9b45ad",
+      "trace_sha256": "96099448f6a29e80e95eba76f4cd2092901e7e87df365c6457d8b399319cef08",
+      "duration_seconds": 31.933333,
+      "ir_review_decision": "REVISE",
+      "repair_attempts": 2,
+      "repair_approved": false,
+      "video_review_decision": "NOT_MEASURED_FOR_NEW_HASH",
+      "publish_pointer": "B3_mechanism_fix",
+      "reason": "Two Qwen requests already used; previous video review is bound to different candidate hash, cannot approve new candidate from stale review"
+    },
+    "scientific_publication_rolled_back": true
+  }
+]

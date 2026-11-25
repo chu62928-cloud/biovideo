@@ -1,0 +1,37 @@
+{
+  "label": "A2_math_deepseek_nonthinking",
+  "topic": "Linear transformations and matrices",
+  "output_dir": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices",
+  "requested_model": "deepseek-flash",
+  "critic": false,
+  "assets": false,
+  "start_utc": "2026-11-23T03:54:17Z",
+  "status": "success",
+  "sections": 6,
+  "successful_sections": 6,
+  "section_videos": {
+    "section_1": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_1/480p15/Section1Scene.mp4",
+    "section_2": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_2/480p15/Section2Scene.mp4",
+    "section_3": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_3/480p15/Section3Scene.mp4",
+    "section_4": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_4/480p15/Section4Scene.mp4",
+    "section_5": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_5/480p15/Section5Scene.mp4",
+    "section_6": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_6/480p15/Section6Scene.mp4"
+  },
+  "video": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/Linear_transformations_and_matrices.mp4",
+  "elapsed_seconds": 1155.793,
+  "api_attempts": 21,
+  "api_retries": 0,
+  "usage": {
+    "prompt_tokens": 89604,
+    "completion_tokens": 50610,
+    "total_tokens": 140214
+  },
+  "models": [
+    "deepseek-flash"
+  ],
+  "render_attempts": 12,
+  "render_attempt_successes": 5,
+  "render_retries": 5,
+  "environment_recovery_seconds": 63.173,
+  "note": "Contains environment failures, long installation pause and recovery; not clean model latency."
+}

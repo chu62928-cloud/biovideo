@@ -1,0 +1,32 @@
+{
+  "tag": "injected_failure",
+  "committed": false,
+  "before": {
+    "success": true,
+    "tag": "offline_adapter",
+    "code_sha256": "5a93d051985c2752c0e31d6b2d1de22a91a53e858766a77a456c2b4c19f0389f",
+    "video_sha256": "4c6800815735a375a8bf054d48c9fb4aef41950d6169d207b25fe61210e813bb",
+    "duration_seconds": 7.333333,
+    "renderer": "manim-0.19.0-full-render",
+    "trace_sha256": "82426e6182ff2384e54b96e16a1f85156ba99e2029bc281652cddd68d5fab9ac",
+    "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/tests/offline_3i79kr9e/render_fixture/versions/offline_adapter",
+    "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/tests/offline_3i79kr9e/render_fixture/versions/offline_adapter/rendered_code.py",
+    "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/tests/offline_3i79kr9e/render_fixture/versions/offline_adapter/video.mp4"
+  },
+  "started": 1795503665.8906727,
+  "error_type": "AssertionError",
+  "error": "Full Manim render failed; see stderr.log",
+  "after": {
+    "success": true,
+    "tag": "offline_adapter",
+    "code_sha256": "5a93d051985c2752c0e31d6b2d1de22a91a53e858766a77a456c2b4c19f0389f",
+    "video_sha256": "4c6800815735a375a8bf054d48c9fb4aef41950d6169d207b25fe61210e813bb",
+    "duration_seconds": 7.333333,
+    "renderer": "manim-0.19.0-full-render",
+    "trace_sha256": "82426e6182ff2384e54b96e16a1f85156ba99e2029bc281652cddd68d5fab9ac",
+    "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/tests/offline_3i79kr9e/render_fixture/versions/offline_adapter",
+    "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/tests/offline_3i79kr9e/render_fixture/versions/offline_adapter/rendered_code.py",
+    "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/tests/offline_3i79kr9e/render_fixture/versions/offline_adapter/video.mp4"
+  },
+  "elapsed_seconds": 1.68
+}

@@ -1,0 +1,48 @@
+[
+  {
+    "test": "DNA_legal_transitions_all_pre_post_invariants",
+    "passed": true,
+    "details": {
+      "steps": 55,
+      "final_state": {
+        "phase": "maturing"
+      }
+    }
+  },
+  {
+    "test": "mitosis_legal_transitions_preserve_two_sisters",
+    "passed": true,
+    "details": {
+      "steps": 7,
+      "final_state": {
+        "phase": "separating"
+      }
+    }
+  },
+  {
+    "test": "precondition_failure_rolls_back_state",
+    "passed": true,
+    "details": true
+  },
+  {
+    "test": "invariant_postcondition_failure_atomic_rollback",
+    "passed": true,
+    "details": true
+  },
+  {
+    "test": "all_ten_generic_operations_executable",
+    "passed": true,
+    "details": [
+      "attach",
+      "connect",
+      "detach",
+      "disconnect",
+      "extend",
+      "merge",
+      "move_along_path",
+      "replace_component",
+      "split",
+      "transform_state"
+    ]
+  }
+]

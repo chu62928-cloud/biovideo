@@ -1,0 +1,159 @@
+{
+  "evidence": [
+    {
+      "evidence_id": "E_70c6108994",
+      "url": "https://openstax.org/books/biology-2e/pages/10-2-the-cell-cycle",
+      "title": "10.2 The Cell Cycle - Biology 2e | OpenStax",
+      "publisher": "OpenStax, Rice University",
+      "license": "CC BY 4.0; see source page; attribution required",
+      "accessed_utc": "2026-11-24T03:44:33Z",
+      "content_sha256": "7d043bacf611eb6b1ba9bae02122e98eeb815f727612548f394a9037ecdfb7fb",
+      "status": "RETRIEVED",
+      "passages": [
+        {
+          "location": "paragraph selection 1; exact text searchable in saved source",
+          "text": "Throughout interphase, nuclear DNA remains in a semi-condensed chromatin configuration. In the S phase , DNA replication can proceed through the mechanisms that result in the formation of identical pairs of DNA molecules—sister chromatids—that are firmly attached at the centromeric region. The centrosome is also duplicated during the S phase. The two centrosomes will give rise to the mitotic spindle , the apparatus that orchestrates the movement of chromosomes during mitosis. For example, roughly at the center of each animal cell, the centrosomes are associated with a pair of rod-like objects, the centrioles , which are positioned at right angles to each other. Centrioles help organize cell division. We should note, however, that centrioles are not present in the centrosomes of other eukaryotic organisms, such as plants and most fungi."
+        },
+        {
+          "location": "paragraph selection 2; exact text searchable in saved source",
+          "text": "The cell cycle is an ordered series of events involving cell growth and cell division that produces two new daughter cells. Cells on the path to cell division proceed through a series of precisely timed and carefully regulated stages of growth, DNA replication, and nuclear and cytoplasmic division that ultimately produces two identical (clone) cells. The cell cycle has two major phases: interphase and the mitotic phase ( Figure 10.5 ). During interphase , the cell grows and DNA is replicated. During the mitotic phase , the replicated DNA and cytoplasmic contents are separated, and the cell cytoplasm is typically partitioned by a third process of the cell cycle called cytokinesis . We should note, however, that interphase and mitosis (karyokinesis) may take place without cytokinesis, in which case cells with multiple nuclei (multinucleate cells) are produced."
+        },
+        {
+          "location": "paragraph selection 3; exact text searchable in saved source",
+          "text": "In the G 2 phase , the cell replenishes its energy stores and synthesizes proteins necessary for chromosome manipulation and movement. Some cell organelles are duplicated, and the cytoskeleton is dismantled to provide resources for the mitotic phase. There may be additional cell growth during G 2 . The final preparations for the mitotic phase must be completed before the cell is able to enter the first stage of mitosis."
+        },
+        {
+          "location": "paragraph selection 4; exact text searchable in saved source",
+          "text": "The mitotic phase is a multistep process during which the duplicated chromosomes are aligned, separated, and move into two new, identical daughter cells. The first portion of the mitotic phase is called karyokinesis , or nuclear division. As we have just seen, the second portion of the mitotic phase (and often viewed as a process separate from and following mitosis) is called cytokinesis—the physical separation of the cytoplasmic components into the two daughter cells."
+        },
+        {
+          "location": "paragraph selection 5; exact text searchable in saved source",
+          "text": "Karyokinesis, also known as mitosis , is divided into a series of phases—prophase, prometaphase, metaphase, anaphase, and telophase—that result in the division of the cell nucleus ( Figure 10.6 )."
+        },
+        {
+          "location": "paragraph selection 6; exact text searchable in saved source",
+          "text": "Which of the following is the correct order of events in mitosis?"
+        },
+        {
+          "location": "paragraph selection 7; exact text searchable in saved source",
+          "text": "Prometaphase (the “first change phase”): Many processes that began in prophase continue to advance. The remnants of the nuclear envelope fragment further, and the mitotic spindle continues to develop as more microtubules assemble and stretch across the length of the former nuclear area. Chromosomes become even more condensed and discrete. Each sister chromatid develops a protein structure called a kinetochore in its centromeric region ( Figure 10.7 ). The proteins of the kinetochore attract and bind to the mitotic spindle microtubules. As the spindle microtubules extend from the centrosomes, some of these microtubules come into contact with and firmly bind to the kinetochores. Once a mitotic fiber attaches to a chromosome, the chromosome will be oriented until the kinetochores of sister chromatids face the opposite poles . Eventually, all the sister chromatids will be attached via their kinetochores to microtubules from opposing poles. Spindle microtubules that do not engage the chromosomes are called polar microtubules . These microtubules overlap each other midway between the two poles and contribute to cell elongation . Astral microtubules are located near the poles, aid in spindle orientation, and are required for the regulation of mitosis."
+        },
+        {
+          "location": "paragraph selection 8; exact text searchable in saved source",
+          "text": "Cytokinesis , or “cell motion,” is sometimes viewed as the second main stage of the mitotic phase, during which cell division is completed via the physical separation of the cytoplasmic components into two daughter cells However, as we have seen earlier, cytokinesis can also be viewed as a separate phase, which may or may not take place following mitosis. If cytokinesis does take place, cell division is not complete until the cell components have been apportioned and completely separated into the two daughter cells. Although the stages of mitosis are similar for most eukaryotes, the process of cytokinesis is quite different for eukaryotes that have cell walls, such as plant cells."
+        },
+        {
+          "location": "paragraph selection 9; exact text searchable in saved source",
+          "text": "Problem : How long does a cell spend in interphase compared to each stage of mitosis?"
+        },
+        {
+          "location": "paragraph selection 10; exact text searchable in saved source",
+          "text": "Problem Statement : Given the events included in all of interphase and those that take place in each stage of mitosis, estimate the length of each stage based on a 24-hour cell cycle. Before proceeding, state your hypothesis."
+        },
+        {
+          "location": "paragraph selection 11; exact text searchable in saved source",
+          "text": "Switch to the high-power objective and slowly move the slide left to right, and up and down to view all the cells in the section ( Figure 10.10 ). As you scan, you will notice that most of the cells are not undergoing mitosis but are in the interphase period of the cell cycle."
+        },
+        {
+          "location": "paragraph selection 12; exact text searchable in saved source",
+          "text": "By the end of this section, you will be able to do the following:"
+        }
+      ]
+    },
+    {
+      "evidence_id": "E_d79c940d49",
+      "url": "https://openstax.org/books/concepts-biology/pages/6-2-the-cell-cycle",
+      "title": "6.2 The Cell Cycle - Concepts of Biology | OpenStax",
+      "publisher": "OpenStax, Rice University",
+      "license": "CC BY 4.0; see source page; attribution required",
+      "accessed_utc": "2026-11-24T03:44:35Z",
+      "content_sha256": "9c063c6565f64c828eb09229e3cf0ebd9420578da97c08437378d2fb2ba23950",
+      "status": "RETRIEVED",
+      "passages": [
+        {
+          "location": "paragraph selection 1; exact text searchable in saved source",
+          "text": "Throughout interphase, nuclear DNA remains in a semi-condensed chromatin configuration. In the S phase (synthesis phase), DNA replication results in the formation of two identical copies of each chromosome—sister chromatids—that are firmly attached at the centromere region. At this stage, each chromosome is made of two sister chromatids and is a duplicated chromosome. The centrosome duplication starts during the S phase. The two centrosomes will give rise to the mitotic spindle , the apparatus that orchestrates the movement of chromosomes during mitosis. The centrosome consists of a pair of rod-like centrioles at right angles to each other. Centrioles help organize cell division. Centrioles are not present in the centrosomes of many eukaryotic species, such as plants and most fungi."
+        },
+        {
+          "location": "paragraph selection 2; exact text searchable in saved source",
+          "text": "In the G 2 phase , or second gap, the cell replenishes its energy stores and synthesizes the proteins necessary for chromosome manipulation. Some cell organelles are duplicated, and the cytoskeleton is dismantled to provide resources for the mitotic spindle. The duplication of the centrosomes is completed. There may be additional cell growth during G 2 . The final preparations for the mitotic phase must be completed before the cell is able to enter the first stage of mitosis."
+        },
+        {
+          "location": "paragraph selection 3; exact text searchable in saved source",
+          "text": "To make two daughter cells, the contents of the nucleus and the cytoplasm must be divided. The mitotic phase is a multistep process during which the duplicated chromosomes are aligned, separated, and moved to opposite poles of the cell, and then the cell is divided into two new identical daughter cells. The first portion of the mitotic phase, mitosis , is composed of five stages, which accomplish nuclear division. The second portion of the mitotic phase, called cytokinesis, is the physical separation of the cytoplasmic components into two daughter cells."
+        },
+        {
+          "location": "paragraph selection 4; exact text searchable in saved source",
+          "text": "Mitosis is divided into a series of phases—prophase, prometaphase, metaphase, anaphase, and telophase—that result in the division of the cell nucleus ( Figure 6.4 )."
+        },
+        {
+          "location": "paragraph selection 5; exact text searchable in saved source",
+          "text": "Which of the following is the correct order of events in mitosis?"
+        },
+        {
+          "location": "paragraph selection 6; exact text searchable in saved source",
+          "text": "During telophase , all of the events that set up the duplicated chromosomes for mitosis during the first three phases are reversed. The chromosomes reach the opposite poles and begin to decondense (unravel). The mitotic spindles are broken down into monomers that will be used to assemble cytoskeleton components for each daughter cell. Nuclear envelopes form around chromosomes."
+        },
+        {
+          "location": "paragraph selection 7; exact text searchable in saved source",
+          "text": "This page of movies illustrates different aspects of mitosis. Watch the movie entitled “DIC microscopy of cell division in a newt lung cell” and identify the phases of mitosis."
+        },
+        {
+          "location": "paragraph selection 8; exact text searchable in saved source",
+          "text": "Cytokinesis is the second part of the mitotic phase during which cell division is completed by the physical separation of the cytoplasmic components into two daughter cells. Although the stages of mitosis are similar for most eukaryotes, the process of cytokinesis is quite different for eukaryotes that have cell walls, such as plant cells."
+        },
+        {
+          "location": "paragraph selection 9; exact text searchable in saved source",
+          "text": "The M checkpoint occurs near the end of the metaphase stage of mitosis. The M checkpoint is also known as the spindle checkpoint because it determines if all the sister chromatids are correctly attached to the spindle microtubules. Because the separation of the sister chromatids during anaphase is an irreversible step, the cycle will not proceed until the kinetochores of each pair of sister chromatids are firmly anchored to spindle fibers arising from opposite poles of the cell."
+        },
+        {
+          "location": "paragraph selection 10; exact text searchable in saved source",
+          "text": "The cell cycle is an ordered series of events involving cell growth and cell division that produces two new daughter cells. Cells on the path to cell division proceed through a series of precisely timed and carefully regulated stages of growth, DNA replication, and division that produce two genetically identical cells. The cell cycle has two major phases: interphase and the mitotic phase ( Figure 6.3 ). During interphase , the cell grows and DNA is replicated. During the mitotic phase , the replicated DNA and cytoplasmic contents are separated and the cell divides.\n\nWatch this video about the cell cycle: https://openstax.org/l/biocellcyc"
+        },
+        {
+          "location": "paragraph selection 11; exact text searchable in saved source",
+          "text": "During interphase, the cell undergoes normal processes while also preparing for cell division. For a cell to move from interphase to the mitotic phase, many internal and external conditions must be met. The three stages of interphase are called G 1 , S, and G 2 ."
+        },
+        {
+          "location": "paragraph selection 12; exact text searchable in saved source",
+          "text": "The first stage of interphase is called the G 1 phase , or first gap, because little change is visible. However, during the G 1 stage, the cell is quite active at the biochemical level. The cell is accumulating the building blocks of chromosomal DNA and the associated proteins, as well as accumulating enough energy reserves to complete the task of replicating each chromosome in the nucleus."
+        }
+      ]
+    },
+    {
+      "evidence_id": "PMID_27587616",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27587616/",
+      "title": "Mitosis.",
+      "publisher": "Cold Spring Harbor perspectives in biology",
+      "license": "Publisher copyright; short research excerpts only",
+      "accessed_utc": "2026-11-24T03:44:38Z",
+      "status": "RETRIEVED",
+      "content_sha256": "2d5e9e3c4d1759729e208cc6b016839fffca5738bf86272f50cec1156624b498",
+      "passages": [
+        {
+          "location": "PubMed abstract",
+          "text": "SUMMARYAll eukaryotic cells prepare for cell division by forming a \"mitotic spindle\"-a bipolar machine made from microtubules (MTs) and many associated proteins. This device organizes the already duplicated DNA so one copy of each chromosome attaches to each end of the spindle. Both formation and function of the spindle require controlled MT dynamics, as well as the actions of multiple motor enzymes. Spindle-driven motions separate the duplicated chromosomes into two distinct sets that are then moved toward opposite ends of the cell. The two cells that subsequently form by cytokinesis, therefore, contain all the genes needed to grow and divide again."
+        }
+      ]
+    },
+    {
+      "evidence_id": "PMID_32501481",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32501481/",
+      "title": "Spindle scaling mechanisms.",
+      "publisher": "Essays in biochemistry",
+      "license": "Publisher copyright; short research excerpts only",
+      "accessed_utc": "2026-11-24T03:44:38Z",
+      "status": "RETRIEVED",
+      "content_sha256": "5e369df82ccf286e07453df1213950b76b2996aa8d421c073cd304c2d8368223",
+      "passages": [
+        {
+          "location": "PubMed abstract",
+          "text": "The mitotic spindle robustly scales with cell size in a plethora of different organisms. During development and throughout evolution, the spindle adjusts to cell size in metazoans and yeast in order to ensure faithful chromosome separation. Spindle adjustment to cell size occurs by the scaling of spindle length, spindle shape and the velocity of spindle assembly and elongation. Different mechanisms, depending on spindle structure and organism, account for these scaling relationships. The limited availability of critical spindle components, protein gradients, sequestration of spindle components, or post-translational modification and differential expression levels have been implicated in the regulation of spindle length and the spindle assembly/elongation velocity in a cell size-dependent manner. In this review, we will discuss the phenomenon and mechanisms of spindle length, spindle shape and spindle elongation velocity scaling with cell size."
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "research_status": "RETRIEVED",
+  "discovery": "Ranked source catalogue + live PubMed esearch/efetch; no model-created URL treated as retrieved"
+}

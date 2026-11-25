@@ -1,0 +1,22 @@
+[
+  {
+    "repair_id": "REP_primase_identity_mismatch",
+    "issue_id": "primase_identity_mismatch",
+    "root_cause_stage": "SCENE_IR",
+    "target_artifact": "scene_ir/dna_section4.json",
+    "target_object_ids": [
+      "primase"
+    ],
+    "target_fields": [
+      "scientific_identity.name",
+      "scientific_properties.role",
+      "visual_representation.label"
+    ],
+    "acceptance_criteria": [
+      "Identity, role and display explicitly describe RNA primase only",
+      "Pol alpha short DNA handoff stays a declared omission, not assigned to RNA primase",
+      "No unrelated scientific field changes"
+    ],
+    "status": "ROLLED_BACK"
+  }
+]

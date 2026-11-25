@@ -1,0 +1,20 @@
+```python
+        fill_children = []
+        for i in range(n_fill):
+            # Lower template is 5'->3' left->right; nascent strand is antiparallel,
+            # so new DNA grows right-to-left into the gap. Fill 02 (leftmost)
+            # accumulates last, 00 (rightmost) first.
+            seg_right = lag1_primer_start + lag1_primer_len - i * fill_step
+            seg_left = seg_right - fill_step
+            xc = (seg_left + seg_right) / 2
+            blk = make_block([xc, LAG_Y, 0],
+                             fill_step * 0.85, 0.13, "#69F0AE", "#1B5E20")
+            self.register_object(f"fill_dna_{i:02d}", blk,
+                                 role="nucleotide", strand="lagging",
+                                 fragment="okazaki_1", material="DNA")
+            pol_fill.move_to([xc, LAG_Y + 0.55, 0])
+            pol_fill_lbl.next_to(pol_fill, UP, buff=0.03)
+            self.play(FadeIn(blk), run_time=0.22)  # 3×0.22=0.66 -> 25.91
+            self.add(blk)
+            fill_children.append(blk)
+```

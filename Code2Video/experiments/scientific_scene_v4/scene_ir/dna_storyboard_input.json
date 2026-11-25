@@ -1,0 +1,58 @@
+{
+  "required_event_ids": [
+    "event_1_fork",
+    "event_2_priming",
+    "event_3_extension",
+    "event_4_two_modes",
+    "event_5_maturation"
+  ],
+  "duration_target": 30,
+  "title": "DNA replication: priming, leading and lagging",
+  "events": [
+    {
+      "id": "event_1_fork",
+      "window_seconds": [
+        0,
+        3
+      ],
+      "caption": "One fork, two antiparallel templates",
+      "action": "Start with an already-open blue Y-shaped fork linked to a short parental duplex on the right. Establish upper/lower template end polarities; keep it throughout."
+    },
+    {
+      "id": "event_2_priming",
+      "window_seconds": [
+        3,
+        8
+      ],
+      "caption": "Primase makes an RNA starting point",
+      "action": "Purple primase contacts a site; orange RNA primer appears nucleotide by nucleotide. Mark exposed 3prime end. A primed 5prime end does not grow."
+    },
+    {
+      "id": "event_3_extension",
+      "window_seconds": [
+        8,
+        16
+      ],
+      "caption": "DNA polymerase extends 5prime to 3prime",
+      "action": "Cyan polymerase remains at the growing end; separate green nucleotide Mobjects accumulate along the upper blue template toward fork. Keep correct 5prime and 3prime labels."
+    },
+    {
+      "id": "event_4_two_modes",
+      "window_seconds": [
+        16,
+        24
+      ],
+      "caption": "Continuous leading; short lagging fragments",
+      "action": "At the same fork, leading synthesis continues. Lower template gets at least two orange primers nearer advancing fork; each green fragment extends left from its own RNA 3prime end, away from fork. Use stable identities and attached active-site anchors."
+    },
+    {
+      "id": "event_5_maturation",
+      "window_seconds": [
+        24,
+        30
+      ],
+      "caption": "Remove RNA, fill DNA, then seal a nick",
+      "action": "First fade/remove a lower orange primer; show gap. Polymerase adds green DNA into gap, leaving a nick; only then gold ligase contacts nick and seals without adding DNA. End with local copied duplexes."
+    }
+  ]
+}

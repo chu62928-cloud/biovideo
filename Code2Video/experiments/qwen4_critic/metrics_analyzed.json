@@ -1,0 +1,150 @@
+{
+  "status": "failed",
+  "elapsed_seconds": 979.23,
+  "output_dir": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells",
+  "rounds": {
+    "1": {
+      "video": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/DNA_qwen4_critic_round_1.mp4",
+      "scenes": 4,
+      "all_scenes": false,
+      "note": "Failed optimization can retain a previous successful video; consult round_events.json.",
+      "duration_seconds": 96.0,
+      "width": 854,
+      "height": 480,
+      "fps": "15/1",
+      "streams": [
+        "video"
+      ],
+      "decode_returncode": 0,
+      "sha256": "19c2b34bb2f71de3d947f83d4b3a893ecc88eef29b8318d6cae85395a2547625",
+      "issues_before_optimization": 4,
+      "reported_improvements": 12,
+      "successful_optimizations": 2,
+      "failed_optimizations": 2,
+      "changed_code_sections": 4
+    },
+    "2": {
+      "video": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/DNA_qwen4_critic_round_2.mp4",
+      "scenes": 4,
+      "all_scenes": false,
+      "note": "Failed optimization can retain a previous successful video; consult round_events.json.",
+      "duration_seconds": 96.0,
+      "width": 854,
+      "height": 480,
+      "fps": "15/1",
+      "streams": [
+        "video"
+      ],
+      "decode_returncode": 0,
+      "sha256": "ee2d44fbd114e2f62130e3d328e0aafa8cb5321aaacad37f2ed855811a7937c3",
+      "issues_before_optimization": 4,
+      "reported_improvements": 12,
+      "successful_optimizations": 1,
+      "failed_optimizations": 3,
+      "changed_code_sections": 4
+    }
+  },
+  "events": [
+    {
+      "section": "section_1",
+      "round": 1,
+      "has_issues": true,
+      "improvements": 3,
+      "native_optimize_success": true,
+      "code_changed": true,
+      "elapsed_seconds": 42.585,
+      "video_present": true,
+      "video_is_new_optimized_result": true
+    },
+    {
+      "section": "section_1",
+      "round": 2,
+      "has_issues": true,
+      "improvements": 3,
+      "native_optimize_success": true,
+      "code_changed": true,
+      "elapsed_seconds": 42.052,
+      "video_present": true,
+      "video_is_new_optimized_result": true
+    },
+    {
+      "section": "section_2",
+      "round": 1,
+      "has_issues": true,
+      "improvements": 3,
+      "native_optimize_success": false,
+      "code_changed": true,
+      "elapsed_seconds": 12.907,
+      "video_present": true,
+      "video_is_new_optimized_result": false
+    },
+    {
+      "section": "section_2",
+      "round": 2,
+      "has_issues": true,
+      "improvements": 3,
+      "native_optimize_success": false,
+      "code_changed": true,
+      "elapsed_seconds": 12.967,
+      "video_present": true,
+      "video_is_new_optimized_result": false
+    },
+    {
+      "section": "section_3",
+      "round": 1,
+      "has_issues": true,
+      "improvements": 3,
+      "native_optimize_success": true,
+      "code_changed": true,
+      "elapsed_seconds": 26.707,
+      "video_present": true,
+      "video_is_new_optimized_result": true
+    },
+    {
+      "section": "section_3",
+      "round": 2,
+      "has_issues": true,
+      "improvements": 3,
+      "native_optimize_success": false,
+      "code_changed": true,
+      "elapsed_seconds": 17.079,
+      "video_present": true,
+      "video_is_new_optimized_result": false
+    },
+    {
+      "section": "section_4",
+      "round": 1,
+      "has_issues": true,
+      "improvements": 3,
+      "native_optimize_success": false,
+      "code_changed": true,
+      "elapsed_seconds": 14.381,
+      "video_present": true,
+      "video_is_new_optimized_result": false
+    },
+    {
+      "section": "section_4",
+      "round": 2,
+      "has_issues": true,
+      "improvements": 3,
+      "native_optimize_success": false,
+      "code_changed": true,
+      "elapsed_seconds": 23.482,
+      "video_present": true,
+      "video_is_new_optimized_result": false
+    }
+  ],
+  "critic_attempts_including_probe": 10,
+  "coder_attempts": 10,
+  "critic_usage": {
+    "prompt_tokens": 150764,
+    "completion_tokens": 29778,
+    "total_tokens": 180542
+  },
+  "coder_usage": {
+    "prompt_tokens": 36305,
+    "completion_tokens": 19548,
+    "total_tokens": 55853
+  },
+  "stop_reason": "EXPERIMENT_ERROR SystemExit Existing 45-attempt DeepSeek limit reached"
+}

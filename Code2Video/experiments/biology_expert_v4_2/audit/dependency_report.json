@@ -1,0 +1,1166 @@
+{
+  "imports": {
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/003/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/004/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/004/test_section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/005/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/006/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/006/test_section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/007/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/008/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/008/test_section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/009/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/010/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/010/test_section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/011/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/011/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/012/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/012/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/012/test_section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/013/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/013/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/014/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/014/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/014/test_section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/015/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/015/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/016/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/016/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/016/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/017/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/017/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/017/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/017/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/018/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/018/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/018/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/018/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/018/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/019/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/019/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/019/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/019/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/019/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/019/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/020/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/020/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/020/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/020/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/020/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/history/020/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/020/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/021/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/021/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/022/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/022/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/022/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/023/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/023/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/023/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/023/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/024/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/024/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/024/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/024/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/024/test_section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/025/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/025/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/025/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/025/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/026/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/026/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/026/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/026/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/026/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/027/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/027/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/027/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/027/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/027/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/history/027/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/001/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/001/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/001/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/001/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/001/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/001/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/002/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/002/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/002/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/002/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/002/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/002/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/003/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/003/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/003/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/003/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/003/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/003/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/004/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/004/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/004/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/004/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/004/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/004/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/005/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/005/section_2.py": [
+      "PARSE_ERROR"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/005/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/005/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/005/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/005/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/006/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/006/section_2.py": [
+      "PARSE_ERROR"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/006/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/006/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/006/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/006/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/006/test_section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/007/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/007/section_2.py": [
+      "PARSE_ERROR"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/007/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/007/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/007/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/007/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/008/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/008/section_2.py": [
+      "PARSE_ERROR"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/008/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/008/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/008/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/008/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/008/test_section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/009/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/009/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/009/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/009/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/009/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/009/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/010/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/010/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/010/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/010/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/010/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/010/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/011/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/011/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/011/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/011/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/011/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/011/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/012/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/012/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/012/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/012/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/012/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/012/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/012/test_section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/013/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/013/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/013/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/013/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/013/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/013/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/014/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/014/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/014/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/014/section_4.py": [
+      "PARSE_ERROR"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/014/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/014/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/015/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/015/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/015/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/015/section_4.py": [
+      "PARSE_ERROR"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/015/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/015/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/015/test_section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/016/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/016/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/016/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/016/section_4.py": [
+      "PARSE_ERROR"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/016/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/016/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/017/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/017/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/017/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/017/section_4.py": [
+      "PARSE_ERROR"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/017/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/017/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/017/test_section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/018/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/018/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/018/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/018/section_4.py": [
+      "PARSE_ERROR"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/018/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/018/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/018/test_section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/019/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/019/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/019/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/019/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/019/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/019/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/020/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/020/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/020/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/020/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/020/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/history/020/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/section_1.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/section_2.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/section_3.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/section_4.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/section_5.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/section_6.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/agent.py": [
+      "re",
+      "argparse",
+      "json",
+      "time",
+      "random",
+      "subprocess",
+      "typing",
+      "dataclasses",
+      "pathlib",
+      "concurrent.futures",
+      "gpt_request",
+      "prompts",
+      "utils",
+      "scope_refine",
+      "external_assets"
+    ],
+    "src/biology_expert/__init__.py": [
+      "agent"
+    ],
+    "src/biology_expert/__main__.py": [
+      "pathlib",
+      "argparse,json,os",
+      "agent",
+      "providers",
+      "state"
+    ],
+    "src/biology_expert/agent.py": [
+      "pathlib",
+      "json",
+      "state",
+      "tool_registry",
+      "schemas",
+      "tools.knowledge",
+      "tools.mechanism_validator",
+      "tools.evidence_retriever",
+      "tools.reviewers",
+      "tools.repair_planner",
+      "tools.skill_manager",
+      "tools.extractive_builder",
+      "workflow"
+    ],
+    "src/biology_expert/providers.py": [
+      "pathlib",
+      "json,os,time",
+      "state",
+      "re",
+      "gpt_request",
+      "qwen_science"
+    ],
+    "src/biology_expert/qwen_science.py": [
+      "pathlib",
+      "os,json,base64,hashlib",
+      "openai"
+    ],
+    "src/biology_expert/repair.py": [
+      "pathlib",
+      "json,shutil,time",
+      "state",
+      "tools.repair_planner",
+      "tools.mechanism_validator",
+      "biology_v2_pipeline"
+    ],
+    "src/biology_expert/schemas.py": [
+      "pathlib",
+      "json",
+      "jsonschema"
+    ],
+    "src/biology_expert/state.py": [
+      "pathlib",
+      "hashlib,json,time"
+    ],
+    "src/biology_expert/tool_registry.py": [
+      "time"
+    ],
+    "src/biology_expert/tools/__init__.py": [],
+    "src/biology_expert/tools/evidence_retriever.py": [
+      "pathlib",
+      "urllib.parse",
+      "requests,json,re,time,hashlib,xml.etree.ElementTree",
+      "bs4",
+      "state"
+    ],
+    "src/biology_expert/tools/extractive_builder.py": [
+      "re,hashlib"
+    ],
+    "src/biology_expert/tools/knowledge.py": [
+      "re",
+      "state",
+      "providers",
+      "schemas",
+      "unicodedata",
+      "hashlib"
+    ],
+    "src/biology_expert/tools/mechanism_validator.py": [
+      "ast,math,operator,re",
+      "pathlib"
+    ],
+    "src/biology_expert/tools/repair_planner.py": [
+      "pathlib",
+      "ast,json,uuid,shutil",
+      "state",
+      "schemas",
+      "re,textwrap"
+    ],
+    "src/biology_expert/tools/reviewers.py": [
+      "pathlib",
+      "json,uuid,ast",
+      "state",
+      "providers",
+      "schemas"
+    ],
+    "src/biology_expert/tools/skill_manager.py": [
+      "pathlib",
+      "json,re",
+      "state"
+    ],
+    "src/biology_expert/workflow.py": [
+      "state",
+      "state"
+    ],
+    "src/biology_runtime.py": [
+      "manim",
+      "json",
+      "pathlib"
+    ],
+    "src/biology_v2_pipeline.py": [
+      "ast",
+      "hashlib",
+      "json",
+      "os",
+      "pathlib",
+      "shutil",
+      "subprocess",
+      "time"
+    ],
+    "src/eval_AES.py": [
+      "json",
+      "re",
+      "typing",
+      "dataclasses",
+      "concurrent.futures",
+      "time",
+      "threading",
+      "gpt_request",
+      "prompts",
+      "utils"
+    ],
+    "src/eval_TQ.py": [
+      "json",
+      "re",
+      "time",
+      "argparse",
+      "dataclasses",
+      "pathlib",
+      "typing",
+      "numpy",
+      "scipy",
+      "concurrent.futures",
+      "functools",
+      "random",
+      "utils",
+      "gpt_request",
+      "prompts"
+    ],
+    "src/external_assets.py": [
+      "json",
+      "requests",
+      "re",
+      "pathlib",
+      "typing",
+      "prompts",
+      "gpt_request"
+    ],
+    "src/gpt_request.py": [
+      "openai",
+      "time",
+      "random",
+      "os",
+      "base64",
+      "openai",
+      "time",
+      "json",
+      "pathlib",
+      "uuid",
+      "uuid",
+      "hashlib",
+      "re"
+    ],
+    "src/scientific_scene/__init__.py": [
+      "models",
+      "scene_compiler",
+      "state_machine"
+    ],
+    "src/scientific_scene/adapters/__init__.py": [],
+    "src/scientific_scene/adapters/biology_expert_adapter.py": [
+      "json,uuid,copy",
+      "models",
+      "state_machine",
+      "validation",
+      "biology_expert.providers"
+    ],
+    "src/scientific_scene/adapters/manim_adapter.py": [
+      "manim",
+      "pathlib",
+      "json,copy,math",
+      "biology_runtime",
+      "models",
+      "state_machine",
+      "path_geometry"
+    ],
+    "src/scientific_scene/assembly_registry.py": [
+      "models"
+    ],
+    "src/scientific_scene/models.py": [
+      "pathlib",
+      "copy,json,hashlib",
+      "jsonschema",
+      "validation",
+      "validation"
+    ],
+    "src/scientific_scene/path_geometry.py": [
+      "manim",
+      "numpy"
+    ],
+    "src/scientific_scene/process_registry.py": [
+      "models"
+    ],
+    "src/scientific_scene/provenance.py": [
+      "pathlib",
+      "hashlib,ast"
+    ],
+    "src/scientific_scene/scene_compiler.py": [
+      "copy,json",
+      "models",
+      "validation",
+      "biology_expert.providers"
+    ],
+    "src/scientific_scene/scene_graph.py": [
+      "models"
+    ],
+    "src/scientific_scene/scientific_review.py": [
+      "copy,json,math,hashlib",
+      "pathlib",
+      "models",
+      "state_machine"
+    ],
+    "src/scientific_scene/state_machine.py": [
+      "copy,math",
+      "models",
+      "validation"
+    ],
+    "src/scientific_scene/validation.py": [
+      "math,copy",
+      "models"
+    ],
+    "src/scope_refine.py": [
+      "re",
+      "pathlib",
+      "json",
+      "dataclasses",
+      "subprocess",
+      "pathlib",
+      "typing",
+      "logging"
+    ],
+    "src/utils.py": [
+      "os",
+      "subprocess",
+      "typing",
+      "manim",
+      "multiprocessing",
+      "re",
+      "psutil",
+      "pathlib"
+    ]
+  },
+  "limitation": "AST imports and direct call inspection; dynamic imports/entrypoints recorded separately",
+  "git": {
+    "branch": "main",
+    "commit": "637509294e936b231d220bb555cf74eeedcb9dfd",
+    "status": " M .gitignore\n M LICENSE\n M README.md\n M README.zh-CN.md\n M json_files/long_video_ref_mapping.json\n M json_files/long_video_topics_list.json\n M json_files/long_video_topics_list_safe.json\n M json_files/questions_by_topic_10.json\n M json_files/topics_list_safe.json\n M prompts/__init__.py\n M prompts/base_class.py\n M prompts/stage1.py\n M prompts/stage2.py\n M prompts/stage3.py\n M prompts/stage4.py\n M prompts/stage5_eva.py\n M prompts/stage5_unlearning.py\n M src/agent.py\n M src/api_config.json\n M src/eval_AES.py\n M src/eval_TQ.py\n M src/external_assets.py\n M src/gpt_request.py\n M src/requirements.txt\n M src/run_agent.sh\n M src/run_agent_single.sh\n M src/scope_refine.py\n M src/utils.py\n?? AGENTS.md\n?? PROJECT_MEMORY.md\n?? experiments/\n?? src/assets/\n?? src/biology_expert/\n?? src/biology_runtime.py\n?? src/biology_v2_pipeline.py\n?? src/json_files\n?? src/prompts\n?? src/scientific_scene/\n",
+    "date": "2026-11-25 Asia/Shanghai"
+  }
+}

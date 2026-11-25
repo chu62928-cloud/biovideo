@@ -1,0 +1,107 @@
+{
+  "label": "A2_math_deepseek_nonthinking",
+  "topic": "Linear transformations and matrices",
+  "output_dir": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices",
+  "requested_model": "deepseek-flash",
+  "critic": false,
+  "assets": false,
+  "start_utc": "2026-11-23T03:54:17Z",
+  "status": "success",
+  "sections": 6,
+  "successful_sections": 6,
+  "section_videos": {
+    "section_1": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_1/480p15/Section1Scene.mp4",
+    "section_2": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_2/480p15/Section2Scene.mp4",
+    "section_3": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_3/480p15/Section3Scene.mp4",
+    "section_4": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_4/480p15/Section4Scene.mp4",
+    "section_5": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_5/480p15/Section5Scene.mp4",
+    "section_6": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_6/480p15/Section6Scene.mp4"
+  },
+  "video": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/Linear_transformations_and_matrices.mp4",
+  "elapsed_seconds": 1155.793,
+  "api_attempts": 21,
+  "api_retries": 0,
+  "usage": {
+    "prompt_tokens": 89604,
+    "completion_tokens": 50610,
+    "total_tokens": 140214
+  },
+  "models": [
+    "deepseek-flash"
+  ],
+  "render_attempts": 12,
+  "render_attempt_successes": 5,
+  "render_retries": 6,
+  "environment_recovery_seconds": 63.173,
+  "note": "Contains environment failures, long installation pause and recovery; not clean model latency.",
+  "render_success_rate": 1.0,
+  "stages": {
+    "A2_math_deepseek_nonthinking:planner_outline": 1,
+    "A2_math_deepseek_nonthinking:planner_storyboard": 1,
+    "A2_math_deepseek_nonthinking:coder:section_1": 1,
+    "A2_math_deepseek_nonthinking:render_repair:section_1": 8,
+    "A2_math_deepseek_nonthinking:coder:section_2": 1,
+    "A2_math_deepseek_nonthinking:render_repair:section_2": 5,
+    "A2_math_deepseek_nonthinking:coder:section_3": 1,
+    "A2_math_deepseek_nonthinking:coder:section_4": 1,
+    "A2_math_deepseek_nonthinking:coder:section_5": 1,
+    "A2_math_deepseek_nonthinking:coder:section_6": 1
+  },
+  "segments": [
+    {
+      "section": "section_1",
+      "start_seconds": 0,
+      "duration_seconds": 27.733333,
+      "path": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_1/480p15/Section1Scene.mp4"
+    },
+    {
+      "section": "section_2",
+      "start_seconds": 27.733333,
+      "duration_seconds": 16.066667,
+      "path": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_2/480p15/Section2Scene.mp4"
+    },
+    {
+      "section": "section_3",
+      "start_seconds": 43.8,
+      "duration_seconds": 23.4,
+      "path": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_3/480p15/Section3Scene.mp4"
+    },
+    {
+      "section": "section_4",
+      "start_seconds": 67.19999999999999,
+      "duration_seconds": 15.8,
+      "path": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_4/480p15/Section4Scene.mp4"
+    },
+    {
+      "section": "section_5",
+      "start_seconds": 82.99999999999999,
+      "duration_seconds": 25.2,
+      "path": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_5/480p15/Section5Scene.mp4"
+    },
+    {
+      "section": "section_6",
+      "start_seconds": 108.19999999999999,
+      "duration_seconds": 24.466667,
+      "path": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_6/480p15/Section6Scene.mp4"
+    }
+  ],
+  "video_properties": {
+    "duration_seconds": 132.666667,
+    "streams": [
+      {
+        "type": "video",
+        "codec": "h264",
+        "width": 854,
+        "height": 480,
+        "fps": "15/1"
+      }
+    ],
+    "decode_returncode": 0,
+    "decode_errors": "",
+    "segment_duration_sum": 132.666667,
+    "bytes": 4344162,
+    "sha256": "005f1e09529c1c4c5a6167204878d6b5d5691cf457922e56fa9315101b654f88",
+    "black_intervals": []
+  },
+  "preview": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_baseline/previews/A2_math_deepseek_nonthinking/contact_sheet.jpg"
+}

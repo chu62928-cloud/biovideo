@@ -1,0 +1,53 @@
+{
+  "type": "object",
+  "required": [
+    "scene_id",
+    "decision",
+    "checks"
+  ],
+  "properties": {
+    "scene_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision": {
+      "enum": [
+        "PASS",
+        "REVISE",
+        "NEEDS_HUMAN_REVIEW",
+        "ERROR"
+      ]
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "check_id",
+          "category",
+          "status",
+          "object_ids",
+          "event_ids",
+          "evidence_ids",
+          "observed_evidence",
+          "expected_condition",
+          "description",
+          "suggested_repair_stage"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              "PASS",
+              "FAIL",
+              "UNCERTAIN",
+              "NOT_MEASURED",
+              "ERROR"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

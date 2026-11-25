@@ -1,0 +1,12 @@
+{
+  "process_patch": {
+    "type": "couple_growth_to_fork",
+    "target": "new_leading",
+    "template": "template_leading",
+    "growth_anchor": "end",
+    "template_anchor": "junction",
+    "lag": 1.1,
+    "apply_after_process": "continuous_extension"
+  },
+  "reason": "Measured S1: leading 3' end frozen at x=1.50 while junction advances to 3.40, and at t≈16.8-17.5 end (1.50) leads junction (1.386-1.47), i.e. synthesis into paired duplex. Root cause is PROCESS_TEMPLATE, not animation: growth is not coupled to fork junction. Repair: couple new_leading end to junction minus lag>=1.05 along local template tangent so tip stays on exposed template arm outside sloped opening/paired duplex. During continuous_extension keep existing 5' origin and monotonic 3' advance; for later fragment_synthesis/maturation steps retain original 5' start and recompute coupled end each frame. Events, identity, polarity unchanged. Interpreter must regenerate transition geometry, simulate, and verify per-frame junction.x - end.x in [0.03,0.15] before PASS; otherwise keep prior successful pairing and candidate."
+}

@@ -1,0 +1,318 @@
+{
+  "out_of_frame": [
+    {
+      "time": 0.2,
+      "object": "scene_caption"
+    },
+    {
+      "time": 0.39999999999999997,
+      "object": "scene_caption"
+    },
+    {
+      "time": 0.6666666666666666,
+      "object": "scene_caption"
+    },
+    {
+      "time": 0.8666666666666666,
+      "object": "scene_caption"
+    },
+    {
+      "time": 1.1333333333333333,
+      "object": "scene_caption"
+    },
+    {
+      "time": 1.2,
+      "object": "scene_caption"
+    },
+    {
+      "time": 1.4,
+      "object": "scene_caption"
+    },
+    {
+      "time": 1.5999999999999999,
+      "object": "scene_caption"
+    },
+    {
+      "time": 1.8666666666666665,
+      "object": "scene_caption"
+    },
+    {
+      "time": 2.0666666666666664,
+      "object": "scene_caption"
+    },
+    {
+      "time": 2.333333333333334,
+      "object": "scene_caption"
+    },
+    {
+      "time": 2.400000000000001,
+      "object": "scene_caption"
+    },
+    {
+      "time": 2.6000000000000014,
+      "object": "scene_caption"
+    },
+    {
+      "time": 2.800000000000002,
+      "object": "scene_caption"
+    },
+    {
+      "time": 3.0666666666666695,
+      "object": "scene_caption"
+    },
+    {
+      "time": 3.26666666666667,
+      "object": "scene_caption"
+    },
+    {
+      "time": 3.5333333333333377,
+      "object": "scene_caption"
+    },
+    {
+      "time": 3.6000000000000045,
+      "object": "scene_caption"
+    },
+    {
+      "time": 3.800000000000005,
+      "object": "scene_caption"
+    },
+    {
+      "time": 4.000000000000005,
+      "object": "scene_caption"
+    },
+    {
+      "time": 4.266666666666671,
+      "object": "scene_caption"
+    },
+    {
+      "time": 4.46666666666667,
+      "object": "scene_caption"
+    },
+    {
+      "time": 4.733333333333336,
+      "object": "scene_caption"
+    },
+    {
+      "time": 4.8000000000000025,
+      "object": "scene_caption"
+    },
+    {
+      "time": 5.000000000000002,
+      "object": "scene_caption"
+    },
+    {
+      "time": 5.200000000000001,
+      "object": "scene_caption"
+    },
+    {
+      "time": 5.466666666666667,
+      "object": "scene_caption"
+    },
+    {
+      "time": 5.666666666666666,
+      "object": "scene_caption"
+    },
+    {
+      "time": 5.933333333333332,
+      "object": "scene_caption"
+    },
+    {
+      "time": 5.999999999999998,
+      "object": "scene_caption"
+    },
+    {
+      "time": 5.999999999999998,
+      "object": "scene_caption"
+    },
+    {
+      "time": 5.999999999999998,
+      "object": "scene_caption"
+    },
+    {
+      "time": 6.1999999999999975,
+      "object": "scene_caption"
+    },
+    {
+      "time": 6.399999999999997,
+      "object": "scene_caption"
+    },
+    {
+      "time": 6.6666666666666625,
+      "object": "scene_caption"
+    },
+    {
+      "time": 6.866666666666662,
+      "object": "scene_caption"
+    },
+    {
+      "time": 7.1333333333333275,
+      "object": "scene_caption"
+    },
+    {
+      "time": 7.399999999999993,
+      "object": "scene_caption"
+    },
+    {
+      "time": 7.5999999999999925,
+      "object": "scene_caption"
+    },
+    {
+      "time": 7.866666666666658,
+      "object": "scene_caption"
+    },
+    {
+      "time": 8.133333333333324,
+      "object": "scene_caption"
+    },
+    {
+      "time": 8.333333333333323,
+      "object": "scene_caption"
+    },
+    {
+      "time": 8.599999999999989,
+      "object": "scene_caption"
+    },
+    {
+      "time": 8.866666666666655,
+      "object": "scene_caption"
+    },
+    {
+      "time": 8.999999999999988,
+      "object": "scene_caption"
+    },
+    {
+      "time": 9.199999999999987,
+      "object": "scene_caption"
+    },
+    {
+      "time": 9.399999999999986,
+      "object": "scene_caption"
+    },
+    {
+      "time": 9.666666666666652,
+      "object": "scene_caption"
+    },
+    {
+      "time": 9.866666666666651,
+      "object": "scene_caption"
+    },
+    {
+      "time": 10.133333333333317,
+      "object": "scene_caption"
+    },
+    {
+      "time": 10.399999999999983,
+      "object": "scene_caption"
+    },
+    {
+      "time": 10.599999999999982,
+      "object": "scene_caption"
+    },
+    {
+      "time": 10.866666666666648,
+      "object": "scene_caption"
+    },
+    {
+      "time": 11.133333333333313,
+      "object": "scene_caption"
+    },
+    {
+      "time": 11.333333333333313,
+      "object": "scene_caption"
+    },
+    {
+      "time": 11.599999999999978,
+      "object": "scene_caption"
+    },
+    {
+      "time": 11.866666666666644,
+      "object": "scene_caption"
+    },
+    {
+      "time": 11.999999999999977,
+      "object": "scene_caption"
+    },
+    {
+      "time": 11.999999999999977,
+      "object": "scene_caption"
+    },
+    {
+      "time": 12.199999999999976,
+      "object": "scene_caption"
+    },
+    {
+      "time": 12.399999999999975,
+      "object": "scene_caption"
+    },
+    {
+      "time": 12.666666666666641,
+      "object": "scene_caption"
+    },
+    {
+      "time": 12.86666666666664,
+      "object": "scene_caption"
+    },
+    {
+      "time": 12.999999999999973,
+      "object": "scene_caption"
+    }
+  ],
+  "label_overlaps": [
+    {
+      "time": 0.0,
+      "objects": [
+        "label__sister_A",
+        "label__sister_B"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__sister_A",
+        "label__pole_left"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__sister_A",
+        "label__pole_right"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__sister_B",
+        "label__pole_left"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__sister_B",
+        "label__pole_right"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__pole_left",
+        "label__pole_right"
+      ]
+    }
+  ],
+  "binding_violations": [],
+  "sudden_jumps": [
+    {
+      "time": 0.2,
+      "object": "label__pole_left",
+      "distance": 4.014931226547505
+    },
+    {
+      "time": 0.2,
+      "object": "label__pole_right",
+      "distance": 4.014931226547505
+    }
+  ],
+  "note": "Geometry heuristics; intentional occlusion and fade transitions need human review."
+}

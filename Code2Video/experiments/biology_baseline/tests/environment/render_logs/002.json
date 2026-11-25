@@ -1,0 +1,13 @@
+{
+  "cmd": [
+    "python",
+    "-c",
+    "import os,socket\nassert os.getuid()==62001\nassert 'DEEPSEEK_API_KEY' not in os.environ\nfor path in ['/root/.ssh/id_ed25519','/root/autodl-tmp/code2biovideo/.env','/etc/shadow']:\n try: open(path).read(); raise AssertionError('secret readable: '+path)\n except PermissionError: pass\ntry: socket.socket(); raise AssertionError('network allowed')\nexcept PermissionError: pass\ntry: open('/usr/sandbox-write-test','w'); raise AssertionError('runtime writable')\nexcept PermissionError: pass\nprint('ISOLATION_OK')\n"
+  ],
+  "cwd": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_baseline/tests/environment",
+  "stage": null,
+  "returncode": 0,
+  "stdout": "ISOLATION_OK\n",
+  "stderr": "",
+  "elapsed_seconds": 0.078
+}

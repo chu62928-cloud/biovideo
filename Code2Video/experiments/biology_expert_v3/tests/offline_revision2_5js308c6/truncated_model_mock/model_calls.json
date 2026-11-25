@@ -1,0 +1,20 @@
+[
+  {
+    "call_id": "v3_01",
+    "provider": "qwen",
+    "purpose": "offline_test",
+    "status": "error",
+    "started": 1795492445.8307436,
+    "retries": 0,
+    "requested_model": "OFFLINE_MOCK",
+    "error_type": "ValueError",
+    "http_status": null,
+    "usage": {
+      "total_tokens": 5
+    },
+    "response_model": "MOCK",
+    "finish_reason": "length",
+    "root_cause": "MODEL_OUTPUT_TRUNCATED",
+    "elapsed_seconds": 0.001
+  }
+]

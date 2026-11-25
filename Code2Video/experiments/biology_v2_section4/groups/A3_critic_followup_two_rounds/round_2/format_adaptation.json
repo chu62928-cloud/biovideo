@@ -1,0 +1,6 @@
+{
+  "reason": "Model returned complete module instead of requested function",
+  "outside_construct_AST_identical": true,
+  "action": "Extract only model-generated Section4Scene.construct; no authored animation changes",
+  "additional_API_calls": 0
+}

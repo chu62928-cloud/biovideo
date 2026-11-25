@@ -1,0 +1,514 @@
+
+        You are an expert Manim Community Edition v0.19.0 developer. Fix the error in the following code block.
+
+        **Error Analysis:**
+        - Error Type: TypeError
+        - Error Category: animation_error
+        - Fix Scope: single_line
+        - Suggested Fix: None
+
+        **Error Message:**
+        ```
+        
+Animation 0: Create(Line), etc.:   0%|          | 0/23 [00:00<?, ?it/s]
+                                                                       
+
+Animation 1: Write(Text('Template')), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 1: Write(Text('Template')), etc.:  87%|████████▋ | 13/15 [00:00<00:00, 129.37it/s]
+                                                                                            
+
+Animation 2: FadeIn(VGroup of 2 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]
+                                                                                    
+
+Animation 3: FadeIn(Rectangle), etc.:   0%|          | 0/23 [00:00<?, ?it/s]
+                                                                            
+
+Animation 4: Write(Text('RNA Primer')), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 4: Write(Text('RNA Primer')), etc.:  93%|█████████▎| 14/15 [00:00<00:00, 137.66it/s]
+                                                                                              
+
+Animation 6: FadeIn(VGroup of 2 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]
+                                                                                    
+
+Animation 7: Create(Arrow), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+                                                                        
+
+Animation 8: FadeIn(Rectangle), etc.:   0%|          | 0/23 [00:00<?, ?it/s]
+                                                                            
+
+Animation 10: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/30 [00:00<?, ?it/s]
+Animation 10: _MethodAnimation(VGroup of 2 submobjects):  60%|██████    | 18/30 [00:00<00:00, 173.19it/s]
+                                                                                                         
+
+Animation 11: Create(Line):   0%|          | 0/38 [00:00<?, ?it/s]
+                                                                  
+
+Animation 12: Transform(Arrow):   0%|          | 0/23 [00:00<?, ?it/s]
+                                                                      
+
+Animation 14: Transform(VGroup of 2 submobjects):   0%|          | 0/23 [00:00<?, ?it/s]
+Animation 14: Transform(VGroup of 2 submobjects):  78%|███████▊  | 18/23 [00:00<00:00, 174.52it/s]
+                                                                                                  
+
+Animation 15: Create(Line), etc.:   0%|          | 0/23 [00:00<?, ?it/s]
+Animation 15: Create(Line), etc.:  96%|█████████▌| 22/23 [00:00<00:00, 217.99it/s]
+                                                                                  
+
+Animation 16: Transform(VGroup of 2 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 16: Transform(VGroup of 2 submobjects):  87%|████████▋ | 13/15 [00:00<00:00, 129.73it/s]
+                                                                                                  
+
+Animation 17: Create(Line), etc.:   0%|          | 0/23 [00:00<?, ?it/s]
+                                                                        
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/cli/render/ │
+│ commands.py:125 in render                                                    │
+│                                                                              │
+│   122 │   │   │   try:                                                       │
+│   123 │   │   │   │   with tempconfig({}):                                   │
+│   124 │   │   │   │   │   scene = SceneClass()                               │
+│ ❱ 125 │   │   │   │   │   scene.render()                                     │
+│   126 │   │   │   except Exception:                                          │
+│   127 │   │   │   │   error_console.print_exception()                        │
+│   128 │   │   │   │   sys.exit(1)                                            │
+│                                                                              │
+│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/scene/scene │
+│ .py:237 in render                                                            │
+│                                                                              │
+│    234 │   │   """                                                           │
+│    235 │   │   self.setup()                                                  │
+│    236 │   │   try:                                                          │
+│ ❱  237 │   │   │   self.construct()                                          │
+│    238 │   │   except EndSceneEarlyException:                                │
+│    239 │   │   │   pass                                                      │
+│    240 │   │   except RerunSceneException:                                   │
+│                                                                              │
+│ /root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthink │
+│ ing/0-DNA_replication_in_eukaryotic_cells/section_4.py:267 in construct      │
+│                                                                              │
+│   264 │   │   )                                                              │
+│   265 │   │                                                                  │
+│   266 │   │   # Show gap between fragments                                   │
+│ ❱ 267 │   │   gap_indicator = Line(                                          │
+│   268 │   │   │   start=frag1.get_end(),                                     │
+│   269 │   │   │   end=frag2.get_start(),                                     │
+│   270 │   │   │   color="#FFAB91",                                           │
+│                                                                              │
+│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/mobject/geo │
+│ metry/line.py:80 in __init__                                                 │
+│                                                                              │
+│     77 │   │   self.buff = buff                                              │
+│     78 │   │   self.path_arc = path_arc                                      │
+│     79 │   │   self._set_start_and_end_attrs(start, end)                     │
+│ ❱   80 │   │   super().__init__(**kwargs)                                    │
+│     81 │   │   # TODO: Deal with the situation where path_arc is None        │
+│     82 │                                                                     │
+│     83 │   def generate_points(self) -> None:                                │
+│                                                                              │
+│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/mobject/geo │
+│ metry/arc.py:109 in __init__                                                 │
+│                                                                              │
+│    106 │   │   self.tip_length: float = tip_length                           │
+│    107 │   │   self.normal_vector: Vector3D = normal_vector                  │
+│    108 │   │   self.tip_style: dict = tip_style                              │
+│ ❱  109 │   │   super().__init__(**kwargs)                                    │
+│    110 │                                                                     │
+│    111 │   # Adding, Creating, Modifying tips                                │
+│    112                                                                       │
+│                                                                              │
+│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/mobject/typ │
+│ es/vectorized_mobject.py:161 in __init__                                     │
+│                                                                              │
+│    158 │   │   │   0, 1, n_points_per_cubic_curve                            │
+│    159 │   │   )                                                             │
+│    160 │   │   self.cap_style: CapStyleType = cap_style                      │
+│ ❱  161 │   │   super().__init__(**kwargs)                                    │
+│    162 │   │   self.submobjects: list[VMobject]                              │
+│    163 │   │                                                                 │
+│    164 │   │   # TODO: Find where color overwrites are happening and remove  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+TypeError: Mobject.__init__() got an unexpected keyword argument 'stroke_dash'
+
+        ```
+
+        **Error Context:**
+        {
+  "line_number": null,
+  "error_line": null,
+  "traceback": "\nAnimation 0: Create(Line), etc.:   0%|          | 0/23 [00:00<?, ?it/s]\n                                                                       \n\nAnimation 1: Write(Text('Template')), etc.:   0%|          | 0/15 [00:00<?, ?it/s]\nAnimation 1: Write(Text('Template')), etc.:  87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 13/15 [00:00<00:00, 129.37it/s]\n                                                                                            \n\nAnimation 2: FadeIn(VGroup of 2 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]\n                                                                                    \n\nAnimation 3: FadeIn(Rectangle), etc.:   0%|          | 0/23 [00:00<?, ?it/s]\n                                                                            \n\nAnimation 4: Write(Text('RNA Primer')), etc.:   0%|          | 0/15 [00:00<?, ?it/s]\nAnimation 4: Write(Text('RNA Primer')), etc.:  93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 14/15 [00:00<00:00, 137.66it/s]\n                                                                                              \n\nAnimation 6: FadeIn(VGroup of 2 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]\n                                                                                    \n\nAnimation 7: Create(Arrow), etc.:   0%|          | 0/15 [00:00<?, ?it/s]\n                                                                        \n\nAnimation 8: FadeIn(Rectangle), etc.:   0%|          | 0/23 [00:00<?, ?it/s]\n                                                                            \n\nAnimation 10: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/30 [00:00<?, ?it/s]\nAnimation 10: _MethodAnimation(VGroup of 2 submobjects):  60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 18/30 [00:00<00:00, 173.19it/s]\n                                                                                                         \n\nAnimation 11: Create(Line):   0%|          | 0/38 [00:00<?, ?it/s]\n                                                                  \n\nAnimation 12: Transform(Arrow):   0%|          | 0/23 [00:00<?, ?it/s]\n                                                                      \n\nAnimation 14: Transform(VGroup of 2 submobjects):   0%|          | 0/23 [00:00<?, ?it/s]\nAnimation 14: Transform(VGroup of 2 submobjects):  78%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a  | 18/23 [00:00<00:00, 174.52it/s]\n                                                                                                  \n\nAnimation 15: Create(Line), etc.:   0%|          | 0/23 [00:00<?, ?it/s]\nAnimation 15: Create(Line), etc.:  96%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 22/23 [00:00<00:00, 217.99it/s]\n                                                                                  \n\nAnimation 16: Transform(VGroup of 2 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]\nAnimation 16: Transform(VGroup of 2 submobjects):  87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 13/15 [00:00<00:00, 129.73it/s]\n                                                                                                  \n\nAnimation 17: Create(Line), etc.:   0%|          | 0/23 [00:00<?, ?it/s]\n                                                                        \n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 Traceback (most recent call last) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502 /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/cli/render/ \u2502\n\u2502 commands.py:125 in render                                                    \u2502\n\u2502                                                                              \u2502\n\u2502   122 \u2502   \u2502   \u2502   try:                                                       \u2502\n\u2502   123 \u2502   \u2502   \u2502   \u2502   with tempconfig({}):                                   \u2502\n\u2502   124 \u2502   \u2502   \u2502   \u2502   \u2502   scene = SceneClass()                               \u2502\n\u2502 \u2771 125 \u2502   \u2502   \u2502   \u2502   \u2502   scene.render()                                     \u2502\n\u2502   126 \u2502   \u2502   \u2502   except Exception:                                          \u2502\n\u2502   127 \u2502   \u2502   \u2502   \u2502   error_console.print_exception()                        \u2502\n\u2502   128 \u2502   \u2502   \u2502   \u2502   sys.exit(1)                                            \u2502\n\u2502                                                                              \u2502\n\u2502 /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/scene/scene \u2502\n\u2502 .py:237 in render                                                            \u2502\n\u2502                                                                              \u2502\n\u2502    234 \u2502   \u2502   \"\"\"                                                           \u2502\n\u2502    235 \u2502   \u2502   self.setup()                                                  \u2502\n\u2502    236 \u2502   \u2502   try:                                                          \u2502\n\u2502 \u2771  237 \u2502   \u2502   \u2502   self.construct()                                          \u2502\n\u2502    238 \u2502   \u2502   except EndSceneEarlyException:                                \u2502\n\u2502    239 \u2502   \u2502   \u2502   pass                                                      \u2502\n\u2502    240 \u2502   \u2502   except RerunSceneException:                                   \u2502\n\u2502                                                                              \u2502\n\u2502 /root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthink \u2502\n\u2502 ing/0-DNA_replication_in_eukaryotic_cells/section_4.py:267 in construct      \u2502\n\u2502                                                                              \u2502\n\u2502   264 \u2502   \u2502   )                                                              \u2502\n\u2502   265 \u2502   \u2502                                                                  \u2502\n\u2502   266 \u2502   \u2502   # Show gap between fragments                                   \u2502\n\u2502 \u2771 267 \u2502   \u2502   gap_indicator = Line(                                          \u2502\n\u2502   268 \u2502   \u2502   \u2502   start=frag1.get_end(),                                     \u2502\n\u2502   269 \u2502   \u2502   \u2502   end=frag2.get_start(),                                     \u2502\n\u2502   270 \u2502   \u2502   \u2502   color=\"#FFAB91\",                                           \u2502\n\u2502                                                                              \u2502\n\u2502 /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/mobject/geo \u2502\n\u2502 metry/line.py:80 in __init__                                                 \u2502\n\u2502                                                                              \u2502\n\u2502     77 \u2502   \u2502   self.buff = buff                                              \u2502\n\u2502     78 \u2502   \u2502   self.path_arc = path_arc                                      \u2502\n\u2502     79 \u2502   \u2502   self._set_start_and_end_attrs(start, end)                     \u2502\n\u2502 \u2771   80 \u2502   \u2502   super().__init__(**kwargs)                                    \u2502\n\u2502     81 \u2502   \u2502   # TODO: Deal with the situation where path_arc is None        \u2502\n\u2502     82 \u2502                                                                     \u2502\n\u2502     83 \u2502   def generate_points(self) -> None:                                \u2502\n\u2502                                                                              \u2502\n\u2502 /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/mobject/geo \u2502\n\u2502 metry/arc.py:109 in __init__                                                 \u2502\n\u2502                                                                              \u2502\n\u2502    106 \u2502   \u2502   self.tip_length: float = tip_length                           \u2502\n\u2502    107 \u2502   \u2502   self.normal_vector: Vector3D = normal_vector                  \u2502\n\u2502    108 \u2502   \u2502   self.tip_style: dict = tip_style                              \u2502\n\u2502 \u2771  109 \u2502   \u2502   super().__init__(**kwargs)                                    \u2502\n\u2502    110 \u2502                                                                     \u2502\n\u2502    111 \u2502   # Adding, Creating, Modifying tips                                \u2502\n\u2502    112                                                                       \u2502\n\u2502                                                                              \u2502\n\u2502 /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/mobject/typ \u2502\n\u2502 es/vectorized_mobject.py:161 in __init__                                     \u2502\n\u2502                                                                              \u2502\n\u2502    158 \u2502   \u2502   \u2502   0, 1, n_points_per_cubic_curve                            \u2502\n\u2502    159 \u2502   \u2502   )                                                             \u2502\n\u2502    160 \u2502   \u2502   self.cap_style: CapStyleType = cap_style                      \u2502\n\u2502 \u2771  161 \u2502   \u2502   super().__init__(**kwargs)                                    \u2502\n\u2502    162 \u2502   \u2502   self.submobjects: list[VMobject]                              \u2502\n\u2502    163 \u2502   \u2502                                                                 \u2502\n\u2502    164 \u2502   \u2502   # TODO: Find where color overwrites are happening and remove  \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\nTypeError: Mobject.__init__() got an unexpected keyword argument 'stroke_dash'\n",
+  "specific_error": "TypeError: Mobject.__init__() got an unexpected keyword argument 'stroke_dash'"
+}
+
+        **Suggestions:**
+        - Type error. Check the parameter type and quantity
+- Check the parameters and usage of the animation class
+
+        **Code Block to Fix:**
+        ```python
+        from manim import *
+import numpy as np
+
+class TeachingScene(Scene):
+    def setup_layout(self, title_text, lecture_lines):
+        # BASE
+        self.camera.background_color = "#000000"
+        self.title = Text(title_text, font_size=28, color=WHITE).to_edge(UP)
+        self.add(self.title)
+
+        # Left-side lecture content (bullets with "-")
+        lecture_texts = [Text(line, font_size=22, color=WHITE) for line in lecture_lines]
+        self.lecture = VGroup(*lecture_texts).arrange(DOWN, aligned_edge=LEFT).scale(0.8)
+        self.lecture.to_edge(LEFT, buff=0.2)
+        self.add(self.lecture)
+
+        # Define fine-grained animation grid (4x4 grid on right side)
+        self.grid = {}
+        rows = ["A", "B", "C", "D", "E", "F"]  # Top to bottom
+        cols = ["1", "2", "3", "4", "5", "6"]  # Left to right
+
+        for i, row in enumerate(rows):
+            for j, col in enumerate(cols):
+                x = 0.5 + j * 1
+                y = 2.2 - i * 1
+                self.grid[f"{row}{col}"] = np.array([x, y, 0])
+
+    def place_at_grid(self, mobject, grid_pos, scale_factor=1.0):
+        mobject.scale(scale_factor)
+        mobject.move_to(self.grid[grid_pos])
+        return mobject
+
+    def place_in_area(self, mobject, top_left, bottom_right, scale_factor=1.0):
+        tl_pos = self.grid[top_left]
+        br_pos = self.grid[bottom_right]
+        
+        # Calculate center of the area
+        center_x = (tl_pos[0] + br_pos[0]) / 2
+        center_y = (tl_pos[1] + br_pos[1]) / 2
+        center = np.array([center_x, center_y, 0])
+        
+        mobject.scale(scale_factor)
+        mobject.move_to(center)
+        return mobject
+
+class Section4Scene(TeachingScene):
+    def construct(self):
+        self.setup_layout("Sec 4: Priming and DNA Polymerase Action", [
+            'Primase lays down RNA primers.',
+            "Polymerase builds DNA only 5' to 3'.",
+            'Leading strand is continuous and smooth.',
+            'Lagging strand forms Okazaki fragments.',
+            'Ligase joins fragments into one strand.'
+        ])
+        
+        # === Animation for Lecture Line 1 ===
+        # Highlight lecture line 1
+        self.lecture[0].set_color("#BA68C8")  # Purple color for Primase
+        
+        # Create the replication fork structure
+        # Two template strands: one going up-right, one going down-right
+        top_template = Line(
+            start=self.grid['B2'],
+            end=self.grid['A6'],
+            color="#90A4AE",
+            stroke_width=4
+        )
+        bottom_template = Line(
+            start=self.grid['D2'],
+            end=self.grid['E6'],
+            color="#90A4AE",
+            stroke_width=4
+        )
+        
+        # Add template strands
+        self.play(Create(top_template), Create(bottom_template), run_time=1.5)
+        
+        # Label templates
+        top_label = Text("Template", font_size=16, color="#90A4AE")
+        top_label.next_to(top_template, UP, buff=0.15)
+        bottom_label = Text("Template", font_size=16, color="#90A4AE")
+        bottom_label.next_to(bottom_template, DOWN, buff=0.15)
+        
+        self.play(Write(top_label), Write(bottom_label), run_time=1)
+        
+        # Primase icon (purple circle with "P")
+        primase_circle = Circle(radius=0.25, color="#BA68C8", fill_opacity=0.8)
+        primase_text = Text("Primase", font_size=14, color="#BA68C8")
+        primase_label = VGroup(primase_circle, primase_text)
+        primase_label[1].next_to(primase_label[0], RIGHT, buff=0.1)
+        
+        # Place primase near the fork (start of top template)
+        primase_label.move_to(self.grid['B2'] + np.array([-0.5, 0.3, 0]))
+        
+        self.play(FadeIn(primase_label), run_time=1)
+        
+        # RNA primers on each template strand
+        primer_top = Rectangle(width=0.6, height=0.12, color="#FFB74D", fill_opacity=0.9)
+        primer_top.move_to(top_template.get_start() + np.array([0.3, 0.08, 0]))
+        
+        primer_bottom = Rectangle(width=0.6, height=0.12, color="#FFB74D", fill_opacity=0.9)
+        primer_bottom.move_to(bottom_template.get_start() + np.array([0.3, -0.08, 0]))
+        
+        # Labels for primers
+        primer_top_label = Text("RNA Primer", font_size=14, color="#FFB74D")
+        primer_top_label.next_to(primer_top, UP, buff=0.1)
+        
+        primer_bottom_label = Text("RNA Primer", font_size=14, color="#FFB74D")
+        primer_bottom_label.next_to(primer_bottom, DOWN, buff=0.1)
+        
+        # Animation for primase action
+        self.play(FadeIn(primer_top), FadeIn(primer_bottom), run_time=1.5)
+        self.play(Write(primer_top_label), Write(primer_bottom_label), run_time=1)
+        
+        self.wait(1)
+        
+        # === Animation for Lecture Line 2 ===
+        # Highlight lecture line 2
+        self.lecture[0].set_color(WHITE)
+        self.lecture[1].set_color("#4DD0E1")  # Cyan color for Polymerase
+        
+        # Polymerase icon (cyan circle with "Pol")
+        pol_circle = Circle(radius=0.25, color="#4DD0E1", fill_opacity=0.8)
+        pol_text = Text("DNA Pol", font_size=14, color="#4DD0E1")
+        pol_label = VGroup(pol_circle, pol_text)
+        pol_label[1].next_to(pol_label[0], RIGHT, buff=0.1)
+        
+        # Place polymerase near the primer on top strand
+        pol_label.move_to(self.grid['B3'] + np.array([0.3, 0.4, 0]))
+        
+        self.play(FadeIn(pol_label), run_time=1)
+        
+        # Directional arrow showing 5' to 3'
+        direction_arrow = Arrow(
+            start=top_template.get_start() + np.array([0.6, 0.3, 0]),
+            end=top_template.get_start() + np.array([1.6, 0.55, 0]),
+            color="#FFEB3B",
+            stroke_width=3,
+            tip_length=0.15
+        )
+        
+        direction_label = Text("5' → 3'", font_size=16, color="#FFEB3B")
+        direction_label.next_to(direction_arrow, UP, buff=0.1)
+        
+        self.play(Create(direction_arrow), Write(direction_label), run_time=1)
+        
+        # Show nucleotides being added (small green blocks)
+        nucleotide_positions_top = [
+            top_template.get_start() + np.array([0.7, 0.1, 0]),
+            top_template.get_start() + np.array([1.0, 0.2, 0]),
+            top_template.get_start() + np.array([1.3, 0.3, 0]),
+        ]
+        
+        nucleotides_top = VGroup(*[
+            Rectangle(width=0.2, height=0.1, color="#69F0AE", fill_opacity=0.9).move_to(pos)
+            for pos in nucleotide_positions_top
+        ])
+        
+        self.play(
+            *[FadeIn(nuc) for nuc in nucleotides_top],
+            run_time=1.5
+        )
+        
+        self.wait(1)
+        
+        # === Animation for Lecture Line 3 ===
+        # Highlight lecture line 3
+        self.lecture[1].set_color(WHITE)
+        self.lecture[2].set_color("#69F0AE")  # Green for leading strand
+        
+        # Move polymerase forward on leading strand (top)
+        new_pol_pos_top = self.grid['A4'] + np.array([-0.2, 0.1, 0])
+        self.play(
+            pol_label.animate.move_to(new_pol_pos_top),
+            run_time=2
+        )
+        
+        # Build continuous green strand on top template
+        leading_strand = Line(
+            start=top_template.get_start() + np.array([0.6, 0.1, 0]),
+            end=top_template.get_end() + np.array([-0.1, 0.05, 0]),
+            color="#69F0AE",
+            stroke_width=6
+        )
+        
+        self.play(Create(leading_strand), run_time=2.5)
+        
+        # Update direction arrow to follow polymerase
+        new_arrow = Arrow(
+            start=top_template.get_start() + np.array([1.0, 0.5, 0]),
+            end=top_template.get_start() + np.array([2.0, 0.75, 0]),
+            color="#FFEB3B",
+            stroke_width=3,
+            tip_length=0.15
+        )
+        
+        self.play(
+            Transform(direction_arrow, new_arrow),
+            run_time=1.5
+        )
+        
+        self.wait(1)
+        
+        # === Animation for Lecture Line 4 ===
+        # Highlight lecture line 4
+        self.lecture[2].set_color(WHITE)
+        self.lecture[3].set_color("#FFAB91")  # Salmon for Okazaki
+        
+        # Move polymerase to lagging strand (bottom)
+        pol_label_bottom = VGroup(
+            Circle(radius=0.25, color="#4DD0E1", fill_opacity=0.8),
+            Text("DNA Pol", font_size=14, color="#4DD0E1")
+        )
+        pol_label_bottom[1].next_to(pol_label_bottom[0], RIGHT, buff=0.1)
+        pol_label_bottom.move_to(self.grid['E3'] + np.array([0.3, -0.5, 0]))
+        
+        self.play(
+            Transform(pol_label, pol_label_bottom),
+            run_time=1.5
+        )
+        
+        # Build short Okazaki fragments on bottom template
+        # First fragment
+        frag1 = Line(
+            start=bottom_template.get_start() + np.array([0.6, -0.1, 0]),
+            end=bottom_template.get_start() + np.array([1.2, -0.2, 0]),
+            color="#69F0AE",
+            stroke_width=6
+        )
+        
+        okazaki_label1 = Text("Okazaki", font_size=14, color="#FFAB91")
+        okazaki_label1.next_to(frag1, DOWN, buff=0.15)
+        
+        self.play(
+            Create(frag1),
+            Write(okazaki_label1),
+            run_time=1.5
+        )
+        
+        # Move polymerase forward
+        pol_label_bottom_2 = pol_label_bottom.copy()
+        pol_label_bottom_2.move_to(self.grid['E4'] + np.array([0.2, -0.6, 0]))
+        
+        self.play(
+            Transform(pol_label, pol_label_bottom_2),
+            run_time=1
+        )
+        
+        # Second fragment
+        frag2 = Line(
+            start=bottom_template.get_start() + np.array([1.5, -0.25, 0]),
+            end=bottom_template.get_start() + np.array([2.1, -0.35, 0]),
+            color="#69F0AE",
+            stroke_width=6
+        )
+        
+        okazaki_label2 = Text("Okazaki", font_size=14, color="#FFAB91")
+        okazaki_label2.next_to(frag2, DOWN, buff=0.15)
+        
+        self.play(
+            Create(frag2),
+            Write(okazaki_label2),
+            run_time=1.5
+        )
+        
+        # Show gap between fragments
+        gap_indicator = Line(
+            start=frag1.get_end(),
+            end=frag2.get_start(),
+            color="#FFAB91",
+            stroke_width=2,
+            stroke_dash=5
+        )
+        
+        gap_label = Text("Gap", font_size=14, color="#FFAB91")
+        gap_label.next_to(gap_indicator, DOWN, buff=0.1)
+        
+        self.play(
+            Create(gap_indicator),
+            Write(gap_label),
+            run_time=1
+        )
+        
+        self.wait(1)
+        
+        # === Animation for Lecture Line 5 ===
+        # Highlight lecture line 5
+        self.lecture[3].set_color(WHITE)
+        self.lecture[4].set_color("#FFD54F")  # Gold for Ligase
+        
+        # Ligase icon (gold circle with "Lig")
+        ligase_circle = Circle(radius=0.25, color="#FFD54F", fill_opacity=0.8)
+        ligase_text = Text("Ligase", font_size=14, color="#FFD54F")
+        ligase_label = VGroup(ligase_circle, ligase_text)
+        ligase_label[1].next_to(ligase_label[0], RIGHT, buff=0.1)
+        
+        # Place ligase near the gap
+        ligase_label.move_to(self.grid['D5'] + np.array([0, -0.5, 0]))
+        
+        self.play(FadeIn(ligase_label), run_time=1)
+        
+        # Seal the gap - animate a connecting segment
+        seal_segment = Line(
+            start=frag1.get_end(),
+            end=frag2.get_start(),
+            color="#69F0AE",
+            stroke_width=6
+        )
+        
+        # Fade out gap indicator and label
+        self.play(
+            FadeOut(gap_indicator),
+            FadeOut(gap_label),
+            run_time=0.5
+        )
+        
+        # Create continuous strand by sealing
+        self.play(
+            Create(seal_segment),
+            run_time=1.5
+        )
+        
+        # Merge into one continuous strand
+        continuous_lagging = VMobject(color="#69F0AE", stroke_width=6)
+        continuous_lagging.set_points_as_corners([
+            frag1.get_start(),
+            frag1.get_end(),
+            frag2.get_start(),
+            frag2.get_end()
+        ])
+        
+        self.play(
+            Transform(VGroup(frag1, frag2, seal_segment), continuous_lagging),
+            run_time=1.5
+        )
+        
+        # Update labels - remove Okazaki labels and add "Sealed" label
+        self.play(
+            FadeOut(okazaki_label1),
+            FadeOut(okazaki_label2),
+            run_time=0.5
+        )
+        
+        sealed_label = Text("Sealed", font_size=16, color="#69F0AE")
+        sealed_label.next_to(continuous_lagging, DOWN, buff=0.2)
+        
+        self.play(Write(sealed_label), run_time=1)
+        
+        # Final highlight - fade primase and polymerase labels slightly
+        self.play(
+            ligase_label.animate.set_opacity(0.5),
+            pol_label.animate.set_opacity(0.5),
+            run_time=1
+        )
+        
+        self.wait(2)
+        ```
+
+        **Requirements:**
+        1. Only fix the specific error mentioned
+        2. Maintain the original code structure and logic
+        3. Make minimal necessary changes
+        4. Ensure compatibility with Manim CE v0.19.0
+        5. Output ONLY the fixed Python code block
+
+        **Fixed Code:**
+        

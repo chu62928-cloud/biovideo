@@ -1,0 +1,41 @@
+{
+  "repair_id": "REP-dd947104c24f",
+  "issue_id": "BIO-DIRECTION",
+  "decision": "REVISE",
+  "category": "scientific_mechanism",
+  "severity": "blocker",
+  "root_cause_stage": "ANIMATION_CODE",
+  "scene_id": "section4",
+  "object_ids": [
+    "new_lagging_strand",
+    "dna_polymerase_fill",
+    "fill_dna_00",
+    "fill_dna_01",
+    "fill_dna_02"
+  ],
+  "repair_scope": "affected_event",
+  "instruction": "Repair ONLY event_5_maturation gap-fill nucleotide addition so actual visible addition progresses from the existing nascent 3prime side, consistent with the observed antiparallel lower template and 5prime-to-3prime synthesis. Change the n_fill loop, not arrows, glyphs or molecular identities. Keep removal before polymerase fill and nick sealing afterwards. Move the actual gap polymerase along with new nucleotides. Preserve all other events, IDs, SVGs, time budget, imports and helpers.",
+  "preserve": [
+    "approved_script",
+    "asset_identity",
+    "unaffected_events",
+    "non_target_AST"
+  ],
+  "verification": [
+    "source_diff_scope",
+    "strand_polarity_check",
+    "growth_trace_check",
+    "rendered_video_review"
+  ],
+  "invalidate": [
+    "CODE_GATE",
+    "RENDER",
+    "VIDEO_SCIENCE_GATE",
+    "VISUAL_CRITIC",
+    "FINAL_SCIENCE_GATE",
+    "APPROVED"
+  ],
+  "source_review_id": "REV-4cfda4281db8",
+  "input_hash": "e5f38e4e57705e32e86a8e689e4a4d0b57a2a390322e8c7aeefb9218dab696cf",
+  "event_id": "event_5_maturation"
+}

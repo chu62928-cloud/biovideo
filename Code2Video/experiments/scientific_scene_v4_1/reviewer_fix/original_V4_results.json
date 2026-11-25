@@ -1,0 +1,362 @@
+[
+  {
+    "check_id": "polarity_new_leading",
+    "stage": "SCENE_IR",
+    "status": "UNCERTAIN",
+    "object_ids": [
+      "new_leading"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [],
+    "expected": {},
+    "observed": {
+      "reason": "No template mapping or growth-port contract"
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "c5b39e0b35dce551dd4a7a290879548e24c1d2b75dabfd87b718523a58c834a5"
+  },
+  {
+    "check_id": "polarity_new_leading",
+    "stage": "SCENE_IR",
+    "status": "UNCERTAIN",
+    "object_ids": [
+      "new_leading"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [],
+    "expected": {},
+    "observed": {
+      "reason": "No template mapping or growth-port contract"
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "4f9f15a982723fccdb6c174fdc8f19ff6914859a941b6dd7d9566d73f48283b4"
+  },
+  {
+    "check_id": "polarity_new_leading",
+    "stage": "SCENE_IR",
+    "status": "UNCERTAIN",
+    "object_ids": [
+      "new_leading"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [],
+    "expected": {},
+    "observed": {
+      "reason": "No template mapping or growth-port contract"
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "43f9cba695bd62e065f61d5f8b3d5dd324dab505a6dc19b3d0b40019a5d55f71"
+  },
+  {
+    "check_id": "polarity_new_leading",
+    "stage": "SCENE_IR",
+    "status": "UNCERTAIN",
+    "object_ids": [
+      "new_leading"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [],
+    "expected": {},
+    "observed": {
+      "reason": "No template mapping or growth-port contract"
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "8821d8b649a05e242de103009a0edf0ee7db82f9bec46e1137f998a950ba42a2"
+  },
+  {
+    "check_id": "polarity_new_leading",
+    "stage": "SCENE_IR",
+    "status": "UNCERTAIN",
+    "object_ids": [
+      "new_leading"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [],
+    "expected": {},
+    "observed": {
+      "reason": "No template mapping or growth-port contract"
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "ef6209eb25eae56c9306106b391fe02bb98a7968d2e00a25dfa187197e0f219a"
+  },
+  {
+    "check_id": "polarity_new_leading",
+    "stage": "SCENE_IR",
+    "status": "UNCERTAIN",
+    "object_ids": [
+      "new_leading"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [],
+    "expected": {},
+    "observed": {
+      "reason": "No template mapping or growth-port contract"
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "4362ea0159a674570579e0db33a9172fcb9b3f8165e2f816571471b8cd28dc69"
+  },
+  {
+    "check_id": "polarity_new_leading",
+    "stage": "SCENE_IR",
+    "status": "UNCERTAIN",
+    "object_ids": [
+      "new_leading"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [],
+    "expected": {},
+    "observed": {
+      "reason": "No template mapping or growth-port contract"
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "525804ae2f1679b09d5fd9c068a8de1955b784289fb0ceea12214c1166846bfb"
+  },
+  {
+    "check_id": "polarity_new_leading",
+    "stage": "SCENE_IR",
+    "status": "UNCERTAIN",
+    "object_ids": [
+      "new_leading"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [],
+    "expected": {},
+    "observed": {
+      "reason": "No template mapping or growth-port contract"
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "02d7a08c9c28c91e84c8823b556d95f74f502651c9c8c2391e56d268f27e78e0"
+  },
+  {
+    "check_id": "polarity_fragment_1",
+    "stage": "SCENE_IR",
+    "status": "UNCERTAIN",
+    "object_ids": [
+      "fragment_1"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [],
+    "expected": {},
+    "observed": {
+      "reason": "No template mapping or growth-port contract"
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "16731cabb8072c424714981f00e93ec20c72952db16c2c72be771b919cbdf7c7"
+  },
+  {
+    "check_id": "polarity_fragment_1",
+    "stage": "SCENE_IR",
+    "status": "UNCERTAIN",
+    "object_ids": [
+      "fragment_1"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [],
+    "expected": {},
+    "observed": {
+      "reason": "No template mapping or growth-port contract"
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "d6319be1aa46040e4b96eae8b2d0d22cc9eec5a56a235c02402c27ec2e24efe7"
+  },
+  {
+    "check_id": "polarity_fragment_1",
+    "stage": "SCENE_IR",
+    "status": "UNCERTAIN",
+    "object_ids": [
+      "fragment_1"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [],
+    "expected": {},
+    "observed": {
+      "reason": "No template mapping or growth-port contract"
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "0336b7069a6f9f4f9a2a665d19eba69f1589ec2d738679a198c0990c753e6e25"
+  },
+  {
+    "check_id": "polarity_fragment_1",
+    "stage": "SCENE_IR",
+    "status": "UNCERTAIN",
+    "object_ids": [
+      "fragment_1"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [],
+    "expected": {},
+    "observed": {
+      "reason": "No template mapping or growth-port contract"
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "822d7ef5162fe653112dbb7795c1d0872e4bb3437c55e709785699ffb52b6c2a"
+  },
+  {
+    "check_id": "polarity_fragment_2",
+    "stage": "SCENE_IR",
+    "status": "UNCERTAIN",
+    "object_ids": [
+      "fragment_2"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [],
+    "expected": {},
+    "observed": {
+      "reason": "No template mapping or growth-port contract"
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "c83bffe0ba94369266aa28670e8b19273239d73f5167eaf7872367bc004599f4"
+  },
+  {
+    "check_id": "polarity_fragment_2",
+    "stage": "SCENE_IR",
+    "status": "UNCERTAIN",
+    "object_ids": [
+      "fragment_2"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [],
+    "expected": {},
+    "observed": {
+      "reason": "No template mapping or growth-port contract"
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "84035fc0c8e7f32b3c9150988925f5c755c0661c2497aa865e2498889fec8b1e"
+  },
+  {
+    "check_id": "polarity_fragment_2",
+    "stage": "SCENE_IR",
+    "status": "UNCERTAIN",
+    "object_ids": [
+      "fragment_2"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [],
+    "expected": {},
+    "observed": {
+      "reason": "No template mapping or growth-port contract"
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "5ab732d35517e73c577e1abdb2501564c1a0a343c63e176b55d69004e6f10750"
+  },
+  {
+    "check_id": "polarity_fragment_2",
+    "stage": "SCENE_IR",
+    "status": "UNCERTAIN",
+    "object_ids": [
+      "fragment_2"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [],
+    "expected": {},
+    "observed": {
+      "reason": "No template mapping or growth-port contract"
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "a94de27b4d97d28b1186fd4b717d464577de63d6a44760cebefa3405d991ffcc"
+  },
+  {
+    "check_id": "polarity_gap_fill",
+    "stage": "SCENE_IR",
+    "status": "UNCERTAIN",
+    "object_ids": [
+      "gap_fill"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [],
+    "expected": {},
+    "observed": {
+      "reason": "No template mapping or growth-port contract"
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "8bbbfa574a845f8ebc068e23db81dd6124cb3e63e79f9835e608a408e586bd8d"
+  },
+  {
+    "check_id": "polarity_gap_fill",
+    "stage": "SCENE_IR",
+    "status": "UNCERTAIN",
+    "object_ids": [
+      "gap_fill"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [],
+    "expected": {},
+    "observed": {
+      "reason": "No template mapping or growth-port contract"
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "d85a9c1abe853b144959327ecd80ff67ff114359882303e7bb97ba5726532abe"
+  },
+  {
+    "check_id": "polarity_gap_fill",
+    "stage": "SCENE_IR",
+    "status": "UNCERTAIN",
+    "object_ids": [
+      "gap_fill"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [],
+    "expected": {},
+    "observed": {
+      "reason": "No template mapping or growth-port contract"
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "3701e6eb6b1d90a1a2a28d20afc45334fe2206928abe33e3579f4ff11890e631"
+  },
+  {
+    "check_id": "polarity_gap_fill",
+    "stage": "SCENE_IR",
+    "status": "UNCERTAIN",
+    "object_ids": [
+      "gap_fill"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [],
+    "expected": {},
+    "observed": {
+      "reason": "No template mapping or growth-port contract"
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "e63f663d3532dcf682464eed986a17fb18bc982d6cbe2654f66f18821ee08e8b"
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "enabled": false,
+  "dry_run": true,
+  "model": "wan3.0-video",
+  "new_jobs": 0,
+  "official_documentation": "https://help.aliyun.com/zh/model-studio/wan3-video-generation-guide",
+  "endpoint": null,
+  "payload": {
+    "model": "wan3.0-video",
+    "input": {
+      "prompt": "A five-second schematic continuation of the SAME eukaryotic DNA replication fork from the reference image. No camera cuts and no text or labels. Preserve every existing molecule identity and strand polarity. Blue templates remain separate from new green DNA. Cyan DNA polymerase stays at a growing 3-prime end, adding individual nucleotides in 5-prime to 3-prime direction from an existing orange RNA primer. Show only the primed-extension event; do not compress all maturation steps into this clip. Scientific constraints: [{\"id\": \"distinct_strands\", \"rule\": \"Blue template and green newly synthesized DNA are different Mobjects; never recolor the template to stand in for synthesis.\"}, {\"id\": \"antiparallel\", \"rule\": \"Show template 3prime-left/5prime-right upper; template 5prime-left/3prime-right lower. New strand polarities oppose their own templates.\"}, {\"id\": \"primer_first\", \"rule\": \"Primase must bind and form orange RNA primer before polymerase extends new DNA from its exposed 3prime end.\"}, {\"id\": \"synthesis_direction\", \"rule\": \"Add visible individual DNA nucleotides at growing 3prime end, +x on leading; -x within each lagging fragment.\"}, {\"id\": \"leading\", \"rule\": \"Leading synthesis is continuous relative to fork progress.\"}, {\"id\": \"lagging\", \"rule\": \"Show at least two separate primers and Okazaki fragments; each new primer is nearer the advancing fork; each fragment grows away from fork.\"}, {\"id\": \"maturation\", \"rule\": \"Remove the RNA primer first, visibly leave a gap, fill with DNA by polymerase, then ligase seals only a nick. Never show ligase making DNA or turning orange RNA directly green.\"}, {\"id\": \"enzyme_contact\", \"rule\": \"Bind enzyme geometry to active-site anchors (<=0.8 scene units) during its work; keep fork relationships continuous.\"}, {\"id\": \"identity\", \"rule\": \"Retain the same stable replication_fork and template objects across all five events; do not recreate an unrelated pair of templates.\"}]",
+      "media": [
+        {
+          "type": "first_frame",
+          "url": null
+        }
+      ]
+    },
+    "parameters": {
+      "resolution": "720P",
+      "ratio": "adaptive",
+      "duration": 5,
+      "prompt_extend": false
+    }
+  },
+  "local_reference": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/comparisons/A2_fork_reference.png",
+  "missing_configuration": [
+    "WAN_WORKSPACE_ID",
+    "WAN_REFERENCE_URL"
+  ],
+  "media_note": "Upload the actual A2 fork reference to a public HTTPS URL using an authorized storage service. No guessed upload API or credential-derived workspace ID.",
+  "actual_reference_frame_now_exists": true,
+  "reference_requires_human_review": true,
+  "actual_Wan_jobs": 0
+}

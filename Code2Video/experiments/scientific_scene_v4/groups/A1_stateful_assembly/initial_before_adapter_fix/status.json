@@ -1,0 +1,14 @@
+{
+  "group": "A1_stateful_assembly",
+  "status": "COMPLETED",
+  "generation_attempted": true,
+  "render_success": true,
+  "science_gate": "NEEDS_HUMAN_REVIEW",
+  "ir_science_gate": "REVISE",
+  "video_path": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/groups/A1_stateful_assembly/video.mp4",
+  "unresolved_blockers": [],
+  "code_sha256": "a8199415ed1b742aaa932bb7479044049a30d49c35bcc1d015639127ad044314",
+  "video_sha256": "a3064252c8842d0e664207469ee904172b7ae0a0d85fb7b74b6550f4cb1b65ae",
+  "repair_attempts": 0,
+  "duration_seconds": 32.066667
+}

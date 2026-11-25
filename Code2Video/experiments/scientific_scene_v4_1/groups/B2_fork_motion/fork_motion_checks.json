@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "fork_range": [
+    0.6,
+    3.1
+  ],
+  "duplex_before_after": [
+    5.4,
+    2.9
+  ],
+  "whole_scene_translation_excluded": true,
+  "frame_observations": 284
+}

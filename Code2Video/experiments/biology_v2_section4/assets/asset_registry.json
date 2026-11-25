@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0",
+  "style": "Original editable schematic components; not molecular structures",
+  "assets": [
+    {
+      "id": "dna_double_helix",
+      "filename": "dna_double_helix.svg",
+      "source_url": null,
+      "author": "Original programmatic schematic for Biology-Aware Code2Video V2",
+      "license": "CC0-1.0",
+      "attribution": "Original schematic; optional credit to this experiment",
+      "sha256": "05fad222dbf1d75843b5b92d36af319af7bf97b3b99380250cfc9801ab0a2522",
+      "independently_animated": true,
+      "not_real_protein_structure": true,
+      "color": "#4FC3F7"
+    },
+    {
+      "id": "replication_fork",
+      "filename": "replication_fork.svg",
+      "source_url": null,
+      "author": "Original programmatic schematic for Biology-Aware Code2Video V2",
+      "license": "CC0-1.0",
+      "attribution": "Original schematic; optional credit to this experiment",
+      "sha256": "ac6c928ac54fe762d2261e98e8ea13ff6b791aba1f80ea16e2cef24afdcfc115",
+      "independently_animated": true,
+      "not_real_protein_structure": true,
+      "color": "#4FC3F7"
+    },
+    {
+      "id": "primase",
+      "filename": "primase.svg",
+      "source_url": null,
+      "author": "Original programmatic schematic for Biology-Aware Code2Video V2",
+      "license": "CC0-1.0",
+      "attribution": "Original schematic; optional credit to this experiment",
+      "sha256": "cc4bc206504c28710e4a706862f7c1a39e57c4f6a9ec750d1c53ad9a88b87d8d",
+      "independently_animated": true,
+      "not_real_protein_structure": true,
+      "color": "#BA68C8"
+    },
+    {
+      "id": "dna_polymerase",
+      "filename": "dna_polymerase.svg",
+      "source_url": null,
+      "author": "Original programmatic schematic for Biology-Aware Code2Video V2",
+      "license": "CC0-1.0",
+      "attribution": "Original schematic; optional credit to this experiment",
+      "sha256": "7f5f603d56aa7732533c9f99bd066b97783d5ef0193adf7c5ebc6a1586438a9d",
+      "independently_animated": true,
+      "not_real_protein_structure": true,
+      "color": "#4DD0E1"
+    },
+    {
+      "id": "dna_ligase",
+      "filename": "dna_ligase.svg",
+      "source_url": null,
+      "author": "Original programmatic schematic for Biology-Aware Code2Video V2",
+      "license": "CC0-1.0",
+      "attribution": "Original schematic; optional credit to this experiment",
+      "sha256": "d0370b8ebe46a23926c16532e06880a7830b13f4bdf4b18352815dbb1b919af2",
+      "independently_animated": true,
+      "not_real_protein_structure": true,
+      "color": "#FFD54F"
+    },
+    {
+      "id": "rna_primer",
+      "filename": "rna_primer.svg",
+      "source_url": null,
+      "author": "Original programmatic schematic for Biology-Aware Code2Video V2",
+      "license": "CC0-1.0",
+      "attribution": "Original schematic; optional credit to this experiment",
+      "sha256": "340e8b4d8e207cc066ef976fc49737cd7964b216fe4ef8350e0be38c57497318",
+      "independently_animated": true,
+      "not_real_protein_structure": true,
+      "color": "#FFB74D"
+    },
+    {
+      "id": "nucleotide",
+      "filename": "nucleotide.svg",
+      "source_url": null,
+      "author": "Original programmatic schematic for Biology-Aware Code2Video V2",
+      "license": "CC0-1.0",
+      "attribution": "Original schematic; optional credit to this experiment",
+      "sha256": "6023436b0c956906e2246f3bdaa052f77e1bdcd1c5e7007abbd5c5cbbbe5e08f",
+      "independently_animated": true,
+      "not_real_protein_structure": true,
+      "color": "#69F0AE"
+    },
+    {
+      "id": "okazaki_fragment",
+      "filename": "okazaki_fragment.svg",
+      "source_url": null,
+      "author": "Original programmatic schematic for Biology-Aware Code2Video V2",
+      "license": "CC0-1.0",
+      "attribution": "Original schematic; optional credit to this experiment",
+      "sha256": "c34af92beda8cde2518a3a321539d6cc3f8f2274bb4601eb8d8c2727f97b0172",
+      "independently_animated": true,
+      "not_real_protein_structure": true,
+      "color": "#69F0AE"
+    }
+  ],
+  "third_party_assets_used": false,
+  "selection_note": "Original simple components selected for independent animation, consistent polarity/color and clear licence provenance; no unverified third-party material included."
+}

@@ -1,0 +1,262 @@
+{
+  "process_id": "continuous_extension",
+  "purpose": "Continuous leading synthesis on opened region, Pol epsilon tracks actual end",
+  "input_assembly_types": [],
+  "required_states": [],
+  "preconditions": [
+    {
+      "constraint_id": "phase_primed",
+      "predicate": "state_is",
+      "object_ids": [],
+      "key": "phase",
+      "value": "primed"
+    }
+  ],
+  "actions": [
+    {
+      "operation": "transform_state",
+      "targets": [
+        "polymerase_leading"
+      ],
+      "params": {
+        "visual_updates": {
+          "polymerase_leading": {
+            "visible": true
+          }
+        }
+      }
+    },
+    {
+      "operation": "attach",
+      "targets": [
+        "polymerase_leading",
+        "new_leading"
+      ],
+      "params": {
+        "relation": "active_site",
+        "target_anchor": "end",
+        "source_anchor": "center",
+        "offset": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "operation": "extend",
+      "targets": [
+        "new_leading"
+      ],
+      "params": {
+        "points": [
+          [
+            -3.7,
+            0.778,
+            0
+          ],
+          [
+            -3.0500000000000003,
+            0.687,
+            0
+          ]
+        ]
+      },
+      "preconditions": [
+        {
+          "constraint_id": "primer_first_new_leading",
+          "predicate": "visible",
+          "object_ids": [
+            "rna_primer_leading"
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "extend",
+      "targets": [
+        "new_leading"
+      ],
+      "params": {
+        "points": [
+          [
+            -3.7,
+            0.778,
+            0
+          ],
+          [
+            -2.4000000000000004,
+            0.596,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "operation": "extend",
+      "targets": [
+        "new_leading"
+      ],
+      "params": {
+        "points": [
+          [
+            -3.7,
+            0.778,
+            0
+          ],
+          [
+            -1.75,
+            0.5049999999999999,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "operation": "extend",
+      "targets": [
+        "new_leading"
+      ],
+      "params": {
+        "points": [
+          [
+            -3.7,
+            0.778,
+            0
+          ],
+          [
+            -1.1,
+            0.4139999999999999,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "operation": "extend",
+      "targets": [
+        "new_leading"
+      ],
+      "params": {
+        "points": [
+          [
+            -3.7,
+            0.778,
+            0
+          ],
+          [
+            -0.4500000000000002,
+            0.32299999999999995,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "operation": "extend",
+      "targets": [
+        "new_leading"
+      ],
+      "params": {
+        "points": [
+          [
+            -3.7,
+            0.778,
+            0
+          ],
+          [
+            0.20000000000000018,
+            0.23199999999999987,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "operation": "extend",
+      "targets": [
+        "new_leading"
+      ],
+      "params": {
+        "points": [
+          [
+            -3.7,
+            0.778,
+            0
+          ],
+          [
+            0.8499999999999996,
+            0.1409999999999999,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "operation": "extend",
+      "targets": [
+        "new_leading"
+      ],
+      "params": {
+        "points": [
+          [
+            -3.7,
+            0.778,
+            0
+          ],
+          [
+            1.5,
+            0.04999999999999982,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "operation": "detach",
+      "targets": [
+        "polymerase_leading",
+        "new_leading"
+      ],
+      "params": {
+        "relation": "active_site"
+      }
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "polymerase_leading"
+      ],
+      "params": {
+        "visual_updates": {
+          "polymerase_leading": {
+            "visible": false
+          }
+        }
+      }
+    },
+    {
+      "operation": "transform_state",
+      "targets": [],
+      "params": {
+        "state_updates": {
+          "phase": "elongating"
+        }
+      }
+    }
+  ],
+  "postconditions": [
+    {
+      "constraint_id": "phase_elongating",
+      "predicate": "state_is",
+      "object_ids": [],
+      "key": "phase",
+      "value": "elongating"
+    }
+  ],
+  "invariants": [],
+  "evidence_ids": [
+    "F4",
+    "X_7574276a"
+  ]
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "evidence_id": "PMID_35320688",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35320688/",
+    "title": "The Initiation of Eukaryotic DNA Replication.",
+    "publisher": "Annual review of biochemistry",
+    "license": "Publisher copyright; short research excerpts only",
+    "accessed_utc": "2026-11-24T03:38:20Z",
+    "status": "RETRIEVED",
+    "content_sha256": "ed2f6759a61617a5890852175fa7d70b07aaf0718afd9ba4dd698bcbbc987803",
+    "passages": [
+      {
+        "location": "PubMed abstract",
+        "text": "DNA replication in eukaryotic cells initiates from large numbers of sites called replication origins. Initiation of replication from these origins must be tightly controlled to ensure the entire genome is precisely duplicated in each cell cycle. This is accomplished through the regulation of the first two steps in replication: loading and activation of the replicative DNA helicase. Here we describe what is known about the mechanism and regulation of these two reactions from a genetic, biochemical, and structural perspective, focusing on recent progress using proteins from budding yeast."
+      }
+    ]
+  },
+  {
+    "evidence_id": "PMID_28301743",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28301743/",
+    "title": "Eukaryotic DNA Replication Fork.",
+    "publisher": "Annual review of biochemistry",
+    "license": "Publisher copyright; short research excerpts only",
+    "accessed_utc": "2026-11-24T03:38:20Z",
+    "status": "RETRIEVED",
+    "content_sha256": "e5a4f832e26cd4b46167130a40c6c596e80fdb5c986853a56a8c2ce7b1045e95",
+    "passages": [
+      {
+        "location": "PubMed abstract",
+        "text": "This review focuses on the biogenesis and composition of the eukaryotic DNA replication fork, with an emphasis on the enzymes that synthesize DNA and repair discontinuities on the lagging strand of the replication fork. Physical and genetic methodologies aimed at understanding these processes are discussed. The preponderance of evidence supports a model in which DNA polymerase ε (Pol ε) carries out the bulk of leading strand DNA synthesis at an undisturbed replication fork. DNA polymerases α and δ carry out the initiation of Okazaki fragment synthesis and its elongation and maturation, respectively. This review also discusses alternative proposals, including cellular processes during which alternative forks may be utilized, and new biochemical studies with purified proteins that are aimed at reconstituting leading and lagging strand DNA synthesis separately and as an integrated replication fork."
+      }
+    ]
+  }
+]

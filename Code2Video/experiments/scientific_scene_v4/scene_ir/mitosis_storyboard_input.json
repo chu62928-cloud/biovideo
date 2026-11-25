@@ -1,0 +1,18 @@
+{
+  "required_event_ids": [
+    "metaphase",
+    "anaphase"
+  ],
+  "duration_target": 12,
+  "title": "Mitosis: alignment to sister separation",
+  "events": [
+    {
+      "id": "metaphase",
+      "action": "Establish opposite pole attachments and aligned duplicated chromosome"
+    },
+    {
+      "id": "anaphase",
+      "action": "Release cohesion, separate existing sister chromatids to opposite poles"
+    }
+  ]
+}

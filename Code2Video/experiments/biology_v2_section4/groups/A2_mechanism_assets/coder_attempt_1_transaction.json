@@ -1,0 +1,10 @@
+{
+  "tag": "coder_attempt_1",
+  "committed": false,
+  "before": null,
+  "started": 1795427730.0230227,
+  "error_type": "AssertionError",
+  "error": "Full Manim render failed; see stderr.log",
+  "after": null,
+  "elapsed_seconds": 9.168
+}

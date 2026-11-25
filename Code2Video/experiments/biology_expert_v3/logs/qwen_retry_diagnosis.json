@@ -1,0 +1,23 @@
+{
+  "failed_call": "v3_10",
+  "root_cause": "TOTAL_OUTPUT_BUDGET_EXHAUSTED_INCLUDING_REASONING",
+  "finish_reason": "length",
+  "completion_tokens": 9000,
+  "reasoning_tokens": 5664,
+  "remaining_answer_tokens": 3336,
+  "content_chars": 11564,
+  "content_tail": "ft→right with fragments growing right→left. Both antiparallel.\",\n        \"object_ids\": [\"template_leading\", \"template_lagging\", \"new_leading_strand\", \"okazaki_fragment\", \"okazaki_fragment_2\"],\n       ",
+  "not_authentication_or_network_error": true,
+  "docs": [
+    "https://help.aliyun.com/zh/model-studio/qwen4-max",
+    "https://help.aliyun.com/zh/model-studio/qwen-api-via-openai-chat-completions"
+  ],
+  "retry_profile": {
+    "max_completion_tokens": 12000,
+    "thinking_budget": 4096,
+    "response_format": "json_object",
+    "SDK_retries": 0,
+    "timeout_seconds": 180
+  },
+  "prompt_constraint": "At most3 issues/4 checks; compact descriptions; scientific standards and actual full video preserved"
+}

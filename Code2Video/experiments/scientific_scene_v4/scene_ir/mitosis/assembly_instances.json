@@ -1,0 +1,77 @@
+[
+  {
+    "assembly_id": "mitotic_spindle_chromosome_set",
+    "assembly_type": "mitotic_spindle_chromosome_set",
+    "component_ids": [
+      "sister_A",
+      "sister_B",
+      "kinetochore_A",
+      "kinetochore_B",
+      "pole_left",
+      "pole_right",
+      "microtubule_left",
+      "microtubule_right"
+    ],
+    "relations": [
+      {
+        "source": "sister_A",
+        "target": "sister_B",
+        "type": "sister_cohesion"
+      },
+      {
+        "source": "kinetochore_A",
+        "target": "sister_A",
+        "type": "attachment",
+        "target_anchor": "center"
+      },
+      {
+        "source": "kinetochore_B",
+        "target": "sister_B",
+        "type": "attachment",
+        "target_anchor": "center"
+      }
+    ],
+    "state_variables": {
+      "phase": "unattached"
+    },
+    "anchor_points": {
+      "left_kinetochore": {
+        "object_id": "kinetochore_A",
+        "anchor": "center"
+      },
+      "right_kinetochore": {
+        "object_id": "kinetochore_B",
+        "anchor": "center"
+      }
+    },
+    "visual_representation": {
+      "fidelity": "schematic",
+      "editable": true
+    },
+    "allowed_transitions": [
+      "bipolar_attachment",
+      "chromatid_separation"
+    ],
+    "invariants": [
+      {
+        "constraint_id": "stable_components",
+        "predicate": "identity_unchanged",
+        "object_ids": []
+      },
+      {
+        "constraint_id": "two_physical_chromatids",
+        "predicate": "count_kind",
+        "object_ids": [],
+        "kind": "chromatid",
+        "count": 2
+      }
+    ],
+    "evidence_ids": [
+      "F1",
+      "F3",
+      "F4",
+      "F5",
+      "F8"
+    ]
+  }
+]

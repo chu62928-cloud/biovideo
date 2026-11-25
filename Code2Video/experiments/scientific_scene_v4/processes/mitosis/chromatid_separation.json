@@ -1,0 +1,110 @@
+{
+  "process_id": "chromatid_separation",
+  "purpose": "Release sister cohesion then move existing sisters to opposite poles; context role becomes daughter chromosome",
+  "input_assembly_types": [],
+  "required_states": [
+    "aligned"
+  ],
+  "preconditions": [
+    {
+      "constraint_id": "phase_aligned",
+      "predicate": "state_is",
+      "object_ids": [],
+      "key": "phase",
+      "value": "aligned"
+    },
+    {
+      "constraint_id": "bipolar_left",
+      "predicate": "relation_exists",
+      "object_ids": [
+        "pole_left",
+        "kinetochore_A"
+      ],
+      "relation": "bipolar_attachment"
+    },
+    {
+      "constraint_id": "bipolar_right",
+      "predicate": "relation_exists",
+      "object_ids": [
+        "pole_right",
+        "kinetochore_B"
+      ],
+      "relation": "bipolar_attachment"
+    },
+    {
+      "constraint_id": "sisters_linked",
+      "predicate": "relation_exists",
+      "object_ids": [
+        "sister_A",
+        "sister_B"
+      ],
+      "relation": "sister_cohesion"
+    }
+  ],
+  "actions": [
+    {
+      "operation": "split",
+      "targets": [
+        "sister_A",
+        "sister_B"
+      ],
+      "params": {
+        "remove_relation": "sister_cohesion",
+        "property_updates": {
+          "current_role": "daughter_chromosome"
+        },
+        "visual_updates": {
+          "sister_A": {
+            "label": "Daughter A"
+          },
+          "sister_B": {
+            "label": "Daughter B"
+          }
+        },
+        "state_updates": {
+          "phase": "separating"
+        }
+      }
+    },
+    {
+      "operation": "move_along_path",
+      "targets": [
+        "sister_A",
+        "sister_B"
+      ],
+      "params": {
+        "paths": {
+          "sister_A": [
+            [
+              -2.8,
+              0,
+              0
+            ]
+          ],
+          "sister_B": [
+            [
+              2.8,
+              0,
+              0
+            ]
+          ]
+        }
+      }
+    }
+  ],
+  "postconditions": [
+    {
+      "constraint_id": "phase_separating",
+      "predicate": "state_is",
+      "object_ids": [],
+      "key": "phase",
+      "value": "separating"
+    }
+  ],
+  "invariants": [],
+  "evidence_ids": [
+    "F3",
+    "F5",
+    "F8"
+  ]
+}

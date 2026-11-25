@@ -1,0 +1,14 @@
+{
+  "group": "B1_mitosis",
+  "mode": "full",
+  "model": "deepseek-flash",
+  "shared_blueprint": {
+    "plan_origin": "REAL_LLM",
+    "blueprint_hash": "edac4910d35075691a09bf6665d323d47fcd361ef7a1c2043d031b92d9414a93",
+    "knowledge_hash": "87eb91373bc9818f5a32dcef2ff2e36b7fa676473be082869d1228bf54ff0585",
+    "prompt_storyboard_hash": "76dfb759bc422a61021880754c640402325a427fce4a8153c9815e774dbd722d"
+  },
+  "sampling": "Existing provider defaults, unchanged",
+  "ir_review_decision": "REVISE",
+  "diagnostic_if_not_pass": true
+}

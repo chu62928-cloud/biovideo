@@ -1,0 +1,7 @@
+{
+  "committed": false,
+  "new_render": false,
+  "rollback_required": false,
+  "current_pair_unchanged": true,
+  "reason": "Qwen request timed out before any feedback/candidate; no candidate was committed"
+}

@@ -1,0 +1,91 @@
+ 
+    You are a professional education Explainer and Animator, expert at converting mathematical teaching outlines into storyboard scripts suitable for the Manim animation system.
+
+    ## Task
+    Convert the following teaching outline into a detailed step-by-step storyboard script:
+
+    {
+  "topic": "DNA Replication in Eukaryotic Cells",
+  "target_audience": "University introductory biology students, also suitable for advanced high school students",
+  "sections": [
+    {
+      "id": "section_1",
+      "title": "Prerequisite: DNA Directionality and Base Pairing",
+      "content": "approx. 40 sec. Briefly review the antiparallel DNA double helix, 5' to 3' polarity, complementary base pairing A-T and G-C, and semiconservative replication. Visual animation: show two colored DNA strands with opposite 5'/3' arrowheads unzipping to expose two templates.",
+      "example": "Use a zipper with two colored sides: each side becomes a template for a new matching side, and the 5'/3' arrows on the two strands point in opposite directions."
+    },
+    {
+      "id": "section_2",
+      "title": "Initiation at Multiple Origins of Replication",
+      "content": "approx. 45 sec. Explain that eukaryotic chromosomes use many origins of replication. Origin recognition proteins open DNA, helicase unwinds it, and bidirectional replication forks create expanding replication bubbles. Visual animation: a long chromosome with many glowing origins and bubbles growing in both directions.",
+      "example": "Compare it to a long train route with many stations starting repairs at the same time, so the whole chromosome is copied faster than starting from one station only."
+    },
+    {
+      "id": "section_3",
+      "title": "Unwinding and Priming: The Starting Machinery",
+      "content": "approx. 55 sec. Helicase separates strands; single-strand binding proteins stabilize exposed DNA; topoisomerase relieves supercoiling; primase lays RNA primers because DNA polymerase needs a free 3'-OH to begin. Visual animation: a replication fork moving forward, with enzyme icons, primer flags, and relief of twisting ahead of the fork.",
+      "example": "Helicase is a snowplow, single-strand binding proteins are safety clips, topoisomerase is a swivel, and primase places a starter block so DNA polymerase can begin building."
+    },
+    {
+      "id": "section_4",
+      "title": "Elongation: Leading and Lagging Strands",
+      "content": "approx. 75 sec. DNA polymerase adds nucleotides only in the 5' to 3' direction using a 3' to 5' template. The leading strand is synthesized continuously toward the fork, while the lagging strand is synthesized discontinuously away from the fork as Okazaki fragments, each beginning with an RNA primer. Visual animation: one smooth synthesis arrow and several short fragment arrows, with polarity arrows clearly labeled.",
+      "example": "The leading strand is a continuous highway lane; the lagging strand is a stop-and-go lane made of short Okazaki fragment cars. Both are built 5' to 3', but their template orientations make one continuous and the other fragmented."
+    },
+    {
+      "id": "section_5",
+      "title": "Maturation, Proofreading, and Chromatin Assembly",
+      "content": "approx. 50 sec. RNase H and FEN1 remove RNA primers; DNA polymerase fills the gaps; DNA ligase seals the nicks. DNA polymerase proofreads with 3' to 5' exonuclease activity. Newly replicated DNA is packaged with histones into nucleosomes. Visual animation: primers removed, gaps filled, ligase zipping nicks, and DNA spooling around histone beads.",
+      "example": "Editing a document: remove placeholder text, type the correct text, staple the pages together, and use spell-check. Histones act like spools that store the finished DNA neatly."
+    },
+    {
+      "id": "section_6",
+      "title": "Telomeres and Summary",
+      "content": "approx. 35 sec. Explain that linear eukaryotic chromosome ends cannot be fully copied by standard DNA polymerase, so telomerase extends telomeres in some cells such as stem cells and germ cells. Summarize the key ideas: multiple origins, bidirectional forks, semiconservative copying, leading and lagging strands, proofreading, and chromatin assembly. Visual animation: chromosome tip shortening, telomerase adding repeats, then a summary wheel of the replication steps.",
+      "example": "Think of a shoelace: telomeres are the protective plastic tips, and telomerase is a tip-repair machine in certain cells, while many somatic cells have limited tip restoration."
+    }
+  ]
+}
+    
+    ## Storyboard Requirements
+    
+    ### Content Structure
+    - For key sections (max 3 sections), use up to 5 lecture lines along with their corresponding 5 animations to provide a logically coherent explanation. Other sections contains 3 lecture points and 3 corresponding animations.
+    - In key sections, assets not forbiddened.
+    - Must keep each lecture line brief [NO MORE THAN 10 WORDS FOR ONE LINE].
+    - Animation steps must closely correspond to lecture points.
+    - Do not apply any animation to lecture lines except for changing the color of corresponding line when its related animation is presented.
+
+    ### Visual Design
+    - Colors: Background fixed at #000000, use ligt color for contrast.
+    - IMPORTANT: Provide hexadecimal codes for colors.
+    - Element Labeling: Assign clear colors and labels near all elements (formulas, etc.).
+
+    ### Animation Effects
+    - Basic Animations: Appearance, movement, color changes, fade in/out, scaling.
+    - Emphasis Effects: Flashing, color changes, bolding to highlight key knowledge points.
+
+    ### Constraints
+    - No panels or 3D methods.
+    - Avoid coordinate axes unless absolutely necessary.
+    - Focus animations on visualizing concepts that are difficult to grasp from lecture lines alone.
+    - Ensure that all animations are easy to understand.
+    - Do not involve any external elements (such as SVGs or other assets that require downloading or dependencies).
+
+    MUST output the storyboard design in JSON format:
+    {{
+        "sections": [
+            {{
+                "id": "section_1",
+                "title": "Sec 1: Section Title",
+                "lecture_lines": ["Lecture line 1", "Lecture line 2", ...],
+                "animations": [
+                    "Animation step 1: ...",
+                    "Animation step 2: ...",
+                    ...
+                ]
+            }},
+            ...
+        ]
+    }}
+    

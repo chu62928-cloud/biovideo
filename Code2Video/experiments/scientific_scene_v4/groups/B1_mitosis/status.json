@@ -1,0 +1,31 @@
+{
+  "group": "B1_mitosis",
+  "status": "COMPLETED",
+  "generation_attempted": true,
+  "render_success": true,
+  "science_gate": "REVISE",
+  "ir_science_gate": "REVISE",
+  "video_path": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/groups/B1_mitosis/video.mp4",
+  "unresolved_blockers": [
+    "S1",
+    "S2",
+    "S3"
+  ],
+  "code_sha256": "2d19df844dde1e4c9f8ecbfee732ceae47cd072a2ab265331b8276e51cebdf19",
+  "video_sha256": "846598e9899ed29fa1527e04a61a8c3f47f9cdadd3015f4ba8914c22513a7fca",
+  "repair_attempts": 0,
+  "duration_seconds": 13.0,
+  "video_science_gate": "REVISE",
+  "scientifically_approved": false,
+  "optional_artifacts": {
+    "scene_graph.json": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/groups/B1_mitosis/scene_graph.json",
+    "assembly_states.json": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/groups/B1_mitosis/assembly_states.json",
+    "state_transitions.json": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/groups/B1_mitosis/state_transitions.json",
+    "generated_code.py": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/groups/B1_mitosis/generated_code.py",
+    "rendered_code.py": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/groups/B1_mitosis/rendered_code.py",
+    "geometry_trace.json": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/groups/B1_mitosis/geometry_trace.json",
+    "validation_report.json": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/groups/B1_mitosis/validation_report.json",
+    "video.mp4": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/groups/B1_mitosis/video.mp4",
+    "preview.jpg": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/groups/B1_mitosis/preview.jpg"
+  }
+}

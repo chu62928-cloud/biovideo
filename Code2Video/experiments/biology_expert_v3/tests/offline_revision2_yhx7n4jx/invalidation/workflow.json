@@ -1,0 +1,102 @@
+{
+  "artifacts": {
+    "TOPIC_RESEARCH": {
+      "sha256": "1bce74844a818caf2060b407eeb2bc1a1d5d05401501e8d2eb18dfb5f6ae8087",
+      "owner": "TOPIC_RESEARCH"
+    },
+    "KNOWLEDGE_GATE": {
+      "sha256": "1bce74844a818caf2060b407eeb2bc1a1d5d05401501e8d2eb18dfb5f6ae8087",
+      "owner": "KNOWLEDGE_GATE"
+    },
+    "SCRIPT_GATE": {
+      "sha256": "1bce74844a818caf2060b407eeb2bc1a1d5d05401501e8d2eb18dfb5f6ae8087",
+      "owner": "SCRIPT_GATE"
+    },
+    "CAST_ASSET_GATE": {
+      "sha256": "1bce74844a818caf2060b407eeb2bc1a1d5d05401501e8d2eb18dfb5f6ae8087",
+      "owner": "CAST_ASSET_GATE"
+    },
+    "STORYBOARD_GATE": {
+      "sha256": "1bce74844a818caf2060b407eeb2bc1a1d5d05401501e8d2eb18dfb5f6ae8087",
+      "owner": "STORYBOARD_GATE"
+    },
+    "CODE_GATE": {
+      "sha256": "1bce74844a818caf2060b407eeb2bc1a1d5d05401501e8d2eb18dfb5f6ae8087",
+      "owner": "CODE_GATE"
+    },
+    "RENDER": {
+      "sha256": "1bce74844a818caf2060b407eeb2bc1a1d5d05401501e8d2eb18dfb5f6ae8087",
+      "owner": "RENDER"
+    },
+    "VIDEO_SCIENCE_GATE": {
+      "sha256": "1bce74844a818caf2060b407eeb2bc1a1d5d05401501e8d2eb18dfb5f6ae8087",
+      "owner": "VIDEO_SCIENCE_GATE"
+    },
+    "VISUAL_CRITIC": {
+      "sha256": "1bce74844a818caf2060b407eeb2bc1a1d5d05401501e8d2eb18dfb5f6ae8087",
+      "owner": "VISUAL_CRITIC"
+    },
+    "FINAL_SCIENCE_GATE": {
+      "sha256": "1bce74844a818caf2060b407eeb2bc1a1d5d05401501e8d2eb18dfb5f6ae8087",
+      "owner": "FINAL_SCIENCE_GATE"
+    },
+    "APPROVED": {
+      "sha256": "1bce74844a818caf2060b407eeb2bc1a1d5d05401501e8d2eb18dfb5f6ae8087",
+      "owner": "APPROVED"
+    },
+    "changed_storyboard": {
+      "sha256": "d181d3e6a21cfd0f6b1eb9f7c577715d5dc88f9c4cbc6512d30d3d6f0decbbd1",
+      "owner": "STORYBOARD_GATE"
+    }
+  },
+  "gates": {
+    "TOPIC_RESEARCH": {
+      "status": "PASSED",
+      "input_hash": "9bc249cdb06a2a25b9418bd78d3ff7341acaaea23771b78a6b7ea72a8bf4a979",
+      "review_id": "mock-TOPIC_RESEARCH"
+    },
+    "KNOWLEDGE_GATE": {
+      "status": "PASSED",
+      "input_hash": "5249db8f9548e8badc10c9a7d2c0c79c237c995453a3d22a1ce3879c1e2bc5fe",
+      "review_id": "mock-KNOWLEDGE_GATE"
+    },
+    "SCRIPT_GATE": {
+      "status": "PASSED",
+      "input_hash": "6b947b03e1739f99c7ffef15a5b5fba72fad895c2c577f7201c76a44e5dfb910",
+      "review_id": "mock-SCRIPT_GATE"
+    },
+    "CAST_ASSET_GATE": {
+      "status": "PASSED",
+      "input_hash": "aadab28216d648627bf6408365f1d59ff831a9e8b63aee9b17203b25eab0349a",
+      "review_id": "mock-CAST_ASSET_GATE"
+    },
+    "STORYBOARD_GATE": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "CODE_GATE": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "RENDER": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "VIDEO_SCIENCE_GATE": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "VISUAL_CRITIC": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "FINAL_SCIENCE_GATE": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "APPROVED": {
+      "status": "PENDING",
+      "input_hash": null
+    }
+  }
+}

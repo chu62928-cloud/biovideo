@@ -1,0 +1,30 @@
+{
+  "tag": "centromere_checkpoint_clarity",
+  "committed": true,
+  "before": {
+    "success": true,
+    "tag": "layout_and_relation_followup",
+    "code_sha256": "095607a211f2bb42bb11c099bf5fe6a3c5e7ae2ad64ea967789fcbfa9d9b45ad",
+    "video_sha256": "0eff0e720e2d3e00424ec8756c9d2c7a8333e2dd86466ad0ed641034d4900c2f",
+    "duration_seconds": 12.0,
+    "renderer": "manim-0.19.0-full-render",
+    "trace_sha256": "799b6fcf6eed9623270c07f379d2de7afc2e69875cd7e0104c62d3ccacbac204",
+    "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/M1_mitosis/render/versions/layout_and_relation_followup",
+    "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/M1_mitosis/render/versions/layout_and_relation_followup/rendered_code.py",
+    "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/M1_mitosis/render/versions/layout_and_relation_followup/video.mp4"
+  },
+  "started": 1795510675.0349157,
+  "after": {
+    "success": true,
+    "tag": "centromere_checkpoint_clarity",
+    "code_sha256": "095607a211f2bb42bb11c099bf5fe6a3c5e7ae2ad64ea967789fcbfa9d9b45ad",
+    "video_sha256": "3ac1a0c4dbbcaea4298a7bec4fee92acab29a1999d62823c8bdee3df36071708",
+    "duration_seconds": 12.0,
+    "renderer": "manim-0.19.0-full-render",
+    "trace_sha256": "9cff39e0e65ec253ae5d3d61ebf73ab04a8ae6e11f75e5d9eb159dd15fda4659",
+    "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/M1_mitosis/render/versions/centromere_checkpoint_clarity",
+    "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/M1_mitosis/render/versions/centromere_checkpoint_clarity/rendered_code.py",
+    "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/M1_mitosis/render/versions/centromere_checkpoint_clarity/video.mp4"
+  },
+  "elapsed_seconds": 16.022
+}

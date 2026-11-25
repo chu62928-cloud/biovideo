@@ -1,0 +1,16 @@
+{
+  "git_commit": "637509294e936b231d220bb555cf74eeedcb9dfd",
+  "historical_45_limit_scope": "Old experiment scripts only; provider has no global counter. V2 explicitly authorized independent 8/2/1 budgets.",
+  "limits": {
+    "MAX_DEEPSEEK_CALLS": 8,
+    "MAX_QWEN_CALLS": 2,
+    "MAX_WAN_JOBS": 1,
+    "ENABLE_WAN": 0
+  },
+  "models": {
+    "coder": "deepseek-flash",
+    "critic": "qwen4-max"
+  },
+  "A0_source": "frozen biology_baseline/B2 Section4",
+  "key_source": "server project .env, outside repository; never printed"
+}

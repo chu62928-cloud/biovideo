@@ -1,0 +1,36 @@
+{
+  "id": "49a51052-b557-46d0-a9b3-855c46ff943d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "```python\nfrom biology_runtime import ScientificScene\nfrom manim import *\n\n\nclass Section4Scene(ScientificScene):\n    MODE = \"assembly\"\n\n    def construct(self):\n        self.camera.background_color = \"#0E1116\"\n        self.render_scene(validation_mode=\"assembly\")\n        self.wait(0.5)\n```",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1795503227,
+  "model": "deepseek-flash",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+  "usage": {
+    "completion_tokens": 71,
+    "prompt_tokens": 16320,
+    "total_tokens": 16391,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 16320
+  }
+}

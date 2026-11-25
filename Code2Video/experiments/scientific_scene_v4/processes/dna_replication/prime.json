@@ -1,0 +1,78 @@
+{
+  "process_id": "prime",
+  "purpose": "Primase/Pol alpha initiation abstraction; produce RNA starting point",
+  "input_assembly_types": [],
+  "required_states": [],
+  "preconditions": [
+    {
+      "constraint_id": "phase_opened",
+      "predicate": "state_is",
+      "object_ids": [],
+      "key": "phase",
+      "value": "opened"
+    }
+  ],
+  "actions": [
+    {
+      "operation": "transform_state",
+      "targets": [
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "primase": {
+            "visible": true
+          }
+        }
+      }
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "rna_primer_leading"
+      ],
+      "params": {
+        "visual_updates": {
+          "rna_primer_leading": {
+            "visible": true
+          }
+        }
+      }
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "primase"
+      ],
+      "params": {
+        "visual_updates": {
+          "primase": {
+            "visible": false
+          }
+        }
+      }
+    },
+    {
+      "operation": "transform_state",
+      "targets": [],
+      "params": {
+        "state_updates": {
+          "phase": "primed"
+        }
+      }
+    }
+  ],
+  "postconditions": [
+    {
+      "constraint_id": "phase_primed",
+      "predicate": "state_is",
+      "object_ids": [],
+      "key": "phase",
+      "value": "primed"
+    }
+  ],
+  "invariants": [],
+  "evidence_ids": [
+    "F5"
+  ]
+}

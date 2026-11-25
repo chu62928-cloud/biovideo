@@ -1,0 +1,50 @@
+{
+  "transaction_rejections": [
+    {
+      "group": "A1_mechanism",
+      "tag": "coder_attempt_1",
+      "reason": "Missing actual registered mechanism objects: ['incoming_nucleotide', 'new_lagging_strand']",
+      "log": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/groups/A1_mechanism/coder_attempt_1_transaction.json"
+    },
+    {
+      "group": "A1_mechanism",
+      "tag": "coder_attempt_2",
+      "reason": "Enzyme/active-site geometry violated",
+      "log": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/groups/A1_mechanism/coder_attempt_2_transaction.json"
+    },
+    {
+      "group": "A1_mechanism",
+      "tag": "coder_attempt_3",
+      "reason": "Duration outside requested range",
+      "log": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/groups/A1_mechanism/coder_attempt_3_transaction.json"
+    },
+    {
+      "group": "A2_mechanism_assets",
+      "tag": "checker_fixed_replay_candidate_2",
+      "reason": "Duration outside requested range",
+      "log": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/groups/A2_mechanism_assets/checker_fixed_replay_candidate_2_transaction.json"
+    },
+    {
+      "group": "A2_mechanism_assets",
+      "tag": "coder_attempt_1",
+      "reason": "Full Manim render failed; see stderr.log",
+      "log": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/groups/A2_mechanism_assets/coder_attempt_1_transaction.json"
+    }
+  ],
+  "API_errors": [
+    {
+      "call_id": "qwen_01",
+      "provider": "qwen",
+      "stage": "A3:critic_round_1",
+      "model": "qwen4-max",
+      "status": "error",
+      "started_utc": "2026-11-23T09:59:45Z",
+      "error_type": "APITimeoutError",
+      "http_status": null,
+      "elapsed_seconds": 180.357
+    }
+  ],
+  "interrupted_controller_attempts": [
+    "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/groups/A2_mechanism_assets/attempts/coder_attempt_2"
+  ]
+}

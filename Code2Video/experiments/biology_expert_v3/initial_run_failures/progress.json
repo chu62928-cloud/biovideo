@@ -1,0 +1,329 @@
+{
+  "started": 1795491499.2890716,
+  "status": "COMPLETED_EXPERIMENTS",
+  "dna_research": {
+    "status": "PARTIALLY_VERIFIED",
+    "retrieval_failures": [],
+    "model_synthesis_only": true,
+    "verified_support_count": 7,
+    "total_facts": 8,
+    "limitation": "Verbatim source matching is not semantic entailment. Dedicated cross-verification must precede scientific gate PASS.",
+    "independent_verification": {
+      "facts": [
+        {
+          "fact_id": "F1",
+          "status": "VERIFIED",
+          "reason": "Source passage states eukaryotic replication initiates from many sites called replication origins; organism scope (eukaryotes) and stage (initiation) match. Single publisher.",
+          "evidence_ids": [
+            "PMID_35320688"
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "status": "VERIFIED",
+          "reason": "Passage directly states initiation from origins must be tightly controlled to ensure the entire genome is precisely duplicated each cell cycle. Meaning and scope match.",
+          "evidence_ids": [
+            "PMID_35320688"
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "status": "VERIFIED",
+          "reason": "Passage states control is accomplished via regulation of loading and activation of the replicative DNA helicase. Consistent; note the review focuses on budding yeast, so generalization to all eukaryotes is an extrapolation of framing but the claim as stated is entailed by the source's own statement.",
+          "evidence_ids": [
+            "PMID_35320688"
+          ]
+        },
+        {
+          "fact_id": "F4",
+          "status": "VERIFIED",
+          "reason": "Passage explicitly frames this as a model supported by preponderance of evidence (Pol ε bulk leading-strand at undisturbed fork). The claim correctly preserves the model-level hedge and 'undisturbed fork' qualifier.",
+          "evidence_ids": [
+            "PMID_28301743"
+          ]
+        },
+        {
+          "fact_id": "F5",
+          "status": "VERIFIED",
+          "reason": "Passage states Pol α carries out initiation of Okazaki fragment synthesis. The claim adds 'priming step implied' — the source says 'initiation,' which is equivalent in this context; no ungrounded extension beyond the stated initiation role.",
+          "evidence_ids": [
+            "PMID_28301743"
+          ]
+        },
+        {
+          "fact_id": "F6",
+          "status": "VERIFIED",
+          "reason": "Passage states Pol δ carries out elongation and maturation of Okazaki fragments. Claim matches role assignments directly.",
+          "evidence_ids": [
+            "PMID_28301743"
+          ]
+        },
+        {
+          "fact_id": "F7",
+          "status": "VERIFIED",
+          "reason": "Passage states emphasis on enzymes that synthesize DNA and repair discontinuities on the lagging strand of the replication fork. Entailed at the review's framing level.",
+          "evidence_ids": [
+            "PMID_28301743"
+          ]
+        },
+        {
+          "fact_id": "F8",
+          "status": "VERIFIED",
+          "reason": "Passage explicitly discusses alternative proposals including cellular processes during which alternative forks may be utilized, and biochemical reconstitution studies separately and jointly examining leading/lagging synthesis. Claim accurately paraphrases; classification as 'disputed' is a labeling choice, but the content is entailed. Builder marked CONFLICTED, but no contradicting evidence exists — the source itself reports these as open/discussed proposals, not as resolved conflicts. Status should be VERIFIED (as a statement about the state of the field), not CONFLICTED.",
+          "evidence_ids": [
+            "PMID_28301743"
+          ]
+        }
+      ],
+      "conflicts": []
+    },
+    "semantic_verified_count": 7
+  },
+  "test_B": {
+    "repair_id": "REP-dd947104c24f",
+    "before": {
+      "success": true,
+      "tag": "group_visibility_observer_replay",
+      "code_sha256": "e5f38e4e57705e32e86a8e689e4a4d0b57a2a390322e8c7aeefb9218dab696cf",
+      "video_sha256": "4154b5fef41c8552ea8fe42b06d346a1a3fb2b02888b66db35238b3bd4cb5459",
+      "duration_seconds": 33.466667,
+      "renderer": "manim-0.19.0-full-render",
+      "trace_sha256": "2cdefcd22e4b3f327f783bd7ceb9aea9d00843decea156a0d2f00c79c43be364",
+      "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v3/outputs/REP-dd947104c24f/render/versions/baseline",
+      "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v3/outputs/REP-dd947104c24f/render/versions/baseline/rendered_code.py",
+      "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v3/outputs/REP-dd947104c24f/render/versions/baseline/video.mp4"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "status": "error",
+        "error_type": "IndentationError",
+        "error": "unexpected indent (<unknown>, line 2)"
+      },
+      {
+        "attempt": 2,
+        "status": "error",
+        "error_type": "IndentationError",
+        "error": "unexpected indent (<unknown>, line 2)"
+      }
+    ],
+    "accepted": false,
+    "targeted_direction_fixed": false,
+    "global_science_approved": false,
+    "decision": "NEEDS_HUMAN_REVIEW",
+    "stop_reason": "At most two attempts; no verified release",
+    "rollback_pair_preserved": true,
+    "skill_candidate": {
+      "candidate_path": "/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v3/skill_candidates/fix_bio_direction.yaml",
+      "status": "CANDIDATE_NOT_APPROVED"
+    }
+  },
+  "test_C": {
+    "review_id": "REV-b21f551a6721",
+    "stage": "SCRIPT",
+    "decision": "ERROR",
+    "issues": [],
+    "next_action": "STOP",
+    "artifact_versions": {
+      "samples": "0af6b840ff0ce397a0d6c481039f153322821e063f82c3dfc4d4d4581da18384"
+    },
+    "checks": [
+      {
+        "reason": "Unknown/unverified fact cited by reviewer"
+      }
+    ]
+  },
+  "elapsed_seconds": 121.946,
+  "model_calls": [
+    {
+      "call_id": "v3_01",
+      "provider": "deepseek",
+      "purpose": "knowledge_dna_replication",
+      "status": "ok",
+      "started": 1795491502.3220062,
+      "retries": 0,
+      "requested_model": "deepseek-flash",
+      "usage": {
+        "completion_tokens": 2099,
+        "prompt_tokens": 980,
+        "total_tokens": 3079,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 980
+      },
+      "response_model": "deepseek-flash",
+      "elapsed_seconds": 8.747
+    },
+    {
+      "call_id": "v3_02",
+      "provider": "deepseek",
+      "purpose": "independent_fact_verification_dna_replication",
+      "status": "ok",
+      "started": 1795491511.0827947,
+      "retries": 0,
+      "requested_model": "deepseek-flash",
+      "usage": {
+        "completion_tokens": 693,
+        "prompt_tokens": 3325,
+        "total_tokens": 4018,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 3325
+      },
+      "response_model": "deepseek-flash",
+      "elapsed_seconds": 3.049
+    },
+    {
+      "call_id": "v3_03",
+      "provider": "qwen",
+      "purpose": "science_video_review",
+      "status": "ok",
+      "started": 1795491514.6703312,
+      "retries": 0,
+      "requested_model": "qwen4-max",
+      "usage": {
+        "completion_tokens": 6597,
+        "prompt_tokens": 33745,
+        "total_tokens": 40342,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 3410,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0,
+          "image_tokens": 4643,
+          "video_tokens": 13367,
+          "text_tokens": 15735
+        }
+      },
+      "response_model": "qwen4-max",
+      "elapsed_seconds": 80.103
+    },
+    {
+      "call_id": "v3_04",
+      "provider": "deepseek",
+      "purpose": "scientific_event5_repair",
+      "status": "ok",
+      "started": 1795491594.9018524,
+      "retries": 0,
+      "requested_model": "deepseek-flash",
+      "usage": {
+        "completion_tokens": 311,
+        "prompt_tokens": 7572,
+        "total_tokens": 7883,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 7572
+      },
+      "response_model": "deepseek-flash",
+      "elapsed_seconds": 1.623
+    },
+    {
+      "call_id": "v3_05",
+      "provider": "deepseek",
+      "purpose": "scientific_event5_repair",
+      "status": "ok",
+      "started": 1795491596.530023,
+      "retries": 0,
+      "requested_model": "deepseek-flash",
+      "usage": {
+        "completion_tokens": 297,
+        "prompt_tokens": 7572,
+        "total_tokens": 7869,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 7424
+        },
+        "prompt_cache_hit_tokens": 7424,
+        "prompt_cache_miss_tokens": 148
+      },
+      "response_model": "deepseek-flash",
+      "elapsed_seconds": 1.942
+    },
+    {
+      "call_id": "v3_06",
+      "provider": "deepseek",
+      "purpose": "knowledge_eukaryotic_mitosis",
+      "status": "ok",
+      "started": 1795491602.922902,
+      "retries": 0,
+      "requested_model": "deepseek-flash",
+      "usage": {
+        "completion_tokens": 2689,
+        "prompt_tokens": 4000,
+        "total_tokens": 6689,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 128
+        },
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 3872
+      },
+      "response_model": "deepseek-flash",
+      "elapsed_seconds": 9.774
+    },
+    {
+      "call_id": "v3_07",
+      "provider": "deepseek",
+      "purpose": "independent_fact_verification_eukaryotic_mitosis",
+      "status": "ok",
+      "started": 1795491612.7205172,
+      "retries": 0,
+      "requested_model": "deepseek-flash",
+      "usage": {
+        "completion_tokens": 650,
+        "prompt_tokens": 7254,
+        "total_tokens": 7904,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 128
+        },
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 7126
+      },
+      "response_model": "deepseek-flash",
+      "elapsed_seconds": 3.716
+    },
+    {
+      "call_id": "v3_08",
+      "provider": "deepseek",
+      "purpose": "artifact_review_SCRIPT",
+      "status": "ok",
+      "started": 1795491616.4481823,
+      "retries": 0,
+      "requested_model": "deepseek-flash",
+      "usage": {
+        "completion_tokens": 867,
+        "prompt_tokens": 8772,
+        "total_tokens": 9639,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 8772
+      },
+      "response_model": "deepseek-flash",
+      "elapsed_seconds": 4.783
+    }
+  ]
+}

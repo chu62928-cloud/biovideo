@@ -1,0 +1,62 @@
+{
+  "replication_fork": {
+    "visible_samples": 103,
+    "observed_samples": 103,
+    "minimum_in_frame_bbox_fraction": 1.0
+  },
+  "template_leading": {
+    "visible_samples": 103,
+    "observed_samples": 103,
+    "minimum_in_frame_bbox_fraction": 1.0
+  },
+  "template_lagging": {
+    "visible_samples": 103,
+    "observed_samples": 103,
+    "minimum_in_frame_bbox_fraction": 1.0
+  },
+  "new_leading_strand": {
+    "visible_samples": 68,
+    "observed_samples": 69,
+    "minimum_in_frame_bbox_fraction": 1.0
+  },
+  "new_lagging_strand": {
+    "visible_samples": 50,
+    "observed_samples": 54,
+    "minimum_in_frame_bbox_fraction": 1.0
+  },
+  "primase": {
+    "visible_samples": 6,
+    "observed_samples": 90,
+    "minimum_in_frame_bbox_fraction": 1.0
+  },
+  "rna_primer": {
+    "visible_samples": 86,
+    "observed_samples": 86,
+    "minimum_in_frame_bbox_fraction": 1.0
+  },
+  "dna_polymerase_leading": {
+    "visible_samples": 48,
+    "observed_samples": 69,
+    "minimum_in_frame_bbox_fraction": 1.0
+  },
+  "dna_polymerase_lagging": {
+    "visible_samples": 17,
+    "observed_samples": 51,
+    "minimum_in_frame_bbox_fraction": 1.0
+  },
+  "okazaki_fragment": {
+    "visible_samples": 50,
+    "observed_samples": 51,
+    "minimum_in_frame_bbox_fraction": 1.0
+  },
+  "dna_ligase": {
+    "visible_samples": 4,
+    "observed_samples": 26,
+    "minimum_in_frame_bbox_fraction": 1.0
+  },
+  "incoming_nucleotide": {
+    "visible_samples": 1,
+    "observed_samples": 54,
+    "minimum_in_frame_bbox_fraction": null
+  }
+}

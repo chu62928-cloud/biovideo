@@ -1,0 +1,15 @@
+{
+  "group": "M1_mitosis",
+  "render_success": true,
+  "render_commit": "RENDER_COMMITTED",
+  "science_gate": "REVISE",
+  "video_path": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/M1_mitosis/video.mp4",
+  "scene_hash": "8892aff7d6c8cfe342269659257a0df3839332b22348004e7533903ad61cd95f",
+  "tag": "initial",
+  "video_sha256": "272e2c1deb29d718ea0dfd3de55a5fb3ef889a90e97dd415946ec492cfac9e9a",
+  "code_sha256": "095607a211f2bb42bb11c099bf5fe6a3c5e7ae2ad64ea967789fcbfa9d9b45ad",
+  "trace_sha256": "316fa90f2521d0c23a21e715cd9b846b9343aa5142188ff2d36ce1d2ebc23505",
+  "duration_seconds": 12.0,
+  "ir_review_decision": "REVISE",
+  "video_review_decision": "REVISE"
+}

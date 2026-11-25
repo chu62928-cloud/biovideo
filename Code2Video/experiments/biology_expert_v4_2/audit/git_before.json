@@ -1,0 +1,6 @@
+{
+  "branch": "main",
+  "commit": "637509294e936b231d220bb555cf74eeedcb9dfd",
+  "status": " M .gitignore\n M LICENSE\n M README.md\n M README.zh-CN.md\n M json_files/long_video_ref_mapping.json\n M json_files/long_video_topics_list.json\n M json_files/long_video_topics_list_safe.json\n M json_files/questions_by_topic_10.json\n M json_files/topics_list_safe.json\n M prompts/__init__.py\n M prompts/base_class.py\n M prompts/stage1.py\n M prompts/stage2.py\n M prompts/stage3.py\n M prompts/stage4.py\n M prompts/stage5_eva.py\n M prompts/stage5_unlearning.py\n M src/agent.py\n M src/api_config.json\n M src/eval_AES.py\n M src/eval_TQ.py\n M src/external_assets.py\n M src/gpt_request.py\n M src/requirements.txt\n M src/run_agent.sh\n M src/run_agent_single.sh\n M src/scope_refine.py\n M src/utils.py\n?? AGENTS.md\n?? PROJECT_MEMORY.md\n?? experiments/\n?? src/assets/\n?? src/biology_expert/\n?? src/biology_runtime.py\n?? src/biology_v2_pipeline.py\n?? src/json_files\n?? src/prompts\n?? src/scientific_scene/\n",
+  "date": "2026-11-25 Asia/Shanghai"
+}

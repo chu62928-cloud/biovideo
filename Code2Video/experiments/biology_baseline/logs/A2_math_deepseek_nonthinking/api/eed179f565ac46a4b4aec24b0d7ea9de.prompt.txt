@@ -1,0 +1,91 @@
+ 
+    You are a professional education Explainer and Animator, expert at converting mathematical teaching outlines into storyboard scripts suitable for the Manim animation system.
+
+    ## Task
+    Convert the following teaching outline into a detailed step-by-step storyboard script:
+
+    {
+  "topic": "Linear Transformations and Matrices",
+  "target_audience": "High school students (grades 11-12) with basic algebra knowledge",
+  "sections": [
+    {
+      "id": "section_1",
+      "title": "Introduction: What is a Linear Transformation?",
+      "content": "Define a linear transformation as a function that preserves vector addition and scalar multiplication. Use a simple 2D example with a grid and a vector. Show visually how a linear transformation maps the grid lines to parallel, evenly spaced lines. Emphasize key properties: T(u+v)=T(u)+T(v), T(cv)=cT(v).",
+      "example": "Consider a 2D vector (1,0) and (0,1). Apply transformation T(x,y) = (2x, y) - stretch horizontally. Show original grid and transformed grid."
+    },
+    {
+      "id": "section_2",
+      "title": "From Transformation to Matrix: The Standard Matrix",
+      "content": "Explain that any linear transformation from R^n to R^m can be represented by an m×n matrix. The columns of the matrix are the images of the standard basis vectors. Show how to construct the matrix for a given transformation.",
+      "example": "For T(x,y) = (2x+y, x-3y), find the matrix by applying T to e1=(1,0) and e2=(0,1): T(e1)=(2,1), T(e2)=(1,-3). So matrix A = [[2,1],[1,-3]]."
+    },
+    {
+      "id": "section_3",
+      "title": "Matrix-Vector Multiplication: Applying the Transformation",
+      "content": "Show how multiplying a matrix by a vector performs the transformation. Use animated visual: vector as arrow, matrix multiplication as linear combination of columns. Connect to the definition: Av = v1*col1 + v2*col2.",
+      "example": "Using A = [[2,1],[1,-3]] and v=(3,2), compute Av = 3*(2,1) + 2*(1,-3) = (6,3)+(2,-6)=(8,-3). Show original vector (3,2) and transformed vector (8,-3) on grid."
+    },
+    {
+      "id": "section_4",
+      "title": "Geometric Interpretation: Seeing Linear Transformations",
+      "content": "Visualize common 2D transformations: scaling, rotation, shear, reflection. Show how each corresponds to a specific matrix. Use animations to morph a shape (e.g., a cat silhouette) under these transformations.",
+      "example": "Rotation by 90°: matrix [[0,-1],[1,0]]. Show a cat image rotated. Shear: matrix [[1,1],[0,1]] - show cat sheared horizontally."
+    },
+    {
+      "id": "section_5",
+      "title": "Composition and Matrix Multiplication",
+      "content": "Explain that applying one transformation after another corresponds to multiplying their matrices. Emphasize order matters. Show composition of two transformations (e.g., rotate then scale) and the resulting matrix.",
+      "example": "Let T1 be rotation 90°: A1=[[0,-1],[1,0]], T2 be scaling by 2: A2=[[2,0],[0,2]]. Composition T2∘T1 has matrix A2*A1 = [[0,-2],[2,0]]. Apply to vector (1,0): first T1 gives (0,1), then T2 gives (0,2). Matrix multiplication gives same."
+    },
+    {
+      "id": "section_6",
+      "title": "Summary and Key Takeaways",
+      "content": "Recap: linear transformations preserve vector operations, can be represented by matrices, matrix multiplication composes transformations. Emphasize the visual connection between algebra and geometry.",
+      "example": "Show a quick animation of a shape undergoing a sequence of transformations, with matrices displayed alongside, reinforcing the link."
+    }
+  ]
+}
+    
+    ## Storyboard Requirements
+    
+    ### Content Structure
+    - For key sections (max 3 sections), use up to 5 lecture lines along with their corresponding 5 animations to provide a logically coherent explanation. Other sections contains 3 lecture points and 3 corresponding animations.
+    - In key sections, assets not forbiddened.
+    - Must keep each lecture line brief [NO MORE THAN 10 WORDS FOR ONE LINE].
+    - Animation steps must closely correspond to lecture points.
+    - Do not apply any animation to lecture lines except for changing the color of corresponding line when its related animation is presented.
+
+    ### Visual Design
+    - Colors: Background fixed at #000000, use ligt color for contrast.
+    - IMPORTANT: Provide hexadecimal codes for colors.
+    - Element Labeling: Assign clear colors and labels near all elements (formulas, etc.).
+
+    ### Animation Effects
+    - Basic Animations: Appearance, movement, color changes, fade in/out, scaling.
+    - Emphasis Effects: Flashing, color changes, bolding to highlight key knowledge points.
+
+    ### Constraints
+    - No panels or 3D methods.
+    - Avoid coordinate axes unless absolutely necessary.
+    - Focus animations on visualizing concepts that are difficult to grasp from lecture lines alone.
+    - Ensure that all animations are easy to understand.
+    - Do not involve any external elements (such as SVGs or other assets that require downloading or dependencies).
+
+    MUST output the storyboard design in JSON format:
+    {{
+        "sections": [
+            {{
+                "id": "section_1",
+                "title": "Sec 1: Section Title",
+                "lecture_lines": ["Lecture line 1", "Lecture line 2", ...],
+                "animations": [
+                    "Animation step 1: ...",
+                    "Animation step 2: ...",
+                    ...
+                ]
+            }},
+            ...
+        ]
+    }}
+    

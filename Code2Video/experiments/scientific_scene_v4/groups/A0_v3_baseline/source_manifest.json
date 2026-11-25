@@ -1,0 +1,8 @@
+{
+  "code_path": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v3/outputs/REP-dd947104c24f/render/attempts/scientific_attempt_2_format_replay/rendered_code.py",
+  "video_path": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v3/outputs/REP-dd947104c24f/render/attempts/scientific_attempt_2_format_replay/media/videos/rendered_code/480p15/Section4Scene.mp4",
+  "code_sha256": "8b5fce53cb5168f3d0e2861b98908f5f70d06c31235147622038347519c99d60",
+  "video_sha256": "86323f84d487bd65cff273bafbe9ffcdf70189cbe2d8236408b51cc9f65083c7",
+  "reference_only": true,
+  "rerendered": false
+}

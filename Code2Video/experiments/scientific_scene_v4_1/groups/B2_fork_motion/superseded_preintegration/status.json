@@ -1,0 +1,13 @@
+{
+  "group": "B2_fork_motion",
+  "render_success": true,
+  "render_commit": "RENDER_COMMITTED",
+  "science_gate": "NEEDS_HUMAN_REVIEW",
+  "video_path": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/B2_fork_motion/video.mp4",
+  "scene_hash": "0b2fecada0e34c06fae1e52c6d48ab4952dedaf6973328ec3b6a45041e52cb3c",
+  "tag": "initial",
+  "video_sha256": "ffc24060252085339437d108168567d789611d3495cc171bd94aaa097fc566b6",
+  "code_sha256": "095607a211f2bb42bb11c099bf5fe6a3c5e7ae2ad64ea967789fcbfa9d9b45ad",
+  "trace_sha256": "ff427100966da1d39f226c44d365647f48367e544801eaec888d4d136390e875",
+  "duration_seconds": 12.4
+}

@@ -1,0 +1,32 @@
+{
+  "label": "B_dna_deepseek",
+  "topic": "DNA replication in eukaryotic cells",
+  "output_dir": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B_dna_deepseek/0-DNA_replication_in_eukaryotic_cells",
+  "requested_model": "deepseek-flash",
+  "critic": false,
+  "assets": false,
+  "start_utc": "2026-11-23T03:50:57Z",
+  "status": "failed",
+  "error_type": "ValueError",
+  "error": "DeepSeek response truncated at token limit",
+  "elapsed_seconds": 54.863,
+  "api_attempts": 2,
+  "api_retries": 0,
+  "usage": {
+    "prompt_tokens": 1716,
+    "completion_tokens": 12378,
+    "total_tokens": 14094
+  },
+  "models": [
+    "deepseek-flash"
+  ],
+  "render_attempts": 0,
+  "render_attempt_successes": 0,
+  "render_retries": 0,
+  "render_success_rate": null,
+  "stages": {
+    "B_dna_deepseek:planner_outline": 1,
+    "B_dna_deepseek:planner_storyboard": 1
+  },
+  "segments": []
+}

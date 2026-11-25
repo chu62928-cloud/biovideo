@@ -1,0 +1,42 @@
+[
+  {
+    "conflict_id": "CONFLICT_polarity-template-labels-fragment2",
+    "rule_id": "DNA_STRAND_POLARITY",
+    "deterministic_result": "PASS",
+    "llm_result": "FAIL",
+    "status": "REVIEWER_FALSE_POSITIVE",
+    "reason": "Lagging nascent strand geometry contradicts the displayed template polarity. template_lagging endpoint_labels run start=5' -> end=3', and its 5' side is the left open region (constraint polarity_basis template_5prime_side=left). New DNA is synthesized 5'->3', so along the lagging branch the growing 3' end advances toward the left (toward the fork/origin of the segment already synthesized). fragment_2 starts at x=1.1 with 5' start and grows toward the left: extend events move its end from 1.08 to 0.25, -0.175, -0.60 — correct direction — BUT the attached primer rna_primer_lagging_2 sits at [1.1..1.7], i.e. to the RIGHT of fragment_2's 5' start. In a correct lagging diagram the primer occupies the 5' side of the nascent piece relative to the template's 3' (telomere-proximal) side... more concretely here the primer at x=1.1-1.7 is upstream on the 5' side while the template 3' side is right; the newly synthesized DNA extends leftward away from the primer, which is fine, but the physical adjacency labeling implies synthesis proceeds from the primer leftward, i.e. away from the fork, while the fork/'open region' is on the left. The primer is placed on the wrong side of the fork for that template cassette: for template_lagging with 5' left/3' right, a primase product laid down at the opened-left region should be left of previously synthesized DNA so that Pol extends rightward. Instead primer_lagging_1 at [-1.2..-0.6] is left of fragment_1 [-1.2 -> -3.5 growing left], meaning Pol delta on fragment_1 synthesizes LEFT away from its primer at -1.2. This makes the lagging strand extend in the same physical direction as the leading strand-of-approach for that template branch, i.e. wrong local path relative to the displayed 5' template end.",
+    "repair_allowed": false,
+    "resolution": "Scoped polarity claim contradicted by source-bound local-path evidence and positive/negative/rotation tests. Other issues retained.",
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "scene_sha256": "d29152b820ac288c330540e2da8c9da8a0cf1283ea6cc5dad5016246dedf3e95",
+    "original_issue": {
+      "issue_id": "polarity-template-labels-fragment2",
+      "severity": "blocker",
+      "description": "Lagging nascent strand geometry contradicts the displayed template polarity. template_lagging endpoint_labels run start=5' -> end=3', and its 5' side is the left open region (constraint polarity_basis template_5prime_side=left). New DNA is synthesized 5'->3', so along the lagging branch the growing 3' end advances toward the left (toward the fork/origin of the segment already synthesized). fragment_2 starts at x=1.1 with 5' start and grows toward the left: extend events move its end from 1.08 to 0.25, -0.175, -0.60 — correct direction — BUT the attached primer rna_primer_lagging_2 sits at [1.1..1.7], i.e. to the RIGHT of fragment_2's 5' start. In a correct lagging diagram the primer occupies the 5' side of the nascent piece relative to the template's 3' (telomere-proximal) side... more concretely here the primer at x=1.1-1.7 is upstream on the 5' side while the template 3' side is right; the newly synthesized DNA extends leftward away from the primer, which is fine, but the physical adjacency labeling implies synthesis proceeds from the primer leftward, i.e. away from the fork, while the fork/'open region' is on the left. The primer is placed on the wrong side of the fork for that template cassette: for template_lagging with 5' left/3' right, a primase product laid down at the opened-left region should be left of previously synthesized DNA so that Pol extends rightward. Instead primer_lagging_1 at [-1.2..-0.6] is left of fragment_1 [-1.2 -> -3.5 growing left], meaning Pol delta on fragment_1 synthesizes LEFT away from its primer at -1.2. This makes the lagging strand extend in the same physical direction as the leading strand-of-approach for that template branch, i.e. wrong local path relative to the displayed 5' template end.",
+      "root_cause_stage": "SCENE_IR",
+      "target_objects": [
+        "template_lagging",
+        "fragment_1",
+        "fragment_2",
+        "rna_primer_lagging_1",
+        "rna_primer_lagging_2",
+        "polymerase_lagging"
+      ],
+      "target_events": [
+        "event_4_two_modes"
+      ],
+      "repair_scope": "Rule DNA_STRAND_POLARITY. With template_lagging labeled 5'(left)->3'(right), the lagging nascent piece reading 5'->3' must have its 5' primer end on the RIGHT (3'-template side) and its 3' growing end advancing toward the LEFT toward the fork. Reposition each primer at the right end of its fragment (e.g. fragment_2 primer at ~x=1.1 with DNA extending leftward is acceptable; fragment_1 primer must be at fragment_1's right/5' end, currently at x=-1.2 while it extends to -3.5 — this is already consistent for fragment_1). The blocking inconsistency is primer_lagging_2 at [1.1..1.7] plus fragment_2 extending leftward from 1.1 to -0.6: primer overlaps fragment_2's 5' start at x=1.1 fine, but then gap_fill is then called to fill between fragment_2 end (-0.6) and fragment_1 start (-1.2) — check that gap_fill grows leftward from -0.6 to -1.2 (it does, -0.6->-1.2), which is correct. So restrict repair: ensure each lagging fragment's 5' primer abuts its 5' end and its 3' growing end is the one nearer the fork. Verify fragments do not overlap and that primer/Pol delta active sites sit at the 3' growing end, not at the 5' primer end.",
+      "acceptance_criteria": [
+        "For template_lagging with start=5' at left and end=3' at right, every nascent lagging object's 5' start is its rightmost point adjacent to its RNA primer, and its 3' end (growth_port) advances leftward toward the fork junction while elongating.",
+        "No Pol delta active_site is attached to a 5' primer end; attach uses target_anchor=end (3' growing end).",
+        "fragment_1, fragment_2 and gap_fill tile contiguously left-to-right with non-overlapping spans, and gap_fill spans exactly the nick between fragment_2 end and fragment_1 start."
+      ],
+      "rule_id": "DNA_STRAND_POLARITY"
+    },
+    "calibration_sha256": "e5ba780da5206b4d4872af248e573f78e8e2510ad277889c414b726ecd1cf290"
+  }
+]

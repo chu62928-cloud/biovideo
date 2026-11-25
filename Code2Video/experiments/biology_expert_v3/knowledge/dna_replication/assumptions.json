@@ -1,0 +1,6 @@
+[
+  "The retrieved passages are review abstracts; mechanism statements are summaries of evidence reviewed elsewhere, not primary measurements in the supplied text.",
+  "Both evidence items come from the same publisher (Annual Review of Biochemistry), so cross-source independence is not established.",
+  "Budding-yeast proteins are emphasized in PMID_35320688; generalization to all eukaryotes is an assumption of the review's framing, not directly verified in the passage.",
+  "The review's statement about Pol ε is explicitly model-level ('preponderance of evidence supports a model'), so it should be taught as the current leading model, not as an exceptionless fact."
+]

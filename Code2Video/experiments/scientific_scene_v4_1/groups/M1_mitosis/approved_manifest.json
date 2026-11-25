@@ -1,0 +1,26 @@
+{
+  "group": "M1_mitosis",
+  "render_success": true,
+  "render_commit": "RENDER_COMMITTED",
+  "science_gate": "SCIENCE_APPROVED",
+  "video_path": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/M1_mitosis/video.mp4",
+  "scene_hash": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+  "tag": "centromere_checkpoint_clarity",
+  "video_sha256": "3ac1a0c4dbbcaea4298a7bec4fee92acab29a1999d62823c8bdee3df36071708",
+  "code_sha256": "095607a211f2bb42bb11c099bf5fe6a3c5e7ae2ad64ea967789fcbfa9d9b45ad",
+  "trace_sha256": "9cff39e0e65ec253ae5d3d61ebf73ab04a8ae6e11f75e5d9eb159dd15fda4659",
+  "duration_seconds": 12.0,
+  "ir_review_decision": "PASS",
+  "video_review_decision": "PASS",
+  "repair_approved": true,
+  "approval_evidence": {
+    "scene_hash": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9",
+    "video_sha256": "3ac1a0c4dbbcaea4298a7bec4fee92acab29a1999d62823c8bdee3df36071708",
+    "code_sha256": "095607a211f2bb42bb11c099bf5fe6a3c5e7ae2ad64ea967789fcbfa9d9b45ad",
+    "ir_review_id": "V4-IR-b9ccba02c1",
+    "video_review_id": "V4-VIDEO-c73bcbc8c8",
+    "unresolved_critical_ir": [],
+    "deterministic_all_pass": true,
+    "conflicts": []
+  }
+}

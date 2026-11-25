@@ -1,0 +1,114 @@
+[
+  {
+    "round": 1,
+    "success": true,
+    "tag": "critic_round_1",
+    "code_sha256": "ccf29ac84806caf4b8d200bef1a8dd8dbc425f8fb5dd946adabf541a39e0e99a",
+    "video_sha256": "d050830a143dc6f9c98862cbb7276d67e0eec58bf178e40e29051f88df0fec2a",
+    "duration_seconds": 33.466667,
+    "renderer": "manim-0.19.0-full-render",
+    "trace_sha256": "9341706551aa31aab5f776f8f051a52971f25dd5363362e18e2f67f3db993a4d",
+    "width": 854,
+    "height": 480,
+    "frame_rate": "15/1",
+    "full_decode_pass": true,
+    "bindings_violations": 0,
+    "out_of_frame": 0,
+    "group_bbox_label_overlap_samples": 336,
+    "label_pair_samples_excluding_composite_bbox": 0,
+    "note": "Composite label bounding box creates false positives; label-line overlap still visually observed and NOT captured by label-label heuristic.",
+    "at_16sec": {
+      "dna_polymerase_leading_label": [
+        4.8999999999999995,
+        0.02283854166666667,
+        0.0
+      ],
+      "new_leading_3prime": [
+        5.12,
+        1.31,
+        0.0
+      ],
+      "rna_primer_lead_3prime": [
+        -0.42999999999999994,
+        1.31,
+        0.0
+      ]
+    },
+    "ligase_first_visible": {
+      "time": 29.866666666666582,
+      "center": [
+        3.0,
+        -1.58,
+        0.0
+      ],
+      "bbox": [
+        [
+          2.75,
+          -1.8675000000000002,
+          -3.5208595475486407e-17
+        ],
+        [
+          3.25,
+          -1.2925,
+          3.5208595475486407e-17
+        ]
+      ]
+    }
+  },
+  {
+    "round": 2,
+    "success": true,
+    "tag": "critic_round_2",
+    "code_sha256": "c59c6960dfd94004ca4b063a92eee881577af6aca48ad76112a4d1df4c4b3e3d",
+    "video_sha256": "b67043cfabdb71d27aebdd5e31cd73644117419ebeecfb68d97f82bfe7b3cb0a",
+    "duration_seconds": 33.466667,
+    "renderer": "manim-0.19.0-full-render",
+    "trace_sha256": "123db3b05fd72e989b407b8235e9aa4100e23511ad0dbd1fa892b3181eaf33dc",
+    "width": 854,
+    "height": 480,
+    "frame_rate": "15/1",
+    "full_decode_pass": true,
+    "bindings_violations": 0,
+    "out_of_frame": 0,
+    "group_bbox_label_overlap_samples": 337,
+    "label_pair_samples_excluding_composite_bbox": 0,
+    "note": "Composite label bounding box creates false positives; label-line overlap still visually observed and NOT captured by label-label heuristic.",
+    "at_16sec": {
+      "dna_polymerase_leading_label": [
+        4.8999999999999995,
+        -0.007161458333333329,
+        0.0
+      ],
+      "new_leading_3prime": [
+        5.12,
+        0.73,
+        0.0
+      ],
+      "rna_primer_lead_3prime": [
+        -0.42999999999999994,
+        1.31,
+        0.0
+      ]
+    },
+    "ligase_first_visible": {
+      "time": 29.866666666666582,
+      "center": [
+        2.65,
+        -1.35,
+        0.0
+      ],
+      "bbox": [
+        [
+          2.4,
+          -1.6375000000000002,
+          -3.5208595475486407e-17
+        ],
+        [
+          2.9,
+          -1.0625,
+          3.5208595475486407e-17
+        ]
+      ]
+    }
+  }
+]

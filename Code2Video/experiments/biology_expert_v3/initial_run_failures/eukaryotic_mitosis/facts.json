@@ -1,0 +1,271 @@
+[
+  {
+    "fact_id": "F1",
+    "claim": "During S phase of interphase, DNA replication produces two identical sister chromatids per chromosome, firmly attached at the centromeric region.",
+    "scope": "Eukaryotic cells; S phase of interphase",
+    "classification": "established",
+    "evidence_ids": [
+      "E_70c6108994",
+      "E_d79c940d49"
+    ],
+    "support": [
+      {
+        "evidence_id": "E_70c6108994",
+        "quote": "In the S phase , DNA replication can proceed through the mechanisms that result in the formation of identical pairs of DNA molecules—sister chromatids—that are firmly attached at the centromeric region."
+      },
+      {
+        "evidence_id": "E_d79c940d49",
+        "quote": "In the S phase (synthesis phase), DNA replication results in the formation of two identical copies of each chromosome—sister chromatids—that are firmly attached at the centromere region."
+      }
+    ],
+    "verification": "INSUFFICIENT_EVIDENCE",
+    "verification_detail": {
+      "support_spans_match": false,
+      "matched_evidence_ids": [],
+      "independent_publishers": 0,
+      "reasons": [
+        "Supporting quote not found verbatim",
+        "Supporting quote not found verbatim"
+      ],
+      "entailment_status": "MODEL_PROPOSED_NOT_INDEPENDENTLY_CONFIRMED",
+      "meaning": "VERIFIED here means retrieved support+scope proposed by builder, not independent expert fact approval"
+    },
+    "semantic_verification": "INSUFFICIENT_EVIDENCE",
+    "semantic_reason": "Both OpenStax passages directly state S-phase DNA replication yields identical sister chromatids firmly attached at the centromeric/centromere region; organism scope (eukaryotic, S phase) matches. Two pages same publisher, so treated as one source, not independent cross-validation."
+  },
+  {
+    "fact_id": "F2",
+    "claim": "Centrosome duplication begins during S phase and is completed in G2; the two centrosomes give rise to the mitotic spindle.",
+    "scope": "Eukaryotic cells; animal cells with centrosomes; S and G2 phases",
+    "classification": "established",
+    "evidence_ids": [
+      "E_70c6108994",
+      "E_d79c940d49"
+    ],
+    "support": [
+      {
+        "evidence_id": "E_70c6108994",
+        "quote": "The centrosome is also duplicated during the S phase. The two centrosomes will give rise to the mitotic spindle"
+      },
+      {
+        "evidence_id": "E_d79c940d49",
+        "quote": "The duplication of the centrosomes is completed."
+      }
+    ],
+    "verification": "VERIFIED",
+    "verification_detail": {
+      "support_spans_match": true,
+      "matched_evidence_ids": [
+        "E_70c6108994",
+        "E_d79c940d49"
+      ],
+      "independent_publishers": 1,
+      "reasons": [],
+      "entailment_status": "MODEL_PROPOSED_NOT_INDEPENDENTLY_CONFIRMED",
+      "meaning": "VERIFIED here means retrieved support+scope proposed by builder, not independent expert fact approval"
+    },
+    "semantic_verification": "VERIFIED",
+    "semantic_reason": "E_70c6108994 says centrosome duplicated during S phase and two centrosomes give rise to mitotic spindle; E_d79c940d49 says centrosome duplication completed in G2. Combined supports 'begins S, completes G2.' Same publisher; animal-centrosome caveat is scoped correctly."
+  },
+  {
+    "fact_id": "F3",
+    "claim": "The mitotic phase consists of nuclear division (mitosis/karyokinesis), proceeding through prophase, prometaphase, metaphase, anaphase, and telophase, followed by cytokinesis.",
+    "scope": "Eukaryotic cells; mitotic phase",
+    "classification": "established",
+    "evidence_ids": [
+      "E_70c6108994",
+      "E_d79c940d49"
+    ],
+    "support": [
+      {
+        "evidence_id": "E_70c6108994",
+        "quote": "Karyokinesis, also known as mitosis , is divided into a series of phases—prophase, prometaphase, metaphase, anaphase, and telophase—that result in the division of the cell nucleus"
+      },
+      {
+        "evidence_id": "E_d79c940d49",
+        "quote": "The first portion of the mitotic phase, mitosis , is composed of five stages, which accomplish nuclear division. The second portion of the mitotic phase, called cytokinesis, is the physical separation of the cytoplasmic components into two daughter cells."
+      }
+    ],
+    "verification": "INSUFFICIENT_EVIDENCE",
+    "verification_detail": {
+      "support_spans_match": true,
+      "matched_evidence_ids": [
+        "E_d79c940d49"
+      ],
+      "independent_publishers": 1,
+      "reasons": [
+        "Supporting quote not found verbatim"
+      ],
+      "entailment_status": "MODEL_PROPOSED_NOT_INDEPENDENTLY_CONFIRMED",
+      "meaning": "VERIFIED here means retrieved support+scope proposed by builder, not independent expert fact approval"
+    },
+    "semantic_verification": "INSUFFICIENT_EVIDENCE",
+    "semantic_reason": "Sources state karyokinesis/mitosis proceeds through prophase, prometaphase, metaphase, anaphase, telophase (nuclear division), followed by cytokinesis as second portion. Scope and ordering match; same publisher only."
+  },
+  {
+    "fact_id": "F4",
+    "claim": "In prometaphase, the nuclear envelope fragments further, chromosomes condense into discrete structures, and kinetochores at centromeres bind spindle microtubules; sister chromatid kinetochores face opposite poles.",
+    "scope": "Eukaryotic cells; prometaphase",
+    "classification": "established",
+    "evidence_ids": [
+      "E_70c6108994"
+    ],
+    "support": [
+      {
+        "evidence_id": "E_70c6108994",
+        "quote": "The remnants of the nuclear envelope fragment further, and the mitotic spindle continues to develop as more microtubules assemble and stretch across the length of the former nuclear area."
+      },
+      {
+        "evidence_id": "E_70c6108994",
+        "quote": "Each sister chromatid develops a protein structure called a kinetochore in its centromeric region"
+      },
+      {
+        "evidence_id": "E_70c6108994",
+        "quote": "the chromosome will be oriented until the kinetochores of sister chromatids face the opposite poles"
+      }
+    ],
+    "verification": "VERIFIED",
+    "verification_detail": {
+      "support_spans_match": true,
+      "matched_evidence_ids": [
+        "E_70c6108994"
+      ],
+      "independent_publishers": 1,
+      "reasons": [],
+      "entailment_status": "MODEL_PROPOSED_NOT_INDEPENDENTLY_CONFIRMED",
+      "meaning": "VERIFIED here means retrieved support+scope proposed by builder, not independent expert fact approval"
+    },
+    "semantic_verification": "VERIFIED",
+    "semantic_reason": "Prometaphase passage supports nuclear envelope fragmentation, chromosome condensation into discrete structures, kinetochore formation at centromeric region, and sister kinetochores orienting to opposite poles. All claims entailed within prometaphase scope."
+  },
+  {
+    "fact_id": "F5",
+    "claim": "The spindle checkpoint near the end of metaphase ensures all sister chromatids are attached to spindle microtubules from opposite poles before anaphase separation proceeds.",
+    "scope": "Eukaryotic cells; metaphase-to-anaphase transition",
+    "classification": "established",
+    "evidence_ids": [
+      "E_d79c940d49"
+    ],
+    "support": [
+      {
+        "evidence_id": "E_d79c940d49",
+        "quote": "The M checkpoint occurs near the end of the metaphase stage of mitosis. The M checkpoint is also known as the spindle checkpoint because it determines if all the sister chromatids are correctly attached to the spindle microtubules."
+      },
+      {
+        "evidence_id": "E_d79c940d49",
+        "quote": "the cycle will not proceed until the kinetochores of each pair of sister chromatids are firmly anchored to spindle fibers arising from opposite poles of the cell."
+      }
+    ],
+    "verification": "VERIFIED",
+    "verification_detail": {
+      "support_spans_match": true,
+      "matched_evidence_ids": [
+        "E_d79c940d49"
+      ],
+      "independent_publishers": 1,
+      "reasons": [],
+      "entailment_status": "MODEL_PROPOSED_NOT_INDEPENDENTLY_CONFIRMED",
+      "meaning": "VERIFIED here means retrieved support+scope proposed by builder, not independent expert fact approval"
+    },
+    "semantic_verification": "VERIFIED",
+    "semantic_reason": "Passage explicitly places M/spindle checkpoint near end of metaphase, checking sister chromatid attachment to spindle microtubules, and states cycle will not proceed until kinetochores are anchored to fibers from opposite poles. Entailed."
+  },
+  {
+    "fact_id": "F6",
+    "claim": "In telophase, chromosomes reach opposite poles and decondense, mitotic spindles break down, and nuclear envelopes reform around chromosomes.",
+    "scope": "Eukaryotic cells; telophase",
+    "classification": "established",
+    "evidence_ids": [
+      "E_d79c940d49"
+    ],
+    "support": [
+      {
+        "evidence_id": "E_d79c940d49",
+        "quote": "During telophase , all of the events that set up the duplicated chromosomes for mitosis during the first three phases are reversed. The chromosomes reach the opposite poles and begin to decondense (unravel)."
+      },
+      {
+        "evidence_id": "E_d79c940d49",
+        "quote": "The mitotic spindles are broken down into monomers that will be used to assemble cytoskeleton components for each daughter cell. Nuclear envelopes form around chromosomes."
+      }
+    ],
+    "verification": "VERIFIED",
+    "verification_detail": {
+      "support_spans_match": true,
+      "matched_evidence_ids": [
+        "E_d79c940d49"
+      ],
+      "independent_publishers": 1,
+      "reasons": [],
+      "entailment_status": "MODEL_PROPOSED_NOT_INDEPENDENTLY_CONFIRMED",
+      "meaning": "VERIFIED here means retrieved support+scope proposed by builder, not independent expert fact approval"
+    },
+    "semantic_verification": "VERIFIED",
+    "semantic_reason": "Telophase passage states chromosomes reach opposite poles and decondense, mitotic spindles break down, and nuclear envelopes form around chromosomes. Directly entailed."
+  },
+  {
+    "fact_id": "F7",
+    "claim": "Cytokinesis physically separates cytoplasmic components into two daughter cells and can be viewed as a separate process; mitosis can occur without cytokinesis, producing multinucleate cells.",
+    "scope": "Eukaryotic cells; cytokinesis; exceptions noted",
+    "classification": "established",
+    "evidence_ids": [
+      "E_70c6108994",
+      "E_d79c940d49"
+    ],
+    "support": [
+      {
+        "evidence_id": "E_70c6108994",
+        "quote": "interphase and mitosis (karyokinesis) may take place without cytokinesis, in which case cells with multiple nuclei (multinucleate cells) are produced."
+      },
+      {
+        "evidence_id": "E_d79c940d49",
+        "quote": "Cytokinesis is the second part of the mitotic phase during which cell division is completed by the physical separation of the cytoplasmic components into two daughter cells."
+      }
+    ],
+    "verification": "VERIFIED",
+    "verification_detail": {
+      "support_spans_match": true,
+      "matched_evidence_ids": [
+        "E_70c6108994",
+        "E_d79c940d49"
+      ],
+      "independent_publishers": 1,
+      "reasons": [],
+      "entailment_status": "MODEL_PROPOSED_NOT_INDEPENDENTLY_CONFIRMED",
+      "meaning": "VERIFIED here means retrieved support+scope proposed by builder, not independent expert fact approval"
+    },
+    "semantic_verification": "VERIFIED",
+    "semantic_reason": "One passage states cytokinesis physically separates cytoplasmic components into two daughter cells; another explicitly says interphase and mitosis can occur without cytokinesis producing multinucleate cells. Both parts supported. Same publisher."
+  },
+  {
+    "fact_id": "F8",
+    "claim": "The mitotic spindle is a bipolar microtubule-based machine with associated proteins and motor enzymes that organizes duplicated chromosomes and separates them into two sets.",
+    "scope": "Eukaryotic cells; mitotic spindle",
+    "classification": "established",
+    "evidence_ids": [
+      "PMID_27587616"
+    ],
+    "support": [
+      {
+        "evidence_id": "PMID_27587616",
+        "quote": "All eukaryotic cells prepare for cell division by forming a \"mitotic spindle\"-a bipolar machine made from microtubules (MTs) and many associated proteins."
+      },
+      {
+        "evidence_id": "PMID_27587616",
+        "quote": "Both formation and function of the spindle require controlled MT dynamics, as well as the actions of multiple motor enzymes. Spindle-driven motions separate the duplicated chromosomes into two distinct sets"
+      }
+    ],
+    "verification": "VERIFIED",
+    "verification_detail": {
+      "support_spans_match": true,
+      "matched_evidence_ids": [
+        "PMID_27587616"
+      ],
+      "independent_publishers": 1,
+      "reasons": [],
+      "entailment_status": "MODEL_PROPOSED_NOT_INDEPENDENTLY_CONFIRMED",
+      "meaning": "VERIFIED here means retrieved support+scope proposed by builder, not independent expert fact approval"
+    },
+    "semantic_verification": "VERIFIED",
+    "semantic_reason": "PMID_27587616 abstract describes mitotic spindle as bipolar machine of microtubules plus associated proteins, requiring motor enzymes, separating duplicated chromosomes into two distinct sets. Scope (eukaryotic) matches; independent publisher adds cross-validation not from OpenStax."
+  }
+]

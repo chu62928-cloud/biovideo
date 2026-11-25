@@ -1,0 +1,71 @@
+{
+  "group": "M1_mitosis",
+  "render_success": true,
+  "render_commit": "RENDER_COMMITTED",
+  "science_gate": "REVISE",
+  "video_path": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/M1_mitosis/video.mp4",
+  "scene_hash": "dc9a56a9074544e372e946c48d03626c58b86b2ebf30bb545ed274de3b6c49de",
+  "tag": "layout_and_relation_followup",
+  "video_sha256": "0eff0e720e2d3e00424ec8756c9d2c7a8333e2dd86466ad0ed641034d4900c2f",
+  "code_sha256": "095607a211f2bb42bb11c099bf5fe6a3c5e7ae2ad64ea967789fcbfa9d9b45ad",
+  "trace_sha256": "799b6fcf6eed9623270c07f379d2de7afc2e69875cd7e0104c62d3ccacbac204",
+  "duration_seconds": 12.0,
+  "ir_review_decision": "REVISE",
+  "video_review_decision": "PASS",
+  "engineering_followup": true,
+  "previous_reviews_not_reused": true,
+  "repair_approved": false,
+  "approval_evidence": {
+    "scene_hash": "dc9a56a9074544e372e946c48d03626c58b86b2ebf30bb545ed274de3b6c49de",
+    "video_sha256": "0eff0e720e2d3e00424ec8756c9d2c7a8333e2dd86466ad0ed641034d4900c2f",
+    "code_sha256": "095607a211f2bb42bb11c099bf5fe6a3c5e7ae2ad64ea967789fcbfa9d9b45ad",
+    "ir_review_id": "V4-IR-91a14ab490",
+    "video_review_id": "V4-VIDEO-55f30db0ec",
+    "unresolved_critical_ir": [
+      {
+        "issue_id": "centromere_kinetochore_label",
+        "severity": "major",
+        "description": "The kinetochore beads are placed at the chromatid midpoint constriction, but the schematic constriction is labeled/depicted as the centromere region; kinetochore sites should be associated with the centromeric region of each sister, which is acceptable, but the assembly only registers kinetochores as center beads and never encodes their attachment to the chromatid centromere in the relation set (only kinetochore→chromatid attachment). The teaching-critical point that sister kinetochores face opposite poles is implied by geometry but not represented as a scientific role/relation, so the schematic could read as generic bead-on-rod rather than centromere-attached kinetochores.",
+        "root_cause_stage": "SCENE_IR",
+        "target_objects": [
+          "kinetochore_A",
+          "kinetochore_B",
+          "sister_A",
+          "sister_B"
+        ],
+        "target_events": [
+          "metaphase"
+        ],
+        "repair_scope": "Add explicit kinetochore-at-centromere attachment relations (kinetochore_A→sister_A kinetochore_site, kinetochore_B→sister_B kinetochore_site) to relations/assembly, and ensure microtubules connect to kinetochore (not chromatid) while chromatid cohesion is encoded at centromere; keep schematic fidelity.",
+        "acceptance_criteria": [
+          "relations include kinetochore_A attached to sister_A at kinetochore_site and kinetochore_B attached to sister_B at kinetochore_site",
+          "microtubule_left connects pole_left to kinetochore_A and microtubule_right connects pole_right to kinetochore_B",
+          "sister_cohesion relation remains between sister_A and sister_B through metaphase"
+        ]
+      },
+      {
+        "issue_id": "spindle_checkpoint_assumed_not_shown",
+        "severity": "uncertain",
+        "description": "The scene states the spindle checkpoint is assumed satisfied before anaphase, but required_concepts include bipolar attachment; the event ordering does not include a checkpoint/satisfaction gate, and the only precondition is phase=aligned plus relation_exists. This is an allowed simplification, but because the checkpoint is the mechanism linking attachment to anaphase onset, automatic PASS would overstate that the mechanism is taught.",
+        "root_cause_stage": "KNOWLEDGE",
+        "target_objects": [
+          "pole_left",
+          "pole_right",
+          "kinetochore_A",
+          "kinetochore_B"
+        ],
+        "target_events": [
+          "metaphase",
+          "anaphase"
+        ],
+        "repair_scope": "Either keep as declared simplification with an explicit on-screen note that checkpoint satisfaction is assumed, or add a brief checkpoint gate visual before anaphase; do not add molecular detail beyond scope.",
+        "acceptance_criteria": [
+          "declared simplification explicitly names spindle checkpoint as assumed satisfied and is surfaced in the clip (caption/note)",
+          "anaphase precondition cannot fire unless both bipolar attachments exist"
+        ]
+      }
+    ],
+    "deterministic_all_pass": true,
+    "conflicts": []
+  }
+}

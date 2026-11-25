@@ -1,0 +1,105 @@
+
+You are an expert Manim animator using Manim Community Edition v0.19.0. 
+Please generate a high-quality Manim class based on the following teaching script.
+
+
+1. Basic Requirements:
+- Use the provided TeachingScene base class without modification.
+- Each lecture line must have a matching color with its corresponding animation elements.
+- Apply ONLY color changes to lecture lines - no scaling, translation, or Transform animations.
+
+2. Visual Anchor System (MANDATORY):
+- Use 6x6 grid system (A1-F6) for precise positioning.
+- Pay attention to the positioning of elements to avoid occlusions (e.g., labels and formulas).
+- All labels must be positioned within 1 grid unit of their corresponding objects
+- Grid layout (right side only):
+```
+lecture |  A1  A2  A3  A4  A5  A6
+        |  B1  B2  B3  B4  B5  B6
+        |  C1  C2  C3  C4  C5  C6
+        |  D1  D2  D3  D4  D5  D6
+        |  E1  E2  E3  E4  E5  E6
+        |  F1  F2  F3  F4  F5  F6
+```
+
+3. POSITIONING METHODS:
+- Point example: self.place_at_grid(obj, 'B2', scale_factor=0.8)
+- Area example: self.place_in_area(obj, 'A1', 'C3', scale_factor=0.7)
+- NEVER use .to_edge(), .move_to(), or manual positioning!
+
+4. TEACHING CONTENT:
+- Title: Sec 5: Composition and Matrix Multiplication
+- Lecture Lines: ['Composition of transformations = matrix multiplication.', 'Order matters: T2∘T1 means apply T1 then T2.', 'Example: rotate 90° then scale by 2.', 'Matrices: A1=[[0,-1],[1,0]], A2=[[2,0],[0,2]].', 'Composition matrix: A2*A1 = [[0,-2],[2,0]].']
+- Animation Description: Animation step 1: Display the title 'Composition and Matrix Multiplication' in light cyan (#00FFFF). Show the statement 'T2∘T1 means apply T1 then T2' in light yellow (#FFFF99). Draw a simple 2D grid with light gray (#CCCCCC) lines and place a blue (#4D9EFF) arrow for vector (1,0).; Animation step 2: Show the matrix A1=[[0,-1],[1,0]] in light yellow (#FFFF99). Animate the vector (1,0) rotating 90° to become (0,1) as an orange (#FFA500) arrow. Label this as T1.; Animation step 3: Show the matrix A2=[[2,0],[0,2]] in light yellow (#FFFF99). Animate the vector (0,1) scaling by 2 to become (0,2) as a green (#66FF66) arrow. Label this as T2 applied to T1's result.; Animation step 4: Display the matrices A1 and A2 side by side. Show the multiplication A2*A1 = [[0,-2],[2,0]] in light yellow (#FFFF99) with the computation steps. Highlight the resulting matrix.; Animation step 5: Apply the composition matrix [[0,-2],[2,0]] directly to the original vector (1,0): show the result (0,2) as a green (#66FF66) arrow, matching the previous result. Flash both the composition matrix and the final vector to show consistency.
+
+5. STRUCTURE FOR CODE:
+Use the following comment format to indicate which block corresponds to which line:
+```python
+# === Animation for Lecture Line 1 ===
+
+6. EXAMPLE STRUCTURE:
+```python
+from manim import *
+
+
+class TeachingScene(Scene):
+    def setup_layout(self, title_text, lecture_lines):
+        # BASE
+        self.camera.background_color = "#000000"
+        self.title = Text(title_text, font_size=28, color=WHITE).to_edge(UP)
+        self.add(self.title)
+
+        # Left-side lecture content (bullets with "-")
+        lecture_texts = [Text(line, font_size=22, color=WHITE) for line in lecture_lines]
+        self.lecture = VGroup(*lecture_texts).arrange(DOWN, aligned_edge=LEFT).scale(0.8)
+        self.lecture.to_edge(LEFT, buff=0.2)
+        self.add(self.lecture)
+
+        # Define fine-grained animation grid (4x4 grid on right side)
+        self.grid = {}
+        rows = ["A", "B", "C", "D", "E", "F"]  # Top to bottom
+        cols = ["1", "2", "3", "4", "5", "6"]  # Left to right
+
+        for i, row in enumerate(rows):
+            for j, col in enumerate(cols):
+                x = 0.5 + j * 1
+                y = 2.2 - i * 1
+                self.grid[f"{row}{col}"] = np.array([x, y, 0])
+
+    def place_at_grid(self, mobject, grid_pos, scale_factor=1.0):
+        mobject.scale(scale_factor)
+        mobject.move_to(self.grid[grid_pos])
+        return mobject
+
+    def place_in_area(self, mobject, top_left, bottom_right, scale_factor=1.0):
+        tl_pos = self.grid[top_left]
+        br_pos = self.grid[bottom_right]
+        
+        # Calculate center of the area
+        center_x = (tl_pos[0] + br_pos[0]) / 2
+        center_y = (tl_pos[1] + br_pos[1]) / 2
+        center = np.array([center_x, center_y, 0])
+        
+        mobject.scale(scale_factor)
+        mobject.move_to(center)
+        return mobject
+
+
+class Section5Scene(TeachingScene):
+    def construct(self):
+        self.setup_layout("Sec 5: Composition and Matrix Multiplication", ['Composition of transformations = matrix multiplication.', 'Order matters: T2∘T1 means apply T1 then T2.', 'Example: rotate 90° then scale by 2.', 'Matrices: A1=[[0,-1],[1,0]], A2=[[2,0],[0,2]].', 'Composition matrix: A2*A1 = [[0,-2],[2,0]].'])
+        
+        # rest of animation code
+        # === Animation for Lecture Line 1 ===
+        ...
+
+        # === Animation for Lecture Line 2 ===
+        ...
+```
+
+7. MANDATORY CONSTRAINTS:
+- Colors: Use light, distinguishable hexadecimal colors.
+- Scaling: Maintain appropriate font sizes and object scales for readability.
+- Consistency: Do not apply any animation to the lecture lines except for color changes; The lecture lines and title's size and position must remain unchanged.
+- Assets: If provided, MUST use the elements in the Animation Description formatted as [Asset: XXX/XXX.png] (abstract path).
+- Simplicity: Avoid 3D functions, complex panels, or external dependencies except for filenames in Animation Description.

@@ -1,0 +1,56 @@
+{
+  "policy": "Bounded reactive state/observation policy, not unconstrained LLM tool orchestration",
+  "mode": "REAL_TOOL_CALLS; offline mocked autonomy branches separately labeled",
+  "tool_counts": {
+    "topic_analyzer": 2,
+    "evidence_retriever": 2,
+    "knowledge_builder": 2,
+    "support_verifier": 3,
+    "fact_verifier": 3,
+    "mechanism_validator": 6,
+    "artifact_reviewer": 3,
+    "video_reviewer": 3,
+    "repair_planner": 2,
+    "skill_manager": 2,
+    "evidence_fetch": 2,
+    "extractive_builder": 1
+  },
+  "examples": [
+    {
+      "goal": "Build topic knowledge",
+      "chosen_tool": "evidence_retriever",
+      "reason": "Scientific evidence is missing; retrieve before making claims.",
+      "time": 1795491499.28952
+    },
+    {
+      "goal": "Fill critical scientific evidence gap",
+      "chosen_tool": "evidence_fetch",
+      "reason": "The first pack has polymerase roles but lacks the actual synthesis-direction/antiparallel rules.",
+      "time": 1795492024.8319762
+    },
+    {
+      "goal": "Verify factual meaning",
+      "chosen_tool": "fact_verifier",
+      "reason": "Conflicting or unsupported scientific statements need source entailment/scope checking.",
+      "time": 1795491511.0821865
+    },
+    {
+      "goal": "Audit actual mechanism",
+      "chosen_tool": "mechanism_validator",
+      "reason": "Motion claims require actual event/geometry evidence before a model judgment.",
+      "time": 1795491514.4249194
+    },
+    {
+      "goal": "Review actual video science",
+      "chosen_tool": "video_reviewer",
+      "reason": "Facts are available but rendered scientific meaning is ambiguous; inspect complete video.",
+      "time": 1795491514.632257
+    },
+    {
+      "goal": "Plan minimum scientific rework",
+      "chosen_tool": "repair_planner",
+      "reason": "Observed execution violates an evidence-backed rule; repair its earliest implementation source.",
+      "time": 1795491594.873887
+    }
+  ]
+}

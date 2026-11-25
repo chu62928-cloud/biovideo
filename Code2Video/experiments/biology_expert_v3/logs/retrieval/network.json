@@ -1,0 +1,155 @@
+[
+  {
+    "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+    "params": {
+      "db": "pubmed",
+      "term": "DNA replication in eukaryotic cells AND (review[Publication Type])",
+      "retmode": "json",
+      "retmax": 2,
+      "sort": "relevance"
+    },
+    "accessed_utc": "2026-11-24T03:38:19Z",
+    "status": "ok",
+    "http_status": 200
+  },
+  {
+    "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi",
+    "params": {
+      "db": "pubmed",
+      "id": "35320688,28301743",
+      "retmode": "xml"
+    },
+    "accessed_utc": "2026-11-24T03:38:20Z",
+    "status": "ok",
+    "http_status": 200
+  },
+  {
+    "url": "https://openstax.org/books/biology-2e/pages/10-2-the-cell-cycle",
+    "params": null,
+    "accessed_utc": "2026-11-24T03:39:58Z",
+    "status": "ok",
+    "http_status": 200
+  },
+  {
+    "url": "https://openstax.org/books/concepts-biology/pages/6-2-the-cell-cycle",
+    "params": null,
+    "accessed_utc": "2026-11-24T03:39:59Z",
+    "status": "ok",
+    "http_status": 200
+  },
+  {
+    "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+    "params": {
+      "db": "pubmed",
+      "term": "Mitosis in eukaryotic cells AND (review[Publication Type])",
+      "retmode": "json",
+      "retmax": 2,
+      "sort": "relevance"
+    },
+    "accessed_utc": "2026-11-24T03:40:00Z",
+    "status": "ok",
+    "http_status": 200
+  },
+  {
+    "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi",
+    "params": {
+      "db": "pubmed",
+      "id": "27587616,32501481",
+      "retmode": "xml"
+    },
+    "accessed_utc": "2026-11-24T03:40:01Z",
+    "status": "ok",
+    "http_status": 200
+  },
+  {
+    "url": "https://openstax.org/books/biology-2e/pages/14-5-dna-replication-in-eukaryotes",
+    "params": null,
+    "accessed_utc": "2026-11-24T03:44:28Z",
+    "status": "ok",
+    "http_status": 200
+  },
+  {
+    "url": "https://openstax.org/books/concepts-biology/pages/9-2-dna-replication",
+    "params": null,
+    "accessed_utc": "2026-11-24T03:44:30Z",
+    "status": "ok",
+    "http_status": 200
+  },
+  {
+    "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+    "params": {
+      "db": "pubmed",
+      "term": "DNA replication in eukaryotic cells AND (review[Publication Type])",
+      "retmode": "json",
+      "retmax": 2,
+      "sort": "relevance"
+    },
+    "accessed_utc": "2026-11-24T03:44:31Z",
+    "status": "ok",
+    "http_status": 200
+  },
+  {
+    "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi",
+    "params": {
+      "db": "pubmed",
+      "id": "35320688,28301743",
+      "retmode": "xml"
+    },
+    "accessed_utc": "2026-11-24T03:44:32Z",
+    "status": "ok",
+    "http_status": 200
+  },
+  {
+    "url": "https://openstax.org/books/biology-2e/pages/10-2-the-cell-cycle",
+    "params": null,
+    "accessed_utc": "2026-11-24T03:44:33Z",
+    "status": "ok",
+    "http_status": 200
+  },
+  {
+    "url": "https://openstax.org/books/concepts-biology/pages/6-2-the-cell-cycle",
+    "params": null,
+    "accessed_utc": "2026-11-24T03:44:35Z",
+    "status": "ok",
+    "http_status": 200
+  },
+  {
+    "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+    "params": {
+      "db": "pubmed",
+      "term": "Mitosis in eukaryotic cells AND (review[Publication Type])",
+      "retmode": "json",
+      "retmax": 2,
+      "sort": "relevance"
+    },
+    "accessed_utc": "2026-11-24T03:44:37Z",
+    "status": "ok",
+    "http_status": 200
+  },
+  {
+    "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi",
+    "params": {
+      "db": "pubmed",
+      "id": "27587616,32501481",
+      "retmode": "xml"
+    },
+    "accessed_utc": "2026-11-24T03:44:38Z",
+    "status": "ok",
+    "http_status": 200
+  },
+  {
+    "url": "https://openstax.org/books/biology-2e/pages/14-2-dna-structure-and-sequencing",
+    "params": null,
+    "accessed_utc": "2026-11-24T03:47:04Z",
+    "status": "ok",
+    "http_status": 200
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/",
+    "params": null,
+    "accessed_utc": "2026-11-24T03:47:06Z",
+    "status": "UNVERIFIED",
+    "http_status": 200,
+    "reason": "Challenge/non-content page"
+  }
+]

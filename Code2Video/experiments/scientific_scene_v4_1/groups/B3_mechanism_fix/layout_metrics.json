@@ -1,0 +1,2423 @@
+{
+  "out_of_frame": [],
+  "label_overlaps": [
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "polarity__template_leading__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "polarity__template_lagging__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "polarity__template_lagging__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "polarity__new_leading__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "polarity__new_leading__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "polarity__fragment_1__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "polarity__fragment_1__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "polarity__fragment_2__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "polarity__fragment_2__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "polarity__template_lagging__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "polarity__template_lagging__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "polarity__new_leading__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "polarity__new_leading__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "polarity__fragment_1__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "polarity__fragment_1__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "polarity__fragment_2__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "polarity__fragment_2__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "polarity__template_lagging__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "polarity__new_leading__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "polarity__new_leading__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "polarity__fragment_1__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "polarity__fragment_1__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "polarity__fragment_2__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "polarity__fragment_2__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "polarity__new_leading__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "polarity__new_leading__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "polarity__fragment_1__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "polarity__fragment_1__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "polarity__fragment_2__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "polarity__fragment_2__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "polarity__new_leading__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "polarity__fragment_1__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "polarity__fragment_1__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "polarity__fragment_2__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "polarity__fragment_2__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__end",
+        "polarity__fragment_1__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__end",
+        "polarity__fragment_1__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__end",
+        "polarity__fragment_2__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__end",
+        "polarity__fragment_2__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__end",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__end",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__end",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__end",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__end",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__end",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__fragment_1__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__fragment_2__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__fragment_2__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__start",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__start",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__start",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__start",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__start",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__end",
+        "polarity__fragment_2__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__end",
+        "polarity__fragment_2__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__end",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__end",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__end",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__end",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__end",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__end",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__start",
+        "polarity__fragment_2__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__start",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__start",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__start",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__start",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__start",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__start",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__end",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__end",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__end",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__end",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__end",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__gap_fill__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__gap_fill__start",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__gap_fill__start",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__gap_fill__start",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__gap_fill__start",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__gap_fill__start",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__gap_fill__end",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__gap_fill__end",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__gap_fill__end",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__gap_fill__end",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__gap_fill__end",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__primase",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__primase",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__primase",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__primase",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__polymerase_leading",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__polymerase_leading",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__polymerase_leading",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__polymerase_lagging",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__polymerase_lagging",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__ligase",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 13.06666666666664,
+      "objects": [
+        "polarity__new_leading__start",
+        "polarity__new_leading__end"
+      ]
+    },
+    {
+      "time": 19.866666666666617,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__fragment_1__end"
+      ]
+    },
+    {
+      "time": 23.53333333333327,
+      "objects": [
+        "polarity__fragment_2__start",
+        "polarity__fragment_2__end"
+      ]
+    },
+    {
+      "time": 27.13333333333326,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 27.13333333333326,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 27.13333333333326,
+      "objects": [
+        "polarity__gap_fill__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 27.199999999999925,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 27.199999999999925,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 27.199999999999925,
+      "objects": [
+        "polarity__gap_fill__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 27.26666666666659,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 27.26666666666659,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 27.26666666666659,
+      "objects": [
+        "polarity__gap_fill__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 27.26666666666659,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 27.26666666666659,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 27.26666666666659,
+      "objects": [
+        "polarity__gap_fill__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 27.333333333333258,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 27.399999999999924,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 27.46666666666659,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 27.533333333333257,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 27.533333333333257,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 27.533333333333257,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 27.599999999999923,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 27.599999999999923,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 27.66666666666659,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 27.733333333333256,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 27.799999999999923,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 27.799999999999923,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 27.86666666666659,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 27.933333333333255,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 27.933333333333255,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 27.933333333333255,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 27.999999999999922,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 28.06666666666659,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 28.133333333333255,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 28.133333333333255,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 28.19999999999992,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 28.266666666666588,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 28.333333333333254,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 28.333333333333254,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 28.333333333333254,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 28.39999999999992,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 28.466666666666587,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 28.466666666666587,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 28.533333333333253,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 28.533333333333253,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 28.59999999999992,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 28.59999999999992,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 28.666666666666586,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 28.666666666666586,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 28.733333333333253,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 28.733333333333253,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 28.733333333333253,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 28.733333333333253,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 28.733333333333253,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 28.733333333333253,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 28.79999999999992,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 28.79999999999992,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 28.79999999999992,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 28.79999999999992,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 28.866666666666585,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 28.866666666666585,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 28.933333333333252,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 28.933333333333252,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 28.99999999999992,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 28.99999999999992,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 28.99999999999992,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 28.99999999999992,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.066666666666585,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.066666666666585,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.13333333333325,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.13333333333325,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.13333333333325,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.13333333333325,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.13333333333325,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.13333333333325,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.199999999999918,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.199999999999918,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.266666666666584,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.266666666666584,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.33333333333325,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.33333333333325,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.33333333333325,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.33333333333325,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.399999999999917,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.399999999999917,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.466666666666583,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.466666666666583,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.53333333333325,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.53333333333325,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.53333333333325,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.53333333333325,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.53333333333325,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.53333333333325,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.599999999999916,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.599999999999916,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.666666666666583,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.666666666666583,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.666666666666583,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.666666666666583,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.73333333333325,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.73333333333325,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.799999999999915,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.799999999999915,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.866666666666582,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.866666666666582,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.93333333333325,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.93333333333325,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.93333333333325,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.93333333333325,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.93333333333325,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.93333333333325,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.999999999999915,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.999999999999915,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 29.999999999999915,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 29.999999999999915,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 30.06666666666658,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 30.06666666666658,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 30.133333333333248,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 30.133333333333248,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 30.199999999999914,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 30.199999999999914,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 30.199999999999914,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 30.199999999999914,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 30.26666666666658,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 30.26666666666658,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 30.333333333333247,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 30.333333333333247,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 30.333333333333247,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 30.333333333333247,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 30.333333333333247,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 30.333333333333247,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 30.333333333333247,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 30.333333333333247,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 30.399999999999913,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 30.399999999999913,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 30.46666666666658,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 30.46666666666658,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 30.533333333333246,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 30.533333333333246,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 30.533333333333246,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 30.533333333333246,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 30.599999999999913,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 30.599999999999913,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 30.66666666666658,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 30.66666666666658,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 30.733333333333245,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 30.733333333333245,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 30.733333333333245,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 30.733333333333245,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 30.733333333333245,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 30.733333333333245,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 30.799999999999912,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 30.799999999999912,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 30.86666666666658,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 30.86666666666658,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 30.86666666666658,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 30.86666666666658,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 30.933333333333245,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 30.933333333333245,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 30.99999999999991,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 30.99999999999991,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.066666666666578,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.066666666666578,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.133333333333244,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.133333333333244,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.133333333333244,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.133333333333244,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.133333333333244,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.133333333333244,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.19999999999991,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.19999999999991,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.19999999999991,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.19999999999991,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.266666666666577,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.266666666666577,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.333333333333243,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.333333333333243,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.39999999999991,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.39999999999991,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.39999999999991,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.39999999999991,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.466666666666576,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.466666666666576,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.533333333333243,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.533333333333243,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.533333333333243,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.533333333333243,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.533333333333243,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.533333333333243,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.59999999999991,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.59999999999991,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.666666666666575,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.666666666666575,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.733333333333242,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.733333333333242,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.733333333333242,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.733333333333242,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.79999999999991,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.79999999999991,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.866666666666575,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.866666666666575,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.93333333333324,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.93333333333324,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.93333333333324,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.93333333333324,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.93333333333324,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.93333333333324,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 31.93333333333324,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 31.93333333333324,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    }
+  ],
+  "binding_violations": [],
+  "sudden_jumps": [],
+  "note": "Geometry heuristics; intentional occlusion and fade transitions need human review."
+}

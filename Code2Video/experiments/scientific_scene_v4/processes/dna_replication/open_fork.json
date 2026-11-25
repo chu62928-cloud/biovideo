@@ -1,0 +1,82 @@
+{
+  "process_id": "open_fork",
+  "purpose": "Open two continuous parental paths; keep same IDs",
+  "input_assembly_types": [],
+  "required_states": [],
+  "preconditions": [
+    {
+      "constraint_id": "phase_closed",
+      "predicate": "state_is",
+      "object_ids": [],
+      "key": "phase",
+      "value": "closed"
+    }
+  ],
+  "actions": [
+    {
+      "operation": "transform_state",
+      "targets": [
+        "template_leading",
+        "template_lagging"
+      ],
+      "params": {
+        "visual_updates": {
+          "template_leading": {
+            "points": [
+              [
+                -5,
+                1.2,
+                0
+              ],
+              [
+                2.5,
+                0.15,
+                0
+              ],
+              [
+                6,
+                0.15,
+                0
+              ]
+            ]
+          },
+          "template_lagging": {
+            "points": [
+              [
+                -5,
+                -1.2,
+                0
+              ],
+              [
+                2.5,
+                -0.15,
+                0
+              ],
+              [
+                6,
+                -0.15,
+                0
+              ]
+            ]
+          }
+        },
+        "state_updates": {
+          "phase": "opened"
+        }
+      }
+    }
+  ],
+  "postconditions": [
+    {
+      "constraint_id": "phase_opened",
+      "predicate": "state_is",
+      "object_ids": [],
+      "key": "phase",
+      "value": "opened"
+    }
+  ],
+  "invariants": [],
+  "evidence_ids": [
+    "X_bf28604c"
+  ]
+}

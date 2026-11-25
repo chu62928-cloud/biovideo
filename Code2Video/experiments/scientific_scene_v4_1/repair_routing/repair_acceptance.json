@@ -1,0 +1,27 @@
+{
+  "status": "CANDIDATE_CREATED",
+  "changed": [
+    {
+      "object_id": "primase",
+      "field": "scientific_identity.name",
+      "before": "Primase / Pol alpha",
+      "after": "RNA primase"
+    },
+    {
+      "object_id": "primase",
+      "field": "scientific_properties.role",
+      "before": "Primase / Pol alpha",
+      "after": "Synthesizes short RNA primers to initiate DNA synthesis; does not perform DNA polymerase activity"
+    },
+    {
+      "object_id": "primase",
+      "field": "visual_representation.label",
+      "before": "Primase / Pol alpha",
+      "after": "RNA primase"
+    }
+  ],
+  "before_sha256": "65cf6bf55c9ca0f1f7073e5f18d401edc9ac7875af731f19b176205508882c1c",
+  "after_sha256": "d29152b820ac288c330540e2da8c9da8a0cf1283ea6cc5dad5016246dedf3e95",
+  "target_artifact": "scene_ir/dna_section4.json",
+  "requires_downstream_regeneration": true
+}

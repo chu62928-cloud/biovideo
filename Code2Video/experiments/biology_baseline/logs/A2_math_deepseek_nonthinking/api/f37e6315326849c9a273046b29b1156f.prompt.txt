@@ -1,0 +1,144 @@
+
+        You are an expert Manim Community Edition v0.19.0 developer. Fix the error in the following code block.
+
+        **Error Analysis:**
+        - Error Type: ValueError
+        - Error Category: animation_error
+        - Fix Scope: single_line
+        - Suggested Fix: None
+
+        **Error Message:**
+        ```
+        
+kpathsea: Running mktexfmt latex.fmt
+Can't locate mktexlsr.pl in @INC (@INC contains: /autodl-tmp/code2biovideo/env/share/tlpkg /autodl-tmp/code2biovideo/env/share/texmf-dist/scripts/texlive /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.34.0 /usr/local/share/perl/5.34.0 /usr/lib/x86_64-linux-gnu/perl5/5.34 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.34 /usr/share/perl/5.34 /usr/local/lib/site_perl) at /root/autodl-tmp/code2biovideo/env/bin/mktexfmt line 41.
+BEGIN failed--compilation aborted at /root/autodl-tmp/code2biovideo/env/bin/mktexfmt line 43.
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/cli/render/ │
+│ commands.py:125 in render                                                    │
+│                                                                              │
+│   122 │   │   │   try:                                                       │
+│   123 │   │   │   │   with tempconfig({}):                                   │
+│   124 │   │   │   │   │   scene = SceneClass()                               │
+│ ❱ 125 │   │   │   │   │   scene.render()                                     │
+│   126 │   │   │   except Exception:                                          │
+│   127 │   │   │   │   error_console.print_exception()                        │
+│   128 │   │   │   │   sys.exit(1)                                            │
+│                                                                              │
+│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/scene/scene │
+│ .py:237 in render                                                            │
+│                                                                              │
+│    234 │   │   """                                                           │
+│    235 │   │   self.setup()                                                  │
+│    236 │   │   try:                                                          │
+│ ❱  237 │   │   │   self.construct()                                          │
+│    238 │   │   except EndSceneEarlyException:                                │
+│    239 │   │   │   pass                                                      │
+│    240 │   │   except RerunSceneException:                                   │
+│                                                                              │
+│ /root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthin │
+│ king/0-Linear_transformations_and_matrices/section_1.py:101 in construct     │
+│                                                                              │
+│    98 │   │                                                                  │
+│    99 │   │   # === Animation for Lecture Line 1 ===                         │
+│   100 │   │   line1 = self.lecture[0]                                        │
+│ ❱ 101 │   │   formula_T = MathTex(r"T: \mathbb{R}^2 \to \mathbb{R}^2", color │
+│   102 │   │   self.place_at_grid(formula_T, "B4", scale_factor=0.9)          │
+│   103 │   │                                                                  │
+│   104 │   │   grid1 = make_grid()                                            │
+│                                                                              │
+│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/mobject/tex │
+│ t/tex_mobject.py:277 in __init__                                             │
+│                                                                              │
+│   274 │   │   self.brace_notation_split_occurred = False                     │
+│   275 │   │   self.tex_strings = self._break_up_tex_strings(tex_strings)     │
+│   276 │   │   try:                                                           │
+│ ❱ 277 │   │   │   super().__init__(                                          │
+│   278 │   │   │   │   self.arg_separator.join(self.tex_strings),             │
+│   279 │   │   │   │   tex_environment=self.tex_environment,                  │
+│   280 │   │   │   │   tex_template=self.tex_template,                        │
+│                                                                              │
+│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/mobject/tex │
+│ t/tex_mobject.py:80 in __init__                                              │
+│                                                                              │
+│    77 │   │                                                                  │
+│    78 │   │   assert isinstance(tex_string, str)                             │
+│    79 │   │   self.tex_string = tex_string                                   │
+│ ❱  80 │   │   file_name = tex_to_svg_file(                                   │
+│    81 │   │   │   self._get_modified_expression(tex_string),                 │
+│    82 │   │   │   environment=self.tex_environment,                          │
+│    83 │   │   │   tex_template=self.tex_template,                            │
+│                                                                              │
+│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/utils/tex_f │
+│ ile_writing.py:65 in tex_to_svg_file                                         │
+│                                                                              │
+│    62 │   if svg_file.exists():                                              │
+│    63 │   │   return svg_file                                                │
+│    64 │                                                                      │
+│ ❱  65 │   dvi_file = compile_tex(                                            │
+│    66 │   │   tex_file,                                                      │
+│    67 │   │   tex_template.tex_compiler,                                     │
+│    68 │   │   tex_template.output_format,                                    │
+│                                                                              │
+│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/utils/tex_f │
+│ ile_writing.py:211 in compile_tex                                            │
+│                                                                              │
+│   208 │   │   cp = subprocess.run(command, stdout=subprocess.DEVNULL)        │
+│   209 │   │   if cp.returncode != 0:                                         │
+│   210 │   │   │   log_file = tex_file.with_suffix(".log")                    │
+│ ❱ 211 │   │   │   print_all_tex_errors(log_file, tex_compiler, tex_file)     │
+│   212 │   │   │   raise ValueError(                                          │
+│   213 │   │   │   │   f"{tex_compiler} error converting to"                  │
+│   214 │   │   │   │   f" {output_format[1:]}. See log output above or"       │
+│                                                                              │
+│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/utils/tex_f │
+│ ile_writing.py:281 in print_all_tex_errors                                   │
+│                                                                              │
+│   278                                                                        │
+│   279 def print_all_tex_errors(log_file: Path, tex_compiler: str, tex_file:  │
+│   280 │   if not log_file.exists():                                          │
+│ ❱ 281 │   │   raise RuntimeError(                                            │
+│   282 │   │   │   f"{tex_compiler} failed but did not produce a log file. "  │
+│   283 │   │   │   "Check your LaTeX installation.",                          │
+│   284 │   │   )                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+RuntimeError: latex failed but did not produce a log file. Check your LaTeX 
+installation.
+
+        ```
+
+        **Error Context:**
+        {
+  "line_number": 41,
+  "error_line": null,
+  "traceback": "\nkpathsea: Running mktexfmt latex.fmt\nCan't locate mktexlsr.pl in @INC (@INC contains: /autodl-tmp/code2biovideo/env/share/tlpkg /autodl-tmp/code2biovideo/env/share/texmf-dist/scripts/texlive /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.34.0 /usr/local/share/perl/5.34.0 /usr/lib/x86_64-linux-gnu/perl5/5.34 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.34 /usr/share/perl/5.34 /usr/local/lib/site_perl) at /root/autodl-tmp/code2biovideo/env/bin/mktexfmt line 41.\nBEGIN failed--compilation aborted at /root/autodl-tmp/code2biovideo/env/bin/mktexfmt line 43.\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 Traceback (most recent call last) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502 /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/cli/render/ \u2502\n\u2502 commands.py:125 in render                                                    \u2502\n\u2502                                                                              \u2502\n\u2502   122 \u2502   \u2502   \u2502   try:                                                       \u2502\n\u2502   123 \u2502   \u2502   \u2502   \u2502   with tempconfig({}):                                   \u2502\n\u2502   124 \u2502   \u2502   \u2502   \u2502   \u2502   scene = SceneClass()                               \u2502\n\u2502 \u2771 125 \u2502   \u2502   \u2502   \u2502   \u2502   scene.render()                                     \u2502\n\u2502   126 \u2502   \u2502   \u2502   except Exception:                                          \u2502\n\u2502   127 \u2502   \u2502   \u2502   \u2502   error_console.print_exception()                        \u2502\n\u2502   128 \u2502   \u2502   \u2502   \u2502   sys.exit(1)                                            \u2502\n\u2502                                                                              \u2502\n\u2502 /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/scene/scene \u2502\n\u2502 .py:237 in render                                                            \u2502\n\u2502                                                                              \u2502\n\u2502    234 \u2502   \u2502   \"\"\"                                                           \u2502\n\u2502    235 \u2502   \u2502   self.setup()                                                  \u2502\n\u2502    236 \u2502   \u2502   try:                                                          \u2502\n\u2502 \u2771  237 \u2502   \u2502   \u2502   self.construct()                                          \u2502\n\u2502    238 \u2502   \u2502   except EndSceneEarlyException:                                \u2502\n\u2502    239 \u2502   \u2502   \u2502   pass                                                      \u2502\n\u2502    240 \u2502   \u2502   except RerunSceneException:                                   \u2502\n\u2502                                                                              \u2502\n\u2502 /root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthin \u2502\n\u2502 king/0-Linear_transformations_and_matrices/section_1.py:101 in construct     \u2502\n\u2502                                                                              \u2502\n\u2502    98 \u2502   \u2502                                                                  \u2502\n\u2502    99 \u2502   \u2502   # === Animation for Lecture Line 1 ===                         \u2502\n\u2502   100 \u2502   \u2502   line1 = self.lecture[0]                                        \u2502\n\u2502 \u2771 101 \u2502   \u2502   formula_T = MathTex(r\"T: \\mathbb{R}^2 \\to \\mathbb{R}^2\", color \u2502\n\u2502   102 \u2502   \u2502   self.place_at_grid(formula_T, \"B4\", scale_factor=0.9)          \u2502\n\u2502   103 \u2502   \u2502                                                                  \u2502\n\u2502   104 \u2502   \u2502   grid1 = make_grid()                                            \u2502\n\u2502                                                                              \u2502\n\u2502 /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/mobject/tex \u2502\n\u2502 t/tex_mobject.py:277 in __init__                                             \u2502\n\u2502                                                                              \u2502\n\u2502   274 \u2502   \u2502   self.brace_notation_split_occurred = False                     \u2502\n\u2502   275 \u2502   \u2502   self.tex_strings = self._break_up_tex_strings(tex_strings)     \u2502\n\u2502   276 \u2502   \u2502   try:                                                           \u2502\n\u2502 \u2771 277 \u2502   \u2502   \u2502   super().__init__(                                          \u2502\n\u2502   278 \u2502   \u2502   \u2502   \u2502   self.arg_separator.join(self.tex_strings),             \u2502\n\u2502   279 \u2502   \u2502   \u2502   \u2502   tex_environment=self.tex_environment,                  \u2502\n\u2502   280 \u2502   \u2502   \u2502   \u2502   tex_template=self.tex_template,                        \u2502\n\u2502                                                                              \u2502\n\u2502 /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/mobject/tex \u2502\n\u2502 t/tex_mobject.py:80 in __init__                                              \u2502\n\u2502                                                                              \u2502\n\u2502    77 \u2502   \u2502                                                                  \u2502\n\u2502    78 \u2502   \u2502   assert isinstance(tex_string, str)                             \u2502\n\u2502    79 \u2502   \u2502   self.tex_string = tex_string                                   \u2502\n\u2502 \u2771  80 \u2502   \u2502   file_name = tex_to_svg_file(                                   \u2502\n\u2502    81 \u2502   \u2502   \u2502   self._get_modified_expression(tex_string),                 \u2502\n\u2502    82 \u2502   \u2502   \u2502   environment=self.tex_environment,                          \u2502\n\u2502    83 \u2502   \u2502   \u2502   tex_template=self.tex_template,                            \u2502\n\u2502                                                                              \u2502\n\u2502 /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/utils/tex_f \u2502\n\u2502 ile_writing.py:65 in tex_to_svg_file                                         \u2502\n\u2502                                                                              \u2502\n\u2502    62 \u2502   if svg_file.exists():                                              \u2502\n\u2502    63 \u2502   \u2502   return svg_file                                                \u2502\n\u2502    64 \u2502                                                                      \u2502\n\u2502 \u2771  65 \u2502   dvi_file = compile_tex(                                            \u2502\n\u2502    66 \u2502   \u2502   tex_file,                                                      \u2502\n\u2502    67 \u2502   \u2502   tex_template.tex_compiler,                                     \u2502\n\u2502    68 \u2502   \u2502   tex_template.output_format,                                    \u2502\n\u2502                                                                              \u2502\n\u2502 /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/utils/tex_f \u2502\n\u2502 ile_writing.py:211 in compile_tex                                            \u2502\n\u2502                                                                              \u2502\n\u2502   208 \u2502   \u2502   cp = subprocess.run(command, stdout=subprocess.DEVNULL)        \u2502\n\u2502   209 \u2502   \u2502   if cp.returncode != 0:                                         \u2502\n\u2502   210 \u2502   \u2502   \u2502   log_file = tex_file.with_suffix(\".log\")                    \u2502\n\u2502 \u2771 211 \u2502   \u2502   \u2502   print_all_tex_errors(log_file, tex_compiler, tex_file)     \u2502\n\u2502   212 \u2502   \u2502   \u2502   raise ValueError(                                          \u2502\n\u2502   213 \u2502   \u2502   \u2502   \u2502   f\"{tex_compiler} error converting to\"                  \u2502\n\u2502   214 \u2502   \u2502   \u2502   \u2502   f\" {output_format[1:]}. See log output above or\"       \u2502\n\u2502                                                                              \u2502\n\u2502 /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/utils/tex_f \u2502\n\u2502 ile_writing.py:281 in print_all_tex_errors                                   \u2502\n\u2502                                                                              \u2502\n\u2502   278                                                                        \u2502\n\u2502   279 def print_all_tex_errors(log_file: Path, tex_compiler: str, tex_file:  \u2502\n\u2502   280 \u2502   if not log_file.exists():                                          \u2502\n\u2502 \u2771 281 \u2502   \u2502   raise RuntimeError(                                            \u2502\n\u2502   282 \u2502   \u2502   \u2502   f\"{tex_compiler} failed but did not produce a log file. \"  \u2502\n\u2502   283 \u2502   \u2502   \u2502   \"Check your LaTeX installation.\",                          \u2502\n\u2502   284 \u2502   \u2502   )                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\nRuntimeError: latex failed but did not produce a log file. Check your LaTeX \ninstallation.\n",
+  "specific_error": "installation."
+}
+
+        **Suggestions:**
+        - The value is incorrect. Check the validity of the parameter value
+- Check the parameters and usage of the animation class
+
+        **Code Block to Fix:**
+        ```python
+                br_pos = self.grid[bottom_right]
+        
+        # Calculate center of the area
+        center_x = (tl_pos[0] + br_pos[0]) / 2
+        center_y = (tl_pos[1] + br_pos[1]) / 2
+        center = np.array([center_x, center_y, 0])
+        
+        mobject.scale(scale_factor)
+        mobject.move_to(center)
+        return mobject
+        ```
+
+        **Requirements:**
+        1. Only fix the specific error mentioned
+        2. Maintain the original code structure and logic
+        3. Make minimal necessary changes
+        4. Ensure compatibility with Manim CE v0.19.0
+        5. Output ONLY the fixed Python code block
+
+        **Fixed Code:**
+        

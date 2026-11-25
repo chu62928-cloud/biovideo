@@ -1,0 +1,96 @@
+{
+  "layout": {
+    "has_issues": true,
+    "improvements": [
+      {
+        "problem": "The leading 'Pol δ' label is drawn in the same blue as the mid-frame duplex line and sits directly on it (y≈240), so the text is illegible; it also stays on screen after leading-strand synthesis finishes.",
+        "solution": "self.place_at_grid(dna_polymerase_leading_label, 'D5', scale_factor=0.65) — puts the caption in the empty band between the mid duplex line (row C/D boundary) and the lagging fragments (row E), ~1 grid unit below-right of the polymerase glyph; recolor to #7FDBFF for contrast and FadeOut the label (with dna_polymerase_leading) once the leading phase ends, before the lagging phase begins.",
+        "line_number": null,
+        "object_affected": "dna_polymerase_leading_label"
+      },
+      {
+        "problem": "new_leading_3prime ('3') is rendered on top of the template_leading line at the right end, next to the template '5'' end label, so the nascent-strand polarity marker reads as a template marker.",
+        "solution": "self.place_at_grid(new_leading_3prime, 'C6', scale_factor=0.6) — moves the green 3' marker off the template line into the free cell just right of the polymerase and below the nascent strand end (within 1 grid unit of new_leading_strand's 3' tip); keep color #2ECC71 so it stays tied to the nascent strand, and apply the same downward offset rule to rna_primer_lead_3prime so neither polarity label touches template_leading.",
+        "line_number": null,
+        "object_affected": "new_leading_3prime"
+      },
+      {
+        "problem": "dna_ligase sits below the bottom template line (y≈335) while the nick it seals is on the lagging nascent strand at y≈303; the enzyme never visually contacts the nick, and its label hangs near the bottom edge.",
+        "solution": "self.place_at_grid(dna_ligase, 'E3', scale_factor=0.8) so the glyph's upper edge straddles the nascent-lagging nick after fill_dna_02 completes, then self.place_at_grid(dna_ligase_label, 'F3', scale_factor=0.65) to keep the caption one cell below the enzyme, clear of the caption_text band.",
+        "line_number": null,
+        "object_affected": "dna_ligase"
+      }
+    ]
+  },
+  "issues": [
+    {
+      "object_id": "dna_polymerase_leading_label",
+      "issue_type": "overlap",
+      "current_state": {
+        "position_px": [
+          480,
+          239
+        ],
+        "overlaps": "mid-frame duplex strand line at y≈240 (same blue hue)",
+        "persists_after_leading_phase": true
+      },
+      "target_constraint": {
+        "grid_cell": "D5",
+        "max_distance_from_enzyme_grid_units": 1,
+        "no_overlap_with": [
+          "replication_fork",
+          "new_lagging_strand",
+          "okazaki_fragment",
+          "okazaki_fragment_2"
+        ],
+        "fade_out_before": "lagging priming phase"
+      },
+      "suggested_change": "Reposition with self.place_at_grid(dna_polymerase_leading_label,'D5',scale_factor=0.65), recolor to #7FDBFF, and fade it out together with dna_polymerase_leading when leading synthesis completes so it no longer sits on the duplex line during the lagging/ligation phases."
+    },
+    {
+      "object_id": "new_leading_3prime",
+      "issue_type": "strand_confusion",
+      "current_state": {
+        "position_px": [
+          735,
+          157
+        ],
+        "sits_on": "template_leading line (y≈158)",
+        "adjacent_to": "template_end_labels 5' marker at (780,140)"
+      },
+      "target_constraint": {
+        "grid_cell": "C6",
+        "must_attach_to": "new_leading_strand 3' terminus",
+        "min_vertical_clearance_from_template_px": 15,
+        "max_distance_grid_units": 1
+      },
+      "suggested_change": "self.place_at_grid(new_leading_3prime,'C6',scale_factor=0.6) so the nascent 3' marker clears the template line and the template 5' label; keep nascent-green #2ECC71 and mirror the offset for rna_primer_lead_3prime, preserving all stated polarities."
+    },
+    {
+      "object_id": "dna_ligase",
+      "issue_type": "enzyme_contact",
+      "current_state": {
+        "position_px": [
+          605,
+          335
+        ],
+        "nick_position_px": [
+          580,
+          303
+        ],
+        "contact": "none — glyph is entirely below template_lagging",
+        "label_position_px": [
+          605,
+          360
+        ]
+      },
+      "target_constraint": {
+        "grid_cell": "E3",
+        "label_grid_cell": "F3",
+        "contact_required": "upper edge of glyph touches sealed nick on new_lagging_strand",
+        "order_preserved": "RNA removal -> DNA fill (fill_dna_00..02) -> nick sealing"
+      },
+      "suggested_change": "self.place_at_grid(dna_ligase,'E3',scale_factor=0.8) and self.place_at_grid(dna_ligase_label,'F3',scale_factor=0.65); trigger the ligase arrival only after fill_dna_02 is placed so the sealing step stays visually last and the enzyme visibly bridges the nick."
+    }
+  ]
+}

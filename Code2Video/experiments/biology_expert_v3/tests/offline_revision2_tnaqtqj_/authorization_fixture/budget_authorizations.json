@@ -1,0 +1,11 @@
+[
+  {
+    "authorization_id": "OFFLINE-MOCK",
+    "source": "explicit_user_message",
+    "provider": "qwen",
+    "additional_requests": 2,
+    "acknowledged_failed_calls": [
+      "OLD2"
+    ]
+  }
+]

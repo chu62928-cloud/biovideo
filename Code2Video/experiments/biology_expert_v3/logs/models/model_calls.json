@@ -1,0 +1,281 @@
+[
+  {
+    "call_id": "v3_01",
+    "provider": "deepseek",
+    "purpose": "knowledge_dna_replication",
+    "status": "ok",
+    "started": 1795491502.3220062,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 2099,
+      "prompt_tokens": 980,
+      "total_tokens": 3079,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 980
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 8.747
+  },
+  {
+    "call_id": "v3_02",
+    "provider": "deepseek",
+    "purpose": "independent_fact_verification_dna_replication",
+    "status": "ok",
+    "started": 1795491511.0827947,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 693,
+      "prompt_tokens": 3325,
+      "total_tokens": 4018,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 3325
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 3.049
+  },
+  {
+    "call_id": "v3_03",
+    "provider": "qwen",
+    "purpose": "science_video_review",
+    "status": "ok",
+    "started": 1795491514.6703312,
+    "retries": 0,
+    "requested_model": "qwen4-max",
+    "usage": {
+      "completion_tokens": 6597,
+      "prompt_tokens": 33745,
+      "total_tokens": 40342,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 3410,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "image_tokens": 4643,
+        "video_tokens": 13367,
+        "text_tokens": 15735
+      }
+    },
+    "response_model": "qwen4-max",
+    "elapsed_seconds": 80.103
+  },
+  {
+    "call_id": "v3_04",
+    "provider": "deepseek",
+    "purpose": "scientific_event5_repair",
+    "status": "ok",
+    "started": 1795491594.9018524,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 311,
+      "prompt_tokens": 7572,
+      "total_tokens": 7883,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 7572
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 1.623
+  },
+  {
+    "call_id": "v3_05",
+    "provider": "deepseek",
+    "purpose": "scientific_event5_repair",
+    "status": "ok",
+    "started": 1795491596.530023,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 297,
+      "prompt_tokens": 7572,
+      "total_tokens": 7869,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 7424
+      },
+      "prompt_cache_hit_tokens": 7424,
+      "prompt_cache_miss_tokens": 148
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 1.942
+  },
+  {
+    "call_id": "v3_06",
+    "provider": "deepseek",
+    "purpose": "knowledge_eukaryotic_mitosis",
+    "status": "ok",
+    "started": 1795491602.922902,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 2689,
+      "prompt_tokens": 4000,
+      "total_tokens": 6689,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 128
+      },
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 3872
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 9.774
+  },
+  {
+    "call_id": "v3_07",
+    "provider": "deepseek",
+    "purpose": "independent_fact_verification_eukaryotic_mitosis",
+    "status": "ok",
+    "started": 1795491612.7205172,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 650,
+      "prompt_tokens": 7254,
+      "total_tokens": 7904,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 128
+      },
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 7126
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 3.716
+  },
+  {
+    "call_id": "v3_08",
+    "provider": "deepseek",
+    "purpose": "artifact_review_SCRIPT",
+    "status": "ok",
+    "started": 1795491616.4481823,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 867,
+      "prompt_tokens": 8772,
+      "total_tokens": 9639,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 8772
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 4.783
+  },
+  {
+    "call_id": "v3_09",
+    "provider": "deepseek",
+    "purpose": "independent_fact_verification_dna_replication",
+    "status": "ok",
+    "started": 1795492027.7100096,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 1308,
+      "prompt_tokens": 13888,
+      "total_tokens": 15196,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 384
+      },
+      "prompt_cache_hit_tokens": 384,
+      "prompt_cache_miss_tokens": 13504
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 7.326
+  },
+  {
+    "call_id": "v3_10",
+    "provider": "qwen",
+    "purpose": "science_video_review",
+    "status": "error",
+    "started": 1795492152.3392117,
+    "retries": 0,
+    "requested_model": "qwen4-max",
+    "error_type": "JSONDecodeError",
+    "http_status": null,
+    "elapsed_seconds": 101.822,
+    "usage": {
+      "completion_tokens": 9000,
+      "prompt_tokens": 35275,
+      "total_tokens": 44275,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 5664,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 512,
+        "image_tokens": 4643,
+        "video_tokens": 13367,
+        "text_tokens": 17265
+      }
+    },
+    "finish_reason": "length",
+    "response_model": "qwen4-max",
+    "root_cause": "MODEL_OUTPUT_TRUNCATED"
+  },
+  {
+    "call_id": "v3_11",
+    "provider": "qwen",
+    "purpose": "science_video_review",
+    "status": "ok",
+    "started": 1795492684.588237,
+    "retries": 0,
+    "requested_model": "qwen4-max",
+    "request_profile": {
+      "max_completion_tokens": 12000,
+      "thinking_budget": 4096
+    },
+    "usage": {
+      "completion_tokens": 3449,
+      "prompt_tokens": 35347,
+      "total_tokens": 38796,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 2228,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "image_tokens": 4643,
+        "video_tokens": 13367,
+        "text_tokens": 17337
+      }
+    },
+    "response_model": "qwen4-max",
+    "elapsed_seconds": 44.495
+  }
+]

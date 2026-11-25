@@ -1,0 +1,792 @@
+{
+  "groups": [
+    {
+      "group": "A0_baseline",
+      "experiment_success": true,
+      "valid_video": true,
+      "new_render": false,
+      "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/groups/A0_baseline/video.mp4",
+      "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/groups/A0_baseline/rendered_code.py",
+      "video_sha256": "c19f6640b5839d5eb0ffbb843884e82b98e2ccbc20406509955b6872cacc5469",
+      "code_sha256": "3b219e7c296b84ae4f31ab21cd25ba49ad8fc6c041e9b12379f8168134406216",
+      "duration_seconds": 35.4,
+      "resolution": "854x480",
+      "fps": "15/1",
+      "audio_present": false,
+      "coder_calls": 0,
+      "critic_calls": 0,
+      "known_prompt_tokens": 0,
+      "known_completion_tokens": 0,
+      "unknown_usage_calls": 0,
+      "transaction_attempts": 0,
+      "transaction_commits": 0,
+      "failed_candidates_or_rollbacks": 0,
+      "interrupted_attempts": [],
+      "measured_active_seconds": null,
+      "time_definition": "Sum of recorded API and transaction wall times; excludes human inspection/pauses; interrupted attempt time may be unavailable.",
+      "human_animation_code_edits": false,
+      "note": "Exact frozen copy; no new API or render. Copy duration was not timed.",
+      "comparison_frame_times": {
+        "event_1_fork": 1.7,
+        "event_2_priming": 6,
+        "event_3_extension": 14,
+        "event_4_two_modes": 23,
+        "event_5_maturation": 31.5
+      },
+      "SVG_asset_types_in_code": [],
+      "completed_full_render_attempts": 0,
+      "verified_full_render_outputs": 0,
+      "render_success_rate": null,
+      "experiment_failed_update_rollbacks": 0,
+      "render_attempt_details": [],
+      "engineering_success": true,
+      "fully_mechanism_validated": false,
+      "ready_for_teaching_without_review": false,
+      "biological_check_summary": {
+        "pass": 2,
+        "fail": 1,
+        "uncertain": 5
+      }
+    },
+    {
+      "group": "A1_mechanism",
+      "experiment_success": true,
+      "valid_video": true,
+      "new_render": true,
+      "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/groups/A1_mechanism/video.mp4",
+      "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/groups/A1_mechanism/rendered_code.py",
+      "video_sha256": "539370b925ceb5b83062235a710dd7afa6d69f6b203485fd4b5382a4c9684782",
+      "code_sha256": "9cb0faf383aaa908be17ac47069cd597c3615731e4f3c93c96cff9c049536e4f",
+      "duration_seconds": 26.866667,
+      "resolution": "854x480",
+      "fps": "15/1",
+      "audio_present": false,
+      "coder_calls": 3,
+      "critic_calls": 0,
+      "known_prompt_tokens": 28283,
+      "known_completion_tokens": 18025,
+      "unknown_usage_calls": 0,
+      "transaction_attempts": 5,
+      "transaction_commits": 2,
+      "failed_candidates_or_rollbacks": 3,
+      "interrupted_attempts": [],
+      "measured_active_seconds": 121.325,
+      "time_definition": "Sum of recorded API and transaction wall times; excludes human inspection/pauses; interrupted attempt time may be unavailable.",
+      "human_animation_code_edits": false,
+      "layout_metrics": {
+        "out_of_frame": 0,
+        "label_overlaps": 0,
+        "binding_violations": 0,
+        "sudden_jumps": 4
+      },
+      "registered_labels": 0,
+      "label_detection_status": "uncertain: generated code did not register text labels",
+      "mechanism_evidence": {
+        "first_RNA": 3.6000000000000045,
+        "first_DNA": 8.933333333333321,
+        "fill_nucleotides": [
+          {
+            "id": "nucleotide_lagging_fill_1_01",
+            "role": "nucleotide",
+            "strand": "lagging",
+            "fragment": "lagging_1",
+            "material": "DNA",
+            "first_visible": 19.533333333333285,
+            "last_visible": 26.866666666666593,
+            "final_x": 0.6799999999999998
+          },
+          {
+            "id": "nucleotide_lagging_fill_1_02",
+            "role": "nucleotide",
+            "strand": "lagging",
+            "fragment": "lagging_1",
+            "material": "DNA",
+            "first_visible": 19.533333333333285,
+            "last_visible": 26.866666666666593,
+            "final_x": 1.4899999999999998
+          },
+          {
+            "id": "nucleotide_lagging_fill_1_03",
+            "role": "nucleotide",
+            "strand": "lagging",
+            "fragment": "lagging_1",
+            "material": "DNA",
+            "first_visible": 19.79999999999995,
+            "last_visible": 26.866666666666593,
+            "final_x": 2.3
+          }
+        ],
+        "actual_event_markers": [
+          {
+            "id": "event_1_fork",
+            "time": 0.0
+          },
+          {
+            "id": "event_2_priming",
+            "time": 2.733333333333335
+          },
+          {
+            "id": "event_3_extension",
+            "time": 8.066666666666658
+          },
+          {
+            "id": "event_4_two_modes",
+            "time": 11.866666666666644
+          },
+          {
+            "id": "event_5_maturation",
+            "time": 17.39999999999996
+          }
+        ]
+      },
+      "comparison_frame_times": {
+        "event_1_fork": 1.3666666666666676,
+        "event_2_priming": 5.399999999999997,
+        "event_3_extension": 9.96666666666665,
+        "event_4_two_modes": 14.6333333333333,
+        "event_5_maturation": 22.133333499999978
+      },
+      "SVG_asset_types_in_code": [],
+      "completed_full_render_attempts": 5,
+      "verified_full_render_outputs": 5,
+      "render_success_rate": 1.0,
+      "experiment_failed_update_rollbacks": 0,
+      "render_attempt_details": [
+        {
+          "tag": "checker_fixed_replay_candidate_2",
+          "full_video_decodes": true,
+          "committed": true
+        },
+        {
+          "tag": "coder_attempt_1",
+          "full_video_decodes": true,
+          "committed": false
+        },
+        {
+          "tag": "coder_attempt_2",
+          "full_video_decodes": true,
+          "committed": false
+        },
+        {
+          "tag": "coder_attempt_3",
+          "full_video_decodes": true,
+          "committed": false
+        },
+        {
+          "tag": "group_visibility_observer_replay",
+          "full_video_decodes": true,
+          "committed": true
+        }
+      ],
+      "engineering_success": true,
+      "fully_mechanism_validated": false,
+      "ready_for_teaching_without_review": false,
+      "biological_check_summary": {
+        "pass": 5,
+        "fail": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "group": "A2_mechanism_assets",
+      "experiment_success": true,
+      "valid_video": true,
+      "new_render": true,
+      "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/groups/A2_mechanism_assets/video.mp4",
+      "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/groups/A2_mechanism_assets/rendered_code.py",
+      "video_sha256": "4154b5fef41c8552ea8fe42b06d346a1a3fb2b02888b66db35238b3bd4cb5459",
+      "code_sha256": "e5f38e4e57705e32e86a8e689e4a4d0b57a2a390322e8c7aeefb9218dab696cf",
+      "duration_seconds": 33.466667,
+      "resolution": "854x480",
+      "fps": "15/1",
+      "audio_present": false,
+      "coder_calls": 3,
+      "critic_calls": 0,
+      "known_prompt_tokens": 34185,
+      "known_completion_tokens": 20874,
+      "unknown_usage_calls": 0,
+      "transaction_attempts": 4,
+      "transaction_commits": 2,
+      "failed_candidates_or_rollbacks": 2,
+      "interrupted_attempts": [
+        "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/groups/A2_mechanism_assets/attempts/coder_attempt_2"
+      ],
+      "measured_active_seconds": 117.027,
+      "time_definition": "Sum of recorded API and transaction wall times; excludes human inspection/pauses; interrupted attempt time may be unavailable.",
+      "human_animation_code_edits": false,
+      "layout_metrics": {
+        "out_of_frame": 0,
+        "label_overlaps": 0,
+        "binding_violations": 0,
+        "sudden_jumps": 0
+      },
+      "registered_labels": 0,
+      "label_detection_status": "uncertain: generated code did not register text labels",
+      "mechanism_evidence": {
+        "first_RNA": 3.866666666666672,
+        "first_DNA": 9.33333333333332,
+        "fill_nucleotides": [
+          {
+            "id": "fill_dna_00",
+            "role": "nucleotide",
+            "strand": "lagging",
+            "fragment": "okazaki_1",
+            "material": "DNA",
+            "first_visible": 28.533333333333253,
+            "last_visible": 33.46666666666665,
+            "final_x": 2.091666666666667
+          },
+          {
+            "id": "fill_dna_01",
+            "role": "nucleotide",
+            "strand": "lagging",
+            "fragment": "okazaki_1",
+            "material": "DNA",
+            "first_visible": 28.79999999999992,
+            "last_visible": 33.46666666666665,
+            "final_x": 2.2750000000000004
+          },
+          {
+            "id": "fill_dna_02",
+            "role": "nucleotide",
+            "strand": "lagging",
+            "fragment": "okazaki_1",
+            "material": "DNA",
+            "first_visible": 29.066666666666585,
+            "last_visible": 33.46666666666665,
+            "final_x": 2.458333333333333
+          }
+        ],
+        "actual_event_markers": [
+          {
+            "id": "event_1_fork",
+            "time": 0.0
+          },
+          {
+            "id": "event_2_priming",
+            "time": 3.0000000000000027
+          },
+          {
+            "id": "event_3_extension",
+            "time": 8.333333333333323
+          },
+          {
+            "id": "event_4_two_modes",
+            "time": 18.399999999999956
+          },
+          {
+            "id": "event_5_maturation",
+            "time": 27.066666666666592
+          }
+        ]
+      },
+      "comparison_frame_times": {
+        "event_1_fork": 1.5000000000000013,
+        "event_2_priming": 5.6666666666666625,
+        "event_3_extension": 13.366666666666639,
+        "event_4_two_modes": 22.733333333333274,
+        "event_5_maturation": 30.266666833333296
+      },
+      "SVG_asset_types_in_code": [
+        "dna_ligase",
+        "dna_polymerase",
+        "nucleotide",
+        "primase"
+      ],
+      "completed_full_render_attempts": 4,
+      "verified_full_render_outputs": 3,
+      "render_success_rate": 0.75,
+      "experiment_failed_update_rollbacks": 0,
+      "render_attempt_details": [
+        {
+          "tag": "checker_fixed_replay_candidate_2",
+          "full_video_decodes": true,
+          "committed": false
+        },
+        {
+          "tag": "coder_attempt_1",
+          "full_video_decodes": false,
+          "committed": false
+        },
+        {
+          "tag": "coder_attempt_3_after_checker_fix",
+          "full_video_decodes": true,
+          "committed": true
+        },
+        {
+          "tag": "group_visibility_observer_replay",
+          "full_video_decodes": true,
+          "committed": true
+        }
+      ],
+      "engineering_success": true,
+      "fully_mechanism_validated": false,
+      "ready_for_teaching_without_review": false,
+      "biological_check_summary": {
+        "pass": 5,
+        "fail": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "group": "A3_mechanism_assets_critic",
+      "experiment_success": false,
+      "valid_video": true,
+      "new_render": false,
+      "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/groups/A3_mechanism_assets_critic/video.mp4",
+      "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/groups/A3_mechanism_assets_critic/rendered_code.py",
+      "video_sha256": "4154b5fef41c8552ea8fe42b06d346a1a3fb2b02888b66db35238b3bd4cb5459",
+      "code_sha256": "e5f38e4e57705e32e86a8e689e4a4d0b57a2a390322e8c7aeefb9218dab696cf",
+      "duration_seconds": 33.466667,
+      "resolution": "854x480",
+      "fps": "15/1",
+      "audio_present": false,
+      "coder_calls": 0,
+      "critic_calls": 1,
+      "known_prompt_tokens": 0,
+      "known_completion_tokens": 0,
+      "unknown_usage_calls": 1,
+      "transaction_attempts": 0,
+      "transaction_commits": 0,
+      "failed_candidates_or_rollbacks": 0,
+      "interrupted_attempts": [],
+      "measured_active_seconds": 180.357,
+      "time_definition": "Sum of recorded API and transaction wall times; excludes human inspection/pauses; interrupted attempt time may be unavailable.",
+      "human_animation_code_edits": false,
+      "note": "Critic API timeout; video is the explicitly allowed A2 initial copy, not a Critic-refined result.",
+      "critic_rounds": [
+        {
+          "round": 1,
+          "status": "API_timeout_no_feedback",
+          "committed": false,
+          "new_render": false,
+          "elapsed_seconds": 180.357
+        },
+        {
+          "round": 2,
+          "status": "skipped_due_to_round1_API_failure"
+        }
+      ],
+      "layout_metrics": {
+        "out_of_frame": 0,
+        "label_overlaps": 0,
+        "binding_violations": 0,
+        "sudden_jumps": 0
+      },
+      "registered_labels": 0,
+      "label_detection_status": "uncertain: generated code did not register text labels",
+      "mechanism_evidence": {
+        "first_RNA": 3.866666666666672,
+        "first_DNA": 9.33333333333332,
+        "fill_nucleotides": [
+          {
+            "id": "fill_dna_00",
+            "role": "nucleotide",
+            "strand": "lagging",
+            "fragment": "okazaki_1",
+            "material": "DNA",
+            "first_visible": 28.533333333333253,
+            "last_visible": 33.46666666666665,
+            "final_x": 2.091666666666667
+          },
+          {
+            "id": "fill_dna_01",
+            "role": "nucleotide",
+            "strand": "lagging",
+            "fragment": "okazaki_1",
+            "material": "DNA",
+            "first_visible": 28.79999999999992,
+            "last_visible": 33.46666666666665,
+            "final_x": 2.2750000000000004
+          },
+          {
+            "id": "fill_dna_02",
+            "role": "nucleotide",
+            "strand": "lagging",
+            "fragment": "okazaki_1",
+            "material": "DNA",
+            "first_visible": 29.066666666666585,
+            "last_visible": 33.46666666666665,
+            "final_x": 2.458333333333333
+          }
+        ],
+        "actual_event_markers": [
+          {
+            "id": "event_1_fork",
+            "time": 0.0
+          },
+          {
+            "id": "event_2_priming",
+            "time": 3.0000000000000027
+          },
+          {
+            "id": "event_3_extension",
+            "time": 8.333333333333323
+          },
+          {
+            "id": "event_4_two_modes",
+            "time": 18.399999999999956
+          },
+          {
+            "id": "event_5_maturation",
+            "time": 27.066666666666592
+          }
+        ]
+      },
+      "comparison_frame_times": {
+        "event_1_fork": 1.5000000000000013,
+        "event_2_priming": 5.6666666666666625,
+        "event_3_extension": 13.366666666666639,
+        "event_4_two_modes": 22.733333333333274,
+        "event_5_maturation": 30.266666833333296
+      },
+      "SVG_asset_types_in_code": [
+        "dna_ligase",
+        "dna_polymerase",
+        "nucleotide",
+        "primase"
+      ],
+      "completed_full_render_attempts": 0,
+      "verified_full_render_outputs": 0,
+      "render_success_rate": null,
+      "experiment_failed_update_rollbacks": 0,
+      "render_attempt_details": [],
+      "engineering_success": false,
+      "fully_mechanism_validated": false,
+      "ready_for_teaching_without_review": false,
+      "biological_check_summary": {
+        "pass": 5,
+        "fail": 1,
+        "uncertain": 2
+      }
+    }
+  ],
+  "api_calls": [
+    {
+      "call_id": "deepseek_01",
+      "provider": "deepseek",
+      "stage": "A1_mechanism:initial",
+      "model": "deepseek-flash",
+      "status": "ok",
+      "started_utc": "2026-11-23T09:53:28Z",
+      "usage": {
+        "completion_tokens": 6086,
+        "prompt_tokens": 4014,
+        "total_tokens": 10100,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 4014
+      },
+      "response_model": "deepseek-flash",
+      "elapsed_seconds": 21.937
+    },
+    {
+      "call_id": "deepseek_02",
+      "provider": "deepseek",
+      "stage": "A1_mechanism:automatic_repair",
+      "model": "deepseek-flash",
+      "status": "ok",
+      "started_utc": "2026-11-23T09:54:03Z",
+      "usage": {
+        "completion_tokens": 5928,
+        "prompt_tokens": 12240,
+        "total_tokens": 18168,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 3968
+        },
+        "prompt_cache_hit_tokens": 3968,
+        "prompt_cache_miss_tokens": 8272
+      },
+      "response_model": "deepseek-flash",
+      "elapsed_seconds": 17.827
+    },
+    {
+      "call_id": "deepseek_03",
+      "provider": "deepseek",
+      "stage": "A1_mechanism:automatic_repair",
+      "model": "deepseek-flash",
+      "status": "ok",
+      "started_utc": "2026-11-23T09:54:34Z",
+      "usage": {
+        "completion_tokens": 6011,
+        "prompt_tokens": 12029,
+        "total_tokens": 18040,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 3968
+        },
+        "prompt_cache_hit_tokens": 3968,
+        "prompt_cache_miss_tokens": 8061
+      },
+      "response_model": "deepseek-flash",
+      "elapsed_seconds": 18.91
+    },
+    {
+      "call_id": "deepseek_04",
+      "provider": "deepseek",
+      "stage": "A2_mechanism_assets:initial",
+      "model": "deepseek-flash",
+      "status": "ok",
+      "started_utc": "2026-11-23T09:55:03Z",
+      "usage": {
+        "completion_tokens": 7422,
+        "prompt_tokens": 5364,
+        "total_tokens": 12786,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 3968
+        },
+        "prompt_cache_hit_tokens": 3968,
+        "prompt_cache_miss_tokens": 1396
+      },
+      "response_model": "deepseek-flash",
+      "elapsed_seconds": 26.501
+    },
+    {
+      "call_id": "deepseek_05",
+      "provider": "deepseek",
+      "stage": "A2_mechanism_assets:automatic_repair",
+      "model": "deepseek-flash",
+      "status": "ok",
+      "started_utc": "2026-11-23T09:55:39Z",
+      "usage": {
+        "completion_tokens": 6670,
+        "prompt_tokens": 14841,
+        "total_tokens": 21511,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 5248
+        },
+        "prompt_cache_hit_tokens": 5248,
+        "prompt_cache_miss_tokens": 9593
+      },
+      "response_model": "deepseek-flash",
+      "elapsed_seconds": 19.331
+    },
+    {
+      "call_id": "deepseek_06",
+      "provider": "deepseek",
+      "stage": "A2:automatic_repair_after_checker_fix",
+      "model": "deepseek-flash",
+      "status": "ok",
+      "started_utc": "2026-11-23T09:59:11Z",
+      "usage": {
+        "completion_tokens": 6782,
+        "prompt_tokens": 13980,
+        "total_tokens": 20762,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 5248
+        },
+        "prompt_cache_hit_tokens": 5248,
+        "prompt_cache_miss_tokens": 8732
+      },
+      "response_model": "deepseek-flash",
+      "elapsed_seconds": 18.487
+    },
+    {
+      "call_id": "qwen_01",
+      "provider": "qwen",
+      "stage": "A3:critic_round_1",
+      "model": "qwen4-max",
+      "status": "error",
+      "started_utc": "2026-11-23T09:59:45Z",
+      "error_type": "APITimeoutError",
+      "http_status": null,
+      "elapsed_seconds": 180.357
+    }
+  ],
+  "call_counts": {
+    "deepseek": 6,
+    "qwen": 1,
+    "wan": 0
+  },
+  "token_usage": {
+    "deepseek": {
+      "prompt_tokens": 62468,
+      "completion_tokens": 38899,
+      "total_tokens": 101367
+    },
+    "qwen": {
+      "prompt_tokens": null,
+      "completion_tokens": null,
+      "total_tokens": null
+    }
+  },
+  "limits": {
+    "MAX_DEEPSEEK_CALLS": 8,
+    "MAX_QWEN_CALLS": 2,
+    "MAX_WAN_JOBS": 1,
+    "ENABLE_WAN": 0
+  },
+  "actual_bill": null,
+  "code_fix_success_rate": {
+    "A3": null,
+    "reason": "No Critic response or repair candidate was produced"
+  },
+  "pipeline_tests": {
+    "all_passed": true,
+    "api_calls": 0,
+    "fixture_note": "Handwritten tiny fixture animations are environment/transaction tests only, never A1/A2 Agent results.",
+    "tests": [
+      {
+        "name": "historical_indent_reproduced_section2",
+        "pass": true,
+        "evidence": "Exact historical source and feedback replayed against original GridCodeModifier"
+      },
+      {
+        "name": "historical_indent_reproduced_section4",
+        "pass": true,
+        "evidence": "Exact historical source and feedback replayed against original GridCodeModifier"
+      },
+      {
+        "name": "indentation_not_committed",
+        "pass": true,
+        "evidence": {
+          "tag": "bad_indent",
+          "committed": false,
+          "before": {
+            "success": true,
+            "tag": "initial_fixture",
+            "code_sha256": "b4221e3d274851178b7be669d9f8e75fe2fc67b787ae0b6c496931c2949d3184",
+            "video_sha256": "937cb682eac7f3c24e06f314b11b4e845ae38da27f3fc02b75db65bc4bfef7db",
+            "duration_seconds": 0.466667,
+            "renderer": "manim-0.19.0-full-render",
+            "trace_sha256": "dbfcd49cb48b43bfca864cbfca99e5d1626db4d717d7e45e7c1b0651d6324e32",
+            "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture",
+            "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture/rendered_code.py",
+            "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture/video.mp4"
+          },
+          "started": 1795428306.1391857,
+          "error_type": "IndentationError",
+          "error": "unindent does not match any outer indentation level (<unknown>, line 6)",
+          "after": {
+            "success": true,
+            "tag": "initial_fixture",
+            "code_sha256": "b4221e3d274851178b7be669d9f8e75fe2fc67b787ae0b6c496931c2949d3184",
+            "video_sha256": "937cb682eac7f3c24e06f314b11b4e845ae38da27f3fc02b75db65bc4bfef7db",
+            "duration_seconds": 0.466667,
+            "renderer": "manim-0.19.0-full-render",
+            "trace_sha256": "dbfcd49cb48b43bfca864cbfca99e5d1626db4d717d7e45e7c1b0651d6324e32",
+            "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture",
+            "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture/rendered_code.py",
+            "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture/video.mp4"
+          },
+          "elapsed_seconds": 0.001
+        }
+      },
+      {
+        "name": "render_failure_rolls_back_code_and_video",
+        "pass": true,
+        "evidence": {
+          "tag": "render_exception",
+          "committed": false,
+          "before": {
+            "success": true,
+            "tag": "initial_fixture",
+            "code_sha256": "b4221e3d274851178b7be669d9f8e75fe2fc67b787ae0b6c496931c2949d3184",
+            "video_sha256": "937cb682eac7f3c24e06f314b11b4e845ae38da27f3fc02b75db65bc4bfef7db",
+            "duration_seconds": 0.466667,
+            "renderer": "manim-0.19.0-full-render",
+            "trace_sha256": "dbfcd49cb48b43bfca864cbfca99e5d1626db4d717d7e45e7c1b0651d6324e32",
+            "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture",
+            "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture/rendered_code.py",
+            "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture/video.mp4"
+          },
+          "started": 1795428306.142648,
+          "error_type": "AssertionError",
+          "error": "Full Manim render failed; see stderr.log",
+          "after": {
+            "success": true,
+            "tag": "initial_fixture",
+            "code_sha256": "b4221e3d274851178b7be669d9f8e75fe2fc67b787ae0b6c496931c2949d3184",
+            "video_sha256": "937cb682eac7f3c24e06f314b11b4e845ae38da27f3fc02b75db65bc4bfef7db",
+            "duration_seconds": 0.466667,
+            "renderer": "manim-0.19.0-full-render",
+            "trace_sha256": "dbfcd49cb48b43bfca864cbfca99e5d1626db4d717d7e45e7c1b0651d6324e32",
+            "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture",
+            "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture/rendered_code.py",
+            "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture/video.mp4"
+          },
+          "elapsed_seconds": 1.788
+        }
+      },
+      {
+        "name": "paired_hashes_match_manifest",
+        "pass": true,
+        "evidence": {
+          "success": true,
+          "tag": "initial_fixture",
+          "code_sha256": "b4221e3d274851178b7be669d9f8e75fe2fc67b787ae0b6c496931c2949d3184",
+          "video_sha256": "937cb682eac7f3c24e06f314b11b4e845ae38da27f3fc02b75db65bc4bfef7db",
+          "duration_seconds": 0.466667,
+          "renderer": "manim-0.19.0-full-render",
+          "trace_sha256": "dbfcd49cb48b43bfca864cbfca99e5d1626db4d717d7e45e7c1b0651d6324e32",
+          "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture",
+          "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture/rendered_code.py",
+          "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/initial_fixture/video.mp4"
+        }
+      },
+      {
+        "name": "unknown_object_rejected",
+        "pass": true,
+        "evidence": "No model or arbitrary line edit was called"
+      },
+      {
+        "name": "next_round_reads_new_verified_pair",
+        "pass": true,
+        "evidence": {
+          "success": true,
+          "tag": "valid_function_repair",
+          "code_sha256": "64fddb370e22768c5fdc8e846698c845e00a602cfa7fd89e54675f9f2f082457",
+          "video_sha256": "c528797e811f88fccf23b2c2e3a8b09dc15e86708e654fe4e48ccb3974c20c12",
+          "duration_seconds": 0.466667,
+          "renderer": "manim-0.19.0-full-render",
+          "trace_sha256": "dbfcd49cb48b43bfca864cbfca99e5d1626db4d717d7e45e7c1b0651d6324e32",
+          "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/valid_function_repair",
+          "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/valid_function_repair/rendered_code.py",
+          "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795428303981657265/transaction/versions/valid_function_repair/video.mp4"
+        }
+      },
+      {
+        "name": "binding_switch_only_checks_current_site",
+        "pass": true,
+        "evidence": {
+          "out_of_frame": [],
+          "label_overlaps": [],
+          "binding_violations": [],
+          "sudden_jumps": [],
+          "note": "Geometry heuristics; intentional occlusion and fade transitions need human review."
+        }
+      },
+      {
+        "name": "group_visibility_tracks_drawn_children",
+        "pass": true,
+        "evidence": "A registered group can be visible via individually added children without being a top-level scene object"
+      },
+      {
+        "name": "historical_DNA_helicase_regression_detected",
+        "pass": true,
+        "evidence": {
+          "bbox_separation_scene_units": {
+            "baseline": 0.0,
+            "regressed": 2.3125
+          },
+          "method": "Full historical animations rendered under isolation, AST observer only; not a scientific correctness score"
+        }
+      }
+    ]
+  },
+  "note": "A3 copied video is not counted as a successful Critic render. Heuristic measurements are not scientific proof.",
+  "group_success_definition": "Engineering full-render gate only; not a claim of biological correctness."
+}

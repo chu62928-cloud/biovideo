@@ -1,0 +1,28 @@
+{
+  "tag": "repair_1",
+  "committed": false,
+  "before": {
+    "success": true,
+    "tag": "A2_frozen_source",
+    "code_sha256": "460c467748338a47712726275983d0e28cf8501b76839133136667e5c5cf4228",
+    "video_sha256": "a3064252c8842d0e664207469ee904172b7ae0a0d85fb7b74b6550f4cb1b65ae",
+    "duration_seconds": 32.066667,
+    "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/groups/A3_expert_repair/render/versions/A2_frozen_source",
+    "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/groups/A3_expert_repair/render/versions/A2_frozen_source/rendered_code.py",
+    "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/groups/A3_expert_repair/render/versions/A2_frozen_source/video.mp4"
+  },
+  "started": 1795503407.4933186,
+  "error_type": "ValueError",
+  "error": "Scientific runtime gate requires all necessary checks PASS",
+  "after": {
+    "success": true,
+    "tag": "A2_frozen_source",
+    "code_sha256": "460c467748338a47712726275983d0e28cf8501b76839133136667e5c5cf4228",
+    "video_sha256": "a3064252c8842d0e664207469ee904172b7ae0a0d85fb7b74b6550f4cb1b65ae",
+    "duration_seconds": 32.066667,
+    "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/groups/A3_expert_repair/render/versions/A2_frozen_source",
+    "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/groups/A3_expert_repair/render/versions/A2_frozen_source/rendered_code.py",
+    "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/groups/A3_expert_repair/render/versions/A2_frozen_source/video.mp4"
+  },
+  "elapsed_seconds": 38.689
+}

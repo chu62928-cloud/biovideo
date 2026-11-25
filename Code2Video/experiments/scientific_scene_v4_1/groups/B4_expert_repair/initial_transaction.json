@@ -1,0 +1,19 @@
+{
+  "tag": "initial",
+  "committed": true,
+  "before": null,
+  "started": 1795509541.0249286,
+  "after": {
+    "success": true,
+    "tag": "initial",
+    "code_sha256": "095607a211f2bb42bb11c099bf5fe6a3c5e7ae2ad64ea967789fcbfa9d9b45ad",
+    "video_sha256": "eb443eea4fd4bf5627fe1269a9153680c56e6543bca262ec27c90999803447e3",
+    "duration_seconds": 31.933333,
+    "renderer": "manim-0.19.0-full-render",
+    "trace_sha256": "5119455b1f1d24d2686263b2167d52af787e1b929cfbc62d7ad8f16ca503afa9",
+    "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/B4_expert_repair/render/versions/initial",
+    "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/B4_expert_repair/render/versions/initial/rendered_code.py",
+    "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/B4_expert_repair/render/versions/initial/video.mp4"
+  },
+  "elapsed_seconds": 53.893
+}

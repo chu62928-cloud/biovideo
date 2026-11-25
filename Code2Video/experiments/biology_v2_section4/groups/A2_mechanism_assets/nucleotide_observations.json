@@ -1,0 +1,352 @@
+[
+  {
+    "id": "rna_primer_lead_00",
+    "role": "nucleotide",
+    "strand": "leading",
+    "material": "RNA",
+    "fragment": "leading",
+    "first_visible": 3.866666666666672,
+    "last_visible": 33.46666666666665,
+    "final_x": -1.30625
+  },
+  {
+    "id": "rna_primer_lead_01",
+    "role": "nucleotide",
+    "strand": "leading",
+    "material": "RNA",
+    "fragment": "leading",
+    "first_visible": 4.400000000000004,
+    "last_visible": 33.46666666666665,
+    "final_x": -1.11875
+  },
+  {
+    "id": "rna_primer_lead_02",
+    "role": "nucleotide",
+    "strand": "leading",
+    "material": "RNA",
+    "fragment": "leading",
+    "first_visible": 4.733333333333336,
+    "last_visible": 33.46666666666665,
+    "final_x": -0.9312499999999999
+  },
+  {
+    "id": "rna_primer_lead_03",
+    "role": "nucleotide",
+    "strand": "leading",
+    "material": "RNA",
+    "fragment": "leading",
+    "first_visible": 5.066666666666668,
+    "last_visible": 33.46666666666665,
+    "final_x": -0.7437499999999999
+  },
+  {
+    "id": "nucleotide_leading_00",
+    "role": "nucleotide",
+    "strand": "leading",
+    "fragment": "leading",
+    "material": "DNA",
+    "first_visible": 9.33333333333332,
+    "last_visible": 33.46666666666665,
+    "final_x": -0.4749999999999999
+  },
+  {
+    "id": "nucleotide_leading_01",
+    "role": "nucleotide",
+    "strand": "leading",
+    "fragment": "leading",
+    "material": "DNA",
+    "first_visible": 9.666666666666652,
+    "last_visible": 33.46666666666665,
+    "final_x": -0.12499999999999996
+  },
+  {
+    "id": "nucleotide_leading_02",
+    "role": "nucleotide",
+    "strand": "leading",
+    "fragment": "leading",
+    "material": "DNA",
+    "first_visible": 9.999999999999984,
+    "last_visible": 33.46666666666665,
+    "final_x": 0.22500000000000003
+  },
+  {
+    "id": "nucleotide_leading_03",
+    "role": "nucleotide",
+    "strand": "leading",
+    "fragment": "leading",
+    "material": "DNA",
+    "first_visible": 10.333333333333316,
+    "last_visible": 33.46666666666665,
+    "final_x": 0.575
+  },
+  {
+    "id": "nucleotide_leading_04",
+    "role": "nucleotide",
+    "strand": "leading",
+    "fragment": "leading",
+    "material": "DNA",
+    "first_visible": 10.666666666666648,
+    "last_visible": 33.46666666666665,
+    "final_x": 0.925
+  },
+  {
+    "id": "nucleotide_leading_05",
+    "role": "nucleotide",
+    "strand": "leading",
+    "fragment": "leading",
+    "material": "DNA",
+    "first_visible": 10.99999999999998,
+    "last_visible": 33.46666666666665,
+    "final_x": 1.2750000000000001
+  },
+  {
+    "id": "nucleotide_leading_06",
+    "role": "nucleotide",
+    "strand": "leading",
+    "fragment": "leading",
+    "material": "DNA",
+    "first_visible": 11.333333333333313,
+    "last_visible": 33.46666666666665,
+    "final_x": 1.6249999999999998
+  },
+  {
+    "id": "nucleotide_leading_07",
+    "role": "nucleotide",
+    "strand": "leading",
+    "fragment": "leading",
+    "material": "DNA",
+    "first_visible": 11.666666666666645,
+    "last_visible": 33.46666666666665,
+    "final_x": 1.9749999999999999
+  },
+  {
+    "id": "nucleotide_leading_08",
+    "role": "nucleotide",
+    "strand": "leading",
+    "fragment": "leading",
+    "material": "DNA",
+    "first_visible": 11.999999999999977,
+    "last_visible": 33.46666666666665,
+    "final_x": 2.3249999999999997
+  },
+  {
+    "id": "nucleotide_leading_09",
+    "role": "nucleotide",
+    "strand": "leading",
+    "fragment": "leading",
+    "material": "DNA",
+    "first_visible": 12.333333333333309,
+    "last_visible": 33.46666666666665,
+    "final_x": 2.675
+  },
+  {
+    "id": "nucleotide_leading_10",
+    "role": "nucleotide",
+    "strand": "leading",
+    "fragment": "leading",
+    "material": "DNA",
+    "first_visible": 12.666666666666641,
+    "last_visible": 33.46666666666665,
+    "final_x": 3.025
+  },
+  {
+    "id": "nucleotide_leading_11",
+    "role": "nucleotide",
+    "strand": "leading",
+    "fragment": "leading",
+    "material": "DNA",
+    "first_visible": 12.999999999999973,
+    "last_visible": 33.46666666666665,
+    "final_x": 3.3749999999999996
+  },
+  {
+    "id": "nucleotide_leading_12",
+    "role": "nucleotide",
+    "strand": "leading",
+    "fragment": "leading",
+    "material": "DNA",
+    "first_visible": 13.333333333333306,
+    "last_visible": 33.46666666666665,
+    "final_x": 3.724999999999999
+  },
+  {
+    "id": "nucleotide_leading_13",
+    "role": "nucleotide",
+    "strand": "leading",
+    "fragment": "leading",
+    "material": "DNA",
+    "first_visible": 13.666666666666638,
+    "last_visible": 33.46666666666665,
+    "final_x": 4.075
+  },
+  {
+    "id": "nucleotide_leading_14",
+    "role": "nucleotide",
+    "strand": "leading",
+    "fragment": "leading",
+    "material": "DNA",
+    "first_visible": 13.99999999999997,
+    "last_visible": 33.46666666666665,
+    "final_x": 4.425
+  },
+  {
+    "id": "rna_primer_lagging_1_00",
+    "role": "nucleotide",
+    "strand": "lagging",
+    "material": "RNA",
+    "fragment": "okazaki_1",
+    "first_visible": 18.933333333333287,
+    "last_visible": 27.599999999999923,
+    "final_x": 2.091666666666667
+  },
+  {
+    "id": "rna_primer_lagging_1_01",
+    "role": "nucleotide",
+    "strand": "lagging",
+    "material": "RNA",
+    "fragment": "okazaki_1",
+    "first_visible": 18.933333333333287,
+    "last_visible": 27.599999999999923,
+    "final_x": 2.2750000000000004
+  },
+  {
+    "id": "rna_primer_lagging_1_02",
+    "role": "nucleotide",
+    "strand": "lagging",
+    "material": "RNA",
+    "fragment": "okazaki_1",
+    "first_visible": 18.933333333333287,
+    "last_visible": 27.599999999999923,
+    "final_x": 2.458333333333333
+  },
+  {
+    "id": "okazaki_fragment_1_00",
+    "role": "nucleotide",
+    "strand": "lagging",
+    "fragment": "okazaki_1",
+    "material": "DNA",
+    "first_visible": 20.53333333333328,
+    "last_visible": 33.46666666666665,
+    "final_x": 1.8599999999999999
+  },
+  {
+    "id": "okazaki_fragment_1_01",
+    "role": "nucleotide",
+    "strand": "lagging",
+    "fragment": "okazaki_1",
+    "material": "DNA",
+    "first_visible": 20.799999999999947,
+    "last_visible": 33.46666666666665,
+    "final_x": 1.58
+  },
+  {
+    "id": "okazaki_fragment_1_02",
+    "role": "nucleotide",
+    "strand": "lagging",
+    "fragment": "okazaki_1",
+    "material": "DNA",
+    "first_visible": 21.066666666666613,
+    "last_visible": 33.46666666666665,
+    "final_x": 1.2999999999999998
+  },
+  {
+    "id": "okazaki_fragment_1_03",
+    "role": "nucleotide",
+    "strand": "lagging",
+    "fragment": "okazaki_1",
+    "material": "DNA",
+    "first_visible": 21.33333333333328,
+    "last_visible": 33.46666666666665,
+    "final_x": 1.02
+  },
+  {
+    "id": "rna_primer_lagging_2_00",
+    "role": "nucleotide",
+    "strand": "lagging",
+    "material": "RNA",
+    "fragment": "okazaki_2",
+    "first_visible": 21.86666666666661,
+    "last_visible": 33.46666666666665,
+    "final_x": 3.7750000000000004
+  },
+  {
+    "id": "rna_primer_lagging_2_01",
+    "role": "nucleotide",
+    "strand": "lagging",
+    "material": "RNA",
+    "fragment": "okazaki_2",
+    "first_visible": 21.86666666666661,
+    "last_visible": 33.46666666666665,
+    "final_x": 3.925
+  },
+  {
+    "id": "rna_primer_lagging_2_02",
+    "role": "nucleotide",
+    "strand": "lagging",
+    "material": "RNA",
+    "fragment": "okazaki_2",
+    "first_visible": 21.86666666666661,
+    "last_visible": 33.46666666666665,
+    "final_x": 4.075
+  },
+  {
+    "id": "okazaki_fragment_2_00",
+    "role": "nucleotide",
+    "strand": "lagging",
+    "fragment": "okazaki_2",
+    "material": "DNA",
+    "first_visible": 22.466666666666608,
+    "last_visible": 33.46666666666665,
+    "final_x": 3.56
+  },
+  {
+    "id": "okazaki_fragment_2_01",
+    "role": "nucleotide",
+    "strand": "lagging",
+    "fragment": "okazaki_2",
+    "material": "DNA",
+    "first_visible": 22.733333333333274,
+    "last_visible": 33.46666666666665,
+    "final_x": 3.2800000000000002
+  },
+  {
+    "id": "okazaki_fragment_2_02",
+    "role": "nucleotide",
+    "strand": "lagging",
+    "fragment": "okazaki_2",
+    "material": "DNA",
+    "first_visible": 22.99999999999994,
+    "last_visible": 33.46666666666665,
+    "final_x": 3.0000000000000004
+  },
+  {
+    "id": "fill_dna_00",
+    "role": "nucleotide",
+    "strand": "lagging",
+    "fragment": "okazaki_1",
+    "material": "DNA",
+    "first_visible": 28.533333333333253,
+    "last_visible": 33.46666666666665,
+    "final_x": 2.091666666666667
+  },
+  {
+    "id": "fill_dna_01",
+    "role": "nucleotide",
+    "strand": "lagging",
+    "fragment": "okazaki_1",
+    "material": "DNA",
+    "first_visible": 28.79999999999992,
+    "last_visible": 33.46666666666665,
+    "final_x": 2.2750000000000004
+  },
+  {
+    "id": "fill_dna_02",
+    "role": "nucleotide",
+    "strand": "lagging",
+    "fragment": "okazaki_1",
+    "material": "DNA",
+    "first_visible": 29.066666666666585,
+    "last_visible": 33.46666666666665,
+    "final_x": 2.458333333333333
+  }
+]

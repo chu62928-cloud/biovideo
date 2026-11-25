@@ -1,0 +1,126 @@
+{
+  "samples": [
+    {
+      "review_id": "REV-f6b34a068d30",
+      "stage": "SCRIPT",
+      "decision": "PASS",
+      "issues": [],
+      "next_action": "NONE",
+      "artifact_versions": {
+        "samples": "0af6b840ff0ce397a0d6c481039f153322821e063f82c3dfc4d4d4581da18384"
+      },
+      "checks": [
+        "SCRIPT terms: S phase replication, sister chromatids, prophase condensation, metaphase alignment, anaphase sister-chromatid separation, telophase nuclear envelope reformation, mitosis vs cytokinesis all consistent with F1, F3, F6, F7",
+        "Causal order interphase S -> prophase -> metaphase -> anaphase -> telophase -> cytokinesis matches F3",
+        "No meiosis-specific claims; no polarity/topology contradictions",
+        "No unsupported assertion beyond knowledge-pack scope"
+      ],
+      "sample_id": "normal_control"
+    },
+    {
+      "review_id": "REV-97a4a369bfc5",
+      "stage": "SCRIPT",
+      "decision": "REVISE",
+      "issues": [
+        {
+          "issue_id": "I1",
+          "severity": "blocker",
+          "category": "causal_order",
+          "description": "States DNA replication occurs during anaphase of mitosis, placing replication inside M phase; knowledge pack requires replication during S phase of interphase (F1, event M1 constraint 'Replication occurs during interphase, not during mitosis').",
+          "object_ids": [
+            "anaphase",
+            "S phase",
+            "DNA replication"
+          ],
+          "evidence_ids": [
+            "F1"
+          ],
+          "artifact_evidence": {
+            "quote": "DNA is first replicated during anaphase of mitosis."
+          },
+          "root_cause_stage": "SCRIPT",
+          "suggested_repair_scope": "Rewrite opening sentence to state DNA replicates during S phase of interphase, before mitosis."
+        },
+        {
+          "issue_id": "I2",
+          "severity": "blocker",
+          "category": "scientific_identity",
+          "description": "Describes metaphase of ordinary mitosis as homologous chromosome pairing with obligatory crossing over; this is meiosis-specific and contradicts mitotic metaphase alignment of duplicated chromosomes (F3, F4, F5).",
+          "object_ids": [
+            "metaphase",
+            "homologous chromosomes",
+            "crossing over"
+          ],
+          "evidence_ids": [
+            "F3",
+            "F4",
+            "F5"
+          ],
+          "artifact_evidence": {
+            "quote": "At metaphase of ordinary mitosis, homologous chromosomes pair and crossing over is required."
+          },
+          "root_cause_stage": "SCRIPT",
+          "suggested_repair_scope": "Replace with mitotic metaphase description: duplicated chromosomes align at metaphase plate; remove pairing/crossing-over claim or explicitly mark as meiosis."
+        },
+        {
+          "issue_id": "I3",
+          "severity": "blocker",
+          "category": "scientific_identity",
+          "description": "Claims anaphase separates homologous chromosome pairs while sister chromatids remain joined; mitotic anaphase separates sister chromatids toward opposite poles (F5, F8, event M5).",
+          "object_ids": [
+            "anaphase",
+            "sister chromatids",
+            "homologous chromosomes"
+          ],
+          "evidence_ids": [
+            "F5",
+            "F8"
+          ],
+          "artifact_evidence": {
+            "quote": "During anaphase, homologous chromosome pairs separate while sister chromatids stay joined."
+          },
+          "root_cause_stage": "SCRIPT",
+          "suggested_repair_scope": "Rewrite anaphase to describe sister chromatid separation and movement to opposite poles via spindle."
+        },
+        {
+          "issue_id": "I4",
+          "severity": "blocker",
+          "category": "topology_outcome",
+          "description": "States one ordinary mitotic division yields four haploid nuclei; mitosis produces two daughter nuclei each with the same chromosome number as the parent (F3, F7), and four haploid products describe meiosis.",
+          "object_ids": [
+            "mitotic division",
+            "daughter nuclei",
+            "ploidy"
+          ],
+          "evidence_ids": [
+            "F3",
+            "F7"
+          ],
+          "artifact_evidence": {
+            "quote": "A single ordinary mitotic division reduces a diploid nucleus to four haploid daughter nuclei."
+          },
+          "root_cause_stage": "SCRIPT",
+          "suggested_repair_scope": "Rewrite to state one mitotic division yields two daughter nuclei with chromosome number maintained; remove 'four haploid' outcome."
+        }
+      ],
+      "next_action": "CREATE_REPAIR_TASK",
+      "artifact_versions": {
+        "samples": "0af6b840ff0ce397a0d6c481039f153322821e063f82c3dfc4d4d4581da18384"
+      },
+      "checks": [
+        "Order of events checked against F3 mechanism: failed (replication misplaced to anaphase)",
+        "Mitotic identity vs meiosis checked: failed (homologous pairing/crossing over, homolog separation, four haploid products)",
+        "Sister-chromatid topology checked against F5/F8: failed (sister chromatids stated to stay joined during anaphase)",
+        "Cytokinesis vs karyokinesis distinction: absent but not flagged beyond narrow scope; primary blockers are factual contradictions"
+      ],
+      "sample_id": "injected_errors"
+    }
+  ],
+  "provenance": {
+    "mode": "REVALIDATED_SAVED_MODEL_RESPONSE",
+    "source_call": "v3_08",
+    "claims_and_sample_inputs_unchanged": true,
+    "new_model_request": false,
+    "reason": "Fixed source decoding and exact-span validation; original ERROR retained"
+  }
+}

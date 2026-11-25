@@ -1,0 +1,19 @@
+{
+  "tag": "switch_fixture",
+  "committed": true,
+  "before": null,
+  "started": 1795427799.761724,
+  "after": {
+    "success": true,
+    "tag": "switch_fixture",
+    "code_sha256": "5508de4848e8917ce1d30d0cc8dfeab927cd7d847817d49bdefd7edced94af61",
+    "video_sha256": "fad64f12d4b0b1c4f434bb0f3dee0786b8d7b8a1455155dc86c71c35042bf820",
+    "duration_seconds": 0.8,
+    "renderer": "manim-0.19.0-full-render",
+    "trace_sha256": "f7e3166c029f5135a87d3599e073e08d3298eea285d29948e1cf0f34d72a9929",
+    "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795427794262492449/binding_switch/versions/switch_fixture",
+    "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795427794262492449/binding_switch/versions/switch_fixture/rendered_code.py",
+    "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795427794262492449/binding_switch/versions/switch_fixture/video.mp4"
+  },
+  "elapsed_seconds": 2.008
+}

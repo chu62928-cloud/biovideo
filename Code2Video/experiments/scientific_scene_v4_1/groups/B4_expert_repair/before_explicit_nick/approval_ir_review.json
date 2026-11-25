@@ -1,0 +1,1459 @@
+{
+  "review_id": "V4-IR-e8141bbc41",
+  "stage": "SCENE_IR",
+  "decision": "REVISE",
+  "issues": [
+    {
+      "issue_id": "ISSUE-LIGASE-ENDPOINTS",
+      "severity": "blocker",
+      "description": "Ligase seals the nick between gap_fill and fragment_1, but these two DNA objects have overlapping/extending geometry (gap_fill end coincident with fragment_1 start at x=-1.2, yet gap_fill was extended from -0.6 to -1.2 while fragment_1 extends from -1.2 to -3.5). The connection is between the correct biology endpoints, but the ligase is attached to gap_fill at its growing 3' end rather than at the actual nick between gap_fill and fragment_1, and no target anchor pairing (gap_fill.end ↔ fragment_1.start) is visibly established by a common junction. The covalent seal 'connect' transitions use anchor pairs whose coincidence is asserted by the deterministic checker but the drawn geometry shows the two strands merged into a single pass-through line; the sealing junction is not depicted as a true nick being closed.",
+      "root_cause_stage": "SCENE_IR",
+      "target_objects": [
+        "gap_fill",
+        "fragment_1",
+        "ligase"
+      ],
+      "target_events": [
+        "event_5_maturation_maturation_11",
+        "event_5_maturation_maturation_12"
+      ],
+      "repair_scope": "Re-anchor the ligase active site to the gap_fill.end ↔ fragment_1.start nick and ensure the sealed_nick relation is created exactly at that junction, with both DNA segments meeting end-to-end (not overlapping) so the seal is a visible nick closure.",
+      "acceptance_criteria": [
+        "ligase attaches to the shared endpoint of gap_fill.end and fragment_1.start, not gap_fill.center or growing end.",
+        "gap_fill.end and fragment_1.start are coincident within tolerance 0.03 before sealing and remain a single contiguous strand after sealing; no overhang or overlap is drawn.",
+        "The sealed_nick relation is between exactly gap_fill → fragment_1 at those anchors."
+      ]
+    },
+    {
+      "issue_id": "ISSUE-PRIMASE-OVERLAP-LAG",
+      "severity": "major",
+      "description": "In event_4, primase is shown synthesizing the lagging-strand primer rna_primer_lagging_1 centered at [-0.9, -0.386] and rna_primer_lagging_2 at [1.4, -0.064], but these visual centers sit off the template_lagging strand (y=-0.95 for the paired region). RNA primers are objects on the template, so their schematic position should be adjacent to their template footprints at y≈-0.95, not floating above/below the strand by ~0.56–0.89 units. The primer_extension_continuity relations bind primer 'start'/'end' to fragment 'start', but the primer polylines are drawn at y=-0.95 while object centers used for the primase binding are at y=-0.386/-0.064, which is ambiguous about which primer footprint is being extended.",
+      "root_cause_stage": "SCENE_IR",
+      "target_objects": [
+        "primase",
+        "rna_primer_lagging_1",
+        "rna_primer_lagging_2"
+      ],
+      "target_events": [
+        "event_4_two_modes_fragment_synthesis_0",
+        "event_4_two_modes_fragment_synthesis_11"
+      ],
+      "repair_scope": "Keep the primase enzyme center offset above the strand for readability, but place the RNA primer polylines on the template_lagging strand at the footprint of the new fragment (y≈-0.95) so primer_extension_continuity endpoints are geometrically genuine adjacent endpoints.",
+      "acceptance_criteria": [
+        "rna_primer_lagging_1 points lie on/near template_lagging (y within 0.05 of the strand) at the fragment_1 footprint x-range, and rna_primer_lagging_2 similarly at the fragment_2 footprint.",
+        "primer_extension_continuity relation between primer end and fragment start uses genuine adjacent endpoints (measured distance ≤0.03)."
+      ]
+    },
+    {
+      "issue_id": "ISSUE-MATURATION-POL-BINDING",
+      "severity": "minor",
+      "description": "During maturation, Pol delta is shown extending gap_fill (event_5_maturation_maturation_4–7), but the gap_fill object's initial, very short geometry [[-0.6,-0.95],[-0.62,-0.95]] and its growth toward x=-1.2 overlaps the region already occupied by the rna_primer_lagging_1 footprint (which was removed at maturation_1). The primer removal step happens before Pol delta extension, which matches the allowed abstraction ('individual RNaseH/FEN1 steps omitted'), but the removal is instant with no shown replacement synthesis from a primer 3' OH. This is a minor representational simplification rather than a science error, but it makes 'remove RNA, fill DNA, then seal' visually ambiguous about where the 3' OH that primes gap_fill comes from.",
+      "root_cause_stage": "SCENE_IR",
+      "target_objects": [
+        "gap_fill",
+        "rna_primer_lagging_1",
+        "polymerase_lagging"
+      ],
+      "target_events": [
+        "event_5_maturation_maturation_1",
+        "event_5_maturation_maturation_3"
+      ],
+      "repair_scope": "Add a short caption/note or visual state indicating that after primer removal the DNA is extended from the adjacent fragment_2 3' end (by Pol delta), so gap_fill grows from fragment_2.end toward fragment_1.start; the current initial gap_fill seed at x=-0.6 already sits at the downstream fragment_2 end, which is consistent, so primarily clarify the priming 3' OH origin.",
+      "acceptance_criteria": [
+        "The maturation caption/annotation states gap_fill is extended from the fragment_2 3' OH toward fragment_1.",
+        "gap_fill.start remains coincident with fragment_2.end (≤0.03) throughout maturation."
+      ]
+    }
+  ],
+  "notes": [
+    "Deterministic checks (polarity, growth direction, event order, topology, active-site bindings) all PASS; template/new-strand polarity is consistent with the verified 5'→3' antiparallel rule.",
+    "Role labels (Pol epsilon leading, Pol delta lagging, RNA primase, helicase schematic) match the common teaching model and F4–F6; Pol epsilon framing is correctly hedged as model-level in simplifications.",
+    "Primer 3' extension (new_leading growing away from the original primer end) is consistent with the allowed simplification note about covalently extended primer 3' moving away from the primer, not staying adjacent.",
+    "No telomerase/chromosome-end claims; single local fork; one local maturation only — within declared teaching scope. No demand for RNaseH/FEN1 molecular steps."
+  ],
+  "checks": [
+    {
+      "check_id": "schema_references",
+      "category": "schema",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [],
+      "observed_evidence": {
+        "errors": []
+      },
+      "expected_condition": "All references exist and facts were verified",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_1_fork_open_fork_0",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "template_leading",
+        "template_lagging"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "X_bf28604c"
+      ],
+      "observed_evidence": {
+        "action_id": "event_1_fork_open_fork_0",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "opened"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_2_priming_prime_0",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "primase"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5"
+      ],
+      "observed_evidence": {
+        "action_id": "event_2_priming_prime_0",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "opened"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_2_priming_prime_1",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "rna_primer_leading"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5"
+      ],
+      "observed_evidence": {
+        "action_id": "event_2_priming_prime_1",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "opened"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_2_priming_prime_2",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "primase"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5"
+      ],
+      "observed_evidence": {
+        "action_id": "event_2_priming_prime_2",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "opened"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_2_priming_prime_3",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5"
+      ],
+      "observed_evidence": {
+        "action_id": "event_2_priming_prime_3",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "primed"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_3_extension_continuous_extension_0",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "polymerase_leading"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_3_extension_continuous_extension_0",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "primed"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_3_extension_continuous_extension_1",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "polymerase_leading",
+        "new_leading"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_3_extension_continuous_extension_1",
+        "committed": true,
+        "operation": "attach",
+        "state": {
+          "phase": "primed"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_3_extension_continuous_extension_2",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "new_leading"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_3_extension_continuous_extension_2",
+        "committed": true,
+        "operation": "extend",
+        "state": {
+          "phase": "primed"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_3_extension_continuous_extension_3",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "new_leading"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_3_extension_continuous_extension_3",
+        "committed": true,
+        "operation": "extend",
+        "state": {
+          "phase": "primed"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_3_extension_continuous_extension_4",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "new_leading"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_3_extension_continuous_extension_4",
+        "committed": true,
+        "operation": "extend",
+        "state": {
+          "phase": "primed"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_3_extension_continuous_extension_5",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "new_leading"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_3_extension_continuous_extension_5",
+        "committed": true,
+        "operation": "extend",
+        "state": {
+          "phase": "primed"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_3_extension_continuous_extension_6",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "new_leading"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_3_extension_continuous_extension_6",
+        "committed": true,
+        "operation": "extend",
+        "state": {
+          "phase": "primed"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_3_extension_continuous_extension_7",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "new_leading"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_3_extension_continuous_extension_7",
+        "committed": true,
+        "operation": "extend",
+        "state": {
+          "phase": "primed"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_3_extension_continuous_extension_8",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "new_leading"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_3_extension_continuous_extension_8",
+        "committed": true,
+        "operation": "extend",
+        "state": {
+          "phase": "primed"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_3_extension_continuous_extension_9",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "new_leading"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_3_extension_continuous_extension_9",
+        "committed": true,
+        "operation": "extend",
+        "state": {
+          "phase": "primed"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_3_extension_continuous_extension_10",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "polymerase_leading",
+        "new_leading"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_3_extension_continuous_extension_10",
+        "committed": true,
+        "operation": "detach",
+        "state": {
+          "phase": "primed"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_3_extension_continuous_extension_11",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "polymerase_leading"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_3_extension_continuous_extension_11",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "primed"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_3_extension_continuous_extension_12",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_3_extension_continuous_extension_12",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "elongating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_4_two_modes_fragment_synthesis_0",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "primase"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5",
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_4_two_modes_fragment_synthesis_0",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "elongating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_4_two_modes_fragment_synthesis_1",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "rna_primer_lagging_1"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5",
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_4_two_modes_fragment_synthesis_1",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "elongating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_4_two_modes_fragment_synthesis_2",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "primase"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5",
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_4_two_modes_fragment_synthesis_2",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "elongating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_4_two_modes_fragment_synthesis_3",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "polymerase_lagging"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5",
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_4_two_modes_fragment_synthesis_3",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "elongating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_4_two_modes_fragment_synthesis_4",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "polymerase_lagging",
+        "fragment_1"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5",
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_4_two_modes_fragment_synthesis_4",
+        "committed": true,
+        "operation": "attach",
+        "state": {
+          "phase": "elongating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_4_two_modes_fragment_synthesis_5",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "fragment_1"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5",
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_4_two_modes_fragment_synthesis_5",
+        "committed": true,
+        "operation": "extend",
+        "state": {
+          "phase": "elongating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_4_two_modes_fragment_synthesis_6",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "fragment_1"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5",
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_4_two_modes_fragment_synthesis_6",
+        "committed": true,
+        "operation": "extend",
+        "state": {
+          "phase": "elongating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_4_two_modes_fragment_synthesis_7",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "fragment_1"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5",
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_4_two_modes_fragment_synthesis_7",
+        "committed": true,
+        "operation": "extend",
+        "state": {
+          "phase": "elongating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_4_two_modes_fragment_synthesis_8",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "fragment_1"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5",
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_4_two_modes_fragment_synthesis_8",
+        "committed": true,
+        "operation": "extend",
+        "state": {
+          "phase": "elongating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_4_two_modes_fragment_synthesis_9",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "polymerase_lagging",
+        "fragment_1"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5",
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_4_two_modes_fragment_synthesis_9",
+        "committed": true,
+        "operation": "detach",
+        "state": {
+          "phase": "elongating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_4_two_modes_fragment_synthesis_10",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "polymerase_lagging"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5",
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_4_two_modes_fragment_synthesis_10",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "elongating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_4_two_modes_fragment_synthesis_11",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "primase"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5",
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_4_two_modes_fragment_synthesis_11",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "elongating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_4_two_modes_fragment_synthesis_12",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "rna_primer_lagging_2"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5",
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_4_two_modes_fragment_synthesis_12",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "elongating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_4_two_modes_fragment_synthesis_13",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "primase"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5",
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_4_two_modes_fragment_synthesis_13",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "elongating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_4_two_modes_fragment_synthesis_14",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "polymerase_lagging"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5",
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_4_two_modes_fragment_synthesis_14",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "elongating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_4_two_modes_fragment_synthesis_15",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "polymerase_lagging",
+        "fragment_2"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5",
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_4_two_modes_fragment_synthesis_15",
+        "committed": true,
+        "operation": "attach",
+        "state": {
+          "phase": "elongating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_4_two_modes_fragment_synthesis_16",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "fragment_2"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5",
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_4_two_modes_fragment_synthesis_16",
+        "committed": true,
+        "operation": "extend",
+        "state": {
+          "phase": "elongating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_4_two_modes_fragment_synthesis_17",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "fragment_2"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5",
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_4_two_modes_fragment_synthesis_17",
+        "committed": true,
+        "operation": "extend",
+        "state": {
+          "phase": "elongating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_4_two_modes_fragment_synthesis_18",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "fragment_2"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5",
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_4_two_modes_fragment_synthesis_18",
+        "committed": true,
+        "operation": "extend",
+        "state": {
+          "phase": "elongating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_4_two_modes_fragment_synthesis_19",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "fragment_2"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5",
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_4_two_modes_fragment_synthesis_19",
+        "committed": true,
+        "operation": "extend",
+        "state": {
+          "phase": "elongating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_4_two_modes_fragment_synthesis_20",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "polymerase_lagging",
+        "fragment_2"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5",
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_4_two_modes_fragment_synthesis_20",
+        "committed": true,
+        "operation": "detach",
+        "state": {
+          "phase": "elongating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_4_two_modes_fragment_synthesis_21",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "polymerase_lagging"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F5",
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_4_two_modes_fragment_synthesis_21",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "elongating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_5_maturation_maturation_0",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_5_maturation_maturation_0",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "maturing"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_5_maturation_maturation_1",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "rna_primer_lagging_1"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_5_maturation_maturation_1",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "maturing"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_5_maturation_maturation_2",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "polymerase_lagging"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_5_maturation_maturation_2",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "maturing"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_5_maturation_maturation_3",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "polymerase_lagging",
+        "gap_fill"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_5_maturation_maturation_3",
+        "committed": true,
+        "operation": "attach",
+        "state": {
+          "phase": "maturing"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_5_maturation_maturation_4",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "gap_fill"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_5_maturation_maturation_4",
+        "committed": true,
+        "operation": "extend",
+        "state": {
+          "phase": "maturing"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_5_maturation_maturation_5",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "gap_fill"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_5_maturation_maturation_5",
+        "committed": true,
+        "operation": "extend",
+        "state": {
+          "phase": "maturing"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_5_maturation_maturation_6",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "gap_fill"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_5_maturation_maturation_6",
+        "committed": true,
+        "operation": "extend",
+        "state": {
+          "phase": "maturing"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_5_maturation_maturation_7",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "gap_fill"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_5_maturation_maturation_7",
+        "committed": true,
+        "operation": "extend",
+        "state": {
+          "phase": "maturing"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_5_maturation_maturation_8",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "polymerase_lagging",
+        "gap_fill"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_5_maturation_maturation_8",
+        "committed": true,
+        "operation": "detach",
+        "state": {
+          "phase": "maturing"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_5_maturation_maturation_9",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "polymerase_lagging"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_5_maturation_maturation_9",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "maturing"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_5_maturation_maturation_10",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "ligase"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_5_maturation_maturation_10",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "maturing"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_5_maturation_maturation_11",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "ligase",
+        "gap_fill"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_5_maturation_maturation_11",
+        "committed": true,
+        "operation": "attach",
+        "state": {
+          "phase": "maturing"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "connect_continuous_extension",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "fragment_2",
+        "gap_fill"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "connect_continuous_extension",
+        "committed": true,
+        "operation": "connect",
+        "state": {
+          "phase": "maturing"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_5_maturation_maturation_12",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "gap_fill",
+        "fragment_1"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_5_maturation_maturation_12",
+        "committed": true,
+        "operation": "connect",
+        "state": {
+          "phase": "maturing"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_5_maturation_maturation_13",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "ligase",
+        "gap_fill"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_5_maturation_maturation_13",
+        "committed": true,
+        "operation": "detach",
+        "state": {
+          "phase": "maturing"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "event_5_maturation_maturation_14",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "ligase"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F6",
+        "X_7574276a"
+      ],
+      "observed_evidence": {
+        "action_id": "event_5_maturation_maturation_14",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "maturing"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    }
+  ],
+  "scene_hash": "383e4e8caba5beb23fdcedca44c640a3527521adf37fb43172b384568f31779e"
+}

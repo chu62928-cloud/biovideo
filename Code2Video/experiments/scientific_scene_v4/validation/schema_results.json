@@ -1,0 +1,20 @@
+[
+  {
+    "test": "valid_scene_schemas_both_topics",
+    "passed": true,
+    "details": [
+      null,
+      null
+    ]
+  },
+  {
+    "test": "unknown_object_reference_rejected",
+    "passed": true,
+    "details": true
+  },
+  {
+    "test": "unknown_science_evidence_rejected",
+    "passed": true,
+    "details": true
+  }
+]

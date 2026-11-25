@@ -1,0 +1,974 @@
+{
+  "out_of_frame": [],
+  "label_overlaps": [
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "polarity__template_leading__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "polarity__template_lagging__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "polarity__template_lagging__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "polarity__new_leading__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "polarity__new_leading__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "polarity__fragment_1__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "polarity__fragment_1__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "polarity__fragment_2__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "polarity__fragment_2__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__start",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "polarity__template_lagging__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "polarity__template_lagging__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "polarity__new_leading__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "polarity__new_leading__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "polarity__fragment_1__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "polarity__fragment_1__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "polarity__fragment_2__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "polarity__fragment_2__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_leading__end",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "polarity__template_lagging__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "polarity__new_leading__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "polarity__new_leading__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "polarity__fragment_1__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "polarity__fragment_1__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "polarity__fragment_2__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "polarity__fragment_2__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__start",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "polarity__new_leading__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "polarity__new_leading__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "polarity__fragment_1__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "polarity__fragment_1__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "polarity__fragment_2__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "polarity__fragment_2__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__template_lagging__end",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "polarity__new_leading__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "polarity__fragment_1__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "polarity__fragment_1__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "polarity__fragment_2__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "polarity__fragment_2__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__start",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__end",
+        "polarity__fragment_1__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__end",
+        "polarity__fragment_1__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__end",
+        "polarity__fragment_2__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__end",
+        "polarity__fragment_2__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__end",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__end",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__end",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__end",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__end",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__new_leading__end",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__fragment_1__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__fragment_2__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__fragment_2__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__start",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__start",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__start",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__start",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__start",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__end",
+        "polarity__fragment_2__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__end",
+        "polarity__fragment_2__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__end",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__end",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__end",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__end",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__end",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_1__end",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__start",
+        "polarity__fragment_2__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__start",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__start",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__start",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__start",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__start",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__start",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__start"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__end",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__end",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__end",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__end",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__end",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__fragment_2__end",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__gap_fill__start",
+        "polarity__gap_fill__end"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__gap_fill__start",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__gap_fill__start",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__gap_fill__start",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__gap_fill__start",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__gap_fill__start",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__gap_fill__end",
+        "label__primase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__gap_fill__end",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__gap_fill__end",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__gap_fill__end",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "polarity__gap_fill__end",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__primase",
+        "label__polymerase_leading"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__primase",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__primase",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__primase",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__polymerase_leading",
+        "label__polymerase_lagging"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__polymerase_leading",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__polymerase_leading",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__polymerase_lagging",
+        "label__ligase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__polymerase_lagging",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 0.0,
+      "objects": [
+        "label__ligase",
+        "label__helicase"
+      ]
+    },
+    {
+      "time": 1.7999999999999998,
+      "objects": [
+        "polarity__fragment_1__start",
+        "polarity__fragment_1__end"
+      ]
+    },
+    {
+      "time": 5.466666666666667,
+      "objects": [
+        "polarity__fragment_2__start",
+        "polarity__fragment_2__end"
+      ]
+    }
+  ],
+  "binding_violations": [],
+  "sudden_jumps": [],
+  "note": "Geometry heuristics; intentional occlusion and fade transitions need human review."
+}

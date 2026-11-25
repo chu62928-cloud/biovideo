@@ -1,0 +1,88 @@
+{
+  "type": "object",
+  "required": [
+    "assembly_id",
+    "assembly_type",
+    "component_ids",
+    "relations",
+    "state_variables",
+    "anchor_points",
+    "visual_representation",
+    "allowed_transitions",
+    "invariants",
+    "evidence_ids"
+  ],
+  "properties": {
+    "assembly_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "assembly_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "component_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source",
+          "target",
+          "type"
+        ],
+        "properties": {
+          "source": {
+            "type": "string",
+            "minLength": 1
+          },
+          "target": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "state_variables": {
+      "type": "object"
+    },
+    "anchor_points": {
+      "type": "object"
+    },
+    "visual_representation": {
+      "type": "object"
+    },
+    "allowed_transitions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "invariants": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "additionalProperties": true
+}

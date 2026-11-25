@@ -1,0 +1,14 @@
+{
+  "group": "A3_expert_repair",
+  "mode": "full",
+  "model": "deepseek-flash",
+  "shared_blueprint": {
+    "plan_origin": "REAL_LLM",
+    "blueprint_hash": "21f31033334b96b9c422a56b39974ff0e573e3cdb177e94d97ee27bcb151a4d9",
+    "knowledge_hash": "5512c5ee96cf5fe8ba7481eb1f2350f7ceee638caad9f596942e9a8550f473a6",
+    "prompt_storyboard_hash": "db850a9a390083cabe60371ea3153eb9611257b53266f2f6bcc17521a8caac87"
+  },
+  "sampling": "Existing provider defaults, unchanged",
+  "ir_review_decision": "REVISE",
+  "diagnostic_if_not_pass": true
+}

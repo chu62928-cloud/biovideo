@@ -1,0 +1,35 @@
+[
+  {
+    "test": "required_assembly_relationships_missing_rejected",
+    "passed": true,
+    "details": true
+  },
+  {
+    "test": "assembly_components_anchors_and_state_query",
+    "passed": true,
+    "details": [
+      13,
+      [
+        2.5,
+        0.15,
+        0
+      ],
+      {
+        "phase": "closed"
+      }
+    ]
+  },
+  {
+    "test": "extra_parental_strand_or_duplex_detected",
+    "passed": true,
+    "details": true
+  },
+  {
+    "test": "assembly_error_routes_to_assembly_not_layout_mock",
+    "passed": true,
+    "details": {
+      "mode": "OFFLINE routing fixture",
+      "upstream_repair_preserved": true
+    }
+  }
+]

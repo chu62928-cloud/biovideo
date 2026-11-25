@@ -1,0 +1,15 @@
+{
+  "review_id": "REV-b21f551a6721",
+  "stage": "SCRIPT",
+  "decision": "ERROR",
+  "issues": [],
+  "next_action": "STOP",
+  "artifact_versions": {
+    "samples": "0af6b840ff0ce397a0d6c481039f153322821e063f82c3dfc4d4d4581da18384"
+  },
+  "checks": [
+    {
+      "reason": "Unknown/unverified fact cited by reviewer"
+    }
+  ]
+}

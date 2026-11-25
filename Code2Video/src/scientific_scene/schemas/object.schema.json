@@ -1,0 +1,62 @@
+{
+  "type": "object",
+  "required": [
+    "object_id",
+    "object_type",
+    "scientific_identity",
+    "scientific_properties",
+    "visual_representation",
+    "anchors",
+    "evidence_ids"
+  ],
+  "properties": {
+    "object_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "object_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scientific_identity": {
+      "type": "object",
+      "required": [
+        "name",
+        "kind",
+        "origin_id"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "type": "string",
+          "minLength": 1
+        },
+        "origin_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": true
+    },
+    "scientific_properties": {
+      "type": "object"
+    },
+    "visual_representation": {
+      "type": "object"
+    },
+    "anchors": {
+      "type": "object"
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "additionalProperties": true
+}

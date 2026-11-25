@@ -1,0 +1,10 @@
+[
+  {
+    "sample_id": "normal_control",
+    "text": "Before mitosis, DNA replicates during S phase of interphase, producing sister chromatids. During prophase, chromosomes condense. At metaphase, duplicated chromosomes align at the metaphase plate. During anaphase, sister chromatids separate and move toward opposite poles. In telophase, nuclear envelopes form around the separated chromosome sets. Mitosis divides the nucleus; cytokinesis divides the cytoplasm."
+  },
+  {
+    "sample_id": "injected_errors",
+    "text": "DNA is first replicated during anaphase of mitosis. At metaphase of ordinary mitosis, homologous chromosomes pair and crossing over is required. During anaphase, homologous chromosome pairs separate while sister chromatids stay joined. A single ordinary mitotic division reduces a diploid nucleus to four haploid daughter nuclei."
+  }
+]

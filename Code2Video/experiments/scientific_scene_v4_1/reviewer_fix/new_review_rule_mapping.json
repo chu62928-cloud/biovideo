@@ -1,0 +1,6 @@
+{
+  "issue_id": "polarity-template-labels-fragment2",
+  "rule_id": "DNA_STRAND_POLARITY",
+  "basis": "Inspected full response explicitly names Rule DNA_STRAND_POLARITY yet omits structured field; other major maturation issue retained",
+  "automatic_classification": false
+}

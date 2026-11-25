@@ -1,0 +1,91 @@
+ 
+    You are a professional education Explainer and Animator, expert at converting mathematical teaching outlines into storyboard scripts suitable for the Manim animation system.
+
+    ## Task
+    Convert the following teaching outline into a detailed step-by-step storyboard script:
+
+    {
+  "topic": "DNA Replication in Eukaryotic Cells",
+  "target_audience": "High school biology students (grades 10-12)",
+  "sections": [
+    {
+      "id": "section_1",
+      "title": "Introduction: The Need for Speed and Accuracy",
+      "content": "Brief overview of why DNA replication is essential for cell division and heredity. Introduce the challenge: copying 3 billion base pairs with high fidelity. Use a visual metaphor of a library copying all books simultaneously.",
+      "example": "Imagine a library with 3 billion books that must be copied exactly before the library splits into two. The copying must be fast, accurate, and coordinated."
+    },
+    {
+      "id": "section_2",
+      "title": "Origin Recognition and Licensing",
+      "content": "Explain origins of replication (ORIs) and the licensing system. Show how ORIs are recognized by the origin recognition complex (ORC), and how licensing ensures each origin fires only once per cell cycle. Visual: multiple ORIs lighting up on a DNA strand.",
+      "example": "Like having multiple copy machines (ORIs) in the library, each with a key (ORC) that turns on only once per day to avoid over-copying."
+    },
+    {
+      "id": "section_3",
+      "title": "Unwinding the Double Helix: Helicase and Topoisomerase",
+      "content": "Describe how helicase unwinds DNA at replication forks, and topoisomerase relieves supercoiling. Use animations of helicase as a zipper and topoisomerase as a swivel.",
+      "example": "Helicase is like a zipper unzipping the DNA, while topoisomerase acts as a swivel to prevent tangles, similar to a telephone cord untwisting."
+    },
+    {
+      "id": "section_4",
+      "title": "Priming and DNA Polymerase Action",
+      "content": "Explain RNA primers synthesized by primase, and DNA polymerase adding nucleotides in the 5' to 3' direction. Emphasize leading vs. lagging strand synthesis and Okazaki fragments. Visual: replication fork with polymerase moving and fragments being joined.",
+      "example": "DNA polymerase is like a meticulous scribe that can only write in one direction (5' to 3'), so on the lagging strand it writes in short bursts (Okazaki fragments) like writing sentences backwards."
+    },
+    {
+      "id": "section_5",
+      "title": "Proofreading and Repair",
+      "content": "Describe DNA polymerase's proofreading (3' to 5' exonuclease activity) and mismatch repair. Highlight the low error rate (1 in 10^9). Visual: polymerase catching a mistake and fixing it.",
+      "example": "Like a spell-checker that not only catches typos but also backtracks to correct them, ensuring the final copy is nearly perfect."
+    },
+    {
+      "id": "section_6",
+      "title": "Summary: Coordinated Completion",
+      "content": "Recap key steps and the coordination of multiple replication forks. Emphasize the semi-conservative nature and the importance of accuracy. Visual: two identical DNA molecules formed from one.",
+      "example": "The entire process is like a well-orchestrated factory assembly line, with many workers (proteins) each doing their part to produce two identical copies of the original DNA."
+    }
+  ]
+}
+    
+    ## Storyboard Requirements
+    
+    ### Content Structure
+    - For key sections (max 3 sections), use up to 5 lecture lines along with their corresponding 5 animations to provide a logically coherent explanation. Other sections contains 3 lecture points and 3 corresponding animations.
+    - In key sections, assets not forbiddened.
+    - Must keep each lecture line brief [NO MORE THAN 10 WORDS FOR ONE LINE].
+    - Animation steps must closely correspond to lecture points.
+    - Do not apply any animation to lecture lines except for changing the color of corresponding line when its related animation is presented.
+
+    ### Visual Design
+    - Colors: Background fixed at #000000, use ligt color for contrast.
+    - IMPORTANT: Provide hexadecimal codes for colors.
+    - Element Labeling: Assign clear colors and labels near all elements (formulas, etc.).
+
+    ### Animation Effects
+    - Basic Animations: Appearance, movement, color changes, fade in/out, scaling.
+    - Emphasis Effects: Flashing, color changes, bolding to highlight key knowledge points.
+
+    ### Constraints
+    - No panels or 3D methods.
+    - Avoid coordinate axes unless absolutely necessary.
+    - Focus animations on visualizing concepts that are difficult to grasp from lecture lines alone.
+    - Ensure that all animations are easy to understand.
+    - Do not involve any external elements (such as SVGs or other assets that require downloading or dependencies).
+
+    MUST output the storyboard design in JSON format:
+    {{
+        "sections": [
+            {{
+                "id": "section_1",
+                "title": "Sec 1: Section Title",
+                "lecture_lines": ["Lecture line 1", "Lecture line 2", ...],
+                "animations": [
+                    "Animation step 1: ...",
+                    "Animation step 2: ...",
+                    ...
+                ]
+            }},
+            ...
+        ]
+    }}
+    

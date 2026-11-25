@@ -1,0 +1,20 @@
+{
+  "patches": [
+    {
+      "object_id": "primase",
+      "field": "scientific_identity.name",
+      "value": "RNA primase"
+    },
+    {
+      "object_id": "primase",
+      "field": "scientific_properties.role",
+      "value": "Synthesizes short RNA primers to initiate DNA synthesis; does not perform DNA polymerase activity"
+    },
+    {
+      "object_id": "primase",
+      "field": "visual_representation.label",
+      "value": "RNA primase"
+    }
+  ],
+  "explanation": "Fixed all three flagged primase fields to RNA-primase-only identity; the short Pol-alpha DNA handoff remains a declared omission in scientific_simplifications, no Pol-alpha DNA polymerase activity assigned, no other fields touched."
+}

@@ -1,0 +1,16 @@
+{
+  "review_id": "REV-bf9a6d149d9f",
+  "stage": "SCRIPT",
+  "decision": "ERROR",
+  "issues": [],
+  "next_action": "STOP",
+  "artifact_versions": {
+    "text": "7d7dce1f8d34ab006e44c465567e2c383e2935c5578e2224f3281873b1869e1a"
+  },
+  "checks": [
+    {
+      "tool_error_type": "TimeoutError",
+      "reason": "offline injected tool timeout"
+    }
+  ]
+}

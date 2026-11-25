@@ -1,0 +1,14 @@
+{
+  "cmd": [
+    "manim",
+    "-ql",
+    "smoke.py",
+    "Smoke"
+  ],
+  "cwd": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_baseline/tests/environment",
+  "stage": null,
+  "returncode": 0,
+  "stdout": "Manim Community v0.19.0\n\n[11/23/26 11:54:17] INFO     Animation 0 : Using cached     cairo_renderer.py:89\n                             data (hash :                                       \n                             1185818338_3789429803_22313245                     \n                             7)                                                 \n                    INFO     Animation 1 : Using cached     cairo_renderer.py:89\n                             data (hash :                                       \n                             624642324_2514011427_151624741                     \n                             )                                                  \n                    INFO     Combining to Movie file.   scene_file_writer.py:739\n                    INFO                                scene_file_writer.py:886\n                             File ready at                                      \n                             '/root/autodl-tmp/code2bio                         \n                             video/Code2Video/experimen                         \n                             ts/biology_baseline/tests/                         \n                             environment/media/videos/s                         \n                             moke/480p15/Smoke.mp4'                             \n                                                                                \n                    INFO     Rendered Smoke                         scene.py:255\n                             Played 2 animations                                \n",
+  "stderr": "\nAnimation 0: Create(Circle):   0%|          | 0/1 [00:00<?, ?it/s]\n                                                                  \n",
+  "elapsed_seconds": 1.244
+}

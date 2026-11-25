@@ -1,0 +1,36 @@
+{
+  "id": "c67eef39-f23b-4671-994c-8867cd837c09",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\"patches\":[{\"object_id\":\"primase\",\"field\":\"scientific_identity.name\",\"value\":\"RNA primase\"},{\"object_id\":\"primase\",\"field\":\"scientific_properties.role\",\"value\":\"Synthesizes short RNA primers to initiate DNA synthesis; does not perform DNA polymerase activity\"},{\"object_id\":\"primase\",\"field\":\"visual_representation.label\",\"value\":\"RNA primase\"}],\"explanation\":\"Fixed all three flagged primase fields to RNA-primase-only identity; the short Pol-alpha DNA handoff remains a declared omission in scientific_simplifications, no Pol-alpha DNA polymerase activity assigned, no other fields touched.\"}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1795509526,
+  "model": "deepseek-flash",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+  "usage": {
+    "completion_tokens": 131,
+    "prompt_tokens": 920,
+    "total_tokens": 1051,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 920
+  }
+}

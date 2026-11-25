@@ -1,0 +1,36 @@
+{
+  "id": "56e8d105-8144-4a41-85bb-4ad20585a310",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "```python\n        fill_children = []\n        for i in range(n_fill):\n            # Lower template is 5'->3' left->right; nascent strand is antiparallel,\n            # so new DNA grows right-to-left into the gap. Fill 02 (leftmost)\n            # accumulates last, 00 (rightmost) first.\n            seg_right = lag1_primer_start + lag1_primer_len - i * fill_step\n            seg_left = seg_right - fill_step\n            xc = (seg_left + seg_right) / 2\n            blk = make_block([xc, LAG_Y, 0],\n                             fill_step * 0.85, 0.13, \"#69F0AE\", \"#1B5E20\")\n            self.register_object(f\"fill_dna_{i:02d}\", blk,\n                                 role=\"nucleotide\", strand=\"lagging\",\n                                 fragment=\"okazaki_1\", material=\"DNA\")\n            pol_fill.move_to([xc, LAG_Y + 0.55, 0])\n            pol_fill_lbl.next_to(pol_fill, UP, buff=0.03)\n            self.play(FadeIn(blk), run_time=0.22)  # 3×0.22=0.66 -> 25.91\n            self.add(blk)\n            fill_children.append(blk)\n```",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1795491596,
+  "model": "deepseek-flash",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+  "usage": {
+    "completion_tokens": 297,
+    "prompt_tokens": 7572,
+    "total_tokens": 7869,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 7424
+    },
+    "prompt_cache_hit_tokens": 7424,
+    "prompt_cache_miss_tokens": 148
+  }
+}

@@ -1,0 +1,29 @@
+--- before
++++ after
+@@ -191,7 +191,7 @@
+ 
+         # Big number text: 3,000,000,000 bp
+         bp_text = Text("3,000,000,000 bp", font_size=32, color="#FF7043")
+-        self.place_in_area(bp_text, 'B6', 'D6', scale_factor=0.7)
++        self.place_in_area(bp_text, 'B6', 'D6', scale_factor=0.55)
+         # Small counter beside it; put it just below the bp text (still within 1 unit)
+         counter = Integer(0, font_size=22, color="#FF7043")
+         self.place_at_grid(counter, 'E6', scale_factor=0.8)
+@@ -241,7 +241,7 @@
+ 
+         # Anchor the whole book grid to the left portion of the right area.
+         # Place the grid center at B2-D4, then shift it left.
+-        self.place_in_area(books, 'B2', 'D5', scale_factor=0.9)
++        self.place_in_area(books, 'B2', 'C4', scale_factor=0.9)
+         books.shift(LEFT * 1.6)
+ 
+         # Copy machine on the right (area D5-E6)
+@@ -250,7 +250,7 @@
+ 
+         # Label "Copy All Books" above the copier (area B5-C5)
+         copy_label = Text("Copy All Books", font_size=22, color="#B3E5FC")
+-        self.place_at_grid(copy_label, 'B5', scale_factor=0.8)
++        self.place_at_grid(copy_label, 'D4', scale_factor=0.8)
+ 
+         # Animate: books multiply in (create a couple at a time), copier appears
+         book_subset_1 = books[:8]

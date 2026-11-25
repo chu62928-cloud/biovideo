@@ -1,0 +1,107 @@
+[
+  {
+    "check_id": "left_attachment_measured",
+    "category": "connection",
+    "status": "PASS",
+    "object_ids": [
+      "microtubule_left",
+      "kinetochore_A"
+    ],
+    "event_ids": [],
+    "evidence_ids": [
+      "F4",
+      "F5"
+    ],
+    "observed_evidence": {
+      "measured_distance": 0.0,
+      "a": [
+        -2.8,
+        0.0,
+        0.0
+      ],
+      "b": [
+        -2.8,
+        0.0,
+        0.0
+      ],
+      "time": 11.999999999999977
+    },
+    "expected_condition": "",
+    "description": "",
+    "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+  },
+  {
+    "check_id": "right_attachment_measured",
+    "category": "connection",
+    "status": "PASS",
+    "object_ids": [
+      "microtubule_right",
+      "kinetochore_B"
+    ],
+    "event_ids": [],
+    "evidence_ids": [
+      "F4",
+      "F5"
+    ],
+    "observed_evidence": {
+      "measured_distance": 0.0,
+      "a": [
+        2.8,
+        0.0,
+        0.0
+      ],
+      "b": [
+        2.8,
+        0.0,
+        0.0
+      ],
+      "time": 11.999999999999977
+    },
+    "expected_condition": "",
+    "description": "",
+    "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+  },
+  {
+    "check_id": "expected_observed_states",
+    "category": "execution",
+    "status": "PASS",
+    "object_ids": [],
+    "event_ids": [],
+    "evidence_ids": [],
+    "observed_evidence": {
+      "mismatches": [],
+      "snapshot_count": 7
+    },
+    "expected_condition": "Actual transformed anchors and visibility match committed expected states",
+    "description": "",
+    "suggested_repair_stage": "SCENE_IR"
+  },
+  {
+    "check_id": "actual_active_site_bindings",
+    "category": "connection",
+    "status": "PASS",
+    "object_ids": [],
+    "event_ids": [],
+    "evidence_ids": [],
+    "observed_evidence": {
+      "violations": []
+    },
+    "expected_condition": "Visible bound objects follow actual target anchors including declared offset",
+    "description": "",
+    "suggested_repair_stage": "SCENE_IR"
+  },
+  {
+    "check_id": "continuous_drawn_connections",
+    "category": "topology",
+    "status": "PASS",
+    "object_ids": [],
+    "event_ids": [],
+    "evidence_ids": [],
+    "observed_evidence": {
+      "violations": []
+    },
+    "expected_condition": "Every drawn connection endpoint follows its real target at every sampled time",
+    "description": "",
+    "suggested_repair_stage": "SCENE_IR"
+  }
+]

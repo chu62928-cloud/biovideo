@@ -1,0 +1,13 @@
+[
+  {
+    "authorization_id": "USER_20261124_QWEN_PLUS_2",
+    "source": "explicit_user_message",
+    "date_beijing": "2026-11-24",
+    "provider": "qwen",
+    "additional_requests": 2,
+    "acknowledged_failed_calls": [
+      "v3_10"
+    ],
+    "reason": "User authorized two additional Qwen requests after confirming truncation cause; no DeepSeek extension"
+  }
+]

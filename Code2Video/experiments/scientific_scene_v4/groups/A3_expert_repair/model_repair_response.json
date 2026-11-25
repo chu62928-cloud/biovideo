@@ -1,0 +1,24 @@
+{
+  "visual_patches": {
+    "template_leading": {
+      "label": "3'",
+      "label_side": "down",
+      "label_size": 16
+    },
+    "template_lagging": {
+      "label": "5'",
+      "label_side": "up",
+      "label_size": 16
+    }
+  },
+  "caption_patches": {
+    "event_3_extension": "DNA polymerase extends the new strand 5' to 3'"
+  },
+  "code": "from biology_runtime import ScientificScene\nfrom manim import *\nimport numpy as np\nimport math\n\n\nclass Section4Scene(ScientificScene):\n    MODE = \"full\"\n\n    def construct(self):\n        self.camera.background_color = \"#0E1116\"\n        self.render_scene(validation_mode=\"full\")\n        self.wait(0.5)\n",
+  "repair_explanation": [
+    "REP-V4-1 (S1, SCENE_IR): The open_fork transition updates template points (y ±1.2) but the declared center in the IR remains [0.5, ±0.15], producing a measured center offset ~0.525. The correct fix is stale-IR bookkeeping: recompute each template's center as the mean of its updated points so the declared center equals the mean of updated points. This is a topology-neutral, assembly_geometry patch on template_leading/template_lagging only; persistent identities, events, and unrelated components are preserved. Acceptance requires expected_observed_states center distance <0.01, validated by schema/runtime/full_decode/full_video_science.",
+    "REP-V4-2 (S2, ANIMATION_IMPLEMENTATION): During event_3_extension, polymerase_leading center trails new_leading 3' end by ~0.107 (actual_active_site_bindings FAIL), a tracking lag only; extension direction and polarity are correct. The bounded fix is a transform_state/patch so the bound enzyme center coincides with new_leading.end anchor (distance <=0.03) at every sampled frame while the active_site relation exists. This preserves the same persistent identities, process chemistry (5'→3' synthesis, antiparallel templates), events, and unaffected components; no assembly topology or process chemistry change is needed.",
+    "Repair scope is limited to the failing representations on template_leading, template_lagging, and polymerase_leading within event_3_extension. All scientific coordinates except the declared-center recoupling and enzyme tracking alignment are preserved, along with event order, phase transitions, and constraints (growth_new_leading, growth_fragment_*, growth_gap_fill, sealed_actual_nick, exactly_two_parental_strands).",
+    "No topology or chemical changes are required; therefore no NEEDS_HUMAN_REVIEW root-layer science escalation is triggered. Provided code imports ScientificScene from biology_runtime and Section4Scene.construct calls self.render_scene(validation_mode='full'), with no filesystem/process/network operations or helper overrides. The supplied A2 successful code is preserved."
+  ]
+}

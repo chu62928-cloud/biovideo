@@ -1,0 +1,10 @@
+{
+  "scene_sha256": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+  "code_sha256": "095607a211f2bb42bb11c099bf5fe6a3c5e7ae2ad64ea967789fcbfa9d9b45ad",
+  "video_sha256": "c1a999fce2b3f1abadfd14b3cefa429cbf672a2a5de124c16a93b0b2b49baf46",
+  "trace_sha256": "4a791161cdc3157e4cd9382ff6d00f902c359685bb793ef334e6a4f7e49cb0b8",
+  "code_origin": "DETERMINISTIC_SCENE_COMPILER_WRAPPER",
+  "process_origin": "ENGINEERING_DATA except B4 model patches",
+  "changes": "Real identity and coupled-growth model repairs",
+  "science_review_hash_policy": "Reviews valid only for exact artifacts; stale results not reused"
+}

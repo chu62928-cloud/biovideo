@@ -1,0 +1,5 @@
+label,requested_model,status,sections,successful_sections,render_success_rate,api_attempts,api_retries,render_attempts,render_retries,prompt_tokens,completion_tokens,total_tokens,elapsed_seconds,video
+A2_math_deepseek_nonthinking,deepseek-flash,success,6,6,1.0,21,0,12,6,89604,50610,140214,1155.793,/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/Linear_transformations_and_matrices.mp4
+A_math_deepseek,deepseek-flash,failed,6,,0.0,3,0,0,0,3515,22127,25642,92.611,
+B2_dna_deepseek_nonthinking,deepseek-flash,success,6,6,1.0,9,0,7,1,18231,26828,45059,327.107,/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/DNA_replication_in_eukaryotic_cells.mp4
+B_dna_deepseek,deepseek-flash,failed,,,,2,0,0,0,1716,12378,14094,54.863,

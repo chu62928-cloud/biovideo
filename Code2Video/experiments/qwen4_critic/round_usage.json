@@ -1,0 +1,20 @@
+{
+  "1": {
+    "calls": 5,
+    "usage": {
+      "prompt_tokens": 73410,
+      "completion_tokens": 15739,
+      "total_tokens": 89149
+    },
+    "seconds": 336.48400000000004
+  },
+  "2": {
+    "calls": 4,
+    "usage": {
+      "prompt_tokens": 60325,
+      "completion_tokens": 11142,
+      "total_tokens": 71467
+    },
+    "seconds": 248.17
+  }
+}

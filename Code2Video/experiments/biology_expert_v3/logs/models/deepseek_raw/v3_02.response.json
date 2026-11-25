@@ -1,0 +1,36 @@
+{
+  "id": "cc7fb9d0-0afc-4b00-bbcb-f078697d1987",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "```json\n{\n  \"facts\": [\n    {\n      \"fact_id\": \"F1\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Source passage states eukaryotic replication initiates from many sites called replication origins; organism scope (eukaryotes) and stage (initiation) match. Single publisher.\",\n      \"evidence_ids\": [\"PMID_35320688\"]\n    },\n    {\n      \"fact_id\": \"F2\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Passage directly states initiation from origins must be tightly controlled to ensure the entire genome is precisely duplicated each cell cycle. Meaning and scope match.\",\n      \"evidence_ids\": [\"PMID_35320688\"]\n    },\n    {\n      \"fact_id\": \"F3\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Passage states control is accomplished via regulation of loading and activation of the replicative DNA helicase. Consistent; note the review focuses on budding yeast, so generalization to all eukaryotes is an extrapolation of framing but the claim as stated is entailed by the source's own statement.\",\n      \"evidence_ids\": [\"PMID_35320688\"]\n    },\n    {\n      \"fact_id\": \"F4\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Passage explicitly frames this as a model supported by preponderance of evidence (Pol ε bulk leading-strand at undisturbed fork). The claim correctly preserves the model-level hedge and 'undisturbed fork' qualifier.\",\n      \"evidence_ids\": [\"PMID_28301743\"]\n    },\n    {\n      \"fact_id\": \"F5\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Passage states Pol α carries out initiation of Okazaki fragment synthesis. The claim adds 'priming step implied' — the source says 'initiation,' which is equivalent in this context; no ungrounded extension beyond the stated initiation role.\",\n      \"evidence_ids\": [\"PMID_28301743\"]\n    },\n    {\n      \"fact_id\": \"F6\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Passage states Pol δ carries out elongation and maturation of Okazaki fragments. Claim matches role assignments directly.\",\n      \"evidence_ids\": [\"PMID_28301743\"]\n    },\n    {\n      \"fact_id\": \"F7\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Passage states emphasis on enzymes that synthesize DNA and repair discontinuities on the lagging strand of the replication fork. Entailed at the review's framing level.\",\n      \"evidence_ids\": [\"PMID_28301743\"]\n    },\n    {\n      \"fact_id\": \"F8\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Passage explicitly discusses alternative proposals including cellular processes during which alternative forks may be utilized, and biochemical reconstitution studies separately and jointly examining leading/lagging synthesis. Claim accurately paraphrases; classification as 'disputed' is a labeling choice, but the content is entailed. Builder marked CONFLICTED, but no contradicting evidence exists — the source itself reports these as open/discussed proposals, not as resolved conflicts. Status should be VERIFIED (as a statement about the state of the field), not CONFLICTED.\",\n      \"evidence_ids\": [\"PMID_28301743\"]\n    }\n  ],\n  \"conflicts\": []\n}\n```",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1795491511,
+  "model": "deepseek-flash",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+  "usage": {
+    "completion_tokens": 693,
+    "prompt_tokens": 3325,
+    "total_tokens": 4018,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 3325
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "checks": [
+    {
+      "check_id": "rna_primer_leading_DNA_3OH_continuity",
+      "status": "PASS",
+      "primer_3prime_anchor": "end",
+      "DNA_5prime_anchor": "start",
+      "distance": 0.0,
+      "relation_present": true,
+      "source_fact_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ],
+      "scene_hash": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07"
+    },
+    {
+      "check_id": "rna_primer_lagging_1_DNA_3OH_continuity",
+      "status": "PASS",
+      "primer_3prime_anchor": "start",
+      "DNA_5prime_anchor": "start",
+      "distance": 0.0,
+      "relation_present": true,
+      "source_fact_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ],
+      "scene_hash": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07"
+    },
+    {
+      "check_id": "rna_primer_lagging_2_DNA_3OH_continuity",
+      "status": "PASS",
+      "primer_3prime_anchor": "start",
+      "DNA_5prime_anchor": "start",
+      "distance": 0.0,
+      "relation_present": true,
+      "source_fact_ids": [
+        "X_7574276a",
+        "X_bf28604c"
+      ],
+      "scene_hash": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07"
+    }
+  ],
+  "negative_control_passed": true,
+  "all_passed": true
+}

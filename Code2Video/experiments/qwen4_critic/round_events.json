@@ -1,0 +1,90 @@
+[
+  {
+    "section": "section_1",
+    "round": 1,
+    "has_issues": true,
+    "improvements": 3,
+    "native_optimize_success": true,
+    "code_changed": true,
+    "elapsed_seconds": 42.585,
+    "video_present": true,
+    "video_is_new_optimized_result": true
+  },
+  {
+    "section": "section_1",
+    "round": 2,
+    "has_issues": true,
+    "improvements": 3,
+    "native_optimize_success": true,
+    "code_changed": true,
+    "elapsed_seconds": 42.052,
+    "video_present": true,
+    "video_is_new_optimized_result": true
+  },
+  {
+    "section": "section_2",
+    "round": 1,
+    "has_issues": true,
+    "improvements": 3,
+    "native_optimize_success": false,
+    "code_changed": true,
+    "elapsed_seconds": 12.907,
+    "video_present": true,
+    "video_is_new_optimized_result": false
+  },
+  {
+    "section": "section_2",
+    "round": 2,
+    "has_issues": true,
+    "improvements": 3,
+    "native_optimize_success": false,
+    "code_changed": true,
+    "elapsed_seconds": 12.967,
+    "video_present": true,
+    "video_is_new_optimized_result": false
+  },
+  {
+    "section": "section_3",
+    "round": 1,
+    "has_issues": true,
+    "improvements": 3,
+    "native_optimize_success": true,
+    "code_changed": true,
+    "elapsed_seconds": 26.707,
+    "video_present": true,
+    "video_is_new_optimized_result": true
+  },
+  {
+    "section": "section_3",
+    "round": 2,
+    "has_issues": true,
+    "improvements": 3,
+    "native_optimize_success": false,
+    "code_changed": true,
+    "elapsed_seconds": 17.079,
+    "video_present": true,
+    "video_is_new_optimized_result": false
+  },
+  {
+    "section": "section_4",
+    "round": 1,
+    "has_issues": true,
+    "improvements": 3,
+    "native_optimize_success": false,
+    "code_changed": true,
+    "elapsed_seconds": 14.381,
+    "video_present": true,
+    "video_is_new_optimized_result": false
+  },
+  {
+    "section": "section_4",
+    "round": 2,
+    "has_issues": true,
+    "improvements": 3,
+    "native_optimize_success": false,
+    "code_changed": true,
+    "elapsed_seconds": 23.482,
+    "video_present": true,
+    "video_is_new_optimized_result": false
+  }
+]

@@ -1,0 +1,273 @@
+{
+  "review_id": "V4-VIDEO-d2be164670",
+  "stage": "RENDERED_VIDEO",
+  "decision": "REVISE",
+  "issues": [
+    {
+      "issue_id": "S1",
+      "severity": "major",
+      "description": "Measured frames show the drawn microtubule tip separating from its kinetochore during poleward motion: t=9.67 kinetochore_A x=-0.844 vs microtubule_left end -1.583 (gap 0.74); t=11.13 gap 0.66; frames 10.2s/11.2s show a visible break. Attachment is only re-coincident at 13s, so anaphase movement appears to occur while detached.",
+      "root_cause_stage": "ANIMATION_IMPLEMENTATION",
+      "target_objects": [
+        "microtubule_left",
+        "microtubule_right",
+        "kinetochore_A",
+        "kinetochore_B"
+      ],
+      "target_events": [
+        "anaphase_chromatid_separation_1"
+      ],
+      "repair_scope": "affected_event",
+      "acceptance_criteria": [
+        "anchor distance(microtubule_left.end, kinetochore_A.center) <= 0.04 at every sampled time in anaphase",
+        "same for microtubule_right/kinetochore_B",
+        "no visible gap in any frame while bipolar_attachment relation exists"
+      ]
+    },
+    {
+      "issue_id": "S2",
+      "severity": "minor",
+      "description": "Chromatid chevrons point equatorward (sister_A apex x=-0.12, arms x=-0.45), so during leftward anaphase motion the arms lead poleward and the kinetochore region trails. Real anaphase-A geometry has kinetochore leading with arms trailing toward the equator. Schematic, but the drawn shape contradicts the direction of travel.",
+      "root_cause_stage": "ASSEMBLY",
+      "target_objects": [
+        "sister_A",
+        "sister_B"
+      ],
+      "target_events": [
+        "anaphase_chromatid_separation_1"
+      ],
+      "repair_scope": "assembly_geometry",
+      "acceptance_criteria": [
+        "apex/kinetochore side of each chromatid is nearer its destination pole than arm tips throughout anaphase"
+      ]
+    },
+    {
+      "issue_id": "S3",
+      "severity": "minor",
+      "description": "Event captions are clipped at both frame edges (e.g. 'er kinetochores attach...', '...metaphase p'), so the stated mechanism text cannot be fully read; moving labels also overlap ('Daughter B' doubling at 9-11s). Readability only; does not alter mechanism.",
+      "root_cause_stage": "ANIMATION_IMPLEMENTATION",
+      "target_objects": [
+        "sister_A",
+        "sister_B"
+      ],
+      "target_events": [
+        "metaphase",
+        "anaphase"
+      ],
+      "repair_scope": "affected_event",
+      "acceptance_criteria": [
+        "full caption text inside frame margins",
+        "no overlapping label glyphs at any sampled time"
+      ]
+    }
+  ],
+  "notes": [
+    "Verified from trajectory, not labels: two persistent chromatid instances (no cloning), sister_cohesion removed only after phase=aligned and both bipolar_attachment relations exist; centers move monotonically -0.285->-2.8 and +0.285->+2.8 toward opposite poles.",
+    "Measured metaphase/final anchor coincidence 0.0 supports genuine bipolar attachment; role change to daughter_chromosome is metadata, not geometric proof.",
+    "S-phase replication, centrosome duplication, telophase and cytokinesis are out of scope for this clip and not judged; single duplicated chromosome is a declared simplification.",
+    "Grid/SVM reference image is unrelated to this topic and was ignored."
+  ],
+  "checks": [
+    {
+      "check_id": "registered_scientific_identity",
+      "category": "identity",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [],
+      "observed_evidence": {
+        "missing": [],
+        "unexpected_scientific_ids": []
+      },
+      "expected_condition": "",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "object_instance_continuity",
+      "category": "identity",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [],
+      "observed_evidence": {
+        "violations": [],
+        "tracked_objects": 8
+      },
+      "expected_condition": "",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "actual_event_order",
+      "category": "event_order",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [],
+      "observed_evidence": {
+        "events": [
+          "metaphase",
+          "anaphase"
+        ]
+      },
+      "expected_condition": "",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "stable_components",
+      "category": "identity",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [],
+      "observed_evidence": {},
+      "expected_condition": "",
+      "description": "",
+      "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+    },
+    {
+      "check_id": "two_objects_no_cloning",
+      "category": "identity",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [],
+      "observed_evidence": {
+        "count": 2
+      },
+      "expected_condition": "",
+      "description": "",
+      "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+    },
+    {
+      "check_id": "left_attachment_measured",
+      "category": "connection",
+      "status": "PASS",
+      "object_ids": [
+        "microtubule_left",
+        "kinetochore_A"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "F5"
+      ],
+      "observed_evidence": {
+        "measured_distance": 0.0,
+        "a": [
+          -2.8,
+          0.0,
+          0.0
+        ],
+        "b": [
+          -2.8,
+          0.0,
+          0.0
+        ],
+        "time": 12.999999999999973
+      },
+      "expected_condition": "",
+      "description": "",
+      "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+    },
+    {
+      "check_id": "right_attachment_measured",
+      "category": "connection",
+      "status": "PASS",
+      "object_ids": [
+        "microtubule_right",
+        "kinetochore_B"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "F5"
+      ],
+      "observed_evidence": {
+        "measured_distance": 0.0,
+        "a": [
+          2.8,
+          0.0,
+          0.0
+        ],
+        "b": [
+          2.8,
+          0.0,
+          0.0
+        ],
+        "time": 12.999999999999973
+      },
+      "expected_condition": "",
+      "description": "",
+      "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+    },
+    {
+      "check_id": "daughter_role_A",
+      "category": "identity",
+      "status": "PASS",
+      "object_ids": [
+        "sister_A"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F8"
+      ],
+      "observed_evidence": {
+        "observed_role_metadata": "daughter_chromosome",
+        "limitation": "Semantic role is not inferable from geometry alone"
+      },
+      "expected_condition": "",
+      "description": "",
+      "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+    },
+    {
+      "check_id": "expected_observed_states",
+      "category": "execution",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [],
+      "observed_evidence": {
+        "mismatches": [],
+        "snapshot_count": 7
+      },
+      "expected_condition": "Actual transformed anchors and visibility match committed expected states",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "actual_active_site_bindings",
+      "category": "connection",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [],
+      "observed_evidence": {
+        "violations": []
+      },
+      "expected_condition": "Visible bound objects follow actual target anchors including declared offset",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "visible_coverage",
+      "category": "coverage",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [],
+      "observed_evidence": {
+        "unregistered_visible": []
+      },
+      "expected_condition": "",
+      "description": "All adapter-created scientific and decorative objects registered; arbitrary Coder-added objects checked separately",
+      "suggested_repair_stage": "SCENE_IR"
+    }
+  ],
+  "scene_hash": "8f955d2e3367c9b1bf69e31746777fe57ad2f09182b76f207fd2962410b7394c",
+  "video_sha256": "846598e9899ed29fa1527e04a61a8c3f47f9cdadd3015f4ba8914c22513a7fca",
+  "code_sha256": "2d19df844dde1e4c9f8ecbfee732ceae47cd072a2ab265331b8276e51cebdf19",
+  "full_video": true
+}

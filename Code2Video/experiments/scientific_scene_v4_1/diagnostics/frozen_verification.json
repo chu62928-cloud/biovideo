@@ -1,0 +1,10 @@
+{
+  "checked": 2734,
+  "historical_results_changed": [],
+  "source_files_changed": [
+    "src/scientific_scene/state_machine.py",
+    "src/scientific_scene/adapters/manim_adapter.py",
+    "src/scientific_scene/adapters/biology_expert_adapter.py"
+  ],
+  "historical_results_preserved": true
+}

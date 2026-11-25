@@ -1,0 +1,94 @@
+{
+  "process_id": "bipolar_attachment",
+  "purpose": "Show one duplicated chromosome with opposite-pole kinetochore attachments and metaphase alignment",
+  "input_assembly_types": [],
+  "required_states": [
+    "unattached"
+  ],
+  "preconditions": [
+    {
+      "constraint_id": "phase_unattached",
+      "predicate": "state_is",
+      "object_ids": [],
+      "key": "phase",
+      "value": "unattached"
+    }
+  ],
+  "actions": [
+    {
+      "operation": "transform_state",
+      "targets": [
+        "microtubule_left"
+      ],
+      "params": {
+        "visual_updates": {
+          "microtubule_left": {
+            "visible": true
+          }
+        }
+      }
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "microtubule_right"
+      ],
+      "params": {
+        "visual_updates": {
+          "microtubule_right": {
+            "visible": true
+          }
+        }
+      }
+    },
+    {
+      "operation": "connect",
+      "targets": [
+        "pole_left",
+        "kinetochore_A"
+      ],
+      "params": {
+        "relation": "bipolar_attachment",
+        "draw_link": "microtubule_left",
+        "source_anchor": "center",
+        "target_anchor": "center"
+      }
+    },
+    {
+      "operation": "connect",
+      "targets": [
+        "pole_right",
+        "kinetochore_B"
+      ],
+      "params": {
+        "relation": "bipolar_attachment",
+        "draw_link": "microtubule_right",
+        "source_anchor": "center",
+        "target_anchor": "center"
+      }
+    },
+    {
+      "operation": "transform_state",
+      "targets": [],
+      "params": {
+        "state_updates": {
+          "phase": "aligned"
+        }
+      }
+    }
+  ],
+  "postconditions": [
+    {
+      "constraint_id": "phase_aligned",
+      "predicate": "state_is",
+      "object_ids": [],
+      "key": "phase",
+      "value": "aligned"
+    }
+  ],
+  "invariants": [],
+  "evidence_ids": [
+    "F4",
+    "F5"
+  ]
+}

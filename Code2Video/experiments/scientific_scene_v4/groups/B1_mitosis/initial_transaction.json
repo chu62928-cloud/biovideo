@@ -1,0 +1,19 @@
+{
+  "tag": "initial",
+  "committed": true,
+  "before": null,
+  "started": 1795503786.6285725,
+  "after": {
+    "success": true,
+    "tag": "initial",
+    "code_sha256": "2d19df844dde1e4c9f8ecbfee732ceae47cd072a2ab265331b8276e51cebdf19",
+    "video_sha256": "846598e9899ed29fa1527e04a61a8c3f47f9cdadd3015f4ba8914c22513a7fca",
+    "duration_seconds": 13.0,
+    "renderer": "manim-0.19.0-full-render",
+    "trace_sha256": "4224d849c92eb77208860a679c99a1939b505f7826650930bc8d58f6269e4939",
+    "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/groups/B1_mitosis/render/versions/initial",
+    "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/groups/B1_mitosis/render/versions/initial/rendered_code.py",
+    "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/groups/B1_mitosis/render/versions/initial/video.mp4"
+  },
+  "elapsed_seconds": 16.744
+}

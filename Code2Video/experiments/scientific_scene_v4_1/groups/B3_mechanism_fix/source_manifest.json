@@ -1,0 +1,10 @@
+{
+  "scene_sha256": "65cf6bf55c9ca0f1f7073e5f18d401edc9ac7875af731f19b176205508882c1c",
+  "code_sha256": "095607a211f2bb42bb11c099bf5fe6a3c5e7ae2ad64ea967789fcbfa9d9b45ad",
+  "video_sha256": "a76af8852572b76dbb064ef0e5abc4c7136ba02a36ec444361d62cfbfb68675f",
+  "trace_sha256": "c1b3f755f5064348e0f3781c505d7ed2101d53378e6347dcb381026150cea23c",
+  "code_origin": "DETERMINISTIC_SCENE_COMPILER_WRAPPER",
+  "process_origin": "ENGINEERING_DATA except B4 model patches",
+  "changes": "Integrated fork and explicit covalent continuity",
+  "science_review_hash_policy": "Reviews valid only for exact artifacts; stale results not reused"
+}

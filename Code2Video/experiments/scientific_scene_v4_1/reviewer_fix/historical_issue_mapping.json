@@ -1,0 +1,6 @@
+{
+  "review_file": "V4/validation/dna_repaired_ir_review.json",
+  "issue_id": "polarity_label_conflict",
+  "assigned_rule_id": "DNA_STRAND_POLARITY",
+  "basis": "Explicit full description asserts reversed antiparallel rule; mapping by inspected issue, not free-text classifier"
+}

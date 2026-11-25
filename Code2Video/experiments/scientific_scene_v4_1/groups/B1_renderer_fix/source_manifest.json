@@ -1,0 +1,10 @@
+{
+  "scene_sha256": "756b94a5ca29aa8655f2a99fc53431b81fc8c5e07928e63561548119920e0790",
+  "code_sha256": "460c467748338a47712726275983d0e28cf8501b76839133136667e5c5cf4228",
+  "video_sha256": "b1cb8901c0e8f6d33ec89be6a671d4941731e0fdd1b464da312cc0c9d603fdbc",
+  "trace_sha256": "52d678e57ec21a82103d556ec672597fcb393d73282e4e27cc84d466831f876e",
+  "code_origin": "DETERMINISTIC_SCENE_COMPILER_WRAPPER",
+  "process_origin": "ENGINEERING_DATA except B4 model patches",
+  "changes": "PathGeometry only; original IR/code",
+  "science_review_hash_policy": "Reviews valid only for exact artifacts; stale results not reused"
+}

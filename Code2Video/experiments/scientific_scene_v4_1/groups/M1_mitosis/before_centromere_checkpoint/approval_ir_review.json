@@ -1,0 +1,262 @@
+{
+  "review_id": "V4-IR-91a14ab490",
+  "stage": "SCENE_IR",
+  "decision": "REVISE",
+  "issues": [
+    {
+      "issue_id": "centromere_kinetochore_label",
+      "severity": "major",
+      "description": "The kinetochore beads are placed at the chromatid midpoint constriction, but the schematic constriction is labeled/depicted as the centromere region; kinetochore sites should be associated with the centromeric region of each sister, which is acceptable, but the assembly only registers kinetochores as center beads and never encodes their attachment to the chromatid centromere in the relation set (only kinetochore→chromatid attachment). The teaching-critical point that sister kinetochores face opposite poles is implied by geometry but not represented as a scientific role/relation, so the schematic could read as generic bead-on-rod rather than centromere-attached kinetochores.",
+      "root_cause_stage": "SCENE_IR",
+      "target_objects": [
+        "kinetochore_A",
+        "kinetochore_B",
+        "sister_A",
+        "sister_B"
+      ],
+      "target_events": [
+        "metaphase"
+      ],
+      "repair_scope": "Add explicit kinetochore-at-centromere attachment relations (kinetochore_A→sister_A kinetochore_site, kinetochore_B→sister_B kinetochore_site) to relations/assembly, and ensure microtubules connect to kinetochore (not chromatid) while chromatid cohesion is encoded at centromere; keep schematic fidelity.",
+      "acceptance_criteria": [
+        "relations include kinetochore_A attached to sister_A at kinetochore_site and kinetochore_B attached to sister_B at kinetochore_site",
+        "microtubule_left connects pole_left to kinetochore_A and microtubule_right connects pole_right to kinetochore_B",
+        "sister_cohesion relation remains between sister_A and sister_B through metaphase"
+      ]
+    },
+    {
+      "issue_id": "cohesion_release_not_localized",
+      "severity": "minor",
+      "description": "The anaphase split removes sister_cohesion globally but the scene does not depict or state that cohesion release is at the centromere/along sister arms; for a metaphase→anaphase teaching clip this is an acceptable simplification, but the caption 'Cohesion is released' should not imply dissolution of the centromere itself. Risk of misleading students that centromere is destroyed rather than cohesin cleaved.",
+      "root_cause_stage": "SCENE_IR",
+      "target_objects": [
+        "sister_A",
+        "sister_B"
+      ],
+      "target_events": [
+        "anaphase"
+      ],
+      "repair_scope": "Clarify caption/simplification note that sister-chromatid cohesion (cohesin) is released, centromere/kinetochore remain with each daughter chromosome; do not show centromere vanishing.",
+      "acceptance_criteria": [
+        "anaphase caption or simplification note states cohesin/cohesion release, not centromere removal",
+        "post-anaphase each daughter retains its kinetochore/centromere region"
+      ]
+    },
+    {
+      "issue_id": "spindle_checkpoint_assumed_not_shown",
+      "severity": "uncertain",
+      "description": "The scene states the spindle checkpoint is assumed satisfied before anaphase, but required_concepts include bipolar attachment; the event ordering does not include a checkpoint/satisfaction gate, and the only precondition is phase=aligned plus relation_exists. This is an allowed simplification, but because the checkpoint is the mechanism linking attachment to anaphase onset, automatic PASS would overstate that the mechanism is taught.",
+      "root_cause_stage": "KNOWLEDGE",
+      "target_objects": [
+        "pole_left",
+        "pole_right",
+        "kinetochore_A",
+        "kinetochore_B"
+      ],
+      "target_events": [
+        "metaphase",
+        "anaphase"
+      ],
+      "repair_scope": "Either keep as declared simplification with an explicit on-screen note that checkpoint satisfaction is assumed, or add a brief checkpoint gate visual before anaphase; do not add molecular detail beyond scope.",
+      "acceptance_criteria": [
+        "declared simplification explicitly names spindle checkpoint as assumed satisfied and is surfaced in the clip (caption/note)",
+        "anaphase precondition cannot fire unless both bipolar attachments exist"
+      ]
+    }
+  ],
+  "notes": [
+    "Deterministic runtime and static checks all PASS; no identity/topology/connection failures observed.",
+    "Centromere/kinetochore and spindle are schematic; shape alone is not molecular evidence, consistent with declared simplifications.",
+    "Sister chromatids attached at centromeric region (F1) and opposite-pole kinetochore orientation (F4) are scientifically supported; the main gap is encoding, not contradiction.",
+    "Event order metaphase→anaphase correct (F3). Same two physical chromatid objects persist (F1, F8)."
+  ],
+  "checks": [
+    {
+      "check_id": "schema_references",
+      "category": "schema",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [],
+      "observed_evidence": {
+        "errors": []
+      },
+      "expected_condition": "All references exist and facts were verified",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "metaphase_bipolar_attachment_0",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "microtubule_left"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "F5"
+      ],
+      "observed_evidence": {
+        "action_id": "metaphase_bipolar_attachment_0",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "unattached"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "metaphase_bipolar_attachment_1",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "microtubule_right"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "F5"
+      ],
+      "observed_evidence": {
+        "action_id": "metaphase_bipolar_attachment_1",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "unattached"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "metaphase_bipolar_attachment_2",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "pole_left",
+        "kinetochore_A"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "F5"
+      ],
+      "observed_evidence": {
+        "action_id": "metaphase_bipolar_attachment_2",
+        "committed": true,
+        "operation": "connect",
+        "state": {
+          "phase": "unattached"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "metaphase_bipolar_attachment_3",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "pole_right",
+        "kinetochore_B"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "F5"
+      ],
+      "observed_evidence": {
+        "action_id": "metaphase_bipolar_attachment_3",
+        "committed": true,
+        "operation": "connect",
+        "state": {
+          "phase": "unattached"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "metaphase_bipolar_attachment_4",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "F5"
+      ],
+      "observed_evidence": {
+        "action_id": "metaphase_bipolar_attachment_4",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "aligned"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "anaphase_chromatid_separation_0",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "sister_A",
+        "sister_B"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F3",
+        "F5",
+        "F8"
+      ],
+      "observed_evidence": {
+        "action_id": "anaphase_chromatid_separation_0",
+        "committed": true,
+        "operation": "split",
+        "state": {
+          "phase": "separating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "anaphase_chromatid_separation_1",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "sister_A",
+        "sister_B"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F3",
+        "F5",
+        "F8"
+      ],
+      "observed_evidence": {
+        "action_id": "anaphase_chromatid_separation_1",
+        "committed": true,
+        "operation": "move_along_path",
+        "state": {
+          "phase": "separating"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    }
+  ],
+  "scene_hash": "e1e70029edd03ab1e513fdb58af60a783aaed74b9a1a17b255223a9e6b946ed2"
+}

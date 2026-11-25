@@ -1,0 +1,3 @@
+round,scenes,all_scenes,duration_seconds,width,height,fps,issues_before_optimization,reported_improvements,successful_optimizations,failed_optimizations,changed_code_sections,decode_returncode,video
+1,4,False,96.0,854,480,15/1,4,12,2,2,4,0,/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/DNA_qwen4_critic_round_1.mp4
+2,4,False,96.0,854,480,15/1,4,12,1,3,4,0,/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/DNA_qwen4_critic_round_2.mp4

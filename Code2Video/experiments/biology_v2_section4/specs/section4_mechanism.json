@@ -1,0 +1,298 @@
+{
+  "schema_version": "2.0",
+  "scope": "Simplified eukaryotic replication, Section4 only; schematic, not molecular scale",
+  "colors": {
+    "template": "#4FC3F7",
+    "new_dna": "#69F0AE",
+    "rna": "#FFB74D",
+    "helicase": "#FFEB3B",
+    "primase": "#BA68C8",
+    "polymerase": "#4DD0E1",
+    "ligase": "#FFD54F"
+  },
+  "objects": [
+    {
+      "id": "replication_fork",
+      "name_zh": "复制叉",
+      "name_en": "Replication fork",
+      "type": "structure",
+      "color": "#4FC3F7",
+      "asset_path": null,
+      "parent": "replicon",
+      "relative_anchor": "fork_junction",
+      "allowed_actions": [
+        "unwind",
+        "translate_as_unit"
+      ],
+      "constraints": [
+        "stable_identity",
+        "coupled_motion"
+      ]
+    },
+    {
+      "id": "template_leading",
+      "name_zh": "前导链模板",
+      "name_en": "Leading-strand template",
+      "type": "template_strand",
+      "color": "#4FC3F7",
+      "asset_path": null,
+      "parent": "replication_fork",
+      "relative_anchor": "upper_branch",
+      "allowed_actions": [
+        "unwind"
+      ],
+      "constraints": [
+        "3prime_left_5prime_right",
+        "separate_from_new_DNA"
+      ]
+    },
+    {
+      "id": "template_lagging",
+      "name_zh": "后随链模板",
+      "name_en": "Lagging-strand template",
+      "type": "template_strand",
+      "color": "#4FC3F7",
+      "asset_path": null,
+      "parent": "replication_fork",
+      "relative_anchor": "lower_branch",
+      "allowed_actions": [
+        "unwind"
+      ],
+      "constraints": [
+        "5prime_left_3prime_right",
+        "antiparallel_templates"
+      ]
+    },
+    {
+      "id": "new_leading_strand",
+      "name_zh": "前导新生链",
+      "name_en": "New leading strand",
+      "type": "nascent_strand",
+      "color": "#69F0AE",
+      "asset_path": null,
+      "parent": "replication_fork",
+      "relative_anchor": "below_upper_template",
+      "allowed_actions": [
+        "extend_continuously"
+      ],
+      "constraints": [
+        "5prime_left_3prime_right",
+        "starts_at_primer_3prime"
+      ]
+    },
+    {
+      "id": "new_lagging_strand",
+      "name_zh": "后随新生链",
+      "name_en": "New lagging strand",
+      "type": "nascent_strand",
+      "color": "#69F0AE",
+      "asset_path": null,
+      "parent": "replication_fork",
+      "relative_anchor": "above_lower_template",
+      "allowed_actions": [
+        "extend_in_fragments",
+        "mature"
+      ],
+      "constraints": [
+        "fragment_5prime_right_3prime_left",
+        "not_same_object_as_template"
+      ]
+    },
+    {
+      "id": "primase",
+      "name_zh": "引物酶",
+      "name_en": "Primase",
+      "type": "enzyme",
+      "color": "#BA68C8",
+      "asset_path": "assets/primase.svg",
+      "parent": "replication_fork",
+      "relative_anchor": "primer_initiation_site",
+      "allowed_actions": [
+        "bind",
+        "make_RNA",
+        "release"
+      ],
+      "constraints": [
+        "stays_near_active_primer_site"
+      ]
+    },
+    {
+      "id": "rna_primer",
+      "name_zh": "RNA引物",
+      "name_en": "RNA primer",
+      "type": "primer",
+      "color": "#FFB74D",
+      "asset_path": "assets/rna_primer.svg",
+      "parent": "nascent_strand",
+      "relative_anchor": "5prime_start",
+      "allowed_actions": [
+        "appear_incrementally",
+        "be_removed"
+      ],
+      "constraints": [
+        "must_precede_DNA",
+        "3prime_extension_end"
+      ]
+    },
+    {
+      "id": "dna_polymerase_leading",
+      "name_zh": "前导链DNA聚合酶",
+      "name_en": "Leading DNA polymerase",
+      "type": "enzyme",
+      "color": "#4DD0E1",
+      "asset_path": "assets/dna_polymerase.svg",
+      "parent": "new_leading_strand",
+      "relative_anchor": "growing_3prime_end",
+      "allowed_actions": [
+        "bind",
+        "extend",
+        "release"
+      ],
+      "constraints": [
+        "near_growing_end",
+        "5to3_only"
+      ]
+    },
+    {
+      "id": "dna_polymerase_lagging",
+      "name_zh": "后随链DNA聚合酶",
+      "name_en": "Lagging DNA polymerase",
+      "type": "enzyme",
+      "color": "#4DD0E1",
+      "asset_path": "assets/dna_polymerase.svg",
+      "parent": "okazaki_fragment",
+      "relative_anchor": "growing_3prime_end",
+      "allowed_actions": [
+        "bind",
+        "extend",
+        "fill_DNA_gap",
+        "release"
+      ],
+      "constraints": [
+        "near_growing_end",
+        "5to3_leftward"
+      ]
+    },
+    {
+      "id": "okazaki_fragment",
+      "name_zh": "冈崎片段",
+      "name_en": "Okazaki fragment",
+      "type": "DNA_fragment",
+      "color": "#69F0AE",
+      "asset_path": "assets/okazaki_fragment.svg",
+      "parent": "new_lagging_strand",
+      "relative_anchor": "own_RNA_primer",
+      "allowed_actions": [
+        "extend_left",
+        "mature",
+        "join"
+      ],
+      "constraints": [
+        "own_primer_first",
+        "more_than_one_fragment"
+      ]
+    },
+    {
+      "id": "dna_ligase",
+      "name_zh": "DNA连接酶",
+      "name_en": "DNA ligase",
+      "type": "enzyme",
+      "color": "#FFD54F",
+      "asset_path": "assets/dna_ligase.svg",
+      "parent": "new_lagging_strand",
+      "relative_anchor": "filled_DNA_nick",
+      "allowed_actions": [
+        "bind",
+        "seal_nick",
+        "release"
+      ],
+      "constraints": [
+        "after_primer_removal_and_DNA_fill",
+        "does_not_convert_RNA_into_DNA"
+      ]
+    },
+    {
+      "id": "incoming_nucleotide",
+      "name_zh": "待加入核苷酸",
+      "name_en": "Incoming nucleotide",
+      "type": "nucleotide",
+      "color": "#69F0AE",
+      "asset_path": "assets/nucleotide.svg",
+      "parent": "nascent_strand",
+      "relative_anchor": "growing_3prime_end",
+      "allowed_actions": [
+        "approach",
+        "incorporate"
+      ],
+      "constraints": [
+        "new_DNA_only",
+        "addition_at_3prime"
+      ]
+    }
+  ],
+  "coordinate_convention": {
+    "fork_progress": "+x",
+    "unreplicated_duplex": "right of fork",
+    "opened_templates": "left of fork",
+    "template_leading": "upper: 3prime at left, 5prime at right",
+    "template_lagging": "lower: 5prime at left, 3prime at right",
+    "new_leading": "below upper template, grows +x, 5prime left to 3prime right",
+    "new_lagging": "above lower template, each fragment grows -x, 5prime right to 3prime left"
+  },
+  "constraints": [
+    {
+      "id": "distinct_strands",
+      "rule": "Blue template and green newly synthesized DNA are different Mobjects; never recolor the template to stand in for synthesis."
+    },
+    {
+      "id": "antiparallel",
+      "rule": "Show template 3prime-left/5prime-right upper; template 5prime-left/3prime-right lower. New strand polarities oppose their own templates."
+    },
+    {
+      "id": "primer_first",
+      "rule": "Primase must bind and form orange RNA primer before polymerase extends new DNA from its exposed 3prime end."
+    },
+    {
+      "id": "synthesis_direction",
+      "rule": "Add visible individual DNA nucleotides at growing 3prime end, +x on leading; -x within each lagging fragment."
+    },
+    {
+      "id": "leading",
+      "rule": "Leading synthesis is continuous relative to fork progress."
+    },
+    {
+      "id": "lagging",
+      "rule": "Show at least two separate primers and Okazaki fragments; each new primer is nearer the advancing fork; each fragment grows away from fork."
+    },
+    {
+      "id": "maturation",
+      "rule": "Remove the RNA primer first, visibly leave a gap, fill with DNA by polymerase, then ligase seals only a nick. Never show ligase making DNA or turning orange RNA directly green."
+    },
+    {
+      "id": "enzyme_contact",
+      "rule": "Bind enzyme geometry to active-site anchors (<=0.8 scene units) during its work; keep fork relationships continuous."
+    },
+    {
+      "id": "identity",
+      "rule": "Retain the same stable replication_fork and template objects across all five events; do not recreate an unrelated pair of templates."
+    }
+  ],
+  "validation": {
+    "target_duration_seconds": [
+      25,
+      35
+    ],
+    "max_active_main_labels": 2,
+    "no_static_half_screen_lecture": true
+  },
+  "references": [
+    {
+      "url": "https://www.nature.com/articles/s41467-022-34751-2",
+      "supports": "RNA-primer processing precedes DNA nick ligation; do not conflate the steps"
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK21113/",
+      "supports": "Primase-Pol alpha priming and different roles of polymerases in eukaryotic synthesis"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "tag": "render_exception",
+  "committed": false,
+  "before": {
+    "success": true,
+    "tag": "initial_fixture",
+    "code_sha256": "b4221e3d274851178b7be669d9f8e75fe2fc67b787ae0b6c496931c2949d3184",
+    "video_sha256": "937cb682eac7f3c24e06f314b11b4e845ae38da27f3fc02b75db65bc4bfef7db",
+    "duration_seconds": 0.466667,
+    "renderer": "manim-0.19.0-full-render",
+    "trace_sha256": "dbfcd49cb48b43bfca864cbfca99e5d1626db4d717d7e45e7c1b0651d6324e32",
+    "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795427848861043189/transaction/versions/initial_fixture",
+    "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795427848861043189/transaction/versions/initial_fixture/rendered_code.py",
+    "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795427848861043189/transaction/versions/initial_fixture/video.mp4"
+  },
+  "started": 1795427850.8471227,
+  "error_type": "AssertionError",
+  "error": "Full Manim render failed; see stderr.log",
+  "after": {
+    "success": true,
+    "tag": "initial_fixture",
+    "code_sha256": "b4221e3d274851178b7be669d9f8e75fe2fc67b787ae0b6c496931c2949d3184",
+    "video_sha256": "937cb682eac7f3c24e06f314b11b4e845ae38da27f3fc02b75db65bc4bfef7db",
+    "duration_seconds": 0.466667,
+    "renderer": "manim-0.19.0-full-render",
+    "trace_sha256": "dbfcd49cb48b43bfca864cbfca99e5d1626db4d717d7e45e7c1b0651d6324e32",
+    "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795427848861043189/transaction/versions/initial_fixture",
+    "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795427848861043189/transaction/versions/initial_fixture/rendered_code.py",
+    "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/run_1795427848861043189/transaction/versions/initial_fixture/video.mp4"
+  },
+  "elapsed_seconds": 1.579
+}

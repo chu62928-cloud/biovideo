@@ -1,0 +1,12 @@
+{
+  "RESULTS.md": "50a0e244ba6327101c7151bb41a03c4380e3c06c03ad7c126891dada01a8d4df",
+  "metrics.json": "461f0b20ddbdb1a373cd93a41b857fd53a99abe5d73305b4a1a0d71b24c99964",
+  "V4_代码规则审核日志.zip": "b9d063426d465d1b25e256dd76941116a0b3eddd0b9e6cf77402d6980b9d9f2b",
+  "comparisons/A0_A1_A2_A3.mp4": "cd7b6acef79b7d28bef0183a852003b6b495ffbee90f851550b26b7d1bbf88f3",
+  "comparisons/dna_keyframes.jpg": "def343c0539d247c9e0d764a4eb07cba6f13460202315b31c0b91b9b37da033e",
+  "comparisons/mitosis_keyframes.jpg": "050dc6f899397fdd046b36ccaecb68d2145716b422d95866ec8443fa0d3ebfc0",
+  "groups/A1_stateful_assembly/video.mp4": "8a2e675243bf2e448f80a0f9c272c0bcae75cd6f2f1f70ce2f49e2adc1b27e04",
+  "groups/A2_scene_graph_fsm/video.mp4": "8a2e675243bf2e448f80a0f9c272c0bcae75cd6f2f1f70ce2f49e2adc1b27e04",
+  "groups/A3_expert_repair/video.mp4": "91f575b17b07e3178688ce2b50d70d4603564d508c6ac5fe9be2a2dfeab17ace",
+  "groups/B1_mitosis/video.mp4": "846598e9899ed29fa1527e04a61a8c3f47f9cdadd3015f4ba8914c22513a7fca"
+}

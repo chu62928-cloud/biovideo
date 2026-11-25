@@ -1,0 +1,250 @@
+[
+  {
+    "operation": "transform_state",
+    "targets": [
+      "microtubule_left"
+    ],
+    "params": {
+      "visual_updates": {
+        "microtubule_left": {
+          "visible": true
+        }
+      }
+    },
+    "transition_id": "metaphase_bipolar_attachment_0",
+    "process_id": "bipolar_attachment",
+    "assembly_id": "mitotic_spindle_chromosome_set",
+    "preconditions": [
+      {
+        "constraint_id": "phase_unattached",
+        "predicate": "state_is",
+        "object_ids": [],
+        "key": "phase",
+        "value": "unattached"
+      }
+    ],
+    "postconditions": [],
+    "invariants": [],
+    "duration": 1.2,
+    "evidence_ids": [
+      "F4",
+      "F5"
+    ]
+  },
+  {
+    "operation": "transform_state",
+    "targets": [
+      "microtubule_right"
+    ],
+    "params": {
+      "visual_updates": {
+        "microtubule_right": {
+          "visible": true
+        }
+      }
+    },
+    "transition_id": "metaphase_bipolar_attachment_1",
+    "process_id": "bipolar_attachment",
+    "assembly_id": "mitotic_spindle_chromosome_set",
+    "preconditions": [],
+    "postconditions": [],
+    "invariants": [],
+    "duration": 1.2,
+    "evidence_ids": [
+      "F4",
+      "F5"
+    ]
+  },
+  {
+    "operation": "connect",
+    "targets": [
+      "pole_left",
+      "kinetochore_A"
+    ],
+    "params": {
+      "relation": "bipolar_attachment",
+      "draw_link": "microtubule_left",
+      "source_anchor": "center",
+      "target_anchor": "center"
+    },
+    "transition_id": "metaphase_bipolar_attachment_2",
+    "process_id": "bipolar_attachment",
+    "assembly_id": "mitotic_spindle_chromosome_set",
+    "preconditions": [],
+    "postconditions": [],
+    "invariants": [],
+    "duration": 1.2,
+    "evidence_ids": [
+      "F4",
+      "F5"
+    ]
+  },
+  {
+    "operation": "connect",
+    "targets": [
+      "pole_right",
+      "kinetochore_B"
+    ],
+    "params": {
+      "relation": "bipolar_attachment",
+      "draw_link": "microtubule_right",
+      "source_anchor": "center",
+      "target_anchor": "center"
+    },
+    "transition_id": "metaphase_bipolar_attachment_3",
+    "process_id": "bipolar_attachment",
+    "assembly_id": "mitotic_spindle_chromosome_set",
+    "preconditions": [],
+    "postconditions": [],
+    "invariants": [],
+    "duration": 1.2,
+    "evidence_ids": [
+      "F4",
+      "F5"
+    ]
+  },
+  {
+    "operation": "transform_state",
+    "targets": [],
+    "params": {
+      "state_updates": {
+        "phase": "aligned"
+      }
+    },
+    "transition_id": "metaphase_bipolar_attachment_4",
+    "process_id": "bipolar_attachment",
+    "assembly_id": "mitotic_spindle_chromosome_set",
+    "preconditions": [],
+    "postconditions": [
+      {
+        "constraint_id": "phase_aligned",
+        "predicate": "state_is",
+        "object_ids": [],
+        "key": "phase",
+        "value": "aligned"
+      }
+    ],
+    "invariants": [],
+    "duration": 1.2,
+    "evidence_ids": [
+      "F4",
+      "F5"
+    ]
+  },
+  {
+    "operation": "split",
+    "targets": [
+      "sister_A",
+      "sister_B"
+    ],
+    "params": {
+      "remove_relation": "sister_cohesion",
+      "property_updates": {
+        "current_role": "daughter_chromosome"
+      },
+      "visual_updates": {
+        "sister_A": {
+          "label": "Daughter A"
+        },
+        "sister_B": {
+          "label": "Daughter B"
+        }
+      },
+      "state_updates": {
+        "phase": "separating"
+      }
+    },
+    "transition_id": "anaphase_chromatid_separation_0",
+    "process_id": "chromatid_separation",
+    "assembly_id": "mitotic_spindle_chromosome_set",
+    "preconditions": [
+      {
+        "constraint_id": "phase_aligned",
+        "predicate": "state_is",
+        "object_ids": [],
+        "key": "phase",
+        "value": "aligned"
+      },
+      {
+        "constraint_id": "bipolar_left",
+        "predicate": "relation_exists",
+        "object_ids": [
+          "pole_left",
+          "kinetochore_A"
+        ],
+        "relation": "bipolar_attachment"
+      },
+      {
+        "constraint_id": "bipolar_right",
+        "predicate": "relation_exists",
+        "object_ids": [
+          "pole_right",
+          "kinetochore_B"
+        ],
+        "relation": "bipolar_attachment"
+      },
+      {
+        "constraint_id": "sisters_linked",
+        "predicate": "relation_exists",
+        "object_ids": [
+          "sister_A",
+          "sister_B"
+        ],
+        "relation": "sister_cohesion"
+      }
+    ],
+    "postconditions": [],
+    "invariants": [],
+    "duration": 3.0,
+    "evidence_ids": [
+      "F3",
+      "F5",
+      "F8"
+    ]
+  },
+  {
+    "operation": "move_along_path",
+    "targets": [
+      "sister_A",
+      "sister_B"
+    ],
+    "params": {
+      "paths": {
+        "sister_A": [
+          [
+            -2.8,
+            0,
+            0
+          ]
+        ],
+        "sister_B": [
+          [
+            2.8,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    "transition_id": "anaphase_chromatid_separation_1",
+    "process_id": "chromatid_separation",
+    "assembly_id": "mitotic_spindle_chromosome_set",
+    "preconditions": [],
+    "postconditions": [
+      {
+        "constraint_id": "phase_separating",
+        "predicate": "state_is",
+        "object_ids": [],
+        "key": "phase",
+        "value": "separating"
+      }
+    ],
+    "invariants": [],
+    "duration": 3.0,
+    "evidence_ids": [
+      "F3",
+      "F5",
+      "F8"
+    ]
+  }
+]

@@ -1,0 +1,133 @@
+[
+  {
+    "check_id": "registered_scientific_identity",
+    "category": "identity",
+    "status": "PASS",
+    "object_ids": [],
+    "event_ids": [],
+    "evidence_ids": [],
+    "observed_evidence": {
+      "missing": [],
+      "unexpected_scientific_ids": []
+    },
+    "expected_condition": "",
+    "description": "",
+    "suggested_repair_stage": "SCENE_IR"
+  },
+  {
+    "check_id": "object_instance_continuity",
+    "category": "identity",
+    "status": "PASS",
+    "object_ids": [],
+    "event_ids": [],
+    "evidence_ids": [],
+    "observed_evidence": {
+      "violations": [],
+      "tracked_objects": 14
+    },
+    "expected_condition": "",
+    "description": "",
+    "suggested_repair_stage": "SCENE_IR"
+  },
+  {
+    "check_id": "actual_event_order",
+    "category": "event_order",
+    "status": "PASS",
+    "object_ids": [],
+    "event_ids": [],
+    "evidence_ids": [],
+    "observed_evidence": {
+      "events": [
+        "advance_fork"
+      ]
+    },
+    "expected_condition": "",
+    "description": "",
+    "suggested_repair_stage": "SCENE_IR"
+  },
+  {
+    "check_id": "exactly_two_parental_strands",
+    "category": "topology",
+    "status": "PASS",
+    "object_ids": [],
+    "event_ids": [],
+    "evidence_ids": [
+      "X_bf28604c"
+    ],
+    "observed_evidence": {
+      "count": 2
+    },
+    "expected_condition": "",
+    "description": "",
+    "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+  },
+  {
+    "check_id": "stable_components",
+    "category": "identity",
+    "status": "PASS",
+    "object_ids": [],
+    "event_ids": [],
+    "evidence_ids": [],
+    "observed_evidence": {},
+    "expected_condition": "",
+    "description": "",
+    "suggested_repair_stage": "ANIMATION_IMPLEMENTATION"
+  },
+  {
+    "check_id": "expected_observed_states",
+    "category": "execution",
+    "status": "PASS",
+    "object_ids": [],
+    "event_ids": [],
+    "evidence_ids": [],
+    "observed_evidence": {
+      "mismatches": [],
+      "snapshot_count": 52
+    },
+    "expected_condition": "Actual transformed anchors and visibility match committed expected states",
+    "description": "",
+    "suggested_repair_stage": "SCENE_IR"
+  },
+  {
+    "check_id": "actual_active_site_bindings",
+    "category": "connection",
+    "status": "PASS",
+    "object_ids": [],
+    "event_ids": [],
+    "evidence_ids": [],
+    "observed_evidence": {
+      "violations": []
+    },
+    "expected_condition": "Visible bound objects follow actual target anchors including declared offset",
+    "description": "",
+    "suggested_repair_stage": "SCENE_IR"
+  },
+  {
+    "check_id": "continuous_drawn_connections",
+    "category": "topology",
+    "status": "PASS",
+    "object_ids": [],
+    "event_ids": [],
+    "evidence_ids": [],
+    "observed_evidence": {
+      "violations": []
+    },
+    "expected_condition": "Every drawn connection endpoint follows its real target at every sampled time",
+    "description": "",
+    "suggested_repair_stage": "SCENE_IR"
+  },
+  {
+    "check_id": "visible_coverage",
+    "category": "coverage",
+    "status": "PASS",
+    "object_ids": [],
+    "event_ids": [],
+    "evidence_ids": [],
+    "observed_evidence": {
+      "unregistered_visible": []
+    },
+    "expected_condition": "",
+    "description": "All adapter-created scientific and decorative objects registered; arbitrary Coder-added objects checked separately",
+    "suggested_repair_stage": "SCENE_IR"
+  }
+]

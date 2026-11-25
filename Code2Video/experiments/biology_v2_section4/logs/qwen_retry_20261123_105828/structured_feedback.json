@@ -1,0 +1,107 @@
+{
+  "layout": {
+    "has_issues": true,
+    "improvements": [
+      {
+        "problem": "Leading 'Pol δ' label stays frozen at left (~x415, y240) while the polymerase travels to (~x730, y210); the label is >2 grid units from its enzyme and sits on the left end of the mid-frame duplex ladder.",
+        "solution": "Bind the leading polymerase label to dna_polymerase_leading and place it below the enzyme, clear of the duplex rung row: self.place_at_grid(pol_delta_leading_label, 'D6', scale_factor=0.7) with a per-frame offset so it tracks the enzyme's x (stay within column 5-6, row D).",
+        "line_number": null,
+        "object_affected": "dna_polymerase_leading"
+      },
+      {
+        "problem": "Lagging 'Pol δ' (~x535, y248) and 'Ligase' (~x585, y245) captions are printed directly on top of the mid-frame duplex ladder rungs (y237-247), making both text and ladder illegible.",
+        "solution": "Move both captions into the empty band between the duplex and the Okazaki fragments: self.place_at_grid(pol_delta_lagging_label, 'D4', scale_factor=0.6) nudged to y~288 (just under dna_polymerase_lagging, above fragment tops at y296), and self.place_at_grid(ligase_label, 'D5', scale_factor=0.6) at (~x640, y278) beside dna_ligase; no overlap with the D6 leading label.",
+        "line_number": null,
+        "object_affected": "dna_polymerase_lagging"
+      },
+      {
+        "problem": "Nascent-strand polarity glyphs are drawn on the template lines (orange 3' at ~405,162; green 3' at ~740,160; green 3' at ~467,320), visually merging template and new-strand ends.",
+        "solution": "Offset each polarity glyph onto its own strand row, off the blue template lines: self.place_at_grid(rna_primer_3prime_label, 'C3', scale_factor=0.6) at (~x405, y172) above the orange primer row; self.place_at_grid(new_leading_3prime_label, 'C6', scale_factor=0.6) at (~x740, y192) below the green leading row; self.place_at_grid(new_lagging_3prime_label, 'D4', scale_factor=0.6) at (~x467, y310) above the bottom template, left of the fragments.",
+        "line_number": null,
+        "object_affected": "new_leading_strand"
+      }
+    ]
+  },
+  "issues": [
+    {
+      "object_id": "dna_polymerase_leading",
+      "issue_type": "label_relation",
+      "current_state": {
+        "label_text": "Pol δ",
+        "label_position_px": [
+          415,
+          240
+        ],
+        "enzyme_position_px_end": [
+          730,
+          210
+        ],
+        "separation_grid_units": 2.2,
+        "collides_with": "mid-frame duplex ladder left end (y237-247)"
+      },
+      "target_constraint": {
+        "max_label_distance_grid_units": 1.0,
+        "keep_out_of_band_px_y": [
+          235,
+          250
+        ],
+        "grid_cell": "D6 (tracking column 5-6)"
+      },
+      "suggested_change": "Re-anchor the leading 'Pol δ' caption to the enzyme and place it at grid D6, scale_factor=0.7, following the enzyme horizontally so it never rests on the duplex ladder row."
+    },
+    {
+      "object_id": "dna_polymerase_lagging",
+      "issue_type": "overlap",
+      "current_state": {
+        "lagging_label_position_px": [
+          535,
+          248
+        ],
+        "ligase_label_position_px": [
+          585,
+          245
+        ],
+        "overlapped_geometry": "duplex ladder rungs spanning x460-790, y237-247"
+      },
+      "target_constraint": {
+        "free_band_px_y": [
+          252,
+          294
+        ],
+        "lagging_label_cell": "D4",
+        "ligase_label_cell": "D5",
+        "no_mutual_overlap": true
+      },
+      "suggested_change": "Drop the lagging 'Pol δ' caption to D4 (~y288, scale 0.6) directly beneath dna_polymerase_lagging and above the Okazaki fragment tops, and shift the 'Ligase' caption to D5 (~x640, y278, scale 0.6) next to dna_ligase; both stay within 1 grid unit of their enzymes and off the ladder."
+    },
+    {
+      "object_id": "new_leading_strand",
+      "issue_type": "strand_confusion",
+      "current_state": {
+        "primer_3prime_glyph_px": [
+          405,
+          162
+        ],
+        "leading_3prime_glyph_px": [
+          740,
+          160
+        ],
+        "lagging_3prime_glyph_px": [
+          467,
+          320
+        ],
+        "problem": "all three glyphs sit on the blue template lines (y~160 and y~320)"
+      },
+      "target_constraint": {
+        "min_clearance_from_template_px": 8,
+        "cells": [
+          "C3",
+          "C6",
+          "D4"
+        ],
+        "preserve_existing_polarity_text": true
+      },
+      "suggested_change": "Keep polarity values unchanged but relocate glyphs onto their nascent rows: primer 3' to C3 (~405,172), leading 3' to C6 (~740,192), lagging 3' to D4 (~467,310), each scale_factor=0.6, so template vs nascent ends remain visually distinct."
+    }
+  ]
+}

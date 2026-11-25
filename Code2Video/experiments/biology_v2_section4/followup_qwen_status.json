@@ -1,0 +1,28 @@
+{
+  "initial_formal_experiment_unchanged": true,
+  "initial_Qwen_calls": 1,
+  "explicit_user_retry_calls": 1,
+  "total_Qwen_attempts_so_far": 2,
+  "original_MAX_QWEN_CALLS": 2,
+  "known_retry_token_usage": {
+    "completion_tokens": 4878,
+    "prompt_tokens": 20783,
+    "total_tokens": 25661,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 3415,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "image_tokens": 4643,
+      "video_tokens": 13367,
+      "text_tokens": 2773
+    }
+  },
+  "earlier_timeout_usage": "unknown",
+  "current_status": "valid feedback saved, no repair or new render performed",
+  "report": "/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/logs/qwen_retry_20261123_105828/diagnostic_report.json"
+}

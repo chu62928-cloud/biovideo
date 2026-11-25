@@ -1,0 +1,76 @@
+{
+  "type": "object",
+  "required": [
+    "repair_id",
+    "issue_id",
+    "decision",
+    "category",
+    "severity",
+    "root_cause_stage",
+    "scene_id",
+    "object_ids",
+    "repair_scope",
+    "instruction",
+    "preserve",
+    "verification",
+    "invalidate",
+    "source_review_id",
+    "input_hash"
+  ],
+  "properties": {
+    "repair_id": {
+      "type": "string"
+    },
+    "issue_id": {
+      "type": "string"
+    },
+    "decision": {
+      "enum": [
+        "REVISE"
+      ]
+    },
+    "category": {
+      "type": "string"
+    },
+    "severity": {
+      "enum": [
+        "blocker",
+        "major",
+        "minor",
+        "uncertain"
+      ]
+    },
+    "root_cause_stage": {
+      "type": "string"
+    },
+    "scene_id": {
+      "type": "string"
+    },
+    "object_ids": {
+      "type": "array"
+    },
+    "repair_scope": {
+      "type": "string"
+    },
+    "instruction": {
+      "type": "string",
+      "minLength": 20
+    },
+    "preserve": {
+      "type": "array"
+    },
+    "verification": {
+      "type": "array"
+    },
+    "invalidate": {
+      "type": "array"
+    },
+    "source_review_id": {
+      "type": "string"
+    },
+    "input_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "tag": "coder_attempt_3",
+  "committed": false,
+  "before": null,
+  "started": 1795427692.9348676,
+  "error_type": "AssertionError",
+  "error": "Duration outside requested range",
+  "after": null,
+  "elapsed_seconds": 10.584
+}

@@ -1,0 +1,35 @@
+{"time": 1795492294.5131767, "event": "invalidated", "gates": ["APPROVED", "CAST_ASSET_GATE", "CODE_GATE", "FINAL_SCIENCE_GATE", "KNOWLEDGE_GATE", "RENDER", "SCRIPT_GATE", "STORYBOARD_GATE", "TOPIC_RESEARCH", "VIDEO_SCIENCE_GATE", "VISUAL_CRITIC"]}
+{"time": 1795492294.5140762, "event": "artifact_registered", "name": "TOPIC_RESEARCH", "sha256": "1bce74844a818caf2060b407eeb2bc1a1d5d05401501e8d2eb18dfb5f6ae8087", "owner_gate": "TOPIC_RESEARCH"}
+{"time": 1795492294.5144572, "event": "gate_transition", "gate": "TOPIC_RESEARCH", "status": "PASSED", "review_id": "mock-TOPIC_RESEARCH"}
+{"time": 1795492294.514823, "event": "invalidated", "gates": ["APPROVED", "CAST_ASSET_GATE", "CODE_GATE", "FINAL_SCIENCE_GATE", "KNOWLEDGE_GATE", "RENDER", "SCRIPT_GATE", "STORYBOARD_GATE", "VIDEO_SCIENCE_GATE", "VISUAL_CRITIC"]}
+{"time": 1795492294.5151312, "event": "artifact_registered", "name": "KNOWLEDGE_GATE", "sha256": "1bce74844a818caf2060b407eeb2bc1a1d5d05401501e8d2eb18dfb5f6ae8087", "owner_gate": "KNOWLEDGE_GATE"}
+{"time": 1795492294.5154674, "event": "gate_transition", "gate": "KNOWLEDGE_GATE", "status": "PASSED", "review_id": "mock-KNOWLEDGE_GATE"}
+{"time": 1795492294.5158305, "event": "invalidated", "gates": ["APPROVED", "CAST_ASSET_GATE", "CODE_GATE", "FINAL_SCIENCE_GATE", "RENDER", "SCRIPT_GATE", "STORYBOARD_GATE", "VIDEO_SCIENCE_GATE", "VISUAL_CRITIC"]}
+{"time": 1795492294.5161345, "event": "artifact_registered", "name": "SCRIPT_GATE", "sha256": "1bce74844a818caf2060b407eeb2bc1a1d5d05401501e8d2eb18dfb5f6ae8087", "owner_gate": "SCRIPT_GATE"}
+{"time": 1795492294.5164711, "event": "gate_transition", "gate": "SCRIPT_GATE", "status": "PASSED", "review_id": "mock-SCRIPT_GATE"}
+{"time": 1795492294.5168254, "event": "invalidated", "gates": ["APPROVED", "CAST_ASSET_GATE", "CODE_GATE", "FINAL_SCIENCE_GATE", "RENDER", "STORYBOARD_GATE", "VIDEO_SCIENCE_GATE", "VISUAL_CRITIC"]}
+{"time": 1795492294.5171585, "event": "artifact_registered", "name": "CAST_ASSET_GATE", "sha256": "1bce74844a818caf2060b407eeb2bc1a1d5d05401501e8d2eb18dfb5f6ae8087", "owner_gate": "CAST_ASSET_GATE"}
+{"time": 1795492294.517506, "event": "gate_transition", "gate": "CAST_ASSET_GATE", "status": "PASSED", "review_id": "mock-CAST_ASSET_GATE"}
+{"time": 1795492294.5178556, "event": "invalidated", "gates": ["APPROVED", "CODE_GATE", "FINAL_SCIENCE_GATE", "RENDER", "STORYBOARD_GATE", "VIDEO_SCIENCE_GATE", "VISUAL_CRITIC"]}
+{"time": 1795492294.5181744, "event": "artifact_registered", "name": "STORYBOARD_GATE", "sha256": "1bce74844a818caf2060b407eeb2bc1a1d5d05401501e8d2eb18dfb5f6ae8087", "owner_gate": "STORYBOARD_GATE"}
+{"time": 1795492294.5185251, "event": "gate_transition", "gate": "STORYBOARD_GATE", "status": "PASSED", "review_id": "mock-STORYBOARD_GATE"}
+{"time": 1795492294.5202532, "event": "invalidated", "gates": ["APPROVED", "CODE_GATE", "FINAL_SCIENCE_GATE", "RENDER", "VIDEO_SCIENCE_GATE", "VISUAL_CRITIC"]}
+{"time": 1795492294.520735, "event": "artifact_registered", "name": "CODE_GATE", "sha256": "1bce74844a818caf2060b407eeb2bc1a1d5d05401501e8d2eb18dfb5f6ae8087", "owner_gate": "CODE_GATE"}
+{"time": 1795492294.5211842, "event": "gate_transition", "gate": "CODE_GATE", "status": "PASSED", "review_id": "mock-CODE_GATE"}
+{"time": 1795492294.5216064, "event": "invalidated", "gates": ["APPROVED", "FINAL_SCIENCE_GATE", "RENDER", "VIDEO_SCIENCE_GATE", "VISUAL_CRITIC"]}
+{"time": 1795492294.5219991, "event": "artifact_registered", "name": "RENDER", "sha256": "1bce74844a818caf2060b407eeb2bc1a1d5d05401501e8d2eb18dfb5f6ae8087", "owner_gate": "RENDER"}
+{"time": 1795492294.5223806, "event": "gate_transition", "gate": "RENDER", "status": "PASSED", "review_id": "mock-RENDER"}
+{"time": 1795492294.522758, "event": "invalidated", "gates": ["APPROVED", "FINAL_SCIENCE_GATE", "VIDEO_SCIENCE_GATE", "VISUAL_CRITIC"]}
+{"time": 1795492294.5231385, "event": "artifact_registered", "name": "VIDEO_SCIENCE_GATE", "sha256": "1bce74844a818caf2060b407eeb2bc1a1d5d05401501e8d2eb18dfb5f6ae8087", "owner_gate": "VIDEO_SCIENCE_GATE"}
+{"time": 1795492294.5235193, "event": "gate_transition", "gate": "VIDEO_SCIENCE_GATE", "status": "PASSED", "review_id": "mock-VIDEO_SCIENCE_GATE"}
+{"time": 1795492294.5238996, "event": "invalidated", "gates": ["APPROVED", "FINAL_SCIENCE_GATE", "VISUAL_CRITIC"]}
+{"time": 1795492294.5242517, "event": "artifact_registered", "name": "VISUAL_CRITIC", "sha256": "1bce74844a818caf2060b407eeb2bc1a1d5d05401501e8d2eb18dfb5f6ae8087", "owner_gate": "VISUAL_CRITIC"}
+{"time": 1795492294.5246313, "event": "gate_transition", "gate": "VISUAL_CRITIC", "status": "PASSED", "review_id": "mock-VISUAL_CRITIC"}
+{"time": 1795492294.5250185, "event": "invalidated", "gates": ["APPROVED", "FINAL_SCIENCE_GATE"]}
+{"time": 1795492294.526295, "event": "artifact_registered", "name": "FINAL_SCIENCE_GATE", "sha256": "1bce74844a818caf2060b407eeb2bc1a1d5d05401501e8d2eb18dfb5f6ae8087", "owner_gate": "FINAL_SCIENCE_GATE"}
+{"time": 1795492294.526715, "event": "gate_transition", "gate": "FINAL_SCIENCE_GATE", "status": "PASSED", "review_id": "mock-FINAL_SCIENCE_GATE"}
+{"time": 1795492294.5271034, "event": "invalidated", "gates": ["APPROVED"]}
+{"time": 1795492294.527465, "event": "artifact_registered", "name": "APPROVED", "sha256": "1bce74844a818caf2060b407eeb2bc1a1d5d05401501e8d2eb18dfb5f6ae8087", "owner_gate": "APPROVED"}
+{"time": 1795492294.5278628, "event": "gate_transition", "gate": "APPROVED", "status": "PASSED", "review_id": "mock-APPROVED"}
+{"time": 1795492294.528287, "event": "invalidated", "gates": ["APPROVED", "CODE_GATE", "FINAL_SCIENCE_GATE", "RENDER", "STORYBOARD_GATE", "VIDEO_SCIENCE_GATE", "VISUAL_CRITIC"]}
+{"time": 1795492294.52865, "event": "artifact_registered", "name": "changed_storyboard", "sha256": "d181d3e6a21cfd0f6b1eb9f7c577715d5dc88f9c4cbc6512d30d3d6f0decbbd1", "owner_gate": "STORYBOARD_GATE"}

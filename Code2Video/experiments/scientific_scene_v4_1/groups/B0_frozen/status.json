@@ -1,0 +1,9 @@
+{
+  "group": "B0_frozen",
+  "render_success": true,
+  "science_gate": "REVISE",
+  "video_path": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/groups/A2_scene_graph_fsm/video.mp4",
+  "video_sha256": "8a2e675243bf2e448f80a0f9c272c0bcae75cd6f2f1f70ce2f49e2adc1b27e04",
+  "code_sha256": "460c467748338a47712726275983d0e28cf8501b76839133136667e5c5cf4228",
+  "frozen_reference": true
+}

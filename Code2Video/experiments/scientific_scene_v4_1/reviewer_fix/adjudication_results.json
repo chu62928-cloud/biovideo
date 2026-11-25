@@ -1,0 +1,44 @@
+[
+  {
+    "conflict_id": "CONFLICT_polarity_label_conflict",
+    "rule_id": "DNA_STRAND_POLARITY",
+    "deterministic_result": "PASS",
+    "llm_result": "FAIL",
+    "status": "REVIEWER_FALSE_POSITIVE",
+    "reason": "模板链端点标签与运动机制矛盾：template_leading 标记 start=3'，end=5'，但 event_3 中 new_leading 的 3' 端（end）从左侧起点向右推进，这与 'DNA polymerase extends 5'→3'，且新生链与模板反平行' 的约束相冲突。按当前标签，leading 链的合成方向应朝左，而非朝右。template_lagging 的 5'→3' 标签与 fragment_1/fragment_2 向左延伸方向一致，进一步凸显 leading 侧的不一致。该极性错误会直接误导 5'→3' 方向性教学。",
+    "repair_allowed": false,
+    "resolution": "Scoped polarity claim contradicted by source-bound local-path evidence and positive/negative/rotation tests. Other issues retained.",
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "scene_sha256": "88cd0ad8a9a18bcf074787db4ac737d621a9fa3aecb0239a52bdf06d5fde352e",
+    "original_issue": {
+      "issue_id": "polarity_label_conflict",
+      "severity": "blocker",
+      "description": "模板链端点标签与运动机制矛盾：template_leading 标记 start=3'，end=5'，但 event_3 中 new_leading 的 3' 端（end）从左侧起点向右推进，这与 'DNA polymerase extends 5'→3'，且新生链与模板反平行' 的约束相冲突。按当前标签，leading 链的合成方向应朝左，而非朝右。template_lagging 的 5'→3' 标签与 fragment_1/fragment_2 向左延伸方向一致，进一步凸显 leading 侧的不一致。该极性错误会直接误导 5'→3' 方向性教学。",
+      "root_cause_stage": "SCENE_IR",
+      "target_objects": [
+        "template_leading",
+        "template_lagging",
+        "new_leading",
+        "fragment_1",
+        "fragment_2",
+        "gap_fill"
+      ],
+      "target_events": [
+        "event_3_extension",
+        "event_4_two_modes",
+        "event_5_maturation"
+      ],
+      "repair_scope": "修正 template_leading 端点标签，使 leading 新生链的 3' 端生长方向与反平行规则一致；同步核对 template_lagging 标签、in-growth_direction 约束及配对 rung 的 5'/3' 标注。只改受影响的极性标签/约束，不重建动画。",
+      "acceptance_criteria": [
+        "template_leading 与 new_leading 的端点标签满足新生链 5'→3' 生长方向与模板反平行：即 new_leading 的 end 为 3'，其生长方向与 template_leading 的 5'→3' 方向一致。",
+        "template_lagging 与 fragment_1/fragment_2/gap_fill 的端点标签满足 Pol δ 在滞后模板上以 5'→3' 合成短片段。",
+        "所有 growth_direction 约束的 unit_vector 与修正后的端点标签一致，且 new_leading 实际生长轨迹通过 polarity_basis 校验。"
+      ],
+      "rule_id": "DNA_STRAND_POLARITY"
+    },
+    "calibration_sha256": "9b19d6a61c54bd8ee41d6f953877c0a9d135fe1a525529f06397aaefb0d8a0d1"
+  }
+]

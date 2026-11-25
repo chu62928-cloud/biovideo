@@ -1,0 +1,14 @@
+[
+  {
+    "source_url": "https://openstax.org/books/biology-2e/pages/10-2-the-cell-cycle",
+    "scientific_object": "duplicated chromosome and mitotic spindle",
+    "state": "metaphase/anaphase",
+    "author": "OpenStax Biology 2e contributors",
+    "license": "Page-specific attribution requires inspection; book generally CC BY 4.0",
+    "reuse_approved": false,
+    "editable": false,
+    "download_sha256": "af5bb01d99dff15a6c176dedf3f8f8dc1cbc475e34717ff9f7423cf82a9444af",
+    "scientific_accuracy_review": "Reference only, not imported to formal asset library",
+    "fallback": "original editable schematic, project-authored; not a molecular image"
+  }
+]

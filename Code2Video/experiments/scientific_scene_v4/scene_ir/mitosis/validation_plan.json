@@ -1,0 +1,68 @@
+[
+  {
+    "constraint_id": "stable_components",
+    "predicate": "identity_unchanged",
+    "object_ids": [],
+    "category": "identity"
+  },
+  {
+    "constraint_id": "two_objects_no_cloning",
+    "predicate": "count_kind",
+    "object_ids": [],
+    "kind": "chromatid",
+    "count": 2,
+    "category": "identity"
+  },
+  {
+    "constraint_id": "left_attachment_measured",
+    "predicate": "anchor_coincident",
+    "object_ids": [
+      "microtubule_left",
+      "kinetochore_A"
+    ],
+    "anchors": [
+      "end",
+      "center"
+    ],
+    "after_event": "metaphase",
+    "tolerance": 0.04,
+    "category": "connection",
+    "evidence_ids": [
+      "F4",
+      "F5"
+    ]
+  },
+  {
+    "constraint_id": "right_attachment_measured",
+    "predicate": "anchor_coincident",
+    "object_ids": [
+      "microtubule_right",
+      "kinetochore_B"
+    ],
+    "anchors": [
+      "end",
+      "center"
+    ],
+    "after_event": "metaphase",
+    "tolerance": 0.04,
+    "category": "connection",
+    "evidence_ids": [
+      "F4",
+      "F5"
+    ]
+  },
+  {
+    "constraint_id": "daughter_role_A",
+    "predicate": "property_is",
+    "object_ids": [
+      "sister_A"
+    ],
+    "key": "current_role",
+    "value": "daughter_chromosome",
+    "after_event": "anaphase",
+    "category": "identity",
+    "evidence_ids": [
+      "F8"
+    ]
+  }
+]

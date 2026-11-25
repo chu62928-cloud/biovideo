@@ -1,0 +1,860 @@
+{
+  "task": {
+    "repair_id": "REP_coupled_growth",
+    "issue_id": "S1",
+    "root_cause_stage": "PROCESS_TEMPLATE",
+    "target_artifact": "scene_ir/dna_section4.json",
+    "target_object_ids": [
+      "new_leading",
+      "template_leading",
+      "polymerase_leading"
+    ],
+    "target_fields": [
+      "state_transitions.params.visual_updates.new_leading.points"
+    ],
+    "acceptance_criteria": [
+      "Leading 3-prime end never ahead of open template arm",
+      "Growing end continues during advancing fork after initiation",
+      "Polymerase remains bound to end"
+    ],
+    "status": "PENDING"
+  },
+  "before_sha256": "d29152b820ac288c330540e2da8c9da8a0cf1283ea6cc5dad5016246dedf3e95",
+  "after_sha256": "37e72736bca59207fd4514fc6c8b49bf816710c0032c2998952473ef5e400b7d",
+  "changes": [
+    {
+      "transition_id": "event_3_extension_continuous_extension_7",
+      "field": "params.points",
+      "before": [
+        [
+          -3.7,
+          0.95,
+          0
+        ],
+        [
+          0.20000000000000018,
+          0.95,
+          0
+        ]
+      ],
+      "after": [
+        [
+          -3.7,
+          0.95,
+          0
+        ],
+        [
+          0.16181818181818164,
+          0.95,
+          0
+        ]
+      ]
+    },
+    {
+      "transition_id": "event_3_extension_continuous_extension_8",
+      "field": "params.points",
+      "before": [
+        [
+          -3.7,
+          0.95,
+          0
+        ],
+        [
+          0.8499999999999996,
+          0.95,
+          0
+        ]
+      ],
+      "after": [
+        [
+          -3.7,
+          0.95,
+          0
+        ],
+        [
+          0.21272727272727243,
+          0.95,
+          0
+        ]
+      ]
+    },
+    {
+      "transition_id": "event_3_extension_continuous_extension_9",
+      "field": "params.points",
+      "before": [
+        [
+          -3.7,
+          0.95,
+          0
+        ],
+        [
+          1.5,
+          0.95,
+          0
+        ]
+      ],
+      "after": [
+        [
+          -3.7,
+          0.95,
+          0
+        ],
+        [
+          0.26363636363636367,
+          0.95,
+          0
+        ]
+      ]
+    },
+    {
+      "transition_id": "event_4_two_modes_fragment_synthesis_0",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            0.46727272727272706,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_4_two_modes_fragment_synthesis_1",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            0.5181818181818181,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_4_two_modes_fragment_synthesis_2",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            0.5690909090909089,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_4_two_modes_fragment_synthesis_3",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            0.6199999999999997,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_4_two_modes_fragment_synthesis_4",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            0.6709090909090905,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_4_two_modes_fragment_synthesis_5",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            0.7218181818181817,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_4_two_modes_fragment_synthesis_6",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            0.7727272727272725,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_4_two_modes_fragment_synthesis_7",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            0.8236363636363633,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_4_two_modes_fragment_synthesis_8",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            0.8745454545454545,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_4_two_modes_fragment_synthesis_9",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            0.9254545454545453,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_4_two_modes_fragment_synthesis_10",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            0.9763636363636361,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_4_two_modes_fragment_synthesis_11",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            1.0272727272727273,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_4_two_modes_fragment_synthesis_12",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            1.0781818181818181,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_4_two_modes_fragment_synthesis_13",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            1.129090909090909,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_4_two_modes_fragment_synthesis_14",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            1.1799999999999997,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_4_two_modes_fragment_synthesis_15",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            1.2309090909090905,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_4_two_modes_fragment_synthesis_16",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            1.2818181818181817,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_4_two_modes_fragment_synthesis_17",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            1.3327272727272725,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_4_two_modes_fragment_synthesis_18",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            1.3836363636363633,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_4_two_modes_fragment_synthesis_19",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            1.4345454545454541,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_4_two_modes_fragment_synthesis_20",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            1.485454545454545,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_4_two_modes_fragment_synthesis_21",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            1.5363636363636362,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_5_maturation_maturation_0",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            1.5872727272727274,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_5_maturation_maturation_1",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            1.6381818181818182,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_5_maturation_maturation_2",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            1.689090909090909,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_5_maturation_maturation_3",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            1.7399999999999998,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_5_maturation_maturation_4",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            1.7909090909090906,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_5_maturation_maturation_5",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            1.8418181818181814,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_5_maturation_maturation_6",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            1.8927272727272726,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_5_maturation_maturation_7",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            1.9436363636363634,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_5_maturation_maturation_8",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            1.9945454545454542,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_5_maturation_maturation_9",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            2.0454545454545454,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_5_maturation_maturation_10",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            2.096363636363636,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_5_maturation_maturation_11",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            2.147272727272727,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_5_maturation_maturation_12",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            2.198181818181818,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_5_maturation_maturation_13",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            2.249090909090909,
+            0.95,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "transition_id": "event_5_maturation_maturation_14",
+      "field": "params.visual_updates.new_leading",
+      "before": null,
+      "after": {
+        "visible": true,
+        "points": [
+          [
+            -3.7,
+            0.95,
+            0
+          ],
+          [
+            2.3,
+            0.95,
+            0
+          ]
+        ]
+      }
+    }
+  ],
+  "model_patch": {
+    "type": "couple_growth_to_fork",
+    "target": "new_leading",
+    "template": "template_leading",
+    "growth_anchor": "end",
+    "template_anchor": "junction",
+    "lag": 1.1,
+    "apply_after_process": "continuous_extension"
+  },
+  "implementation_origin": "deterministic bounded process-patch interpreter"
+}

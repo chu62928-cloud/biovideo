@@ -1,0 +1,36 @@
+{
+  "id": "ba77ab3f-a9c1-4e18-becf-ed4e06fac824",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\"events\":[{\"event_id\":\"metaphase\",\"caption\":\"Sister kinetochores attach to opposite spindle poles and the duplicated chromosome aligns at the metaphase plate.\",\"process_ids\":[\"bipolar_attachment\"],\"duration\":6.0},{\"event_id\":\"anaphase\",\"caption\":\"Sister chromatid cohesion is released and the existing chromatids, now daughter chromosomes, move to opposite poles.\",\"process_ids\":[\"chromatid_separation\"],\"duration\":6.0}],\"scientific_simplifications\":[\"One already-duplicated chromosome, not an entire genome or ploidy count.\",\"Centromere/kinetochore and spindle are schematic; molecular cohesion cleavage not shown.\",\"Same two physical chromatid objects persist, then are called daughter chromosomes after separation.\",\"No DNA replication or homolog pairing occurs in this clip.\"]}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1795503771,
+  "model": "deepseek-flash",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+  "usage": {
+    "completion_tokens": 175,
+    "prompt_tokens": 3737,
+    "total_tokens": 3912,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 3609
+  }
+}

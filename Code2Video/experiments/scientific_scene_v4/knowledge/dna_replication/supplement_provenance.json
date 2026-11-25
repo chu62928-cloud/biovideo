@@ -1,0 +1,6 @@
+{
+  "new_paid_requests": 1,
+  "why": "Initial source-discovery case mismatch missed textbooks and lacked a direction fact; initial detection evidence was insufficient",
+  "initial_results_retained": "initial_run_failures/",
+  "not_pre_authored_topic_facts": true
+}

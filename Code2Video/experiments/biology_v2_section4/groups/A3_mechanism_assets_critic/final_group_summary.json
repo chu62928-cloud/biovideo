@@ -1,0 +1,132 @@
+{
+  "group": "A3_mechanism_assets_critic",
+  "experiment_success": false,
+  "valid_video": true,
+  "new_render": false,
+  "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/groups/A3_mechanism_assets_critic/video.mp4",
+  "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/groups/A3_mechanism_assets_critic/rendered_code.py",
+  "video_sha256": "4154b5fef41c8552ea8fe42b06d346a1a3fb2b02888b66db35238b3bd4cb5459",
+  "code_sha256": "e5f38e4e57705e32e86a8e689e4a4d0b57a2a390322e8c7aeefb9218dab696cf",
+  "duration_seconds": 33.466667,
+  "resolution": "854x480",
+  "fps": "15/1",
+  "audio_present": false,
+  "coder_calls": 0,
+  "critic_calls": 1,
+  "known_prompt_tokens": 0,
+  "known_completion_tokens": 0,
+  "unknown_usage_calls": 1,
+  "transaction_attempts": 0,
+  "transaction_commits": 0,
+  "failed_candidates_or_rollbacks": 0,
+  "interrupted_attempts": [],
+  "measured_active_seconds": 180.357,
+  "time_definition": "Sum of recorded API and transaction wall times; excludes human inspection/pauses; interrupted attempt time may be unavailable.",
+  "human_animation_code_edits": false,
+  "note": "Critic API timeout; video is the explicitly allowed A2 initial copy, not a Critic-refined result.",
+  "critic_rounds": [
+    {
+      "round": 1,
+      "status": "API_timeout_no_feedback",
+      "committed": false,
+      "new_render": false,
+      "elapsed_seconds": 180.357
+    },
+    {
+      "round": 2,
+      "status": "skipped_due_to_round1_API_failure"
+    }
+  ],
+  "layout_metrics": {
+    "out_of_frame": 0,
+    "label_overlaps": 0,
+    "binding_violations": 0,
+    "sudden_jumps": 0
+  },
+  "registered_labels": 0,
+  "label_detection_status": "uncertain: generated code did not register text labels",
+  "mechanism_evidence": {
+    "first_RNA": 3.866666666666672,
+    "first_DNA": 9.33333333333332,
+    "fill_nucleotides": [
+      {
+        "id": "fill_dna_00",
+        "role": "nucleotide",
+        "strand": "lagging",
+        "fragment": "okazaki_1",
+        "material": "DNA",
+        "first_visible": 28.533333333333253,
+        "last_visible": 33.46666666666665,
+        "final_x": 2.091666666666667
+      },
+      {
+        "id": "fill_dna_01",
+        "role": "nucleotide",
+        "strand": "lagging",
+        "fragment": "okazaki_1",
+        "material": "DNA",
+        "first_visible": 28.79999999999992,
+        "last_visible": 33.46666666666665,
+        "final_x": 2.2750000000000004
+      },
+      {
+        "id": "fill_dna_02",
+        "role": "nucleotide",
+        "strand": "lagging",
+        "fragment": "okazaki_1",
+        "material": "DNA",
+        "first_visible": 29.066666666666585,
+        "last_visible": 33.46666666666665,
+        "final_x": 2.458333333333333
+      }
+    ],
+    "actual_event_markers": [
+      {
+        "id": "event_1_fork",
+        "time": 0.0
+      },
+      {
+        "id": "event_2_priming",
+        "time": 3.0000000000000027
+      },
+      {
+        "id": "event_3_extension",
+        "time": 8.333333333333323
+      },
+      {
+        "id": "event_4_two_modes",
+        "time": 18.399999999999956
+      },
+      {
+        "id": "event_5_maturation",
+        "time": 27.066666666666592
+      }
+    ]
+  },
+  "comparison_frame_times": {
+    "event_1_fork": 1.5000000000000013,
+    "event_2_priming": 5.6666666666666625,
+    "event_3_extension": 13.366666666666639,
+    "event_4_two_modes": 22.733333333333274,
+    "event_5_maturation": 30.266666833333296
+  },
+  "SVG_asset_types_in_code": [
+    "dna_ligase",
+    "dna_polymerase",
+    "nucleotide",
+    "primase"
+  ],
+  "completed_full_render_attempts": 0,
+  "verified_full_render_outputs": 0,
+  "render_success_rate": null,
+  "experiment_failed_update_rollbacks": 0,
+  "render_attempt_details": [],
+  "engineering_success": false,
+  "fully_mechanism_validated": false,
+  "ready_for_teaching_without_review": false,
+  "biological_check_summary": {
+    "pass": 5,
+    "fail": 1,
+    "uncertain": 2
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "tag": "layout_and_relation_followup",
+  "committed": true,
+  "before": {
+    "success": true,
+    "tag": "initial",
+    "code_sha256": "095607a211f2bb42bb11c099bf5fe6a3c5e7ae2ad64ea967789fcbfa9d9b45ad",
+    "video_sha256": "272e2c1deb29d718ea0dfd3de55a5fb3ef889a90e97dd415946ec492cfac9e9a",
+    "duration_seconds": 12.0,
+    "renderer": "manim-0.19.0-full-render",
+    "trace_sha256": "316fa90f2521d0c23a21e715cd9b846b9343aa5142188ff2d36ce1d2ebc23505",
+    "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/M1_mitosis/render/versions/initial",
+    "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/M1_mitosis/render/versions/initial/rendered_code.py",
+    "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/M1_mitosis/render/versions/initial/video.mp4"
+  },
+  "started": 1795509877.7395468,
+  "after": {
+    "success": true,
+    "tag": "layout_and_relation_followup",
+    "code_sha256": "095607a211f2bb42bb11c099bf5fe6a3c5e7ae2ad64ea967789fcbfa9d9b45ad",
+    "video_sha256": "0eff0e720e2d3e00424ec8756c9d2c7a8333e2dd86466ad0ed641034d4900c2f",
+    "duration_seconds": 12.0,
+    "renderer": "manim-0.19.0-full-render",
+    "trace_sha256": "799b6fcf6eed9623270c07f379d2de7afc2e69875cd7e0104c62d3ccacbac204",
+    "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/M1_mitosis/render/versions/layout_and_relation_followup",
+    "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/M1_mitosis/render/versions/layout_and_relation_followup/rendered_code.py",
+    "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/M1_mitosis/render/versions/layout_and_relation_followup/video.mp4"
+  },
+  "elapsed_seconds": 14.114
+}

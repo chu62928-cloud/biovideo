@@ -1,0 +1,25 @@
+{
+  "code_sha256": "2d19df844dde1e4c9f8ecbfee732ceae47cd072a2ab265331b8276e51cebdf19",
+  "video_sha256": "846598e9899ed29fa1527e04a61a8c3f47f9cdadd3015f4ba8914c22513a7fca",
+  "trace_sha256": "4224d849c92eb77208860a679c99a1939b505f7826650930bc8d58f6269e4939",
+  "scene_hash": "8f955d2e3367c9b1bf69e31746777fe57ad2f09182b76f207fd2962410b7394c",
+  "ir_review_id": "V4-IR-bf8864c14b",
+  "component_library_hashes": {
+    "src/scientific_scene/__init__.py": "89c109fb9cf9fe44cea282dd4ada6d0b57f1304b01ce16fedbb3a1e9edf08d06",
+    "src/scientific_scene/models.py": "1cee9c4eb4baa75525dbaafdc84685a6565ac5d1ed41236be5008fd48cdb4d29",
+    "src/scientific_scene/validation.py": "e2966e736030e521532135954ac4a771f55c5bf8d8b352e9cfdb498eef8c0ae7",
+    "src/scientific_scene/state_machine.py": "19f880fa2cd8d79dedde345371a7c4d654e4f7dfbb2d7dcbb4bbe668b5c1cfd2",
+    "src/scientific_scene/scene_compiler.py": "952601316368c196fa1b5e6a3daff58eac830165e5601ceeb3e34a0d3bcff136",
+    "src/scientific_scene/scene_graph.py": "a9d96b6e9ad0cd5071847815166dd37a8646744cb3e4e165ba5b470252030f16",
+    "src/scientific_scene/assembly_registry.py": "1848715548ff6c396ed0fab67e13b1390dd39e0819a22de9cd3d12e14e66d715",
+    "src/scientific_scene/process_registry.py": "17116f7ae0e2666654fd8ea50f1037918c0e8ef7c65c4753b01ec15c02f6305a",
+    "src/scientific_scene/provenance.py": "26f6d85a194c77fccfd0fdbd14ff41f251d99f05ae6890bc3376edea34df14db",
+    "src/scientific_scene/adapters/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/scientific_scene/adapters/manim_adapter.py": "5dab88ba5fbfca796d1c1da131d541303b94f1e0ff3bc7ebe0608a7ef64226fe",
+    "src/scientific_scene/adapters/biology_expert_adapter.py": "d5dd998f1651e37199b4f5019fd8a60611972a51f050cf4cb9a745320a62210b"
+  },
+  "code_origin": "REAL_DEEPSEEK_CODER",
+  "plan_origin": "REAL_LLM",
+  "component_recipes_origin": "CODEX_ENGINEERING_PREPARATION",
+  "review_is_not_student_evaluation": true
+}

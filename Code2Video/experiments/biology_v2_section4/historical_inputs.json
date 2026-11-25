@@ -1,0 +1,58 @@
+{
+  "/autodl-tmp/code2biovideo/Code2Video/experiments/qwen4_critic/RESULTS.md": {
+    "sha256": "ca08ad13bb5f3eee8f7ff8664f326f3c74c8180f21dd9b7b3664b160887e0848",
+    "bytes": 6582
+  },
+  "/autodl-tmp/code2biovideo/Code2Video/experiments/qwen4_critic/VISUAL_REVIEW.md": {
+    "sha256": "473825c1592489eb61e8adc60af4555f61fc99acf4160a15ccee2fa0bcac7ca1",
+    "bytes": 891
+  },
+  "/autodl-tmp/code2biovideo/Code2Video/experiments/qwen4_critic/render_failures.json": {
+    "sha256": "ac627f8bfe032594a548a8e65102e3db6a83775328048993e47848b672987b7e",
+    "bytes": 12838
+  },
+  "/autodl-tmp/code2biovideo/Code2Video/experiments/qwen4_critic/round_events.json": {
+    "sha256": "58cb1cb3a7a54983525bc18c2b8f627a9ead50249651a8bb16ae01a7fcb57647",
+    "bytes": 2116
+  },
+  "/autodl-tmp/code2biovideo/Code2Video/experiments/qwen4_critic/round_1/feedback/section_4.json": {
+    "sha256": "82c64b4ed8d1e62c40cccda5c1dbdf5e392de2cc44722ad59b0286ef16bb7075",
+    "bytes": 5159
+  },
+  "/autodl-tmp/code2biovideo/Code2Video/experiments/qwen4_critic/round_1/code/section_4.py": {
+    "sha256": "32dc6a2822a95fffb8d437adbfc84a7acd52ec0aadf544eb1cca6dfa0aff2638",
+    "bytes": 12818
+  },
+  "/autodl-tmp/code2biovideo/Code2Video/experiments/qwen4_critic/round_1/rendered_code/section_4.py": {
+    "sha256": "3b219e7c296b84ae4f31ab21cd25ba49ad8fc6c041e9b12379f8168134406216",
+    "bytes": 12907
+  },
+  "/autodl-tmp/code2biovideo/Code2Video/experiments/qwen4_critic/round_1/scenes/section_4.mp4": {
+    "sha256": "c19f6640b5839d5eb0ffbb843884e82b98e2ccbc20406509955b6872cacc5469",
+    "bytes": 712601
+  },
+  "/autodl-tmp/code2biovideo/Code2Video/experiments/qwen4_critic/round_2/feedback/section_4.json": {
+    "sha256": "d4dbb4a428a8cd5e199ec6d80eccf4ec9773c29dcb78da6f251e6cc76360d0c5",
+    "bytes": 3657
+  },
+  "/autodl-tmp/code2biovideo/Code2Video/experiments/qwen4_critic/round_2/code/section_4.py": {
+    "sha256": "83adca6e1a24aa45c46da7eb2c086d3da9e7ce4c90ad44aa28be7ce41f942f0c",
+    "bytes": 9627
+  },
+  "/autodl-tmp/code2biovideo/Code2Video/experiments/qwen4_critic/round_2/rendered_code/section_4.py": {
+    "sha256": "3b219e7c296b84ae4f31ab21cd25ba49ad8fc6c041e9b12379f8168134406216",
+    "bytes": 12907
+  },
+  "/autodl-tmp/code2biovideo/Code2Video/experiments/qwen4_critic/round_2/scenes/section_4.mp4": {
+    "sha256": "c19f6640b5839d5eb0ffbb843884e82b98e2ccbc20406509955b6872cacc5469",
+    "bytes": 712601
+  },
+  "/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/section_4.py": {
+    "sha256": "3b219e7c296b84ae4f31ab21cd25ba49ad8fc6c041e9b12379f8168134406216",
+    "bytes": 12907
+  },
+  "/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/media/videos/section_4/480p15/Section4Scene.mp4": {
+    "sha256": "c19f6640b5839d5eb0ffbb843884e82b98e2ccbc20406509955b6872cacc5469",
+    "bytes": 712601
+  }
+}

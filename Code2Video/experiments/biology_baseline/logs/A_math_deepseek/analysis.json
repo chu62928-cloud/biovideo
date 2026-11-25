@@ -1,0 +1,34 @@
+{
+  "label": "A_math_deepseek",
+  "topic": "Linear transformations and matrices",
+  "output_dir": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A_math_deepseek/0-Linear_transformations_and_matrices",
+  "requested_model": "deepseek-flash",
+  "critic": false,
+  "assets": false,
+  "start_utc": "2026-11-23T03:49:24Z",
+  "status": "failed",
+  "sections": 6,
+  "error_type": "ValueError",
+  "error": "DeepSeek response truncated at token limit",
+  "elapsed_seconds": 92.611,
+  "api_attempts": 3,
+  "api_retries": 0,
+  "usage": {
+    "prompt_tokens": 3515,
+    "completion_tokens": 22127,
+    "total_tokens": 25642
+  },
+  "models": [
+    "deepseek-flash"
+  ],
+  "render_attempts": 0,
+  "render_attempt_successes": 0,
+  "render_retries": 0,
+  "render_success_rate": 0.0,
+  "stages": {
+    "A_math_deepseek:planner_outline": 1,
+    "A_math_deepseek:planner_storyboard": 1,
+    "A_math_deepseek:coder:section_1": 1
+  },
+  "segments": []
+}

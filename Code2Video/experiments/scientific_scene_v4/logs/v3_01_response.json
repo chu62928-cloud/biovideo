@@ -1,0 +1,36 @@
+{
+  "id": "2bc4857b-9aca-4340-a2da-ad1895a0081f",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"events\": [\n    {\n      \"event_id\": \"event_1_fork\",\n      \"caption\": \"One fork, two antiparallel templates\",\n      \"process_ids\": [\"open_fork\"],\n      \"duration\": 6.0\n    },\n    {\n      \"event_id\": \"event_2_priming\",\n      \"caption\": \"Primase makes an RNA starting point\",\n      \"process_ids\": [\"prime\"],\n      \"duration\": 6.0\n    },\n    {\n      \"event_id\": \"event_3_extension\",\n      \"caption\": \"DNA polymerase extends 5' to 3'\",\n      \"process_ids\": [\"continuous_extension\"],\n      \"duration\": 6.0\n    },\n    {\n      \"event_id\": \"event_4_two_modes\",\n      \"caption\": \"Continuous leading; short lagging fragments\",\n      \"process_ids\": [\"fragment_synthesis\"],\n      \"duration\": 6.0\n    },\n    {\n      \"event_id\": \"event_5_maturation\",\n      \"caption\": \"Remove RNA, fill DNA, then seal a nick\",\n      \"process_ids\": [\"maturation\"],\n      \"duration\": 6.0\n    }\n  ],\n  \"scientific_simplifications\": [\n    \"Schematic, not molecular structure or scale. One local fork, no chromosome-end/telomerase claim.\",\n    \"Primase/Pol alpha label abstracts RNA initiation and short DNA handoff; individual RNaseH/FEN1 steps omitted.\",\n    \"Show one local primer maturation only; other orange primers remain, final caption must not claim all replication completed.\",\n    \"Parent fork is camera-fixed; synthesis stays on its opened left side. Pol epsilon is the common undisturbed leading-strand teaching model, not an absolute exclusion of Pol delta.\",\n    \"Direction constraint is derived from verified5to3/antiparallel facts plus displayed template endpoints, not a universal sign of x.\"\n  ]\n}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1795503218,
+  "model": "deepseek-flash",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+  "usage": {
+    "completion_tokens": 408,
+    "prompt_tokens": 5861,
+    "total_tokens": 6269,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5861
+  }
+}

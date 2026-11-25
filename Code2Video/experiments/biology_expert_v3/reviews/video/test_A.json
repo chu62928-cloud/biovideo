@@ -1,0 +1,896 @@
+{
+  "review_id": "REV-72be0c60833b",
+  "stage": "RENDERED_VIDEO",
+  "decision": "REVISE",
+  "issues": [
+    {
+      "issue_id": "SCI-E5-FILL-DIRECTION",
+      "severity": "blocker",
+      "category": "scientific_mechanism",
+      "description": "Event-5 gap filling grows in the wrong chemical direction. Lower template is 5'(left)->3'(right), so the nascent lagging strand must elongate right->left (its 3' end is at the left, as the video's own lbl_lag3 and Okazaki-1 growth correctly show). Measured fill additions go left->right (x=2.092 -> 2.275 -> 2.458), i.e. projections on the template-reading vector [-1,0] are negative (-0.183, -0.183). This depicts 3'->5' addition / extension from a 5' phosphate end. Correct repair: nucleate fill at the 3' end of the downstream fragment (okazaki_fragment_2 side, larger x) and add successively toward smaller x.",
+      "object_ids": [
+        "fill_dna_00",
+        "fill_dna_01",
+        "fill_dna_02",
+        "dna_polymerase_fill",
+        "new_lagging_strand"
+      ],
+      "evidence_ids": [
+        "F6",
+        "F5"
+      ],
+      "artifact_evidence": {
+        "video_timestamp": 28.53,
+        "observation": "Green fill blocks appear first at the LEFT edge of the ex-primer gap (~x=2.09) and then progressively to the right (~2.28, ~2.46) between 28.5 s and 29.1 s; frame 29.2 s shows the left part of the gap filled and the right part still empty."
+      },
+      "root_cause_stage": "ANIMATION_CODE",
+      "suggested_repair_scope": "affected_event"
+    },
+    {
+      "issue_id": "SCI-E5-LIGASE-SEALS-GAP",
+      "severity": "major",
+      "category": "scientific_mechanism",
+      "description": "Ligase is placed at the right edge of the removed primer (x=2.55) but the neighbouring downstream DNA (okazaki_fragment_2, left edge x=2.86) is not adjacent: an unfilled spacer remains. The red nick marker therefore marks a gap, not a nick, and ligase is shown sealing across missing nucleotides. Ligase correctly adds no DNA, but a nick requires juxtaposed 3'-OH/5'-P after complete fill; the final 'Local copied duplexes' frame still shows an open gap between the two green runs.",
+      "object_ids": [
+        "dna_ligase",
+        "fill_dna_02",
+        "okazaki_fragment_2_00",
+        "new_lagging_strand"
+      ],
+      "evidence_ids": [
+        "F6",
+        "F7"
+      ],
+      "artifact_evidence": {
+        "video_timestamp": 30.2,
+        "observation": "Gold ligase sits over a red tick at the right end of the left green run; at 31.2-32.2 s a clear black gap still separates that run from the next green+orange fragment."
+      },
+      "root_cause_stage": "ANIMATION_CODE",
+      "suggested_repair_scope": "affected_event"
+    },
+    {
+      "issue_id": "SCI-CENTRAL-LADDER-IDENTITY",
+      "severity": "major",
+      "category": "scientific_ambiguity",
+      "description": "The central blue hollow ladder (make_duplex at y=0, x=0.55..6.0) is never registered and carries no polarity labels or parental annotation. Because both blue templates run essentially full width (x=-5.8..5.9) at y=+/-1.35 and never converge into it, the ladder reads as an ADDITIONAL third double-stranded DNA floating between two already-separated strands rather than the unreplicated parental duplex ahead of the fork. Identity cannot be confirmed from the picture: parental duplex vs. extra DNA is UNCERTAIN.",
+      "object_ids": [
+        "replication_fork",
+        "template_leading",
+        "template_lagging"
+      ],
+      "evidence_ids": [
+        "F1"
+      ],
+      "artifact_evidence": {
+        "video_timestamp": 1.2,
+        "observation": "Two near-horizontal blue lines span the whole frame; a separate runged blue ladder sits mid-right at y=0; a single vertical blue bar at x~0.5 is the only 'fork' connection. No Y convergence, no label on the ladder."
+      },
+      "root_cause_stage": "ANIMATION_CODE",
+      "suggested_repair_scope": "scene_geometry"
+    },
+    {
+      "issue_id": "SCI-NO-UNWINDING-SYNTHESIS-OVER-DUPLEX",
+      "severity": "major",
+      "category": "scientific_mechanism",
+      "description": "The fork junction never moves and the parental ladder never shortens, yet all nascent synthesis (leading to x=4.9; lagging primers at x=2.0 and 3.7) is drawn to the RIGHT of the junction, i.e. along the same x-range still occupied by the intact parental duplex. This depicts polymerase copying duplex DNA without unwinding, and makes 'nearer the advancing fork' for primer 2 meaningless. Either advance the junction rightward while shortening the parental ladder, or move all nascent strands to the already-open (left) side.",
+      "object_ids": [
+        "replication_fork",
+        "template_leading",
+        "template_lagging",
+        "new_leading_strand",
+        "rna_primer_lagging_2"
+      ],
+      "evidence_ids": [
+        "F4",
+        "F7"
+      ],
+      "artifact_evidence": {
+        "video_timestamp": 22.2,
+        "observation": "Vertical fork bar stays at the same x from 1.2 s to 32.2 s; the mid-right ladder keeps constant length while green/orange blocks accumulate to its right-hand x-range on both templates."
+      },
+      "root_cause_stage": "ANIMATION_CODE",
+      "suggested_repair_scope": "scene_geometry"
+    },
+    {
+      "issue_id": "SCI-LEADING-POL-IDENTITY",
+      "severity": "major",
+      "category": "scientific_identity",
+      "description": "The leading-strand polymerase is labelled 'Pol delta' throughout event 3/4. Per F4 the model supported by the preponderance of evidence assigns bulk leading-strand synthesis at an undisturbed fork to Pol epsilon; Pol delta is the lagging-strand elongation/maturation enzyme (F6). Using the same glyph and the same 'Pol delta' label for leading, lagging and fill enzymes collapses a distinction the scene is meant to teach.",
+      "object_ids": [
+        "dna_polymerase_leading",
+        "dna_polymerase_lagging",
+        "dna_polymerase_fill"
+      ],
+      "evidence_ids": [
+        "F4",
+        "F6"
+      ],
+      "artifact_evidence": {
+        "video_timestamp": 9.2,
+        "observation": "Cyan clamp-shaped enzyme on the upper template is captioned 'Pol delta' and keeps that label while extending the leading strand rightward."
+      },
+      "root_cause_stage": "ANIMATION_CODE",
+      "suggested_repair_scope": "affected_event"
+    },
+    {
+      "issue_id": "SCI-FILL-POL-NOT-AT-GROWING-END",
+      "severity": "minor",
+      "category": "scientific_mechanism",
+      "description": "dna_polymerase_fill is placed statically above the gap centre with no registered active-site anchor and no bind_near; it does not track the end where nucleotides appear. Proximity passes only because the gap is short (0.55-0.58 scene units). Even after the direction fix, the enzyme must stay anchored to the moving 3' growing end.",
+      "object_ids": [
+        "dna_polymerase_fill",
+        "fill_dna_00",
+        "fill_dna_02"
+      ],
+      "evidence_ids": [
+        "F6"
+      ],
+      "artifact_evidence": {
+        "video_timestamp": 29.2,
+        "observation": "Fill polymerase remains at one fixed position above the gap while green blocks appear sequentially beneath it."
+      },
+      "root_cause_stage": "ANIMATION_CODE",
+      "suggested_repair_scope": "affected_event"
+    },
+    {
+      "issue_id": "SCI-FINAL-STATE-CLAIM",
+      "severity": "minor",
+      "category": "scientific_mechanism",
+      "description": "Closing caption 'Local copied duplexes' overstates completion: the leading RNA primer (orange, upper left) and the whole lagging-2 RNA primer are still present, and a gap remains in the lagging strand. Either restrict the caption to 'one nick sealed locally' or complete primer removal/fill for the shown fragments.",
+      "object_ids": [
+        "rna_primer",
+        "rna_primer_lagging_2",
+        "new_lagging_strand",
+        "new_leading_strand"
+      ],
+      "evidence_ids": [
+        "F6",
+        "F7"
+      ],
+      "artifact_evidence": {
+        "video_timestamp": 32.2,
+        "observation": "Final frame: orange blocks persist on both nascent strands and a black gap persists between the two lower green runs."
+      },
+      "root_cause_stage": "ANIMATION_CODE",
+      "suggested_repair_scope": "affected_event"
+    },
+    {
+      "issue_id": "SCI-POL-ALPHA-ABSENT",
+      "severity": "minor",
+      "category": "scientific_identity",
+      "description": "Primase alone is shown making the RNA primer and Pol delta then extends directly; the Pol alpha initiation step (F5) is not represented or labelled. Acceptable simplification only if the caption does not imply primase alone initiates Okazaki DNA synthesis; identity of the initiating polymerase remains UNCERTAIN on screen.",
+      "object_ids": [
+        "primase",
+        "rna_primer_lagging_1",
+        "dna_polymerase_lagging"
+      ],
+      "evidence_ids": [
+        "F5"
+      ],
+      "artifact_evidence": {
+        "video_timestamp": 19.2,
+        "observation": "Purple primase appears below the lower template, orange primer blocks appear, primase leaves, cyan 'Pol delta' arrives; no Pol alpha object or label at any time."
+      },
+      "root_cause_stage": "SCRIPT",
+      "suggested_repair_scope": "upstream_script"
+    },
+    {
+      "issue_id": "BIO-DIRECTION",
+      "severity": "blocker",
+      "category": "scientific_mechanism",
+      "description": "lagging_gap_growth failed on actual execution evidence",
+      "object_ids": [
+        "new_lagging_strand",
+        "dna_polymerase_fill",
+        "fill_dna_00",
+        "fill_dna_01",
+        "fill_dna_02"
+      ],
+      "evidence_ids": [
+        "F4",
+        "F5",
+        "F6"
+      ],
+      "artifact_evidence": {
+        "trace_ref": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/groups/A2_mechanism_assets/versions/group_visibility_observer_replay/geometry_trace.json",
+        "check": {
+          "check_id": "lagging_gap_growth",
+          "status": "FAIL",
+          "fact_ids": [
+            "F4",
+            "F5",
+            "F6"
+          ],
+          "event_id": "event_5_maturation",
+          "object_ids": [
+            "new_lagging_strand",
+            "dna_polymerase_fill",
+            "fill_dna_00",
+            "fill_dna_01",
+            "fill_dna_02"
+          ],
+          "evidence": {
+            "template_polarity_glyphs": [
+              {
+                "text": "5'",
+                "position": [
+                  -5.9,
+                  -1.6700000000000002,
+                  0
+                ],
+                "code_line": 103,
+                "assignment": "end_labels"
+              },
+              {
+                "text": "3'",
+                "position": [
+                  5.9,
+                  -1.6700000000000002,
+                  0
+                ],
+                "code_line": 104,
+                "assignment": "end_labels"
+              }
+            ],
+            "nascent_3prime_glyph": {
+              "text": "3'",
+              "position": [
+                0.6599999999999999,
+                -1.31,
+                0
+              ],
+              "code_line": 405,
+              "assignment": "lbl_lag3"
+            },
+            "primer_centers": [
+              {
+                "id": "rna_primer_lagging_1_00",
+                "time": 18.933333333333287,
+                "center": [
+                  2.091666666666667,
+                  -1.03,
+                  0.0
+                ],
+                "bbox": [
+                  [
+                    2.0091666666666668,
+                    -1.095,
+                    0.0
+                  ],
+                  [
+                    2.174166666666667,
+                    -0.9650000000000001,
+                    0.0
+                  ]
+                ]
+              },
+              {
+                "id": "rna_primer_lagging_1_01",
+                "time": 18.933333333333287,
+                "center": [
+                  2.2750000000000004,
+                  -1.03,
+                  0.0
+                ],
+                "bbox": [
+                  [
+                    2.1925000000000003,
+                    -1.095,
+                    0.0
+                  ],
+                  [
+                    2.3575000000000004,
+                    -0.9650000000000001,
+                    0.0
+                  ]
+                ]
+              },
+              {
+                "id": "rna_primer_lagging_1_02",
+                "time": 18.933333333333287,
+                "center": [
+                  2.458333333333333,
+                  -1.03,
+                  0.0
+                ],
+                "bbox": [
+                  [
+                    2.375833333333333,
+                    -1.095,
+                    0.0
+                  ],
+                  [
+                    2.540833333333333,
+                    -0.9650000000000001,
+                    0.0
+                  ]
+                ]
+              }
+            ],
+            "measured_nucleotide_first_visibility": [
+              {
+                "id": "fill_dna_00",
+                "time": 28.533333333333253,
+                "center": [
+                  2.091666666666667,
+                  -1.03,
+                  0.0
+                ],
+                "bbox": [
+                  [
+                    2.01375,
+                    -1.095,
+                    0.0
+                  ],
+                  [
+                    2.1695833333333336,
+                    -0.9650000000000002,
+                    0.0
+                  ]
+                ]
+              },
+              {
+                "id": "fill_dna_01",
+                "time": 28.79999999999992,
+                "center": [
+                  2.2750000000000004,
+                  -1.03,
+                  0.0
+                ],
+                "bbox": [
+                  [
+                    2.1970833333333335,
+                    -1.095,
+                    0.0
+                  ],
+                  [
+                    2.352916666666667,
+                    -0.9650000000000002,
+                    0.0
+                  ]
+                ]
+              },
+              {
+                "id": "fill_dna_02",
+                "time": 29.066666666666585,
+                "center": [
+                  2.458333333333333,
+                  -1.03,
+                  0.0
+                ],
+                "bbox": [
+                  [
+                    2.380416666666666,
+                    -1.095,
+                    0.0
+                  ],
+                  [
+                    2.53625,
+                    -0.9650000000000002,
+                    0.0
+                  ]
+                ]
+              }
+            ],
+            "template_reading_unit_vector": [
+              -1.0,
+              0.0
+            ],
+            "successive_addition_projections": [
+              -0.18333333333333357,
+              -0.18333333333333268
+            ],
+            "code_and_trace_independent_of_declared_direction": true
+          },
+          "limitation": "Sparse schematic trace supports relative growth direction, not chemical bond continuity or a molecular-scale 3prime contact proof."
+        }
+      },
+      "root_cause_stage": "ANIMATION_CODE",
+      "suggested_repair_scope": "affected_event"
+    }
+  ],
+  "next_action": "CREATE_REPAIR_TASK",
+  "artifact_versions": {
+    "code": "8585f1a2536281ababb8ff48a5125cd0f0c7221ef28fdadfad3b07635b793c45",
+    "trace": "3564d3aa3d37dd961f91e28f7c08913b238aa67d12d0531c170c9920974d45ad",
+    "trace_ref": "52fa3eef456db98c84742fa43d4e1f21b36d66531774f71c4eb4fc0e8d9df4a5",
+    "video": "4154b5fef41c8552ea8fe42b06d346a1a3fb2b02888b66db35238b3bd4cb5459"
+  },
+  "checks": [
+    {
+      "check_id": "template_antiparallel_labels",
+      "status": "PASS",
+      "reason": "Upper 3'(left)/5'(right) vs lower 5'(left)/3'(right) are antiparallel and stay fixed all 32 s."
+    },
+    {
+      "check_id": "leading_nascent_polarity_and_direction",
+      "status": "PASS",
+      "reason": "Leading primer 3' label at its right end and nascent growth left->right give 5'->3' synthesis antiparallel to the upper template; trajectory 9.3-14.0 s confirms rightward addition."
+    },
+    {
+      "check_id": "okazaki_fragment_growth_away_from_fork",
+      "status": "PASS",
+      "reason": "Fragments 1 and 2 elongate leftward from their own RNA 3' ends (x decreasing), with 3' label at the left end; consistent with lagging polarity."
+    },
+    {
+      "check_id": "event5_gap_fill_direction",
+      "status": "FAIL",
+      "reason": "Measured fill order increases x (2.092->2.275->2.458) against template-reading vector [-1,0]; negative projections. Trajectory, not sparse frames, establishes the reversal."
+    },
+    {
+      "check_id": "primer_removal_before_fill_before_ligation_order",
+      "status": "PASS",
+      "reason": "Observed order is primer fade (~24.5 s) -> gap label -> fill (~28.5-29.1 s) -> ligase (~30.2 s); ligase adds no nucleotides. Order alone does not rescue the direction/adjacency defects."
+    },
+    {
+      "check_id": "nick_adjacency_after_fill",
+      "status": "FAIL",
+      "reason": "Sealed position x=2.55 is not juxtaposed to downstream DNA starting at x=2.86; a gap remains at 32.2 s."
+    },
+    {
+      "check_id": "fork_topology_and_parental_identity",
+      "status": "UNCERTAIN",
+      "reason": "Unregistered central ladder plus full-width parallel templates: cannot decide parental duplex vs additional DNA from the picture; no Y junction and no fork motion."
+    },
+    {
+      "check_id": "enzyme_addition_proximity",
+      "status": "PASS",
+      "reason": "All sampled additions within 0.55-0.73 scene units of their polymerase (<1.1 threshold); schematic proximity only, not biochemical contact."
+    },
+    {
+      "check_id": "grid_reference_relevance",
+      "status": "UNCERTAIN",
+      "reason": "Provided GRID image contains unrelated SVM lecture content; used only as coordinate reference and excluded from scientific judgement."
+    }
+  ],
+  "mode": "FULL_MP4",
+  "targeted_gap_direction": "FAIL",
+  "measured_checks": {
+    "status": "FAIL",
+    "checks": [
+      {
+        "check_id": "lagging_gap_growth",
+        "status": "FAIL",
+        "fact_ids": [
+          "F4",
+          "F5",
+          "F6"
+        ],
+        "event_id": "event_5_maturation",
+        "object_ids": [
+          "new_lagging_strand",
+          "dna_polymerase_fill",
+          "fill_dna_00",
+          "fill_dna_01",
+          "fill_dna_02"
+        ],
+        "evidence": {
+          "template_polarity_glyphs": [
+            {
+              "text": "5'",
+              "position": [
+                -5.9,
+                -1.6700000000000002,
+                0
+              ],
+              "code_line": 103,
+              "assignment": "end_labels"
+            },
+            {
+              "text": "3'",
+              "position": [
+                5.9,
+                -1.6700000000000002,
+                0
+              ],
+              "code_line": 104,
+              "assignment": "end_labels"
+            }
+          ],
+          "nascent_3prime_glyph": {
+            "text": "3'",
+            "position": [
+              0.6599999999999999,
+              -1.31,
+              0
+            ],
+            "code_line": 405,
+            "assignment": "lbl_lag3"
+          },
+          "primer_centers": [
+            {
+              "id": "rna_primer_lagging_1_00",
+              "time": 18.933333333333287,
+              "center": [
+                2.091666666666667,
+                -1.03,
+                0.0
+              ],
+              "bbox": [
+                [
+                  2.0091666666666668,
+                  -1.095,
+                  0.0
+                ],
+                [
+                  2.174166666666667,
+                  -0.9650000000000001,
+                  0.0
+                ]
+              ]
+            },
+            {
+              "id": "rna_primer_lagging_1_01",
+              "time": 18.933333333333287,
+              "center": [
+                2.2750000000000004,
+                -1.03,
+                0.0
+              ],
+              "bbox": [
+                [
+                  2.1925000000000003,
+                  -1.095,
+                  0.0
+                ],
+                [
+                  2.3575000000000004,
+                  -0.9650000000000001,
+                  0.0
+                ]
+              ]
+            },
+            {
+              "id": "rna_primer_lagging_1_02",
+              "time": 18.933333333333287,
+              "center": [
+                2.458333333333333,
+                -1.03,
+                0.0
+              ],
+              "bbox": [
+                [
+                  2.375833333333333,
+                  -1.095,
+                  0.0
+                ],
+                [
+                  2.540833333333333,
+                  -0.9650000000000001,
+                  0.0
+                ]
+              ]
+            }
+          ],
+          "measured_nucleotide_first_visibility": [
+            {
+              "id": "fill_dna_00",
+              "time": 28.533333333333253,
+              "center": [
+                2.091666666666667,
+                -1.03,
+                0.0
+              ],
+              "bbox": [
+                [
+                  2.01375,
+                  -1.095,
+                  0.0
+                ],
+                [
+                  2.1695833333333336,
+                  -0.9650000000000002,
+                  0.0
+                ]
+              ]
+            },
+            {
+              "id": "fill_dna_01",
+              "time": 28.79999999999992,
+              "center": [
+                2.2750000000000004,
+                -1.03,
+                0.0
+              ],
+              "bbox": [
+                [
+                  2.1970833333333335,
+                  -1.095,
+                  0.0
+                ],
+                [
+                  2.352916666666667,
+                  -0.9650000000000002,
+                  0.0
+                ]
+              ]
+            },
+            {
+              "id": "fill_dna_02",
+              "time": 29.066666666666585,
+              "center": [
+                2.458333333333333,
+                -1.03,
+                0.0
+              ],
+              "bbox": [
+                [
+                  2.380416666666666,
+                  -1.095,
+                  0.0
+                ],
+                [
+                  2.53625,
+                  -0.9650000000000002,
+                  0.0
+                ]
+              ]
+            }
+          ],
+          "template_reading_unit_vector": [
+            -1.0,
+            0.0
+          ],
+          "successive_addition_projections": [
+            -0.18333333333333357,
+            -0.18333333333333268
+          ],
+          "code_and_trace_independent_of_declared_direction": true
+        },
+        "limitation": "Sparse schematic trace supports relative growth direction, not chemical bond continuity or a molecular-scale 3prime contact proof."
+      },
+      {
+        "check_id": "registered_enzyme_anchor_contact",
+        "status": "PASS",
+        "samples": 101,
+        "violations": [],
+        "limitation": "An anchor may itself be misplaced; attachment to the biological growing end requires further evidence."
+      },
+      {
+        "check_id": "enzyme_actual_addition_proximity",
+        "status": "PASS",
+        "samples": [
+          {
+            "nucleotide": "nucleotide_leading_00",
+            "time": 9.33333333333332,
+            "polymerase": "dna_polymerase_leading",
+            "distance": 0.7312571925903082
+          },
+          {
+            "nucleotide": "nucleotide_leading_01",
+            "time": 9.666666666666652,
+            "polymerase": "dna_polymerase_leading",
+            "distance": 0.7312571925903082
+          },
+          {
+            "nucleotide": "nucleotide_leading_02",
+            "time": 9.999999999999984,
+            "polymerase": "dna_polymerase_leading",
+            "distance": 0.7312571925903081
+          },
+          {
+            "nucleotide": "nucleotide_leading_03",
+            "time": 10.333333333333316,
+            "polymerase": "dna_polymerase_leading",
+            "distance": 0.7312571925903081
+          },
+          {
+            "nucleotide": "nucleotide_leading_04",
+            "time": 10.666666666666648,
+            "polymerase": "dna_polymerase_leading",
+            "distance": 0.7312571925903082
+          },
+          {
+            "nucleotide": "nucleotide_leading_05",
+            "time": 10.99999999999998,
+            "polymerase": "dna_polymerase_leading",
+            "distance": 0.7312571925903082
+          },
+          {
+            "nucleotide": "nucleotide_leading_06",
+            "time": 11.333333333333313,
+            "polymerase": "dna_polymerase_leading",
+            "distance": 0.7312571925903081
+          },
+          {
+            "nucleotide": "nucleotide_leading_07",
+            "time": 11.666666666666645,
+            "polymerase": "dna_polymerase_leading",
+            "distance": 0.7312571925903077
+          },
+          {
+            "nucleotide": "nucleotide_leading_08",
+            "time": 11.999999999999977,
+            "polymerase": "dna_polymerase_leading",
+            "distance": 0.7312571925903082
+          },
+          {
+            "nucleotide": "nucleotide_leading_09",
+            "time": 12.333333333333309,
+            "polymerase": "dna_polymerase_leading",
+            "distance": 0.731257192590308
+          },
+          {
+            "nucleotide": "nucleotide_leading_10",
+            "time": 12.666666666666641,
+            "polymerase": "dna_polymerase_leading",
+            "distance": 0.7312571925903082
+          },
+          {
+            "nucleotide": "nucleotide_leading_11",
+            "time": 12.999999999999973,
+            "polymerase": "dna_polymerase_leading",
+            "distance": 0.7312571925903082
+          },
+          {
+            "nucleotide": "nucleotide_leading_12",
+            "time": 13.333333333333306,
+            "polymerase": "dna_polymerase_leading",
+            "distance": 0.7312571925903082
+          },
+          {
+            "nucleotide": "nucleotide_leading_13",
+            "time": 13.666666666666638,
+            "polymerase": "dna_polymerase_leading",
+            "distance": 0.731257192590308
+          },
+          {
+            "nucleotide": "nucleotide_leading_14",
+            "time": 13.99999999999997,
+            "polymerase": "dna_polymerase_leading",
+            "distance": 0.731257192590308
+          },
+          {
+            "nucleotide": "okazaki_fragment_1_00",
+            "time": 20.53333333333328,
+            "polymerase": "dna_polymerase_lagging",
+            "distance": 0.7043436661176133
+          },
+          {
+            "nucleotide": "okazaki_fragment_1_01",
+            "time": 20.799999999999947,
+            "polymerase": "dna_polymerase_lagging",
+            "distance": 0.7043436661176135
+          },
+          {
+            "nucleotide": "okazaki_fragment_1_02",
+            "time": 21.066666666666613,
+            "polymerase": "dna_polymerase_lagging",
+            "distance": 0.7043436661176133
+          },
+          {
+            "nucleotide": "okazaki_fragment_1_03",
+            "time": 21.33333333333328,
+            "polymerase": "dna_polymerase_lagging",
+            "distance": 0.7043436661176135
+          },
+          {
+            "nucleotide": "okazaki_fragment_2_00",
+            "time": 22.466666666666608,
+            "polymerase": "dna_polymerase_lagging_2",
+            "distance": 0.7043436661176133
+          },
+          {
+            "nucleotide": "okazaki_fragment_2_01",
+            "time": 22.733333333333274,
+            "polymerase": "dna_polymerase_lagging_2",
+            "distance": 0.7043436661176133
+          },
+          {
+            "nucleotide": "okazaki_fragment_2_02",
+            "time": 22.99999999999994,
+            "polymerase": "dna_polymerase_lagging_2",
+            "distance": 0.7043436661176133
+          },
+          {
+            "nucleotide": "fill_dna_00",
+            "time": 28.533333333333253,
+            "polymerase": "dna_polymerase_fill",
+            "distance": 0.5797509043642028
+          },
+          {
+            "nucleotide": "fill_dna_01",
+            "time": 28.79999999999992,
+            "polymerase": "dna_polymerase_fill",
+            "distance": 0.55
+          },
+          {
+            "nucleotide": "fill_dna_02",
+            "time": 29.066666666666585,
+            "polymerase": "dna_polymerase_fill",
+            "distance": 0.5797509043642028
+          }
+        ],
+        "threshold_scene_units": 1.1,
+        "limitation": "Schematic proximity is necessary, not sufficient for biochemical contact."
+      },
+      {
+        "check_id": "fork_topology",
+        "status": "UNCERTAIN",
+        "object_ids": [
+          "replication_fork",
+          "template_leading",
+          "template_lagging"
+        ],
+        "reason": "Separate make_duplex plus two extended templates requires video-science interpretation; unregistered parental body cannot be proved correct from metadata."
+      }
+    ],
+    "glyphs": [
+      {
+        "text": "3'",
+        "position": [
+          -5.9,
+          1.6700000000000002,
+          0
+        ],
+        "code_line": 101,
+        "assignment": "end_labels"
+      },
+      {
+        "text": "5'",
+        "position": [
+          5.9,
+          1.6700000000000002,
+          0
+        ],
+        "code_line": 102,
+        "assignment": "end_labels"
+      },
+      {
+        "text": "5'",
+        "position": [
+          -5.9,
+          -1.6700000000000002,
+          0
+        ],
+        "code_line": 103,
+        "assignment": "end_labels"
+      },
+      {
+        "text": "3'",
+        "position": [
+          5.9,
+          -1.6700000000000002,
+          0
+        ],
+        "code_line": 104,
+        "assignment": "end_labels"
+      },
+      {
+        "text": "3'",
+        "position": [
+          -0.42999999999999994,
+          1.31,
+          0
+        ],
+        "code_line": 155,
+        "assignment": "lbl_p3"
+      },
+      {
+        "text": "3'",
+        "position": [
+          5.12,
+          1.31,
+          0
+        ],
+        "code_line": 239,
+        "assignment": "lbl_lead3"
+      },
+      {
+        "text": "3'",
+        "position": [
+          0.6599999999999999,
+          -1.31,
+          0
+        ],
+        "code_line": 405,
+        "assignment": "lbl_lag3"
+      }
+    ],
+    "fact_ids": [
+      "F4",
+      "F5",
+      "F6"
+    ]
+  }
+}

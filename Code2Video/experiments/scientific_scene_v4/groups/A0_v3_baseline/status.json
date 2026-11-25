@@ -1,0 +1,29 @@
+{
+  "group": "A0_v3_baseline",
+  "status": "FROZEN_REFERENCE",
+  "generation_attempted": false,
+  "render_success": true,
+  "science_gate": "REVISE",
+  "video_path": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v3/outputs/REP-dd947104c24f/render/attempts/scientific_attempt_2_format_replay/media/videos/rendered_code/480p15/Section4Scene.mp4",
+  "code_path": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v3/outputs/REP-dd947104c24f/render/attempts/scientific_attempt_2_format_replay/rendered_code.py",
+  "code_sha256": "8b5fce53cb5168f3d0e2861b98908f5f70d06c31235147622038347519c99d60",
+  "video_sha256": "86323f84d487bd65cff273bafbe9ffcdf70189cbe2d8236408b51cc9f65083c7",
+  "known_issues": [
+    "fork topology ambiguity",
+    "ligase nick adjacency",
+    "leading polymerase label origin CODE"
+  ],
+  "scene_graph": null,
+  "reason_missing_scene_ir": "V3 baseline predates V4 IR; no reconstructed graph passed off as original",
+  "optional_artifacts": {
+    "scene_graph.json": null,
+    "assembly_states.json": null,
+    "state_transitions.json": null,
+    "generated_code.py": null,
+    "rendered_code.py": null,
+    "geometry_trace.json": null,
+    "validation_report.json": null,
+    "video.mp4": null,
+    "preview.jpg": null
+  }
+}

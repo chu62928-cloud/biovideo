@@ -1,0 +1,88 @@
+# 项目记忆
+
+## Last verified
+2026-11-23，北京时间；SSH motion-data。最终验证以 experiments/biology_baseline/all_results.json 与日志为准。
+
+## Objective
+完成 Code2Video + DeepSeek 模型替代实验，验证生物科普视频实际能力；不声称原论文模型配置严格复现。本轮任务已完成，等待用户观看后决定下一阶段。
+
+## Current state
+VERIFIED：数学与 DNA 均已生成真实成片，最终各 6/6 场景成功；完整解码通过。Critic 与素材下载关闭；未加入 RAG、知识库或其他 Agent。
+
+## Verified results and evidence
+- 上游版本 637509294e936b231d220bb555cf74eeedcb9dfd；prompts 与上游一致。
+- 模型 deepseek-flash，/models 名称 DeepSeek-V4.1-Flash；使用环境变量，第二轮关闭默认思考模式。
+- DNA：136.266667 秒，854×480，15 FPS，无音轨；9 次请求，45059 词元，327.107 秒。初次场景渲染 5/6，修复后 6/6，尝试返回成功 6/7；接口重试0次。唯一修复为模型将 stroke_dash 改为 DashedLine/dash_length。
+- 全部四次尝试共35次请求、225009词元，包括首轮截断和数学环境故障。数学最终132.666667秒；用时受补环境暂停污染，不作干净性能对照。
+- 隔离、圆形和矩阵公式测试均通过。原始响应、代码历史、失败记录、词元明细与代码来源审计全部保存。
+- 质量：标签裁切与重叠；缺少互补配对教学；后随链方向/引物处理需人工核查。半保留终态有颜色图例证据。完整问题见 BIOLOGY_REVIEW.md / ISSUES.md。
+
+## Decisions and invariants
+本轮结果冻结。继续前先核对实际文件、审计与进程，后续实验使用新标签独立目录。保留原始提示词、失败记录与生成内容来源。密钥仅保留服务器私有配置，不写报告。生成代码由UID62001在Landlock/seccomp限制下执行。45次总尝试上限按持久审计累计，已有35次；后续运行需先审阅预算。driver默认拒绝覆盖已有结果。
+
+## Important files and paths
+项目实际路径 /root/autodl-tmp/code2biovideo；用户路径 /autodl-tmp/code2biovideo 为符号链接。
+DNA视频 /root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/DNA_replication_in_eukaryotic_cells.mp4
+数学视频 /root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/Linear_transformations_and_matrices.mp4
+报告 /root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_baseline/RESULTS.md
+环境 env/，私有TeX texlive/，脚本项目根目录与实验tools/。源码差异 upstream.patch。
+
+## External systems and background jobs
+VERIFIED：生成主进程978775与恢复任务均已结束；不再发起API调用。连接 motion-data。下次操作须重新检查进程，不能仅凭旧PID判断。
+为UID62001设置/root仅遍历ACL；私有运行库只读，主题输出目录可写；生成子进程不携带密钥且禁网。
+
+## Immediate continuation
+先阅读 experiments/biology_baseline/RESULTS.md，并观看DNA成片。当前无需继续运行模型。只有用户决定新实验后，复核现有指标、明确新标签与调用上限，再运行独立配置；保护本轮冻结产物。
+
+## Blockers and unknowns
+本轮无执行阻塞。PENDING：用户/教师对后随链方向、引物处理、定量口径及教学可用性的人工审查。未获取收费账单或不可变模型版本。
+
+## Update history
+2026-11-23：建立工程与Provider；保留默认思考模式截断失败；补齐私有LaTeX；数学/DNA成片生成、技术检查、科学内容有限核查及交付完成。
+
+
+## 2026-11-23 Critic 接口新探测
+用户提供中转站，授权测试 Gemini 3 Pro。认证配置仅存于项目根目录仓库外 .critic.env（600），地址 https://apiclaude.cc/v1。
+VERIFIED：/models 鉴权成功，列出 gemini-3.1-pro-preview，未列 gemini-3-pro-preview；后者真实图片请求返回503 No available accounts，重试0次，未获得任何视觉反馈。
+VERIFIED：用户随后同意改用Gemini3.1Pro，执行结果见下方最新探测；冻结基线未改。
+证据 experiments/gemini3_critic_probe/PROBE_REPORT.md。此新增状态优先于上文“等待下一阶段”的旧快照；原基线结果仍冻结。
+
+
+## 2026-11-23 Gemini 3.1 Pro 最新结果
+用户明确同意切换后，实际请求 gemini-3.1-pro-preview，使用DNA第1节真实MP4、上游GRID参考图与原始Critic提示词。
+VERIFIED：返回HTTP503，错误 All available accounts exhausted；耗时10.192秒，接口重试0次，无有效反馈与用量数据。尚不能验证视频格式或视觉分析能力。
+停止后续模型调用，未尝试用图片绕过资源错误，未启动代码修改/重渲染。此项为中转站上游账号池阻塞；不是已证实的鉴权失败或用户余额不足。
+证据 experiments/gemini31_critic_probe/PROBE_REPORT.md、original_video_metrics.json、original_video_error.json。下一步是运营方确认上游恢复后用新目录复测，不覆盖本次失败。
+
+## 2026-11-23 末尾斜杠复测
+用户要求Base URL使用 https://apiclaude.cc/v1/，已按原视频请求复测 gemini-3.1-pro-preview。实际OpenAI SDK请求仍为 https://apiclaude.cc/v1/chat/completions。结果见 experiments/gemini31_critic_trailing_slash_probe/original_video_metrics.json，原基线未修改。
+
+## 2026-11-23 新密钥测试
+用户授权测试另一密钥；配置仅在仓库外 .critic_candidate.env（600）。同地址、同模型的鉴权和实际视频请求结果已保存在 experiments/gemini31_critic_newkey_probe/summary.json。原密钥和冻结基线未覆盖；以该文件状态为准。
+
+## 2026-11-23 Qwen4 Critic 两轮实验进行中
+用户授权DASHSCOPE_API_KEY保存于仓库外项目.env（600），指定官方兼容接口及qwen4-max；随后强调不改变其他配置、输入与流程。
+VERIFIED：普通文本请求成功；真实MP4+原始GRID图+原生Critic提示词请求成功，返回有效layout JSON，发现截断标签与Speed/Accuracy重叠。未覆盖思考模式/帧率/10000输出上限。
+IN PROGRESS：进程10421运行run_qwen4_two_rounds.py，输入沿用冻结DNA的outline/storyboard/6份代码，通过原生缓存与两轮反馈流程记录。原基线冻结。
+新实验路径experiments/qwen4_critic/，当前日志logs/run.log，协议EXPERIMENT_PROTOCOL.md。新产物src/CASES/C_qwen4_critic_two_rounds/。每节两轮快照分开保存，不能把原生修复失败后保留视频当成功。
+
+## 2026-11-23 Qwen4 Critic 实验终止并交付
+VERIFIED：Qwen4官方接口普通文本与完整视频均可用，Critic返回有效原layout JSON。配置.env已追加DASHSCOPE_API_KEY、QWEN_BASE_URL、QWEN_MODEL=qwen4-max、CRITIC_PROVIDER=qwen，密钥仅服务器私有文件600。
+用户约束保持：初始知识点、Outline、Storyboard、6份初始代码、全部prompts、DeepSeek配置与原生修复逻辑未变。仅启用所请求的Critic两轮并做video_url协议/请求路由适配；完整核对configuration_integrity.json。
+VERIFIED：在第5节第一轮优化时，触发此前实验脚本45次DeepSeek累计上限（基线35+本次10），主流程停止；未扩大限制。该上限不是上游仓库自带。
+已记录前4节的两轮，另有第5节首轮反馈；第5节二轮和第6节未执行。两轮各合并4节局部MP4，均96秒、854x480、15FPS、无音轨，全片解码通过；绝非完整6节两轮成功。
+第一轮4节中实际修复渲染2次成功、2次失败；第二轮1次成功、3次失败。第1节两轮成功，第3节首轮成功，其余保留旧视频；video_provenance.json有SHA证据。第5节优化中断另存interrupted_code。
+调用：Qwen10次含1次兼容性预检，180542词元；DeepSeek10次55853词元；独立文本探测另30词元。主流程979.230秒。停止新增模型调用。
+结果报告experiments/qwen4_critic/RESULTS.md，原始日志logs/run.log；两轮视频src/CASES/C_qwen4_critic_two_rounds/0-DNA_replication_in_eukaryotic_cells/DNA_qwen4_critic_round_1.mp4和round_2.mp4。原冻结基线文件哈希未变。
+外部进程10421已结束。下一步先观看局部对照，审阅RESULTS.md与render_failures.json；45上限为此前代理设置，不是用户指定数值或上游配置；后续如用户要求继续，须结合最新授权与明确的实验预算判断，不可把本快照误当成额外审批规则。遵从本次约束，未人工修正原生按行替换、坐标或修复流程。
+
+视觉复核补充：第1节裁切与Speed/Accuracy重叠改善；第3节第一轮DNA下移导致Helicase图标与DNA脱离，第二轮失败沿用，不能把渲染成功等同教学质量提升。见VISUAL_REVIEW.md。
+
+## 2026-11-23 Biology-Aware V2 Section4 进行中（最新）
+用户的新附件授权修复事务链路、结构化机制、SVG及A0/A1/A2/A3，仅Section4。新独立预算DeepSeek8/Qwen2/Wan1默认禁用；旧45脚本限制不适用于本次，不改历史计数。
+新目录experiments/biology_v2_section4。历史输入哈希historical_inputs.json。旧修改器缩进问题已实际复现。
+新增src/biology_v2_pipeline.py（原子配对提交、全渲染门禁、未知对象拒绝、AST函数替换）与src/biology_runtime.py（通用组件/几何轨迹，不含完整动画）。
+9项离线回归均通过，包括真实历史Section3重放检测关系退化和新增结合位点换位测试；API=0。8个原创独立SVG加载测试通过，均示意非真实蛋白结构。A0精确复制35.4s基线。
+真实DeepSeek已调用5次；初版检查器误计历史绑定，已修复并保留干预记录。候选动画未人工修改。A1候选2在修复检查器后完整重渲染通过，26.733333秒；A1其他失败保留。
+A2候选2重放因时长不在25–35s被拒，目前在使用第6次Coder调用修复。进程31078运行tools/continue_after_checker_fix.py，日志logs/continuation.log。以实际文件核验状态。
+Wan仅dry-run，无HTTP/上传/视频费用。下一步核对A2修复，成功后A3最多两次Qwen和AST事务修复；最后按事件对照并交付，不扩大预算。

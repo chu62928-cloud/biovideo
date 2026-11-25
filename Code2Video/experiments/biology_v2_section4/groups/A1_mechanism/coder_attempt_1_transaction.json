@@ -1,0 +1,10 @@
+{
+  "tag": "coder_attempt_1",
+  "committed": false,
+  "before": null,
+  "started": 1795427630.9216793,
+  "error_type": "AssertionError",
+  "error": "Missing actual registered mechanism objects: ['incoming_nucleotide', 'new_lagging_strand']",
+  "after": null,
+  "elapsed_seconds": 12.956
+}

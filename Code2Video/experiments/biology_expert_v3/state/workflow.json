@@ -1,0 +1,68 @@
+{
+  "artifacts": {
+    "knowledge_dna_replication": {
+      "sha256": "02973c4a9c9d3cf4d5350019d17090a1ad64a610737fadc77ddc7884c28104bd",
+      "owner": "TOPIC_RESEARCH"
+    },
+    "historical_code": {
+      "sha256": "e5f38e4e57705e32e86a8e689e4a4d0b57a2a390322e8c7aeefb9218dab696cf",
+      "owner": "CODE_GATE"
+    },
+    "knowledge_eukaryotic_mitosis": {
+      "sha256": "40c62ef1a8519364f5222df5fe756c04c1f5c7962d8057f277a0dc2d9415a42f",
+      "owner": "TOPIC_RESEARCH"
+    },
+    "final_candidate_code": {
+      "sha256": "8b5fce53cb5168f3d0e2861b98908f5f70d06c31235147622038347519c99d60",
+      "owner": "CODE_GATE"
+    }
+  },
+  "gates": {
+    "TOPIC_RESEARCH": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "KNOWLEDGE_GATE": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "SCRIPT_GATE": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "CAST_ASSET_GATE": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "STORYBOARD_GATE": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "CODE_GATE": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "RENDER": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "VIDEO_SCIENCE_GATE": {
+      "status": "REVISION_REQUIRED",
+      "input_hash": "c023a153514f4f6ef14e1aacbe2a9a6b0fddbdc28a141e93bef976acfc1d64c0",
+      "review_id": "REV-94007f30191b"
+    },
+    "VISUAL_CRITIC": {
+      "status": "PENDING",
+      "input_hash": null
+    },
+    "FINAL_SCIENCE_GATE": {
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "input_hash": "90b1acc26eed805d46e10d1893dc730b6e5da79ec8fac3d61712b36760cf497a",
+      "review_id": "REV-94007f30191b"
+    },
+    "APPROVED": {
+      "status": "PENDING",
+      "input_hash": null
+    }
+  }
+}

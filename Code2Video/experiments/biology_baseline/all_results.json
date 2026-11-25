@@ -1,0 +1,283 @@
+[
+  {
+    "label": "A2_math_deepseek_nonthinking",
+    "topic": "Linear transformations and matrices",
+    "output_dir": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices",
+    "requested_model": "deepseek-flash",
+    "critic": false,
+    "assets": false,
+    "start_utc": "2026-11-23T03:54:17Z",
+    "status": "success",
+    "sections": 6,
+    "successful_sections": 6,
+    "section_videos": {
+      "section_1": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_1/480p15/Section1Scene.mp4",
+      "section_2": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_2/480p15/Section2Scene.mp4",
+      "section_3": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_3/480p15/Section3Scene.mp4",
+      "section_4": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_4/480p15/Section4Scene.mp4",
+      "section_5": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_5/480p15/Section5Scene.mp4",
+      "section_6": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_6/480p15/Section6Scene.mp4"
+    },
+    "video": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/Linear_transformations_and_matrices.mp4",
+    "elapsed_seconds": 1155.793,
+    "api_attempts": 21,
+    "api_retries": 0,
+    "usage": {
+      "prompt_tokens": 89604,
+      "completion_tokens": 50610,
+      "total_tokens": 140214
+    },
+    "models": [
+      "deepseek-flash"
+    ],
+    "render_attempts": 12,
+    "render_attempt_successes": 5,
+    "render_retries": 6,
+    "environment_recovery_seconds": 63.173,
+    "note": "Contains environment failures, long installation pause and recovery; not clean model latency.",
+    "render_success_rate": 1.0,
+    "stages": {
+      "A2_math_deepseek_nonthinking:planner_outline": 1,
+      "A2_math_deepseek_nonthinking:planner_storyboard": 1,
+      "A2_math_deepseek_nonthinking:coder:section_1": 1,
+      "A2_math_deepseek_nonthinking:render_repair:section_1": 8,
+      "A2_math_deepseek_nonthinking:coder:section_2": 1,
+      "A2_math_deepseek_nonthinking:render_repair:section_2": 5,
+      "A2_math_deepseek_nonthinking:coder:section_3": 1,
+      "A2_math_deepseek_nonthinking:coder:section_4": 1,
+      "A2_math_deepseek_nonthinking:coder:section_5": 1,
+      "A2_math_deepseek_nonthinking:coder:section_6": 1
+    },
+    "segments": [
+      {
+        "section": "section_1",
+        "start_seconds": 0,
+        "duration_seconds": 27.733333,
+        "path": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_1/480p15/Section1Scene.mp4"
+      },
+      {
+        "section": "section_2",
+        "start_seconds": 27.733333,
+        "duration_seconds": 16.066667,
+        "path": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_2/480p15/Section2Scene.mp4"
+      },
+      {
+        "section": "section_3",
+        "start_seconds": 43.8,
+        "duration_seconds": 23.4,
+        "path": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_3/480p15/Section3Scene.mp4"
+      },
+      {
+        "section": "section_4",
+        "start_seconds": 67.19999999999999,
+        "duration_seconds": 15.8,
+        "path": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_4/480p15/Section4Scene.mp4"
+      },
+      {
+        "section": "section_5",
+        "start_seconds": 82.99999999999999,
+        "duration_seconds": 25.2,
+        "path": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_5/480p15/Section5Scene.mp4"
+      },
+      {
+        "section": "section_6",
+        "start_seconds": 108.19999999999999,
+        "duration_seconds": 24.466667,
+        "path": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A2_math_deepseek_nonthinking/0-Linear_transformations_and_matrices/media/videos/section_6/480p15/Section6Scene.mp4"
+      }
+    ],
+    "video_properties": {
+      "duration_seconds": 132.666667,
+      "streams": [
+        {
+          "type": "video",
+          "codec": "h264",
+          "width": 854,
+          "height": 480,
+          "fps": "15/1"
+        }
+      ],
+      "decode_returncode": 0,
+      "decode_errors": "",
+      "segment_duration_sum": 132.666667,
+      "bytes": 4344162,
+      "sha256": "005f1e09529c1c4c5a6167204878d6b5d5691cf457922e56fa9315101b654f88",
+      "black_intervals": []
+    },
+    "preview": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_baseline/previews/A2_math_deepseek_nonthinking/contact_sheet.jpg"
+  },
+  {
+    "label": "A_math_deepseek",
+    "topic": "Linear transformations and matrices",
+    "output_dir": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/A_math_deepseek/0-Linear_transformations_and_matrices",
+    "requested_model": "deepseek-flash",
+    "critic": false,
+    "assets": false,
+    "start_utc": "2026-11-23T03:49:24Z",
+    "status": "failed",
+    "sections": 6,
+    "error_type": "ValueError",
+    "error": "DeepSeek response truncated at token limit",
+    "elapsed_seconds": 92.611,
+    "api_attempts": 3,
+    "api_retries": 0,
+    "usage": {
+      "prompt_tokens": 3515,
+      "completion_tokens": 22127,
+      "total_tokens": 25642
+    },
+    "models": [
+      "deepseek-flash"
+    ],
+    "render_attempts": 0,
+    "render_attempt_successes": 0,
+    "render_retries": 0,
+    "render_success_rate": 0.0,
+    "stages": {
+      "A_math_deepseek:planner_outline": 1,
+      "A_math_deepseek:planner_storyboard": 1,
+      "A_math_deepseek:coder:section_1": 1
+    },
+    "segments": []
+  },
+  {
+    "label": "B2_dna_deepseek_nonthinking",
+    "topic": "DNA replication in eukaryotic cells",
+    "output_dir": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells",
+    "requested_model": "deepseek-flash",
+    "critic": false,
+    "assets": false,
+    "start_utc": "2026-11-23T04:12:30Z",
+    "status": "success",
+    "sections": 6,
+    "successful_sections": 6,
+    "section_videos": {
+      "section_1": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/media/videos/section_1/480p15/Section1Scene.mp4",
+      "section_2": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/media/videos/section_2/480p15/Section2Scene.mp4",
+      "section_3": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/media/videos/section_3/480p15/Section3Scene.mp4",
+      "section_4": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/media/videos/section_4/480p15/Section4Scene.mp4",
+      "section_5": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/media/videos/section_5/480p15/Section5Scene.mp4",
+      "section_6": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/media/videos/section_6/480p15/Section6Scene.mp4"
+    },
+    "video": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/DNA_replication_in_eukaryotic_cells.mp4",
+    "elapsed_seconds": 327.107,
+    "api_attempts": 9,
+    "api_retries": 0,
+    "usage": {
+      "prompt_tokens": 18231,
+      "completion_tokens": 26828,
+      "total_tokens": 45059
+    },
+    "models": [
+      "deepseek-flash"
+    ],
+    "render_attempts": 7,
+    "render_attempt_successes": 6,
+    "render_retries": 1,
+    "merge_recovery_seconds": 0.271,
+    "render_success_rate": 1.0,
+    "stages": {
+      "B2_dna_deepseek_nonthinking:planner_outline": 1,
+      "B2_dna_deepseek_nonthinking:planner_storyboard": 1,
+      "B2_dna_deepseek_nonthinking:coder:section_1": 1,
+      "B2_dna_deepseek_nonthinking:coder:section_2": 1,
+      "B2_dna_deepseek_nonthinking:coder:section_3": 1,
+      "B2_dna_deepseek_nonthinking:coder:section_4": 1,
+      "B2_dna_deepseek_nonthinking:render_repair:section_4": 1,
+      "B2_dna_deepseek_nonthinking:coder:section_5": 1,
+      "B2_dna_deepseek_nonthinking:coder:section_6": 1
+    },
+    "segments": [
+      {
+        "section": "section_1",
+        "start_seconds": 0,
+        "duration_seconds": 28.466667,
+        "path": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/media/videos/section_1/480p15/Section1Scene.mp4"
+      },
+      {
+        "section": "section_2",
+        "start_seconds": 28.466667,
+        "duration_seconds": 18.733333,
+        "path": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/media/videos/section_2/480p15/Section2Scene.mp4"
+      },
+      {
+        "section": "section_3",
+        "start_seconds": 47.2,
+        "duration_seconds": 13.4,
+        "path": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/media/videos/section_3/480p15/Section3Scene.mp4"
+      },
+      {
+        "section": "section_4",
+        "start_seconds": 60.6,
+        "duration_seconds": 35.4,
+        "path": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/media/videos/section_4/480p15/Section4Scene.mp4"
+      },
+      {
+        "section": "section_5",
+        "start_seconds": 96.0,
+        "duration_seconds": 19.0,
+        "path": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/media/videos/section_5/480p15/Section5Scene.mp4"
+      },
+      {
+        "section": "section_6",
+        "start_seconds": 115.0,
+        "duration_seconds": 21.266667,
+        "path": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B2_dna_deepseek_nonthinking/0-DNA_replication_in_eukaryotic_cells/media/videos/section_6/480p15/Section6Scene.mp4"
+      }
+    ],
+    "video_properties": {
+      "duration_seconds": 136.266667,
+      "streams": [
+        {
+          "type": "video",
+          "codec": "h264",
+          "width": 854,
+          "height": 480,
+          "fps": "15/1"
+        }
+      ],
+      "decode_returncode": 0,
+      "decode_errors": "",
+      "segment_duration_sum": 136.266667,
+      "bytes": 3617039,
+      "sha256": "37c4ac107a742656ffb7f58c24780e896ee6c236c61e85ad88b775456ed82076",
+      "black_intervals": [
+        "[blackdetect @ 0x7f69b0003d00] black_start:121.6 black_end:122.6 black_duration:1",
+        "[blackdetect @ 0x7f69b0003d00] black_start:127.8 black_end:128.4 black_duration:0.6"
+      ]
+    },
+    "preview": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_baseline/previews/B2_dna_deepseek_nonthinking/contact_sheet.jpg"
+  },
+  {
+    "label": "B_dna_deepseek",
+    "topic": "DNA replication in eukaryotic cells",
+    "output_dir": "/root/autodl-tmp/code2biovideo/Code2Video/src/CASES/B_dna_deepseek/0-DNA_replication_in_eukaryotic_cells",
+    "requested_model": "deepseek-flash",
+    "critic": false,
+    "assets": false,
+    "start_utc": "2026-11-23T03:50:57Z",
+    "status": "failed",
+    "error_type": "ValueError",
+    "error": "DeepSeek response truncated at token limit",
+    "elapsed_seconds": 54.863,
+    "api_attempts": 2,
+    "api_retries": 0,
+    "usage": {
+      "prompt_tokens": 1716,
+      "completion_tokens": 12378,
+      "total_tokens": 14094
+    },
+    "models": [
+      "deepseek-flash"
+    ],
+    "render_attempts": 0,
+    "render_attempt_successes": 0,
+    "render_retries": 0,
+    "render_success_rate": null,
+    "stages": {
+      "B_dna_deepseek:planner_outline": 1,
+      "B_dna_deepseek:planner_storyboard": 1
+    },
+    "segments": []
+  }
+]

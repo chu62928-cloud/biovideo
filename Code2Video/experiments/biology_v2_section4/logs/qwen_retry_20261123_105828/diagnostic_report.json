@@ -1,0 +1,46 @@
+{
+  "authorization": "User explicitly requested one retry after prior timeout; separate follow-up audit, original ledger unchanged",
+  "started_utc": "2026-11-23T10:58:28Z",
+  "model": "qwen4-max",
+  "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "input_code_sha256": "e5f38e4e57705e32e86a8e689e4a4d0b57a2a390322e8c7aeefb9218dab696cf",
+  "input_video_sha256": "4154b5fef41c8552ea8fe42b06d346a1a3fb2b02888b66db35238b3bd4cb5459",
+  "input_video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/groups/A3_mechanism_assets_critic/versions/initial_A2_copy/video.mp4",
+  "prompt_unchanged": true,
+  "max_tokens": 10000,
+  "SDK_retries": 0,
+  "timeout_seconds": 180,
+  "status": "success",
+  "response_model": "qwen4-max",
+  "usage": {
+    "completion_tokens": 4878,
+    "prompt_tokens": 20783,
+    "total_tokens": 25661,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 3415,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "image_tokens": 4643,
+      "video_tokens": 13367,
+      "text_tokens": 2773
+    }
+  },
+  "finish_reason": "stop",
+  "request_id": "15e2fd60-6ab8-94d1-92c9-762aa1636317",
+  "elapsed_seconds": 131.618,
+  "error": null,
+  "previous_error": "APITimeoutError after approximately 180 seconds",
+  "feedback_issue_count": 3,
+  "all_issue_object_ids_exist": true,
+  "request_type": "same full video + GRID + object inventory, non-streaming",
+  "prompt_characters": 9036,
+  "video_duration_seconds": 33.466667,
+  "video_bytes": 867242,
+  "code_or_video_modified": false,
+  "interpretation": "This retry succeeded; the earlier timeout alone does not establish model unavailability. Its exact cause is still unknown."
+}

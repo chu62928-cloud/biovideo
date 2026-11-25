@@ -1,0 +1,26 @@
+--- before
++++ after
+@@ -1,6 +1,5 @@
+ from manim import *
+ import numpy as np
+-
+ 
+ class TeachingScene(Scene):
+     def setup_layout(self, title_text, lecture_lines):
+@@ -80,7 +79,7 @@
+ 
+         helix = make_helix(length=5.0, n=120, amp=0.22, color_top="#4FC3F7",
+                            color_bot="#4FC3F7")
+-        self.place_in_area(helix, 'A1', 'C5', scale_factor=0.8)
++        self.place_in_area(helix, 'B1', 'C4', scale_factor=0.7)
+ 
+         self.play(Create(helix), run_time=1.2)
+         self.wait(0.3)
+@@ -142,7 +141,6 @@
+         bot_mob = VMobject(color="#4FC3F7", stroke_width=6)
+         bot_mob.set_points_smoothly(bot_pts)
+         fork_group = VGroup(top_mob, bot_mob)
+-        self.place_in_area(fork_group, 'D1', 'F6', scale_factor=0.7)
+ 
+         self.play(
+             Transform(helix, fork_group),

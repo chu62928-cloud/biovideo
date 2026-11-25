@@ -1,0 +1,38 @@
+{
+  "group": "A1_mechanism",
+  "attempts": [
+    {
+      "tag": "coder_attempt_1",
+      "committed": false,
+      "before": null,
+      "started": 1795427630.9216793,
+      "error_type": "AssertionError",
+      "error": "Missing actual registered mechanism objects: ['incoming_nucleotide', 'new_lagging_strand']",
+      "after": null,
+      "elapsed_seconds": 12.956
+    },
+    {
+      "tag": "coder_attempt_2",
+      "committed": false,
+      "before": null,
+      "started": 1795427661.7066321,
+      "error_type": "AssertionError",
+      "error": "Enzyme/active-site geometry violated",
+      "after": null,
+      "elapsed_seconds": 12.315
+    },
+    {
+      "tag": "coder_attempt_3",
+      "committed": false,
+      "before": null,
+      "started": 1795427692.9348676,
+      "error_type": "AssertionError",
+      "error": "Duration outside requested range",
+      "after": null,
+      "elapsed_seconds": 10.584
+    }
+  ],
+  "elapsed_seconds": 94.536,
+  "success": false,
+  "human_animation_code_intervention": false
+}

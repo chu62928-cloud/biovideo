@@ -1,0 +1,32 @@
+[
+  {
+    "injection": "missing_endpoint",
+    "validation": false,
+    "committed": true
+  },
+  {
+    "injection": "missing_endpoint",
+    "validation": true,
+    "committed": false
+  },
+  {
+    "injection": "premature_separation",
+    "validation": false,
+    "committed": true
+  },
+  {
+    "injection": "premature_separation",
+    "validation": true,
+    "committed": false
+  },
+  {
+    "injection": "wrong_growth_direction",
+    "validation": false,
+    "committed": true
+  },
+  {
+    "injection": "wrong_growth_direction",
+    "validation": true,
+    "committed": false
+  }
+]

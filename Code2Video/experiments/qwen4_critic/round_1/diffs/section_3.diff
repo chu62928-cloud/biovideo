@@ -1,0 +1,20 @@
+--- before
++++ after
+@@ -80,7 +80,7 @@
+ 
+         helix = make_helix(length=5.0, n=120, amp=0.22, color_top="#4FC3F7",
+                            color_bot="#4FC3F7")
+-        self.place_in_area(helix, "A1", "C6", scale_factor=0.9)
++        self.place_in_area(helix, 'A1', 'C5', scale_factor=0.8)
+ 
+         self.play(Create(helix), run_time=1.2)
+         self.wait(0.3)
+@@ -142,7 +142,7 @@
+         bot_mob = VMobject(color="#4FC3F7", stroke_width=6)
+         bot_mob.set_points_smoothly(bot_pts)
+         fork_group = VGroup(top_mob, bot_mob)
+-        self.place_in_area(fork_group, "A1", "C6", scale_factor=0.9)
++        self.place_in_area(fork_group, 'D1', 'F6', scale_factor=0.7)
+ 
+         self.play(
+             Transform(helix, fork_group),

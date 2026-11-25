@@ -1,0 +1,52 @@
+{
+  "review_id": "V4-VIDEO-fa2cb6fa25",
+  "stage": "RENDERED_VIDEO",
+  "decision": "ERROR",
+  "issues": [],
+  "error_type": "ValueError",
+  "error": "OFFLINE MOCK malformed JSON",
+  "checks": [
+    {
+      "check_id": "registered_scientific_identity",
+      "category": "identity",
+      "status": "FAIL",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [],
+      "observed_evidence": {
+        "missing": [
+          "fragment_1",
+          "fragment_2",
+          "gap_fill",
+          "ligase",
+          "new_leading",
+          "polymerase_lagging",
+          "polymerase_leading",
+          "primase",
+          "rna_primer_lagging_1",
+          "rna_primer_lagging_2",
+          "rna_primer_leading",
+          "template_lagging",
+          "template_leading"
+        ],
+        "unexpected_scientific_ids": []
+      },
+      "expected_condition": "",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "actual_execution",
+      "category": "execution",
+      "status": "NOT_MEASURED",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [],
+      "observed_evidence": {},
+      "expected_condition": "",
+      "description": "No adapter observation records",
+      "suggested_repair_stage": "SCENE_IR"
+    }
+  ],
+  "full_video": true
+}

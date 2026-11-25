@@ -1,0 +1,80 @@
+[
+  {
+    "injection": "missing_endpoint",
+    "validation": false,
+    "result": {
+      "action_id": "event_5_maturation_maturation_12",
+      "committed": true,
+      "operation": "connect",
+      "state": {
+        "phase": "closed"
+      }
+    }
+  },
+  {
+    "injection": "missing_endpoint",
+    "validation": true,
+    "result": {
+      "action_id": "event_5_maturation_maturation_12",
+      "committed": false,
+      "operation": "connect",
+      "error_type": "ValueError",
+      "error": "Unknown endpoint: gap_fill.unknown_port",
+      "state": {
+        "phase": "closed"
+      }
+    }
+  },
+  {
+    "injection": "premature_separation",
+    "validation": false,
+    "result": {
+      "action_id": "anaphase_chromatid_separation_0",
+      "committed": true,
+      "operation": "split",
+      "state": {
+        "phase": "separating"
+      }
+    }
+  },
+  {
+    "injection": "premature_separation",
+    "validation": true,
+    "result": {
+      "action_id": "anaphase_chromatid_separation_0",
+      "committed": false,
+      "operation": "split",
+      "error_type": "ValueError",
+      "error": "Preconditions not satisfied: [{'constraint_id': 'phase_aligned', 'predicate': 'state_is', 'reason': 'condition false'}, {'constraint_id': 'bipolar_left', 'predicate': 'relation_exists', 'reason': 'condition false'}, {'constraint_id': 'bipolar_right', 'predicate': 'relation_exists', 'reason': 'condition false'}]",
+      "state": {
+        "phase": "unattached"
+      }
+    }
+  },
+  {
+    "injection": "wrong_growth_direction",
+    "validation": false,
+    "result": {
+      "action_id": "event_3_extension_continuous_extension_2",
+      "committed": true,
+      "operation": "extend",
+      "state": {
+        "phase": "closed"
+      }
+    }
+  },
+  {
+    "injection": "wrong_growth_direction",
+    "validation": true,
+    "result": {
+      "action_id": "event_3_extension_continuous_extension_2",
+      "committed": false,
+      "operation": "extend",
+      "error_type": "ValueError",
+      "error": "Postcondition/invariant failed: [{'constraint_id': 'wrong_growth', 'predicate': 'growth_direction', 'reason': 'condition false'}]",
+      "state": {
+        "phase": "closed"
+      }
+    }
+  }
+]

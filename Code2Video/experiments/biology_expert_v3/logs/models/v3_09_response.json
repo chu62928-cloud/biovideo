@@ -1,0 +1,36 @@
+{
+  "id": "48dbd679-48f0-4602-ad2c-5ae42bea5eaa",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "```json\n{\n  \"facts\": [\n    {\n      \"fact_id\": \"F1\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Source states eukaryotic replication initiates from many sites called replication origins; organism (eukaryotes) and stage (initiation) match.\",\n      \"evidence_ids\": [\"PMID_35320688\"]\n    },\n    {\n      \"fact_id\": \"F2\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Passage directly states initiation from origins must be tightly controlled so the entire genome is precisely duplicated each cell cycle. Meaning and scope match.\",\n      \"evidence_ids\": [\"PMID_35320688\"]\n    },\n    {\n      \"fact_id\": \"F3\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Passage states control is accomplished by regulating loading and activation of the replicative DNA helicase. Review emphasizes budding-yeast proteins, so broad eukaryotic generalization is an extrapolation of framing, but the stated claim is entailed.\",\n      \"evidence_ids\": [\"PMID_35320688\"]\n    },\n    {\n      \"fact_id\": \"F4\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Passage explicitly states the preponderance of evidence supports a model in which Pol ε carries out the bulk of leading-strand synthesis at an undisturbed fork. Claim preserves the model-level hedge and 'undisturbed fork' qualifier.\",\n      \"evidence_ids\": [\"PMID_28301743\"]\n    },\n    {\n      \"fact_id\": \"F5\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Passage states Pol α carries out initiation of Okazaki fragment synthesis. The parenthetical 'priming implied' is supported by the role of initiation in this context; no ungrounded extension.\",\n      \"evidence_ids\": [\"PMID_28301743\"]\n    },\n    {\n      \"fact_id\": \"F6\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Passage states Pol δ carries out elongation and maturation of Okazaki fragments. Direct role match.\",\n      \"evidence_ids\": [\"PMID_28301743\"]\n    },\n    {\n      \"fact_id\": \"F7\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Passage frames the review around enzymes that synthesize DNA and repair discontinuities on the lagging strand of the replication fork. Entailed at the framing level.\",\n      \"evidence_ids\": [\"PMID_28301743\"]\n    },\n    {\n      \"fact_id\": \"F8\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Passage discusses alternative proposals including cellular processes during which alternative forks may be utilized, and biochemical reconstitution studies examining leading and lagging synthesis separately and jointly. Claim accurately paraphrases; 'disputed' is a labeling choice but content is entailed. Builder status CONFLICTED is unsupported; no contradicting evidence exists.\",\n      \"evidence_ids\": [\"PMID_28301743\"]\n    },\n    {\n      \"fact_id\": \"X_7574276a\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Passage states DNA pol can add nucleotides only in the 5' to 3' direction. Extractively sourced; claim matches passage meaning for the stated context. No scene-level scope confirmation.\",\n      \"evidence_ids\": [\"E_d8ffea5a57\"]\n    },\n    {\n      \"fact_id\": \"X_ad91e1ec\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Passage states once the 3' end of the lagging strand template is sufficiently elongated, DNA polymerase can add nucleotides complementary to chromosome ends. Entailed in telomerase context; note this concerns telomere completion, not general fork synthesis.\",\n      \"evidence_ids\": [\"E_d8ffea5a57\"]\n    },\n    {\n      \"fact_id\": \"X_e4f9116f\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Passage states DNA polymerase can add nucleotides in only one direction. Vague but entailed; directionality specified in adjacent passage.\",\n      \"evidence_ids\": [\"E_be5ade748a\"]\n    },\n    {\n      \"fact_id\": \"X_7c32612c\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Passage states one strand complementary to the parental strand is synthesized continuously toward the replication fork so polymerase can add nucleotides in this direction. Entailed; leading-strand context.\",\n      \"evidence_ids\": [\"E_be5ade748a\"]\n    },\n    {\n      \"fact_id\": \"X_f4d75e80\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Passage states because DNA polymerase can only synthesize 5' to 3', the other new strand is made in short pieces called Okazaki fragments. Entailed; lagging-strand context.\",\n      \"evidence_ids\": [\"E_be5ade748a\"]\n    },\n    {\n      \"fact_id\": \"X_668d288b\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Passage describes nucleotide excision repair: double strand unwound/separated, incorrect bases removed with a few flanking bases, replaced by copying template with DNA polymerase. Entailed as stated, but off-topic for the replication-mechanism video; also note textbook conflates RNase H with flap endonuclease elsewhere, so caution on adjacent claims.\",\n      \"evidence_ids\": [\"E_be5ade748a\"]\n    },\n    {\n      \"fact_id\": \"X_bf28604c\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Passage states only purine-pyrimidine pairing and antiparallel orientation can explain uniform diameter. Entailed as stated. Off-topic for replication mechanism video.\",\n      \"evidence_ids\": [\"E_fed44ea521\"]\n    },\n    {\n      \"fact_id\": \"X_2b67f83d\",\n      \"status\": \"VERIFIED\",\n      \"reason\": \"Passage states ddNTP incorporation prevents further extension because the free 3' OH needed to add another nucleotide is unavailable. Entailed. Off-topic (Sanger sequencing), not replication mechanism.\",\n      \"evidence_ids\": [\"E_fed44ea521\"]\n    }\n  ],\n  \"conflicts\": []\n}\n```",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1795492028,
+  "model": "deepseek-flash",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+  "usage": {
+    "completion_tokens": 1308,
+    "prompt_tokens": 13888,
+    "total_tokens": 15196,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 13504
+  }
+}

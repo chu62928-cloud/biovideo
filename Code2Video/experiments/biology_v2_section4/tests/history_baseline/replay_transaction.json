@@ -1,0 +1,19 @@
+{
+  "tag": "replay",
+  "committed": true,
+  "before": null,
+  "started": 1795427309.4601068,
+  "after": {
+    "success": true,
+    "tag": "replay",
+    "code_sha256": "6ef98f7ba7c36be519667a7710a7216c3e9e9b2412d0486a8145b333e9b25ac9",
+    "video_sha256": "25a61666eecb26092f0f64a8ca5ccdaef47c4f57e609b9ae084de51e5180f8d2",
+    "duration_seconds": 13.4,
+    "renderer": "manim-0.19.0-full-render",
+    "trace_sha256": "e0bff786073119c40bc491143797156ced982a8e212fc0f438528ce03d7238b1",
+    "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/history_baseline/versions/replay",
+    "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/history_baseline/versions/replay/rendered_code.py",
+    "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/tests/history_baseline/versions/replay/video.mp4"
+  },
+  "elapsed_seconds": 8.475
+}

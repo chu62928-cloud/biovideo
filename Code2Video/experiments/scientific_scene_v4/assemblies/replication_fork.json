@@ -1,0 +1,130 @@
+{
+  "assembly_id": "replication_fork",
+  "assembly_type": "replication_fork",
+  "component_ids": [
+    "template_leading",
+    "template_lagging",
+    "rna_primer_leading",
+    "rna_primer_lagging_1",
+    "rna_primer_lagging_2",
+    "new_leading",
+    "fragment_1",
+    "fragment_2",
+    "gap_fill",
+    "primase",
+    "polymerase_leading",
+    "polymerase_lagging",
+    "ligase"
+  ],
+  "relations": [
+    {
+      "source": "template_leading",
+      "target": "template_lagging",
+      "type": "paired_parental_region",
+      "source_anchor": "pair_0",
+      "target_anchor": "pair_0",
+      "draw_link": "pairing_rung_0"
+    },
+    {
+      "source": "template_leading",
+      "target": "template_lagging",
+      "type": "paired_parental_region",
+      "source_anchor": "pair_1",
+      "target_anchor": "pair_1",
+      "draw_link": "pairing_rung_1"
+    },
+    {
+      "source": "template_leading",
+      "target": "template_lagging",
+      "type": "paired_parental_region",
+      "source_anchor": "pair_2",
+      "target_anchor": "pair_2",
+      "draw_link": "pairing_rung_2"
+    },
+    {
+      "source": "template_leading",
+      "target": "template_lagging",
+      "type": "paired_parental_region",
+      "source_anchor": "pair_3",
+      "target_anchor": "pair_3",
+      "draw_link": "pairing_rung_3"
+    },
+    {
+      "source": "template_leading",
+      "target": "template_lagging",
+      "type": "paired_parental_region",
+      "source_anchor": "pair_4",
+      "target_anchor": "pair_4",
+      "draw_link": "pairing_rung_4"
+    },
+    {
+      "source": "template_leading",
+      "target": "template_lagging",
+      "type": "paired_parental_region",
+      "source_anchor": "pair_5",
+      "target_anchor": "pair_5",
+      "draw_link": "pairing_rung_5"
+    },
+    {
+      "source": "template_leading",
+      "target": "template_lagging",
+      "type": "paired_parental_region",
+      "source_anchor": "pair_6",
+      "target_anchor": "pair_6",
+      "draw_link": "pairing_rung_6"
+    },
+    {
+      "source": "template_leading",
+      "target": "template_lagging",
+      "type": "paired_parental_region",
+      "source_anchor": "pair_7",
+      "target_anchor": "pair_7",
+      "draw_link": "pairing_rung_7"
+    }
+  ],
+  "state_variables": {
+    "phase": "closed"
+  },
+  "anchor_points": {
+    "junction_upper": {
+      "object_id": "template_leading",
+      "anchor": "junction"
+    },
+    "ligation_site": {
+      "object_id": "fragment_1",
+      "anchor": "start"
+    }
+  },
+  "visual_representation": {
+    "fidelity": "schematic",
+    "editable": true
+  },
+  "allowed_transitions": [
+    "open_fork",
+    "prime",
+    "continuous_extension",
+    "fragment_synthesis",
+    "maturation"
+  ],
+  "invariants": [
+    {
+      "constraint_id": "stable_components",
+      "predicate": "identity_unchanged",
+      "object_ids": []
+    },
+    {
+      "constraint_id": "exactly_two_parental_strands",
+      "predicate": "count_kind",
+      "object_ids": [],
+      "kind": "parental_strand",
+      "count": 2
+    }
+  ],
+  "evidence_ids": [
+    "F4",
+    "F5",
+    "F6",
+    "X_7574276a",
+    "X_bf28604c"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "model": "MOCK",
+  "usage": {
+    "total_tokens": 5
+  },
+  "choices": [
+    {
+      "finish_reason": "length"
+    }
+  ]
+}

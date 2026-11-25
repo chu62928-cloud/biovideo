@@ -1,0 +1,8 @@
+{
+  "base_url": "https://apiclaude.cc/v1/",
+  "model": "gemini-3.1-pro-preview",
+  "retries": 0,
+  "models_http_status": 200,
+  "model_listed": true,
+  "models_elapsed_seconds": 1.867
+}

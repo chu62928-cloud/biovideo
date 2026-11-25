@@ -1,0 +1,105 @@
+
+You are an expert Manim animator using Manim Community Edition v0.19.0. 
+Please generate a high-quality Manim class based on the following teaching script.
+
+
+1. Basic Requirements:
+- Use the provided TeachingScene base class without modification.
+- Each lecture line must have a matching color with its corresponding animation elements.
+- Apply ONLY color changes to lecture lines - no scaling, translation, or Transform animations.
+
+2. Visual Anchor System (MANDATORY):
+- Use 6x6 grid system (A1-F6) for precise positioning.
+- Pay attention to the positioning of elements to avoid occlusions (e.g., labels and formulas).
+- All labels must be positioned within 1 grid unit of their corresponding objects
+- Grid layout (right side only):
+```
+lecture |  A1  A2  A3  A4  A5  A6
+        |  B1  B2  B3  B4  B5  B6
+        |  C1  C2  C3  C4  C5  C6
+        |  D1  D2  D3  D4  D5  D6
+        |  E1  E2  E3  E4  E5  E6
+        |  F1  F2  F3  F4  F5  F6
+```
+
+3. POSITIONING METHODS:
+- Point example: self.place_at_grid(obj, 'B2', scale_factor=0.8)
+- Area example: self.place_in_area(obj, 'A1', 'C3', scale_factor=0.7)
+- NEVER use .to_edge(), .move_to(), or manual positioning!
+
+4. TEACHING CONTENT:
+- Title: Sec 2: From Transformation to Matrix: The Standard Matrix
+- Lecture Lines: ['Any linear transformation has a standard matrix.', 'Columns are images of basis vectors e1 and e2.', 'For T(x,y)=(2x+y, x-3y), compute T(e1) and T(e2).', 'T(e1)=(2,1), T(e2)=(1,-3).', 'Matrix A = [[2,1],[1,-3]] represents T.']
+- Animation Description: Animation step 1: Display the title 'Standard Matrix' in light cyan (#00FFFF). Below, show the statement 'T: R^n -> R^m has an m x n matrix A' in light yellow (#FFFF99). Draw a simple 2D grid with light gray (#CCCCCC) lines and place a blue (#4D9EFF) arrow for e1=(1,0) and a green (#66FF66) arrow for e2=(0,1).; Animation step 2: Highlight the basis vectors e1 and e2 by flashing them. Show the text 'Columns of A = images of basis vectors' in light yellow (#FFFF99). Animate transforming e1 and e2 under T, showing T(e1) and T(e2) as orange (#FFA500) and purple (#CC66FF) arrows respectively on the grid.; Animation step 3: Display the transformation formula T(x,y)=(2x+y, x-3y) in light yellow (#FFFF99) at the top. Below, show the computation T(e1)=(2*1+0, 1-3*0)=(2,1) and T(e2)=(2*0+1, 0-3*1)=(1,-3) step by step, using light green (#99FF99) for the results.; Animation step 4: Show the computed vectors T(e1)=(2,1) as an orange (#FFA500) arrow and T(e2)=(1,-3) as a purple (#CC66FF) arrow on the grid. Label them clearly.; Animation step 5: Assemble the matrix A = [[2,1],[1,-3]] in light yellow (#FFFF99) at the center, with the first column highlighted in orange (#FFA500) and the second column in purple (#CC66FF). Flash the matrix to emphasize it represents the transformation.
+
+5. STRUCTURE FOR CODE:
+Use the following comment format to indicate which block corresponds to which line:
+```python
+# === Animation for Lecture Line 1 ===
+
+6. EXAMPLE STRUCTURE:
+```python
+from manim import *
+
+
+class TeachingScene(Scene):
+    def setup_layout(self, title_text, lecture_lines):
+        # BASE
+        self.camera.background_color = "#000000"
+        self.title = Text(title_text, font_size=28, color=WHITE).to_edge(UP)
+        self.add(self.title)
+
+        # Left-side lecture content (bullets with "-")
+        lecture_texts = [Text(line, font_size=22, color=WHITE) for line in lecture_lines]
+        self.lecture = VGroup(*lecture_texts).arrange(DOWN, aligned_edge=LEFT).scale(0.8)
+        self.lecture.to_edge(LEFT, buff=0.2)
+        self.add(self.lecture)
+
+        # Define fine-grained animation grid (4x4 grid on right side)
+        self.grid = {}
+        rows = ["A", "B", "C", "D", "E", "F"]  # Top to bottom
+        cols = ["1", "2", "3", "4", "5", "6"]  # Left to right
+
+        for i, row in enumerate(rows):
+            for j, col in enumerate(cols):
+                x = 0.5 + j * 1
+                y = 2.2 - i * 1
+                self.grid[f"{row}{col}"] = np.array([x, y, 0])
+
+    def place_at_grid(self, mobject, grid_pos, scale_factor=1.0):
+        mobject.scale(scale_factor)
+        mobject.move_to(self.grid[grid_pos])
+        return mobject
+
+    def place_in_area(self, mobject, top_left, bottom_right, scale_factor=1.0):
+        tl_pos = self.grid[top_left]
+        br_pos = self.grid[bottom_right]
+        
+        # Calculate center of the area
+        center_x = (tl_pos[0] + br_pos[0]) / 2
+        center_y = (tl_pos[1] + br_pos[1]) / 2
+        center = np.array([center_x, center_y, 0])
+        
+        mobject.scale(scale_factor)
+        mobject.move_to(center)
+        return mobject
+
+
+class Section2Scene(TeachingScene):
+    def construct(self):
+        self.setup_layout("Sec 2: From Transformation to Matrix: The Standard Matrix", ['Any linear transformation has a standard matrix.', 'Columns are images of basis vectors e1 and e2.', 'For T(x,y)=(2x+y, x-3y), compute T(e1) and T(e2).', 'T(e1)=(2,1), T(e2)=(1,-3).', 'Matrix A = [[2,1],[1,-3]] represents T.'])
+        
+        # rest of animation code
+        # === Animation for Lecture Line 1 ===
+        ...
+
+        # === Animation for Lecture Line 2 ===
+        ...
+```
+
+7. MANDATORY CONSTRAINTS:
+- Colors: Use light, distinguishable hexadecimal colors.
+- Scaling: Maintain appropriate font sizes and object scales for readability.
+- Consistency: Do not apply any animation to the lecture lines except for color changes; The lecture lines and title's size and position must remain unchanged.
+- Assets: If provided, MUST use the elements in the Animation Description formatted as [Asset: XXX/XXX.png] (abstract path).
+- Simplicity: Avoid 3D functions, complex panels, or external dependencies except for filenames in Animation Description.

@@ -1,0 +1,406 @@
+{
+  "date_beijing": "2026-11-24",
+  "status": "MVP_IMPLEMENTED_AND_TESTED_SCIENTIFIC_RELEASE_BLOCKED",
+  "offline_tests": {
+    "mode": "OFFLINE_NO_PAID_MODELS",
+    "total": 28,
+    "passed": 28,
+    "all_passed": true,
+    "tests": [
+      {
+        "test": "schema_rejects_missing_fields_and_illegal_decision",
+        "passed": true,
+        "details": true
+      },
+      {
+        "test": "schema_error_is_not_pass",
+        "passed": true,
+        "details": true
+      },
+      {
+        "test": "unapproved_upstream_blocks_gate",
+        "passed": true,
+        "details": true
+      },
+      {
+        "test": "content_hash_dependency_invalidation_and_cache",
+        "passed": true,
+        "details": {
+          "unrelated_script_cache_preserved": true,
+          "code_and_release_invalidated": true
+        }
+      },
+      {
+        "test": "ERROR_cannot_release_video",
+        "passed": true,
+        "details": false
+      },
+      {
+        "test": "model_PASS_cannot_waive_blocker",
+        "passed": true,
+        "details": true
+      },
+      {
+        "test": "missing_evidence_selects_retrieval",
+        "passed": true,
+        "details": {
+          "mode": "OFFLINE_MOCK",
+          "observed_situation": {
+            "has_evidence": false
+          }
+        }
+      },
+      {
+        "test": "known_execution_error_selects_repair",
+        "passed": true,
+        "details": {
+          "mode": "OFFLINE_MOCK",
+          "observed_situation": {
+            "has_evidence": true,
+            "measured_error": true
+          }
+        }
+      },
+      {
+        "test": "known_facts_ambiguous_video_selects_video",
+        "passed": true,
+        "details": {
+          "mode": "OFFLINE_MOCK",
+          "observed_situation": {
+            "has_evidence": true,
+            "visual_ambiguity": true
+          }
+        }
+      },
+      {
+        "test": "conflicting_claims_select_verifier",
+        "passed": true,
+        "details": {
+          "mode": "OFFLINE_MOCK",
+          "observed_situation": {
+            "has_evidence": true,
+            "conflict": true
+          }
+        }
+      },
+      {
+        "test": "arbitrary_tool_not_whitelisted",
+        "passed": true,
+        "details": true
+      },
+      {
+        "test": "persistent_model_budget_blocks_ninth_request",
+        "passed": true,
+        "details": true
+      },
+      {
+        "test": "uncertain_pending_request_stops_new_paid_calls",
+        "passed": true,
+        "details": true
+      },
+      {
+        "test": "actual_historical_trace_detects_polarity_growth_contradiction",
+        "passed": true,
+        "details": {
+          "uses_real_V2_geometry": true,
+          "science_evidence": "MOCK; production must retrieve and verify"
+        }
+      },
+      {
+        "test": "missing_polarity_cannot_pass_on_x_only",
+        "passed": true,
+        "details": true
+      },
+      {
+        "test": "generator_direction_declaration_cannot_override_actual_trace",
+        "passed": true,
+        "details": true
+      },
+      {
+        "test": "repair_patch_AST_scope_and_iteration_guard",
+        "passed": true,
+        "details": {
+          "only_target_loop_changed": true,
+          "original_loop_line": 454,
+          "manual_animation_code": false
+        }
+      },
+      {
+        "test": "upstream_root_cause_routing_not_icon_move",
+        "passed": true,
+        "details": {
+          "routes_to_earliest_stage": true,
+          "unintegrated_generator_is_explicit": true
+        }
+      },
+      {
+        "test": "candidate_skill_never_auto_approved",
+        "passed": true,
+        "details": true
+      },
+      {
+        "test": "real_full_render_scientific_rejection_rolls_back_atomic_pair",
+        "passed": true,
+        "details": {
+          "complete_real_render_before_rejection": true,
+          "exact_prior_pair_retained": true,
+          "candidate_preserved": true
+        }
+      },
+      {
+        "test": "regression_real_indented_model_reply_with_extra_initializer",
+        "passed": true,
+        "details": {
+          "saved_real_model_response_parsed_without_new_call": true
+        }
+      },
+      {
+        "test": "generic_polymerase_role_is_not_direction_fact",
+        "passed": true,
+        "details": true
+      },
+      {
+        "test": "regression_case_insensitive_textbook_discovery",
+        "passed": true,
+        "details": true
+      },
+      {
+        "test": "quote_normalization_does_not_change_scientific_direction",
+        "passed": true,
+        "details": true
+      },
+      {
+        "test": "two_attempt_cap_persists_across_restart",
+        "passed": true,
+        "details": {
+          "third_model_request_prevented": true
+        }
+      },
+      {
+        "test": "tool_exception_returns_structured_ERROR",
+        "passed": true,
+        "details": {
+          "tool_failure_returns_schema_valid_ERROR": true
+        }
+      },
+      {
+        "test": "truncated_response_keeps_known_usage_and_stops",
+        "passed": true,
+        "details": {
+          "known_usage_preserved_on_invalid_output": true,
+          "paid_requests": 0
+        }
+      },
+      {
+        "test": "explicit_user_quota_extension_persists_without_history_reset",
+        "passed": true,
+        "details": {
+          "old_requests_preserved": true,
+          "duplicate_authorization_rejected": true
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "dna_replication": {
+      "facts": 16,
+      "verified": 15,
+      "unverified_or_conflicted": [
+        "F8"
+      ],
+      "sources": [
+        {
+          "title": "The Initiation of Eukaryotic DNA Replication.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35320688/",
+          "publisher": "Annual review of biochemistry"
+        },
+        {
+          "title": "Eukaryotic DNA Replication Fork.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28301743/",
+          "publisher": "Annual review of biochemistry"
+        },
+        {
+          "title": "14.5 DNA Replication in Eukaryotes - Biology 2e | OpenStax",
+          "url": "https://openstax.org/books/biology-2e/pages/14-5-dna-replication-in-eukaryotes",
+          "publisher": "OpenStax, Rice University"
+        },
+        {
+          "title": "9.2 DNA Replication - Concepts of Biology | OpenStax",
+          "url": "https://openstax.org/books/concepts-biology/pages/9-2-dna-replication",
+          "publisher": "OpenStax, Rice University"
+        },
+        {
+          "title": "14.2 DNA Structure and Sequencing - Biology 2e | OpenStax",
+          "url": "https://openstax.org/books/biology-2e/pages/14-2-dna-structure-and-sequencing",
+          "publisher": "OpenStax, Rice University"
+        }
+      ],
+      "limitations": "Retrieved-span checks + separately prompted same-provider semantic checking; not independent expert consensus. Multiple OpenStax pages are one publisher."
+    },
+    "eukaryotic_mitosis": {
+      "facts": 8,
+      "verified": 8,
+      "unverified_or_conflicted": [],
+      "sources": [
+        {
+          "title": "10.2 The Cell Cycle - Biology 2e | OpenStax",
+          "url": "https://openstax.org/books/biology-2e/pages/10-2-the-cell-cycle",
+          "publisher": "OpenStax, Rice University"
+        },
+        {
+          "title": "6.2 The Cell Cycle - Concepts of Biology | OpenStax",
+          "url": "https://openstax.org/books/concepts-biology/pages/6-2-the-cell-cycle",
+          "publisher": "OpenStax, Rice University"
+        },
+        {
+          "title": "Mitosis.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27587616/",
+          "publisher": "Cold Spring Harbor perspectives in biology"
+        },
+        {
+          "title": "Spindle scaling mechanisms.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32501481/",
+          "publisher": "Essays in biochemistry"
+        }
+      ],
+      "limitations": "Retrieved-span checks + separately prompted same-provider semantic checking; not independent expert consensus. Multiple OpenStax pages are one publisher."
+    }
+  },
+  "test_A": {
+    "direction_detected": true,
+    "direction_qualified_by_template_and_nascent_polarity": true,
+    "topology": "UNCERTAIN_FROM_GEOMETRY_THEN_SCIENTIFIC_VIDEO_BLOCKER",
+    "enzyme_contact": "Registered anchor checks plus measured proximity to actual nucleotide additions; does not prove chemical contact"
+  },
+  "test_B": {
+    "coder_generation_attempts": 2,
+    "initial_format_rejections": 2,
+    "saved_second_candidate_format_replays": 1,
+    "new_generation_on_replay": false,
+    "full_candidate_renders": 1,
+    "target_direction_check_passes": 1,
+    "scientific_publication_commits": 0,
+    "scientific_commit_success_rate": "0/1 full rendered candidate",
+    "rollback_pair_preserved": true,
+    "final_video_review": "REVISE",
+    "targeted_gap_direction": "PASS",
+    "final_review_id": "REV-94007f30191b"
+  },
+  "test_C": {
+    "normal_samples": 1,
+    "normal_false_positives": 0,
+    "injected_samples": 1,
+    "injected_issue_count": 4,
+    "detected_issues": 4,
+    "initial_gate_error_preserved": true,
+    "saved_model_response_revalidated_after_UTF8_fix": true,
+    "new_model_request_for_revalidation": false
+  },
+  "model_usage": {
+    "deepseek": {
+      "requests": 8,
+      "successful_structured_responses": 8,
+      "input_tokens": 53363,
+      "output_tokens": 8914,
+      "total_tokens": 62277,
+      "api_seconds": 40.96,
+      "retries": 0
+    },
+    "qwen": {
+      "requests": 3,
+      "successful_structured_responses": 2,
+      "input_tokens": 104367,
+      "output_tokens": 19046,
+      "total_tokens": 123413,
+      "api_seconds": 226.42,
+      "retries": 0
+    }
+  },
+  "total_known_tokens": 185690,
+  "actual_bill_cost": null,
+  "cost_note": "No account billing API access; tokens are measured, not a billed-cost claim",
+  "qwen_truncation_error": {
+    "call_id": "v3_10",
+    "finish_reason": "length",
+    "total_output_tokens": 9000,
+    "reasoning_tokens": 5664,
+    "known_total_tokens": 44275
+  },
+  "user_authorized_qwen_retry": {
+    "additional_allowed": 2,
+    "used": 1,
+    "remaining": 1,
+    "last_call": "v3_11",
+    "last_call_valid": true,
+    "profile": {
+      "max_completion_tokens": 12000,
+      "thinking_budget": 4096
+    }
+  },
+  "autonomy": {
+    "policy": "Bounded reactive state/observation policy, not unconstrained LLM tool orchestration",
+    "mode": "REAL_TOOL_CALLS; offline mocked autonomy branches separately labeled",
+    "tool_counts": {
+      "topic_analyzer": 2,
+      "evidence_retriever": 2,
+      "knowledge_builder": 2,
+      "support_verifier": 3,
+      "fact_verifier": 3,
+      "mechanism_validator": 6,
+      "artifact_reviewer": 3,
+      "video_reviewer": 3,
+      "repair_planner": 2,
+      "skill_manager": 2,
+      "evidence_fetch": 2,
+      "extractive_builder": 1
+    },
+    "examples": [
+      {
+        "goal": "Build topic knowledge",
+        "chosen_tool": "evidence_retriever",
+        "reason": "Scientific evidence is missing; retrieve before making claims.",
+        "time": 1795491499.28952
+      },
+      {
+        "goal": "Fill critical scientific evidence gap",
+        "chosen_tool": "evidence_fetch",
+        "reason": "The first pack has polymerase roles but lacks the actual synthesis-direction/antiparallel rules.",
+        "time": 1795492024.8319762
+      },
+      {
+        "goal": "Verify factual meaning",
+        "chosen_tool": "fact_verifier",
+        "reason": "Conflicting or unsupported scientific statements need source entailment/scope checking.",
+        "time": 1795491511.0821865
+      },
+      {
+        "goal": "Audit actual mechanism",
+        "chosen_tool": "mechanism_validator",
+        "reason": "Motion claims require actual event/geometry evidence before a model judgment.",
+        "time": 1795491514.4249194
+      },
+      {
+        "goal": "Review actual video science",
+        "chosen_tool": "video_reviewer",
+        "reason": "Facts are available but rendered scientific meaning is ambiguous; inspect complete video.",
+        "time": 1795491514.632257
+      },
+      {
+        "goal": "Plan minimum scientific rework",
+        "chosen_tool": "repair_planner",
+        "reason": "Observed execution violates an evidence-backed rule; repair its earliest implementation source.",
+        "time": 1795491594.873887
+      }
+    ]
+  },
+  "historical_files_preserved": 2451,
+  "approved_video": false,
+  "candidate_video": "/autodl-tmp/code2biovideo/Code2Video/experiments/biology_expert_v3/outputs/REP-dd947104c24f/render/attempts/scientific_attempt_2_format_replay/media/videos/rendered_code/480p15/Section4Scene.mp4",
+  "before_video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/biology_v2_section4/groups/A2_mechanism_assets/versions/group_visibility_observer_replay/video.mp4",
+  "candidate_manifest": {
+    "code_sha256": "8b5fce53cb5168f3d0e2861b98908f5f70d06c31235147622038347519c99d60",
+    "video_sha256": "86323f84d487bd65cff273bafbe9ffcdf70189cbe2d8236408b51cc9f65083c7",
+    "duration_seconds": 33.466667,
+    "published_as_scientifically_approved": false
+  }
+}

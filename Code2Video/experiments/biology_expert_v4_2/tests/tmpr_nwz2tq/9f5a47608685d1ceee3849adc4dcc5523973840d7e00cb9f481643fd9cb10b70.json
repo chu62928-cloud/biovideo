@@ -1,0 +1,264 @@
+{
+  "contract": {
+    "contract_id": "OFFLINE_GENERIC_FIXTURE",
+    "topic_id": "synthetic",
+    "scope": {
+      "user_request": "synthetic relationship fixture",
+      "audience": "test",
+      "included": [
+        "event sequence"
+      ],
+      "excluded": []
+    },
+    "scientific_entities": [
+      {
+        "role": "unit",
+        "description": "synthetic object",
+        "evidence_ids": [
+          "OFFLINE"
+        ]
+      }
+    ],
+    "required_processes": [
+      {
+        "role": "finish",
+        "description": "synthetic transition",
+        "evidence_ids": [
+          "OFFLINE"
+        ]
+      }
+    ],
+    "required_observations": [
+      "two objects"
+    ],
+    "constraints": [
+      {
+        "constraint_id": "exist",
+        "type": "STRUCTURAL",
+        "participant_roles": [
+          "a"
+        ],
+        "applies_to": {},
+        "when": {},
+        "must_hold": {},
+        "exceptions": [],
+        "evidence_ids": [
+          "OFFLINE"
+        ],
+        "support": [
+          {
+            "evidence_id": "OFFLINE",
+            "quote": "OFFLINE synthetic evidence fixture"
+          }
+        ],
+        "verification": {
+          "methods": [
+            "runtime_trace"
+          ],
+          "capability": "DETERMINISTIC",
+          "primitive": "exists"
+        },
+        "severity": "critical",
+        "verification_status": "PROPOSED",
+        "disputed": false
+      },
+      {
+        "constraint_id": "identity",
+        "type": "STRUCTURAL",
+        "participant_roles": [
+          "a"
+        ],
+        "applies_to": {},
+        "when": {},
+        "must_hold": {},
+        "exceptions": [],
+        "evidence_ids": [
+          "OFFLINE"
+        ],
+        "support": [
+          {
+            "evidence_id": "OFFLINE",
+            "quote": "OFFLINE synthetic evidence fixture"
+          }
+        ],
+        "verification": {
+          "methods": [
+            "runtime_trace"
+          ],
+          "capability": "DETERMINISTIC",
+          "primitive": "identity"
+        },
+        "severity": "critical",
+        "verification_status": "PROPOSED",
+        "disputed": false
+      },
+      {
+        "constraint_id": "relation",
+        "type": "PERSISTENT_RELATION",
+        "participant_roles": [
+          "a",
+          "b"
+        ],
+        "applies_to": {},
+        "when": {},
+        "must_hold": {
+          "relation": "bound"
+        },
+        "exceptions": [],
+        "evidence_ids": [
+          "OFFLINE"
+        ],
+        "support": [
+          {
+            "evidence_id": "OFFLINE",
+            "quote": "OFFLINE synthetic evidence fixture"
+          }
+        ],
+        "verification": {
+          "methods": [
+            "runtime_trace"
+          ],
+          "capability": "DETERMINISTIC",
+          "primitive": "persistent_relation"
+        },
+        "severity": "critical",
+        "verification_status": "PROPOSED",
+        "disputed": false
+      },
+      {
+        "constraint_id": "order",
+        "type": "TEMPORAL",
+        "participant_roles": [],
+        "applies_to": {},
+        "when": {},
+        "must_hold": {
+          "ordered_roles": [
+            "start",
+            "finish"
+          ]
+        },
+        "exceptions": [],
+        "evidence_ids": [
+          "OFFLINE"
+        ],
+        "support": [
+          {
+            "evidence_id": "OFFLINE",
+            "quote": "OFFLINE synthetic evidence fixture"
+          }
+        ],
+        "verification": {
+          "methods": [
+            "runtime_trace"
+          ],
+          "capability": "DETERMINISTIC",
+          "primitive": "event_order"
+        },
+        "severity": "critical",
+        "verification_status": "PROPOSED",
+        "disputed": false
+      },
+      {
+        "constraint_id": "state",
+        "type": "STATE",
+        "participant_roles": [],
+        "applies_to": {},
+        "when": {},
+        "must_hold": {
+          "key": "phase",
+          "value": "active"
+        },
+        "exceptions": [],
+        "evidence_ids": [
+          "OFFLINE"
+        ],
+        "support": [
+          {
+            "evidence_id": "OFFLINE",
+            "quote": "OFFLINE synthetic evidence fixture"
+          }
+        ],
+        "verification": {
+          "methods": [
+            "runtime_trace"
+          ],
+          "capability": "DETERMINISTIC",
+          "primitive": "state"
+        },
+        "severity": "critical",
+        "verification_status": "PROPOSED",
+        "disputed": false
+      },
+      {
+        "constraint_id": "count",
+        "type": "STRUCTURAL",
+        "participant_roles": [],
+        "applies_to": {},
+        "when": {},
+        "must_hold": {
+          "kind": "unit",
+          "value": 2
+        },
+        "exceptions": [],
+        "evidence_ids": [
+          "OFFLINE"
+        ],
+        "support": [
+          {
+            "evidence_id": "OFFLINE",
+            "quote": "OFFLINE synthetic evidence fixture"
+          }
+        ],
+        "verification": {
+          "methods": [
+            "runtime_trace"
+          ],
+          "capability": "DETERMINISTIC",
+          "primitive": "count"
+        },
+        "severity": "critical",
+        "verification_status": "PROPOSED",
+        "disputed": false
+      }
+    ],
+    "evidence_refs": [
+      "OFFLINE"
+    ],
+    "visual_references": [],
+    "coverage_requirements": [
+      {
+        "item_id": "a",
+        "kind": "entity",
+        "constraint_ids": [
+          "exist",
+          "identity"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "bound",
+        "kind": "persistent",
+        "constraint_ids": [
+          "relation"
+        ],
+        "critical": true
+      },
+      {
+        "item_id": "finish",
+        "kind": "process",
+        "constraint_ids": [
+          "order"
+        ],
+        "critical": true
+      }
+    ],
+    "unresolved_questions": [],
+    "verification_plan": {
+      "mode": "OFFLINE_MOCK_NOT_SCIENCE"
+    }
+  },
+  "hash": "9f5a47608685d1ceee3849adc4dcc5523973840d7e00cb9f481643fd9cb10b70",
+  "review": {
+    "decision": "PASS"
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "review_id": "V4-IR-b9ccba02c1",
+  "stage": "SCENE_IR",
+  "decision": "PASS",
+  "issues": [],
+  "notes": [
+    "Scope is metaphase→anaphase only; S-phase replication, prophase/prometaphase/telophase/cytokinesis are declared out of scope, so their absence is not an omission.",
+    "Bipolar attachment (F4/F5) is encoded with kinetochore_A→pole_left and kinetochore_B→pole_right, opposite poles, and measured anchor coincidence passes (distance 0.0). Schematic geometry is correct for the teaching model.",
+    "Cohesion release precedes chromatid motion within anaphase via split then move_along_path; phase/checkpoint preconditions gate separation, matching F5 checkpoint assumption and F3 anaphase ordering.",
+    "Identity/topology continuity: two physical chromatids persist, no cloning, roles relabel to daughter_chromosome after separation; centromere/kinetochore anchors retained—consistent with declared simplification.",
+    "Static and runtime deterministic checks all PASS (state transitions, event order, connections, coverage, expected/observed states). No blocker or major scientific issue in this section."
+  ],
+  "checks": [
+    {
+      "check_id": "schema_references",
+      "category": "schema",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [],
+      "observed_evidence": {
+        "errors": []
+      },
+      "expected_condition": "All references exist and facts were verified",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "metaphase_bipolar_attachment_0",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "microtubule_left"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "F5"
+      ],
+      "observed_evidence": {
+        "action_id": "metaphase_bipolar_attachment_0",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "unattached"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "metaphase_bipolar_attachment_1",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "microtubule_right"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "F5"
+      ],
+      "observed_evidence": {
+        "action_id": "metaphase_bipolar_attachment_1",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "unattached"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "metaphase_bipolar_attachment_2",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "pole_left",
+        "kinetochore_A"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "F5"
+      ],
+      "observed_evidence": {
+        "action_id": "metaphase_bipolar_attachment_2",
+        "committed": true,
+        "operation": "connect",
+        "state": {
+          "phase": "unattached"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "metaphase_bipolar_attachment_3",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "pole_right",
+        "kinetochore_B"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "F5"
+      ],
+      "observed_evidence": {
+        "action_id": "metaphase_bipolar_attachment_3",
+        "committed": true,
+        "operation": "connect",
+        "state": {
+          "phase": "unattached"
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "metaphase_bipolar_attachment_4",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [],
+      "event_ids": [],
+      "evidence_ids": [
+        "F4",
+        "F5"
+      ],
+      "observed_evidence": {
+        "action_id": "metaphase_bipolar_attachment_4",
+        "committed": true,
+        "operation": "transform_state",
+        "state": {
+          "phase": "aligned",
+          "checkpoint_satisfied": true
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "anaphase_chromatid_separation_0",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "sister_A",
+        "sister_B"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F3",
+        "F5",
+        "F8"
+      ],
+      "observed_evidence": {
+        "action_id": "anaphase_chromatid_separation_0",
+        "committed": true,
+        "operation": "split",
+        "state": {
+          "phase": "separating",
+          "checkpoint_satisfied": true
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    },
+    {
+      "check_id": "anaphase_chromatid_separation_1",
+      "category": "state_transition",
+      "status": "PASS",
+      "object_ids": [
+        "sister_A",
+        "sister_B"
+      ],
+      "event_ids": [],
+      "evidence_ids": [
+        "F3",
+        "F5",
+        "F8"
+      ],
+      "observed_evidence": {
+        "action_id": "anaphase_chromatid_separation_1",
+        "committed": true,
+        "operation": "move_along_path",
+        "state": {
+          "phase": "separating",
+          "checkpoint_satisfied": true
+        }
+      },
+      "expected_condition": "Pre/post/invariants satisfied; failed action retains previous state",
+      "description": "",
+      "suggested_repair_stage": "SCENE_IR"
+    }
+  ],
+  "scene_hash": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9"
+}

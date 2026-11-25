@@ -1,0 +1,7 @@
+{
+  "source_group": "A2",
+  "event": "event_3_extension",
+  "time_seconds": 13.366666666666639,
+  "human_review_required": true,
+  "reason": "Actual A2 frame, but simplified fork topology and direction need review before any Wan comparison"
+}

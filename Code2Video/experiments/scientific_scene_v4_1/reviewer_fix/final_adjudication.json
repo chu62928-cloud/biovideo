@@ -1,0 +1,151 @@
+{
+  "status": "PASS_AFTER_EVIDENCE_ADJUDICATION",
+  "raw_ir_decision": "REVISE",
+  "remaining_critical_issues": [],
+  "actual_samples": 802,
+  "failures": [],
+  "scene_hash": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07",
+  "adjudications": [
+    {
+      "conflict_id": "lagging_primer_polarity_mismatch",
+      "status": "REVIEWER_FALSE_POSITIVE",
+      "repair_allowed": false,
+      "original_issue": {
+        "issue_id": "lagging_primer_polarity_mismatch",
+        "severity": "major",
+        "description": "RNA primers on the lagging strand are labeled 3'→5' (start=3', end=5') with growth_port='start', but the nascent DNA fragments they prime are labeled 5'→3' and extend from their 5' end. DNA polymerase adds nucleotides to the 3' OH of the primer; therefore the primer's 3' end must be adjacent to the fragment's 5' end for extension to proceed 5'→3' on the new strand. The current labels imply extension occurs from the primer's 5' end, which is chemically incorrect and contradicts the stated role 'DNA extension starts at primer 3prime'. This is a SCENE_IR labeling/topology error.",
+        "root_cause_stage": "SCENE_IR",
+        "target_objects": [
+          "rna_primer_lagging_1",
+          "rna_primer_lagging_2",
+          "fragment_1",
+          "fragment_2"
+        ],
+        "target_events": [
+          "event_2_priming",
+          "event_4_two_modes"
+        ],
+        "repair_scope": "Update scientific_properties.endpoint_labels and growth_port for rna_primer_lagging_1 and rna_primer_lagging_2 so that the 3' end is at the fragment-proximal side, and correct the primer_extension_continuity relations to connect primer 3' to fragment 5'. Preserve existing geometry if the depicted adjacency already matches; if not, adjust anchors minimally.",
+        "acceptance_criteria": [
+          "rna_primer_lagging_1 and rna_primer_lagging_2 have endpoint_labels with 3' at the end adjacent to the corresponding fragment's 5' start, and growth_port set to that 3' end.",
+          "Primer-extension continuity relations connect primer 3' anchor to fragment 5' anchor.",
+          "Fragment 1 and 2 remain 5'→3' with growth_port='end' and extend 5'→3' as determined by the polarity check.",
+          "Updated labels are consistent with the stated biological role that DNA extension starts at primer 3prime."
+        ]
+      },
+      "resolution": "Primer 3prime (lagging start or leading end) coincides with DNA 5prime start; path start/end are indices, not chemical polarity. Identical RNA chemistry does not require identical path index orientation. Verified source-bound endpoint test with wrong-label negative control.",
+      "checks": [
+        {
+          "check_id": "rna_primer_leading_DNA_3OH_continuity",
+          "status": "PASS",
+          "primer_3prime_anchor": "end",
+          "DNA_5prime_anchor": "start",
+          "distance": 0.0,
+          "relation_present": true,
+          "source_fact_ids": [
+            "X_7574276a",
+            "X_bf28604c"
+          ],
+          "scene_hash": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07"
+        },
+        {
+          "check_id": "rna_primer_lagging_1_DNA_3OH_continuity",
+          "status": "PASS",
+          "primer_3prime_anchor": "start",
+          "DNA_5prime_anchor": "start",
+          "distance": 0.0,
+          "relation_present": true,
+          "source_fact_ids": [
+            "X_7574276a",
+            "X_bf28604c"
+          ],
+          "scene_hash": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07"
+        },
+        {
+          "check_id": "rna_primer_lagging_2_DNA_3OH_continuity",
+          "status": "PASS",
+          "primer_3prime_anchor": "start",
+          "DNA_5prime_anchor": "start",
+          "distance": 0.0,
+          "relation_present": true,
+          "source_fact_ids": [
+            "X_7574276a",
+            "X_bf28604c"
+          ],
+          "scene_hash": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07"
+        }
+      ],
+      "negative_control_passed": true,
+      "scene_hash": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07"
+    },
+    {
+      "conflict_id": "leading_primer_polarity_mismatch",
+      "status": "REVIEWER_FALSE_POSITIVE",
+      "repair_allowed": false,
+      "original_issue": {
+        "issue_id": "leading_primer_polarity_mismatch",
+        "severity": "major",
+        "description": "The leading-strand RNA primer is labeled 5'→3' (start=5', end=3') with growth_port='end' (3' end). The nascent leading strand is also 5'→3' with its 5' start at the primer's 3' end. For DNA polymerase to extend the new strand from the primer, the primer's 3' OH must be adjacent to the new strand's 5' end. The current labels place the primer's 3' end at the junction and the new strand's 5' start there, which is topologically correct, but the primer's polarity assignment (start=5', end=3') is opposite to the lagging primers. If the lagging primers are corrected, the leading primer should also be checked for consistency. However, the leading primer's label as is does allow correct extension from its 3' end. The issue is that the leading primer is labeled 5'→3' while lagging primers are labeled 3'→5', both being RNA primers; this inconsistency may confuse the antiparallel nature of primer annealing. This is a labeling consistency issue in SCENE_IR.",
+        "root_cause_stage": "SCENE_IR",
+        "target_objects": [
+          "rna_primer_leading",
+          "new_leading"
+        ],
+        "target_events": [
+          "event_2_priming",
+          "event_3_extension"
+        ],
+        "repair_scope": "Verify that rna_primer_leading's 3' end is at the junction with new_leading's 5' start (it currently is), and ensure that the primer's label reflects its annealing antiparallel to the template. No change may be needed beyond confirming consistency with the corrected lagging primers.",
+        "acceptance_criteria": [
+          "rna_primer_leading 3' end is adjacent to new_leading 5' start.",
+          "The primer's endpoint_labels are consistent with its growth_port and with the template polarity.",
+          "The antiparallel relationship between primer and template is correctly depicted in labels."
+        ]
+      },
+      "resolution": "Primer 3prime (lagging start or leading end) coincides with DNA 5prime start; path start/end are indices, not chemical polarity. Identical RNA chemistry does not require identical path index orientation. Verified source-bound endpoint test with wrong-label negative control.",
+      "checks": [
+        {
+          "check_id": "rna_primer_leading_DNA_3OH_continuity",
+          "status": "PASS",
+          "primer_3prime_anchor": "end",
+          "DNA_5prime_anchor": "start",
+          "distance": 0.0,
+          "relation_present": true,
+          "source_fact_ids": [
+            "X_7574276a",
+            "X_bf28604c"
+          ],
+          "scene_hash": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07"
+        },
+        {
+          "check_id": "rna_primer_lagging_1_DNA_3OH_continuity",
+          "status": "PASS",
+          "primer_3prime_anchor": "start",
+          "DNA_5prime_anchor": "start",
+          "distance": 0.0,
+          "relation_present": true,
+          "source_fact_ids": [
+            "X_7574276a",
+            "X_bf28604c"
+          ],
+          "scene_hash": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07"
+        },
+        {
+          "check_id": "rna_primer_lagging_2_DNA_3OH_continuity",
+          "status": "PASS",
+          "primer_3prime_anchor": "start",
+          "DNA_5prime_anchor": "start",
+          "distance": 0.0,
+          "relation_present": true,
+          "source_fact_ids": [
+            "X_7574276a",
+            "X_bf28604c"
+          ],
+          "scene_hash": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07"
+        }
+      ],
+      "negative_control_passed": true,
+      "scene_hash": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07"
+    }
+  ]
+}

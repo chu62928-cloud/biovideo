@@ -1,0 +1,34 @@
+[
+  {
+    "authorization_id": "user_until_approved_20261124_batch1_deepseek",
+    "source": "explicit_user_message",
+    "additional_requests": 4,
+    "provider": "deepseek",
+    "acknowledged_failed_calls": [],
+    "scope": "Continue both videos until scientifically approved; additive bounded batch, all historical requests preserved"
+  },
+  {
+    "authorization_id": "user_until_approved_20261124_batch1_qwen",
+    "source": "explicit_user_message",
+    "additional_requests": 4,
+    "provider": "qwen",
+    "acknowledged_failed_calls": [],
+    "scope": "Continue both videos until scientifically approved; additive bounded batch, all historical requests preserved"
+  },
+  {
+    "authorization_id": "user_until_approved_20261124_batch2_deepseek",
+    "source": "explicit_user_message",
+    "additional_requests": 3,
+    "provider": "deepseek",
+    "acknowledged_failed_calls": [],
+    "scope": "Existing continuing authorization until approved; preserve all historical rows"
+  },
+  {
+    "authorization_id": "user_until_approved_20261124_batch2_qwen",
+    "source": "explicit_user_message",
+    "additional_requests": 2,
+    "provider": "qwen",
+    "acknowledged_failed_calls": [],
+    "scope": "User standing authorization until approved; no historical reset"
+  }
+]

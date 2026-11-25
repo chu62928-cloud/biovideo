@@ -1,0 +1,87 @@
+{
+  "events": [
+    {
+      "event": "Origin licensing/activation and helicase loading/activation",
+      "description": "Replication initiates at many origins; the first two regulated steps are loading and activation of the replicative DNA helicase.",
+      "fact_ids": [
+        "F1",
+        "F2",
+        "F3"
+      ]
+    },
+    {
+      "event": "Leading-strand synthesis",
+      "description": "At an undisturbed fork, Pol ε is modeled as synthesizing the bulk of the leading strand.",
+      "fact_ids": [
+        "F4"
+      ]
+    },
+    {
+      "event": "Okazaki fragment initiation",
+      "description": "Pol α initiates synthesis of Okazaki fragments on the lagging strand.",
+      "fact_ids": [
+        "F5"
+      ]
+    },
+    {
+      "event": "Okazaki fragment elongation and maturation",
+      "description": "Pol δ elongates Okazaki fragments and participates in their maturation; fork enzymes also repair discontinuities on the lagging strand.",
+      "fact_ids": [
+        "F6",
+        "F7"
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "role": "Replicative DNA helicase",
+      "description": "Its loading and activation are the regulated steps that control initiation.",
+      "fact_ids": [
+        "F3"
+      ]
+    },
+    {
+      "role": "DNA polymerase epsilon (Pol ε)",
+      "description": "Bulk leading-strand synthesis at an undisturbed fork (model supported by preponderance of evidence).",
+      "fact_ids": [
+        "F4"
+      ]
+    },
+    {
+      "role": "DNA polymerase alpha (Pol α)",
+      "description": "Initiates Okazaki fragment synthesis.",
+      "fact_ids": [
+        "F5"
+      ]
+    },
+    {
+      "role": "DNA polymerase delta (Pol δ)",
+      "description": "Elongates and matures Okazaki fragments.",
+      "fact_ids": [
+        "F6"
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "constraint": "Initiation must be tightly controlled so the genome is duplicated precisely once per cell cycle.",
+      "fact_ids": [
+        "F2"
+      ]
+    },
+    {
+      "constraint": "The Pol ε leading-strand assignment is a model supported by the preponderance of evidence, not an absolute rule; alternative proposals and alternative fork contexts are discussed.",
+      "fact_ids": [
+        "F4",
+        "F8"
+      ]
+    },
+    {
+      "constraint": "Okazaki fragment synthesis requires initiation before elongation and maturation; these are distinct steps assigned to Pol α and Pol δ respectively.",
+      "fact_ids": [
+        "F5",
+        "F6"
+      ]
+    }
+  ]
+}

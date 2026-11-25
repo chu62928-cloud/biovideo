@@ -1,0 +1,3308 @@
+[
+  {
+    "time": 1.2,
+    "transition_id": "metaphase_bipolar_attachment_0",
+    "expected": {
+      "objects": {
+        "sister_A": {
+          "object_id": "sister_A",
+          "object_type": "chromatid",
+          "scientific_identity": {
+            "name": "Chromatid A",
+            "kind": "chromatid",
+            "origin_id": "sister_A"
+          },
+          "scientific_properties": {
+            "current_role": "sister_chromatid",
+            "sister_id": "sister_B"
+          },
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#69F0AE",
+            "label": "Chromatid A",
+            "label_side": "down",
+            "points": [
+              [
+                -0.45,
+                -0.85,
+                0
+              ],
+              [
+                -0.12,
+                0,
+                0
+              ],
+              [
+                -0.45,
+                0.85,
+                0
+              ]
+            ],
+            "center": [
+              -0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "label_side",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "sister_B": {
+          "object_id": "sister_B",
+          "object_type": "chromatid",
+          "scientific_identity": {
+            "name": "Chromatid B",
+            "kind": "chromatid",
+            "origin_id": "sister_B"
+          },
+          "scientific_properties": {
+            "current_role": "sister_chromatid",
+            "sister_id": "sister_A"
+          },
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFB74D",
+            "label": "Chromatid B",
+            "points": [
+              [
+                0.45,
+                -0.85,
+                0
+              ],
+              [
+                0.12,
+                0,
+                0
+              ],
+              [
+                0.45,
+                0.85,
+                0
+              ]
+            ],
+            "center": [
+              0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "kinetochore_A": {
+          "object_id": "kinetochore_A",
+          "object_type": "kinetochore",
+          "scientific_identity": {
+            "name": "kinetochore A",
+            "kind": "kinetochore",
+            "origin_id": "kinetochore_A"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFFFFF",
+            "label": null,
+            "radius": 0.09,
+            "center": [
+              -0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "kinetochore_B": {
+          "object_id": "kinetochore_B",
+          "object_type": "kinetochore",
+          "scientific_identity": {
+            "name": "kinetochore B",
+            "kind": "kinetochore",
+            "origin_id": "kinetochore_B"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFFFFF",
+            "label": null,
+            "radius": 0.09,
+            "center": [
+              0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "pole_left": {
+          "object_id": "pole_left",
+          "object_type": "spindle_pole",
+          "scientific_identity": {
+            "name": "Pole",
+            "kind": "spindle_pole",
+            "origin_id": "pole_left"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFDD55",
+            "label": "Pole",
+            "radius": 0.16,
+            "center": [
+              -4,
+              0,
+              0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "pole_right": {
+          "object_id": "pole_right",
+          "object_type": "spindle_pole",
+          "scientific_identity": {
+            "name": "Pole",
+            "kind": "spindle_pole",
+            "origin_id": "pole_right"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFDD55",
+            "label": "Pole",
+            "radius": 0.16,
+            "center": [
+              4,
+              0,
+              0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "microtubule_left": {
+          "object_id": "microtubule_left",
+          "object_type": "spindle_microtubule",
+          "scientific_identity": {
+            "name": "microtubule left",
+            "kind": "spindle_microtubule",
+            "origin_id": "microtubule_left"
+          },
+          "scientific_properties": {},
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#B3E5FC",
+            "label": null,
+            "stroke_width": 3,
+            "points": [
+              [
+                -4,
+                0,
+                0
+              ],
+              [
+                -0.285,
+                0,
+                0
+              ]
+            ],
+            "center": [
+              -2.1425,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "stroke_width",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "microtubule_right": {
+          "object_id": "microtubule_right",
+          "object_type": "spindle_microtubule",
+          "scientific_identity": {
+            "name": "microtubule right",
+            "kind": "spindle_microtubule",
+            "origin_id": "microtubule_right"
+          },
+          "scientific_properties": {},
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": false,
+            "color": "#B3E5FC",
+            "label": null,
+            "stroke_width": 3,
+            "points": [
+              [
+                4,
+                0,
+                0
+              ],
+              [
+                0.285,
+                0,
+                0
+              ]
+            ],
+            "center": [
+              2.1425,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "stroke_width",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        }
+      },
+      "state": {
+        "phase": "unattached"
+      },
+      "relations": [
+        {
+          "source": "sister_A",
+          "target": "sister_B",
+          "type": "sister_cohesion"
+        },
+        {
+          "source": "kinetochore_A",
+          "target": "sister_A",
+          "type": "attachment",
+          "target_anchor": "center"
+        },
+        {
+          "source": "kinetochore_B",
+          "target": "sister_B",
+          "type": "attachment",
+          "target_anchor": "center"
+        }
+      ],
+      "assembly_id": "mitotic_spindle_chromosome_set"
+    }
+  },
+  {
+    "time": 2.400000000000001,
+    "transition_id": "metaphase_bipolar_attachment_1",
+    "expected": {
+      "objects": {
+        "sister_A": {
+          "object_id": "sister_A",
+          "object_type": "chromatid",
+          "scientific_identity": {
+            "name": "Chromatid A",
+            "kind": "chromatid",
+            "origin_id": "sister_A"
+          },
+          "scientific_properties": {
+            "current_role": "sister_chromatid",
+            "sister_id": "sister_B"
+          },
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#69F0AE",
+            "label": "Chromatid A",
+            "label_side": "down",
+            "points": [
+              [
+                -0.45,
+                -0.85,
+                0
+              ],
+              [
+                -0.12,
+                0,
+                0
+              ],
+              [
+                -0.45,
+                0.85,
+                0
+              ]
+            ],
+            "center": [
+              -0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "label_side",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "sister_B": {
+          "object_id": "sister_B",
+          "object_type": "chromatid",
+          "scientific_identity": {
+            "name": "Chromatid B",
+            "kind": "chromatid",
+            "origin_id": "sister_B"
+          },
+          "scientific_properties": {
+            "current_role": "sister_chromatid",
+            "sister_id": "sister_A"
+          },
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFB74D",
+            "label": "Chromatid B",
+            "points": [
+              [
+                0.45,
+                -0.85,
+                0
+              ],
+              [
+                0.12,
+                0,
+                0
+              ],
+              [
+                0.45,
+                0.85,
+                0
+              ]
+            ],
+            "center": [
+              0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "kinetochore_A": {
+          "object_id": "kinetochore_A",
+          "object_type": "kinetochore",
+          "scientific_identity": {
+            "name": "kinetochore A",
+            "kind": "kinetochore",
+            "origin_id": "kinetochore_A"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFFFFF",
+            "label": null,
+            "radius": 0.09,
+            "center": [
+              -0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "kinetochore_B": {
+          "object_id": "kinetochore_B",
+          "object_type": "kinetochore",
+          "scientific_identity": {
+            "name": "kinetochore B",
+            "kind": "kinetochore",
+            "origin_id": "kinetochore_B"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFFFFF",
+            "label": null,
+            "radius": 0.09,
+            "center": [
+              0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "pole_left": {
+          "object_id": "pole_left",
+          "object_type": "spindle_pole",
+          "scientific_identity": {
+            "name": "Pole",
+            "kind": "spindle_pole",
+            "origin_id": "pole_left"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFDD55",
+            "label": "Pole",
+            "radius": 0.16,
+            "center": [
+              -4,
+              0,
+              0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "pole_right": {
+          "object_id": "pole_right",
+          "object_type": "spindle_pole",
+          "scientific_identity": {
+            "name": "Pole",
+            "kind": "spindle_pole",
+            "origin_id": "pole_right"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFDD55",
+            "label": "Pole",
+            "radius": 0.16,
+            "center": [
+              4,
+              0,
+              0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "microtubule_left": {
+          "object_id": "microtubule_left",
+          "object_type": "spindle_microtubule",
+          "scientific_identity": {
+            "name": "microtubule left",
+            "kind": "spindle_microtubule",
+            "origin_id": "microtubule_left"
+          },
+          "scientific_properties": {},
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#B3E5FC",
+            "label": null,
+            "stroke_width": 3,
+            "points": [
+              [
+                -4,
+                0,
+                0
+              ],
+              [
+                -0.285,
+                0,
+                0
+              ]
+            ],
+            "center": [
+              -2.1425,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "stroke_width",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "microtubule_right": {
+          "object_id": "microtubule_right",
+          "object_type": "spindle_microtubule",
+          "scientific_identity": {
+            "name": "microtubule right",
+            "kind": "spindle_microtubule",
+            "origin_id": "microtubule_right"
+          },
+          "scientific_properties": {},
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#B3E5FC",
+            "label": null,
+            "stroke_width": 3,
+            "points": [
+              [
+                4,
+                0,
+                0
+              ],
+              [
+                0.285,
+                0,
+                0
+              ]
+            ],
+            "center": [
+              2.1425,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "stroke_width",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        }
+      },
+      "state": {
+        "phase": "unattached"
+      },
+      "relations": [
+        {
+          "source": "sister_A",
+          "target": "sister_B",
+          "type": "sister_cohesion"
+        },
+        {
+          "source": "kinetochore_A",
+          "target": "sister_A",
+          "type": "attachment",
+          "target_anchor": "center"
+        },
+        {
+          "source": "kinetochore_B",
+          "target": "sister_B",
+          "type": "attachment",
+          "target_anchor": "center"
+        }
+      ],
+      "assembly_id": "mitotic_spindle_chromosome_set"
+    }
+  },
+  {
+    "time": 3.6000000000000045,
+    "transition_id": "metaphase_bipolar_attachment_2",
+    "expected": {
+      "objects": {
+        "sister_A": {
+          "object_id": "sister_A",
+          "object_type": "chromatid",
+          "scientific_identity": {
+            "name": "Chromatid A",
+            "kind": "chromatid",
+            "origin_id": "sister_A"
+          },
+          "scientific_properties": {
+            "current_role": "sister_chromatid",
+            "sister_id": "sister_B"
+          },
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#69F0AE",
+            "label": "Chromatid A",
+            "label_side": "down",
+            "points": [
+              [
+                -0.45,
+                -0.85,
+                0
+              ],
+              [
+                -0.12,
+                0,
+                0
+              ],
+              [
+                -0.45,
+                0.85,
+                0
+              ]
+            ],
+            "center": [
+              -0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "label_side",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "sister_B": {
+          "object_id": "sister_B",
+          "object_type": "chromatid",
+          "scientific_identity": {
+            "name": "Chromatid B",
+            "kind": "chromatid",
+            "origin_id": "sister_B"
+          },
+          "scientific_properties": {
+            "current_role": "sister_chromatid",
+            "sister_id": "sister_A"
+          },
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFB74D",
+            "label": "Chromatid B",
+            "points": [
+              [
+                0.45,
+                -0.85,
+                0
+              ],
+              [
+                0.12,
+                0,
+                0
+              ],
+              [
+                0.45,
+                0.85,
+                0
+              ]
+            ],
+            "center": [
+              0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "kinetochore_A": {
+          "object_id": "kinetochore_A",
+          "object_type": "kinetochore",
+          "scientific_identity": {
+            "name": "kinetochore A",
+            "kind": "kinetochore",
+            "origin_id": "kinetochore_A"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFFFFF",
+            "label": null,
+            "radius": 0.09,
+            "center": [
+              -0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "kinetochore_B": {
+          "object_id": "kinetochore_B",
+          "object_type": "kinetochore",
+          "scientific_identity": {
+            "name": "kinetochore B",
+            "kind": "kinetochore",
+            "origin_id": "kinetochore_B"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFFFFF",
+            "label": null,
+            "radius": 0.09,
+            "center": [
+              0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "pole_left": {
+          "object_id": "pole_left",
+          "object_type": "spindle_pole",
+          "scientific_identity": {
+            "name": "Pole",
+            "kind": "spindle_pole",
+            "origin_id": "pole_left"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFDD55",
+            "label": "Pole",
+            "radius": 0.16,
+            "center": [
+              -4,
+              0,
+              0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "pole_right": {
+          "object_id": "pole_right",
+          "object_type": "spindle_pole",
+          "scientific_identity": {
+            "name": "Pole",
+            "kind": "spindle_pole",
+            "origin_id": "pole_right"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFDD55",
+            "label": "Pole",
+            "radius": 0.16,
+            "center": [
+              4,
+              0,
+              0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "microtubule_left": {
+          "object_id": "microtubule_left",
+          "object_type": "spindle_microtubule",
+          "scientific_identity": {
+            "name": "microtubule left",
+            "kind": "spindle_microtubule",
+            "origin_id": "microtubule_left"
+          },
+          "scientific_properties": {},
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#B3E5FC",
+            "label": null,
+            "stroke_width": 3,
+            "points": [
+              [
+                -4,
+                0,
+                0
+              ],
+              [
+                -0.28500000000000003,
+                0.0,
+                0.0
+              ]
+            ],
+            "center": [
+              -2.1425,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "stroke_width",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "microtubule_right": {
+          "object_id": "microtubule_right",
+          "object_type": "spindle_microtubule",
+          "scientific_identity": {
+            "name": "microtubule right",
+            "kind": "spindle_microtubule",
+            "origin_id": "microtubule_right"
+          },
+          "scientific_properties": {},
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#B3E5FC",
+            "label": null,
+            "stroke_width": 3,
+            "points": [
+              [
+                4,
+                0,
+                0
+              ],
+              [
+                0.285,
+                0,
+                0
+              ]
+            ],
+            "center": [
+              2.1425,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "stroke_width",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        }
+      },
+      "state": {
+        "phase": "unattached"
+      },
+      "relations": [
+        {
+          "source": "sister_A",
+          "target": "sister_B",
+          "type": "sister_cohesion"
+        },
+        {
+          "source": "kinetochore_A",
+          "target": "sister_A",
+          "type": "attachment",
+          "target_anchor": "center"
+        },
+        {
+          "source": "kinetochore_B",
+          "target": "sister_B",
+          "type": "attachment",
+          "target_anchor": "center"
+        },
+        {
+          "source": "pole_left",
+          "target": "kinetochore_A",
+          "type": "bipolar_attachment",
+          "source_anchor": "center",
+          "target_anchor": "center",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "draw_link": "microtubule_left"
+        }
+      ],
+      "assembly_id": "mitotic_spindle_chromosome_set"
+    }
+  },
+  {
+    "time": 4.8000000000000025,
+    "transition_id": "metaphase_bipolar_attachment_3",
+    "expected": {
+      "objects": {
+        "sister_A": {
+          "object_id": "sister_A",
+          "object_type": "chromatid",
+          "scientific_identity": {
+            "name": "Chromatid A",
+            "kind": "chromatid",
+            "origin_id": "sister_A"
+          },
+          "scientific_properties": {
+            "current_role": "sister_chromatid",
+            "sister_id": "sister_B"
+          },
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#69F0AE",
+            "label": "Chromatid A",
+            "label_side": "down",
+            "points": [
+              [
+                -0.45,
+                -0.85,
+                0
+              ],
+              [
+                -0.12,
+                0,
+                0
+              ],
+              [
+                -0.45,
+                0.85,
+                0
+              ]
+            ],
+            "center": [
+              -0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "label_side",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "sister_B": {
+          "object_id": "sister_B",
+          "object_type": "chromatid",
+          "scientific_identity": {
+            "name": "Chromatid B",
+            "kind": "chromatid",
+            "origin_id": "sister_B"
+          },
+          "scientific_properties": {
+            "current_role": "sister_chromatid",
+            "sister_id": "sister_A"
+          },
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFB74D",
+            "label": "Chromatid B",
+            "points": [
+              [
+                0.45,
+                -0.85,
+                0
+              ],
+              [
+                0.12,
+                0,
+                0
+              ],
+              [
+                0.45,
+                0.85,
+                0
+              ]
+            ],
+            "center": [
+              0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "kinetochore_A": {
+          "object_id": "kinetochore_A",
+          "object_type": "kinetochore",
+          "scientific_identity": {
+            "name": "kinetochore A",
+            "kind": "kinetochore",
+            "origin_id": "kinetochore_A"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFFFFF",
+            "label": null,
+            "radius": 0.09,
+            "center": [
+              -0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "kinetochore_B": {
+          "object_id": "kinetochore_B",
+          "object_type": "kinetochore",
+          "scientific_identity": {
+            "name": "kinetochore B",
+            "kind": "kinetochore",
+            "origin_id": "kinetochore_B"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFFFFF",
+            "label": null,
+            "radius": 0.09,
+            "center": [
+              0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "pole_left": {
+          "object_id": "pole_left",
+          "object_type": "spindle_pole",
+          "scientific_identity": {
+            "name": "Pole",
+            "kind": "spindle_pole",
+            "origin_id": "pole_left"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFDD55",
+            "label": "Pole",
+            "radius": 0.16,
+            "center": [
+              -4,
+              0,
+              0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "pole_right": {
+          "object_id": "pole_right",
+          "object_type": "spindle_pole",
+          "scientific_identity": {
+            "name": "Pole",
+            "kind": "spindle_pole",
+            "origin_id": "pole_right"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFDD55",
+            "label": "Pole",
+            "radius": 0.16,
+            "center": [
+              4,
+              0,
+              0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "microtubule_left": {
+          "object_id": "microtubule_left",
+          "object_type": "spindle_microtubule",
+          "scientific_identity": {
+            "name": "microtubule left",
+            "kind": "spindle_microtubule",
+            "origin_id": "microtubule_left"
+          },
+          "scientific_properties": {},
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#B3E5FC",
+            "label": null,
+            "stroke_width": 3,
+            "points": [
+              [
+                -4,
+                0,
+                0
+              ],
+              [
+                -0.28500000000000003,
+                0.0,
+                0.0
+              ]
+            ],
+            "center": [
+              -2.1425,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "stroke_width",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "microtubule_right": {
+          "object_id": "microtubule_right",
+          "object_type": "spindle_microtubule",
+          "scientific_identity": {
+            "name": "microtubule right",
+            "kind": "spindle_microtubule",
+            "origin_id": "microtubule_right"
+          },
+          "scientific_properties": {},
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#B3E5FC",
+            "label": null,
+            "stroke_width": 3,
+            "points": [
+              [
+                4,
+                0,
+                0
+              ],
+              [
+                0.28500000000000003,
+                0.0,
+                0.0
+              ]
+            ],
+            "center": [
+              2.1425,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "stroke_width",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        }
+      },
+      "state": {
+        "phase": "unattached"
+      },
+      "relations": [
+        {
+          "source": "sister_A",
+          "target": "sister_B",
+          "type": "sister_cohesion"
+        },
+        {
+          "source": "kinetochore_A",
+          "target": "sister_A",
+          "type": "attachment",
+          "target_anchor": "center"
+        },
+        {
+          "source": "kinetochore_B",
+          "target": "sister_B",
+          "type": "attachment",
+          "target_anchor": "center"
+        },
+        {
+          "source": "pole_left",
+          "target": "kinetochore_A",
+          "type": "bipolar_attachment",
+          "source_anchor": "center",
+          "target_anchor": "center",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "draw_link": "microtubule_left"
+        },
+        {
+          "source": "pole_right",
+          "target": "kinetochore_B",
+          "type": "bipolar_attachment",
+          "source_anchor": "center",
+          "target_anchor": "center",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "draw_link": "microtubule_right"
+        }
+      ],
+      "assembly_id": "mitotic_spindle_chromosome_set"
+    }
+  },
+  {
+    "time": 5.999999999999998,
+    "transition_id": "metaphase_bipolar_attachment_4",
+    "expected": {
+      "objects": {
+        "sister_A": {
+          "object_id": "sister_A",
+          "object_type": "chromatid",
+          "scientific_identity": {
+            "name": "Chromatid A",
+            "kind": "chromatid",
+            "origin_id": "sister_A"
+          },
+          "scientific_properties": {
+            "current_role": "sister_chromatid",
+            "sister_id": "sister_B"
+          },
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#69F0AE",
+            "label": "Chromatid A",
+            "label_side": "down",
+            "points": [
+              [
+                -0.45,
+                -0.85,
+                0
+              ],
+              [
+                -0.12,
+                0,
+                0
+              ],
+              [
+                -0.45,
+                0.85,
+                0
+              ]
+            ],
+            "center": [
+              -0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "label_side",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "sister_B": {
+          "object_id": "sister_B",
+          "object_type": "chromatid",
+          "scientific_identity": {
+            "name": "Chromatid B",
+            "kind": "chromatid",
+            "origin_id": "sister_B"
+          },
+          "scientific_properties": {
+            "current_role": "sister_chromatid",
+            "sister_id": "sister_A"
+          },
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFB74D",
+            "label": "Chromatid B",
+            "points": [
+              [
+                0.45,
+                -0.85,
+                0
+              ],
+              [
+                0.12,
+                0,
+                0
+              ],
+              [
+                0.45,
+                0.85,
+                0
+              ]
+            ],
+            "center": [
+              0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "kinetochore_A": {
+          "object_id": "kinetochore_A",
+          "object_type": "kinetochore",
+          "scientific_identity": {
+            "name": "kinetochore A",
+            "kind": "kinetochore",
+            "origin_id": "kinetochore_A"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFFFFF",
+            "label": null,
+            "radius": 0.09,
+            "center": [
+              -0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "kinetochore_B": {
+          "object_id": "kinetochore_B",
+          "object_type": "kinetochore",
+          "scientific_identity": {
+            "name": "kinetochore B",
+            "kind": "kinetochore",
+            "origin_id": "kinetochore_B"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFFFFF",
+            "label": null,
+            "radius": 0.09,
+            "center": [
+              0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "pole_left": {
+          "object_id": "pole_left",
+          "object_type": "spindle_pole",
+          "scientific_identity": {
+            "name": "Pole",
+            "kind": "spindle_pole",
+            "origin_id": "pole_left"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFDD55",
+            "label": "Pole",
+            "radius": 0.16,
+            "center": [
+              -4,
+              0,
+              0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "pole_right": {
+          "object_id": "pole_right",
+          "object_type": "spindle_pole",
+          "scientific_identity": {
+            "name": "Pole",
+            "kind": "spindle_pole",
+            "origin_id": "pole_right"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFDD55",
+            "label": "Pole",
+            "radius": 0.16,
+            "center": [
+              4,
+              0,
+              0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "microtubule_left": {
+          "object_id": "microtubule_left",
+          "object_type": "spindle_microtubule",
+          "scientific_identity": {
+            "name": "microtubule left",
+            "kind": "spindle_microtubule",
+            "origin_id": "microtubule_left"
+          },
+          "scientific_properties": {},
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#B3E5FC",
+            "label": null,
+            "stroke_width": 3,
+            "points": [
+              [
+                -4,
+                0,
+                0
+              ],
+              [
+                -0.28500000000000003,
+                0.0,
+                0.0
+              ]
+            ],
+            "center": [
+              -2.1425,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "stroke_width",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "microtubule_right": {
+          "object_id": "microtubule_right",
+          "object_type": "spindle_microtubule",
+          "scientific_identity": {
+            "name": "microtubule right",
+            "kind": "spindle_microtubule",
+            "origin_id": "microtubule_right"
+          },
+          "scientific_properties": {},
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#B3E5FC",
+            "label": null,
+            "stroke_width": 3,
+            "points": [
+              [
+                4,
+                0,
+                0
+              ],
+              [
+                0.28500000000000003,
+                0.0,
+                0.0
+              ]
+            ],
+            "center": [
+              2.1425,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "stroke_width",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        }
+      },
+      "state": {
+        "phase": "aligned"
+      },
+      "relations": [
+        {
+          "source": "sister_A",
+          "target": "sister_B",
+          "type": "sister_cohesion"
+        },
+        {
+          "source": "kinetochore_A",
+          "target": "sister_A",
+          "type": "attachment",
+          "target_anchor": "center"
+        },
+        {
+          "source": "kinetochore_B",
+          "target": "sister_B",
+          "type": "attachment",
+          "target_anchor": "center"
+        },
+        {
+          "source": "pole_left",
+          "target": "kinetochore_A",
+          "type": "bipolar_attachment",
+          "source_anchor": "center",
+          "target_anchor": "center",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "draw_link": "microtubule_left"
+        },
+        {
+          "source": "pole_right",
+          "target": "kinetochore_B",
+          "type": "bipolar_attachment",
+          "source_anchor": "center",
+          "target_anchor": "center",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "draw_link": "microtubule_right"
+        }
+      ],
+      "assembly_id": "mitotic_spindle_chromosome_set"
+    }
+  },
+  {
+    "time": 8.999999999999988,
+    "transition_id": "anaphase_chromatid_separation_0",
+    "expected": {
+      "objects": {
+        "sister_A": {
+          "object_id": "sister_A",
+          "object_type": "chromatid",
+          "scientific_identity": {
+            "name": "Chromatid A",
+            "kind": "chromatid",
+            "origin_id": "sister_A"
+          },
+          "scientific_properties": {
+            "current_role": "daughter_chromosome",
+            "sister_id": "sister_B"
+          },
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#69F0AE",
+            "label": "Daughter A",
+            "label_side": "down",
+            "points": [
+              [
+                -0.45,
+                -0.85,
+                0
+              ],
+              [
+                -0.12,
+                0,
+                0
+              ],
+              [
+                -0.45,
+                0.85,
+                0
+              ]
+            ],
+            "center": [
+              -0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "label_side",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "sister_B": {
+          "object_id": "sister_B",
+          "object_type": "chromatid",
+          "scientific_identity": {
+            "name": "Chromatid B",
+            "kind": "chromatid",
+            "origin_id": "sister_B"
+          },
+          "scientific_properties": {
+            "current_role": "daughter_chromosome",
+            "sister_id": "sister_A"
+          },
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFB74D",
+            "label": "Daughter B",
+            "points": [
+              [
+                0.45,
+                -0.85,
+                0
+              ],
+              [
+                0.12,
+                0,
+                0
+              ],
+              [
+                0.45,
+                0.85,
+                0
+              ]
+            ],
+            "center": [
+              0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "kinetochore_A": {
+          "object_id": "kinetochore_A",
+          "object_type": "kinetochore",
+          "scientific_identity": {
+            "name": "kinetochore A",
+            "kind": "kinetochore",
+            "origin_id": "kinetochore_A"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFFFFF",
+            "label": null,
+            "radius": 0.09,
+            "center": [
+              -0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "kinetochore_B": {
+          "object_id": "kinetochore_B",
+          "object_type": "kinetochore",
+          "scientific_identity": {
+            "name": "kinetochore B",
+            "kind": "kinetochore",
+            "origin_id": "kinetochore_B"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFFFFF",
+            "label": null,
+            "radius": 0.09,
+            "center": [
+              0.28500000000000003,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "pole_left": {
+          "object_id": "pole_left",
+          "object_type": "spindle_pole",
+          "scientific_identity": {
+            "name": "Pole",
+            "kind": "spindle_pole",
+            "origin_id": "pole_left"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFDD55",
+            "label": "Pole",
+            "radius": 0.16,
+            "center": [
+              -4,
+              0,
+              0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "pole_right": {
+          "object_id": "pole_right",
+          "object_type": "spindle_pole",
+          "scientific_identity": {
+            "name": "Pole",
+            "kind": "spindle_pole",
+            "origin_id": "pole_right"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFDD55",
+            "label": "Pole",
+            "radius": 0.16,
+            "center": [
+              4,
+              0,
+              0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "microtubule_left": {
+          "object_id": "microtubule_left",
+          "object_type": "spindle_microtubule",
+          "scientific_identity": {
+            "name": "microtubule left",
+            "kind": "spindle_microtubule",
+            "origin_id": "microtubule_left"
+          },
+          "scientific_properties": {},
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#B3E5FC",
+            "label": null,
+            "stroke_width": 3,
+            "points": [
+              [
+                -4,
+                0,
+                0
+              ],
+              [
+                -0.28500000000000003,
+                0.0,
+                0.0
+              ]
+            ],
+            "center": [
+              -2.1425,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "stroke_width",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "microtubule_right": {
+          "object_id": "microtubule_right",
+          "object_type": "spindle_microtubule",
+          "scientific_identity": {
+            "name": "microtubule right",
+            "kind": "spindle_microtubule",
+            "origin_id": "microtubule_right"
+          },
+          "scientific_properties": {},
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#B3E5FC",
+            "label": null,
+            "stroke_width": 3,
+            "points": [
+              [
+                4,
+                0,
+                0
+              ],
+              [
+                0.28500000000000003,
+                0.0,
+                0.0
+              ]
+            ],
+            "center": [
+              2.1425,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "stroke_width",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        }
+      },
+      "state": {
+        "phase": "separating"
+      },
+      "relations": [
+        {
+          "source": "kinetochore_A",
+          "target": "sister_A",
+          "type": "attachment",
+          "target_anchor": "center"
+        },
+        {
+          "source": "kinetochore_B",
+          "target": "sister_B",
+          "type": "attachment",
+          "target_anchor": "center"
+        },
+        {
+          "source": "pole_left",
+          "target": "kinetochore_A",
+          "type": "bipolar_attachment",
+          "source_anchor": "center",
+          "target_anchor": "center",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "draw_link": "microtubule_left"
+        },
+        {
+          "source": "pole_right",
+          "target": "kinetochore_B",
+          "type": "bipolar_attachment",
+          "source_anchor": "center",
+          "target_anchor": "center",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "draw_link": "microtubule_right"
+        }
+      ],
+      "assembly_id": "mitotic_spindle_chromosome_set"
+    }
+  },
+  {
+    "time": 11.999999999999977,
+    "transition_id": "anaphase_chromatid_separation_1",
+    "expected": {
+      "objects": {
+        "sister_A": {
+          "object_id": "sister_A",
+          "object_type": "chromatid",
+          "scientific_identity": {
+            "name": "Chromatid A",
+            "kind": "chromatid",
+            "origin_id": "sister_A"
+          },
+          "scientific_properties": {
+            "current_role": "daughter_chromosome",
+            "sister_id": "sister_B"
+          },
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#69F0AE",
+            "label": "Daughter A",
+            "label_side": "down",
+            "points": [
+              [
+                -2.965,
+                -0.85,
+                0.0
+              ],
+              [
+                -2.635,
+                0.0,
+                0.0
+              ],
+              [
+                -2.965,
+                0.85,
+                0.0
+              ]
+            ],
+            "center": [
+              -2.8,
+              0,
+              0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "label_side",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "sister_B": {
+          "object_id": "sister_B",
+          "object_type": "chromatid",
+          "scientific_identity": {
+            "name": "Chromatid B",
+            "kind": "chromatid",
+            "origin_id": "sister_B"
+          },
+          "scientific_properties": {
+            "current_role": "daughter_chromosome",
+            "sister_id": "sister_A"
+          },
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFB74D",
+            "label": "Daughter B",
+            "points": [
+              [
+                2.965,
+                -0.85,
+                0.0
+              ],
+              [
+                2.635,
+                0.0,
+                0.0
+              ],
+              [
+                2.965,
+                0.85,
+                0.0
+              ]
+            ],
+            "center": [
+              2.8,
+              0,
+              0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "kinetochore_A": {
+          "object_id": "kinetochore_A",
+          "object_type": "kinetochore",
+          "scientific_identity": {
+            "name": "kinetochore A",
+            "kind": "kinetochore",
+            "origin_id": "kinetochore_A"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFFFFF",
+            "label": null,
+            "radius": 0.09,
+            "center": [
+              -2.8,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "kinetochore_B": {
+          "object_id": "kinetochore_B",
+          "object_type": "kinetochore",
+          "scientific_identity": {
+            "name": "kinetochore B",
+            "kind": "kinetochore",
+            "origin_id": "kinetochore_B"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFFFFF",
+            "label": null,
+            "radius": 0.09,
+            "center": [
+              2.8,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "pole_left": {
+          "object_id": "pole_left",
+          "object_type": "spindle_pole",
+          "scientific_identity": {
+            "name": "Pole",
+            "kind": "spindle_pole",
+            "origin_id": "pole_left"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFDD55",
+            "label": "Pole",
+            "radius": 0.16,
+            "center": [
+              -4,
+              0,
+              0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "pole_right": {
+          "object_id": "pole_right",
+          "object_type": "spindle_pole",
+          "scientific_identity": {
+            "name": "Pole",
+            "kind": "spindle_pole",
+            "origin_id": "pole_right"
+          },
+          "scientific_properties": {},
+          "asset_id": "bead",
+          "visual_representation": {
+            "visible": true,
+            "color": "#FFDD55",
+            "label": "Pole",
+            "radius": 0.16,
+            "center": [
+              4,
+              0,
+              0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "radius",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "microtubule_left": {
+          "object_id": "microtubule_left",
+          "object_type": "spindle_microtubule",
+          "scientific_identity": {
+            "name": "microtubule left",
+            "kind": "spindle_microtubule",
+            "origin_id": "microtubule_left"
+          },
+          "scientific_properties": {},
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#B3E5FC",
+            "label": null,
+            "stroke_width": 3,
+            "points": [
+              [
+                -4,
+                0,
+                0
+              ],
+              [
+                -2.8,
+                0.0,
+                0.0
+              ]
+            ],
+            "center": [
+              -3.4,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "stroke_width",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        },
+        "microtubule_right": {
+          "object_id": "microtubule_right",
+          "object_type": "spindle_microtubule",
+          "scientific_identity": {
+            "name": "microtubule right",
+            "kind": "spindle_microtubule",
+            "origin_id": "microtubule_right"
+          },
+          "scientific_properties": {},
+          "asset_id": "strand",
+          "visual_representation": {
+            "visible": true,
+            "color": "#B3E5FC",
+            "label": null,
+            "stroke_width": 3,
+            "points": [
+              [
+                4,
+                0,
+                0
+              ],
+              [
+                2.8,
+                0.0,
+                0.0
+              ]
+            ],
+            "center": [
+              3.4,
+              0.0,
+              0.0
+            ]
+          },
+          "anchors": {
+            "center": {
+              "kind": "center"
+            },
+            "start": {
+              "kind": "point",
+              "index": 0
+            },
+            "end": {
+              "kind": "point",
+              "index": -1
+            }
+          },
+          "editable_properties": [
+            "visible",
+            "color",
+            "label",
+            "stroke_width",
+            "points",
+            "center"
+          ],
+          "evidence_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F8"
+          ]
+        }
+      },
+      "state": {
+        "phase": "separating"
+      },
+      "relations": [
+        {
+          "source": "kinetochore_A",
+          "target": "sister_A",
+          "type": "attachment",
+          "target_anchor": "center"
+        },
+        {
+          "source": "kinetochore_B",
+          "target": "sister_B",
+          "type": "attachment",
+          "target_anchor": "center"
+        },
+        {
+          "source": "pole_left",
+          "target": "kinetochore_A",
+          "type": "bipolar_attachment",
+          "source_anchor": "center",
+          "target_anchor": "center",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "draw_link": "microtubule_left"
+        },
+        {
+          "source": "pole_right",
+          "target": "kinetochore_B",
+          "type": "bipolar_attachment",
+          "source_anchor": "center",
+          "target_anchor": "center",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "draw_link": "microtubule_right"
+        }
+      ],
+      "assembly_id": "mitotic_spindle_chromosome_set"
+    }
+  }
+]

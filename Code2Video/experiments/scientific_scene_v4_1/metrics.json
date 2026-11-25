@@ -1,0 +1,265 @@
+{
+  "groups": [
+    {
+      "group": "B0_frozen",
+      "render_success": true,
+      "science_gate": "REVISE",
+      "ir_review_decision": null,
+      "conflicts_detected": null,
+      "conflicts_resolved": null,
+      "path_geometry_artifacts": null,
+      "fork_motion_verified": null,
+      "connection_failures": null,
+      "anchor_tracking_failures": null,
+      "label_overlaps": null,
+      "repair_attempts": 0,
+      "repair_approved": false,
+      "deepseek_calls": 0,
+      "qwen_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "video_path": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/groups/A2_scene_graph_fsm/video.mp4",
+      "duration_seconds": null,
+      "actual_change": "Frozen V4 A2"
+    },
+    {
+      "group": "B1_renderer_fix",
+      "render_success": true,
+      "science_gate": "NEEDS_HUMAN_REVIEW",
+      "ir_review_decision": null,
+      "conflicts_detected": null,
+      "conflicts_resolved": null,
+      "path_geometry_artifacts": 0,
+      "fork_motion_verified": false,
+      "connection_failures": 0,
+      "anchor_tracking_failures": 0,
+      "label_overlaps": 60,
+      "repair_attempts": 0,
+      "repair_approved": false,
+      "deepseek_calls": 0,
+      "qwen_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "video_path": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/B1_renderer_fix/video.mp4",
+      "duration_seconds": 32.066667,
+      "actual_change": "PathGeometry only; original IR/code"
+    },
+    {
+      "group": "B2_fork_motion",
+      "render_success": true,
+      "science_gate": "NEEDS_HUMAN_REVIEW",
+      "ir_review_decision": null,
+      "conflicts_detected": null,
+      "conflicts_resolved": null,
+      "path_geometry_artifacts": 0,
+      "fork_motion_verified": true,
+      "connection_failures": 0,
+      "anchor_tracking_failures": 0,
+      "label_overlaps": 138,
+      "repair_attempts": 0,
+      "repair_approved": false,
+      "deepseek_calls": 0,
+      "qwen_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "video_path": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/B2_fork_motion/video.mp4",
+      "duration_seconds": 9.733333,
+      "actual_change": "9.73s continuous fork process"
+    },
+    {
+      "group": "B3_mechanism_fix",
+      "render_success": true,
+      "science_gate": "NEEDS_HUMAN_REVIEW",
+      "ir_review_decision": null,
+      "conflicts_detected": null,
+      "conflicts_resolved": null,
+      "path_geometry_artifacts": 0,
+      "fork_motion_verified": true,
+      "connection_failures": 0,
+      "anchor_tracking_failures": 0,
+      "label_overlaps": 345,
+      "repair_attempts": 0,
+      "repair_approved": false,
+      "deepseek_calls": 0,
+      "qwen_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "video_path": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/B3_mechanism_fix/video.mp4",
+      "duration_seconds": 31.933333,
+      "actual_change": "Integrated fork and explicit covalent continuity"
+    },
+    {
+      "group": "B4_expert_repair",
+      "render_success": true,
+      "science_gate": "SCIENCE_APPROVED",
+      "ir_review_decision": "PASS_AFTER_EVIDENCE_ADJUDICATION",
+      "conflicts_detected": 1,
+      "conflicts_resolved": 1,
+      "path_geometry_artifacts": 0,
+      "fork_motion_verified": true,
+      "connection_failures": 0,
+      "anchor_tracking_failures": 0,
+      "label_overlaps": 744,
+      "repair_attempts": 0,
+      "repair_approved": true,
+      "deepseek_calls": 2,
+      "qwen_calls": 0,
+      "input_tokens": 2365,
+      "output_tokens": 390,
+      "video_path": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/B4_expert_repair/video.mp4",
+      "duration_seconds": 31.933333,
+      "actual_change": "Real identity and coupled-growth model repairs"
+    },
+    {
+      "group": "M1_mitosis",
+      "render_success": true,
+      "science_gate": "SCIENCE_APPROVED",
+      "ir_review_decision": "PASS",
+      "conflicts_detected": null,
+      "conflicts_resolved": null,
+      "path_geometry_artifacts": 0,
+      "fork_motion_verified": false,
+      "connection_failures": 0,
+      "anchor_tracking_failures": 0,
+      "label_overlaps": 6,
+      "repair_attempts": 0,
+      "repair_approved": true,
+      "deepseek_calls": 0,
+      "qwen_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "video_path": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4_1/groups/M1_mitosis/video.mp4",
+      "duration_seconds": 12.0,
+      "actual_change": "Rounded paths, live connections, fitted captions"
+    }
+  ],
+  "providers": {
+    "deepseek": {
+      "calls": 11,
+      "input_tokens": 314160,
+      "output_tokens": 11108,
+      "api_seconds": 82.188
+    },
+    "qwen": {
+      "calls": 7,
+      "input_tokens": 573223,
+      "output_tokens": 15740,
+      "api_seconds": 248.948
+    }
+  },
+  "bill_amount": null,
+  "historical_results_changed": [],
+  "group_attribution_note": "Group token fields charge direct B4 repair calls only. Shared IR/video reviews are in provider totals and full ledger; do not sum group rows for total usage.",
+  "tests": {
+    "all_passed": true,
+    "passed": 25,
+    "total": 25,
+    "includes_negative_controls": true,
+    "results": [
+      {
+        "test": "template_3left_5right_growth_right",
+        "passed": true
+      },
+      {
+        "test": "template_5left_3right_growth_left",
+        "passed": true
+      },
+      {
+        "test": "wrong_template_polarity_rejected",
+        "passed": true
+      },
+      {
+        "test": "wrong_addition_end_rejected",
+        "passed": true
+      },
+      {
+        "test": "rotations_preserve_science",
+        "passed": true
+      },
+      {
+        "test": "mirror_preserves_science",
+        "passed": true
+      },
+      {
+        "test": "missing_growth_port_uncertain",
+        "passed": true
+      },
+      {
+        "test": "unknown_evidence_uncertain",
+        "passed": true
+      },
+      {
+        "test": "V4_lagging_endpoints_independently_revalidated",
+        "passed": true
+      },
+      {
+        "test": "unannotated_V4_missing_contract_uncertain",
+        "passed": true
+      },
+      {
+        "test": "no_op_repair_does_not_render",
+        "passed": true
+      },
+      {
+        "test": "true_IR_fields_changed",
+        "passed": true
+      },
+      {
+        "test": "unrelated_object_patch_rejected_atomically",
+        "passed": true
+      },
+      {
+        "test": "specific_false_positive_adjudicated_other_issues_retained",
+        "passed": true
+      },
+      {
+        "test": "insufficient_contract_requires_human",
+        "passed": true
+      },
+      {
+        "test": "actual_PathMorph_no_fill_constant_width_identity",
+        "passed": true
+      },
+      {
+        "test": "progress_range_and_invariants",
+        "passed": true
+      },
+      {
+        "test": "missing_endpoint_rejected_before_commit_ablation",
+        "passed": true
+      },
+      {
+        "test": "all_rendered_frames_mitosis_connections_continuous",
+        "passed": true
+      },
+      {
+        "test": "actual_fork_growth_never_ahead_of_junction",
+        "passed": true
+      },
+      {
+        "test": "all_groups_persistent_object_instances",
+        "passed": true
+      },
+      {
+        "test": "actual_model_identity_and_process_fields_changed",
+        "passed": true
+      },
+      {
+        "test": "B4_expert_repair_final_hashes_and_runtime_gates",
+        "passed": true,
+        "runtime_checks": 16,
+        "scene_hash": "9b7a44045bfb7e1b524bc56621e55799317acbd1de1e823292ad780d2291fa07"
+      },
+      {
+        "test": "M1_mitosis_final_hashes_and_runtime_gates",
+        "passed": true,
+        "runtime_checks": 12,
+        "scene_hash": "33e173c2cc13adf1cb588d22a4c802c41cbdab90a53c8b3ead87d9deeba795f9"
+      },
+      {
+        "test": "new_hash_approved_only_with_matching_new_review",
+        "passed": true
+      }
+    ]
+  }
+}

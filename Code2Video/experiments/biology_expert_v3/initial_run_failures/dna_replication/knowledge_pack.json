@@ -1,0 +1,441 @@
+{
+  "topic_id": "dna_replication",
+  "topic_scope": {
+    "topic": "DNA replication in eukaryotic cells",
+    "topic_id": "dna_replication",
+    "audience": "high_school",
+    "video_goal": "Explain priming, leading and lagging synthesis and local Okazaki fragment maturation",
+    "scope_status": "PROVISIONAL"
+  },
+  "facts": [
+    {
+      "fact_id": "F1",
+      "claim": "Eukaryotic DNA replication begins at many sites in the genome called replication origins.",
+      "scope": "Eukaryotic cells; initiation of replication",
+      "classification": "established",
+      "evidence_ids": [
+        "PMID_35320688"
+      ],
+      "support": [
+        {
+          "evidence_id": "PMID_35320688",
+          "quote": "DNA replication in eukaryotic cells initiates from large numbers of sites called replication origins."
+        }
+      ],
+      "verification": "VERIFIED",
+      "verification_detail": {
+        "support_spans_match": true,
+        "matched_evidence_ids": [
+          "PMID_35320688"
+        ],
+        "independent_publishers": 1,
+        "reasons": [],
+        "entailment_status": "MODEL_PROPOSED_NOT_INDEPENDENTLY_CONFIRMED",
+        "meaning": "VERIFIED here means retrieved support+scope proposed by builder, not independent expert fact approval"
+      },
+      "semantic_verification": "VERIFIED",
+      "semantic_reason": "Source passage states eukaryotic replication initiates from many sites called replication origins; organism scope (eukaryotes) and stage (initiation) match. Single publisher."
+    },
+    {
+      "fact_id": "F2",
+      "claim": "Initiation from origins must be tightly controlled so that the whole genome is duplicated precisely once per cell cycle.",
+      "scope": "Eukaryotic cells; cell-cycle control of replication initiation",
+      "classification": "established",
+      "evidence_ids": [
+        "PMID_35320688"
+      ],
+      "support": [
+        {
+          "evidence_id": "PMID_35320688",
+          "quote": "Initiation of replication from these origins must be tightly controlled to ensure the entire genome is precisely duplicated in each cell cycle."
+        }
+      ],
+      "verification": "VERIFIED",
+      "verification_detail": {
+        "support_spans_match": true,
+        "matched_evidence_ids": [
+          "PMID_35320688"
+        ],
+        "independent_publishers": 1,
+        "reasons": [],
+        "entailment_status": "MODEL_PROPOSED_NOT_INDEPENDENTLY_CONFIRMED",
+        "meaning": "VERIFIED here means retrieved support+scope proposed by builder, not independent expert fact approval"
+      },
+      "semantic_verification": "VERIFIED",
+      "semantic_reason": "Passage directly states initiation from origins must be tightly controlled to ensure the entire genome is precisely duplicated each cell cycle. Meaning and scope match."
+    },
+    {
+      "fact_id": "F3",
+      "claim": "Control of eukaryotic replication initiation is achieved by regulating loading and activation of the replicative DNA helicase.",
+      "scope": "Eukaryotic cells; budding-yeast proteins emphasized in the review; helicase regulation",
+      "classification": "established",
+      "evidence_ids": [
+        "PMID_35320688"
+      ],
+      "support": [
+        {
+          "evidence_id": "PMID_35320688",
+          "quote": "This is accomplished through the regulation of the first two steps in replication: loading and activation of the replicative DNA helicase."
+        }
+      ],
+      "verification": "VERIFIED",
+      "verification_detail": {
+        "support_spans_match": true,
+        "matched_evidence_ids": [
+          "PMID_35320688"
+        ],
+        "independent_publishers": 1,
+        "reasons": [],
+        "entailment_status": "MODEL_PROPOSED_NOT_INDEPENDENTLY_CONFIRMED",
+        "meaning": "VERIFIED here means retrieved support+scope proposed by builder, not independent expert fact approval"
+      },
+      "semantic_verification": "VERIFIED",
+      "semantic_reason": "Passage states control is accomplished via regulation of loading and activation of the replicative DNA helicase. Consistent; note the review focuses on budding yeast, so generalization to all eukaryotes is an extrapolation of framing but the claim as stated is entailed by the source's own statement."
+    },
+    {
+      "fact_id": "F4",
+      "claim": "The bulk of leading-strand DNA synthesis at an undisturbed eukaryotic replication fork is carried out by DNA polymerase epsilon (Pol ε), according to the model supported by the preponderance of evidence.",
+      "scope": "Eukaryotic replication fork; undisturbed fork; model-level claim",
+      "classification": "established",
+      "evidence_ids": [
+        "PMID_28301743"
+      ],
+      "support": [
+        {
+          "evidence_id": "PMID_28301743",
+          "quote": "The preponderance of evidence supports a model in which DNA polymerase ε (Pol ε) carries out the bulk of leading strand DNA synthesis at an undisturbed replication fork."
+        }
+      ],
+      "verification": "VERIFIED",
+      "verification_detail": {
+        "support_spans_match": true,
+        "matched_evidence_ids": [
+          "PMID_28301743"
+        ],
+        "independent_publishers": 1,
+        "reasons": [],
+        "entailment_status": "MODEL_PROPOSED_NOT_INDEPENDENTLY_CONFIRMED",
+        "meaning": "VERIFIED here means retrieved support+scope proposed by builder, not independent expert fact approval"
+      },
+      "semantic_verification": "VERIFIED",
+      "semantic_reason": "Passage explicitly frames this as a model supported by preponderance of evidence (Pol ε bulk leading-strand at undisturbed fork). The claim correctly preserves the model-level hedge and 'undisturbed fork' qualifier."
+    },
+    {
+      "fact_id": "F5",
+      "claim": "DNA polymerase alpha (Pol α) carries out initiation of Okazaki fragment synthesis.",
+      "scope": "Eukaryotic lagging strand; Okazaki fragment initiation (priming step implied by source but not stated molecularly)",
+      "classification": "established",
+      "evidence_ids": [
+        "PMID_28301743"
+      ],
+      "support": [
+        {
+          "evidence_id": "PMID_28301743",
+          "quote": "DNA polymerases α and δ carry out the initiation of Okazaki fragment synthesis and its elongation and maturation, respectively."
+        }
+      ],
+      "verification": "VERIFIED",
+      "verification_detail": {
+        "support_spans_match": true,
+        "matched_evidence_ids": [
+          "PMID_28301743"
+        ],
+        "independent_publishers": 1,
+        "reasons": [],
+        "entailment_status": "MODEL_PROPOSED_NOT_INDEPENDENTLY_CONFIRMED",
+        "meaning": "VERIFIED here means retrieved support+scope proposed by builder, not independent expert fact approval"
+      },
+      "semantic_verification": "VERIFIED",
+      "semantic_reason": "Passage states Pol α carries out initiation of Okazaki fragment synthesis. The claim adds 'priming step implied' — the source says 'initiation,' which is equivalent in this context; no ungrounded extension beyond the stated initiation role."
+    },
+    {
+      "fact_id": "F6",
+      "claim": "DNA polymerase delta (Pol δ) carries out elongation and maturation of Okazaki fragments.",
+      "scope": "Eukaryotic lagging strand; Okazaki fragment elongation and maturation",
+      "classification": "established",
+      "evidence_ids": [
+        "PMID_28301743"
+      ],
+      "support": [
+        {
+          "evidence_id": "PMID_28301743",
+          "quote": "DNA polymerases α and δ carry out the initiation of Okazaki fragment synthesis and its elongation and maturation, respectively."
+        }
+      ],
+      "verification": "VERIFIED",
+      "verification_detail": {
+        "support_spans_match": true,
+        "matched_evidence_ids": [
+          "PMID_28301743"
+        ],
+        "independent_publishers": 1,
+        "reasons": [],
+        "entailment_status": "MODEL_PROPOSED_NOT_INDEPENDENTLY_CONFIRMED",
+        "meaning": "VERIFIED here means retrieved support+scope proposed by builder, not independent expert fact approval"
+      },
+      "semantic_verification": "VERIFIED",
+      "semantic_reason": "Passage states Pol δ carries out elongation and maturation of Okazaki fragments. Claim matches role assignments directly."
+    },
+    {
+      "fact_id": "F7",
+      "claim": "The eukaryotic replication fork includes enzymes that synthesize DNA and enzymes that repair discontinuities on the lagging strand.",
+      "scope": "Eukaryotic replication fork; enzyme roles",
+      "classification": "established",
+      "evidence_ids": [
+        "PMID_28301743"
+      ],
+      "support": [
+        {
+          "evidence_id": "PMID_28301743",
+          "quote": "with an emphasis on the enzymes that synthesize DNA and repair discontinuities on the lagging strand of the replication fork"
+        }
+      ],
+      "verification": "VERIFIED",
+      "verification_detail": {
+        "support_spans_match": true,
+        "matched_evidence_ids": [
+          "PMID_28301743"
+        ],
+        "independent_publishers": 1,
+        "reasons": [],
+        "entailment_status": "MODEL_PROPOSED_NOT_INDEPENDENTLY_CONFIRMED",
+        "meaning": "VERIFIED here means retrieved support+scope proposed by builder, not independent expert fact approval"
+      },
+      "semantic_verification": "VERIFIED",
+      "semantic_reason": "Passage states emphasis on enzymes that synthesize DNA and repair discontinuities on the lagging strand of the replication fork. Entailed at the review's framing level."
+    },
+    {
+      "fact_id": "F8",
+      "claim": "Alternative proposals exist, including that alternative replication forks may operate during certain cellular processes, and biochemical reconstitution studies separately and jointly examine leading- and lagging-strand synthesis.",
+      "scope": "Eukaryotic replication fork; scope of current models and methods",
+      "classification": "disputed",
+      "evidence_ids": [
+        "PMID_28301743"
+      ],
+      "support": [
+        {
+          "evidence_id": "PMID_28301743",
+          "quote": "This review also discusses alternative proposals, including cellular processes during which alternative forks may be utilized, and new biochemical studies with purified proteins that are aimed at reconstituting leading and lagging strand DNA synthesis separately and as an integrated replication fork."
+        }
+      ],
+      "verification": "INSUFFICIENT_EVIDENCE",
+      "verification_detail": {
+        "support_spans_match": true,
+        "matched_evidence_ids": [
+          "PMID_28301743"
+        ],
+        "independent_publishers": 1,
+        "reasons": [],
+        "entailment_status": "MODEL_PROPOSED_NOT_INDEPENDENTLY_CONFIRMED",
+        "meaning": "VERIFIED here means retrieved support+scope proposed by builder, not independent expert fact approval"
+      },
+      "semantic_verification": "INSUFFICIENT_EVIDENCE",
+      "semantic_reason": "Passage explicitly discusses alternative proposals including cellular processes during which alternative forks may be utilized, and biochemical reconstitution studies separately and jointly examining leading/lagging synthesis. Claim accurately paraphrases; classification as 'disputed' is a labeling choice, but the content is entailed. Builder marked CONFLICTED, but no contradicting evidence exists — the source itself reports these as open/discussed proposals, not as resolved conflicts. Status should be VERIFIED (as a statement about the state of the field), not CONFLICTED."
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "PMID_35320688",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35320688/",
+      "title": "The Initiation of Eukaryotic DNA Replication.",
+      "publisher": "Annual review of biochemistry",
+      "license": "Publisher copyright; short research excerpts only",
+      "accessed_utc": "2026-11-24T03:38:20Z",
+      "status": "RETRIEVED",
+      "content_sha256": "ed2f6759a61617a5890852175fa7d70b07aaf0718afd9ba4dd698bcbbc987803",
+      "passages": [
+        {
+          "location": "PubMed abstract",
+          "text": "DNA replication in eukaryotic cells initiates from large numbers of sites called replication origins. Initiation of replication from these origins must be tightly controlled to ensure the entire genome is precisely duplicated in each cell cycle. This is accomplished through the regulation of the first two steps in replication: loading and activation of the replicative DNA helicase. Here we describe what is known about the mechanism and regulation of these two reactions from a genetic, biochemical, and structural perspective, focusing on recent progress using proteins from budding yeast."
+        }
+      ]
+    },
+    {
+      "evidence_id": "PMID_28301743",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28301743/",
+      "title": "Eukaryotic DNA Replication Fork.",
+      "publisher": "Annual review of biochemistry",
+      "license": "Publisher copyright; short research excerpts only",
+      "accessed_utc": "2026-11-24T03:38:20Z",
+      "status": "RETRIEVED",
+      "content_sha256": "e5a4f832e26cd4b46167130a40c6c596e80fdb5c986853a56a8c2ce7b1045e95",
+      "passages": [
+        {
+          "location": "PubMed abstract",
+          "text": "This review focuses on the biogenesis and composition of the eukaryotic DNA replication fork, with an emphasis on the enzymes that synthesize DNA and repair discontinuities on the lagging strand of the replication fork. Physical and genetic methodologies aimed at understanding these processes are discussed. The preponderance of evidence supports a model in which DNA polymerase ε (Pol ε) carries out the bulk of leading strand DNA synthesis at an undisturbed replication fork. DNA polymerases α and δ carry out the initiation of Okazaki fragment synthesis and its elongation and maturation, respectively. This review also discusses alternative proposals, including cellular processes during which alternative forks may be utilized, and new biochemical studies with purified proteins that are aimed at reconstituting leading and lagging strand DNA synthesis separately and as an integrated replication fork."
+        }
+      ]
+    }
+  ],
+  "mechanism": {
+    "events": [
+      {
+        "event": "Origin licensing/activation and helicase loading/activation",
+        "description": "Replication initiates at many origins; the first two regulated steps are loading and activation of the replicative DNA helicase.",
+        "fact_ids": [
+          "F1",
+          "F2",
+          "F3"
+        ]
+      },
+      {
+        "event": "Leading-strand synthesis",
+        "description": "At an undisturbed fork, Pol ε is modeled as synthesizing the bulk of the leading strand.",
+        "fact_ids": [
+          "F4"
+        ]
+      },
+      {
+        "event": "Okazaki fragment initiation",
+        "description": "Pol α initiates synthesis of Okazaki fragments on the lagging strand.",
+        "fact_ids": [
+          "F5"
+        ]
+      },
+      {
+        "event": "Okazaki fragment elongation and maturation",
+        "description": "Pol δ elongates Okazaki fragments and participates in their maturation; fork enzymes also repair discontinuities on the lagging strand.",
+        "fact_ids": [
+          "F6",
+          "F7"
+        ]
+      }
+    ],
+    "roles": [
+      {
+        "role": "Replicative DNA helicase",
+        "description": "Its loading and activation are the regulated steps that control initiation.",
+        "fact_ids": [
+          "F3"
+        ]
+      },
+      {
+        "role": "DNA polymerase epsilon (Pol ε)",
+        "description": "Bulk leading-strand synthesis at an undisturbed fork (model supported by preponderance of evidence).",
+        "fact_ids": [
+          "F4"
+        ]
+      },
+      {
+        "role": "DNA polymerase alpha (Pol α)",
+        "description": "Initiates Okazaki fragment synthesis.",
+        "fact_ids": [
+          "F5"
+        ]
+      },
+      {
+        "role": "DNA polymerase delta (Pol δ)",
+        "description": "Elongates and matures Okazaki fragments.",
+        "fact_ids": [
+          "F6"
+        ]
+      }
+    ],
+    "constraints": [
+      {
+        "constraint": "Initiation must be tightly controlled so the genome is duplicated precisely once per cell cycle.",
+        "fact_ids": [
+          "F2"
+        ]
+      },
+      {
+        "constraint": "The Pol ε leading-strand assignment is a model supported by the preponderance of evidence, not an absolute rule; alternative proposals and alternative fork contexts are discussed.",
+        "fact_ids": [
+          "F4",
+          "F8"
+        ]
+      },
+      {
+        "constraint": "Okazaki fragment synthesis requires initiation before elongation and maturation; these are distinct steps assigned to Pol α and Pol δ respectively.",
+        "fact_ids": [
+          "F5",
+          "F6"
+        ]
+      }
+    ]
+  },
+  "assumptions": [
+    "The retrieved passages are review abstracts; mechanism statements are summaries of evidence reviewed elsewhere, not primary measurements in the supplied text.",
+    "Both evidence items come from the same publisher (Annual Review of Biochemistry), so cross-source independence is not established.",
+    "Budding-yeast proteins are emphasized in PMID_35320688; generalization to all eukaryotes is an assumption of the review's framing, not directly verified in the passage.",
+    "The review's statement about Pol ε is explicitly model-level ('preponderance of evidence supports a model'), so it should be taught as the current leading model, not as an exceptionless fact."
+  ],
+  "build_report": {
+    "status": "PARTIALLY_VERIFIED",
+    "retrieval_failures": [],
+    "model_synthesis_only": true,
+    "verified_support_count": 7,
+    "total_facts": 8,
+    "limitation": "Verbatim source matching is not semantic entailment. Dedicated cross-verification must precede scientific gate PASS.",
+    "independent_verification": {
+      "facts": [
+        {
+          "fact_id": "F1",
+          "status": "VERIFIED",
+          "reason": "Source passage states eukaryotic replication initiates from many sites called replication origins; organism scope (eukaryotes) and stage (initiation) match. Single publisher.",
+          "evidence_ids": [
+            "PMID_35320688"
+          ]
+        },
+        {
+          "fact_id": "F2",
+          "status": "VERIFIED",
+          "reason": "Passage directly states initiation from origins must be tightly controlled to ensure the entire genome is precisely duplicated each cell cycle. Meaning and scope match.",
+          "evidence_ids": [
+            "PMID_35320688"
+          ]
+        },
+        {
+          "fact_id": "F3",
+          "status": "VERIFIED",
+          "reason": "Passage states control is accomplished via regulation of loading and activation of the replicative DNA helicase. Consistent; note the review focuses on budding yeast, so generalization to all eukaryotes is an extrapolation of framing but the claim as stated is entailed by the source's own statement.",
+          "evidence_ids": [
+            "PMID_35320688"
+          ]
+        },
+        {
+          "fact_id": "F4",
+          "status": "VERIFIED",
+          "reason": "Passage explicitly frames this as a model supported by preponderance of evidence (Pol ε bulk leading-strand at undisturbed fork). The claim correctly preserves the model-level hedge and 'undisturbed fork' qualifier.",
+          "evidence_ids": [
+            "PMID_28301743"
+          ]
+        },
+        {
+          "fact_id": "F5",
+          "status": "VERIFIED",
+          "reason": "Passage states Pol α carries out initiation of Okazaki fragment synthesis. The claim adds 'priming step implied' — the source says 'initiation,' which is equivalent in this context; no ungrounded extension beyond the stated initiation role.",
+          "evidence_ids": [
+            "PMID_28301743"
+          ]
+        },
+        {
+          "fact_id": "F6",
+          "status": "VERIFIED",
+          "reason": "Passage states Pol δ carries out elongation and maturation of Okazaki fragments. Claim matches role assignments directly.",
+          "evidence_ids": [
+            "PMID_28301743"
+          ]
+        },
+        {
+          "fact_id": "F7",
+          "status": "VERIFIED",
+          "reason": "Passage states emphasis on enzymes that synthesize DNA and repair discontinuities on the lagging strand of the replication fork. Entailed at the review's framing level.",
+          "evidence_ids": [
+            "PMID_28301743"
+          ]
+        },
+        {
+          "fact_id": "F8",
+          "status": "VERIFIED",
+          "reason": "Passage explicitly discusses alternative proposals including cellular processes during which alternative forks may be utilized, and biochemical reconstitution studies separately and jointly examining leading/lagging synthesis. Claim accurately paraphrases; classification as 'disputed' is a labeling choice, but the content is entailed. Builder marked CONFLICTED, but no contradicting evidence exists — the source itself reports these as open/discussed proposals, not as resolved conflicts. Status should be VERIFIED (as a statement about the state of the field), not CONFLICTED.",
+          "evidence_ids": [
+            "PMID_28301743"
+          ]
+        }
+      ],
+      "conflicts": []
+    },
+    "semantic_verified_count": 7
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "process_id": "maturation",
+  "purpose": "Remove RNA, extend downstream fragment into gap, seal adjacent nick",
+  "input_assembly_types": [],
+  "required_states": [],
+  "preconditions": [
+    {
+      "constraint_id": "phase_elongating",
+      "predicate": "state_is",
+      "object_ids": [],
+      "key": "phase",
+      "value": "elongating"
+    }
+  ],
+  "actions": [
+    {
+      "operation": "transform_state",
+      "targets": [],
+      "params": {
+        "state_updates": {
+          "phase": "maturing"
+        }
+      }
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "rna_primer_lagging_1"
+      ],
+      "params": {
+        "visual_updates": {
+          "rna_primer_lagging_1": {
+            "visible": false
+          }
+        }
+      }
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "polymerase_lagging"
+      ],
+      "params": {
+        "visual_updates": {
+          "polymerase_lagging": {
+            "visible": true
+          }
+        }
+      }
+    },
+    {
+      "operation": "attach",
+      "targets": [
+        "polymerase_lagging",
+        "gap_fill"
+      ],
+      "params": {
+        "relation": "active_site",
+        "target_anchor": "end",
+        "source_anchor": "center",
+        "offset": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "operation": "extend",
+      "targets": [
+        "gap_fill"
+      ],
+      "params": {
+        "points": [
+          [
+            -0.6,
+            -0.34399999999999986,
+            0
+          ],
+          [
+            -0.75,
+            -0.3649999999999999,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "operation": "extend",
+      "targets": [
+        "gap_fill"
+      ],
+      "params": {
+        "points": [
+          [
+            -0.6,
+            -0.34399999999999986,
+            0
+          ],
+          [
+            -0.8999999999999999,
+            -0.386,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "operation": "extend",
+      "targets": [
+        "gap_fill"
+      ],
+      "params": {
+        "points": [
+          [
+            -0.6,
+            -0.34399999999999986,
+            0
+          ],
+          [
+            -1.0499999999999998,
+            -0.4069999999999999,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "operation": "extend",
+      "targets": [
+        "gap_fill"
+      ],
+      "params": {
+        "points": [
+          [
+            -0.6,
+            -0.34399999999999986,
+            0
+          ],
+          [
+            -1.2,
+            -0.42799999999999994,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "operation": "detach",
+      "targets": [
+        "polymerase_lagging",
+        "gap_fill"
+      ],
+      "params": {
+        "relation": "active_site"
+      }
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "polymerase_lagging"
+      ],
+      "params": {
+        "visual_updates": {
+          "polymerase_lagging": {
+            "visible": false
+          }
+        }
+      }
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "ligase"
+      ],
+      "params": {
+        "visual_updates": {
+          "ligase": {
+            "visible": true
+          }
+        }
+      }
+    },
+    {
+      "operation": "attach",
+      "targets": [
+        "ligase",
+        "gap_fill"
+      ],
+      "params": {
+        "relation": "active_site",
+        "target_anchor": "end",
+        "source_anchor": "center",
+        "offset": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "operation": "connect",
+      "targets": [
+        "gap_fill",
+        "fragment_1"
+      ],
+      "params": {
+        "relation": "sealed_nick",
+        "source_anchor": "end",
+        "target_anchor": "start"
+      },
+      "preconditions": [
+        {
+          "constraint_id": "nick_endpoints_adjacent",
+          "predicate": "anchor_coincident",
+          "object_ids": [
+            "gap_fill",
+            "fragment_1"
+          ],
+          "anchors": [
+            "end",
+            "start"
+          ],
+          "tolerance": 0.03
+        }
+      ]
+    },
+    {
+      "operation": "detach",
+      "targets": [
+        "ligase",
+        "gap_fill"
+      ],
+      "params": {
+        "relation": "active_site"
+      }
+    },
+    {
+      "operation": "transform_state",
+      "targets": [
+        "ligase"
+      ],
+      "params": {
+        "visual_updates": {
+          "ligase": {
+            "visible": false
+          }
+        }
+      }
+    }
+  ],
+  "postconditions": [
+    {
+      "constraint_id": "nick_joined",
+      "predicate": "relation_exists",
+      "object_ids": [
+        "gap_fill",
+        "fragment_1"
+      ],
+      "relation": "sealed_nick"
+    }
+  ],
+  "invariants": [],
+  "evidence_ids": [
+    "F6",
+    "X_7574276a"
+  ]
+}

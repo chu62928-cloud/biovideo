@@ -1,0 +1,802 @@
+[
+  {
+    "check_id": "polarity_new_leading",
+    "stage": "SCENE_IR",
+    "status": "PASS",
+    "object_ids": [
+      "template_leading",
+      "new_leading"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "expected": {
+      "nascent_addition_port": "3'",
+      "template_reading": "3' to 5'",
+      "antiparallel": true
+    },
+    "observed": {
+      "local_template_reading_vector": [
+        7.5,
+        -1.05,
+        0
+      ],
+      "growth_vector": [
+        0.6299999999999999,
+        -0.08819999999999983,
+        0
+      ],
+      "reading_alignment_cosine": 1.0,
+      "growth_port": "end",
+      "growth_port_label": "3'",
+      "opposite_end_motion": 0.0,
+      "synthesis_alignment": 4.970549999999999
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "33e6d233b42674596ca47456e55d859028003321531999e86c3e89586d1db60b"
+  },
+  {
+    "check_id": "polarity_new_leading",
+    "stage": "SCENE_IR",
+    "status": "PASS",
+    "object_ids": [
+      "template_leading",
+      "new_leading"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "expected": {
+      "nascent_addition_port": "3'",
+      "template_reading": "3' to 5'",
+      "antiparallel": true
+    },
+    "observed": {
+      "local_template_reading_vector": [
+        7.5,
+        -1.05,
+        0
+      ],
+      "growth_vector": [
+        0.6499999999999999,
+        -0.09100000000000008,
+        0
+      ],
+      "reading_alignment_cosine": 1.0,
+      "growth_port": "end",
+      "growth_port_label": "3'",
+      "opposite_end_motion": 0.0,
+      "synthesis_alignment": 9.941099999999999
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "43a1958e4a25af9a9746aac8f460567a70450974830a3b5433f090cee06ceb63"
+  },
+  {
+    "check_id": "polarity_new_leading",
+    "stage": "SCENE_IR",
+    "status": "PASS",
+    "object_ids": [
+      "template_leading",
+      "new_leading"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "expected": {
+      "nascent_addition_port": "3'",
+      "template_reading": "3' to 5'",
+      "antiparallel": true
+    },
+    "observed": {
+      "local_template_reading_vector": [
+        7.5,
+        -1.05,
+        0
+      ],
+      "growth_vector": [
+        0.6500000000000004,
+        -0.09100000000000008,
+        0
+      ],
+      "reading_alignment_cosine": 1.0,
+      "growth_port": "end",
+      "growth_port_label": "3'",
+      "opposite_end_motion": 0.0,
+      "synthesis_alignment": 14.911650000000002
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "c47da50814346a2ee24e6b542dd85d0b3a23c91202c695227f5a52637f3b8b03"
+  },
+  {
+    "check_id": "polarity_new_leading",
+    "stage": "SCENE_IR",
+    "status": "PASS",
+    "object_ids": [
+      "template_leading",
+      "new_leading"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "expected": {
+      "nascent_addition_port": "3'",
+      "template_reading": "3' to 5'",
+      "antiparallel": true
+    },
+    "observed": {
+      "local_template_reading_vector": [
+        7.5,
+        -1.05,
+        0
+      ],
+      "growth_vector": [
+        0.6499999999999999,
+        -0.09099999999999997,
+        0
+      ],
+      "reading_alignment_cosine": 1.0,
+      "growth_port": "end",
+      "growth_port_label": "3'",
+      "opposite_end_motion": 0.0,
+      "synthesis_alignment": 19.8822
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "9f660512ee9666087e73f60119fe2f7de15061f5232e076dcfdde5ab0726f1c5"
+  },
+  {
+    "check_id": "polarity_new_leading",
+    "stage": "SCENE_IR",
+    "status": "PASS",
+    "object_ids": [
+      "template_leading",
+      "new_leading"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "expected": {
+      "nascent_addition_port": "3'",
+      "template_reading": "3' to 5'",
+      "antiparallel": true
+    },
+    "observed": {
+      "local_template_reading_vector": [
+        7.5,
+        -1.05,
+        0
+      ],
+      "growth_vector": [
+        0.6499999999999999,
+        -0.09099999999999997,
+        0
+      ],
+      "reading_alignment_cosine": 1.0,
+      "growth_port": "end",
+      "growth_port_label": "3'",
+      "opposite_end_motion": 0.0,
+      "synthesis_alignment": 24.85275
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "ed817f2ea7195d9b7df71095f9586e97ae54239d07d879a1ae661e3474896a6c"
+  },
+  {
+    "check_id": "polarity_new_leading",
+    "stage": "SCENE_IR",
+    "status": "PASS",
+    "object_ids": [
+      "template_leading",
+      "new_leading"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "expected": {
+      "nascent_addition_port": "3'",
+      "template_reading": "3' to 5'",
+      "antiparallel": true
+    },
+    "observed": {
+      "local_template_reading_vector": [
+        7.5,
+        -1.05,
+        0
+      ],
+      "growth_vector": [
+        0.6500000000000004,
+        -0.09100000000000008,
+        0
+      ],
+      "reading_alignment_cosine": 1.0,
+      "growth_port": "end",
+      "growth_port_label": "3'",
+      "opposite_end_motion": 0.0,
+      "synthesis_alignment": 29.823300000000003
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "51761a468cf14140498d6d9b2e950008ebd9a8af67a77d03b10bc4ed8db8695a"
+  },
+  {
+    "check_id": "polarity_new_leading",
+    "stage": "SCENE_IR",
+    "status": "PASS",
+    "object_ids": [
+      "template_leading",
+      "new_leading"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "expected": {
+      "nascent_addition_port": "3'",
+      "template_reading": "3' to 5'",
+      "antiparallel": true
+    },
+    "observed": {
+      "local_template_reading_vector": [
+        7.5,
+        -1.05,
+        0
+      ],
+      "growth_vector": [
+        0.6499999999999995,
+        -0.09099999999999997,
+        0
+      ],
+      "reading_alignment_cosine": 1.0000000000000002,
+      "growth_port": "end",
+      "growth_port_label": "3'",
+      "opposite_end_motion": 0.0,
+      "synthesis_alignment": 34.79385
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "d6b5b2a96886f7e8990da91072695f48e11cffefc99988b0467e5fdf82a07060"
+  },
+  {
+    "check_id": "polarity_new_leading",
+    "stage": "SCENE_IR",
+    "status": "PASS",
+    "object_ids": [
+      "template_leading",
+      "new_leading"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "expected": {
+      "nascent_addition_port": "3'",
+      "template_reading": "3' to 5'",
+      "antiparallel": true
+    },
+    "observed": {
+      "local_template_reading_vector": [
+        3.5,
+        0.0,
+        0
+      ],
+      "growth_vector": [
+        0.6500000000000004,
+        -0.09100000000000008,
+        0
+      ],
+      "reading_alignment_cosine": 0.9903417466743302,
+      "growth_port": "end",
+      "growth_port_label": "3'",
+      "opposite_end_motion": 0.0,
+      "synthesis_alignment": 18.2
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "d630ac2813856e898eed9fa07d26280d138e456b863c81391dafee0189304e7b"
+  },
+  {
+    "check_id": "polarity_fragment_1",
+    "stage": "SCENE_IR",
+    "status": "PASS",
+    "object_ids": [
+      "template_lagging",
+      "fragment_1"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "expected": {
+      "nascent_addition_port": "3'",
+      "template_reading": "3' to 5'",
+      "antiparallel": true
+    },
+    "observed": {
+      "local_template_reading_vector": [
+        -7.5,
+        -1.05,
+        0
+      ],
+      "growth_vector": [
+        -0.5549999999999999,
+        -0.0777000000000001,
+        0
+      ],
+      "reading_alignment_cosine": 1.0000000000000002,
+      "growth_port": "end",
+      "growth_port_label": "3'",
+      "opposite_end_motion": 0.0,
+      "synthesis_alignment": 4.397025
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "d6215e2ec6d74c88363501e4905c062e59469ec10cb9bca10398e0fd0449f246"
+  },
+  {
+    "check_id": "polarity_fragment_1",
+    "stage": "SCENE_IR",
+    "status": "PASS",
+    "object_ids": [
+      "template_lagging",
+      "fragment_1"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "expected": {
+      "nascent_addition_port": "3'",
+      "template_reading": "3' to 5'",
+      "antiparallel": true
+    },
+    "observed": {
+      "local_template_reading_vector": [
+        -7.5,
+        -1.05,
+        0
+      ],
+      "growth_vector": [
+        -0.5749999999999997,
+        -0.0804999999999999,
+        0
+      ],
+      "reading_alignment_cosine": 1.0000000000000002,
+      "growth_port": "end",
+      "growth_port_label": "3'",
+      "opposite_end_motion": 0.0,
+      "synthesis_alignment": 8.794049999999999
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "29c92a6c92676a3b6e2395873bfb1e33e1839bbb1118d481e7bc37d7e23acfa9"
+  },
+  {
+    "check_id": "polarity_fragment_1",
+    "stage": "SCENE_IR",
+    "status": "PASS",
+    "object_ids": [
+      "template_lagging",
+      "fragment_1"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "expected": {
+      "nascent_addition_port": "3'",
+      "template_reading": "3' to 5'",
+      "antiparallel": true
+    },
+    "observed": {
+      "local_template_reading_vector": [
+        -7.5,
+        -1.05,
+        0
+      ],
+      "growth_vector": [
+        -0.5750000000000002,
+        -0.08050000000000013,
+        0
+      ],
+      "reading_alignment_cosine": 1.0,
+      "growth_port": "end",
+      "growth_port_label": "3'",
+      "opposite_end_motion": 0.0,
+      "synthesis_alignment": 13.191074999999998
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "5eae8d2cefb452fd9570fac27d42e6789a77ca988d1399f8e70cafbc2e3b1bdb"
+  },
+  {
+    "check_id": "polarity_fragment_1",
+    "stage": "SCENE_IR",
+    "status": "PASS",
+    "object_ids": [
+      "template_lagging",
+      "fragment_1"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "expected": {
+      "nascent_addition_port": "3'",
+      "template_reading": "3' to 5'",
+      "antiparallel": true
+    },
+    "observed": {
+      "local_template_reading_vector": [
+        -7.5,
+        -1.05,
+        0
+      ],
+      "growth_vector": [
+        -0.5750000000000002,
+        -0.08050000000000002,
+        0
+      ],
+      "reading_alignment_cosine": 1.0,
+      "growth_port": "end",
+      "growth_port_label": "3'",
+      "opposite_end_motion": 0.0,
+      "synthesis_alignment": 17.5881
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "f942f9ba6dea0f9ff3cabdb8bc6801739e47e1485ce8cf7d754229ca0a726f52"
+  },
+  {
+    "check_id": "polarity_fragment_2",
+    "stage": "SCENE_IR",
+    "status": "PASS",
+    "object_ids": [
+      "template_lagging",
+      "fragment_2"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "expected": {
+      "nascent_addition_port": "3'",
+      "template_reading": "3' to 5'",
+      "antiparallel": true
+    },
+    "observed": {
+      "local_template_reading_vector": [
+        -7.5,
+        -1.05,
+        0
+      ],
+      "growth_vector": [
+        -0.405,
+        -0.05669999999999997,
+        0
+      ],
+      "reading_alignment_cosine": 1.0,
+      "growth_port": "end",
+      "growth_port_label": "3'",
+      "opposite_end_motion": 0.0,
+      "synthesis_alignment": 3.2499750000000005
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "6be63fe41c9c19197fe537e35fb6e51cb03d25c9a0e41508238f4d0eb403edfb"
+  },
+  {
+    "check_id": "polarity_fragment_2",
+    "stage": "SCENE_IR",
+    "status": "PASS",
+    "object_ids": [
+      "template_lagging",
+      "fragment_2"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "expected": {
+      "nascent_addition_port": "3'",
+      "template_reading": "3' to 5'",
+      "antiparallel": true
+    },
+    "observed": {
+      "local_template_reading_vector": [
+        -7.5,
+        -1.05,
+        0
+      ],
+      "growth_vector": [
+        -0.42499999999999993,
+        -0.0595,
+        0
+      ],
+      "reading_alignment_cosine": 1.0,
+      "growth_port": "end",
+      "growth_port_label": "3'",
+      "opposite_end_motion": 0.0,
+      "synthesis_alignment": 6.49995
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "e45d3d92781f4e0d11fd9bf6b450a144e972bccf0eebcc3181ac9fea23c418db"
+  },
+  {
+    "check_id": "polarity_fragment_2",
+    "stage": "SCENE_IR",
+    "status": "PASS",
+    "object_ids": [
+      "template_lagging",
+      "fragment_2"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "expected": {
+      "nascent_addition_port": "3'",
+      "template_reading": "3' to 5'",
+      "antiparallel": true
+    },
+    "observed": {
+      "local_template_reading_vector": [
+        -7.5,
+        -1.05,
+        0
+      ],
+      "growth_vector": [
+        -0.42499999999999993,
+        -0.0595,
+        0
+      ],
+      "reading_alignment_cosine": 1.0,
+      "growth_port": "end",
+      "growth_port_label": "3'",
+      "opposite_end_motion": 0.0,
+      "synthesis_alignment": 9.749925
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "b081172d510f9b6fe6f1ae8d79148f778db47b678b4a05571ae3c4f058b81179"
+  },
+  {
+    "check_id": "polarity_fragment_2",
+    "stage": "SCENE_IR",
+    "status": "PASS",
+    "object_ids": [
+      "template_lagging",
+      "fragment_2"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "expected": {
+      "nascent_addition_port": "3'",
+      "template_reading": "3' to 5'",
+      "antiparallel": true
+    },
+    "observed": {
+      "local_template_reading_vector": [
+        -7.5,
+        -1.05,
+        0
+      ],
+      "growth_vector": [
+        -0.42500000000000004,
+        -0.0595,
+        0
+      ],
+      "reading_alignment_cosine": 1.0,
+      "growth_port": "end",
+      "growth_port_label": "3'",
+      "opposite_end_motion": 0.0,
+      "synthesis_alignment": 12.9999
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "0627ac8d2134ad28811bc049101163bf5fd6f910bb371a537d6e7cc18c8bc85f"
+  },
+  {
+    "check_id": "polarity_gap_fill",
+    "stage": "SCENE_IR",
+    "status": "PASS",
+    "object_ids": [
+      "template_lagging",
+      "gap_fill"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "expected": {
+      "nascent_addition_port": "3'",
+      "template_reading": "3' to 5'",
+      "antiparallel": true
+    },
+    "observed": {
+      "local_template_reading_vector": [
+        -7.5,
+        -1.05,
+        0
+      ],
+      "growth_vector": [
+        -0.13,
+        -0.018199999999999994,
+        0
+      ],
+      "reading_alignment_cosine": 1.0,
+      "growth_port": "end",
+      "growth_port_label": "3'",
+      "opposite_end_motion": 0.0,
+      "synthesis_alignment": 1.1470500000000003
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "3fb5a3af6873a8913e0112e9fdfb4fbb8658ccb3386e25f7a34f04bc53dd474f"
+  },
+  {
+    "check_id": "polarity_gap_fill",
+    "stage": "SCENE_IR",
+    "status": "PASS",
+    "object_ids": [
+      "template_lagging",
+      "gap_fill"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "expected": {
+      "nascent_addition_port": "3'",
+      "template_reading": "3' to 5'",
+      "antiparallel": true
+    },
+    "observed": {
+      "local_template_reading_vector": [
+        -7.5,
+        -1.05,
+        0
+      ],
+      "growth_vector": [
+        -0.1499999999999999,
+        -0.02100000000000013,
+        0
+      ],
+      "reading_alignment_cosine": 1.0,
+      "growth_port": "end",
+      "growth_port_label": "3'",
+      "opposite_end_motion": 0.0,
+      "synthesis_alignment": 2.2941
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "f46e475c70e0d717e1ae446ffde59855e4446549bf5801790801318463b7cce3"
+  },
+  {
+    "check_id": "polarity_gap_fill",
+    "stage": "SCENE_IR",
+    "status": "PASS",
+    "object_ids": [
+      "template_lagging",
+      "gap_fill"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "expected": {
+      "nascent_addition_port": "3'",
+      "template_reading": "3' to 5'",
+      "antiparallel": true
+    },
+    "observed": {
+      "local_template_reading_vector": [
+        -7.5,
+        -1.05,
+        0
+      ],
+      "growth_vector": [
+        -0.1499999999999999,
+        -0.020999999999999908,
+        0
+      ],
+      "reading_alignment_cosine": 1.0,
+      "growth_port": "end",
+      "growth_port_label": "3'",
+      "opposite_end_motion": 0.0,
+      "synthesis_alignment": 3.4411499999999986
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "05bbf13e6099b72db214e340d436320456fedf29e3e0955f20e80711c7bbefa9"
+  },
+  {
+    "check_id": "polarity_gap_fill",
+    "stage": "SCENE_IR",
+    "status": "PASS",
+    "object_ids": [
+      "template_lagging",
+      "gap_fill"
+    ],
+    "rule_ids": [
+      "DNA_STRAND_POLARITY"
+    ],
+    "evidence_ids": [
+      "X_7574276a",
+      "X_bf28604c"
+    ],
+    "expected": {
+      "nascent_addition_port": "3'",
+      "template_reading": "3' to 5'",
+      "antiparallel": true
+    },
+    "observed": {
+      "local_template_reading_vector": [
+        -7.5,
+        -1.05,
+        0
+      ],
+      "growth_vector": [
+        -0.15000000000000013,
+        -0.02100000000000002,
+        0
+      ],
+      "reading_alignment_cosine": 1.0,
+      "growth_port": "end",
+      "growth_port_label": "3'",
+      "opposite_end_motion": 0.0,
+      "synthesis_alignment": 4.5882000000000005
+    },
+    "validator": "deterministic_local_path",
+    "artifact_sha256": "f16978be5ca9ac73e51da5de00c0e46566596f0b287d70e13bc1406d4ce421b6"
+  }
+]

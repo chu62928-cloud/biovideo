@@ -1,0 +1,17 @@
+--- before
++++ after
+@@ -1,6 +1,5 @@
+ from manim import *
+ import numpy as np
+-
+ 
+ class TeachingScene(Scene):
+     def setup_layout(self, title_text, lecture_lines):
+@@ -27,7 +26,6 @@
+                 self.grid[f"{row}{col}"] = np.array([x, y, 0])
+ 
+     def place_at_grid(self, mobject, grid_pos, scale_factor=1.0):
+-        mobject.scale(scale_factor)
+         mobject.move_to(self.grid[grid_pos])
+         return mobject
+ 

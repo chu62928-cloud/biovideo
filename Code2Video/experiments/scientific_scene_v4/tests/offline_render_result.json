@@ -1,0 +1,19 @@
+{
+  "tag": "offline_adapter",
+  "committed": true,
+  "before": null,
+  "started": 1795504114.6282218,
+  "after": {
+    "success": true,
+    "tag": "offline_adapter",
+    "code_sha256": "5a93d051985c2752c0e31d6b2d1de22a91a53e858766a77a456c2b4c19f0389f",
+    "video_sha256": "4c6800815735a375a8bf054d48c9fb4aef41950d6169d207b25fe61210e813bb",
+    "duration_seconds": 7.333333,
+    "renderer": "manim-0.19.0-full-render",
+    "trace_sha256": "84727d8d57ef409c85f0aa29c5c1ab7e238bf9a3eca60652ec0d17720ab032ea",
+    "version": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/tests/offline_1obcqy_0/render_fixture/versions/offline_adapter",
+    "code": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/tests/offline_1obcqy_0/render_fixture/versions/offline_adapter/rendered_code.py",
+    "video": "/root/autodl-tmp/code2biovideo/Code2Video/experiments/scientific_scene_v4/tests/offline_1obcqy_0/render_fixture/versions/offline_adapter/video.mp4"
+  },
+  "elapsed_seconds": 12.699
+}

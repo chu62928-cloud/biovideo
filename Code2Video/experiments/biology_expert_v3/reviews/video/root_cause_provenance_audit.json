@@ -1,0 +1,9 @@
+[
+  {
+    "issue_id": "SCI_LEADING_POL_IDENTITY",
+    "model_proposed_stage": "SCRIPT",
+    "earliest_observed_stage": "ANIMATION_CODE",
+    "basis": "Current storyboard names generic polymerase, no Pol delta/epsilon labels; the concrete Pol delta label is present in rendered code. Earlier script/cast provenance requires separate confirmation. Do not blindly route to SCRIPT.",
+    "decision": "NEEDS_HUMAN_REVIEW_FOR_UPSTREAM_ATTRIBUTION"
+  }
+]

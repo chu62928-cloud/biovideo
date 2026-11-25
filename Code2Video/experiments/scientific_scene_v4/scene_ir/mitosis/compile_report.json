@@ -1,0 +1,31 @@
+{
+  "schema_pass": true,
+  "references_pass": true,
+  "scientific_gate": "PENDING_EXPERT_REVIEW",
+  "plan": {
+    "events": [
+      {
+        "event_id": "metaphase",
+        "caption": "Sister kinetochores attach to opposite spindle poles and the duplicated chromosome aligns at the metaphase plate.",
+        "process_ids": [
+          "bipolar_attachment"
+        ],
+        "duration": 6.0
+      },
+      {
+        "event_id": "anaphase",
+        "caption": "Sister chromatid cohesion is released and the existing chromatids, now daughter chromosomes, move to opposite poles.",
+        "process_ids": [
+          "chromatid_separation"
+        ],
+        "duration": 6.0
+      }
+    ],
+    "scientific_simplifications": [
+      "One already-duplicated chromosome, not an entire genome or ploidy count.",
+      "Centromere/kinetochore and spindle are schematic; molecular cohesion cleavage not shown.",
+      "Same two physical chromatid objects persist, then are called daughter chromosomes after separation.",
+      "No DNA replication or homolog pairing occurs in this clip."
+    ]
+  }
+}
