@@ -1,0 +1,464 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "model_id",
+    "schema_version",
+    "scope",
+    "entities",
+    "relations",
+    "processes",
+    "unresolved_questions"
+  ],
+  "properties": {
+    "model_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "schema_version": {
+      "const": "1.0"
+    },
+    "scope": {
+      "type": "object",
+      "required": [
+        "topic",
+        "organism_context",
+        "audience",
+        "included_processes",
+        "excluded_processes",
+        "simplifications"
+      ],
+      "properties": {
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "organism_context": {
+          "type": "string",
+          "minLength": 1
+        },
+        "audience": {
+          "type": "string",
+          "minLength": 1
+        },
+        "included_processes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "excluded_processes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "simplifications": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "entities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "semantic_id",
+          "scientific_name",
+          "entity_type",
+          "evidence_ids",
+          "support"
+        ],
+        "properties": {
+          "semantic_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scientific_name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "entity_type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "support": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "evidence_id",
+                "quote",
+                "location"
+              ],
+              "properties": {
+                "evidence_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "quote": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "location": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "cardinality": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "states": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "semantic_id",
+          "relation_type",
+          "definition",
+          "source_entity",
+          "target_entity",
+          "evidence_ids",
+          "support"
+        ],
+        "properties": {
+          "semantic_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "relation_type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "definition": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_entity": {
+            "type": "string",
+            "minLength": 1
+          },
+          "target_entity": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "support": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "evidence_id",
+                "quote",
+                "location"
+              ],
+              "properties": {
+                "evidence_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "quote": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "location": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "processes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "process_semantic_id",
+          "scientific_name",
+          "action_category",
+          "participants",
+          "input_roles",
+          "output_roles",
+          "preconditions",
+          "effects",
+          "temporal_scope",
+          "observables",
+          "evidence_ids",
+          "support",
+          "exceptions"
+        ],
+        "properties": {
+          "process_semantic_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scientific_name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "action_category": {
+            "enum": [
+              "interaction",
+              "transport",
+              "separation",
+              "assembly",
+              "synthesis",
+              "state_transition",
+              "binding",
+              "release"
+            ]
+          },
+          "participants": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "role",
+                "entity_ref"
+              ],
+              "properties": {
+                "role": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "entity_ref": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "input_roles": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "output_roles": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "preconditions": {
+            "type": "object"
+          },
+          "effects": {
+            "type": "object"
+          },
+          "temporal_scope": {
+            "type": "object",
+            "required": [
+              "start_condition",
+              "end_condition"
+            ],
+            "properties": {
+              "start_condition": {
+                "type": "string",
+                "minLength": 1
+              },
+              "end_condition": {
+                "type": "string",
+                "minLength": 1
+              },
+              "concurrent_with": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "after": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "observables": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "constraint_id",
+                "predicate",
+                "evidence_ids",
+                "support",
+                "capability"
+              ],
+              "properties": {
+                "constraint_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "predicate": {
+                  "enum": [
+                    "relation_holds_during",
+                    "event_precedes",
+                    "connection_holds_until",
+                    "state_transition_allowed"
+                  ]
+                },
+                "relation_ref": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "source_role": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "target_role": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "ordered_process_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "state_key": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "to_value": {},
+                "precondition": {
+                  "type": "object"
+                },
+                "capability": {
+                  "enum": [
+                    "DETERMINISTIC",
+                    "PARTIAL",
+                    "VLM",
+                    "HUMAN",
+                    "UNSUPPORTED"
+                  ]
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "support": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "evidence_id",
+                      "quote",
+                      "location"
+                    ],
+                    "properties": {
+                      "evidence_id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "quote": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "location": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "support": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "evidence_id",
+                "quote",
+                "location"
+              ],
+              "properties": {
+                "evidence_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "quote": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "location": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "exceptions": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "unresolved_questions": {
+      "type": "array",
+      "items": {}
+    }
+  }
+}

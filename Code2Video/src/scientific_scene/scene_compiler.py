@@ -34,3 +34,6 @@ def compile_storyboard(storyboard,knowledge_pack,asset_registry,gateway=None,pla
  errors=graph_checks(graph,evidence)
  if errors:raise ValueError(str(errors))
  return {'scene_graph':graph,'assembly_instances':graph['assemblies'],'state_transitions':graph['state_transitions'],'validation_plan':graph['constraints'],'compile_report':{'schema_pass':True,'references_pass':True,'scientific_gate':'PENDING_EXPERT_REVIEW','plan':plan}}
+
+# Reviewed typed models are the new semantic planning path; legacy blueprint compiler remains for history.
+from .typed_planner import plan_typed_scene,bind_typed_plan

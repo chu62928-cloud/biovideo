@@ -1,0 +1,50 @@
+{
+  "experiment": "V4.3",
+  "groups": [
+    {
+      "group": "G0",
+      "status": "FROZEN",
+      "baseline_commit": "e8fa3f1f29e003c7964f6ca81eb368ce2699e770"
+    },
+    {
+      "group": "G1",
+      "status": "BLOCKED_AUTHORIZATION"
+    },
+    {
+      "group": "G2",
+      "status": "NOT_TESTED"
+    },
+    {
+      "group": "G3",
+      "status": "NOT_TESTED"
+    },
+    {
+      "group": "G4",
+      "status": "NOT_TESTED"
+    },
+    {
+      "group": "G5",
+      "status": "NOT_TESTED"
+    }
+  ],
+  "topics": [],
+  "mutation_results": [
+    {
+      "source": "synthetic_unit_tests",
+      "valid_types": [
+        "RELATION_TERMINATED_EARLY",
+        "CONNECTION_TARGET_CHANGED"
+      ],
+      "real_runtime_mutations": "NOT_TESTED"
+    }
+  ],
+  "generalization_results": [],
+  "visual_review_results": [],
+  "blockers": [
+    "Explicit V4.3 API authorization pending",
+    "No real independently reviewed typed models; formal scene/render gates cannot be passed"
+  ],
+  "final_status": "OFFLINE_ENGINEERING_CHECKPOINT",
+  "actual_model_calls": 0,
+  "videos_rendered": 0
+}

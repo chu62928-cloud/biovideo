@@ -13,6 +13,9 @@ class ExpectedIntervalResolver:
   markers=trace.get('events',[]);found=[(i,m) for i,m in enumerate(markers) if m.get('id')==eid]
   if len(found)!=1:return result
   i,m=found[0];start=m['time'];event=events[eid]
+  explicit_end=[x for x in trace.get('typed_event_markers',[]) if x.get('id')==eid and x.get('phase')=='ended']
+  if len(explicit_end)==1:
+   return {**result,'start':start,'end':explicit_end[0]['time'],'status':'RESOLVED','source':'independent_typed_start_end_markers','evidence':{'start':m,'end':explicit_end[0]}}
   end=markers[i+1]['time'] if i+1<len(markers) else event.get('end_time')
   # Final event duration is independently declared by the planned event graph, not by
   # relation presence, visibility, or last available sample.

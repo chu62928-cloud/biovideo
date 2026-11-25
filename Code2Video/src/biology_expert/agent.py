@@ -114,3 +114,11 @@ class BiologyExpertAgent:
   if situation.get('test_contract'):return 'mutation_tester'
   if situation.get('visual_ambiguity'):return 'reference_video_reviewer'
   return None
+
+ def build_typed_science_model(self,task,retrieval):
+  from .typed_science_builder import TypedScienceModelBuilder,TypedScienceModelReviewer
+  if 'typed_science_model_builder' not in self.registry.tools:self.registry.register('typed_science_model_builder',TypedScienceModelBuilder(self.gateway).build)
+  if 'typed_science_model_reviewer' not in self.registry.tools:self.registry.register('typed_science_model_reviewer',TypedScienceModelReviewer(self.gateway).review)
+  model=self._call('typed_science_model_builder',{'task':task,'retrieval':retrieval},'Build typed science','Retrieved evidence must produce explicit entity, process and observable semantics before scene planning.')
+  review=self._call('typed_science_model_reviewer',{'model':model,'evidence':retrieval['evidence'],'task':task},'Independently verify typed model','Separate request checks exact source entailment, scope and computational meaning; generation is not approval.')
+  return {'model':model,'review':review}
