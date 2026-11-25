@@ -1,7 +1,7 @@
 {
   "experiment": "V4.2.2",
   "baseline_commit": "160063900bfa1450b27e8285b48b3d07b72a8d75",
-  "git_commit": "160063900bfa1450b27e8285b48b3d07b72a8d75",
+  "git_commit": "af35ab24877716e8fbf2794edaafb86535f3d659",
   "inputs": [
     {
       "topic": "dna_replication",
@@ -185,5 +185,11 @@
       "path": "/autodl-tmp/code2biovideo/biovideo-v4.2.2/Code2Video/experiments/biology_expert_v4_2_2/mitosis_tail_11.5.png",
       "sha256": "95a8abd6be1f6a5c2016b974d4f9b60f6f7607a06df61bfc05fd2073a23194fa"
     }
-  ]
+  ],
+  "actual_cli_replay": {
+    "topic": "protein_translation",
+    "output": "/autodl-tmp/code2biovideo/v422_cli_translation",
+    "paid_model_calls": 0,
+    "success": true
+  }
 }

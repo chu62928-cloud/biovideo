@@ -3,7 +3,7 @@
 本轮完成基础通用引擎与真实数据诊断，理想的真实机制验证目标未达到。付费请求0、整段视频生成0，原始契约/轨迹/历史结果未修改。
 
 ## 实际源码与入口
-沿用仓库根 `python audit_contract.py audit --contract <contract.json> --scene <scene_graph.json> --trace <geometry_trace.json> --contract-review <contract_review.json> --output <new_directory>`。程序明确加载Code2Video/src，版本与源码哈希见manifest.json。
+沿用仓库根 `python audit_contract.py audit --contract <contract.json> --scene <scene_graph.json> --trace <geometry_trace.json> --contract-review <contract_review.json> --output <new_directory>`。程序明确加载Code2Video/src，实现版本 `af35ab24877716e8fbf2794edaafb86535f3d659`，源码哈希见manifest.json。
 
 修改role_binder.py：共享词只能提候选；只有明确过程role或Process Template过程标识可绑定，拒绝候选及原因保留。ENTITY/PROCESS/RELATION/ANCHOR分类保留；EVENT由所选event_ids表达。类型明确矛盾返回TYPE_MISMATCH；缺少动作/输入输出/状态定义时不以词汇补全。翻译polyribosome_formation不再绑定EV_peptide_bond_formation，其他明确过程角色仍绑定。
 
