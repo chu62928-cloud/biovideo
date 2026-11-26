@@ -1,0 +1,12 @@
+{
+  "generation_status": "NOT_RENDERED",
+  "release_status": "RENDER_FAILED",
+  "video_path": null,
+  "video_sha256": null,
+  "media": null,
+  "review": null,
+  "failure": {
+    "stage": "fact_sheet",
+    "reason": "No stage artifacts (script, roles, assets, storyboard, animation code) were provided, so entailment and educational coverage cannot be verified; facts C1–C9 are internally supported by the cited source, but the required outputs require stage-level review before a PASS can be issued."
+  }
+}

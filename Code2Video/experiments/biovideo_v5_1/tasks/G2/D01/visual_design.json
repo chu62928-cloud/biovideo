@@ -1,0 +1,14 @@
+[
+  {
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes",
+    "caption": "Figure 18.6 Shape of Red Blood Cells Erythrocytes are biconcave discs with very shallow centers. This shape optimizes the ratio of surface area to volume, facilitating gas exchange. It also enables them to fold up as they move through narrow blood vessels.",
+    "alt": "This photograph shows a few red blood cells.",
+    "use": "caption and visual description for original schematic"
+  },
+  {
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes",
+    "caption": "Figure 18.9 Sickle Cells Sickle cell anemia is caused by a mutation in one of the hemoglobin genes. Erythrocytes produce an abnormal type of hemoglobin, which causes the cell to take on a sickle or crescent shape. (credit: Janice Haney Carr)",
+    "alt": "This photograph shows red blood cells of a person suffering from sickle cell anemia. Instead of being discoid shaped like healthy blood cells, sickle red blood cells are shaped like a sickle.",
+    "use": "caption and visual description for original schematic"
+  }
+]

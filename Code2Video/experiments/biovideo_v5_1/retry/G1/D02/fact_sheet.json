@@ -1,0 +1,102 @@
+{
+  "claims": [
+    {
+      "id": "c1",
+      "statement": "Water enters a plant cell by osmosis because the cytoplasm is slightly hypertonic to the extracellular environment when water is available.",
+      "passage_id": "1",
+      "source_url": "https://openstax.org/books/biology-2e/pages/5-2-passive-transport",
+      "support": "Various living things have ways of controlling the effects of osmosis—a mechanism we call osmoregulation. Some organisms, such as plants, fungi, bacteria, and some protists, have cell walls that surround the plasma membrane and prevent cell lysis in a hypotonic solution. The plasma membrane can only expand to the cell wall's limit, so the cell will not lyse. The cytoplasm in plants is always slightly hypertonic to the cellular environment, and water will always enter a cell if water is available. This water inflow produces turgor pressure, which stiffens the plant's cell walls ( Figure 5.13 ). In nonwoody plants, turgor pressure supports the plant. Conversely, if you do not water the plant, the extracellular fluid will become hypertonic, causing water to leave the cell. In this condition, the cell does not shrink because the cell wall is not flexible. However, the cell membrane detaches from the wall and constricts the cytoplasm. We call this plasmolysis . Plants lose turgor pressure in this condition and wilt ( Figure 5.14 ).",
+      "evidence_id": "E_bc51b24509d1",
+      "location": "paragraph_36"
+    },
+    {
+      "id": "c2",
+      "statement": "Water inflow generates turgor pressure, which stiffens the plant cell wall and supports nonwoody plants.",
+      "passage_id": "1",
+      "source_url": "https://openstax.org/books/biology-2e/pages/5-2-passive-transport",
+      "support": "Various living things have ways of controlling the effects of osmosis—a mechanism we call osmoregulation. Some organisms, such as plants, fungi, bacteria, and some protists, have cell walls that surround the plasma membrane and prevent cell lysis in a hypotonic solution. The plasma membrane can only expand to the cell wall's limit, so the cell will not lyse. The cytoplasm in plants is always slightly hypertonic to the cellular environment, and water will always enter a cell if water is available. This water inflow produces turgor pressure, which stiffens the plant's cell walls ( Figure 5.13 ). In nonwoody plants, turgor pressure supports the plant. Conversely, if you do not water the plant, the extracellular fluid will become hypertonic, causing water to leave the cell. In this condition, the cell does not shrink because the cell wall is not flexible. However, the cell membrane detaches from the wall and constricts the cytoplasm. We call this plasmolysis . Plants lose turgor pressure in this condition and wilt ( Figure 5.14 ).",
+      "evidence_id": "E_bc51b24509d1",
+      "location": "paragraph_36"
+    },
+    {
+      "id": "c3",
+      "statement": "If the extracellular fluid becomes hypertonic, water leaves the cell, turgor pressure is lost, the plasma membrane detaches from the cell wall (plasmolysis), and the plant wilts.",
+      "passage_id": "1",
+      "source_url": "https://openstax.org/books/biology-2e/pages/5-2-passive-transport",
+      "support": "Various living things have ways of controlling the effects of osmosis—a mechanism we call osmoregulation. Some organisms, such as plants, fungi, bacteria, and some protists, have cell walls that surround the plasma membrane and prevent cell lysis in a hypotonic solution. The plasma membrane can only expand to the cell wall's limit, so the cell will not lyse. The cytoplasm in plants is always slightly hypertonic to the cellular environment, and water will always enter a cell if water is available. This water inflow produces turgor pressure, which stiffens the plant's cell walls ( Figure 5.13 ). In nonwoody plants, turgor pressure supports the plant. Conversely, if you do not water the plant, the extracellular fluid will become hypertonic, causing water to leave the cell. In this condition, the cell does not shrink because the cell wall is not flexible. However, the cell membrane detaches from the wall and constricts the cytoplasm. We call this plasmolysis . Plants lose turgor pressure in this condition and wilt ( Figure 5.14 ).",
+      "evidence_id": "E_bc51b24509d1",
+      "location": "paragraph_36"
+    },
+    {
+      "id": "c4",
+      "statement": "Osmosis is the net movement of free water molecules across a semipermeable membrane from lower osmolarity (higher water concentration) to higher osmolarity (lower water concentration).",
+      "passage_id": "3",
+      "source_url": "https://openstax.org/books/biology-2e/pages/5-2-passive-transport",
+      "support": "Tonicity describes how an extracellular solution can change a cell's volume by affecting osmosis. A solution's tonicity often directly correlates with the solution's osmolarity. Osmolarity describes the solution's total solute concentration. A solution with low osmolarity has a greater number of water molecules relative to the number of solute particles. A solution with high osmolarity has fewer water molecules with respect to solute particles. In a situation in which a membrane permeable to water, though not to the solute separates two different osmolarities, water will move from the membrane's side with lower osmolarity (and more water) to the side with higher osmolarity (and less water). This effect makes sense if you remember that the solute cannot move across the membrane, and thus the only component in the system that can move—the water—moves along its own concentration gradient. An important distinction that concerns living systems is that osmolarity measures the number of particles (which may be molecules) in a solution. Therefore, a solution that is cloudy with cells may have a lower osmolarity than a solution that is clear, if the second solution contains more dissolved molecules than there are cells.",
+      "evidence_id": "E_bc51b24509d1",
+      "location": "paragraph_26"
+    },
+    {
+      "id": "c5",
+      "statement": "Osmosis continues until the water concentration gradient is zero or hydrostatic pressure balances osmotic pressure.",
+      "passage_id": "7",
+      "source_url": "https://openstax.org/books/biology-2e/pages/5-2-passive-transport",
+      "support": "Returning to the beaker example, recall that it has a solute mixture on either side of the membrane. A principle of diffusion is that the molecules move around and will spread evenly throughout the medium if they can. However, only the material capable of getting through the membrane will diffuse through it. In this example, the solute cannot diffuse through the membrane, but the water can. Water has a concentration gradient in this system. Thus, water will diffuse down its concentration gradient, crossing the membrane to the side where it is less concentrated. This diffusion of water through the membrane—osmosis—will continue until the water's concentration gradient goes to zero or until the water's hydrostatic pressure balances the osmotic pressure. Osmosis proceeds constantly in living systems.",
+      "evidence_id": "E_bc51b24509d1",
+      "location": "paragraph_25"
+    }
+  ],
+  "learning_objectives": [
+    "Explain how the direction of water movement across a plant cell membrane depends on the tonicity of the extracellular solution.",
+    "Describe how water inflow produces turgor pressure that stiffens the cell wall and supports the plant.",
+    "Distinguish turgor pressure from plasmolysis and explain why wilting occurs when water leaves the cell.",
+    "Predict changes in cell firmness for hypotonic, isotonic, and hypertonic extracellular conditions."
+  ],
+  "required_entities": [
+    "plant cell",
+    "plasma membrane",
+    "cell wall",
+    "cytoplasm",
+    "extracellular fluid",
+    "water",
+    "solute",
+    "turgor pressure",
+    "osmosis",
+    "tonicity",
+    "osmolarity",
+    "plasmolysis"
+  ],
+  "required_dynamic_mechanisms": [
+    "water moves down its concentration gradient across a semipermeable membrane",
+    "net water inflow increases turgor pressure against the cell wall",
+    "turgor pressure stiffens the cell wall and supports the plant",
+    "net water outflow reduces turgor pressure and causes plasmolysis and wilting",
+    "water movement continues until concentration gradient is zero or hydrostatic pressure balances osmotic pressure"
+  ],
+  "forbidden_outcomes": [
+    "plant cell lyses in a hypotonic solution because of the cell wall",
+    "cell shrinks like an animal cell without a cell wall during plasmolysis",
+    "solute moves across the membrane to equalize concentrations in the osmosis example",
+    "turgor pressure is described as pulling water out of the cell",
+    "wilting is attributed to the cell wall shrinking or becoming flexible"
+  ],
+  "allowed_simplifications": [
+    "show net water movement rather than simultaneous bidirectional water movement",
+    "represent turgor pressure as a single inward force on the cell wall without quantifying it",
+    "use 'firmness' as a teaching term for turgor-driven stiffness of the cell",
+    "omit aquaporin details when explaining the core osmosis mechanism",
+    "depict plasmolysis as membrane detachment without detailing all cytoplasmic constriction"
+  ],
+  "review": {
+    "decision": "REVISE",
+    "passed_ids": [
+      "c1",
+      "c2",
+      "c3",
+      "c4",
+      "c5"
+    ],
+    "blocking_reason": "All five claims are entailed by their cited passages and no forbidden outcomes are asserted. However, educational coverage is incomplete: the learning objectives require predicting cell firmness under hypotonic, isotonic, and hypertonic conditions, but no claim addresses the isotonic case (net water movement ~zero, firmness unchanged) or explicitly covers the hypotonic/extracellular side of plasmolysis in firmness terms; also the claim set lacks an explicit statement tying osmolarity/tonicity to the graded spectrum of firmness. Add a claim on isotonic conditions and firmness to close the objective gap before PASS."
+  },
+  "verified": false
+}

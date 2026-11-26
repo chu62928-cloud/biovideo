@@ -1,0 +1,32 @@
+{
+  "user_goal": {
+    "request": "Explain how the shape of a human red blood cell helps it transport oxygen.",
+    "duration": 30,
+    "audience": "grades 10-12",
+    "language": "en",
+    "backend": "auto",
+    "budget": 8,
+    "workflow": "fixed"
+  },
+  "latest": {
+    "tool_name": "fact_sheet",
+    "domain_status": "FAILED",
+    "execution_status": "FAILED",
+    "decision_source": "DETERMINISTIC_WORKFLOW",
+    "observation_hash": "0837213bdb19446e58652a44222ca7b9082a5d7f8cf3e03e07dd4ada74b95fe9",
+    "observation": {
+      "stage": "fact_sheet",
+      "reason": "No stage artifacts (script, roles, assets, storyboard, animation code) were provided, so entailment and educational coverage cannot be verified; facts C1–C9 are internally supported by the cited source, but the required outputs require stage-level review before a PASS can be issued."
+    }
+  },
+  "remaining": {
+    "deepseek": 6,
+    "qwen": 2
+  },
+  "artifacts": [
+    "checkpoint.json",
+    "evidence.json",
+    "fact_sheet.json",
+    "task.json"
+  ]
+}

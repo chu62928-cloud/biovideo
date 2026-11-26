@@ -1,0 +1,62 @@
+{
+  "review": {
+    "science": {
+      "decision": "REVISE",
+      "rationale": "Core identity (biconcave RBC) and the flexibility/capillary-transit mechanism are scientifically sound and the transit part is genuinely animated. However, the central claim of the teaching goal — that the shape aids oxygen transport via faster O2 loading/unloading — is asserted only through a static caption and a static surface-area bar chart, with no observable change over time representing gas exchange. An essential, unsupported (non-demonstrated) mechanism blocks approval."
+    },
+    "visual": {
+      "decision": "REVISE",
+      "rationale": "Labels, layout and the capillary-squeeze animation are clear and legible, but the O2 loading/unloading 'mechanism' is rendered as a frozen caption plus two inert dots, which does not satisfy the requirement for observable temporal change in a dynamic process."
+    },
+    "checks": {
+      "facts": "PASS",
+      "identity": "PASS",
+      "mechanism": "FAIL",
+      "coverage": "INCOMPLETE",
+      "labels": "PASS",
+      "clarity": "PASS",
+      "continuity": "PASS",
+      "technical": "PASS"
+    },
+    "issues": [
+      {
+        "issue_id": "ISS-001",
+        "scene_id": "section_1",
+        "time_range": [
+          6.0,
+          9.0
+        ],
+        "claim_ids": [
+          "O2 Loading ↔ Unloading",
+          "More area means faster oxygen loading and unloading"
+        ],
+        "severity": "high",
+        "observed_problem": "The oxygen loading/unloading mechanism is conveyed only by a static text label and two motionless dots; the surface-area comparison is a static bar chart (130% vs 100%). No oxygen molecules, gradient, or exchange event change over time, so the dynamic gas-exchange mechanism that the teaching goal depends on is never actually demonstrated.",
+        "expected_behavior": "Animate oxygen (e.g., O2 markers) diffusing across the biconcave membrane and/or binding to hemoglobin over time, with the increased surface area visibly correlating to a higher exchange rate, so the mechanism is shown via observable change rather than a caption."
+      },
+      {
+        "issue_id": "ISS-002",
+        "scene_id": "section_1",
+        "time_range": [
+          5.0,
+          9.0
+        ],
+        "claim_ids": [
+          "This shape gives 30% more surface area"
+        ],
+        "severity": "medium",
+        "observed_problem": "The '30% more surface area' figure is presented as a fixed bar chart with no derivation or visual mapping of how the biconcave geometry yields that area relative to the equal-volume sphere, leaving a key quantitative claim unsupported by visible evidence.",
+        "expected_behavior": "Visually relate the biconcave disc and the sphere (e.g., unfold/compare surfaces or annotate equal volume) so the 30% area advantage is grounded in observable geometry, not just a stated number."
+      }
+    ],
+    "video_sha256": "5f2afc6f05db567c6af0ce1864acf1ae445b1de0c100db47056031e4b4823ed2",
+    "domain_status": "REVISE"
+  },
+  "media": {
+    "duration": 13.266667,
+    "width": 854,
+    "height": 480,
+    "fps": "15/1"
+  },
+  "historical": true
+}

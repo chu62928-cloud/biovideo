@@ -123,3 +123,6 @@ release_decision.json核对三主题各3次和新主题有界失败，0批准新
 V4.3.3: 122 tests pass, paired editing 8/10 vs 6/10, both reject 2/2. No new approved models; R3 pupil response stopped at stage 1. New 24s mitosis candidate reviewed twice, final REVISE. See experiments/biology_expert_v4_3_3/README.md.
 
 V5 freeze 719b38a; 1/5 videos, 0 approved, two baseline MP4. See experiments/biovideo_v5/README.md.
+
+## V5.1 开发阶段核查
+统一入口使用原始 Code2Video 分镜和代码生成。红细胞与植物细胞共交付两段 720p 候选片，均 REVISE，故未揭示或执行 Phase B。植物片在开发者辅助恢复任务后由模型修复渲染错误，红细胞科学返工渲染失败并回滚。网页实际提交停在事实审核。125 tests passed。实验及其限制见 experiments/biovideo_v5_1/README.md。

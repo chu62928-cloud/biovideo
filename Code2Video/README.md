@@ -362,3 +362,7 @@ If you like our project, please give us a star ⭐ on [GitHub](https://github.co
 ## BioVideo V4.3.3
 
 证据驱动的分阶段科学建模、依赖约束编辑、事务审核与运行轨迹连接到实际视频。[中文实验报告与候选片](experiments/biology_expert_v4_3_3/README.md)
+
+## BioVideoAgent V5.1
+
+[中文项目说明、网页演示与实验结果](experiments/biovideo_v5_1/README.md)

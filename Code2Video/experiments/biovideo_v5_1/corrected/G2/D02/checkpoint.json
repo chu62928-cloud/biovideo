@@ -1,0 +1,41 @@
+{
+  "user_goal": {
+    "request": "Explain how water movement across the cell membrane changes the firmness of a plant cell.",
+    "duration": 30,
+    "audience": "grades 10-12",
+    "language": "en",
+    "backend": "auto",
+    "budget": 7,
+    "workflow": "agent"
+  },
+  "latest": {
+    "tool_name": "request_human_review",
+    "domain_status": "SELECTED",
+    "execution_status": "SUCCESS",
+    "decision_source": "LLM_DECISION",
+    "observation_hash": "7c3441a2c4166758c89e41c14a33b1d8ab15667a6e844cf3b7e74571640ea1a4",
+    "observation": {
+      "tool": "request_human_review",
+      "observation_hash": "a573e9bcb70d5e5bff527aba73d4d1893e07ae818e8f3afe26bcab581ab77794",
+      "video_sha256": "ee1d785500b1f3e173f82a46d86d2534c46bb5b193a075b5ee57c6de01630d30",
+      "reason": "Remaining budget reserved for completed candidate"
+    }
+  },
+  "remaining": {
+    "deepseek": 0,
+    "qwen": 1
+  },
+  "artifacts": [
+    "checkpoint.json",
+    "evidence.json",
+    "fact_sheet.json",
+    "generation_context.json",
+    "render_repair.json",
+    "result_before_render_recovery.json",
+    "storyboard.json",
+    "task.json",
+    "validation.json",
+    "video.json",
+    "visual_design.json"
+  ]
+}

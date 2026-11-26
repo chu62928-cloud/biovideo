@@ -1,0 +1,14 @@
+[
+  {
+    "source": "https://openstax.org/books/biology-2e/pages/5-2-passive-transport",
+    "caption": "Figure 5.13 The turgor pressure within a plant cell depends on the solution's tonicity in which it is bathed. (credit: modification of work by Mariana Ruiz Villareal)",
+    "alt": "The left part of this image shows a plant cell bathed in a hypertonic solution so that the plasma membrane has pulled away completely from the cell wall, and the central vacuole has shrunk. Water moves out of the plant cell. The middle part shows a plant cell bathed in an isotonic solution; the plasma membrane has pulled away from the cell wall a bit, and the central vacuole size is unchanged. Water moves both in and out of the plant cell. The right part shows a plant cell in a hypotonic solution. The central vacuole is large, and the plasma membrane is pressed against the cell wall. Water is moving into the plant cell.",
+    "use": "caption and visual description for original schematic"
+  },
+  {
+    "source": "https://openstax.org/books/biology-2e/pages/5-2-passive-transport",
+    "caption": "Figure 5.11 In osmosis, water always moves from an area of higher water concentration to one of lower concentration. In the diagram, the solute cannot pass through the selectively permeable membrane, but the water can.",
+    "alt": "This illustration shows a container whose contents are separated by a semipermeable membrane. Initially, there is a high concentration of solute on the right side of the membrane and a low concentration of the left. Over time, water diffuses across the membrane toward the side of the container that initially had a higher concentration of solute (lower concentration of water). As a result of osmosis, the water level is higher on this side of the membrane, and the solute concentration is the same on both sides.",
+    "use": "caption and visual description for original schematic"
+  }
+]

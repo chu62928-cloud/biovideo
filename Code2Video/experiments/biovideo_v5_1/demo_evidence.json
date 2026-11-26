@@ -1,0 +1,58 @@
+{
+  "launch": "python experiments/biovideo_v5_1/launch.py --web 8765",
+  "input": {
+    "request": "Explain how water movement across the cell membrane changes the firmness of a plant cell.",
+    "duration": 30,
+    "backend": "manim"
+  },
+  "submission": "HTTP POST using same route as browser form",
+  "job": "998588e7f4a14ac1a1212908f8f7bc31",
+  "result": {
+    "generation_status": "NOT_RENDERED",
+    "release_status": "RENDER_FAILED",
+    "video_path": null,
+    "video_sha256": null,
+    "media": null,
+    "review": null,
+    "failure": {
+      "stage": "fact_sheet",
+      "reason": "C1-C4 are generic textbook osmosis/turgor/plasmolysis/RWC statements, but the only cited source (E_6fb69a1cc780, a Kentucky bluegrass ethephon drought-tolerance transcriptome study) is about drought tolerance and ethephon treatment; its abstract does not state the osmosis definition, turgor pressure pushing the protoplast against the cell wall, plasmolysis/membrane detachment, or RWC as an indicator of cell firmness. Entailment is therefore not established for any claim, and the required entities (cell membrane, cell wall, central vacuole, cytoplasm/protoplast, water potential, turgor pressure) and required dynamic mechanisms (osmotic water movement, turgor build-up, plasmolysis/wilting) are not covered by verified evidence. Since the core mechanistic explanation and learning objectives lack source support, no fact can be passed while blocking issues remain."
+    },
+    "done": true,
+    "steps": [
+      {
+        "tool": "research_decision",
+        "status": "SELECTED",
+        "reason": "The topic is osmosis and turgor in plant cells; these keywords target the core mechanism (water potential driving water across the membrane) and the firmness outcomes (turgor, plasmolysis) needed for a 30s grades 10-12 explanation."
+      },
+      {
+        "tool": "retrieve_scientific_evidence",
+        "status": "RETRIEVED",
+        "reason": null
+      },
+      {
+        "tool": "verify_scientific_claims",
+        "status": "REVISE",
+        "reason": null
+      },
+      {
+        "tool": "verify_scientific_claims",
+        "status": "REVISE",
+        "reason": null
+      },
+      {
+        "tool": "fact_sheet",
+        "status": "FAILED",
+        "reason": "C1-C4 are generic textbook osmosis/turgor/plasmolysis/RWC statements, but the only cited source (E_6fb69a1cc780, a Kentucky bluegrass ethephon drought-tolerance transcriptome study) is about drought tolerance and ethephon treatment; its abstract does not state the osmosis definition, turgor pressure pushing the protoplast against the cell wall, plasmolysis/membrane detachment, or RWC as an indicator of cell firmness. Entailment is therefore not established for any claim, and the required entities (cell membrane, cell wall, central vacuole, cytoplasm/protoplast, water potential, turgor pressure) and required dynamic mechanisms (osmotic water movement, turgor build-up, plasmolysis/wilting) are not covered by verified evidence. Since the core mechanistic explanation and learning objectives lack source support, no fact can be passed while blocking issues remain."
+      }
+    ],
+    "sources": [
+      "https://europepmc.org/article/MED/42737349",
+      "https://europepmc.org/article/MED/41225940",
+      "https://europepmc.org/article/MED/34914788"
+    ]
+  },
+  "trace": "web_run/trajectory.jsonl",
+  "player_status": "NOT_EXERCISED_NO_VIDEO",
+  "human_intervention": "Submitted the same JSON endpoint as browser form"
+}

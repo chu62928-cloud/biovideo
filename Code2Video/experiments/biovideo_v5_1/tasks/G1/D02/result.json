@@ -1,0 +1,12 @@
+{
+  "generation_status": "NOT_RENDERED",
+  "release_status": "RENDER_FAILED",
+  "video_path": null,
+  "video_sha256": null,
+  "media": null,
+  "review": null,
+  "failure": {
+    "stage": "fact_sheet",
+    "reason": "('E_bc51b24509d1', 'figures/Figure 5.13 alt')"
+  }
+}

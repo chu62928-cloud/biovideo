@@ -1,0 +1,129 @@
+[
+  {
+    "legacy": {
+      "step_id": 5,
+      "task_id": "T02",
+      "state_hash": "2c2cc4556516827768e99c0730d172fbb4c8707532959d4264f945a84fda89c3",
+      "decision_source": "LLM",
+      "tool_name": "repair_scene",
+      "decision_summary": null,
+      "based_on_observation_ids": null,
+      "arguments_hash": "a2675b6dbc41ebaab6f7afe667cdadb63d71ad6d7a364f9f45cbb39ae7b00051",
+      "execution_status": "FAILED",
+      "observation_id": "O5",
+      "observation_summary": {
+        "error": "Invalid tool or observation reference. Include latest actual observation ID. Available: ['O1', 'O2', 'O3', 'O4']",
+        "type": "ValueError"
+      },
+      "index": 0
+    },
+    "offline_fixture": true,
+    "adapter_result": {
+      "tool": "repair_scene",
+      "observation_hash": "a727a08799b8a7fee29c4e2b95ee1997cab5c36eff16949365fa4a3d12f93c47",
+      "video_sha256": "replay-video"
+    }
+  },
+  {
+    "legacy": {
+      "step_id": 6,
+      "task_id": "T02",
+      "state_hash": "79c71f128d18b26168a15d3b5e6261fb85c4bac2287eff599c07373941a9353c",
+      "decision_source": "LLM",
+      "tool_name": "repair_scene",
+      "decision_summary": "Fixing scene 0 so the external solution is labeled hypotonic/high water, matching the inward water arrow and conserving the osmosis claim; prior repair attempt failed, so only the affected scene is amended.",
+      "based_on_observation_ids": [
+        "O4"
+      ],
+      "arguments_hash": "d8808fa8099f44f747fadc10a8167f683737ce3c59442abaac5c551ec14bf971",
+      "execution_status": "FAILED",
+      "observation_id": "O6",
+      "observation_summary": {
+        "error": "Invalid tool or observation reference. Include latest actual observation ID. Available: ['O1', 'O2', 'O3', 'O4', 'O5']",
+        "type": "ValueError"
+      },
+      "index": 0
+    },
+    "offline_fixture": true,
+    "adapter_result": {
+      "tool": "repair_scene",
+      "observation_hash": "a727a08799b8a7fee29c4e2b95ee1997cab5c36eff16949365fa4a3d12f93c47",
+      "video_sha256": "replay-video"
+    }
+  },
+  {
+    "legacy": {
+      "step_id": 7,
+      "task_id": "T02",
+      "state_hash": "55134605aa55cfeb255f8d72ad741336f341c1404f273eae0fdc601ae1e9455d",
+      "decision_source": "LLM",
+      "tool_name": "finish",
+      "decision_summary": "Two repair_scene attempts failed with an invalid observation reference; the request is otherwise fully approved (facts, storyboard, and render_review all OK). Since the storyboard is already approved and the render passed review, no scene repair is needed to answer the learning goal. Returning the existing reviewed result rather than continuing failing repairs.",
+      "based_on_observation_ids": [
+        "O5"
+      ],
+      "arguments_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "execution_status": "FAILED",
+      "observation_id": "O7",
+      "observation_summary": {
+        "error": "Invalid tool or observation reference. Include latest actual observation ID. Available: ['O1', 'O2', 'O3', 'O4', 'O5', 'O6']",
+        "type": "ValueError"
+      },
+      "index": null
+    },
+    "offline_fixture": true,
+    "adapter_result": {
+      "reason": "Legacy finish with unresolved video review is not a repair action"
+    }
+  },
+  {
+    "legacy": {
+      "step_id": 8,
+      "task_id": "T02",
+      "state_hash": "6971d40e5e80aaac7ef347bf5fb5c33cfb2c00f4416e4ee3ead33026d41924be",
+      "decision_source": "LLM",
+      "tool_name": "finish",
+      "decision_summary": "Request human review: storyboard/claims were approved and render_review passed, but two repair_scene attempts and a finish call failed. The prior finish failure likely stems from an unresolved blocker or missing reviewed artifact. Since repair attempts failed and evidence gaps remain unaddressed, I will not output PASS; escalate to human review to resolve the blocked recovery rather than fabricate approval.",
+      "based_on_observation_ids": [
+        "O6"
+      ],
+      "arguments_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "execution_status": "FAILED",
+      "observation_id": "O8",
+      "observation_summary": {
+        "error": "Invalid tool or observation reference. Include latest actual observation ID. Available: ['O1', 'O2', 'O3', 'O4', 'O5', 'O6', 'O7']",
+        "type": "ValueError"
+      },
+      "index": null
+    },
+    "offline_fixture": true,
+    "adapter_result": {
+      "reason": "Legacy finish with unresolved video review is not a repair action"
+    }
+  },
+  {
+    "legacy": {
+      "step_id": 9,
+      "task_id": "T02",
+      "state_hash": "7a993b207403b6a1917ecaed52e257fb7da693b825f76e6d1d9c1122053b7b3d",
+      "decision_source": "LLM",
+      "tool_name": "repair_scene",
+      "decision_summary": null,
+      "based_on_observation_ids": null,
+      "arguments_hash": "457f3e35a22c4e8986b8690ce342fb6566ebad87c2e79ea8503462c87a2b31a3",
+      "execution_status": "FAILED",
+      "observation_id": "O9",
+      "observation_summary": {
+        "error": "Invalid tool or observation reference. Include latest actual observation ID. Available: ['O1', 'O2', 'O3', 'O4', 'O5', 'O6', 'O7', 'O8']",
+        "type": "ValueError"
+      },
+      "index": 0
+    },
+    "offline_fixture": true,
+    "adapter_result": {
+      "tool": "repair_scene",
+      "observation_hash": "a727a08799b8a7fee29c4e2b95ee1997cab5c36eff16949365fa4a3d12f93c47",
+      "video_sha256": "replay-video"
+    }
+  }
+]

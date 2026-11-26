@@ -1,0 +1,12 @@
+{
+  "generation_status": "NOT_RENDERED",
+  "release_status": "RENDER_FAILED",
+  "video_path": null,
+  "video_sha256": null,
+  "media": null,
+  "review": null,
+  "failure": {
+    "stage": "generation",
+    "reason": "return sorted(extracted_mobjects, key=lambda m: m.z_index)      │\n│                                                                              │\n│ /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/manim/mobject/mob │\n│ ject.py:2312 in get_family                                                   │\n│                                                                              │\n│   2309 │   │   return result + self.submobjects                              │\n│   2310 │                                                                     │\n│   2311 │   def get_family(self, recurse: bool = True) -> list[Self]:         │\n│ ❱ 2312 │   │   sub_families = [x.get_family() for x in self.submobjects]     │\n│   2313 │   │   all_mobjects = [self] + list(it.chain(*sub_families))         │\n│   2314 │   │   return remove_list_redundancies(all_mobjects)                 │\n│   2315                                                                       │\n╰──────────────────────────────────────────"
+  }
+}

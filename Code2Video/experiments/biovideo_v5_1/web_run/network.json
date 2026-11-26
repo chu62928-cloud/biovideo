@@ -1,0 +1,33 @@
+[
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=How+does+water+movement+across+the+cell+membrane+%28osmosis%29+change+turgor+pressure+and+the+firmness+of+a+plant+cell%3F&format=json&pageSize=3&resultType=core",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T15:07:21Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "511efd6c0e9f43e2e5af18f99fdf3ed415af68de61b83ad0d1fc4abe27b107fc"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13565454/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T15:07:40Z",
+    "status": "UNVERIFIED",
+    "error": "ReadTimeout"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12608269/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T15:08:06Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "b0ca462663642b68b2e30302404e80f14312ad44fc755485d6527c75fa77da22"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8675742/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T15:08:21Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "c6aaddd1d675335ee712e23c01c1e649e99ba477cef3b8390fdf1e2db199f0d4"
+  }
+]

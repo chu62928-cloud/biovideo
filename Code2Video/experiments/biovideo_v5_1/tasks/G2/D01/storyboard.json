@@ -1,0 +1,32 @@
+{
+  "scene_id": "section_1",
+  "section": {
+    "id": "section_1",
+    "title": "Sec 1: The Lifesaver in Your Blood",
+    "lecture_lines": [
+      "Red blood cells: most abundant, carry oxygen",
+      "Biconcave disk: plump edge, thin center",
+      "Diameter about 7-8 micrometers",
+      "Shape increases surface area for gas exchange"
+    ],
+    "animations": [
+      "Animation step 1: Show a colorful blood vessel with red blood cells flowing. Label 'Red Blood Cells' in light red. Fade in text 'Carry Oxygen' in white.",
+      "Animation step 2: Zoom in on one red blood cell. Show a 3D-like biconcave disk (using 2D cross-section with indented center). Rotate it to reveal shape. Label 'Biconcave Disk' in yellow.",
+      "Animation step 3: Display a scale bar labeled '7-8 μm' in cyan. Show the cell next to a sphere of same diameter for comparison.",
+      "Animation step 4: Side-by-side comparison: sphere and biconcave disk. Highlight the biconcave disk with a glowing outline. Show a bar graph comparing surface area-to-volume ratio: biconcave bar higher than sphere. Label 'Higher Surface Area' in green."
+    ]
+  },
+  "claim_ids": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "C8",
+    "C9",
+    "C10",
+    "C11"
+  ]
+}

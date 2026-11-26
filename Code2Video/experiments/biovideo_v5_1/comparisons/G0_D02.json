@@ -1,0 +1,116 @@
+{
+  "review": {
+    "science": {
+      "decision": "REVISE",
+      "checks": {
+        "facts": "PASS",
+        "identity": "PASS",
+        "mechanism": "FAIL",
+        "coverage": "PASS",
+        "labels": "PASS",
+        "clarity": "FAIL",
+        "continuity": "PASS",
+        "technical": "PASS"
+      },
+      "issues": [
+        {
+          "issue_id": "ISS-001",
+          "scene_id": "section_2",
+          "time_range": [
+            14,
+            18
+          ],
+          "claim_ids": [
+            "osmosis_direction",
+            "water_follows_solute"
+          ],
+          "severity": "high",
+          "observed_problem": "The osmosis mechanism is conveyed solely by three static cyan arrows pointing left-to-right across the dashed membrane. The blue water dots and yellow solute squares remain fixed in position throughout 14s–18s; no particle actually crosses the membrane and no concentration gradient visibly shifts over time. A static arrow plus the caption 'Water Follows Solute →' is insufficient to demonstrate a dynamic transport process.",
+          "expected_behavior": "Animate individual blue water dots translating from the high-water (left) side through the membrane to the low-water (right) side, with the left-side water count decreasing and the right-side water count increasing over several seconds so the viewer observes the net flux as a real-time process."
+        },
+        {
+          "issue_id": "ISS-002",
+          "scene_id": "section_3",
+          "time_range": [
+            23,
+            27
+          ],
+          "claim_ids": [
+            "hypotonic_turgid",
+            "isotonic_normal",
+            "hypertonic_flaccid"
+          ],
+          "severity": "medium",
+          "observed_problem": "The three solution-type labels are typeset on the same horizontal line and overlap: at 24s 'Hypotonic → Turgid ✓' and 'Isotonic → Normal =' collide, and at 27s 'Hypertonic → Flaccid ✗' overlaps both. The text is partially illegible, undermining the label dimension and making it difficult for a grade-10–12 viewer to map each solution to its cell state.",
+          "expected_behavior": "Place the three labels on separate lines or stagger them vertically beneath their respective cells so that 'Hypotonic → Turgid ✓', 'Isotonic → Normal =', and 'Hypertonic → Flaccid ✗' are each fully legible without overlap."
+        },
+        {
+          "issue_id": "ISS-003",
+          "scene_id": "section_3",
+          "time_range": [
+            19,
+            28
+          ],
+          "claim_ids": [
+            "water_movement_changes_firmness"
+          ],
+          "severity": "medium",
+          "observed_problem": "The teaching goal requires showing how water movement across the membrane changes firmness. Section 3 presents three static cell sizes (large/medium/small vacuole) side by side. Only the rightmost cell shows a brief shrinkage animation (25s–27s) with a single outward arrow; the turgid and normal cells never show water entering or leaving over time. The causal link 'water in → firm, water out → soft' is asserted by caption rather than demonstrated as a temporal process for the first two cells.",
+          "expected_behavior": "For each of the three cells, animate water dots moving across the cell wall/membrane boundary over time (inward for hypotonic, none for isotonic, outward for hypertonic) with the vacuole radius tracking that flux, so the viewer sees firmness change as a consequence of observed water movement."
+        }
+      ]
+    },
+    "visual": {
+      "decision": "REVISE",
+      "checks": {
+        "facts": "PASS",
+        "identity": "PASS",
+        "mechanism": "FAIL",
+        "coverage": "PASS",
+        "labels": "PASS",
+        "clarity": "FAIL",
+        "continuity": "PASS",
+        "technical": "PASS"
+      },
+      "issues": [
+        {
+          "issue_id": "VIS-001",
+          "scene_id": "section_2",
+          "time_range": [
+            14,
+            18
+          ],
+          "claim_ids": [
+            "osmosis_direction"
+          ],
+          "severity": "high",
+          "observed_problem": "Static arrows used in place of animated particle motion; no observable change in dot positions over the 4-second window, so the dynamic mechanism is not visually demonstrated.",
+          "expected_behavior": "Replace or supplement static arrows with animated water-dot trajectories crossing the membrane, showing at least 2–3 seconds of continuous motion."
+        },
+        {
+          "issue_id": "VIS-002",
+          "scene_id": "section_3",
+          "time_range": [
+            23,
+            27
+          ],
+          "claim_ids": [
+            "solution_labels"
+          ],
+          "severity": "medium",
+          "observed_problem": "Overlapping text strings render labels unreadable at 24s and 27s; 'Turgid ✓' and 'Isotonic' merge into a garbled string, and 'Normal =' collides with 'Hypertonic'.",
+          "expected_behavior": "Reposition labels to non-overlapping vertical positions or use sequential reveal with adequate spacing."
+        }
+      ]
+    },
+    "video_sha256": "95455d3727f78b1b6d6bcf1e39716cf4ee5da4889258fb38090582f579ef0016",
+    "domain_status": "REVISE"
+  },
+  "media": {
+    "duration": 35.933333,
+    "width": 854,
+    "height": 480,
+    "fps": "15/1"
+  },
+  "historical": true
+}

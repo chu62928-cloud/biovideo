@@ -1,0 +1,118 @@
+{
+  "sha256": "e21461ac9a87250542ca685ecfc883bd391c50e7617aeeebd5613073a04da1bc",
+  "context": {
+    "claims": [
+      {
+        "id": "c1",
+        "statement": "Water crosses the plant cell plasma membrane by osmosis, moving down its own concentration gradient from lower solute concentration (higher free-water concentration) toward higher solute concentration.",
+        "passage_id": "4",
+        "source_url": "https://openstax.org/books/biology-2e/pages/5-2-passive-transport",
+        "evidence_id": "E_bc51b24509d1",
+        "location": "paragraph_21"
+      },
+      {
+        "id": "c2",
+        "statement": "Plant cytoplasm is normally slightly hypertonic to the external environment, so water enters the cell when available, generating turgor pressure against the cell wall.",
+        "passage_id": "1",
+        "source_url": "https://openstax.org/books/biology-2e/pages/5-2-passive-transport",
+        "evidence_id": "E_bc51b24509d1",
+        "location": "paragraph_36"
+      },
+      {
+        "id": "c3",
+        "statement": "The rigid cell wall limits plasma membrane expansion, so water influx increases turgor pressure and stiffens the cell rather than causing lysis.",
+        "passage_id": "1",
+        "source_url": "https://openstax.org/books/biology-2e/pages/5-2-passive-transport",
+        "evidence_id": "E_bc51b24509d1",
+        "location": "paragraph_36"
+      },
+      {
+        "id": "c4",
+        "statement": "If the extracellular fluid becomes hypertonic, water leaves the cell; the cell wall does not shrink, so the membrane detaches and cytoplasm constricts (plasmolysis), and the plant loses turgor and wilts.",
+        "passage_id": "1",
+        "source_url": "https://openstax.org/books/biology-2e/pages/5-2-passive-transport",
+        "evidence_id": "E_bc51b24509d1",
+        "location": "paragraph_36"
+      },
+      {
+        "id": "c5",
+        "statement": "Osmosis continues until the water concentration gradient reaches zero or hydrostatic pressure balances osmotic pressure.",
+        "passage_id": "7",
+        "source_url": "https://openstax.org/books/biology-2e/pages/5-2-passive-transport",
+        "evidence_id": "E_bc51b24509d1",
+        "location": "paragraph_25"
+      }
+    ],
+    "learning_objectives": [
+      "Explain how the direction of water movement across the plasma membrane depends on relative solute/water concentration inside versus outside the cell.",
+      "Relate net water influx to the development of turgor pressure and increased firmness of a plant cell.",
+      "Explain how the cell wall constrains volume and why turgor rather than lysis results in hypotonic conditions.",
+      "Predict the consequence of a hypertonic extracellular environment for turgor, membrane-wall contact, and wilting.",
+      "Describe the balance between osmotic pressure and hydrostatic pressure that ends net osmosis."
+    ],
+    "required_entities": [
+      "plasma membrane",
+      "cell wall",
+      "cytoplasm",
+      "water",
+      "solute",
+      "turgor pressure",
+      "extracellular fluid"
+    ],
+    "required_dynamic_mechanisms": [
+      "osmosis of water down its concentration gradient across a semipermeable membrane",
+      "water influx generating turgor pressure against the cell wall",
+      "cell wall limiting membrane expansion",
+      "water efflux under hypertonic conditions causing plasmolysis and loss of turgor",
+      "osmotic pressure balanced by hydrostatic pressure"
+    ],
+    "forbidden_outcomes": [
+      "claiming the plant cell lyses in a hypotonic solution",
+      "claiming the cell wall shrinks or collapses during plasmolysis",
+      "claiming solutes freely cross the membrane to equalize concentration",
+      "claiming no water movement occurs in isotonic conditions",
+      "claiming turgor pressure pulls water out of the cell"
+    ],
+    "allowed_simplifications": [
+      "treating aquaporins as passive facilitators of water movement without detailing their kinetics",
+      "using 'firmness' and 'stiffness' interchangeably with turgor pressure",
+      "omitting numerical osmolarity values",
+      "describing the cell wall as rigid without specifying its molecular composition"
+    ],
+    "review": {
+      "decision": "PASS",
+      "passed_ids": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5"
+      ],
+      "blocking_reason": ""
+    },
+    "verified": true,
+    "references": [
+      {
+        "source": "https://openstax.org/books/biology-2e/pages/5-2-passive-transport",
+        "caption": "Figure 5.13 The turgor pressure within a plant cell depends on the solution's tonicity in which it is bathed. (credit: modification of work by Mariana Ruiz Villareal)",
+        "alt": "The left part of this image shows a plant cell bathed in a hypertonic solution so that the plasma membrane has pulled away completely from the cell wall, and the central vacuole has shrunk. Water moves out of the plant cell. The middle part shows a plant cell bathed in an isotonic solution; the plasma membrane has pulled away from the cell wall a bit, and the central vacuole size is unchanged. Water moves both in and out of the plant cell. The right part shows a plant cell in a hypotonic solution. The central vacuole is large, and the plasma membrane is pressed against the cell wall. Water is moving into the plant cell.",
+        "use": "caption and visual description for original schematic"
+      },
+      {
+        "source": "https://openstax.org/books/biology-2e/pages/5-2-passive-transport",
+        "caption": "Figure 5.11 In osmosis, water always moves from an area of higher water concentration to one of lower concentration. In the diagram, the solute cannot pass through the selectively permeable membrane, but the water can.",
+        "alt": "This illustration shows a container whose contents are separated by a semipermeable membrane. Initially, there is a high concentration of solute on the right side of the membrane and a low concentration of the left. Over time, water diffuses across the membrane toward the side of the container that initially had a higher concentration of solute (lower concentration of water). As a result of osmosis, the water level is higher on this side of the membrane, and the solute concentration is the same on both sides.",
+        "use": "caption and visual description for original schematic"
+      }
+    ],
+    "task": {
+      "request": "Explain how water movement across the cell membrane changes the firmness of a plant cell.",
+      "duration": 30,
+      "audience": "grades 10-12",
+      "language": "en",
+      "backend": "auto",
+      "budget": 7,
+      "workflow": "agent"
+    }
+  }
+}

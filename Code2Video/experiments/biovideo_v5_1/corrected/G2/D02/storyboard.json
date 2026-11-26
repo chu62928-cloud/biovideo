@@ -1,0 +1,28 @@
+{
+  "scene_id": "section_1",
+  "section": {
+    "id": "section_1",
+    "title": "Sec 1: Water Movement and Plant Cell Firmness",
+    "lecture_lines": [
+      "Water crosses the membrane by osmosis.",
+      "Plant cells are normally slightly hypertonic.",
+      "Water influx builds turgor pressure.",
+      "The rigid wall prevents lysis.",
+      "Hypertonic fluid causes plasmolysis and wilting."
+    ],
+    "animations": [
+      "Animation step 1: Show two compartments separated by a vertical semipermeable membrane labeled 'plasma membrane' in cyan (#00E5FF). Left side is dilute (few orange #FF9F1C solute dots), right side is concentrated (many orange dots). Label 'lower solute concentration' on left in white (#FFFFFF) and 'higher solute concentration' on right in white. Animate small blue (#3A86FF) water dots moving left-to-right through the membrane while orange solute dots stay put. Add caption 'Water moves down its own gradient' in yellow (#FFD166).",
+      "Animation step 2: Transition to a plant cell diagram. Draw a thick rigid rectangular cell wall in green (#2EC4B6) labeled 'cell wall', a plasma membrane line in cyan just inside it, a large central vacuole ellipse in light purple (#9B5DE5) labeled 'central vacuole', and cytoplasm region in faint gray (#AAAAAA) labeled 'cytoplasm'. Add external fluid label 'extracellular fluid' in white. Show orange solute dots more concentrated inside the cytoplasm than outside. Add small text 'inside slightly hypertonic' in yellow (#FFD166). Animate blue water dots moving from outside into the cell across the membrane.",
+      "Animation step 3: Show the central vacuole ellipse scaling up smoothly, the plasma membrane pushing outward until it presses against the green cell wall. Add a pressure gauge graphic (a vertical bar with a marker) on the right labeled 'turgor pressure' in yellow (#FFD166); animate the marker rising. Show small outward arrows from membrane to wall in light green (#80ED99). Flash the label 'turgid and firm' in bright green (#80ED99).",
+      "Animation step 4: Side-by-side comparison appears. Left: an animal cell (simple circle, orange membrane) in hypotonic fluid swells and bursts with a small 'pop' flash; label 'animal cell lyses' in red (#EF476F). Right: the plant cell with wall stays intact; the wall glows green and a barrier icon labeled 'wall limits expansion' in green (#80ED99). Show water dots entering but vacuole stops at wall. Emphasize 'no lysis' in yellow (#FFD166).",
+      "Animation step 5: Change external fluid to hypertonic: increase orange solute dots outside, fewer inside. Animate blue water dots moving out of the cell. Shrink the vacuole ellipse, pull the cyan plasma membrane inward away from the green wall, leaving a visible gap labeled 'membrane detaches' in orange (#FF9F1C). Collapse the cytoplasm region inward. Reduce the turgor gauge marker to near zero. Add whole-plant silhouette drooping on the right, labeled 'wilting' in red (#EF476F). Flash 'plasmolysis' in orange (#FF9F1C)."
+    ]
+  },
+  "claim_ids": [
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "c5"
+  ]
+}

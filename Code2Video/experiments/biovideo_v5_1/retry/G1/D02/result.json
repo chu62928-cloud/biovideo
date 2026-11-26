@@ -1,0 +1,12 @@
+{
+  "generation_status": "NOT_RENDERED",
+  "release_status": "RENDER_FAILED",
+  "video_path": null,
+  "video_sha256": null,
+  "media": null,
+  "review": null,
+  "failure": {
+    "stage": "fact_sheet",
+    "reason": "All five claims are entailed by their cited passages and no forbidden outcomes are asserted. However, educational coverage is incomplete: the learning objectives require predicting cell firmness under hypotonic, isotonic, and hypertonic conditions, but no claim addresses the isotonic case (net water movement ~zero, firmness unchanged) or explicitly covers the hypotonic/extracellular side of plasmolysis in firmness terms; also the claim set lacks an explicit statement tying osmolarity/tonicity to the graded spectrum of firmness. Add a claim on isotonic conditions and firmness to close the objective gap before PASS."
+  }
+}

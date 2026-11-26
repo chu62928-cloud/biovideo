@@ -1,0 +1,165 @@
+{
+  "sha256": "b230754bf0cc5bcb1a8d6c08ca1ce1a4ef9ca2ad9b0ea56f67edd70460eb0372",
+  "context": {
+    "claims": [
+      {
+        "id": "C1",
+        "statement": "Erythrocytes (red blood cells) are biconcave disks: plump at the periphery and very thin in the center.",
+        "evidence_id": "E_05a73a220035",
+        "location": "paragraph_4",
+        "source_url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes"
+      },
+      {
+        "id": "C2",
+        "statement": "The biconcave shape provides a greater surface area relative to volume for gas exchange than a sphere of similar diameter.",
+        "evidence_id": "E_05a73a220035",
+        "location": "paragraph_4",
+        "source_url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes"
+      },
+      {
+        "id": "C3",
+        "statement": "Because erythrocytes lack most organelles, more interior space is available for hemoglobin molecules that transport gases.",
+        "evidence_id": "E_05a73a220035",
+        "location": "paragraph_4",
+        "source_url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes"
+      },
+      {
+        "id": "C4",
+        "statement": "In capillaries, oxygen carried by erythrocytes can diffuse into the plasma and through capillary walls to reach cells.",
+        "evidence_id": "E_05a73a220035",
+        "location": "paragraph_4",
+        "source_url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes"
+      },
+      {
+        "id": "C5",
+        "statement": "Erythrocytes' structural proteins, such as spectrin, are flexible, allowing cells to fold and bend through narrow capillaries and spring back in wider vessels.",
+        "evidence_id": "E_05a73a220035",
+        "location": "paragraph_4",
+        "source_url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes"
+      },
+      {
+        "id": "C6",
+        "statement": "The primary function of erythrocytes is to pick up inhaled oxygen from the lungs and transport it to body tissues.",
+        "evidence_id": "E_05a73a220035",
+        "location": "paragraph_1",
+        "source_url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes"
+      },
+      {
+        "id": "C7",
+        "statement": "Each iron ion in heme binds one oxygen molecule, so each hemoglobin molecule transports four oxygen molecules; a single erythrocyte may carry about 300 million hemoglobin molecules.",
+        "evidence_id": "E_05a73a220035",
+        "location": "paragraph_8",
+        "source_url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes"
+      },
+      {
+        "id": "C8",
+        "statement": "Mature erythrocytes lack mitochondria and rely on anaerobic respiration, so they do not use the oxygen they transport.",
+        "evidence_id": "E_05a73a220035",
+        "location": "paragraph_3",
+        "source_url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes"
+      },
+      {
+        "id": "C9",
+        "statement": "In the lungs hemoglobin binds oxygen to form oxyhemoglobin; in tissues it releases some oxygen, becoming deoxyhemoglobin, and oxygen release depends on tissue need.",
+        "evidence_id": "E_05a73a220035",
+        "location": "paragraph_9",
+        "source_url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes"
+      },
+      {
+        "id": "C10",
+        "statement": "Erythrocytes have a mean diameter of about 7–8 micrometers.",
+        "evidence_id": "E_05a73a220035",
+        "location": "paragraph_1",
+        "source_url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes"
+      },
+      {
+        "id": "C11",
+        "statement": "The biconcave shape optimizes surface area-to-volume ratio, facilitating gas exchange, and enables cells to fold through narrow vessels.",
+        "evidence_id": "E_05a73a220035",
+        "location": "paragraph_5",
+        "source_url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes"
+      }
+    ],
+    "learning_objectives": [
+      "Describe the biconcave disk shape of human red blood cells.",
+      "Explain how biconcave shape increases surface area-to-volume ratio and thereby facilitates oxygen diffusion.",
+      "Relate the absence of most organelles to increased hemoglobin capacity for oxygen transport.",
+      "Explain how flexible structural proteins (e.g., spectrin) let erythrocytes deform to pass through narrow capillaries.",
+      "Trace the path of oxygen from lung uptake by hemoglobin to release at tissues."
+    ],
+    "required_entities": [
+      "erythrocyte (red blood cell)",
+      "biconcave disk",
+      "hemoglobin",
+      "heme",
+      "iron ion (Fe2+)",
+      "oxygen molecule",
+      "oxyhemoglobin",
+      "deoxyhemoglobin",
+      "spectrin",
+      "capillary",
+      "plasma"
+    ],
+    "required_dynamic_mechanisms": [
+      "oxygen diffusion from erythrocyte into plasma and across capillary walls to tissue cells",
+      "hemoglobin binding oxygen in lungs forming oxyhemoglobin",
+      "oxygen release in tissues depending on tissue demand",
+      "erythrocyte deformation (folding) through narrow capillaries driven by flexible structural proteins such as spectrin",
+      "surface area-to-volume ratio enhancement of gas exchange due to biconcave shape"
+    ],
+    "forbidden_outcomes": [
+      "Stating that red blood cells use the oxygen they transport for aerobic respiration",
+      "Stating that mature erythrocytes contain a nucleus or mitochondria",
+      "Stating that red blood cells leave the blood vessels to deliver oxygen directly inside tissue cells",
+      "Stating that the biconcave shape decreases surface area relative to a sphere",
+      "Stating that hemoglobin carries only one oxygen molecule per molecule"
+    ],
+    "allowed_simplifications": [
+      "Omitting quantitative details such as exact erythrocyte counts per microliter",
+      "Omitting the 300 million hemoglobin / 1.2 billion oxygen molecule numbers while keeping the four-oxygen-per-hemoglobin relationship",
+      "Referring to biconcave shape generically as a 'dented disk' for younger audiences",
+      "Omitting carbon dioxide transport details since the prompt focuses on oxygen"
+    ],
+    "review": {
+      "decision": "PASS",
+      "passed_ids": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "C11"
+      ],
+      "blocking_reason": ""
+    },
+    "verified": true,
+    "references": [
+      {
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes",
+        "caption": "Figure 18.6 Shape of Red Blood Cells Erythrocytes are biconcave discs with very shallow centers. This shape optimizes the ratio of surface area to volume, facilitating gas exchange. It also enables them to fold up as they move through narrow blood vessels.",
+        "alt": "This photograph shows a few red blood cells.",
+        "use": "caption and visual description for original schematic"
+      },
+      {
+        "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes",
+        "caption": "Figure 18.9 Sickle Cells Sickle cell anemia is caused by a mutation in one of the hemoglobin genes. Erythrocytes produce an abnormal type of hemoglobin, which causes the cell to take on a sickle or crescent shape. (credit: Janice Haney Carr)",
+        "alt": "This photograph shows red blood cells of a person suffering from sickle cell anemia. Instead of being discoid shaped like healthy blood cells, sickle red blood cells are shaped like a sickle.",
+        "use": "caption and visual description for original schematic"
+      }
+    ],
+    "task": {
+      "request": "Explain how the shape of a human red blood cell helps it transport oxygen.",
+      "duration": 30,
+      "audience": "grades 10-12",
+      "language": "en",
+      "backend": "auto",
+      "budget": 8,
+      "workflow": "agent"
+    }
+  }
+}

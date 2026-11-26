@@ -1,0 +1,443 @@
+{
+  "results": {
+    "corrected/G2/D02": {
+      "generation_status": "RENDERED",
+      "release_status": "VIDEO_CANDIDATE",
+      "video_path": "candidate_render_repair.mp4",
+      "video_sha256": "ee1d785500b1f3e173f82a46d86d2534c46bb5b193a075b5ee57c6de01630d30",
+      "media": {
+        "duration": 28.5,
+        "width": 1280,
+        "height": 720,
+        "fps": "30/1"
+      },
+      "review": {
+        "science": {
+          "decision": "REVISE"
+        },
+        "visual": {
+          "decision": "REVISE"
+        },
+        "checks": {
+          "facts": "FAIL",
+          "identity": "PASS",
+          "mechanism": "PASS",
+          "coverage": "PASS",
+          "labels": "FAIL",
+          "clarity": "PASS",
+          "continuity": "INCOMPLETE",
+          "technical": "PASS"
+        },
+        "issues": [
+          {
+            "issue_id": "ISS-001",
+            "scene_id": "section_1",
+            "time_range": [
+              24,
+              27
+            ],
+            "claim_ids": [
+              "inside_slightly_hypertonic"
+            ],
+            "severity": "high",
+            "observed_problem": "During the plasmolysis phase the central vacuole shrinks and blue water dots move OUT of the cell, yet the persistent bottom caption still reads 'inside slightly hypertonic'. Water efflux only occurs when the EXTRACELLULAR fluid is hypertonic, so the static label now contradicts the depicted direction of water movement and the plasmolysis outcome.",
+            "expected_behavior": "Switch the tonicity caption to reflect a hypertonic external medium (e.g., 'outside hypertonic / water leaves cell') once the scenario flips to plasmolysis, so the label matches the observed water efflux."
+          },
+          {
+            "issue_id": "ISS-002",
+            "scene_id": "section_1",
+            "time_range": [
+              27,
+              27
+            ],
+            "claim_ids": [
+              "plasmolysis"
+            ],
+            "severity": "medium",
+            "observed_problem": "The 'plasmolysis' label appears at the very bottom edge of the frame and is clipped/cut off, while the 'membrane detaches' label at the top overlaps the 'cell wall' label, reducing legibility of the key term.",
+            "expected_behavior": "Reposition the 'plasmolysis' label fully inside the frame and offset 'membrane detaches' so it does not collide with 'cell wall'."
+          },
+          {
+            "issue_id": "ISS-003",
+            "scene_id": "section_1",
+            "time_range": [
+              21,
+              21
+            ],
+            "claim_ids": [],
+            "severity": "low",
+            "observed_problem": "A transition frame shows two overlapping plant-cell diagrams (a pan/cross-fade) which momentarily breaks spatial continuity between the turgor and plasmolysis states.",
+            "expected_behavior": "Use a clean cut or a single-diagram morph so the cell structure remains continuous across the state change."
+          },
+          {
+            "issue_id": "ISS-004",
+            "scene_id": "section_1",
+            "time_range": [
+              17,
+              20
+            ],
+            "claim_ids": [
+              "rigid_wall_prevents_lysis"
+            ],
+            "severity": "low",
+            "observed_problem": "Stray orange highlight circles overlay the left text block (over 'normally' and 'animal cell lyses'), reading as accidental annotation clutter rather than intentional emphasis.",
+            "expected_behavior": "Remove the stray circles or replace them with a clean line-highlight on the intended sentence only."
+          }
+        ],
+        "video_sha256": "ee1d785500b1f3e173f82a46d86d2534c46bb5b193a075b5ee57c6de01630d30",
+        "domain_status": "REVISE"
+      },
+      "failure": null
+    },
+    "retry/G1/D02": {
+      "generation_status": "NOT_RENDERED",
+      "release_status": "RENDER_FAILED",
+      "video_path": null,
+      "video_sha256": null,
+      "media": null,
+      "review": null,
+      "failure": {
+        "stage": "fact_sheet",
+        "reason": "All five claims are entailed by their cited passages and no forbidden outcomes are asserted. However, educational coverage is incomplete: the learning objectives require predicting cell firmness under hypotonic, isotonic, and hypertonic conditions, but no claim addresses the isotonic case (net water movement ~zero, firmness unchanged) or explicitly covers the hypotonic/extracellular side of plasmolysis in firmness terms; also the claim set lacks an explicit statement tying osmolarity/tonicity to the graded spectrum of firmness. Add a claim on isotonic conditions and firmness to close the objective gap before PASS."
+      }
+    },
+    "tasks/G1/D01": {
+      "generation_status": "NOT_RENDERED",
+      "release_status": "RENDER_FAILED",
+      "video_path": null,
+      "video_sha256": null,
+      "media": null,
+      "review": null,
+      "failure": {
+        "stage": "fact_sheet",
+        "reason": "No stage artifacts (script, roles, assets, storyboard, animation code) were provided, so entailment and educational coverage cannot be verified; facts C1–C9 are internally supported by the cited source, but the required outputs require stage-level review before a PASS can be issued."
+      }
+    },
+    "tasks/G1/D02": {
+      "generation_status": "NOT_RENDERED",
+      "release_status": "RENDER_FAILED",
+      "video_path": null,
+      "video_sha256": null,
+      "media": null,
+      "review": null,
+      "failure": {
+        "stage": "fact_sheet",
+        "reason": "('E_bc51b24509d1', 'figures/Figure 5.13 alt')"
+      }
+    },
+    "tasks/G2/D01": {
+      "generation_status": "RENDERED",
+      "release_status": "VIDEO_CANDIDATE",
+      "video_path": "candidate_initial.mp4",
+      "video_sha256": "bbbc7eb435c442518f2bdad1a269ebd6dbe1da405474524c32e6e776bfebb663",
+      "media": {
+        "duration": 18.2,
+        "width": 1280,
+        "height": 720,
+        "fps": "30/1"
+      },
+      "review": {
+        "science": {
+          "decision": "REVISE",
+          "summary": "Identity and most facts are correct (RBC = most abundant, biconcave disk with plump edge/thin center, ~7-8 µm, shape raises surface area for gas exchange). However the core mechanism is only asserted, not demonstrated: the sphere-vs-biconconcave comparison is mis-specified as 'Same diameter' (frames 11.2-12.2) while the SA:V bar chart (15.2-17.2) is shown without any oxygen/gas-exchange linkage, so the causal chain 'shape -> higher SA:V -> faster O2 transport' is never visually closed. The 'Carry Oxygen' caption (2.2-4.2) is a static label with no observable oxygen movement, which the rubric treats as insufficient for a dynamic mechanism."
+        },
+        "visual": {
+          "decision": "REVISE",
+          "summary": "Readable layout and consistent left-rail annotations, but the 3D biconcave wireframe (5.2-9.2) is a thin, perspective-skewed outline that is hard to read as a disk; the oxygen-transport scene (1.2-4.2) shows only 4-5 cells drifting with a single static vertical arrow and a 'Carry Oxygen' caption, no O2 particles; the SA:V chart bars (16.2-17.2) have no numeric values or units, and the 'Same diameter' comparison circle (11.2-12.2) is a flat gray disk that does not match the 3D biconcave it is compared to."
+        },
+        "checks": {
+          "facts": "PASS",
+          "identity": "PASS",
+          "mechanism": "FAIL",
+          "coverage": "FAIL",
+          "labels": "PASS",
+          "clarity": "PASS",
+          "continuity": "PASS",
+          "technical": "PASS"
+        },
+        "issues": [
+          {
+            "issue_id": "ISS-001",
+            "scene_id": "section_1",
+            "time_range": [
+              11.2,
+              12.2
+            ],
+            "claim_ids": [
+              "shape-increases-sa"
+            ],
+            "severity": "high",
+            "observed_problem": "The sphere used for the surface-area comparison is annotated 'Same diameter' next to the biconcave disk. For equal diameter a sphere actually has a LARGER surface area than a thin biconcave disk, so this comparison does not support the stated claim and is the wrong reference frame for the SA:V argument.",
+            "expected_behavior": "Compare the biconcave disk to a sphere of the SAME VOLUME (or state 'same volume') so the higher surface area / SA:V of the biconcave shape is the valid, defensible claim."
+          },
+          {
+            "issue_id": "ISS-002",
+            "scene_id": "section_1",
+            "time_range": [
+              15.2,
+              17.2
+            ],
+            "claim_ids": [
+              "sa-v-higher",
+              "shape-helps-oxygen"
+            ],
+            "severity": "high",
+            "observed_problem": "The SA:V bar chart shows the biconcave bar taller than the sphere bar and a 'Higher Surface Area' caption, but there is no arrow, label, or animation connecting higher surface area to oxygen/gas exchange. The mechanism stops at 'more area' and never reaches the teaching goal of transporting oxygen.",
+            "expected_behavior": "Add an explicit visual link from the higher SA:V bar to gas exchange (e.g., O2/CO2 arrows crossing the membrane, or a caption 'more area = faster O2 in/out'), completing the shape->SA:V->oxygen-transport chain."
+          },
+          {
+            "issue_id": "ISS-003",
+            "scene_id": "section_1",
+            "time_range": [
+              2.2,
+              4.2
+            ],
+            "claim_ids": [
+              "carry-oxygen"
+            ],
+            "severity": "medium",
+            "observed_problem": "Oxygen transport is conveyed only by the static 'Carry Oxygen' caption and a single static vertical double-arrow beside two stacked cells; no oxygen molecules or directional gas movement are shown over time, so the dynamic mechanism is not evidenced.",
+            "expected_behavior": "Animate oxygen (e.g., small dots) entering/leaving the red blood cell across the membrane, or show O2 binding, so the transport is an observable change over time rather than a caption."
+          },
+          {
+            "issue_id": "ISS-004",
+            "scene_id": "section_1",
+            "time_range": [
+              16.2,
+              17.2
+            ],
+            "claim_ids": [
+              "sa-v-higher"
+            ],
+            "severity": "low",
+            "observed_problem": "The SA:V bar chart bars carry no numeric values, ratio, or units, so the magnitude of the advantage is not verifiable and the 'SA : V' axis label is ambiguous.",
+            "expected_behavior": "Label the bars with approximate SA:V values or a ratio (e.g., ~1.4 vs ~1.0) and clarify the axis as surface-area-to-volume ratio."
+          },
+          {
+            "issue_id": "ISS-005",
+            "scene_id": "section_1",
+            "time_range": [
+              5.2,
+              9.2
+            ],
+            "claim_ids": [
+              "biconcave-shape"
+            ],
+            "severity": "low",
+            "observed_problem": "The 3D biconcave disk is rendered as a thin perspective-skewed wireframe that tilts and distorts, making the 'plump edge / thin center' topology hard to read as a flat disk in several frames.",
+            "expected_behavior": "Use a clearer, more stable 3D or shaded biconcave disk (or a clean top-view with a cross-section inset) so the plump-edge/thin-center shape is unambiguous."
+          }
+        ],
+        "video_sha256": "bbbc7eb435c442518f2bdad1a269ebd6dbe1da405474524c32e6e776bfebb663",
+        "domain_status": "REVISE"
+      },
+      "failure": null
+    },
+    "tasks/G2/D02": {
+      "generation_status": "NOT_RENDERED",
+      "release_status": "RENDER_FAILED",
+      "video_path": null,
+      "video_sha256": null,
+      "media": null,
+      "review": null,
+      "failure": {
+        "stage": "fact_sheet",
+        "reason": "('E_bc51b24509d1', 'paragraph_36 / paragraph_38')"
+      }
+    },
+    "web_run": {
+      "generation_status": "NOT_RENDERED",
+      "release_status": "RENDER_FAILED",
+      "video_path": null,
+      "video_sha256": null,
+      "media": null,
+      "review": null,
+      "failure": {
+        "stage": "fact_sheet",
+        "reason": "C1-C4 are generic textbook osmosis/turgor/plasmolysis/RWC statements, but the only cited source (E_6fb69a1cc780, a Kentucky bluegrass ethephon drought-tolerance transcriptome study) is about drought tolerance and ethephon treatment; its abstract does not state the osmosis definition, turgor pressure pushing the protoplast against the cell wall, plasmolysis/membrane detachment, or RWC as an indicator of cell firmness. Entailment is therefore not established for any claim, and the required entities (cell membrane, cell wall, central vacuole, cytoplasm/protoplast, water potential, turgor pressure) and required dynamic mechanisms (osmotic water movement, turgor build-up, plasmolysis/wilting) are not covered by verified evidence. Since the core mechanistic explanation and learning objectives lack source support, no fact can be passed while blocking issues remain."
+      }
+    }
+  },
+  "historical_G0": [
+    {
+      "review": {
+        "science": {
+          "decision": "REVISE",
+          "rationale": "Core identity (biconcave RBC) and the flexibility/capillary-transit mechanism are scientifically sound and the transit part is genuinely animated. However, the central claim of the teaching goal — that the shape aids oxygen transport via faster O2 loading/unloading — is asserted only through a static caption and a static surface-area bar chart, with no observable change over time representing gas exchange. An essential, unsupported (non-demonstrated) mechanism blocks approval."
+        },
+        "visual": {
+          "decision": "REVISE",
+          "rationale": "Labels, layout and the capillary-squeeze animation are clear and legible, but the O2 loading/unloading 'mechanism' is rendered as a frozen caption plus two inert dots, which does not satisfy the requirement for observable temporal change in a dynamic process."
+        },
+        "checks": {
+          "facts": "PASS",
+          "identity": "PASS",
+          "mechanism": "FAIL",
+          "coverage": "INCOMPLETE",
+          "labels": "PASS",
+          "clarity": "PASS",
+          "continuity": "PASS",
+          "technical": "PASS"
+        },
+        "issues": [
+          {
+            "issue_id": "ISS-001",
+            "scene_id": "section_1",
+            "time_range": [
+              6.0,
+              9.0
+            ],
+            "claim_ids": [
+              "O2 Loading ↔ Unloading",
+              "More area means faster oxygen loading and unloading"
+            ],
+            "severity": "high",
+            "observed_problem": "The oxygen loading/unloading mechanism is conveyed only by a static text label and two motionless dots; the surface-area comparison is a static bar chart (130% vs 100%). No oxygen molecules, gradient, or exchange event change over time, so the dynamic gas-exchange mechanism that the teaching goal depends on is never actually demonstrated.",
+            "expected_behavior": "Animate oxygen (e.g., O2 markers) diffusing across the biconcave membrane and/or binding to hemoglobin over time, with the increased surface area visibly correlating to a higher exchange rate, so the mechanism is shown via observable change rather than a caption."
+          },
+          {
+            "issue_id": "ISS-002",
+            "scene_id": "section_1",
+            "time_range": [
+              5.0,
+              9.0
+            ],
+            "claim_ids": [
+              "This shape gives 30% more surface area"
+            ],
+            "severity": "medium",
+            "observed_problem": "The '30% more surface area' figure is presented as a fixed bar chart with no derivation or visual mapping of how the biconcave geometry yields that area relative to the equal-volume sphere, leaving a key quantitative claim unsupported by visible evidence.",
+            "expected_behavior": "Visually relate the biconcave disc and the sphere (e.g., unfold/compare surfaces or annotate equal volume) so the 30% area advantage is grounded in observable geometry, not just a stated number."
+          }
+        ],
+        "video_sha256": "5f2afc6f05db567c6af0ce1864acf1ae445b1de0c100db47056031e4b4823ed2",
+        "domain_status": "REVISE"
+      },
+      "media": {
+        "duration": 13.266667,
+        "width": 854,
+        "height": 480,
+        "fps": "15/1"
+      },
+      "historical": true
+    },
+    {
+      "review": {
+        "science": {
+          "decision": "REVISE",
+          "checks": {
+            "facts": "PASS",
+            "identity": "PASS",
+            "mechanism": "FAIL",
+            "coverage": "PASS",
+            "labels": "PASS",
+            "clarity": "FAIL",
+            "continuity": "PASS",
+            "technical": "PASS"
+          },
+          "issues": [
+            {
+              "issue_id": "ISS-001",
+              "scene_id": "section_2",
+              "time_range": [
+                14,
+                18
+              ],
+              "claim_ids": [
+                "osmosis_direction",
+                "water_follows_solute"
+              ],
+              "severity": "high",
+              "observed_problem": "The osmosis mechanism is conveyed solely by three static cyan arrows pointing left-to-right across the dashed membrane. The blue water dots and yellow solute squares remain fixed in position throughout 14s–18s; no particle actually crosses the membrane and no concentration gradient visibly shifts over time. A static arrow plus the caption 'Water Follows Solute →' is insufficient to demonstrate a dynamic transport process.",
+              "expected_behavior": "Animate individual blue water dots translating from the high-water (left) side through the membrane to the low-water (right) side, with the left-side water count decreasing and the right-side water count increasing over several seconds so the viewer observes the net flux as a real-time process."
+            },
+            {
+              "issue_id": "ISS-002",
+              "scene_id": "section_3",
+              "time_range": [
+                23,
+                27
+              ],
+              "claim_ids": [
+                "hypotonic_turgid",
+                "isotonic_normal",
+                "hypertonic_flaccid"
+              ],
+              "severity": "medium",
+              "observed_problem": "The three solution-type labels are typeset on the same horizontal line and overlap: at 24s 'Hypotonic → Turgid ✓' and 'Isotonic → Normal =' collide, and at 27s 'Hypertonic → Flaccid ✗' overlaps both. The text is partially illegible, undermining the label dimension and making it difficult for a grade-10–12 viewer to map each solution to its cell state.",
+              "expected_behavior": "Place the three labels on separate lines or stagger them vertically beneath their respective cells so that 'Hypotonic → Turgid ✓', 'Isotonic → Normal =', and 'Hypertonic → Flaccid ✗' are each fully legible without overlap."
+            },
+            {
+              "issue_id": "ISS-003",
+              "scene_id": "section_3",
+              "time_range": [
+                19,
+                28
+              ],
+              "claim_ids": [
+                "water_movement_changes_firmness"
+              ],
+              "severity": "medium",
+              "observed_problem": "The teaching goal requires showing how water movement across the membrane changes firmness. Section 3 presents three static cell sizes (large/medium/small vacuole) side by side. Only the rightmost cell shows a brief shrinkage animation (25s–27s) with a single outward arrow; the turgid and normal cells never show water entering or leaving over time. The causal link 'water in → firm, water out → soft' is asserted by caption rather than demonstrated as a temporal process for the first two cells.",
+              "expected_behavior": "For each of the three cells, animate water dots moving across the cell wall/membrane boundary over time (inward for hypotonic, none for isotonic, outward for hypertonic) with the vacuole radius tracking that flux, so the viewer sees firmness change as a consequence of observed water movement."
+            }
+          ]
+        },
+        "visual": {
+          "decision": "REVISE",
+          "checks": {
+            "facts": "PASS",
+            "identity": "PASS",
+            "mechanism": "FAIL",
+            "coverage": "PASS",
+            "labels": "PASS",
+            "clarity": "FAIL",
+            "continuity": "PASS",
+            "technical": "PASS"
+          },
+          "issues": [
+            {
+              "issue_id": "VIS-001",
+              "scene_id": "section_2",
+              "time_range": [
+                14,
+                18
+              ],
+              "claim_ids": [
+                "osmosis_direction"
+              ],
+              "severity": "high",
+              "observed_problem": "Static arrows used in place of animated particle motion; no observable change in dot positions over the 4-second window, so the dynamic mechanism is not visually demonstrated.",
+              "expected_behavior": "Replace or supplement static arrows with animated water-dot trajectories crossing the membrane, showing at least 2–3 seconds of continuous motion."
+            },
+            {
+              "issue_id": "VIS-002",
+              "scene_id": "section_3",
+              "time_range": [
+                23,
+                27
+              ],
+              "claim_ids": [
+                "solution_labels"
+              ],
+              "severity": "medium",
+              "observed_problem": "Overlapping text strings render labels unreadable at 24s and 27s; 'Turgid ✓' and 'Isotonic' merge into a garbled string, and 'Normal =' collides with 'Hypertonic'.",
+              "expected_behavior": "Reposition labels to non-overlapping vertical positions or use sequential reveal with adequate spacing."
+            }
+          ]
+        },
+        "video_sha256": "95455d3727f78b1b6d6bcf1e39716cf4ee5da4889258fb38090582f579ef0016",
+        "domain_status": "REVISE"
+      },
+      "media": {
+        "duration": 35.933333,
+        "width": 854,
+        "height": 480,
+        "fps": "15/1"
+      },
+      "historical": true
+    }
+  ],
+  "strict_ablation": false,
+  "reason": "G1 stopped at fact review; D02 candidate produced after general interface changes and assisted resume."
+}

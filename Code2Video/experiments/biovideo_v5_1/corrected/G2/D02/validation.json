@@ -1,0 +1,76 @@
+{
+  "science": {
+    "decision": "REVISE"
+  },
+  "visual": {
+    "decision": "REVISE"
+  },
+  "checks": {
+    "facts": "FAIL",
+    "identity": "PASS",
+    "mechanism": "PASS",
+    "coverage": "PASS",
+    "labels": "FAIL",
+    "clarity": "PASS",
+    "continuity": "INCOMPLETE",
+    "technical": "PASS"
+  },
+  "issues": [
+    {
+      "issue_id": "ISS-001",
+      "scene_id": "section_1",
+      "time_range": [
+        24,
+        27
+      ],
+      "claim_ids": [
+        "inside_slightly_hypertonic"
+      ],
+      "severity": "high",
+      "observed_problem": "During the plasmolysis phase the central vacuole shrinks and blue water dots move OUT of the cell, yet the persistent bottom caption still reads 'inside slightly hypertonic'. Water efflux only occurs when the EXTRACELLULAR fluid is hypertonic, so the static label now contradicts the depicted direction of water movement and the plasmolysis outcome.",
+      "expected_behavior": "Switch the tonicity caption to reflect a hypertonic external medium (e.g., 'outside hypertonic / water leaves cell') once the scenario flips to plasmolysis, so the label matches the observed water efflux."
+    },
+    {
+      "issue_id": "ISS-002",
+      "scene_id": "section_1",
+      "time_range": [
+        27,
+        27
+      ],
+      "claim_ids": [
+        "plasmolysis"
+      ],
+      "severity": "medium",
+      "observed_problem": "The 'plasmolysis' label appears at the very bottom edge of the frame and is clipped/cut off, while the 'membrane detaches' label at the top overlaps the 'cell wall' label, reducing legibility of the key term.",
+      "expected_behavior": "Reposition the 'plasmolysis' label fully inside the frame and offset 'membrane detaches' so it does not collide with 'cell wall'."
+    },
+    {
+      "issue_id": "ISS-003",
+      "scene_id": "section_1",
+      "time_range": [
+        21,
+        21
+      ],
+      "claim_ids": [],
+      "severity": "low",
+      "observed_problem": "A transition frame shows two overlapping plant-cell diagrams (a pan/cross-fade) which momentarily breaks spatial continuity between the turgor and plasmolysis states.",
+      "expected_behavior": "Use a clean cut or a single-diagram morph so the cell structure remains continuous across the state change."
+    },
+    {
+      "issue_id": "ISS-004",
+      "scene_id": "section_1",
+      "time_range": [
+        17,
+        20
+      ],
+      "claim_ids": [
+        "rigid_wall_prevents_lysis"
+      ],
+      "severity": "low",
+      "observed_problem": "Stray orange highlight circles overlay the left text block (over 'normally' and 'animal cell lyses'), reading as accidental annotation clutter rather than intentional emphasis.",
+      "expected_behavior": "Remove the stray circles or replace them with a clean line-highlight on the intended sentence only."
+    }
+  ],
+  "video_sha256": "ee1d785500b1f3e173f82a46d86d2534c46bb5b193a075b5ee57c6de01630d30",
+  "domain_status": "REVISE"
+}

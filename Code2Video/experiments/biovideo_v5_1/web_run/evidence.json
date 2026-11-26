@@ -1,0 +1,68 @@
+[
+  {
+    "evidence_id": "E_ccf6c56a5f96",
+    "url": "https://europepmc.org/article/MED/42737349",
+    "title": "Traditional and Non-Conventional Methods of Pre-Treatment of Biological Raw Materials for Drying Food.",
+    "author_or_institution": "Nowak D, Jakubczyk E.",
+    "source_type": "bibliographic_abstract",
+    "evidence_level": "ABSTRACT",
+    "biological_scope": "Requires claim-specific scope review",
+    "status": "RETRIEVED_ABSTRACT",
+    "content_sha256": "8ff0da545a572b100944d842370e3da1707c844dccfe2d923cb133e8f33b099d",
+    "passages": [
+      {
+        "location": "abstract",
+        "text": "Pre-treatment before drying is a crucial phase in food processing. This review highlights key traditional and innovative pre-treatment methods, focusing on their mechanisms of action at the cellular and tissue levels. This discourse examines innovative technologies with significant promise across various applications, as well as widely recognised methodologies. These include cold plasma, ultrasonication, pulsed electric fields, high-pressure processing, UV-C light, pulsed light, and coating techniques. It addresses biological components that act as barriers to mass transfer, thereby significantly influencing the efficiency of moisture evaporation. Understanding these interactions is crucial for optimising drying processes and enhancing the quality of dried food. Key pre-treatment parameters that affect outcomes are analysed and must be tailored to the specific characteristics of biological materials, which often require individualised adjustments. Each method is evaluated against goals like accelerated drying, microbiological purity, enzyme inactivation, and preservation of active components, emphasising the need for a targeted optimisation approach. The classification of biological materials into distinct categories has been proposed based on their structural and integumentary characteristics. The research outlines effective methodologies for each material type and pre-treatment purpose. This analysis also incorporates an economic perspective, considering the initial investment and operational costs of implementing the proposed methods.",
+        "evidence_level": "ABSTRACT"
+      }
+    ],
+    "figures": [],
+    "limitations": [
+      "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+    ]
+  },
+  {
+    "evidence_id": "E_ae20459e6131",
+    "url": "https://europepmc.org/article/MED/41225940",
+    "title": "Climate Change Impacts on Greenhouse Horticulture in the Mediterranean Basin: Challenges and Adaptation Strategies.",
+    "author_or_institution": "Fanourakis D, Tsaniklidis G, Makraki T, Nikoloudakis N, Bartzanas T, Sabatino L, Fatnassi H, Ntatsi G.",
+    "source_type": "bibliographic_abstract",
+    "evidence_level": "ABSTRACT",
+    "biological_scope": "Requires claim-specific scope review",
+    "status": "RETRIEVED_ABSTRACT",
+    "content_sha256": "e36388cacbd3d4085823676d1b3815b331bf2f8983bd3b812490fbedb92f99d2",
+    "passages": [
+      {
+        "location": "abstract",
+        "text": "Greenhouse horticulture is a cornerstone of year-round vegetable production. However, escalating climate change is intensifying abiotic stressors (i.e., elevated temperatures, increased vapor pressure deficits, water shortage, and modified solar radiation), threatening both crop productivity and postharvest performance. This review synthesizes current knowledge on how these climatic shifts impact greenhouse microclimate, pest and disease patterns, energy and water requirements, as well as crop development in the Mediterranean region. This study focuses on three major crops (tomato, cucumber, and sweet pepper), which prevail in the regional protected cultivation sector. Among the climate-induced stressors examined, elevated temperature emerges as the primary environmental constraint on greenhouse productivity. In reality, however, a combination of climate-induced stressors is at play, acting simultaneously and often synergistically. Among crops, cucumber generally displays the highest sensitivity to climate-induced shifts, whereas sweet pepper tends to be the most resilient. Next, adaptive strategies are explored, including precision irrigation, structural retrofitting measures, renewable energy integration, Decision Support Systems, and climate-resilient cultivars. Regional case studies revealed diverse country-specific counteractive innovations. As key elements of inclusive climate adaptation, supportive policy frameworks and a practical agenda of targeted research priorities are outlined. In conclusion, the sustainability of greenhouse horticulture under a changing climate demands integrated, technology-driven, and region-focused approaches.",
+        "evidence_level": "ABSTRACT"
+      }
+    ],
+    "figures": [],
+    "limitations": [
+      "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+    ]
+  },
+  {
+    "evidence_id": "E_6fb69a1cc780",
+    "url": "https://europepmc.org/article/MED/34914788",
+    "title": "Transcriptome analysis of Kentucky bluegrass subject to drought and ethephon treatment.",
+    "author_or_institution": "Zhang J, Gao Y, Xu L, Han L.",
+    "source_type": "bibliographic_abstract",
+    "evidence_level": "ABSTRACT",
+    "biological_scope": "Requires claim-specific scope review",
+    "status": "RETRIEVED_ABSTRACT",
+    "content_sha256": "df56101d23adebe8fe3de615197800e711f1e6ca5870e01adaf478f1c49269b5",
+    "passages": [
+      {
+        "location": "abstract",
+        "text": "Kentucky bluegrass (Poa pratensis L.) is an excellent cool-season turfgrass utilized widely in Northern China. However, turf quality of Kentucky bluegrass declines significantly due to drought. Ethephon seeds-soaking treatment has been proved to effectively improve the drought tolerance of Kentucky bluegrass seedlings. In order to investigate the effect of ethephon leaf-spraying method on drought tolerance of Kentucky bluegrass and understand the underlying mechanism, Kentucky bluegrass plants sprayed with and without ethephon are subjected to either drought or well watered treatments. The relative water content and malondialdehyde conent were measured. Meanwhile, samples were sequenced through Illumina. Results showed that ethephon could improve the drought tolerance of Kentucky bluegrass by elevating relative water content and decreasing malondialdehyde content under drought. Transcriptome analysis showed that 58.43% transcripts (254,331 out of 435,250) were detected as unigenes. A total of 9.69% (24,643 out of 254,331) unigenes were identified as differentially expressed genes in one or more of the pairwise comparisons. Differentially expressed genes due to drought stress with or without ethephon pre-treatment showed that ethephon application affected genes associated with plant hormone, signal transduction pathway and plant defense, protein degradation and stabilization, transportation and osmosis, antioxidant system and the glyoxalase pathway, cell wall and cuticular wax, fatty acid unsaturation and photosynthesis. This study provides a theoretical basis for revealing the mechanism for how ethephon regulates drought response and improves drought tolerance of Kentucky bluegrass.",
+        "evidence_level": "ABSTRACT"
+      }
+    ],
+    "figures": [],
+    "limitations": [
+      "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+    ]
+  }
+]

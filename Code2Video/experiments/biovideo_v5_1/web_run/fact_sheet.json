@@ -1,0 +1,79 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "Osmosis is the net movement of water across a selectively permeable membrane toward the region of higher water potential (lower solute concentration).",
+      "passage_id": "3",
+      "source_url": "https://europepmc.org/article/MED/34914788",
+      "support": "Kentucky bluegrass (Poa pratensis L.) is an excellent cool-season turfgrass utilized widely in Northern China. However, turf quality of Kentucky bluegrass declines significantly due to drought. Ethephon seeds-soaking treatment has been proved to effectively improve the drought tolerance of Kentucky bluegrass seedlings. In order to investigate the effect of ethephon leaf-spraying method on drought tolerance of Kentucky bluegrass and understand the underlying mechanism, Kentucky bluegrass plants sprayed with and without ethephon are subjected to either drought or well watered treatments. The relative water content and malondialdehyde conent were measured. Meanwhile, samples were sequenced through Illumina. Results showed that ethephon could improve the drought tolerance of Kentucky bluegrass by elevating relative water content and decreasing malondialdehyde content under drought. Transcriptome analysis showed that 58.43% transcripts (254,331 out of 435,250) were detected as unigenes. A total of 9.69% (24,643 out of 254,331) unigenes were identified as differentially expressed genes in one or more of the pairwise comparisons. Differentially expressed genes due to drought stress with or without ethephon pre-treatment showed that ethephon application affected genes associated with plant hormone, signal transduction pathway and plant defense, protein degradation and stabilization, transportation and osmosis, antioxidant system and the glyoxalase pathway, cell wall and cuticular wax, fatty acid unsaturation and photosynthesis. This study provides a theoretical basis for revealing the mechanism for how ethephon regulates drought response and improves drought tolerance of Kentucky bluegrass.",
+      "evidence_id": "E_6fb69a1cc780",
+      "location": "abstract"
+    },
+    {
+      "id": "C2",
+      "statement": "When a plant cell takes up water, the resulting internal hydrostatic (turgor) pressure pushes the protoplast against the cell wall, making the cell firm (turgid).",
+      "passage_id": "3",
+      "source_url": "https://europepmc.org/article/MED/34914788",
+      "support": "Kentucky bluegrass (Poa pratensis L.) is an excellent cool-season turfgrass utilized widely in Northern China. However, turf quality of Kentucky bluegrass declines significantly due to drought. Ethephon seeds-soaking treatment has been proved to effectively improve the drought tolerance of Kentucky bluegrass seedlings. In order to investigate the effect of ethephon leaf-spraying method on drought tolerance of Kentucky bluegrass and understand the underlying mechanism, Kentucky bluegrass plants sprayed with and without ethephon are subjected to either drought or well watered treatments. The relative water content and malondialdehyde conent were measured. Meanwhile, samples were sequenced through Illumina. Results showed that ethephon could improve the drought tolerance of Kentucky bluegrass by elevating relative water content and decreasing malondialdehyde content under drought. Transcriptome analysis showed that 58.43% transcripts (254,331 out of 435,250) were detected as unigenes. A total of 9.69% (24,643 out of 254,331) unigenes were identified as differentially expressed genes in one or more of the pairwise comparisons. Differentially expressed genes due to drought stress with or without ethephon pre-treatment showed that ethephon application affected genes associated with plant hormone, signal transduction pathway and plant defense, protein degradation and stabilization, transportation and osmosis, antioxidant system and the glyoxalase pathway, cell wall and cuticular wax, fatty acid unsaturation and photosynthesis. This study provides a theoretical basis for revealing the mechanism for how ethephon regulates drought response and improves drought tolerance of Kentucky bluegrass.",
+      "evidence_id": "E_6fb69a1cc780",
+      "location": "abstract"
+    },
+    {
+      "id": "C3",
+      "statement": "When a plant cell loses water, turgor pressure drops and the protoplast and plasma membrane detach from the cell wall (plasmolysis), so the tissue becomes flaccid and can wilt.",
+      "passage_id": "3",
+      "source_url": "https://europepmc.org/article/MED/34914788",
+      "support": "Kentucky bluegrass (Poa pratensis L.) is an excellent cool-season turfgrass utilized widely in Northern China. However, turf quality of Kentucky bluegrass declines significantly due to drought. Ethephon seeds-soaking treatment has been proved to effectively improve the drought tolerance of Kentucky bluegrass seedlings. In order to investigate the effect of ethephon leaf-spraying method on drought tolerance of Kentucky bluegrass and understand the underlying mechanism, Kentucky bluegrass plants sprayed with and without ethephon are subjected to either drought or well watered treatments. The relative water content and malondialdehyde conent were measured. Meanwhile, samples were sequenced through Illumina. Results showed that ethephon could improve the drought tolerance of Kentucky bluegrass by elevating relative water content and decreasing malondialdehyde content under drought. Transcriptome analysis showed that 58.43% transcripts (254,331 out of 435,250) were detected as unigenes. A total of 9.69% (24,643 out of 254,331) unigenes were identified as differentially expressed genes in one or more of the pairwise comparisons. Differentially expressed genes due to drought stress with or without ethephon pre-treatment showed that ethephon application affected genes associated with plant hormone, signal transduction pathway and plant defense, protein degradation and stabilization, transportation and osmosis, antioxidant system and the glyoxalase pathway, cell wall and cuticular wax, fatty acid unsaturation and photosynthesis. This study provides a theoretical basis for revealing the mechanism for how ethephon regulates drought response and improves drought tolerance of Kentucky bluegrass.",
+      "evidence_id": "E_6fb69a1cc780",
+      "location": "abstract"
+    },
+    {
+      "id": "C4",
+      "statement": "Relative water content is a measurable indicator of a plant tissue's hydration status, being elevated when drought tolerance is improved.",
+      "passage_id": "3",
+      "source_url": "https://europepmc.org/article/MED/34914788",
+      "support": "Kentucky bluegrass (Poa pratensis L.) is an excellent cool-season turfgrass utilized widely in Northern China. However, turf quality of Kentucky bluegrass declines significantly due to drought. Ethephon seeds-soaking treatment has been proved to effectively improve the drought tolerance of Kentucky bluegrass seedlings. In order to investigate the effect of ethephon leaf-spraying method on drought tolerance of Kentucky bluegrass and understand the underlying mechanism, Kentucky bluegrass plants sprayed with and without ethephon are subjected to either drought or well watered treatments. The relative water content and malondialdehyde conent were measured. Meanwhile, samples were sequenced through Illumina. Results showed that ethephon could improve the drought tolerance of Kentucky bluegrass by elevating relative water content and decreasing malondialdehyde content under drought. Transcriptome analysis showed that 58.43% transcripts (254,331 out of 435,250) were detected as unigenes. A total of 9.69% (24,643 out of 254,331) unigenes were identified as differentially expressed genes in one or more of the pairwise comparisons. Differentially expressed genes due to drought stress with or without ethephon pre-treatment showed that ethephon application affected genes associated with plant hormone, signal transduction pathway and plant defense, protein degradation and stabilization, transportation and osmosis, antioxidant system and the glyoxalase pathway, cell wall and cuticular wax, fatty acid unsaturation and photosynthesis. This study provides a theoretical basis for revealing the mechanism for how ethephon regulates drought response and improves drought tolerance of Kentucky bluegrass.",
+      "evidence_id": "E_6fb69a1cc780",
+      "location": "abstract"
+    }
+  ],
+  "learning_objectives": [
+    "Define osmosis and predict the direction of net water movement from water-potential differences across a membrane.",
+    "Explain how water gain raises turgor pressure and how the cell wall's resistance produces cell firmness (turgidity).",
+    "Explain how water loss lowers turgor pressure, leading to flaccidity, plasmolysis, and wilting.",
+    "Relate a measurable hydration index (relative water content) to observed changes in cell firmness."
+  ],
+  "required_entities": [
+    "cell membrane (plasma membrane)",
+    "cell wall",
+    "central vacuole",
+    "cytoplasm/protoplast",
+    "water potential",
+    "turgor pressure",
+    "relative water content"
+  ],
+  "required_dynamic_mechanisms": [
+    "net water movement by osmosis down a water-potential gradient",
+    "turgor pressure build-up pushing membrane/protoplast against the cell wall",
+    "loss of turgor causing membrane detachment (plasmolysis) and flaccidity/wilting"
+  ],
+  "forbidden_outcomes": [
+    "Claiming active transport pumps water across the membrane",
+    "Stating that the cell wall actively contracts or generates its own pressure",
+    "Equating water movement with solute movement in the same direction",
+    "Asserting water flows toward lower water potential",
+    "Depicting animal-cell lysis as the mechanism of plant firmness"
+  ],
+  "allowed_simplifications": [
+    "Treat water potential mainly via solute concentration without full pressure-potential algebra",
+    "Depict turgor as a single inward-directed pressure arrow on the wall",
+    "Omit aquaporin molecular detail",
+    "Use a schematic cell with a single large vacuole"
+  ],
+  "review": {
+    "decision": "REVISE",
+    "passed_ids": [],
+    "blocking_reason": "C1-C4 are generic textbook osmosis/turgor/plasmolysis/RWC statements, but the only cited source (E_6fb69a1cc780, a Kentucky bluegrass ethephon drought-tolerance transcriptome study) is about drought tolerance and ethephon treatment; its abstract does not state the osmosis definition, turgor pressure pushing the protoplast against the cell wall, plasmolysis/membrane detachment, or RWC as an indicator of cell firmness. Entailment is therefore not established for any claim, and the required entities (cell membrane, cell wall, central vacuole, cytoplasm/protoplast, water potential, turgor pressure) and required dynamic mechanisms (osmotic water movement, turgor build-up, plasmolysis/wilting) are not covered by verified evidence. Since the core mechanistic explanation and learning objectives lack source support, no fact can be passed while blocking issues remain."
+  },
+  "verified": false
+}
