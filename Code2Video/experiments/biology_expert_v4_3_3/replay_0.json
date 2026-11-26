@@ -1,0 +1,56 @@
+{
+  "status": "PREFLIGHT_REJECTED",
+  "errors": [
+    {
+      "code": "TARGET_OUTSIDE_TASK",
+      "target_id": "ENT_SR",
+      "allowed_targets": [
+        "ENT_TROPONIN_TROPOMYOSIN",
+        "PROC_CA_RELEASE_AND_TROPONIN_BINDING",
+        "PROC_CONTRACTION_CROSSBRIDGE_CYCLE",
+        "PROC_RELAXATION",
+        "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+        "REL_CROSSBRIDGE_ACTIN_MYOSIN",
+        "REL_NEURON_TO_SARCOLEMMA",
+        "REL_SARCOLEMMA_TO_SR"
+      ]
+    },
+    {
+      "code": "TARGET_OUTSIDE_TASK",
+      "target_id": null,
+      "allowed_targets": [
+        "ENT_TROPONIN_TROPOMYOSIN",
+        "PROC_CA_RELEASE_AND_TROPONIN_BINDING",
+        "PROC_CONTRACTION_CROSSBRIDGE_CYCLE",
+        "PROC_RELAXATION",
+        "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+        "REL_CROSSBRIDGE_ACTIN_MYOSIN",
+        "REL_NEURON_TO_SARCOLEMMA",
+        "REL_SARCOLEMMA_TO_SR"
+      ]
+    },
+    {
+      "code": "UNKNOWN_TARGET",
+      "target_id": null
+    },
+    {
+      "code": "TARGET_OUTSIDE_TASK",
+      "target_id": "PROC_EXCITATION",
+      "allowed_targets": [
+        "ENT_TROPONIN_TROPOMYOSIN",
+        "PROC_CA_RELEASE_AND_TROPONIN_BINDING",
+        "PROC_CONTRACTION_CROSSBRIDGE_CYCLE",
+        "PROC_RELAXATION",
+        "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+        "REL_CROSSBRIDGE_ACTIN_MYOSIN",
+        "REL_NEURON_TO_SARCOLEMMA",
+        "REL_SARCOLEMMA_TO_SR"
+      ]
+    },
+    {
+      "code": "STRUCTURE_OR_SCOPE",
+      "message": "Patch target outside repair task"
+    }
+  ],
+  "rollback_hash": "f89d4ec483ae29cc60db00c51f76c60ec36b3fba29235f0452b115f30f555d3c"
+}

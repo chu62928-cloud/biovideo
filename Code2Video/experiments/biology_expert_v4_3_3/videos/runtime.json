@@ -1,0 +1,380 @@
+{
+  "contract_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+  "checks": [
+    {
+      "constraint_id": "OBS_bipolar_attachment_during_prometaphase",
+      "predicate": "relation_holds_during",
+      "status": "PASS",
+      "full_constraint_verified": true,
+      "expected_interval": {
+        "status": "RESOLVED",
+        "source": "typed_scene_independent_start_end",
+        "event_id": "EV_attach_orient",
+        "start": 0,
+        "end": 3.0,
+        "model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5"
+      },
+      "observed_interval": [
+        0.0,
+        2.999999999999998
+      ],
+      "samples_checked": 74,
+      "sample_times": [
+        0.0,
+        0.041666666666666664,
+        0.08333333333333333,
+        0.125,
+        0.16666666666666666,
+        0.20833333333333331,
+        0.24999999999999997,
+        0.29166666666666663,
+        0.3333333333333333,
+        0.375,
+        0.4166666666666667,
+        0.45833333333333337,
+        0.5,
+        0.5416666666666666,
+        0.5833333333333333,
+        0.6249999999999999,
+        0.6666666666666665,
+        0.7083333333333331,
+        0.7499999999999998,
+        0.7916666666666664,
+        0.833333333333333,
+        0.8749999999999997,
+        0.9166666666666663,
+        0.9583333333333329,
+        0.9999999999999996,
+        1.0416666666666663,
+        1.083333333333333,
+        1.1249999999999998,
+        1.1666666666666665,
+        1.2083333333333333,
+        1.25,
+        1.2916666666666667,
+        1.3333333333333335,
+        1.3750000000000002,
+        1.416666666666667,
+        1.4583333333333337,
+        1.5000000000000004,
+        1.5416666666666672,
+        1.583333333333334,
+        1.6250000000000007,
+        1.6666666666666674,
+        1.7083333333333341,
+        1.7500000000000009,
+        1.7916666666666676,
+        1.8333333333333344,
+        1.875000000000001,
+        1.9166666666666679,
+        1.9583333333333346,
+        2.0000000000000013,
+        2.041666666666668,
+        2.0833333333333344,
+        2.125000000000001,
+        2.1666666666666674,
+        2.208333333333334,
+        2.2500000000000004,
+        2.291666666666667,
+        2.3333333333333335,
+        2.375,
+        2.4166666666666665,
+        2.458333333333333,
+        2.4999999999999996,
+        2.541666666666666,
+        2.5833333333333326,
+        2.624999999999999,
+        2.6666666666666656,
+        2.708333333333332,
+        2.7499999999999987,
+        2.791666666666665,
+        2.8333333333333317,
+        2.8749999999999982,
+        2.9166666666666647,
+        2.9583333333333313,
+        2.999999999999998
+      ],
+      "violations": [],
+      "evidence": [
+        {
+          "expected_relation": "REL_microtubule_binds_kinetochore",
+          "source": "kmt_left",
+          "target": "kinetochore_A",
+          "sampling_gaps": [],
+          "interval_source": "typed_scene_independent_start_end"
+        }
+      ],
+      "reason": null,
+      "participants": {
+        "chromosome_being_attached": [
+          "sister_chromatid_A"
+        ],
+        "sister_chromatid_bearing_kinetochore": [
+          "sister_chromatid_A",
+          "sister_chromatid_B"
+        ],
+        "binding_site": [
+          "kinetochore_A",
+          "kinetochore_B"
+        ],
+        "attaching_fiber": [
+          "kmt_left",
+          "kmt_right"
+        ],
+        "target_pole": [
+          "pole_left",
+          "pole_right"
+        ]
+      },
+      "contract_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+      "scene_sha256": "0568f0e79716569e7f73fb62b515877eba2e238190d0c5920d47a5019d1c1022",
+      "trace_sha256": "c744813281c90c2d361eabbec03aa1f2c64234b706ca7c24006bf611aab399aa"
+    },
+    {
+      "constraint_id": "OBS_alignment_during_metaphase",
+      "predicate": "relation_holds_during",
+      "status": "PARTIALLY_VERIFIED",
+      "full_constraint_verified": false,
+      "expected_interval": {
+        "status": "RESOLVED",
+        "source": "typed_scene_independent_start_end",
+        "event_id": "EV_metaphase_align",
+        "start": 3.0,
+        "end": 7.5,
+        "model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5"
+      },
+      "observed_interval": [
+        3.0416666666666643,
+        7.458333333333352
+      ],
+      "samples_checked": 107,
+      "sample_times": [
+        3.0416666666666643,
+        3.083333333333331,
+        3.1249999999999973,
+        3.166666666666664,
+        3.2083333333333304,
+        3.249999999999997,
+        3.2916666666666634,
+        3.33333333333333,
+        3.3749999999999964,
+        3.416666666666663,
+        3.4583333333333295,
+        3.499999999999996,
+        3.5416666666666625,
+        3.583333333333329,
+        3.6249999999999956,
+        3.666666666666662,
+        3.7083333333333286,
+        3.749999999999995,
+        3.7916666666666616,
+        3.833333333333328,
+        3.8749999999999947,
+        3.916666666666661,
+        3.9583333333333277,
+        3.9999999999999942,
+        4.041666666666661,
+        4.083333333333328,
+        4.124999999999995,
+        4.166666666666662,
+        4.208333333333329,
+        4.249999999999996,
+        4.2916666666666625,
+        4.3333333333333295,
+        4.3749999999999964,
+        4.416666666666663,
+        4.45833333333333,
+        4.499999999999997,
+        4.541666666666664,
+        4.583333333333331,
+        4.624999999999998,
+        4.666666666666665,
+        4.708333333333332,
+        4.749999999999999,
+        4.791666666666666,
+        4.833333333333333,
+        4.875,
+        4.916666666666667,
+        4.958333333333334,
+        5.000000000000001,
+        5.041666666666668,
+        5.083333333333335,
+        5.125000000000002,
+        5.166666666666669,
+        5.208333333333336,
+        5.250000000000003,
+        5.29166666666667,
+        5.333333333333337,
+        5.3750000000000036,
+        5.4166666666666705,
+        5.4583333333333375,
+        5.500000000000004,
+        5.541666666666671,
+        5.583333333333338,
+        5.625000000000005,
+        5.666666666666672,
+        5.708333333333339,
+        5.750000000000006,
+        5.791666666666673,
+        5.83333333333334,
+        5.875000000000007,
+        5.916666666666674,
+        5.958333333333341,
+        6.000000000000008,
+        6.041666666666675,
+        6.083333333333342,
+        6.125000000000009,
+        6.166666666666676,
+        6.208333333333343,
+        6.25000000000001,
+        6.291666666666677,
+        6.333333333333344,
+        6.375000000000011,
+        6.416666666666678,
+        6.458333333333345,
+        6.5000000000000115,
+        6.5416666666666785,
+        6.5833333333333455,
+        6.625000000000012,
+        6.666666666666679,
+        6.708333333333346,
+        6.750000000000013,
+        6.79166666666668,
+        6.833333333333347,
+        6.875000000000014,
+        6.916666666666681,
+        6.958333333333348,
+        7.000000000000015,
+        7.041666666666682,
+        7.083333333333349,
+        7.125000000000016,
+        7.166666666666683,
+        7.20833333333335,
+        7.250000000000017,
+        7.291666666666684,
+        7.333333333333351,
+        7.375000000000018,
+        7.416666666666685,
+        7.458333333333352
+      ],
+      "violations": [],
+      "evidence": [
+        {
+          "expected_relation": "REL_duplicated_chromosome_at_metaphase_plate",
+          "source": "sister_chromatid_A",
+          "target": "metaphase_plate",
+          "sampling_gaps": [],
+          "interval_source": "typed_scene_independent_start_end"
+        }
+      ],
+      "reason": null,
+      "participants": {
+        "aligned_chromosome": [
+          "sister_chromatid_A",
+          "sister_chromatid_B"
+        ],
+        "alignment_plane": [
+          "metaphase_plate"
+        ]
+      },
+      "contract_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+      "scene_sha256": "0568f0e79716569e7f73fb62b515877eba2e238190d0c5920d47a5019d1c1022",
+      "trace_sha256": "c744813281c90c2d361eabbec03aa1f2c64234b706ca7c24006bf611aab399aa"
+    },
+    {
+      "constraint_id": "OBS_connection_breakdown_after_alignment",
+      "predicate": "event_precedes",
+      "status": "PARTIALLY_VERIFIED",
+      "full_constraint_verified": false,
+      "expected_interval": {
+        "status": "RESOLVED",
+        "source": "typed_scene_independent_start_end",
+        "event_id": "EV_anaphase_separate",
+        "start": 12.0,
+        "end": 22.5,
+        "model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5"
+      },
+      "observed_interval": null,
+      "samples_checked": 2,
+      "sample_times": [
+        3.0416666666666643,
+        12.04166666666663
+      ],
+      "violations": [],
+      "evidence": [
+        {
+          "event_ids": [
+            "EV_metaphase_align",
+            "EV_anaphase_separate"
+          ],
+          "source": "actual_event_markers"
+        }
+      ],
+      "reason": null,
+      "participants": {
+        "PROC_metaphase_alignment": [
+          "EV_metaphase_align"
+        ],
+        "PROC_anaphase_sister_separation": [
+          "EV_anaphase_separate"
+        ]
+      },
+      "contract_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+      "scene_sha256": "0568f0e79716569e7f73fb62b515877eba2e238190d0c5920d47a5019d1c1022",
+      "trace_sha256": "c744813281c90c2d361eabbec03aa1f2c64234b706ca7c24006bf611aab399aa"
+    },
+    {
+      "constraint_id": "OBS_two_daughter_chromatids_after_separation",
+      "predicate": "state_transition_allowed",
+      "status": "PARTIALLY_VERIFIED",
+      "full_constraint_verified": false,
+      "expected_interval": {
+        "status": "RESOLVED",
+        "source": "typed_scene_independent_start_end",
+        "event_id": "EV_anaphase_separate",
+        "start": 12.0,
+        "end": 22.5,
+        "model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5"
+      },
+      "observed_interval": null,
+      "samples_checked": 1,
+      "sample_times": [
+        22.500000000000092
+      ],
+      "violations": [],
+      "evidence": [
+        {
+          "precondition": {
+            "metaphase_alignment": "Duplicated chromosome aligned at metaphase plate (schematic phase order)."
+          },
+          "to_value": "separated"
+        }
+      ],
+      "reason": null,
+      "participants": {
+        "separating_duplex": [
+          "sister_chromatid_A"
+        ],
+        "pre_separation_sister_chromatids": [
+          "sister_chromatid_A",
+          "sister_chromatid_B"
+        ],
+        "daughter_chromatids": [
+          "sister_chromatid_A",
+          "sister_chromatid_B"
+        ],
+        "pulling_microtubules": [
+          "kmt_left",
+          "kmt_right"
+        ],
+        "destination_pole": [
+          "pole_left",
+          "pole_right"
+        ]
+      },
+      "contract_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+      "scene_sha256": "0568f0e79716569e7f73fb62b515877eba2e238190d0c5920d47a5019d1c1022",
+      "trace_sha256": "c744813281c90c2d361eabbec03aa1f2c64234b706ca7c24006bf611aab399aa"
+    }
+  ]
+}

@@ -1,0 +1,531 @@
+{
+  "groups": [
+    {
+      "group": "G0",
+      "cases": [
+        {
+          "id": 0,
+          "source": "historical model with controlled corruption",
+          "expected": "Motor neuron terminal at the neuromuscular junction",
+          "observed": "Motor neuron terminal at the neuromuscular junction",
+          "accepted": true,
+          "exact_match": true,
+          "response": {
+            "id": 0,
+            "patch": {
+              "operations": [
+                {
+                  "op": "update",
+                  "collection": "entities",
+                  "target_id": "ENT_MOTOR_NEURON_TERMINAL",
+                  "fields": {
+                    "scientific_name": "Motor neuron terminal at the neuromuscular junction"
+                  }
+                }
+              ]
+            }
+          },
+          "reason": null
+        },
+        {
+          "id": 1,
+          "source": "historical model with controlled corruption",
+          "expected": "Sarcolemma and T-tubule membrane of the skeletal muscle fibre",
+          "observed": "Sarcolemma and T-tubule membrane of the skeletal muscle fibre",
+          "accepted": true,
+          "exact_match": true,
+          "response": {
+            "id": 1,
+            "patch": {
+              "operations": [
+                {
+                  "op": "update",
+                  "collection": "entities",
+                  "target_id": "ENT_SARCOLEMMA_T_TUBULES",
+                  "fields": {
+                    "scientific_name": "Sarcolemma and T-tubule membrane of the skeletal muscle fibre"
+                  }
+                }
+              ]
+            }
+          },
+          "reason": null
+        },
+        {
+          "id": 2,
+          "source": "historical model with controlled corruption",
+          "expected": "Sarcoplasmic reticulum (SR) of the skeletal muscle fibre",
+          "observed": "Sarcoplasmic reticulum (SR) of the skeletal muscle fibre",
+          "accepted": true,
+          "exact_match": true,
+          "response": {
+            "id": 2,
+            "patch": {
+              "operations": [
+                {
+                  "op": "update",
+                  "collection": "entities",
+                  "target_id": "ENT_SR",
+                  "fields": {
+                    "scientific_name": "Sarcoplasmic reticulum (SR) of the skeletal muscle fibre"
+                  }
+                }
+              ]
+            }
+          },
+          "reason": null
+        },
+        {
+          "id": 3,
+          "source": "historical model with controlled corruption",
+          "expected": "Troponin-tropomyosin complex on the actin thin filament",
+          "observed": "Troponin-tropomyosin complex on the actin thin filament",
+          "accepted": true,
+          "exact_match": true,
+          "response": {
+            "id": 3,
+            "patch": {
+              "operations": [
+                {
+                  "op": "update",
+                  "collection": "entities",
+                  "target_id": "ENT_TROPONIN_TROPOMYOSIN",
+                  "fields": {
+                    "scientific_name": "Troponin-tropomyosin complex on the actin thin filament"
+                  }
+                }
+              ]
+            }
+          },
+          "reason": null
+        },
+        {
+          "id": 4,
+          "source": "historical model with controlled corruption",
+          "expected": "ENT_MOTOR_NEURON_TERMINAL",
+          "observed": "ENT_MOTOR_NEURON_TERMINAL",
+          "accepted": true,
+          "exact_match": true,
+          "response": {
+            "id": 4,
+            "patch": {
+              "operations": [
+                {
+                  "op": "update",
+                  "collection": "relations",
+                  "target_id": "REL_NEURON_TO_SARCOLEMMA",
+                  "fields": {
+                    "source_entity": "ENT_MOTOR_NEURON_TERMINAL"
+                  }
+                }
+              ]
+            }
+          },
+          "reason": null
+        },
+        {
+          "id": 5,
+          "source": "historical model with controlled corruption",
+          "expected": "ENT_SARCOLEMMA_T_TUBULES",
+          "observed": "ENT_SARCOLEMMA_T_TUBULES",
+          "accepted": true,
+          "exact_match": true,
+          "response": {
+            "id": 5,
+            "patch": {
+              "operations": [
+                {
+                  "op": "update",
+                  "collection": "relations",
+                  "target_id": "REL_SARCOLEMMA_TO_SR",
+                  "fields": {
+                    "source_entity": "ENT_SARCOLEMMA_T_TUBULES"
+                  }
+                }
+              ]
+            }
+          },
+          "reason": null
+        },
+        {
+          "id": 6,
+          "source": "historical model with controlled corruption",
+          "expected": "ENT_SR",
+          "observed": "ENT_TROPONIN_TROPOMYOSIN",
+          "accepted": true,
+          "exact_match": false,
+          "response": {
+            "id": 6,
+            "patch": {
+              "operations": [
+                {
+                  "op": "update",
+                  "collection": "relations",
+                  "target_id": "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+                  "fields": {
+                    "source_entity": "ENT_TROPONIN_TROPOMYOSIN"
+                  }
+                }
+              ]
+            }
+          },
+          "reason": null
+        },
+        {
+          "id": 7,
+          "source": "historical model with controlled corruption",
+          "expected": "ENT_TROPONIN_TROPOMYOSIN",
+          "observed": null,
+          "accepted": false,
+          "exact_match": false,
+          "response": {
+            "id": 7,
+            "patch": {
+              "operations": [
+                {
+                  "op": "update",
+                  "collection": "relations",
+                  "target_id": "REL_CROSSBRIDGE_ACTIN_MYOSIN",
+                  "fields": {
+                    "source_entity": "ENT_ACTIN_MYOSIN_SARCOMERE"
+                  }
+                }
+              ]
+            }
+          },
+          "reason": "Observable participant type/reference mismatch"
+        },
+        {
+          "id": 8,
+          "source": "historical model with controlled corruption",
+          "expected": [
+            "signal_source",
+            "excitable_membrane"
+          ],
+          "observed": [
+            "signal_source",
+            "excitable_membrane"
+          ],
+          "accepted": true,
+          "exact_match": true,
+          "response": {
+            "id": 8,
+            "patch": {
+              "operations": [
+                {
+                  "op": "update",
+                  "collection": "processes",
+                  "target_id": "PROC_EXCITATION",
+                  "fields": {
+                    "input_roles": [
+                      "signal_source",
+                      "excitable_membrane"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "reason": null
+        },
+        {
+          "id": 9,
+          "source": "historical model with controlled corruption",
+          "expected": [
+            "trigger_membrane",
+            "ca_store"
+          ],
+          "observed": [
+            "trigger_membrane",
+            "ca_store"
+          ],
+          "accepted": true,
+          "exact_match": true,
+          "response": {
+            "id": 9,
+            "patch": {
+              "operations": [
+                {
+                  "op": "update",
+                  "collection": "processes",
+                  "target_id": "PROC_CA_RELEASE_AND_TROPONIN_BINDING",
+                  "fields": {
+                    "input_roles": [
+                      "trigger_membrane",
+                      "ca_store"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "reason": null
+        },
+        {
+          "id": 10,
+          "source": "historical model with controlled corruption",
+          "expected": "REJECT",
+          "observed": null,
+          "accepted": false,
+          "exact_match": true,
+          "response": {
+            "id": 10,
+            "reject": true
+          },
+          "reason": "model declined"
+        },
+        {
+          "id": 11,
+          "source": "historical model with controlled corruption",
+          "expected": "REJECT",
+          "observed": null,
+          "accepted": false,
+          "exact_match": true,
+          "response": {
+            "id": 11,
+            "reject": true
+          },
+          "reason": "model declined"
+        }
+      ],
+      "valid_tasks_completed": 8,
+      "invalid_tasks_rejected": 2,
+      "structurally_accepted": 9,
+      "model_calls": 2,
+      "tokens": 6965,
+      "average_requests_per_case": 0.16666666666666666
+    },
+    {
+      "group": "G1",
+      "cases": [
+        {
+          "id": 0,
+          "source": "historical model with controlled corruption",
+          "expected": "Motor neuron terminal at the neuromuscular junction",
+          "observed": "Motor neuron terminal at the neuromuscular junction",
+          "accepted": true,
+          "exact_match": true,
+          "response": {
+            "id": 0,
+            "operation": "update_entity",
+            "target_id": "ENT_MOTOR_NEURON_TERMINAL",
+            "fields": {
+              "scientific_name": "Motor neuron terminal at the neuromuscular junction"
+            }
+          },
+          "reason": null
+        },
+        {
+          "id": 1,
+          "source": "historical model with controlled corruption",
+          "expected": "Sarcolemma and T-tubule membrane of the skeletal muscle fibre",
+          "observed": "Sarcolemma and T-tubule membrane of the skeletal muscle fibre",
+          "accepted": true,
+          "exact_match": true,
+          "response": {
+            "id": 1,
+            "operation": "update_entity",
+            "target_id": "ENT_SARCOLEMMA_T_TUBULES",
+            "fields": {
+              "scientific_name": "Sarcolemma and T-tubule membrane of the skeletal muscle fibre"
+            }
+          },
+          "reason": null
+        },
+        {
+          "id": 2,
+          "source": "historical model with controlled corruption",
+          "expected": "Sarcoplasmic reticulum (SR) of the skeletal muscle fibre",
+          "observed": "Sarcoplasmic reticulum (SR) of the skeletal muscle fibre",
+          "accepted": true,
+          "exact_match": true,
+          "response": {
+            "id": 2,
+            "operation": "update_entity",
+            "target_id": "ENT_SR",
+            "fields": {
+              "scientific_name": "Sarcoplasmic reticulum (SR) of the skeletal muscle fibre"
+            }
+          },
+          "reason": null
+        },
+        {
+          "id": 3,
+          "source": "historical model with controlled corruption",
+          "expected": "Troponin-tropomyosin complex on the actin thin filament",
+          "observed": "Troponin-tropomyosin complex on the actin thin filament",
+          "accepted": true,
+          "exact_match": true,
+          "response": {
+            "id": 3,
+            "operation": "update_entity",
+            "target_id": "ENT_TROPONIN_TROPOMYOSIN",
+            "fields": {
+              "scientific_name": "Troponin-tropomyosin complex on the actin thin filament"
+            }
+          },
+          "reason": null
+        },
+        {
+          "id": 4,
+          "source": "historical model with controlled corruption",
+          "expected": "ENT_MOTOR_NEURON_TERMINAL",
+          "observed": "ENT_MOTOR_NEURON_TERMINAL",
+          "accepted": true,
+          "exact_match": true,
+          "response": {
+            "id": 4,
+            "operation": "update_relation",
+            "target_id": "REL_NEURON_TO_SARCOLEMMA",
+            "fields": {
+              "source_entity": "ENT_MOTOR_NEURON_TERMINAL"
+            }
+          },
+          "reason": null
+        },
+        {
+          "id": 5,
+          "source": "historical model with controlled corruption",
+          "expected": "ENT_SARCOLEMMA_T_TUBULES",
+          "observed": "ENT_SARCOLEMMA_T_TUBULES",
+          "accepted": true,
+          "exact_match": true,
+          "response": {
+            "id": 5,
+            "operation": "update_relation",
+            "target_id": "REL_SARCOLEMMA_TO_SR",
+            "fields": {
+              "source_entity": "ENT_SARCOLEMMA_T_TUBULES"
+            }
+          },
+          "reason": null
+        },
+        {
+          "id": 6,
+          "source": "historical model with controlled corruption",
+          "expected": "ENT_SR",
+          "observed": null,
+          "accepted": false,
+          "exact_match": false,
+          "response": {
+            "id": 6,
+            "operation": "update_entity",
+            "target_id": "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+            "fields": {
+              "source_entity": "ENT_SR"
+            }
+          },
+          "reason": "[{'code': 'UNKNOWN_TARGET', 'target_id': 'REL_CA_TO_TROPONIN_TROPOMYOSIN'}, {'code': 'STRUCTURE_OR_SCOPE', 'message': 'REPAIR_NOT_EFFECTIVE'}]"
+        },
+        {
+          "id": 7,
+          "source": "historical model with controlled corruption",
+          "expected": "ENT_TROPONIN_TROPOMYOSIN",
+          "observed": null,
+          "accepted": false,
+          "exact_match": false,
+          "response": {
+            "id": 7,
+            "operation": "update_entity",
+            "target_id": "REL_CROSSBRIDGE_ACTIN_MYOSIN",
+            "fields": {
+              "source_entity": "ENT_TROPONIN_TROPOMYOSIN"
+            }
+          },
+          "reason": "[{'code': 'UNKNOWN_TARGET', 'target_id': 'REL_CROSSBRIDGE_ACTIN_MYOSIN'}, {'code': 'STRUCTURE_OR_SCOPE', 'message': 'REPAIR_NOT_EFFECTIVE'}]"
+        },
+        {
+          "id": 8,
+          "source": "historical model with controlled corruption",
+          "expected": [
+            "signal_source",
+            "excitable_membrane"
+          ],
+          "observed": null,
+          "accepted": false,
+          "exact_match": false,
+          "response": {
+            "id": 8,
+            "operation": "update_process",
+            "target_id": "PROC_EXCITATION",
+            "fields": {
+              "input_roles": [
+                {
+                  "role": "signal_source",
+                  "entity_ref": "ENT_MOTOR_NEURON_TERMINAL"
+                },
+                {
+                  "role": "excitable_membrane",
+                  "entity_ref": "ENT_SARCOLEMMA_T_TUBULES"
+                }
+              ]
+            }
+          },
+          "reason": "[{'code': 'SCHEMA', 'path': ['processes', 0, 'input_roles', 0], 'message': \"{'role': 'signal_source', 'entity_ref': 'ENT_MOTOR_NEURON_TERMINAL'} is not of type 'string'\"}]"
+        },
+        {
+          "id": 9,
+          "source": "historical model with controlled corruption",
+          "expected": [
+            "trigger_membrane",
+            "ca_store"
+          ],
+          "observed": null,
+          "accepted": false,
+          "exact_match": false,
+          "response": {
+            "id": 9,
+            "operation": "update_process",
+            "target_id": "PROC_CA_RELEASE_AND_TROPONIN_BINDING",
+            "fields": {
+              "input_roles": [
+                {
+                  "role": "trigger_membrane",
+                  "entity_ref": "ENT_SARCOLEMMA_T_TUBULES"
+                },
+                {
+                  "role": "ca_store",
+                  "entity_ref": "ENT_SR"
+                }
+              ]
+            }
+          },
+          "reason": "[{'code': 'SCHEMA', 'path': ['processes', 1, 'input_roles', 0], 'message': \"{'role': 'trigger_membrane', 'entity_ref': 'ENT_SARCOLEMMA_T_TUBULES'} is not of type 'string'\"}]"
+        },
+        {
+          "id": 10,
+          "source": "historical model with controlled corruption",
+          "expected": "REJECT",
+          "observed": null,
+          "accepted": false,
+          "exact_match": true,
+          "response": {
+            "id": 10,
+            "reject": true
+          },
+          "reason": "model declined"
+        },
+        {
+          "id": 11,
+          "source": "historical model with controlled corruption",
+          "expected": "REJECT",
+          "observed": null,
+          "accepted": false,
+          "exact_match": true,
+          "response": {
+            "id": 11,
+            "reject": true
+          },
+          "reason": "model declined"
+        }
+      ],
+      "valid_tasks_completed": 6,
+      "invalid_tasks_rejected": 2,
+      "structurally_accepted": 6,
+      "model_calls": 2,
+      "tokens": 6955,
+      "average_requests_per_case": 0.16666666666666666
+    }
+  ],
+  "limitations": "Six cases per request, paired but correlated. Exact restoration of original deliberately corrupted fields is an engineering endpoint. Historical semantic errors can make restoration undesirable."
+}

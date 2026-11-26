@@ -1,0 +1,77 @@
+{
+  "proposal": {
+    "commands": [
+      {
+        "operation": "update_relation",
+        "target_id": "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+        "fields": {
+          "source_entity": "ENT_CA_ION_SARCOPLASM",
+          "definition": "Ca2+ in the sarcoplasm binds troponin, causing tropomyosin to slide away and expose myosin-binding sites on actin",
+          "relation_type": "binds_and_unshields",
+          "target_entity": "ENT_TROPONIN_TROPOMYOSIN",
+          "evidence_ids": [
+            "E_d6fd3723dbb7"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_d6fd3723dbb7",
+              "quote": "The first step in the process of contraction is for Ca ++ to bind to troponin so that tropomyosin can slide away from the binding sites on the actin strands.",
+              "location": "paragraph_11"
+            }
+          ]
+        }
+      },
+      {
+        "operation": "add_entity",
+        "target_id": "ENT_CA_ION_SARCOPLASM",
+        "fields": {
+          "semantic_id": "ENT_CA_ION_SARCOPLASM",
+          "scientific_name": "Calcium ions (Ca2+) in the sarcoplasm of the skeletal muscle fibre",
+          "entity_type": "ion",
+          "evidence_ids": [
+            "E_d6fd3723dbb7"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_d6fd3723dbb7",
+              "quote": "As long as Ca ++ ions remain in the sarcoplasm to bind to troponin, which keeps the actin-binding sites “unshielded,”",
+              "location": "paragraph_1"
+            }
+          ],
+          "cardinality": 1
+        }
+      }
+    ],
+    "extensions": [
+      {
+        "target_id": "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+        "reason": "Introduced ENT_CA_ION_SARCOPLASM as the correct actor (sarcoplasmic Ca2+) and repointed source_entity; ENT_SR retained as the store/release source via REL_SARCOLEMMA_TO_SR and the SR entity, preserving causal chain. Requires lifecycle for new entity missing from record schema—extensions flags unresolved binding."
+      }
+    ]
+  },
+  "result": {
+    "status": "PREFLIGHT_REJECTED",
+    "errors": [
+      {
+        "code": "INVALID_EXTENSION",
+        "request": {
+          "target_id": "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+          "reason": "Introduced ENT_CA_ION_SARCOPLASM as the correct actor (sarcoplasmic Ca2+) and repointed source_entity; ENT_SR retained as the store/release source via REL_SARCOLEMMA_TO_SR and the SR entity, preserving causal chain. Requires lifecycle for new entity missing from record schema—extensions flags unresolved binding."
+        }
+      },
+      {
+        "code": "MISSING_EVIDENCE",
+        "target_id": "REL_CA_TO_TROPONIN_TROPOMYOSIN"
+      },
+      {
+        "code": "INVALID_ADDITION",
+        "target_id": "ENT_CA_ION_SARCOPLASM"
+      },
+      {
+        "code": "STRUCTURE_OR_SCOPE",
+        "message": "Undefined relation entity reference"
+      }
+    ],
+    "rollback_hash": "f89d4ec483ae29cc60db00c51f76c60ec36b3fba29235f0452b115f30f555d3c"
+  }
+}

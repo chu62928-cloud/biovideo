@@ -1,0 +1,32 @@
+{
+  "science": {
+    "decision": "REVISE",
+    "issues": [
+      "0-2s: Caption states 'Spindle fibers attach to kinetochores on the two sister chromatids' (implying bi-/amphitelic orientation), but the duplicated chromosome is drawn clearly LEFT of the metaphase plate and the right-pole microtubule does not visibly reach or bind the right kinetochore. The initial geometry contradicts the stated fully-attached state.",
+      "3-11s: 'moves toward the middle' is acceptable for congression, but it follows the contradictory 0-2s frame, so the alignment narrative starts from an inconsistent unattached/off-center state.",
+      "12-23s: Sister separation (anaphase) with each chromatid pulled to its own pole is directionally correct and consistent with prior bi-orientation once centered."
+    ]
+  },
+  "visual": {
+    "decision": "REVISE",
+    "issues": [
+      "3-7s: Label ghosting/double-rendering — 'Copy B'/'Copy A' appear as 'CopyBB'/'CopyAA' and 'Microtubule' text is doubled/overlapping, reducing legibility.",
+      "0-2s: Right microtubule terminates near the metaphase plate rather than at the right kinetochore, making the attachment ambiguous/inconsistent with the caption.",
+      "8-11s: Chromosome correctly centered on the metaphase plate with both kinetochores bound; this portion is visually consistent."
+    ]
+  },
+  "pedagogy": {
+    "accuracy": "REVISE — initial attachment claim (0-2s) not supported by the drawn geometry; later stages (centering, then poleward separation) are accurate.",
+    "terms": "PASS — 'sister chromatids', 'kinetochores', 'microtubules/spindle fibers', 'metaphase plate', 'pole' used correctly; 'Copy A/B' is a non-standard but acceptable teaching label for the two sisters.",
+    "motion": "PASS — congression to the plate (3-11s) then symmetric poleward movement of separated sisters (12-23s) is shown with clear direction over time.",
+    "density": "PASS — appropriately low for high school; one duplicated chromosome keeps focus.",
+    "readability": "REVISE — text ghosting at 3-7s and the off-center initial chromosome hurt clarity.",
+    "objective": "PASS — clearly aims to show metaphase alignment followed by anaphase separation, and largely achieves it."
+  },
+  "limitations": [
+    "Schematic 2D representation: no depiction of cohesin cleavage, kinetochore–microtubule dynamic instability, or spindle checkpoint that drive real attachment/separation.",
+    "Only one chromosome shown; does not convey genome-wide coordination or the metaphase-to-anaphase transition trigger.",
+    "Frame sampling is sparse; exact moment of right-kinetochore attachment and the onset of separation (around 11-12s) cannot be precisely verified between sampled frames.",
+    "No scale, time axis, or cell boundary, so 'middle of the cell' is only implied by the metaphase plate line."
+  ]
+}

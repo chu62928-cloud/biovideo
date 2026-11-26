@@ -1,0 +1,71 @@
+
+==================================== ERRORS ====================================
+_ ERROR collecting experiments/biology_expert_v4_2_1/tests/test_integration.py _
+ImportError while importing test module '/root/autodl-tmp/code2biovideo/biovideo-v433/Code2Video/experiments/biology_expert_v4_2_1/tests/test_integration.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+experiments/biology_expert_v4_2_1/tests/test_integration.py:7: in <module>
+    from biology_expert.role_binder import ScientificRoleBinder
+E   ModuleNotFoundError: No module named 'biology_expert.role_binder'
+____ ERROR collecting experiments/biology_expert_v4_2_2/tests/test_v422.py _____
+ImportError while importing test module '/root/autodl-tmp/code2biovideo/biovideo-v433/Code2Video/experiments/biology_expert_v4_2_2/tests/test_v422.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+experiments/biology_expert_v4_2_2/tests/test_v422.py:5: in <module>
+    from biology_expert.role_binder import ScientificRoleBinder
+E   ModuleNotFoundError: No module named 'biology_expert.role_binder'
+______ ERROR collecting experiments/biology_expert_v4_3/tests/test_v43.py ______
+ImportError while importing test module '/root/autodl-tmp/code2biovideo/biovideo-v433/Code2Video/experiments/biology_expert_v4_3/tests/test_v43.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+experiments/biology_expert_v4_3/tests/test_v43.py:5: in <module>
+    from biology_expert.typed_science_builder import validate_typed_model,TypedContractCompiler,freeze_model
+E   ModuleNotFoundError: No module named 'biology_expert.typed_science_builder'
+____ ERROR collecting experiments/biology_expert_v4_3_1/tests/test_v431.py _____
+ImportError while importing test module '/root/autodl-tmp/code2biovideo/biovideo-v433/Code2Video/experiments/biology_expert_v4_3_1/tests/test_v431.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+experiments/biology_expert_v4_3_1/tests/test_v431.py:5: in <module>
+    from biology_expert.model_reliability import ScientificCausalGraphValidator,EvidenceSufficiencyAuditor,validate_repair
+E   ModuleNotFoundError: No module named 'biology_expert.model_reliability'
+____ ERROR collecting experiments/biology_expert_v4_3_2/tests/test_v432.py _____
+ImportError while importing test module '/root/autodl-tmp/code2biovideo/biovideo-v433/Code2Video/experiments/biology_expert_v4_3_2/tests/test_v432.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+experiments/biology_expert_v4_3_2/tests/test_v432.py:5: in <module>
+    from biology_expert.retrieval_quality import validate_queries,RetrievalQueryInvalid,source_quality,exact_support
+E   ModuleNotFoundError: No module named 'biology_expert.retrieval_quality'
+____ ERROR collecting experiments/biology_expert_v4_3_3/tests/test_v433.py _____
+ImportError while importing test module '/root/autodl-tmp/code2biovideo/biovideo-v433/Code2Video/experiments/biology_expert_v4_3_3/tests/test_v433.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+experiments/biology_expert_v4_3_3/tests/test_v433.py:4: in <module>
+    from benchmark_run import *
+experiments/biology_expert_v4_3_3/benchmark_run.py:1: in <module>
+    from common import *
+experiments/biology_expert_v4_3_3/common.py:9: in <module>
+    from biology_expert.repair_harness import compile_task,preflight
+E   ModuleNotFoundError: No module named 'biology_expert.repair_harness'
+_ ERROR collecting experiments/science_scope_maintenance/tests/test_scope_patch.py _
+ImportError while importing test module '/root/autodl-tmp/code2biovideo/biovideo-v433/Code2Video/experiments/science_scope_maintenance/tests/test_scope_patch.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+experiments/science_scope_maintenance/tests/test_scope_patch.py:5: in <module>
+    from biology_expert.model_repair import apply_model_patch
+E   ModuleNotFoundError: No module named 'biology_expert.model_repair'
+=============================== warnings summary ===============================
+../../../../../autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/pydub/utils.py:14
+  /autodl-tmp/code2biovideo/env/lib/python3.11/site-packages/pydub/utils.py:14: DeprecationWarning: 'audioop' is deprecated and slated for removal in Python 3.13
+    import audioop
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+ERROR experiments/biology_expert_v4_2_1/tests/test_integration.py
+ERROR experiments/biology_expert_v4_2_2/tests/test_v422.py
+ERROR experiments/biology_expert_v4_3/tests/test_v43.py
+ERROR experiments/biology_expert_v4_3_1/tests/test_v431.py
+ERROR experiments/biology_expert_v4_3_2/tests/test_v432.py
+ERROR experiments/biology_expert_v4_3_3/tests/test_v433.py
+ERROR experiments/science_scope_maintenance/tests/test_scope_patch.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 7 errors during collection !!!!!!!!!!!!!!!!!!!!
+1 warning, 7 errors in 2.06s

@@ -1,0 +1,34 @@
+{
+  "status": "NEEDS_HUMAN_REVIEW",
+  "errors": [
+    {
+      "code": "INVALID_EXTENSION",
+      "request": {
+        "target_id": "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+        "reason": "Repaired source_entity to new ENT_CALCIUM_ION_SARCOPLASM (sarcoplasmic Ca2+), the actual actor binding troponin. ENT_SR retained as store/release source; causal chain SR release -> Ca2+ in sarcoplasm -> troponin binding preserved via REL_SARCOLEMMA_TO_SR and new ion entity. New ion entity needs lifecycle confirmation in program state."
+      }
+    },
+    {
+      "code": "INVALID_ADDITION",
+      "target_id": "ENT_CALCIUM_ION_SARCOPLASM"
+    },
+    {
+      "code": "TARGET_OUTSIDE_TASK",
+      "target_id": "ENT_SR",
+      "allowed_targets": [
+        "REL_CA_TO_TROPONIN_TROPOMYOSIN"
+      ]
+    },
+    {
+      "code": "FORBIDDEN_FIELDS",
+      "target_id": "ENT_SR",
+      "fields": [
+        "semantic_id"
+      ]
+    },
+    {
+      "code": "STRUCTURE_OR_SCOPE",
+      "message": "Undefined relation entity reference"
+    }
+  ]
+}

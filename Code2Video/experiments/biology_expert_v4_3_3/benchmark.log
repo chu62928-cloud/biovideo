@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "/root/autodl-tmp/code2biovideo/biovideo-v433/Code2Video/experiments/biology_expert_v4_3_3/benchmark_run.py", line 48, in <module>
+    if __name__=='__main__':evaluate(sys.argv[1])
+                            ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/code2biovideo/biovideo-v433/Code2Video/experiments/biology_expert_v4_3_3/benchmark_run.py", line 30, in evaluate
+    out=parse_json(g.request('deepseek','harness_benchmark_'+group,'Return JSON {cases:[...]}. '+fmt+' No explanations. '+json.dumps(data[start:start+6])))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/code2biovideo/biovideo-v433/Code2Video/src/biology_expert/providers.py", line 32, in request
+    try:return self._request_locked(provider,purpose,prompt,video)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/code2biovideo/biovideo-v433/Code2Video/src/biology_expert/providers.py", line 48, in _request_locked
+    from gpt_request import request_deepseek_token,request_qwen_video_img
+  File "/root/autodl-tmp/code2biovideo/biovideo-v433/Code2Video/src/gpt_request.py", line 14, in <module>
+    with _CFG_PATH.open("r", encoding="utf-8") as _f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/autodl-tmp/code2biovideo/env/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/root/autodl-tmp/code2biovideo/biovideo-v433/Code2Video/src/api_config.json'
+MODEL_OK v42_01_3f2e9478 harness_benchmark_G0
+MODEL_OK v42_02_a8b58ce4 harness_benchmark_G0
+MODEL_OK v42_03_ffa18187 harness_benchmark_G1
+MODEL_OK v42_04_b65a8610 harness_benchmark_G1

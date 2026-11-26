@@ -1,0 +1,49 @@
+{
+  "videos": [
+    {
+      "path": "videos/CANDIDATE_mitosis.mp4",
+      "scientific_model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+      "scene_sha256": "c29ab5769208ce2cf869200377af01759641ab9e16965e568fc8eb02ddf161fb",
+      "trace_gzip_sha256": "3526a6d5fb91e487b6e45f4e662c721b9b70f3a3f765cb20fb708760032a3b8e",
+      "video_sha256": "ecb2239da9cfa0686e2bdcb80c444fe88d05f847916e8e83f5870bdd62201f3a",
+      "resolution": [
+        1280,
+        720
+      ],
+      "duration_seconds": "24.000000",
+      "fps": "24/1",
+      "generated_in_current_run": true,
+      "scientific_review": "REVISE",
+      "visual_review": "REVISE",
+      "release_status": "VIDEO_CANDIDATE",
+      "autonomy_level": "Developer adapted historical scene presentation, geometry and pacing; mechanism model unchanged."
+    }
+  ],
+  "providers": {
+    "wan": {
+      "submission_status": "DRY_RUN",
+      "submitted": false,
+      "request_sha256": "2c2c5f9859f5493a416ed2a3f6dd7fd4c6e03e5a220cc81e0674d1f83ab7c49d",
+      "capabilities": {
+        "valid": true,
+        "errors": [],
+        "entitlement": "REAL_SUBMISSION_REQUIRED",
+        "docs": null
+      },
+      "estimate": {
+        "estimated_cny": 1.5,
+        "basis": "Official Beijing output seconds list price; actual billed cost may differ",
+        "actual_cost": null
+      }
+    },
+    "seedance": {
+      "submission_status": "DRY_RUN",
+      "submitted": false,
+      "capabilities": {
+        "valid": false,
+        "status": "NOT_SELECTED",
+        "reason": "Current user selected Wan only; exact model/endpoint and key not configured."
+      }
+    }
+  }
+}

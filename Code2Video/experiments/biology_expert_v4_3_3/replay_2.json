@@ -1,0 +1,10 @@
+{
+  "status": "PREFLIGHT_REJECTED",
+  "errors": [
+    {
+      "code": "STRUCTURE_OR_SCOPE",
+      "message": "Observable participant type/reference mismatch"
+    }
+  ],
+  "rollback_hash": "f89d4ec483ae29cc60db00c51f76c60ec36b3fba29235f0452b115f30f555d3c"
+}

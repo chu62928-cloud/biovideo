@@ -1,0 +1,31 @@
+{
+  "status": "PREFLIGHT_REJECTED",
+  "errors": [
+    {
+      "code": "FORBIDDEN_FIELDS",
+      "target_id": "REL_NEURON_TO_SARCOLEMMA",
+      "fields": [
+        "scientific_name"
+      ]
+    },
+    {
+      "code": "FORBIDDEN_FIELDS",
+      "target_id": "REL_SARCOLEMMA_TO_SR",
+      "fields": [
+        "scientific_name"
+      ]
+    },
+    {
+      "code": "FORBIDDEN_FIELDS",
+      "target_id": "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+      "fields": [
+        "scientific_name"
+      ]
+    },
+    {
+      "code": "STRUCTURE_OR_SCOPE",
+      "message": "Observable participant type/reference mismatch"
+    }
+  ],
+  "rollback_hash": "f89d4ec483ae29cc60db00c51f76c60ec36b3fba29235f0452b115f30f555d3c"
+}

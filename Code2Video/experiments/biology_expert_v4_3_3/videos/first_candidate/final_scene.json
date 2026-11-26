@@ -1,0 +1,809 @@
+{
+  "scene_id": "scene_mitosis_align_separate_v4",
+  "typed_model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+  "objects": [
+    {
+      "object_id": "pole_left",
+      "entity_semantic_id": "ENT_spatial_landmark",
+      "scientific_identity": {
+        "name": "left cell pole (centrosome region)",
+        "kind": "spatial_landmark",
+        "origin_id": "ENT_spatial_landmark#1"
+      },
+      "scientific_properties": {
+        "component": "pole",
+        "role": "destination_pole_left"
+      },
+      "anchors": {
+        "center": {
+          "kind": "center"
+        }
+      },
+      "visual_representation": {
+        "format": "ellipse",
+        "center": [
+          -5,
+          0,
+          0
+        ],
+        "radius": 0.22,
+        "width": 0.44,
+        "height": 0.44,
+        "color": "#4C6EF5",
+        "label": "Pole",
+        "label_offset": [
+          -0.2,
+          0.55,
+          0
+        ],
+        "visible": true
+      }
+    },
+    {
+      "object_id": "pole_right",
+      "entity_semantic_id": "ENT_spatial_landmark",
+      "scientific_identity": {
+        "name": "right cell pole (centrosome region)",
+        "kind": "spatial_landmark",
+        "origin_id": "ENT_spatial_landmark#2"
+      },
+      "scientific_properties": {
+        "component": "pole",
+        "role": "destination_pole_right"
+      },
+      "anchors": {
+        "center": {
+          "kind": "center"
+        }
+      },
+      "visual_representation": {
+        "format": "ellipse",
+        "center": [
+          5,
+          0,
+          0
+        ],
+        "radius": 0.22,
+        "width": 0.44,
+        "height": 0.44,
+        "color": "#4C6EF5",
+        "label": "Pole",
+        "label_offset": [
+          -0.2,
+          0.55,
+          0
+        ],
+        "visible": true
+      }
+    },
+    {
+      "object_id": "metaphase_plate",
+      "entity_semantic_id": "ENT_spatial_landmark",
+      "scientific_identity": {
+        "name": "metaphase plate (equatorial plane)",
+        "kind": "spatial_landmark",
+        "origin_id": "ENT_spatial_landmark#3"
+      },
+      "scientific_properties": {
+        "component": "alignment_plane"
+      },
+      "anchors": {
+        "center": {
+          "kind": "center"
+        }
+      },
+      "visual_representation": {
+        "format": "path",
+        "points": [
+          [
+            0,
+            -2.0,
+            0
+          ],
+          [
+            0,
+            2.1,
+            0
+          ]
+        ],
+        "color": "#ADB5BD",
+        "label": "Metaphase plate",
+        "label_offset": [
+          0.15,
+          -2.35,
+          0
+        ],
+        "visible": true,
+        "stroke_width": 1
+      }
+    },
+    {
+      "object_id": "sister_chromatid_A",
+      "entity_semantic_id": "ENT_sister_chromatid",
+      "scientific_identity": {
+        "name": "sister chromatid A (left rod)",
+        "kind": "chromosome_structure",
+        "origin_id": "ENT_sister_chromatid#1"
+      },
+      "scientific_properties": {
+        "position_in_pair": "A",
+        "joined": true,
+        "parent_entity_ref": "ENT_duplicated_chromosome#1"
+      },
+      "anchors": {
+        "center": {
+          "kind": "center"
+        }
+      },
+      "visual_representation": {
+        "format": "path",
+        "points": [
+          [
+            -0.5096,
+            -0.92,
+            0
+          ],
+          [
+            -0.331,
+            -0.45,
+            0
+          ],
+          [
+            -0.198,
+            -0.1,
+            0
+          ],
+          [
+            -0.16,
+            0,
+            0
+          ],
+          [
+            -0.198,
+            0.1,
+            0
+          ],
+          [
+            -0.331,
+            0.45,
+            0
+          ],
+          [
+            -0.5096,
+            0.92,
+            0
+          ]
+        ],
+        "color": "#EF839C",
+        "label": "Copy A",
+        "label_offset": [
+          0,
+          -1.3,
+          0
+        ],
+        "visible": true,
+        "stroke_width": 14,
+        "constriction": {
+          "y": 0,
+          "factor": 0.45
+        }
+      }
+    },
+    {
+      "object_id": "sister_chromatid_B",
+      "entity_semantic_id": "ENT_sister_chromatid",
+      "scientific_identity": {
+        "name": "sister chromatid B (right rod)",
+        "kind": "chromosome_structure",
+        "origin_id": "ENT_sister_chromatid#2"
+      },
+      "scientific_properties": {
+        "position_in_pair": "B",
+        "joined": true,
+        "parent_entity_ref": "ENT_duplicated_chromosome#1"
+      },
+      "anchors": {
+        "center": {
+          "kind": "center"
+        }
+      },
+      "visual_representation": {
+        "format": "path",
+        "points": [
+          [
+            0.5096,
+            -0.92,
+            0
+          ],
+          [
+            0.331,
+            -0.45,
+            0
+          ],
+          [
+            0.198,
+            -0.1,
+            0
+          ],
+          [
+            0.16,
+            0,
+            0
+          ],
+          [
+            0.198,
+            0.1,
+            0
+          ],
+          [
+            0.331,
+            0.45,
+            0
+          ],
+          [
+            0.5096,
+            0.92,
+            0
+          ]
+        ],
+        "color": "#EF839C",
+        "label": "Copy B",
+        "label_offset": [
+          0,
+          1.3,
+          0
+        ],
+        "visible": true,
+        "stroke_width": 14,
+        "constriction": {
+          "y": 0,
+          "factor": 0.45
+        }
+      }
+    },
+    {
+      "object_id": "kinetochore_A",
+      "entity_semantic_id": "ENT_kinetochore",
+      "scientific_identity": {
+        "name": "kinetochore of sister chromatid A",
+        "kind": "protein_complex",
+        "origin_id": "ENT_kinetochore#1"
+      },
+      "scientific_properties": {
+        "on_chromatid": "sister_chromatid_A",
+        "facing": "left"
+      },
+      "anchors": {
+        "center": {
+          "kind": "center"
+        }
+      },
+      "visual_representation": {
+        "format": "circle",
+        "center": [
+          -0.27,
+          0,
+          0
+        ],
+        "radius": 0.13,
+        "width": 0.24,
+        "height": 0.24,
+        "color": "#FFDB74",
+        "label": "",
+        "label_offset": [
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      }
+    },
+    {
+      "object_id": "kinetochore_B",
+      "entity_semantic_id": "ENT_kinetochore",
+      "scientific_identity": {
+        "name": "kinetochore of sister chromatid B",
+        "kind": "protein_complex",
+        "origin_id": "ENT_kinetochore#2"
+      },
+      "scientific_properties": {
+        "on_chromatid": "sister_chromatid_B",
+        "facing": "right"
+      },
+      "anchors": {
+        "center": {
+          "kind": "center"
+        }
+      },
+      "visual_representation": {
+        "format": "circle",
+        "center": [
+          0.27,
+          0,
+          0
+        ],
+        "radius": 0.13,
+        "width": 0.24,
+        "height": 0.24,
+        "color": "#FFDB74",
+        "label": "",
+        "label_offset": [
+          0,
+          0,
+          0
+        ],
+        "visible": true
+      }
+    },
+    {
+      "object_id": "kmt_left",
+      "entity_semantic_id": "ENT_mitotic_spindle_microtubule",
+      "scientific_identity": {
+        "name": "kinetochore microtubule from left pole",
+        "kind": "cytoskeletal_structure",
+        "origin_id": "ENT_mitotic_spindle_microtubule#1"
+      },
+      "scientific_properties": {
+        "from_pole": "left",
+        "attached_to": "kinetochore_A",
+        "dynamic": true
+      },
+      "anchors": {
+        "center": {
+          "kind": "center"
+        }
+      },
+      "visual_representation": {
+        "format": "path",
+        "points": [
+          [
+            -5,
+            0,
+            0
+          ],
+          [
+            -0.27,
+            0,
+            0
+          ]
+        ],
+        "color": "#868E96",
+        "label": "Microtubule",
+        "label_offset": [
+          0,
+          0.4,
+          0
+        ],
+        "visible": true,
+        "stroke_width": 3
+      }
+    },
+    {
+      "object_id": "kmt_right",
+      "entity_semantic_id": "ENT_mitotic_spindle_microtubule",
+      "scientific_identity": {
+        "name": "kinetochore microtubule from right pole",
+        "kind": "cytoskeletal_structure",
+        "origin_id": "ENT_mitotic_spindle_microtubule#2"
+      },
+      "scientific_properties": {
+        "from_pole": "right",
+        "attached_to": "kinetochore_B",
+        "dynamic": true
+      },
+      "anchors": {
+        "center": {
+          "kind": "center"
+        }
+      },
+      "visual_representation": {
+        "format": "path",
+        "points": [
+          [
+            5,
+            0,
+            0
+          ],
+          [
+            0.27,
+            0,
+            0
+          ]
+        ],
+        "color": "#868E96",
+        "label": "Microtubule",
+        "label_offset": [
+          0,
+          0.4,
+          0
+        ],
+        "visible": true,
+        "stroke_width": 3
+      }
+    }
+  ],
+  "relations": [
+    {
+      "semantic_id": "REL_kinetochore_A_part",
+      "type": "REL_kinetochore_part_of_sister_chromatid",
+      "source": "kinetochore_A",
+      "target": "sister_chromatid_A",
+      "source_anchor": "center",
+      "target_anchor": "center",
+      "model_relation_ref": "REL_kinetochore_part_of_sister_chromatid",
+      "draw_link": false
+    },
+    {
+      "semantic_id": "REL_kinetochore_B_part",
+      "type": "REL_kinetochore_part_of_sister_chromatid",
+      "source": "kinetochore_B",
+      "target": "sister_chromatid_B",
+      "source_anchor": "center",
+      "target_anchor": "center",
+      "model_relation_ref": "REL_kinetochore_part_of_sister_chromatid",
+      "draw_link": false
+    },
+    {
+      "semantic_id": "REL_kmt_left_binds",
+      "type": "REL_microtubule_binds_kinetochore",
+      "source": "kmt_left",
+      "target": "kinetochore_A",
+      "source_anchor": "center",
+      "target_anchor": "center",
+      "model_relation_ref": "REL_microtubule_binds_kinetochore",
+      "draw_link": false
+    },
+    {
+      "semantic_id": "REL_kmt_right_binds",
+      "type": "REL_microtubule_binds_kinetochore",
+      "source": "kmt_right",
+      "target": "kinetochore_B",
+      "source_anchor": "center",
+      "target_anchor": "center",
+      "model_relation_ref": "REL_microtubule_binds_kinetochore",
+      "draw_link": false
+    },
+    {
+      "semantic_id": "REL_metaphase_alignment",
+      "type": "REL_duplicated_chromosome_at_metaphase_plate",
+      "source": "sister_chromatid_A",
+      "target": "metaphase_plate",
+      "source_anchor": "center",
+      "target_anchor": "center",
+      "model_relation_ref": "REL_duplicated_chromosome_at_metaphase_plate",
+      "draw_link": false
+    },
+    {
+      "semantic_id": "REL_sister_pair_join_A",
+      "type": "part_of",
+      "source": "sister_chromatid_A",
+      "target": "sister_chromatid_A",
+      "source_anchor": "center",
+      "target_anchor": "center",
+      "model_relation_ref": "REL_sister_chromatid_part_of_duplicated_chromosome",
+      "draw_link": false,
+      "connector": {
+        "style": "line",
+        "color": "#D6336C",
+        "width": 6
+      }
+    },
+    {
+      "semantic_id": "REL_sister_pair_join_B",
+      "type": "part_of",
+      "source": "sister_chromatid_B",
+      "target": "sister_chromatid_A",
+      "source_anchor": "center",
+      "target_anchor": "center",
+      "model_relation_ref": "REL_sister_chromatid_part_of_duplicated_chromosome",
+      "draw_link": false,
+      "connector": {
+        "style": "line",
+        "color": "#D6336C",
+        "width": 6
+      }
+    }
+  ],
+  "events": [
+    {
+      "event_id": "EV_attach_orient",
+      "process_semantic_id": "PROC_kinetochore_attachment_orientation",
+      "action_category": "binding",
+      "participant_bindings": {
+        "chromosome_being_attached": "sister_chromatid_A",
+        "sister_chromatid_bearing_kinetochore": [
+          "sister_chromatid_A",
+          "sister_chromatid_B"
+        ],
+        "binding_site": [
+          "kinetochore_A",
+          "kinetochore_B"
+        ],
+        "attaching_fiber": [
+          "kmt_left",
+          "kmt_right"
+        ],
+        "target_pole": [
+          "pole_left",
+          "pole_right"
+        ]
+      },
+      "start_trigger": "t=0",
+      "end_trigger": "t=1.0",
+      "start_time": 0,
+      "end_time": 3.0,
+      "state_before": {
+        "attachment": "unattached",
+        "orientation": "random"
+      },
+      "state_after": {
+        "attachment": "bipolar",
+        "orientation": "kinetochores_face_opposite_poles"
+      },
+      "relation_semantic_ids": [
+        "REL_kmt_left_binds",
+        "REL_kmt_right_binds"
+      ],
+      "caption": "Spindle fibers attach to kinetochores on the two sister chromatids."
+    },
+    {
+      "event_id": "EV_metaphase_align",
+      "process_semantic_id": "PROC_metaphase_alignment",
+      "action_category": "transport",
+      "participant_bindings": {
+        "aligned_chromosome": [
+          "sister_chromatid_A",
+          "sister_chromatid_B"
+        ],
+        "alignment_plane": "metaphase_plate"
+      },
+      "start_trigger": "t=1.0",
+      "end_trigger": "t=2.5",
+      "start_time": 3.0,
+      "end_time": 7.5,
+      "state_before": {
+        "position": "off_equator"
+      },
+      "state_after": {
+        "position": "aligned_at_metaphase_plate",
+        "metaphase_alignment": "Duplicated chromosome aligned at metaphase plate (schematic phase order)."
+      },
+      "relation_semantic_ids": [
+        "REL_metaphase_alignment"
+      ],
+      "caption": "The duplicated chromosome lines up at the middle of the cell."
+    },
+    {
+      "event_id": "EV_anaphase_separate",
+      "process_semantic_id": "PROC_anaphase_sister_separation",
+      "action_category": "separation",
+      "participant_bindings": {
+        "separating_duplex": "sister_chromatid_A",
+        "pre_separation_sister_chromatids": [
+          "sister_chromatid_A",
+          "sister_chromatid_B"
+        ],
+        "daughter_chromatids": [
+          "sister_chromatid_A",
+          "sister_chromatid_B"
+        ],
+        "pulling_microtubules": [
+          "kmt_left",
+          "kmt_right"
+        ],
+        "destination_pole": [
+          "pole_left",
+          "pole_right"
+        ]
+      },
+      "start_trigger": "t=4.0",
+      "end_trigger": "t=7.5",
+      "start_time": 12.0,
+      "end_time": 22.5,
+      "state_before": {
+        "sister_chromatid_attachment": "joined",
+        "metaphase_alignment": "Duplicated chromosome aligned at metaphase plate (schematic phase order)."
+      },
+      "state_after": {
+        "sister_chromatid_attachment": "separated",
+        "daughter_chromatids": "moving_to_opposite_poles"
+      },
+      "relation_semantic_ids": [
+        "REL_kmt_left_binds",
+        "REL_kmt_right_binds"
+      ],
+      "caption": "The sisters separate. Each is now a chromosome moving toward its own pole."
+    }
+  ],
+  "actions": [
+    {
+      "object_id": "sister_chromatid_A",
+      "start_time": 3.0,
+      "end_time": 7.5,
+      "from": [
+        -1.68,
+        0,
+        0
+      ],
+      "to": [
+        -0.18,
+        0,
+        0
+      ],
+      "visible_after": true
+    },
+    {
+      "object_id": "sister_chromatid_B",
+      "start_time": 3.0,
+      "end_time": 7.5,
+      "from": [
+        -1.32,
+        0,
+        0
+      ],
+      "to": [
+        0.18,
+        0,
+        0
+      ],
+      "visible_after": true
+    },
+    {
+      "object_id": "kinetochore_A",
+      "start_time": 3.0,
+      "end_time": 7.5,
+      "from": [
+        -1.68,
+        0,
+        0
+      ],
+      "to": [
+        -0.18,
+        0,
+        0
+      ],
+      "visible_after": true
+    },
+    {
+      "object_id": "kinetochore_B",
+      "start_time": 3.0,
+      "end_time": 7.5,
+      "from": [
+        -1.32,
+        0,
+        0
+      ],
+      "to": [
+        0.18,
+        0,
+        0
+      ],
+      "visible_after": true
+    },
+    {
+      "object_id": "sister_chromatid_A",
+      "start_time": 12.0,
+      "end_time": 22.5,
+      "from": [
+        -0.18,
+        0,
+        0
+      ],
+      "to": [
+        -3.0,
+        0,
+        0
+      ],
+      "visible_after": true
+    },
+    {
+      "object_id": "sister_chromatid_B",
+      "start_time": 12.0,
+      "end_time": 22.5,
+      "from": [
+        0.18,
+        0,
+        0
+      ],
+      "to": [
+        3.0,
+        0,
+        0
+      ],
+      "visible_after": true
+    },
+    {
+      "object_id": "kinetochore_A",
+      "start_time": 12.0,
+      "end_time": 22.5,
+      "from": [
+        -0.18,
+        0,
+        0
+      ],
+      "to": [
+        -3.0,
+        0,
+        0
+      ],
+      "visible_after": true
+    },
+    {
+      "object_id": "kinetochore_B",
+      "start_time": 12.0,
+      "end_time": 22.5,
+      "from": [
+        0.18,
+        0,
+        0
+      ],
+      "to": [
+        3.0,
+        0,
+        0
+      ],
+      "visible_after": true
+    },
+    {
+      "object_id": "kmt_left",
+      "start_time": 0.0,
+      "end_time": 22.5,
+      "from": [
+        -5,
+        0,
+        0
+      ],
+      "to": [
+        -0.18,
+        0,
+        0
+      ],
+      "visible_after": true,
+      "dynamic_path": {
+        "source_object": "pole_left",
+        "target_object": "kinetochore_A"
+      }
+    },
+    {
+      "object_id": "kmt_right",
+      "start_time": 0.0,
+      "end_time": 22.5,
+      "from": [
+        5,
+        0,
+        0
+      ],
+      "to": [
+        0.18,
+        0,
+        0
+      ],
+      "visible_after": true,
+      "dynamic_path": {
+        "source_object": "pole_right",
+        "target_object": "kinetochore_B"
+      }
+    }
+  ],
+  "duration": 24,
+  "scientific_simplifications": [
+    "Only one duplicated chromosome (one sister chromatid pair) is modeled, instantiating the source's universal alignment statement for that single pair.",
+    "Separation is shown as the joined pair splitting into two persistent chromatids (each now called a chromosome); post-separation identity preserved via origin_id and semantic_state_alias.",
+    "Molecular cohesin degradation/cleavage mechanism is NOT shown; only observable connection breakdown and separation are depicted.",
+    "Stages are discrete and schematic; phase order is schematic, not a strict per-chromosome causal prerequisite.",
+    "Maximal chromosome condensation at metaphase is out of scope and not depicted as a process effect."
+  ],
+  "assemblies": [
+    {
+      "entity_semantic_id": "ENT_duplicated_chromosome",
+      "component_ids": [
+        "sister_chromatid_A",
+        "sister_chromatid_B"
+      ],
+      "parent_bindings": {
+        "sister_chromatid_A": "sister_chromatid_A",
+        "sister_chromatid_B": "sister_chromatid_B"
+      }
+    }
+  ]
+}

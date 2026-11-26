@@ -1,0 +1,33 @@
+{
+  "science": {
+    "decision": "REVISE",
+    "issues": [
+      "Anaphase chromatid orientation is topologically wrong (13s–23s): each separated sister is drawn as a chevron whose kinetochore (yellow dot / centromere) sits at the center-ward vertex while the arms trail pole-ward. In real anaphase A the kinetochore leads toward the pole and the arms trail; here the kinetochore trails, contradicting the very microtubule that is supposed to pull it.",
+      "Alignment timing mismatch (0s–8s): at 0s–2s the duplicated chromosome sits clearly left of the 'Metaphase plate' line, yet the first caption already asserts full kinetochore attachment; the chromosome only reaches the plate ~8s. The 4s caption 'lines up at the middle of the cell' is shown while the X is still visibly off-center (4s–7s).",
+      "Bipolar (amphitelic) attachment is correctly depicted (each pole's microtubule to one kinetochore, 0s–12s) and sister identity (Copy A vs Copy B) is conserved through separation — these are correct and should be kept."
+    ]
+  },
+  "visual": {
+    "decision": "PASS",
+    "issues": [
+      "Transition ghosting / double-exposure of labels and caption at ~3s and ~12s (cross-fade artifact); brief and non-confusing but worth a clean cut.",
+      "Poles rendered as plain blue dots labeled 'Pole' with no centrosome/aster; microtubules are single straight lines, not fiber bundles — acceptable stylization but a simplification."
+    ]
+  },
+  "pedagogy": {
+    "accuracy": "REVISE",
+    "terms": "PASS",
+    "motion": "REVISE",
+    "density": "PASS",
+    "readability": "PASS",
+    "objective": "PASS",
+    "notes": "Terms (sister chromatids, kinetochore, microtubule, metaphase plate, pole, duplicated chromosome) are standard and correctly used; 'Copy A/B' is an acceptable informal label for HS. Low density and high readability suit the level. Motion conveys alignment→separation→polar migration, but the chevron orientation undermines the 'pulled by its kinetochore' message, so accuracy/motion need the fix above. Objective (show alignment to separation of one chromosome) is met."
+  },
+  "limitations": [
+    "Single chromosome only; no other chromosomes, no cell outline, no nuclear envelope, no spindle assembly context.",
+    "No depiction of cohesin cleavage at the centromere that actually permits separation (12s→13s jump is unexplained).",
+    "Microtubule dynamics (depolymerization at kinetochore / poleward flux) not represented; lines just shorten as a proxy.",
+    "Only ~24s sampled at 1s cadence; sub-second transition behavior (3s, 12s ghosting) and exact centering instant cannot be fully verified.",
+    "Chevron shape of separated chromatids is stylized; true chromatid morphology (two arms from a centromere) is not faithfully shown, so the orientation critique rests on the kinetochore-vertex convention."
+  ]
+}

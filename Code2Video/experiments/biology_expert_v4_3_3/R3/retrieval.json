@@ -1,0 +1,1202 @@
+{
+  "evidence": [
+    {
+      "evidence_id": "E_63f3180cbf80",
+      "url": "https://europepmc.org/article/MED/41169745",
+      "title": "The diagnostic significance of pupillary reflex pathways: insights from classical examination and advanced pupillometry.",
+      "author_or_institution": "Lisowski Ł, Lisowska J, Charytonowicz A, Mariak Z, Obuchowska I, Konopińska J.",
+      "source_type": "bibliographic_abstract",
+      "evidence_level": "ABSTRACT",
+      "biological_scope": "Requires claim-specific scope review",
+      "status": "RETRIEVED_ABSTRACT",
+      "content_sha256": "146d0fab120ab1821e74e367b792afe5056c11b0dfa895935211f0c559b9156c",
+      "passages": [
+        {
+          "location": "abstract",
+          "text": "Background/objectives The pupil, a dynamic ocular structure, serves as a critical indicator of neurological and ophthalmological function. This interdisciplinary review explores the anatomical, physiological, and pathological aspects of pupillary reflexes and disorders. Content Emphasis is placed on the diagnostic relevance of light and accommodation reflexes, sympathetic and parasympathetic pathways, and the clinical implications of conditions such as Horner's syndrome, Adie's tonic pupil, and Argyll Robertson pupil. The utility of pharmacological testing and pupillometry in localizing lesions and identifying subclinical changes is extensively discussed. Advancements in pupillary assessment-particularly dynamic and chromatic pupillometry-offer novel insights into autonomic nervous system dysfunction, neurodegenerative diseases, and retinal pathologies including glaucoma and retinitis pigmentosa. Recent findings By integrating classical examination techniques with modern imaging and measurement modalities, the pupil emerges as a valuable biomarker in systemic, neurological, and psychiatric disorders. This review underscores the necessity of collaborative, multidisciplinary approaches for accurate diagnosis and effective management of pupillary abnormalities. Conclusion Particular attention is given to the diagnostic and prognostic applications of pupillometry, the pathophysiological mechanisms underlying pupillary abnormalities, and the utility of pharmacological tests in lesion localization. By consolidating foundational knowledge with recent clinical and technological developments, this review offers an updated framework for understanding pupillary function and dysfunction and highlights the importance of collaborative approaches across medical specialties for improved diagnostic accuracy and patient care.",
+          "evidence_level": "ABSTRACT"
+        }
+      ],
+      "figures": [],
+      "limitations": [
+        "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+      ]
+    },
+    {
+      "evidence_id": "E_dd760be0c42d",
+      "url": "https://europepmc.org/article/MED/41463672",
+      "title": "Pupillary Hippus as a Biomarker: Spectral Signatures and Complexity Approaches in Autonomic and Clinical Contexts.",
+      "author_or_institution": "Rizzuto V, Laurino M, Montanari R, Gemignani A, Figus M, Covello G, Candelise N, Borroni D, Laganovska G, Mesin L.",
+      "source_type": "bibliographic_abstract",
+      "evidence_level": "ABSTRACT",
+      "biological_scope": "Requires claim-specific scope review",
+      "status": "RETRIEVED_ABSTRACT",
+      "content_sha256": "117b2233fa569e1ba3b668f18e17ee712c734f8b634153491dee6bb1efc498f3",
+      "passages": [
+        {
+          "location": "abstract",
+          "text": "Pupillary hippus, i.e., the spontaneous bilateral oscillation of pupil diameter under constant illumination, provides a non-invasive window into autonomic and central nervous system dynamics. Despite decades of research, a unified framework linking its spectral features, physiological underpinnings, and analytical complexity is still missing. In this narrative review, we synthesize spectral and nonlinear pupillometry studies to propose a paradigm-aware taxonomy of hippus frequency bands that integrates evidence from autonomic tests and cognitive-arousal paradigms. Across the literature, low-frequency components tend to covary with respiratory/vasomotor autonomic rhythms, while higher-frequency fluctuations and complexity indices are more sensitive to cognitive load, visual fatigue, and pathological states but remain methodologically heterogeneous. Finally, we explore contexts in which hippus-based biomarkers show clinical potential, with a main focus on glaucoma as an emerging translational model, while underscoring the methodological and translational gaps that currently hinder their validation and routine clinical adoption. Physiology, spectral metrics, and complexity-based analyses are integrated to lay the foundations of a coherent framework.",
+          "evidence_level": "ABSTRACT"
+        }
+      ],
+      "figures": [],
+      "limitations": [
+        "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+      ]
+    },
+    {
+      "evidence_id": "E_0e7798949620",
+      "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/15-2-autonomic-reflexes-and-homeostasis",
+      "title": "15.2 Autonomic Reflexes and Homeostasis  - Anatomy and Physiology 2e | OpenStax",
+      "author_or_institution": "openstax.org",
+      "source_type": "retrieved_scientific_webpage",
+      "biological_scope": "Requires independent scope verification against quoted passages",
+      "accessed_utc": "2026-11-26T08:22:57Z",
+      "content_sha256": "084f1f29653f740158b31043c71e9f3aaee60faece823e3ce03efb50cae8050b",
+      "saved_text": "/root/autodl-tmp/code2biovideo/biovideo-v433/Code2Video/experiments/biology_expert_v4_3_3/R3/research/pupil_light_reflex/E_0e7798949620.txt",
+      "passages": [
+        {
+          "location": "paragraph_0",
+          "text": "By the end of this section, you will be able to:"
+        },
+        {
+          "location": "paragraph_1",
+          "text": "The autonomic nervous system regulates organ systems through circuits that resemble the reflexes described in the somatic nervous system. The main difference between the somatic and autonomic systems is in what target tissues are effectors. Somatic responses are solely based on skeletal muscle contraction. The autonomic system, however, targets cardiac and smooth muscle, as well as glandular tissue. Whereas the basic circuit is a reflex arc , there are differences in the structure of those reflexes for the somatic and autonomic systems."
+        },
+        {
+          "location": "paragraph_2",
+          "text": "One difference between a somatic reflex , such as the withdrawal reflex, and a visceral reflex , which is an autonomic reflex, is in the efferent branch . The output of a somatic reflex is the lower motor neuron in the ventral horn of the spinal cord that projects directly to a skeletal muscle to cause its contraction. The output of a visceral reflex is a two-step pathway starting with the preganglionic fiber emerging from a lateral horn neuron in the spinal cord, or a cranial nucleus neuron in the brain stem, to a ganglion—followed by the postganglionic fiber projecting to a target effector. The other part of a reflex, the afferent branch , is often the same between the two systems. Sensory neurons receiving input from the periphery—with cell bodies in the sensory ganglia, either of a cranial nerve or a dorsal root ganglion adjacent to the spinal cord—project into the CNS to initiate the reflex ( Figure 15.6 ). The Latin root “effere” means “to carry.” Adding the prefix “ef-” suggests the meaning “to carry away,” whereas adding the prefix “af-” suggests “to carry toward or inward.”"
+        },
+        {
+          "location": "paragraph_3",
+          "text": "Figure 15.6 Comparison of Somatic and Visceral Reflexes The afferent inputs to somatic and visceral reflexes are essentially the same, whereas the efferent branches are different. Somatic reflexes, for instance, involve a direct connection from the ventral horn of the spinal cord to the skeletal muscle. Visceral reflexes involve a projection from the central neuron to a ganglion, followed by a second projection from the ganglion to the target effector."
+        },
+        {
+          "location": "paragraph_4",
+          "text": "The afferent branch of a reflex arc does differ between somatic and visceral reflexes in some instances. Many of the inputs to visceral reflexes are from special or somatic senses, but particular senses are associated with the viscera that are not part of the conscious perception of the environment through the somatic nervous system. For example, there is a specific type of mechanoreceptor, called a baroreceptor , in the walls of the aorta and carotid sinuses that senses the stretch of those organs when blood volume or pressure increases. You do not have a conscious perception of having high blood pressure, but that is an important afferent branch of the cardiovascular and, particularly, vasomotor reflexes. The sensory neuron is essentially the same as any other general sensory neuron. The baroreceptor apparatus is part of the ending of a unipolar neuron that has a cell body in a sensory ganglion. The baroreceptors from the carotid arteries have axons in the glossopharyngeal nerve, and those from the aorta have axons in the vagus nerve."
+        },
+        {
+          "location": "paragraph_5",
+          "text": "Though visceral senses are not primarily a part of conscious perception, those sensations sometimes make it to conscious awareness. If a visceral sense is strong enough, it will be perceived. The sensory homunculus—the representation of the body in the primary somatosensory cortex—only has a small region allotted for the perception of internal stimuli. If you swallow a large bolus of food, for instance, you will probably feel the lump of that food as it pushes through your esophagus, or even if your stomach is distended after a large meal. If you inhale especially cold air, you can feel it as it enters your larynx and trachea. These sensations are not the same as feeling high blood pressure or blood sugar levels."
+        },
+        {
+          "location": "paragraph_6",
+          "text": "When particularly strong visceral sensations rise to the level of conscious perception, the sensations are often felt in unexpected places. For example, strong visceral sensations of the heart will be felt as pain in the left shoulder and left arm. This irregular pattern of projection of conscious perception of visceral sensations is called referred pain . Depending on the organ system affected, the referred pain will project to different areas of the body ( Figure 15.7 ). The location of referred pain is not random, but a definitive explanation of the mechanism has not been established. The most broadly accepted theory for this phenomenon is that the visceral sensory fibers enter into the same level of the spinal cord as the somatosensory fibers of the referred pain location. By this explanation, the visceral sensory fibers from the mediastinal region, where the heart is located, would enter the spinal cord at the same level as the spinal nerves from the shoulder and arm, so the brain misinterprets the sensations from the mediastinal region as being from the axillary and brachial regions. Projections from the medial and inferior divisions of the cervical ganglia do enter the spinal cord at the middle to lower cervical levels, which is where the somatosensory fibers enter."
+        },
+        {
+          "location": "paragraph_7",
+          "text": "Figure 15.7 Referred Pain Chart Conscious perception of visceral sensations map to specific regions of the body, as shown in this chart. Some sensations are felt locally, whereas others are perceived as affecting areas that are quite distant from the involved organ."
+        },
+        {
+          "location": "paragraph_8",
+          "text": "Kehr’s sign is the presentation of pain in the left shoulder, chest, and neck regions following rupture of the spleen. The spleen is in the upper-left abdominopelvic quadrant, but the pain is more in the shoulder and neck. How can this be? The sympathetic fibers connected to the spleen are from the celiac ganglion, which would be from the mid-thoracic to lower thoracic region whereas parasympathetic fibers are found in the vagus nerve, which connects in the medulla of the brain stem. However, the neck and shoulder would connect to the spinal cord at the mid-cervical level of the spinal cord. These connections do not fit with the expected correspondence of visceral and somatosensory fibers entering at the same level of the spinal cord."
+        },
+        {
+          "location": "paragraph_9",
+          "text": "The incorrect assumption would be that the visceral sensations are coming from the spleen directly. In fact, the visceral fibers are coming from the diaphragm. The nerve connecting to the diaphragm takes a special route. The phrenic nerve is connected to the spinal cord at cervical levels 3 to 5. The motor fibers that make up this nerve are responsible for the muscle contractions that drive ventilation. These fibers have left the spinal cord to enter the phrenic nerve, meaning that spinal cord damage below the mid-cervical level is not fatal by making ventilation impossible. Therefore, the visceral fibers from the diaphragm enter the spinal cord at the same level as the somatosensory fibers from the neck and shoulder."
+        },
+        {
+          "location": "paragraph_10",
+          "text": "The diaphragm plays a role in Kehr’s sign because the spleen is just inferior to the diaphragm in the upper-left quadrant of the abdominopelvic cavity. When the spleen ruptures, blood spills into this region. The accumulating hemorrhage then puts pressure on the diaphragm. The visceral sensation is actually in the diaphragm, so the referred pain is in a region of the body that corresponds to the diaphragm, not the spleen."
+        },
+        {
+          "location": "paragraph_11",
+          "text": "The efferent branch of the visceral reflex arc begins with the projection from the central neuron along the preganglionic fiber. This fiber then makes a synapse on the ganglionic neuron that projects to the target effector."
+        },
+        {
+          "location": "paragraph_12",
+          "text": "The effector organs that are the targets of the autonomic system range from the iris and ciliary body of the eye to the urinary bladder and reproductive organs. The thoracolumbar output, through the various sympathetic ganglia, reaches all of these organs. The cranial component of the parasympathetic system projects from the eye to part of the intestines. The sacral component picks up with the majority of the large intestine and the pelvic organs of the urinary and reproductive systems."
+        },
+        {
+          "location": "paragraph_13",
+          "text": "Somatic reflexes involve sensory neurons that connect sensory receptors to the CNS and motor neurons that project back out to the skeletal muscles. Visceral reflexes that involve the thoracolumbar or craniosacral systems share similar connections. However, there are reflexes that do not need to involve any CNS components. A long reflex has afferent branches that enter the spinal cord or brain and involve the efferent branches, as previously explained. A short reflex is completely peripheral and only involves the local integration of sensory input with motor output ( Figure 15.8 )."
+        },
+        {
+          "location": "paragraph_14",
+          "text": "Figure 15.8 Short and Long Reflexes Sensory input can stimulate either a short or a long reflex. A sensory neuron can project to the CNS or to an autonomic ganglion. The short reflex involves the direct stimulation of a postganglionic fiber by the sensory neuron, whereas the long reflex involves integration in the spinal cord or brain."
+        },
+        {
+          "location": "paragraph_15",
+          "text": "The difference between short and long reflexes is in the involvement of the CNS. Somatic reflexes always involve the CNS, even in a monosynaptic reflex in which the sensory neuron directly activates the motor neuron. That synapse is in the spinal cord or brain stem, so it has to involve the CNS. However, in the autonomic system there is the possibility that the CNS is not involved. Because the efferent branch of a visceral reflex involves two neurons—the central neuron and the ganglionic neuron—a “short circuit” can be possible. If a sensory neuron projects directly to the ganglionic neuron and causes it to activate the effector target, then the CNS is not involved."
+        },
+        {
+          "location": "paragraph_16",
+          "text": "A division of the nervous system that is related to the autonomic nervous system is the enteric nervous system. The word enteric refers to the digestive organs, so this represents the nervous tissue that is part of the digestive system. There are a few myenteric plexuses in which the nervous tissue in the wall of the digestive tract organs can directly influence digestive function. If stretch receptors in the stomach are activated by the filling and distension of the stomach, a short reflex will directly activate the smooth muscle fibers of the stomach wall to increase motility to digest the excessive food in the stomach. No CNS involvement is needed because the stretch receptor is directly activating a neuron in the wall of the stomach that causes the smooth muscle to contract. That neuron, connected to the smooth muscle, is a postganglionic parasympathetic neuron that can be controlled by a fiber found in the vagus nerve."
+        },
+        {
+          "location": "paragraph_17",
+          "text": "Read this article to learn about a teenager who experiences a series of spells that suggest a stroke. He undergoes endless tests and seeks input from multiple doctors. In the end, one expert, one question, and a simple blood pressure cuff answers the question. Why would the heart have to beat faster when the teenager changes his body position from lying down to sitting, and then to standing?"
+        },
+        {
+          "location": "paragraph_18",
+          "text": "The autonomic nervous system is important for homeostasis because its two divisions compete at the target effector. The balance of homeostasis is attributable to the competing inputs from the sympathetic and parasympathetic divisions (dual innervation). At the level of the target effector, the signal of which system is sending the message is strictly chemical. A signaling molecule binds to a receptor that causes changes in the target cell, which in turn causes the tissue or organ to respond to the changing conditions of the body."
+        },
+        {
+          "location": "paragraph_19",
+          "text": "The postganglionic fibers of the sympathetic and parasympathetic divisions both release neurotransmitters that bind to receptors on their targets. Postganglionic sympathetic fibers release norepinephrine, with a minor exception, whereas postganglionic parasympathetic fibers release ACh. For any given target, the difference in which division of the autonomic nervous system is exerting control is just in what chemical binds to its receptors. The target cells will have adrenergic and muscarinic receptors. If norepinephrine is released, it will bind to the adrenergic receptors present on the target cell, and if ACh is released, it will bind to the muscarinic receptors on the target cell."
+        },
+        {
+          "location": "paragraph_20",
+          "text": "In the sympathetic system, there are exceptions to this pattern of dual innervation. The postganglionic sympathetic fibers that contact the blood vessels within skeletal muscle and that contact sweat glands do not release norepinephrine, they release ACh. This does not create any problem because there is no parasympathetic input to the sweat glands. Sweat glands have muscarinic receptors and produce and secrete sweat in response to the presence of ACh."
+        },
+        {
+          "location": "paragraph_21",
+          "text": "At most of the other targets of the autonomic system, the effector response is based on which neurotransmitter is released and what receptor is present. For example, regions of the heart that establish heart rate are contacted by postganglionic fibers from both systems. If norepinephrine is released onto those cells, it binds to an adrenergic receptor that causes the cells to depolarize faster, and the heart rate increases. If ACh is released onto those cells, it binds to a muscarinic receptor that causes the cells to hyperpolarize so that they cannot reach threshold as easily, and the heart rate slows. Without this parasympathetic input, the heart would work at a rate of approximately 100 beats per minute (bpm). The sympathetic system speeds that up, as it would during exercise, to 120–140 bpm, for example. The parasympathetic system slows it down to the resting heart rate of 60–80 bpm."
+        },
+        {
+          "location": "paragraph_22",
+          "text": "Another example is in the control of pupillary size ( Figure 15.9 ). The afferent branch responds to light hitting the retina. Photoreceptors are activated, and the signal is transferred to the retinal ganglion cells that send an action potential along the optic nerve into the diencephalon. If light levels are low, the sympathetic system sends a signal out through the upper thoracic spinal cord to the superior cervical ganglion of the sympathetic chain. The postganglionic fiber then projects to the iris, where it releases norepinephrine onto the radial fibers of the iris (a smooth muscle). When those fibers contract, the pupil dilates—increasing the amount of light hitting the retina. If light levels are too high, the parasympathetic system sends a signal out from the Edinger–Westphal nucleus through the oculomotor nerve. This fiber synapses in the ciliary ganglion in the posterior orbit. The postganglionic fiber then projects to the iris, where it releases ACh onto the circular fibers of the iris—another smooth muscle. When those fibers contract, the pupil constricts to limit the amount of light hitting the retina."
+        },
+        {
+          "location": "paragraph_23",
+          "text": "Figure 15.9 Autonomic Control of Pupillary Size Activation of the pupillary reflex comes from the amount of light activating the retinal ganglion cells, as sent along the optic nerve. The output of the sympathetic system projects through the superior cervical ganglion, whereas the parasympathetic system originates out of the midbrain and projects through the oculomotor nerve to the ciliary ganglion, which then projects to the iris. The postganglionic fibers of either division release neurotransmitters onto the smooth muscles of the iris to cause changes in the pupillary size. Norepinephrine results in dilation and ACh results in constriction."
+        },
+        {
+          "location": "paragraph_24",
+          "text": "In this example, the autonomic system is controlling how much light hits the retina. It is a homeostatic reflex mechanism that keeps the activation of photoreceptors within certain limits. In the context of avoiding a threat like the lioness on the savannah, the sympathetic response for fight or flight will increase pupillary diameter so that more light hits the retina and more visual information is available for running away. Likewise, the parasympathetic response of rest reduces the amount of light reaching the retina, allowing the photoreceptors to cycle through bleaching and be regenerated for further visual perception; this is what the homeostatic process is attempting to maintain."
+        },
+        {
+          "location": "paragraph_25",
+          "text": "Watch this video to learn about the pupillary reflexes. The pupillary light reflex involves sensory input through the optic nerve and motor response through the oculomotor nerve to the ciliary ganglion, which projects to the circular fibers of the iris. As shown in this short animation, pupils will constrict to limit the amount of light falling on the retina under bright lighting conditions. What constitutes the afferent and efferent branches of the competing reflex (dilation)?"
+        },
+        {
+          "location": "paragraph_26",
+          "text": "Organ systems are balanced between the input from the sympathetic and parasympathetic divisions. When something upsets that balance, the homeostatic mechanisms strive to return it to its regular state. For each organ system, there may be more of a sympathetic or parasympathetic tendency to the resting state, which is known as the autonomic tone of the system. For example, the heart rate was described above. Because the resting heart rate is the result of the parasympathetic system slowing the heart down from its intrinsic rate of 100 bpm, the heart can be said to be in parasympathetic tone."
+        },
+        {
+          "location": "paragraph_27",
+          "text": "In a similar fashion, another aspect of the cardiovascular system is primarily under sympathetic control. Blood pressure is partially determined by the contraction of smooth muscle in the walls of blood vessels. These tissues have adrenergic receptors that respond to the release of norepinephrine from postganglionic sympathetic fibers by constricting and increasing blood pressure. The hormones released from the adrenal medulla—epinephrine and norepinephrine—will also bind to these receptors. Those hormones travel through the bloodstream where they can easily interact with the receptors in the vessel walls. The parasympathetic system has no significant input to the systemic blood vessels, so the sympathetic system determines their tone."
+        },
+        {
+          "location": "paragraph_28",
+          "text": "There are a limited number of blood vessels that respond to sympathetic input in a different fashion. Blood vessels in skeletal muscle, particularly those in the lower limbs, are more likely to dilate. It does not have an overall effect on blood pressure to alter the tone of the vessels, but rather allows for blood flow to increase for those skeletal muscles that will be active in the fight-or-flight response. The blood vessels that have a parasympathetic projection are limited to those in the erectile tissue of the reproductive organs. Acetylcholine released by these postganglionic parasympathetic fibers cause the vessels to dilate, leading to the engorgement of the erectile tissue."
+        },
+        {
+          "location": "paragraph_29",
+          "text": "Have you ever stood up quickly and felt dizzy for a moment? This is because, for one reason or another, blood is not getting to your brain so it is briefly deprived of oxygen. When you change position from sitting or lying down to standing, your cardiovascular system has to adjust for a new challenge, keeping blood pumping up into the head while gravity is pulling more and more blood down into the legs."
+        },
+        {
+          "location": "paragraph_30",
+          "text": "The reason for this is a sympathetic reflex that maintains the output of the heart in response to postural change. When a person stands up, proprioceptors indicate that the body is changing position. A signal goes to the CNS, which then sends a signal to the upper thoracic spinal cord neurons of the sympathetic division. The sympathetic system then causes the heart to beat faster and the blood vessels to constrict. Both changes will make it possible for the cardiovascular system to maintain the rate of blood delivery to the brain. Blood is being pumped superiorly through the internal branch of the carotid arteries into the brain, against the force of gravity. Gravity is not increasing while standing, but blood is more likely to flow down into the legs as they are extended for standing. This sympathetic reflex keeps the brain well oxygenated so that cognitive and other neural processes are not interrupted."
+        },
+        {
+          "location": "paragraph_31",
+          "text": "Sometimes this does not work properly. If the sympathetic system cannot increase cardiac output, then blood pressure into the brain will decrease, and a brief neurological loss can be felt. This can be brief, as a slight “wooziness” when standing up too quickly, or a loss of balance and neurological impairment for a period of time. The name for this is orthostatic hypotension, which means that blood pressure goes below the homeostatic set point when standing. It can be the result of standing up faster than the reflex can occur, which may be referred to as a benign “head rush,” or it may be the result of an underlying cause."
+        },
+        {
+          "location": "paragraph_32",
+          "text": "There are two basic reasons that orthostatic hypotension can occur. First, blood volume is too low and the sympathetic reflex is not effective. This hypovolemia may be the result of dehydration or medications that affect fluid balance, such as diuretics or vasodilators. Both of these medications are meant to lower blood pressure, which may be necessary in the case of systemic hypertension, and regulation of the medications may alleviate the problem. Sometimes increasing fluid intake or water retention through salt intake can improve the situation."
+        },
+        {
+          "location": "paragraph_33",
+          "text": "The second underlying cause of orthostatic hypotension is autonomic failure. There are several disorders that result in compromised sympathetic functions. The disorders range from diabetes to multiple system atrophy (a loss of control over many systems in the body), and addressing the underlying condition can improve the hypotension. For example, with diabetes, peripheral nerve damage can occur, which would affect the postganglionic sympathetic fibers. Getting blood glucose levels under control can improve neurological deficits associated with diabetes."
+        },
+        {
+          "location": "paragraph_34",
+          "text": "Access for free at https://openstax.org/books/anatomy-and-physiology-2e/pages/1-introduction"
+        },
+        {
+          "location": "paragraph_35",
+          "text": "Access for free at https://openstax.org/books/anatomy-and-physiology-2e/pages/1-introduction"
+        },
+        {
+          "location": "paragraph_36",
+          "text": "The information below includes the information needed to generate citations in most \n  major styles (APA, MLA, etc.); you must reformat and organize the information as needed \n  to fit the requirements of the style. Use the information below to generate a citation. \n  We recommend using a citation tool such as this one ."
+        },
+        {
+          "location": "paragraph_37",
+          "text": "© Jun 12, 2026 OpenStax. Textbook content produced by OpenStax is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike License. The OpenStax name, OpenStax logo, OpenStax book covers, OpenStax CNX name, and OpenStax CNX logo, \n    and Rice University name, and Rice University logo trademarks, or wordmarks are not subject to the Creative \n    Commons license and may not be reproduced without the prior and express written consent of Rice University."
+        }
+      ],
+      "figures": [
+        {
+          "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/ecd3cd85a82978d0bf6290a1cdaffc9b3745cb47",
+          "caption": "Figure 15.6 Comparison of Somatic and Visceral Reflexes The afferent inputs to somatic and visceral reflexes are essentially the same, whereas the efferent branches are different. Somatic reflexes, for instance, involve a direct connection from the ventral horn of the spinal cord to the skeletal muscle. Visceral reflexes involve a projection from the central neuron to a ganglion, followed by a second projection from the ganglion to the target effector.",
+          "alt": "The top panel in this figure shows the autonomic efferent pathway. The spinal cord is shown on the left, and a myelinated axon is shown going from the spinal cord to the central neuron. An unmyelinated axon is shown going from the central neuron to the target effector. The bottom panel shows the somatic efferent pathway. The spinal cord is shown on the left, and a myelinated axon is shown going from the spinal cord to the target effector director. In both cases, magnified images show the synapses.",
+          "source_page": "https://openstax.org/books/anatomy-and-physiology-2e/pages/15-2-autonomic-reflexes-and-homeostasis"
+        },
+        {
+          "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/d8d93580f8c3d3c13a900d9e69e0017d57014187",
+          "caption": "Figure 15.7 Referred Pain Chart Conscious perception of visceral sensations map to specific regions of the body, as shown in this chart. Some sensations are felt locally, whereas others are perceived as affecting areas that are quite distant from the involved organ.",
+          "alt": "The figure shows the different organs in the human body. The left panel shows the front view, and the right panel shows the back view.",
+          "source_page": "https://openstax.org/books/anatomy-and-physiology-2e/pages/15-2-autonomic-reflexes-and-homeostasis"
+        },
+        {
+          "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/febfc2e57eaa58f77fdcf8a4384e589005e84bce",
+          "caption": "Figure 15.8 Short and Long Reflexes Sensory input can stimulate either a short or a long reflex. A sensory neuron can project to the CNS or to an autonomic ganglion. The short reflex involves the direct stimulation of a postganglionic fiber by the sensory neuron, whereas the long reflex involves integration in the spinal cord or brain.",
+          "alt": "The top panel in this figure shows a long reflex, where the spinal cord is connected to the sensory receptor cell and the peripheral ganglion. The bottom panel shows a short reflex, where the sensory receptor cell is directly connected to the peripheral ganglion.",
+          "source_page": "https://openstax.org/books/anatomy-and-physiology-2e/pages/15-2-autonomic-reflexes-and-homeostasis"
+        },
+        {
+          "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/cf4fb7e21b51f0534217cdc56f5e46cf152562ee",
+          "caption": "Figure 15.9 Autonomic Control of Pupillary Size Activation of the pupillary reflex comes from the amount of light activating the retinal ganglion cells, as sent along the optic nerve. The output of the sympathetic system projects through the superior cervical ganglion, whereas the parasympathetic system originates out of the midbrain and projects through the oculomotor nerve to the ciliary ganglion, which then projects to the iris. The postganglionic fibers of either division release neurotransmitters onto the smooth muscles of the iris to cause changes in the pupillary size. Norepinephrine results in dilation and ACh results in constriction.",
+          "alt": "This diagram shows how the size of pupils is regulated. The top level of this image shows an eye and the axons going to the brain via the optic nerve. The second level shows the effects of dim light, which results in pupils dilating. The third level shows the effect of bright light, which results in pupils constricting.",
+          "source_page": "https://openstax.org/books/anatomy-and-physiology-2e/pages/15-2-autonomic-reflexes-and-homeostasis"
+        }
+      ],
+      "fact_support": [],
+      "conflicts": [],
+      "trust_limitations": "Publisher authority and exact quotes do not establish entailment; independent contract review required",
+      "status": "RETRIEVED",
+      "evidence_level": "FULL_TEXT"
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12568719/fullTextXML",
+      "error": "ReadTimeout",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13015004/fullTextXML",
+      "error": "ReadTimeout",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12729395/fullTextXML",
+      "error": "ReadTimeout",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9771676/fullTextXML",
+      "error": "FeatureNotFound",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7322266/fullTextXML",
+      "error": "ReadTimeout",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK537237/",
+      "error": "ValueError",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK513253/",
+      "error": "ValueError",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    }
+  ],
+  "search_records": [
+    {
+      "query": "pupillary light reflex afferent optic nerve efferent oculomotor nerve Edinger-Westphal nucleus pathway review",
+      "service": "Europe PMC",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=pupillary+light+reflex+afferent+optic+nerve+efferent+oculomotor+nerve+Edinger-Westphal+nucleus+pathway+review&format=json&pageSize=3&resultType=core",
+      "results": [
+        {
+          "id": "41169745",
+          "source": "MED",
+          "pmid": "41169745",
+          "pmcid": "PMC12568719",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC12568719"
+            ]
+          },
+          "doi": "10.3389/fnins.2025.1677431",
+          "title": "The diagnostic significance of pupillary reflex pathways: insights from classical examination and advanced pupillometry.",
+          "authorString": "Lisowski Ł, Lisowska J, Charytonowicz A, Mariak Z, Obuchowska I, Konopińska J.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Lisowski Ł",
+                "lastName": "Lisowski",
+                "firstName": "Łukasz",
+                "initials": "Ł",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-5202-1968"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of ophthalmology, Medical University of Bialystok, Bialystok, Poland."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Lisowska J",
+                "lastName": "Lisowska",
+                "firstName": "Jolanta",
+                "initials": "J",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Individual Medical Practice Jolanta Lisowska, Bialystok, Poland."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Charytonowicz A",
+                "lastName": "Charytonowicz",
+                "firstName": "Anna",
+                "initials": "A",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of ophthalmology, Medical University of Bialystok, Bialystok, Poland."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Mariak Z",
+                "lastName": "Mariak",
+                "firstName": "Zofia",
+                "initials": "Z",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of ophthalmology, Medical University of Bialystok, Bialystok, Poland."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Obuchowska I",
+                "lastName": "Obuchowska",
+                "firstName": "Iwona",
+                "initials": "I",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of ophthalmology, Medical University of Bialystok, Bialystok, Poland."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Konopińska J",
+                "lastName": "Konopińska",
+                "firstName": "Joanna",
+                "initials": "J",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of ophthalmology, Medical University of Bialystok, Bialystok, Poland."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-5202-1968"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "volume": "19",
+            "journalIssueId": 3895026,
+            "dateOfPublication": "2025 ",
+            "monthOfPublication": 0,
+            "yearOfPublication": 2025,
+            "journal": {
+              "medlineAbbreviation": "Front Neurosci",
+              "title": "Frontiers in neuroscience",
+              "essn": "1662-453X",
+              "issn": "1662-4548",
+              "nlmid": "101478481",
+              "isoabbreviation": "Front Neurosci"
+            },
+            "printPublicationDate": "2025-01-01"
+          },
+          "pubYear": "2025",
+          "pageInfo": "1677431",
+          "abstractText": "<h4>Background/objectives</h4>The pupil, a dynamic ocular structure, serves as a critical indicator of neurological and ophthalmological function. This interdisciplinary review explores the anatomical, physiological, and pathological aspects of pupillary reflexes and disorders.<h4>Content</h4>Emphasis is placed on the diagnostic relevance of light and accommodation reflexes, sympathetic and parasympathetic pathways, and the clinical implications of conditions such as Horner's syndrome, Adie's tonic pupil, and Argyll Robertson pupil. The utility of pharmacological testing and pupillometry in localizing lesions and identifying subclinical changes is extensively discussed. Advancements in pupillary assessment-particularly dynamic and chromatic pupillometry-offer novel insights into autonomic nervous system dysfunction, neurodegenerative diseases, and retinal pathologies including glaucoma and retinitis pigmentosa.<h4>Recent findings</h4>By integrating classical examination techniques with modern imaging and measurement modalities, the pupil emerges as a valuable biomarker in systemic, neurological, and psychiatric disorders. This review underscores the necessity of collaborative, multidisciplinary approaches for accurate diagnosis and effective management of pupillary abnormalities.<h4>Conclusion</h4>Particular attention is given to the diagnostic and prognostic applications of pupillometry, the pathophysiological mechanisms underlying pupillary abnormalities, and the utility of pharmacological tests in lesion localization. By consolidating foundational knowledge with recent clinical and technological developments, this review offers an updated framework for understanding pupillary function and dysfunction and highlights the importance of collaborative approaches across medical specialties for improved diagnostic accuracy and patient care.",
+          "affiliation": "Department of ophthalmology, Medical University of Bialystok, Bialystok, Poland.",
+          "publicationStatus": "epublish",
+          "language": "eng",
+          "pubModel": "Electronic-eCollection",
+          "pubTypeList": {
+            "pubType": [
+              "review-article",
+              "Review",
+              "Journal Article"
+            ]
+          },
+          "keywordList": {
+            "keyword": [
+              "Pupil",
+              "Pupillometry",
+              "Horner’s Syndrome",
+              "Pupillary Reflex",
+              "Ocular Conditions",
+              "Pupillary Disorders"
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.3389/fnins.2025.1677431"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC12568719"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC12568719?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 5,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "license": "cc by",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "doi"
+            ]
+          },
+          "dateOfCompletion": "2025-10-31",
+          "dateOfCreation": "2025-10-31",
+          "dateOfRevision": "2026-09-17",
+          "electronicPublicationDate": "2025-10-15",
+          "firstPublicationDate": "2025-10-15",
+          "firstIndexDate": "2025-11-01",
+          "fullTextReceivedDate": "2025-11-29",
+          "hasEvaluations": "N"
+        },
+        {
+          "id": "41882517",
+          "source": "MED",
+          "pmid": "41882517",
+          "pmcid": "PMC13015004",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC13015004"
+            ]
+          },
+          "doi": "10.1186/s12245-026-01195-0",
+          "title": "Abnormal pupils at the bedside: rapid recognition of neurologic and systemic emergencies in acute care settings.",
+          "authorString": "Penney DC, Rushetsky ZM, Penney DW.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Penney DC",
+                "lastName": "Penney",
+                "firstName": "Dawn C",
+                "initials": "DC",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Cook County Hospital, 1969 W Ogden Ave, Chicago, IL, 60612, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Rushetsky ZM",
+                "lastName": "Rushetsky",
+                "firstName": "Zoë M",
+                "initials": "ZM",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0006-1187-8988"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Philadelphia College of Osteopathic Medicine, 625 Old Peachtree Rd NW, Suwanee, GA, 30024, USA. Zr3477@pcom.edu."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Penney DW",
+                "lastName": "Penney",
+                "firstName": "Donald W",
+                "initials": "DW",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Philadelphia College of Osteopathic Medicine, 625 Old Peachtree Rd NW, Suwanee, GA, 30024, USA."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0009-0006-1187-8988"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "1",
+            "volume": "19",
+            "journalIssueId": 4141624,
+            "dateOfPublication": "2026 Mar",
+            "monthOfPublication": 3,
+            "yearOfPublication": 2026,
+            "journal": {
+              "medlineAbbreviation": "Int J Emerg Med",
+              "title": "International journal of emergency medicine",
+              "essn": "1865-1380",
+              "issn": "1865-1372",
+              "nlmid": "101469435",
+              "isoabbreviation": "Int J Emerg Med"
+            },
+            "printPublicationDate": "2026-03-01"
+          },
+          "pubYear": "2026",
+          "pageInfo": "73",
+          "affiliation": "Cook County Hospital, 1969 W Ogden Ave, Chicago, IL, 60612, USA.",
+          "publicationStatus": "epublish",
+          "language": "eng",
+          "pubModel": "Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "review-article",
+              "Review",
+              "Journal Article"
+            ]
+          },
+          "keywordList": {
+            "keyword": [
+              "Pupil",
+              "Sympathetic Pathway",
+              "Parasympathetic Pathway",
+              "Cn Iii Palsy"
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1186/s12245-026-01195-0"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13015004"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13015004?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 0,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "license": "cc by",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "doi"
+            ]
+          },
+          "dateOfCompletion": "2026-03-26",
+          "dateOfCreation": "2026-03-26",
+          "dateOfRevision": "2026-08-13",
+          "electronicPublicationDate": "2026-03-25",
+          "firstPublicationDate": "2026-03-25",
+          "firstIndexDate": "2026-03-27",
+          "fullTextReceivedDate": "2026-03-26",
+          "hasEvaluations": "N"
+        },
+        {
+          "id": "41463672",
+          "source": "MED",
+          "pmid": "41463672",
+          "pmcid": "PMC12729395",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC12729395"
+            ]
+          },
+          "doi": "10.3390/bioengineering12121376",
+          "title": "Pupillary Hippus as a Biomarker: Spectral Signatures and Complexity Approaches in Autonomic and Clinical Contexts.",
+          "authorString": "Rizzuto V, Laurino M, Montanari R, Gemignani A, Figus M, Covello G, Candelise N, Borroni D, Laganovska G, Mesin L.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Rizzuto V",
+                "lastName": "Rizzuto",
+                "firstName": "Vincenzo",
+                "initials": "V",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0006-4641-3267"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "International School of Advanced Studies, University of Camerino, 62032 Camerino, Italy."
+                    },
+                    {
+                      "affiliation": "Department of Surgical, Medical and Molecular Pathology and Critical Care Medicine, University of Pisa, 56126 Pisa, Italy."
+                    },
+                    {
+                      "affiliation": "Department of Ophthalmology, Riga Stradins University, LV-1007 Riga, Latvia."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Laurino M",
+                "lastName": "Laurino",
+                "firstName": "Marco",
+                "initials": "M",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-4798-5196"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Institute of Clinical Physiology, National Research Council, 56124 Pisa, Italy."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Montanari R",
+                "lastName": "Montanari",
+                "firstName": "Roberto",
+                "initials": "R",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-4331-8460"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Institute of Pharmacology, Heidelberg University Hospital, 69120 Heidelberg, Germany."
+                    },
+                    {
+                      "affiliation": "Molecular Medicine Partnership Unit, European Molecular Biology Laboratory (EMBL), 69120 Heidelberg, Germany."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Gemignani A",
+                "lastName": "Gemignani",
+                "firstName": "Angelo",
+                "initials": "A",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Surgical, Medical and Molecular Pathology and Critical Care Medicine, University of Pisa, 56126 Pisa, Italy."
+                    },
+                    {
+                      "affiliation": "Department of Neuroscience, University of Pisa Hospital, 56126 Pisa, Italy."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Figus M",
+                "lastName": "Figus",
+                "firstName": "Michele",
+                "initials": "M",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-2243-9033"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Surgical, Medical and Molecular Pathology and Critical Care Medicine, University of Pisa, 56126 Pisa, Italy."
+                    },
+                    {
+                      "affiliation": "Ophthalmology, Department of Medical and Surgical Specialties, Azienda Ospedaliero-Universitaria Pisana, 56124 Pisa, Italy."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Covello G",
+                "lastName": "Covello",
+                "firstName": "Giuseppe",
+                "initials": "G",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-8523-2032"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Surgical, Medical and Molecular Pathology and Critical Care Medicine, University of Pisa, 56126 Pisa, Italy."
+                    },
+                    {
+                      "affiliation": "Ophthalmology, Department of Medical and Surgical Specialties, Azienda Ospedaliero-Universitaria Pisana, 56124 Pisa, Italy."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Candelise N",
+                "lastName": "Candelise",
+                "firstName": "Niccolò",
+                "initials": "N",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-5086-3996"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Independent Researcher, 00162 Rome, Italy."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Borroni D",
+                "lastName": "Borroni",
+                "firstName": "Davide",
+                "initials": "D",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Ophthalmology, Riga Stradins University, LV-1007 Riga, Latvia."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Laganovska G",
+                "lastName": "Laganovska",
+                "firstName": "Guna",
+                "initials": "G",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-0644-350X"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Ophthalmology, Riga Stradins University, LV-1007 Riga, Latvia."
+                    },
+                    {
+                      "affiliation": "Clinic of Ophthalmology, P. Stradins Clinical University Hospital, LV-1002 Riga, Latvia."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Mesin L",
+                "lastName": "Mesin",
+                "firstName": "Luca",
+                "initials": "L",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-8239-2348"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Mathematical Biology and Physiology, Department of Electronics and Telecommunications, Politecnico di Torino, 10129 Turin, Italy."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-5086-3996"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-4331-8460"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-8239-2348"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-8523-2032"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-0644-350X"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-2243-9033"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-4798-5196"
+              },
+              {
+                "type": "ORCID",
+                "value": "0009-0006-4641-3267"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "12",
+            "volume": "12",
+            "journalIssueId": 4079566,
+            "dateOfPublication": "2025 Dec",
+            "monthOfPublication": 12,
+            "yearOfPublication": 2025,
+            "journal": {
+              "medlineAbbreviation": "Bioengineering (Basel)",
+              "title": "Bioengineering (Basel, Switzerland)",
+              "essn": "2306-5354",
+              "issn": "2306-5354",
+              "nlmid": "101676056",
+              "isoabbreviation": "Bioengineering (Basel)"
+            },
+            "printPublicationDate": "2025-12-01"
+          },
+          "pubYear": "2025",
+          "pageInfo": "1376",
+          "abstractText": "Pupillary hippus, i.e., the spontaneous bilateral oscillation of pupil diameter under constant illumination, provides a non-invasive window into autonomic and central nervous system dynamics. Despite decades of research, a unified framework linking its spectral features, physiological underpinnings, and analytical complexity is still missing. In this narrative review, we synthesize spectral and nonlinear pupillometry studies to propose a paradigm-aware taxonomy of hippus frequency bands that integrates evidence from autonomic tests and cognitive-arousal paradigms. Across the literature, low-frequency components tend to covary with respiratory/vasomotor autonomic rhythms, while higher-frequency fluctuations and complexity indices are more sensitive to cognitive load, visual fatigue, and pathological states but remain methodologically heterogeneous. Finally, we explore contexts in which hippus-based biomarkers show clinical potential, with a main focus on glaucoma as an emerging translational model, while underscoring the methodological and translational gaps that currently hinder their validation and routine clinical adoption. Physiology, spectral metrics, and complexity-based analyses are integrated to lay the foundations of a coherent framework.",
+          "affiliation": "International School of Advanced Studies, University of Camerino, 62032 Camerino, Italy.",
+          "publicationStatus": "epublish",
+          "language": "eng",
+          "pubModel": "Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "review-article",
+              "Review",
+              "Journal Article"
+            ]
+          },
+          "keywordList": {
+            "keyword": [
+              "Complexity",
+              "Spectral analysis",
+              "Entropy",
+              "glaucoma",
+              "Clinical Applications",
+              "Pupillometry",
+              "Frequency Bands",
+              "Pupillary Unrest",
+              "Pupillary Hippus",
+              "Autonomic Biomarkers"
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.3390/bioengineering12121376"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC12729395"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC12729395?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 5,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "N",
+          "hasData": "Y",
+          "license": "cc by",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "doi"
+            ]
+          },
+          "dateOfCompletion": "2025-12-30",
+          "dateOfCreation": "2025-12-30",
+          "dateOfRevision": "2026-01-02",
+          "electronicPublicationDate": "2025-12-18",
+          "firstPublicationDate": "2025-12-18",
+          "firstIndexDate": "2026-01-02",
+          "fullTextReceivedDate": "2025-12-25",
+          "hasEvaluations": "N"
+        }
+      ]
+    },
+    {
+      "query": "pupil constriction bright light parasympathetic sphincter pupillae mechanism textbook",
+      "service": "Europe PMC",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=pupil+constriction+bright+light+parasympathetic+sphincter+pupillae+mechanism+textbook&format=json&pageSize=3&resultType=core",
+      "results": [
+        {
+          "id": "PMC9771676",
+          "source": "PMC",
+          "pmcid": "PMC9771676",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC9771676"
+            ]
+          },
+          "title": "C",
+          "journalInfo": {
+            "journalIssueId": 3040270,
+            "dateOfPublication": "2020 Oct",
+            "monthOfPublication": 10,
+            "yearOfPublication": 2020,
+            "journal": {
+              "title": "Saunders Comprehensive Veterinary Dictionary"
+            },
+            "printPublicationDate": "2020-10-01"
+          },
+          "pubYear": "2020",
+          "pageInfo": "168-295",
+          "language": "eng",
+          "pubModel": "Undetermined",
+          "pubTypeList": {
+            "pubType": [
+              "chapter-article"
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "PubMedCentral",
+                "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9771676/?tool=EBI"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "PubMedCentral",
+                "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9771676/pdf/?tool=EBI"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC9771676"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC9771676?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 0,
+          "hasReferences": "N",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "N",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2023-01-02",
+          "dateOfRevision": "2025-05-26",
+          "electronicPublicationDate": "2020-10-16",
+          "firstPublicationDate": "2020-10-16",
+          "firstIndexDate": "2023-01-02",
+          "fullTextReceivedDate": "2023-01-02",
+          "hasEvaluations": "N"
+        },
+        {
+          "id": "PMC7322266",
+          "source": "PMC",
+          "pmcid": "PMC7322266",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC7322266"
+            ]
+          },
+          "title": "Diseases of the Nervous System",
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "journalIssueId": 3074645,
+            "dateOfPublication": "2017 Jan",
+            "monthOfPublication": 1,
+            "yearOfPublication": 2017,
+            "journal": {
+              "medlineAbbreviation": "Vet Med",
+              "title": "Veterinary medicine",
+              "issn": "0372-5588",
+              "nlmid": "21520030R",
+              "isoabbreviation": "Vet Med"
+            },
+            "printPublicationDate": "2017-01-01"
+          },
+          "pubYear": "2017",
+          "pageInfo": "1155-1370",
+          "language": "eng",
+          "pubModel": "Undetermined",
+          "pubTypeList": {
+            "pubType": [
+              "chapter-article"
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "PubMedCentral",
+                "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7322266/?tool=EBI"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "PubMedCentral",
+                "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7322266/pdf/?tool=EBI"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC7322266"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC7322266?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 0,
+          "hasReferences": "N",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "N",
+          "hasData": "Y",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "doi"
+            ]
+          },
+          "dateOfCreation": "2025-02-05",
+          "dateOfRevision": "2026-07-23",
+          "electronicPublicationDate": "2017-01-01",
+          "firstPublicationDate": "2017-01-01",
+          "firstIndexDate": "2020-07-02",
+          "fullTextReceivedDate": "2025-02-05",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  ],
+  "research_status": "RETRIEVED_UNREVIEWED",
+  "discovery": "Validated list queries, structured Europe PMC search/abstract/full text, candidate source fetch; source relevance is not assumed"
+}

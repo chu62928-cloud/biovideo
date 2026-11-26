@@ -1,0 +1,1417 @@
+{
+  "video_source": {
+    "model": {
+      "model_id": "mitosis_chromosome_alignment_separation_v3",
+      "schema_version": "1.0",
+      "scope": {
+        "topic": "Mitosis: duplicated chromosome alignment and sister chromatid separation in eukaryotic cells",
+        "organism_context": "eukaryotic cells (animal cell examples with centrosomes/centrioles; plant/fungi differences noted but not modeled)",
+        "audience": "grades_10_12",
+        "included_processes": [
+          "prometaphase kinetochore attachment and chromosome orientation",
+          "metaphase alignment at the metaphase plate",
+          "anaphase sister chromatid separation and poleward movement"
+        ],
+        "excluded_processes": [
+          "interphase DNA replication",
+          "prophase nuclear envelope breakdown and centrosome separation",
+          "telophase nuclear envelope reformation",
+          "cytokinesis",
+          "spindle assembly checkpoint regulation",
+          "molecular mechanism of cohesin degradation/cleavage"
+        ],
+        "simplifications": [
+          "Only one duplicated chromosome (one sister chromatid pair) is modeled; the source's 'all chromosomes' statements are instantiated for this single pair only. The alignment observable checks that this one modeled duplicated chromosome is at the metaphase plate, explicitly delimiting it as an instantiation of the universal source statement.",
+          "Separation is represented by the joined sister-chromatid pair splitting into two distinct persistent daughter chromatid entities (each now called a chromosome), each moving toward an opposite pole. The post-separation identity is carried by these two daughter chromatid entities, not by the whole pair.",
+          "The molecular mechanism by which the sister-chromatid connection breaks down (cohesin degradation/cleavage) is not modeled; only the observable breakdown of the connection is asserted, and no causal sufficiency of microtubule pulling alone is claimed.",
+          "Processes are discrete stages for schematic clarity; the after/concurrent_with links represent schematic phase order, not strict per-chromosome mechanistic causal prerequisites.",
+          "Maximal chromosome condensation at metaphase is noted in source but excluded from process effects as out-of-scope for alignment/separation proof."
+        ]
+      },
+      "entities": [
+        {
+          "semantic_id": "ENT_duplicated_chromosome",
+          "scientific_name": "duplicated chromosome: joined sister chromatid pair attached at centromeric region",
+          "entity_type": "chromosome_structure",
+          "evidence_ids": [
+            "E_dcb0de9a22b0"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_dcb0de9a22b0",
+              "quote": "identical pairs of DNA molecules—sister chromatids—that are firmly attached at the centromeric region",
+              "location": "paragraph_17"
+            },
+            {
+              "evidence_id": "E_dcb0de9a22b0",
+              "quote": "The sister chromatids are still tightly attached to each other by cohesin proteins.",
+              "location": "paragraph_29"
+            }
+          ],
+          "cardinality": 1,
+          "states": {
+            "attached": "sister chromatids firmly attached at centromeric region",
+            "separated": "no longer modeled on this entity; see ENT_daughter_chromatid instances after separation"
+          }
+        },
+        {
+          "semantic_id": "ENT_sister_chromatid",
+          "scientific_name": "individual sister chromatid within the joined pair (pre-separation component)",
+          "entity_type": "chromosome_structure",
+          "evidence_ids": [
+            "E_dcb0de9a22b0"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_dcb0de9a22b0",
+              "quote": "Each sister chromatid develops a protein structure called a kinetochore in the centromeric region",
+              "location": "paragraph_27"
+            },
+            {
+              "evidence_id": "E_dcb0de9a22b0",
+              "quote": "mitotic spindle microtubules from opposite poles attach to each sister chromatid at the kinetochore",
+              "location": "paragraph_28"
+            }
+          ],
+          "cardinality": 2,
+          "states": {
+            "joined_in_pair": "sister chromatid is part of the joined duplicated chromosome pair"
+          }
+        },
+        {
+          "semantic_id": "ENT_daughter_chromatid",
+          "scientific_name": "individual chromatid after separation (now called a chromosome)",
+          "entity_type": "chromosome_structure",
+          "evidence_ids": [
+            "E_dcb0de9a22b0"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_dcb0de9a22b0",
+              "quote": "Each chromatid, now called a chromosome, is pulled rapidly toward the centrosome to which its microtubule is attached.",
+              "location": "paragraph_30"
+            }
+          ],
+          "cardinality": 2,
+          "states": {
+            "moving_to_pole": "chromatid pulled toward the centrosome to which its microtubule is attached"
+          }
+        },
+        {
+          "semantic_id": "ENT_kinetochore",
+          "scientific_name": "kinetochore (protein structure at centromeric region of each sister chromatid)",
+          "entity_type": "protein_complex",
+          "evidence_ids": [
+            "E_dcb0de9a22b0"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_dcb0de9a22b0",
+              "quote": "Each sister chromatid develops a protein structure called a kinetochore in the centromeric region",
+              "location": "paragraph_27"
+            }
+          ],
+          "cardinality": 2
+        },
+        {
+          "semantic_id": "ENT_mitotic_spindle_microtubule",
+          "scientific_name": "mitotic spindle microtubule (kinetochore microtubule from a pole)",
+          "entity_type": "cytoskeletal_structure",
+          "evidence_ids": [
+            "E_dcb0de9a22b0"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_dcb0de9a22b0",
+              "quote": "The proteins of the kinetochore attract and bind mitotic spindle microtubules.",
+              "location": "paragraph_27"
+            },
+            {
+              "evidence_id": "E_dcb0de9a22b0",
+              "quote": "mitotic spindle microtubules from opposite poles attach to each sister chromatid at the kinetochore",
+              "location": "paragraph_28"
+            }
+          ],
+          "cardinality": 2
+        },
+        {
+          "semantic_id": "ENT_spatial_landmark",
+          "scientific_name": "spatial landmarks: metaphase plate (equatorial plane) and the two cell poles",
+          "entity_type": "spatial_region",
+          "evidence_ids": [
+            "E_dcb0de9a22b0"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_dcb0de9a22b0",
+              "quote": "a plane called the metaphase plate , or the equatorial plane, midway between the two poles of the cell",
+              "location": "paragraph_29"
+            },
+            {
+              "evidence_id": "E_dcb0de9a22b0",
+              "quote": "the kinetochores of sister chromatids face the opposite poles.",
+              "location": "paragraph_27"
+            }
+          ],
+          "cardinality": 3
+        }
+      ],
+      "relations": [
+        {
+          "semantic_id": "REL_kinetochore_part_of_sister_chromatid",
+          "relation_type": "part_of",
+          "definition": "Each kinetochore is a protein structure located in the centromeric region of an individual sister chromatid (not of the whole duplicated chromosome pair as a unit).",
+          "source_entity": "ENT_kinetochore",
+          "target_entity": "ENT_sister_chromatid",
+          "evidence_ids": [
+            "E_dcb0de9a22b0"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_dcb0de9a22b0",
+              "quote": "Each sister chromatid develops a protein structure called a kinetochore in the centromeric region",
+              "location": "paragraph_27"
+            }
+          ]
+        },
+        {
+          "semantic_id": "REL_sister_chromatid_part_of_duplicated_chromosome",
+          "relation_type": "part_of",
+          "definition": "The two sister chromatids are the joined components of the single duplicated chromosome, firmly attached at the centromeric region.",
+          "source_entity": "ENT_sister_chromatid",
+          "target_entity": "ENT_duplicated_chromosome",
+          "evidence_ids": [
+            "E_dcb0de9a22b0"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_dcb0de9a22b0",
+              "quote": "identical pairs of DNA molecules—sister chromatids—that are firmly attached at the centromeric region",
+              "location": "paragraph_17"
+            }
+          ]
+        },
+        {
+          "semantic_id": "REL_microtubule_binds_kinetochore",
+          "relation_type": "binds",
+          "definition": "Mitotic spindle microtubules from opposite poles bind to kinetochores of the two sister chromatids (one chromatid's kinetochore facing one pole, the other facing the opposite pole).",
+          "source_entity": "ENT_mitotic_spindle_microtubule",
+          "target_entity": "ENT_kinetochore",
+          "evidence_ids": [
+            "E_dcb0de9a22b0"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_dcb0de9a22b0",
+              "quote": "The proteins of the kinetochore attract and bind mitotic spindle microtubules.",
+              "location": "paragraph_27"
+            },
+            {
+              "evidence_id": "E_dcb0de9a22b0",
+              "quote": "mitotic spindle microtubules from opposite poles attach to each sister chromatid at the kinetochore",
+              "location": "paragraph_28"
+            }
+          ]
+        },
+        {
+          "semantic_id": "REL_duplicated_chromosome_at_metaphase_plate",
+          "relation_type": "located_at",
+          "definition": "During metaphase, the modeled single duplicated chromosome is aligned at the metaphase plate (equatorial plane); this is an instantiation of the source's statement that all chromosomes are so aligned.",
+          "source_entity": "ENT_duplicated_chromosome",
+          "target_entity": "ENT_spatial_landmark",
+          "evidence_ids": [
+            "E_dcb0de9a22b0"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_dcb0de9a22b0",
+              "quote": "all the chromosomes are aligned in a plane called the metaphase plate , or the equatorial plane, midway between the two poles of the cell.",
+              "location": "paragraph_29"
+            }
+          ]
+        }
+      ],
+      "processes": [
+        {
+          "process_semantic_id": "PROC_kinetochore_attachment_orientation",
+          "scientific_name": "prometaphase kinetochore-microtubule binding and bipolar chromosome orientation",
+          "action_category": "binding",
+          "participants": [
+            {
+              "role": "chromosome_being_attached",
+              "entity_ref": "ENT_duplicated_chromosome"
+            },
+            {
+              "role": "sister_chromatid_bearing_kinetochore",
+              "entity_ref": "ENT_sister_chromatid"
+            },
+            {
+              "role": "binding_site",
+              "entity_ref": "ENT_kinetochore"
+            },
+            {
+              "role": "attaching_fiber",
+              "entity_ref": "ENT_mitotic_spindle_microtubule"
+            },
+            {
+              "role": "target_pole",
+              "entity_ref": "ENT_spatial_landmark"
+            }
+          ],
+          "input_roles": [
+            "chromosome_being_attached",
+            "sister_chromatid_bearing_kinetochore",
+            "binding_site",
+            "attaching_fiber",
+            "target_pole"
+          ],
+          "output_roles": [
+            "chromosome_being_attached",
+            "sister_chromatid_bearing_kinetochore",
+            "binding_site",
+            "attaching_fiber",
+            "target_pole"
+          ],
+          "preconditions": {
+            "kinetochore_formed": "Each sister chromatid has a kinetochore in the centromeric region.",
+            "spindle_microtubules_present": "Mitotic spindle microtubules are present and extend from centrosomes."
+          },
+          "effects": {
+            "attachment": "Kinetochore microtubules from opposite poles attach to the two sister chromatids at their kinetochores.",
+            "orientation": "The chromosome is oriented so that the kinetochores of the sister chromatids face opposite poles.",
+            "mechanism_note": "Binding is asserted as source-supported; the attract-and-bind description is schematic only."
+          },
+          "temporal_scope": {
+            "start_condition": "Kinetochores have formed and spindle microtubules are present (prior out-of-scope context: interphase replication and prophase complete).",
+            "end_condition": "Sister chromatids are attached via kinetochores to microtubules from opposing poles and oriented.",
+            "concurrent_with": [],
+            "after": []
+          },
+          "observables": [
+            {
+              "constraint_id": "OBS_bipolar_attachment_during_prometaphase",
+              "predicate": "relation_holds_during",
+              "relation_ref": "REL_microtubule_binds_kinetochore",
+              "source_role": "attaching_fiber",
+              "target_role": "binding_site",
+              "capability": "DETERMINISTIC",
+              "evidence_ids": [
+                "E_dcb0de9a22b0"
+              ],
+              "support": [
+                {
+                  "evidence_id": "E_dcb0de9a22b0",
+                  "quote": "mitotic spindle microtubules from opposite poles attach to each sister chromatid at the kinetochore",
+                  "location": "paragraph_28"
+                }
+              ]
+            }
+          ],
+          "evidence_ids": [
+            "E_dcb0de9a22b0"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_dcb0de9a22b0",
+              "quote": "The proteins of the kinetochore attract and bind mitotic spindle microtubules.",
+              "location": "paragraph_27"
+            },
+            {
+              "evidence_id": "E_dcb0de9a22b0",
+              "quote": "the chromosome will be oriented until the kinetochores of sister chromatids face the opposite poles.",
+              "location": "paragraph_27"
+            }
+          ],
+          "exceptions": []
+        },
+        {
+          "process_semantic_id": "PROC_metaphase_alignment",
+          "scientific_name": "metaphase alignment of the duplicated chromosome at the metaphase plate",
+          "action_category": "transport",
+          "participants": [
+            {
+              "role": "aligned_chromosome",
+              "entity_ref": "ENT_duplicated_chromosome"
+            },
+            {
+              "role": "alignment_plane",
+              "entity_ref": "ENT_spatial_landmark"
+            }
+          ],
+          "input_roles": [
+            "aligned_chromosome",
+            "alignment_plane"
+          ],
+          "output_roles": [
+            "aligned_chromosome"
+          ],
+          "preconditions": {
+            "bipolar_attachment": "Sister chromatids attached via kinetochores to microtubules from opposing poles.",
+            "cohesin_present": "Sister chromatids still tightly attached to each other by cohesin proteins."
+          },
+          "effects": {
+            "alignment": "The modeled duplicated chromosome is aligned at the metaphase plate.",
+            "scope_note": "Source states 'all the chromosomes' align; only the single modeled chromosome is instantiated. Maximal condensation noted in source but excluded from this proof."
+          },
+          "temporal_scope": {
+            "start_condition": "Chromosome has achieved bipolar kinetochore attachment.",
+            "end_condition": "Chromosome is aligned at the metaphase plate.",
+            "concurrent_with": [],
+            "after": [
+              "PROC_kinetochore_attachment_orientation"
+            ]
+          },
+          "observables": [
+            {
+              "constraint_id": "OBS_alignment_during_metaphase",
+              "predicate": "relation_holds_during",
+              "relation_ref": "REL_duplicated_chromosome_at_metaphase_plate",
+              "source_role": "aligned_chromosome",
+              "target_role": "alignment_plane",
+              "capability": "PARTIAL",
+              "evidence_ids": [
+                "E_dcb0de9a22b0"
+              ],
+              "support": [
+                {
+                  "evidence_id": "E_dcb0de9a22b0",
+                  "quote": "all the chromosomes are aligned in a plane called the metaphase plate",
+                  "location": "paragraph_29"
+                }
+              ]
+            }
+          ],
+          "evidence_ids": [
+            "E_dcb0de9a22b0"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_dcb0de9a22b0",
+              "quote": "During metaphase , the “change phase,” all the chromosomes are aligned in a plane called the metaphase plate , or the equatorial plane, midway between the two poles of the cell.",
+              "location": "paragraph_29"
+            }
+          ],
+          "exceptions": []
+        },
+        {
+          "process_semantic_id": "PROC_anaphase_sister_separation",
+          "scientific_name": "anaphase breakdown of sister-chromatid connection and poleward movement of daughter chromatids",
+          "action_category": "separation",
+          "participants": [
+            {
+              "role": "separating_duplex",
+              "entity_ref": "ENT_duplicated_chromosome"
+            },
+            {
+              "role": "pre_separation_sister_chromatids",
+              "entity_ref": "ENT_sister_chromatid"
+            },
+            {
+              "role": "daughter_chromatids",
+              "entity_ref": "ENT_daughter_chromatid"
+            },
+            {
+              "role": "pulling_microtubules",
+              "entity_ref": "ENT_mitotic_spindle_microtubule"
+            },
+            {
+              "role": "destination_pole",
+              "entity_ref": "ENT_spatial_landmark"
+            }
+          ],
+          "input_roles": [
+            "separating_duplex",
+            "pre_separation_sister_chromatids",
+            "pulling_microtubules",
+            "destination_pole"
+          ],
+          "output_roles": [
+            "daughter_chromatids",
+            "destination_pole"
+          ],
+          "preconditions": {
+            "metaphase_alignment": "Duplicated chromosome aligned at the metaphase plate (schematic phase order; not asserted as a strict per-chromosome causal prerequisite).",
+            "bipolar_attachment": "Sister chromatids attached via kinetochores to microtubules from opposing poles."
+          },
+          "effects": {
+            "connection_breakdown_observed": "The connection between the sister chromatids breaks down as an observed transition; the molecular cause (cohesin degradation/cleavage) is out of scope and not modeled.",
+            "separation": "The two sister chromatids become two distinct daughter chromatids (now called chromosomes).",
+            "poleward_movement": "The microtubules pull the daughter chromatids toward opposite poles; no causal sufficiency of microtubule pulling alone for the connection breakdown is claimed."
+          },
+          "temporal_scope": {
+            "start_condition": "Duplicated chromosome aligned at metaphase plate with bipolar kinetochore attachment (schematic phase order).",
+            "end_condition": "Sister chromatids separated into two distinct daughter chromatids moving toward opposite poles.",
+            "concurrent_with": [],
+            "after": [
+              "PROC_metaphase_alignment"
+            ]
+          },
+          "observables": [
+            {
+              "constraint_id": "OBS_connection_breakdown_after_alignment",
+              "predicate": "event_precedes",
+              "ordered_process_ids": [
+                "PROC_metaphase_alignment",
+                "PROC_anaphase_sister_separation"
+              ],
+              "capability": "PARTIAL",
+              "evidence_ids": [
+                "E_dcb0de9a22b0"
+              ],
+              "support": [
+                {
+                  "evidence_id": "E_dcb0de9a22b0",
+                  "quote": "In anaphase, the connection between the sister chromatids breaks down, and the microtubules pull the chromosomes toward opposite poles.",
+                  "location": "paragraph_28"
+                }
+              ]
+            },
+            {
+              "constraint_id": "OBS_two_daughter_chromatids_after_separation",
+              "predicate": "state_transition_allowed",
+              "state_key": "sister_chromatid_attachment",
+              "to_value": "separated",
+              "precondition": {
+                "metaphase_alignment": "Duplicated chromosome aligned at metaphase plate (schematic phase order)."
+              },
+              "capability": "PARTIAL",
+              "evidence_ids": [
+                "E_dcb0de9a22b0"
+              ],
+              "support": [
+                {
+                  "evidence_id": "E_dcb0de9a22b0",
+                  "quote": "Each chromatid, now called a chromosome, is pulled rapidly toward the centrosome to which its microtubule is attached.",
+                  "location": "paragraph_30"
+                }
+              ]
+            }
+          ],
+          "evidence_ids": [
+            "E_dcb0de9a22b0"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_dcb0de9a22b0",
+              "quote": "During anaphase , the “upward phase,” the cohesin proteins degrade, and the sister chromatids separate at the centromere.",
+              "location": "paragraph_30"
+            },
+            {
+              "evidence_id": "E_dcb0de9a22b0",
+              "quote": "In anaphase, the connection between the sister chromatids breaks down, and the microtubules pull the chromosomes toward opposite poles.",
+              "location": "paragraph_28"
+            }
+          ],
+          "exceptions": [
+            {
+              "note": "Source also states 'the cohesin proteins degrade' (paragraph_30); this molecular mechanism is acknowledged but deliberately not modeled as a causal agent, and the process asserts only the observable breakdown and separation."
+            }
+          ]
+        }
+      ],
+      "unresolved_questions": [
+        {
+          "question": "The exact molecular mechanism by which the sister-chromatid connection breaks down (e.g., cohesin cleavage by separase) is not modeled; only the observable breakdown is asserted, and no causal sufficiency of microtubule pulling alone is claimed.",
+          "status": "unresolved"
+        },
+        {
+          "question": "Precise timing and duration of prometaphase, metaphase, and anaphase are not specified in the retrieved passages.",
+          "status": "unresolved"
+        },
+        {
+          "question": "Whether the spindle assembly checkpoint is required for anaphase onset is not explicitly stated in the retrieved passages.",
+          "status": "unresolved"
+        },
+        {
+          "question": "Whether phase order (metaphase alignment before anaphase separation) constitutes a strict per-chromosome mechanistic precondition is not explicitly stated; modeled as schematic phase order only.",
+          "status": "unresolved"
+        }
+      ]
+    },
+    "review": {
+      "decision": "PASS",
+      "issues": [],
+      "observable_reviews": [
+        {
+          "constraint_id": "OBS_bipolar_attachment_during_prometaphase",
+          "decision": "PASS",
+          "reason": "Source explicitly states mitotic spindle microtubules from opposite poles attach to each sister chromatid at the kinetochore; model's relation and during-prometaphase scope match this entailment, and participant identities (kinetochore on each sister chromatid, microtubules from opposite poles) are preserved."
+        },
+        {
+          "constraint_id": "OBS_alignment_during_metaphase",
+          "decision": "PASS",
+          "reason": "Source states all chromosomes are aligned at the metaphase plate during metaphase; model explicitly delimits its single-chromosome instantiation as a schematic instantiation of the universal statement, so the narrow observable is source-supported without overclaiming completeness."
+        },
+        {
+          "constraint_id": "OBS_connection_breakdown_after_alignment",
+          "decision": "PASS",
+          "reason": "Source describes anaphase connection breakdown and poleward pulling in sequence after metaphase alignment; the model marks this as schematic phase order rather than strict per-chromosome causal prerequisite, preserving the source's observable order without adding unsupported causal sufficiency."
+        },
+        {
+          "constraint_id": "OBS_two_daughter_chromatids_after_separation",
+          "decision": "PASS",
+          "reason": "Source states each chromatid, now called a chromosome, is pulled toward the centrosome to which its microtubule is attached; the model's state transition to two distinct daughter chromatid entities moving to opposite poles matches this identity change and movement without modeling the excluded molecular mechanism."
+        }
+      ],
+      "scope_review": "The model's scope is explicitly bounded to one duplicated chromosome in a eukaryotic (animal-cell example) context, with interphase replication, prophase events, telophase, cytokinesis, spindle assembly checkpoint regulation, and molecular cohesin degradation/cleavage excluded. Included processes—prometaphase bipolar kinetochore attachment/orientation, metaphase alignment, and anaphase sister separation with poleward movement—are directly supported by the source excerpts. Simplifications are honest: single-chromosome instantiation is flagged against the source's 'all chromosomes' statement; daughter chromatid identity is carried by post-separation entities; molecular mechanism of connection breakdown is not asserted as modeled; discrete stages are marked as schematic phase order rather than strict causal prerequisites; maximal condensation is noted but excluded from proof. No fully formal but biologically false claim is present, and the schematic does not overclaim to prove molecular chemistry. Unresolved questions appropriately flag timing, checkpoint requirement, and strict precondition status. No blocking issues identified.",
+      "model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+      "separate_request": true,
+      "independent_provider": false
+    }
+  },
+  "R2_original": {
+    "model_id": "skeletal_muscle_excitation_contraction_relaxation_v1",
+    "schema_version": "1.1",
+    "scope": {
+      "topic": "Skeletal muscle excitation-contraction-relaxation at the level of a single vertebrate skeletal muscle fibre",
+      "organism_context": "Vertebrate skeletal muscle fibre (fast-twitch/general skeletal fibre); cardiac and insect muscle excluded",
+      "audience": "grades_10_12",
+      "included_processes": [
+        "Excitation of the skeletal muscle fibre by motor neuron acetylcholine leading to sarcolemma and T-tubule depolarization",
+        "SR Ca2+ release into the sarcoplasm",
+        "Ca2+ binding to troponin and exposure of myosin-binding sites on actin",
+        "ATP-dependent cross-bridge cycling and thin-filament sliding (contraction)",
+        "Cessation of ACh release, repolarization, SR Ca2+ reuptake and reshielding of actin-binding sites (relaxation)"
+      ],
+      "excluded_processes": [
+        "Molecular atomic detail of myosin ATPase and actin-myosin interfaces",
+        "ATP regeneration pathways (creatine phosphate, glycolysis, aerobic respiration) beyond noting ATP requirement",
+        "Muscle fatigue mechanisms and oxygen debt details",
+        "Hypertrophy and atrophy",
+        "Cardiac excitation-contraction coupling and RyR2/CICR",
+        "Insect muscle specialization"
+      ],
+      "simplifications": [
+        "Nervous system circuitry upstream of the motor neuron terminal is not modelled.",
+        "Ca2+ is treated as a single sarcoplasmic pool rather than distinct SR subcompartments.",
+        "The repeated cross-bridge cycle is represented as one process rather than individual stroke events.",
+        "Fast-twitch-specific regulators such as MCARE/SERCA1 modulation are noted but not required for the general vertebrate skeletal fibre mechanism."
+      ]
+    },
+    "entities": [
+      {
+        "semantic_id": "ENT_MOTOR_NEURON_TERMINAL",
+        "scientific_name": "Motor neuron terminal at the neuromuscular junction",
+        "entity_type": "cell_structure",
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "The sequence of events that result in the contraction of an individual muscle fiber begins with a signal—the neurotransmitter, ACh—from the motor neuron innervating that fiber.",
+            "location": "paragraph_1"
+          }
+        ],
+        "cardinality": 1
+      },
+      {
+        "semantic_id": "ENT_SARCOLEMMA_T_TUBULES",
+        "scientific_name": "Sarcolemma and T-tubule membrane of the skeletal muscle fibre",
+        "entity_type": "membrane_system",
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "The local membrane of the fiber will depolarize as positively charged sodium ions (Na + ) enter, triggering an action potential that spreads to the rest of the membrane which will depolarize, including the T-tubules.",
+            "location": "paragraph_1"
+          }
+        ],
+        "cardinality": 1
+      },
+      {
+        "semantic_id": "ENT_SR",
+        "scientific_name": "Sarcoplasmic reticulum (SR) of the skeletal muscle fibre",
+        "entity_type": "organelle",
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "This triggers the release of calcium ions (Ca ++ ) from storage in the sarcoplasmic reticulum (SR).",
+            "location": "paragraph_1"
+          },
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "Ca ++ ions are then pumped back into the SR, which causes the tropomyosin to reshield (or re-cover) the binding sites on the actin strands.",
+            "location": "paragraph_3"
+          }
+        ],
+        "cardinality": 1
+      },
+      {
+        "semantic_id": "ENT_TROPONIN_TROPOMYOSIN",
+        "scientific_name": "Troponin-tropomyosin complex on the actin thin filament",
+        "entity_type": "protein_complex",
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "Tropomyosin is a protein that winds around the chains of the actin filament and covers the myosin-binding sites to prevent actin from binding to myosin. Tropomyosin binds to troponin to form a troponin-tropomyosin complex.",
+            "location": "paragraph_10"
+          },
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "Troponin also has a binding site for Ca ++ ions.",
+            "location": "paragraph_10"
+          }
+        ],
+        "cardinality": 1
+      },
+      {
+        "semantic_id": "ENT_ACTIN_MYOSIN_SARCOMERE",
+        "scientific_name": "Actin thin filaments and myosin thick filaments within the sarcomere",
+        "entity_type": "protein_filament_system",
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "The contraction of a striated muscle fiber occurs as the sarcomeres, linearly arranged within myofibrils, shorten as myosin heads pull on the actin filaments.",
+            "location": "paragraph_6"
+          },
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "This allows the myosin heads to bind to these exposed binding sites and form cross-bridges.",
+            "location": "paragraph_11"
+          }
+        ],
+        "cardinality": 1
+      }
+    ],
+    "relations": [
+      {
+        "semantic_id": "REL_NEURON_TO_SARCOLEMMA",
+        "relation_type": "signals_via_acetylcholine",
+        "definition": "The motor neuron terminal releases ACh which acts on the sarcolemma to initiate depolarization",
+        "source_entity": "ENT_MOTOR_NEURON_TERMINAL",
+        "target_entity": "ENT_SARCOLEMMA_T_TUBULES",
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "The sequence of events that result in the contraction of an individual muscle fiber begins with a signal—the neurotransmitter, ACh—from the motor neuron innervating that fiber.",
+            "location": "paragraph_1"
+          }
+        ]
+      },
+      {
+        "semantic_id": "REL_SARCOLEMMA_TO_SR",
+        "relation_type": "triggers_ca_release",
+        "definition": "Depolarization of the sarcolemma and T-tubules triggers Ca2+ release from the SR",
+        "source_entity": "ENT_SARCOLEMMA_T_TUBULES",
+        "target_entity": "ENT_SR",
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "This triggers the release of calcium ions (Ca ++ ) from storage in the sarcoplasmic reticulum (SR).",
+            "location": "paragraph_1"
+          }
+        ]
+      },
+      {
+        "semantic_id": "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+        "relation_type": "binds_and_unshields",
+        "definition": "Ca2+ binds troponin causing tropomyosin to slide away and expose myosin-binding sites on actin",
+        "source_entity": "ENT_SR",
+        "target_entity": "ENT_TROPONIN_TROPOMYOSIN",
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "The first step in the process of contraction is for Ca ++ to bind to troponin so that tropomyosin can slide away from the binding sites on the actin strands.",
+            "location": "paragraph_11"
+          }
+        ]
+      },
+      {
+        "semantic_id": "REL_CROSSBRIDGE_ACTIN_MYOSIN",
+        "relation_type": "cross_bridge_formation_and_sliding",
+        "definition": "Myosin heads bind exposed actin sites, form cross-bridges and slide thin filaments, producing sarcomere shortening",
+        "source_entity": "ENT_TROPONIN_TROPOMYOSIN",
+        "target_entity": "ENT_ACTIN_MYOSIN_SARCOMERE",
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "This allows the myosin heads to bind to these exposed binding sites and form cross-bridges. The thin filaments are then pulled by the myosin heads to slide past the thick filaments toward the center of the sarcomere.",
+            "location": "paragraph_11"
+          }
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "process_semantic_id": "PROC_EXCITATION",
+        "scientific_name": "Motor neuron ACh release and skeletal muscle fibre excitation",
+        "action_category": "interaction",
+        "participants": [
+          {
+            "role": "signal_source",
+            "entity_ref": "ENT_MOTOR_NEURON_TERMINAL"
+          },
+          {
+            "role": "excitable_membrane",
+            "entity_ref": "ENT_SARCOLEMMA_T_TUBULES"
+          }
+        ],
+        "input_roles": [
+          "signal_source",
+          "excitable_membrane"
+        ],
+        "output_roles": [
+          "excitable_membrane"
+        ],
+        "preconditions": {
+          "motor_neuron_releasing_ACh": true,
+          "fibre_membrane_excitable": true
+        },
+        "effects": {
+          "sarcolemma_depolarized": true,
+          "t_tubules_depolarized": true
+        },
+        "temporal_scope": {
+          "start_condition": "Motor neuron releases ACh at the neuromuscular junction",
+          "end_condition": "Action potential has spread along sarcolemma and T-tubules"
+        },
+        "observables": [
+          {
+            "constraint_id": "OBS_EXCITATION_DEPOLARIZATION",
+            "predicate": "state_transition_allowed",
+            "state_key": "sarcolemma_depolarization",
+            "to_value": "depolarized",
+            "precondition": {
+              "motor_neuron_releasing_ACh": true
+            },
+            "capability": "PARTIAL",
+            "evidence_ids": [
+              "E_d6fd3723dbb7"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_d6fd3723dbb7",
+                "quote": "The local membrane of the fiber will depolarize as positively charged sodium ions (Na + ) enter, triggering an action potential that spreads to the rest of the membrane which will depolarize, including the T-tubules.",
+                "location": "paragraph_1"
+              }
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "The sequence of events that result in the contraction of an individual muscle fiber begins with a signal—the neurotransmitter, ACh—from the motor neuron innervating that fiber.",
+            "location": "paragraph_1"
+          },
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "The local membrane of the fiber will depolarize as positively charged sodium ions (Na + ) enter, triggering an action potential that spreads to the rest of the membrane which will depolarize, including the T-tubules.",
+            "location": "paragraph_1"
+          }
+        ],
+        "exceptions": [],
+        "precondition_state_refs": [],
+        "effect_state_refs": [
+          "ST_SARCOLEMMA_DEPOLARIZED"
+        ],
+        "terminates_state_refs": []
+      },
+      {
+        "process_semantic_id": "PROC_CA_RELEASE_AND_TROPONIN_BINDING",
+        "scientific_name": "SR Ca2+ release and Ca2+ binding to troponin exposing actin-binding sites",
+        "action_category": "release",
+        "participants": [
+          {
+            "role": "ca_store",
+            "entity_ref": "ENT_SR"
+          },
+          {
+            "role": "ca_sensor",
+            "entity_ref": "ENT_TROPONIN_TROPOMYOSIN"
+          },
+          {
+            "role": "trigger_membrane",
+            "entity_ref": "ENT_SARCOLEMMA_T_TUBULES"
+          }
+        ],
+        "input_roles": [
+          "trigger_membrane",
+          "ca_store"
+        ],
+        "output_roles": [
+          "ca_store",
+          "ca_sensor"
+        ],
+        "preconditions": {
+          "t_tubules_depolarized": true,
+          "SR_contains_Ca2+": true
+        },
+        "effects": {
+          "ca_in_sarcoplasm": true,
+          "actin_binding_sites_unshielded": true
+        },
+        "temporal_scope": {
+          "start_condition": "T-tubule depolarization reaches SR",
+          "end_condition": "Ca2+ bound to troponin and tropomyosin has slid away from actin-binding sites",
+          "after": [
+            "PROC_EXCITATION"
+          ]
+        },
+        "observables": [
+          {
+            "constraint_id": "OBS_CA_RELEASE_REQUIRES_DEPOLARIZATION",
+            "predicate": "event_precedes",
+            "ordered_process_ids": [
+              "PROC_EXCITATION",
+              "PROC_CA_RELEASE_AND_TROPONIN_BINDING"
+            ],
+            "capability": "PARTIAL",
+            "evidence_ids": [
+              "E_d6fd3723dbb7"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_d6fd3723dbb7",
+                "quote": "This triggers the release of calcium ions (Ca ++ ) from storage in the sarcoplasmic reticulum (SR).",
+                "location": "paragraph_1"
+              }
+            ]
+          },
+          {
+            "constraint_id": "OBS_SITE_UNSHIELDING",
+            "predicate": "state_transition_allowed",
+            "state_key": "actin_binding_sites",
+            "to_value": "unshielded",
+            "precondition": {
+              "ca_bound_to_troponin": true
+            },
+            "capability": "PARTIAL",
+            "evidence_ids": [
+              "E_d6fd3723dbb7"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_d6fd3723dbb7",
+                "quote": "The first step in the process of contraction is for Ca ++ to bind to troponin so that tropomyosin can slide away from the binding sites on the actin strands.",
+                "location": "paragraph_11"
+              }
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "This triggers the release of calcium ions (Ca ++ ) from storage in the sarcoplasmic reticulum (SR).",
+            "location": "paragraph_1"
+          },
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "The first step in the process of contraction is for Ca ++ to bind to troponin so that tropomyosin can slide away from the binding sites on the actin strands.",
+            "location": "paragraph_11"
+          }
+        ],
+        "exceptions": [],
+        "precondition_state_refs": [
+          "ST_SARCOLEMMA_DEPOLARIZED"
+        ],
+        "effect_state_refs": [
+          "ST_CA_IN_SARCOPLASM",
+          "ST_ACTIN_SITES_UNSHIELDED"
+        ],
+        "terminates_state_refs": [
+          "ST_ACTIN_SITES_SHIELDED"
+        ]
+      },
+      {
+        "process_semantic_id": "PROC_CONTRACTION_CROSSBRIDGE_CYCLE",
+        "scientific_name": "ATP-dependent cross-bridge cycling and thin-filament sliding",
+        "action_category": "interaction",
+        "participants": [
+          {
+            "role": "contractile_filaments",
+            "entity_ref": "ENT_ACTIN_MYOSIN_SARCOMERE"
+          },
+          {
+            "role": "regulatory_complex",
+            "entity_ref": "ENT_TROPONIN_TROPOMYOSIN"
+          }
+        ],
+        "input_roles": [
+          "regulatory_complex",
+          "contractile_filaments"
+        ],
+        "output_roles": [
+          "contractile_filaments"
+        ],
+        "preconditions": {
+          "actin_binding_sites_unshielded": true,
+          "ca_in_sarcoplasm": true,
+          "ATP_available": true
+        },
+        "effects": {
+          "sarcomere_shortened": true,
+          "muscle_fibre_tension": true
+        },
+        "temporal_scope": {
+          "start_condition": "Actin-binding sites exposed and ATP available",
+          "end_condition": "Ca2+ removed or ATP depleted (contraction ceases)",
+          "after": [
+            "PROC_CA_RELEASE_AND_TROPONIN_BINDING"
+          ]
+        },
+        "observables": [
+          {
+            "constraint_id": "OBS_CONTRACTION_REQUIRES_CA_AND_ATP",
+            "predicate": "relation_holds_during",
+            "relation_ref": "REL_CROSSBRIDGE_ACTIN_MYOSIN",
+            "source_role": "regulatory_complex",
+            "target_role": "contractile_filaments",
+            "capability": "PARTIAL",
+            "evidence_ids": [
+              "E_d6fd3723dbb7"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_d6fd3723dbb7",
+                "quote": "As long as Ca ++ ions remain in the sarcoplasm to bind to troponin, which keeps the actin-binding sites “unshielded,” and as long as ATP is available to drive the cross-bridge cycling and the pulling of actin strands by myosin, the muscle fiber will continue to shorten to an anatomical limit.",
+                "location": "paragraph_1"
+              }
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "This allows the myosin heads to bind to these exposed binding sites and form cross-bridges. The thin filaments are then pulled by the myosin heads to slide past the thick filaments toward the center of the sarcomere.",
+            "location": "paragraph_11"
+          },
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "ATP binding causes the myosin head to detach from the actin ( Figure 10.11 d ). After this occurs, ATP is converted to ADP and P i by the intrinsic ATPase activity of myosin.",
+            "location": "paragraph_15"
+          }
+        ],
+        "exceptions": [
+          {
+            "description": "If ATP runs out, myosin heads cannot detach from actin and the muscle cannot relax normally (rigor).",
+            "evidence_quote": "In the absence of ATP, the myosin head will not detach from actin.",
+            "location": "paragraph_14"
+          }
+        ],
+        "precondition_state_refs": [
+          "ST_CA_IN_SARCOPLASM",
+          "ST_ACTIN_SITES_UNSHIELDED",
+          "ST_ATP_AVAILABLE"
+        ],
+        "effect_state_refs": [
+          "ST_SARCOMERE_SHORTENED"
+        ],
+        "terminates_state_refs": []
+      },
+      {
+        "process_semantic_id": "PROC_RELAXATION",
+        "scientific_name": "Cessation of ACh, repolarization, SR Ca2+ reuptake and reshielding of actin-binding sites",
+        "action_category": "transport",
+        "participants": [
+          {
+            "role": "signal_source",
+            "entity_ref": "ENT_MOTOR_NEURON_TERMINAL"
+          },
+          {
+            "role": "excitable_membrane",
+            "entity_ref": "ENT_SARCOLEMMA_T_TUBULES"
+          },
+          {
+            "role": "ca_store",
+            "entity_ref": "ENT_SR"
+          },
+          {
+            "role": "regulatory_complex",
+            "entity_ref": "ENT_TROPONIN_TROPOMYOSIN"
+          }
+        ],
+        "input_roles": [
+          "ca_store",
+          "regulatory_complex"
+        ],
+        "output_roles": [
+          "ca_store",
+          "regulatory_complex"
+        ],
+        "preconditions": {
+          "motor_neuron_stops_ACh_release": true,
+          "ATP_available_for_pumps": true
+        },
+        "effects": {
+          "sarcolemma_repolarized": true,
+          "ca_returned_to_SR": true,
+          "actin_binding_sites_reshielded": true,
+          "muscle_fibre_relaxed": true
+        },
+        "temporal_scope": {
+          "start_condition": "Motor neuron stops releasing ACh",
+          "end_condition": "Actin-binding sites reshielded and fibre loses tension",
+          "after": [
+            "PROC_CONTRACTION_CROSSBRIDGE_CYCLE"
+          ]
+        },
+        "observables": [
+          {
+            "constraint_id": "OBS_RELAXATION_REQUIRES_CA_REUPTAKE",
+            "predicate": "state_transition_allowed",
+            "state_key": "actin_binding_sites",
+            "to_value": "reshielded",
+            "precondition": {
+              "ca_returned_to_SR": true,
+              "ATP_available_for_pumps": true
+            },
+            "capability": "PARTIAL",
+            "evidence_ids": [
+              "E_d6fd3723dbb7"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_d6fd3723dbb7",
+                "quote": "Muscle contraction usually stops when signaling from the motor neuron ends, which repolarizes the sarcolemma and T-tubules, and closes the voltage-gated calcium channels in the SR. Ca ++ ions are then pumped back into the SR, which causes the tropomyosin to reshield (or re-cover) the binding sites on the actin strands.",
+                "location": "paragraph_3"
+              }
+            ]
+          },
+          {
+            "constraint_id": "OBS_RELAXATION_FOLLOWS_CONTRACTION",
+            "predicate": "event_precedes",
+            "ordered_process_ids": [
+              "PROC_CONTRACTION_CROSSBRIDGE_CYCLE",
+              "PROC_RELAXATION"
+            ],
+            "capability": "PARTIAL",
+            "evidence_ids": [
+              "E_d6fd3723dbb7"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_d6fd3723dbb7",
+                "quote": "Relaxing skeletal muscle fibers, and ultimately, the skeletal muscle, begins with the motor neuron, which stops releasing its chemical signal, ACh, into the synapse at the NMJ.",
+                "location": "paragraph_26"
+              }
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "Muscle contraction usually stops when signaling from the motor neuron ends, which repolarizes the sarcolemma and T-tubules, and closes the voltage-gated calcium channels in the SR.",
+            "location": "paragraph_3"
+          },
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "ATP-driven pumps will move Ca ++ out of the sarcoplasm back into the SR. This results in the “reshielding” of the actin-binding sites on the thin filaments. Without the ability to form cross-bridges between the thin and thick filaments, the muscle fiber loses its tension and relaxes.",
+            "location": "paragraph_26"
+          }
+        ],
+        "exceptions": [
+          {
+            "description": "A muscle may also stop contracting when it runs out of ATP and becomes fatigued.",
+            "evidence_quote": "A muscle also can stop contracting when it runs out of ATP and becomes fatigued ( Figure 10.9 ).",
+            "location": "paragraph_3"
+          }
+        ],
+        "precondition_state_refs": [
+          "ST_SARCOMERE_SHORTENED",
+          "ST_ATP_AVAILABLE"
+        ],
+        "effect_state_refs": [
+          "ST_SARCOLEMMA_REPOLARIZED",
+          "ST_CA_RETURNED_TO_SR",
+          "ST_ACTIN_SITES_SHIELDED",
+          "ST_FIBRE_RELAXED"
+        ],
+        "terminates_state_refs": [
+          "ST_SARCOMERE_SHORTENED",
+          "ST_ACTIN_SITES_UNSHIELDED",
+          "ST_CA_IN_SARCOPLASM"
+        ]
+      }
+    ],
+    "states": [
+      {
+        "state_id": "ST_SARCOLEMMA_DEPOLARIZED",
+        "subject_ref": "ENT_SARCOLEMMA_T_TUBULES",
+        "property": "membrane_potential_state",
+        "value": "depolarized",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "process": "PROC_EXCITATION"
+        },
+        "producer_process_id": "PROC_EXCITATION",
+        "required_by_process_ids": [
+          "PROC_CA_RELEASE_AND_TROPONIN_BINDING"
+        ],
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "The local membrane of the fiber will depolarize as positively charged sodium ions (Na + ) enter, triggering an action potential that spreads to the rest of the membrane which will depolarize, including the T-tubules.",
+            "location": "paragraph_1"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_CA_IN_SARCOPLASM",
+        "subject_ref": "ENT_SR",
+        "property": "ca2+_location",
+        "value": "elevated_in_sarcoplasm",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "process": "PROC_CA_RELEASE_AND_TROPONIN_BINDING"
+        },
+        "producer_process_id": "PROC_CA_RELEASE_AND_TROPONIN_BINDING",
+        "required_by_process_ids": [
+          "PROC_CONTRACTION_CROSSBRIDGE_CYCLE"
+        ],
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "This triggers the release of calcium ions (Ca ++ ) from storage in the sarcoplasmic reticulum (SR).",
+            "location": "paragraph_1"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_ACTIN_SITES_SHIELDED",
+        "subject_ref": "ENT_TROPONIN_TROPOMYOSIN",
+        "property": "myosin_binding_site_exposure",
+        "value": "shielded",
+        "state_kind": "INITIAL_CONDITION",
+        "scope": {
+          "phase": "resting_fibre"
+        },
+        "producer_process_id": null,
+        "required_by_process_ids": [
+          "PROC_CA_RELEASE_AND_TROPONIN_BINDING"
+        ],
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "Tropomyosin is a protein that winds around the chains of the actin filament and covers the myosin-binding sites to prevent actin from binding to myosin.",
+            "location": "paragraph_10"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_ACTIN_SITES_UNSHIELDED",
+        "subject_ref": "ENT_TROPONIN_TROPOMYOSIN",
+        "property": "myosin_binding_site_exposure",
+        "value": "unshielded",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "process": "PROC_CA_RELEASE_AND_TROPONIN_BINDING"
+        },
+        "producer_process_id": "PROC_CA_RELEASE_AND_TROPONIN_BINDING",
+        "required_by_process_ids": [
+          "PROC_CONTRACTION_CROSSBRIDGE_CYCLE"
+        ],
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "The first step in the process of contraction is for Ca ++ to bind to troponin so that tropomyosin can slide away from the binding sites on the actin strands.",
+            "location": "paragraph_11"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_ATP_AVAILABLE",
+        "subject_ref": "ENT_ACTIN_MYOSIN_SARCOMERE",
+        "property": "atp_availability",
+        "value": "available",
+        "state_kind": "REQUIRED_PRECONDITION",
+        "scope": {
+          "process": "PROC_CONTRACTION_CROSSBRIDGE_CYCLE"
+        },
+        "producer_process_id": null,
+        "required_by_process_ids": [
+          "PROC_CONTRACTION_CROSSBRIDGE_CYCLE",
+          "PROC_RELAXATION"
+        ],
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "As long as Ca ++ ions remain in the sarcoplasm to bind to troponin, which keeps the actin-binding sites “unshielded,” and as long as ATP is available to drive the cross-bridge cycling and the pulling of actin strands by myosin, the muscle fiber will continue to shorten to an anatomical limit.",
+            "location": "paragraph_1"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_SARCOMERE_SHORTENED",
+        "subject_ref": "ENT_ACTIN_MYOSIN_SARCOMERE",
+        "property": "sarcomere_length",
+        "value": "shortened",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "process": "PROC_CONTRACTION_CROSSBRIDGE_CYCLE"
+        },
+        "producer_process_id": "PROC_CONTRACTION_CROSSBRIDGE_CYCLE",
+        "required_by_process_ids": [
+          "PROC_RELAXATION"
+        ],
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "The contraction of a striated muscle fiber occurs as the sarcomeres, linearly arranged within myofibrils, shorten as myosin heads pull on the actin filaments.",
+            "location": "paragraph_6"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_SARCOLEMMA_REPOLARIZED",
+        "subject_ref": "ENT_SARCOLEMMA_T_TUBULES",
+        "property": "membrane_potential_state",
+        "value": "repolarized",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "process": "PROC_RELAXATION"
+        },
+        "producer_process_id": "PROC_RELAXATION",
+        "required_by_process_ids": [],
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "Muscle contraction usually stops when signaling from the motor neuron ends, which repolarizes the sarcolemma and T-tubules, and closes the voltage-gated calcium channels in the SR.",
+            "location": "paragraph_3"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_CA_RETURNED_TO_SR",
+        "subject_ref": "ENT_SR",
+        "property": "ca2+_location",
+        "value": "returned_to_SR",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "process": "PROC_RELAXATION"
+        },
+        "producer_process_id": "PROC_RELAXATION",
+        "required_by_process_ids": [],
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "ATP-driven pumps will move Ca ++ out of the sarcoplasm back into the SR.",
+            "location": "paragraph_26"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_FIBRE_RELAXED",
+        "subject_ref": "ENT_ACTIN_MYOSIN_SARCOMERE",
+        "property": "fibre_tension",
+        "value": "relaxed",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "process": "PROC_RELAXATION"
+        },
+        "producer_process_id": "PROC_RELAXATION",
+        "required_by_process_ids": [],
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "Without the ability to form cross-bridges between the thin and thick filaments, the muscle fiber loses its tension and relaxes.",
+            "location": "paragraph_26"
+          }
+        ]
+      }
+    ],
+    "unresolved_questions": [
+      {
+        "question": "Whether the retrieved passages specify a stable molecular intermediate between T-tubule depolarization and SR Ca2+ release (e.g., a specific coupling protein) for vertebrate skeletal muscle.",
+        "status": "UNRESOLVED",
+        "reason": "Retrieved passages describe the trigger generically; no named coupling protein for skeletal fibres is provided (cardiac RyR2 is out of scope)."
+      },
+      {
+        "question": "Quantitative timing of each step (excitation, Ca2+ release, cross-bridge cycling, relaxation) in vertebrate skeletal muscle.",
+        "status": "UNRESOLVED",
+        "reason": "No timing measurements retrieved."
+      },
+      {
+        "question": "Whether the same SERCA-based Ca2+ reuptake mechanism applies uniformly to all vertebrate skeletal fibre types.",
+        "status": "UNRESOLVED",
+        "reason": "Retrieved passage E_97ecc43b9a70 specifies fast-twitch fibre-specific MCARE/SERCA1 modulation; general applicability not established."
+      }
+    ],
+    "clip_start": {
+      "stage": "resting_fibre_with_motor_neuron_available",
+      "existing_entity_refs": [
+        "ENT_MOTOR_NEURON_TERMINAL",
+        "ENT_SARCOLEMMA_T_TUBULES",
+        "ENT_SR",
+        "ENT_TROPONIN_TROPOMYOSIN",
+        "ENT_ACTIN_MYOSIN_SARCOMERE"
+      ],
+      "omitted_processes": [
+        {
+          "description": "Upstream motor neuron activation and action potential generation in the CNS/spinal cord.",
+          "reason": "Not described in retrieved passages; outside scope of single-fibre mechanism.",
+          "required_by_task": false
+        },
+        {
+          "description": "ATP regeneration via creatine phosphate, glycolysis and aerobic respiration.",
+          "reason": "Excluded from model scope; only the ATP requirement is represented.",
+          "required_by_task": false
+        }
+      ]
+    }
+  },
+  "R2_new_model": null,
+  "R3_new_model": null
+}

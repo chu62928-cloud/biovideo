@@ -1,0 +1,566 @@
+{
+  "task": {
+    "issue_id": "R001",
+    "base_model_hash": "f89d4ec483ae29cc60db00c51f76c60ec36b3fba29235f0452b115f30f555d3c",
+    "primary_targets": [
+      "REL_CA_TO_TROPONIN_TROPOMYOSIN"
+    ],
+    "dependency_targets": [
+      "ENT_SR",
+      "ENT_TROPONIN_TROPOMYOSIN"
+    ],
+    "allowed_operations": [
+      "update_entity",
+      "update_relation",
+      "update_process",
+      "bind_participant",
+      "update_observable",
+      "update_state",
+      "update_scope",
+      "add_entity"
+    ],
+    "allowed_fields": {
+      "ENT_MOTOR_NEURON_TERMINAL": [
+        "cardinality",
+        "entity_type",
+        "evidence_ids",
+        "scientific_name",
+        "states",
+        "support"
+      ],
+      "ENT_SARCOLEMMA_T_TUBULES": [
+        "cardinality",
+        "entity_type",
+        "evidence_ids",
+        "scientific_name",
+        "states",
+        "support"
+      ],
+      "ENT_SR": [
+        "cardinality",
+        "entity_type",
+        "evidence_ids",
+        "scientific_name",
+        "states",
+        "support"
+      ],
+      "ENT_TROPONIN_TROPOMYOSIN": [
+        "cardinality",
+        "entity_type",
+        "evidence_ids",
+        "scientific_name",
+        "states",
+        "support"
+      ],
+      "ENT_ACTIN_MYOSIN_SARCOMERE": [
+        "cardinality",
+        "entity_type",
+        "evidence_ids",
+        "scientific_name",
+        "states",
+        "support"
+      ],
+      "REL_NEURON_TO_SARCOLEMMA": [
+        "definition",
+        "evidence_ids",
+        "relation_type",
+        "source_entity",
+        "support",
+        "target_entity"
+      ],
+      "REL_SARCOLEMMA_TO_SR": [
+        "definition",
+        "evidence_ids",
+        "relation_type",
+        "source_entity",
+        "support",
+        "target_entity"
+      ],
+      "REL_CA_TO_TROPONIN_TROPOMYOSIN": [
+        "definition",
+        "evidence_ids",
+        "relation_type",
+        "source_entity",
+        "support",
+        "target_entity"
+      ],
+      "REL_CROSSBRIDGE_ACTIN_MYOSIN": [
+        "definition",
+        "evidence_ids",
+        "relation_type",
+        "source_entity",
+        "support",
+        "target_entity"
+      ],
+      "PROC_EXCITATION": [
+        "action_category",
+        "effect_state_refs",
+        "effects",
+        "evidence_ids",
+        "exceptions",
+        "input_roles",
+        "observables",
+        "output_roles",
+        "participants",
+        "precondition_state_refs",
+        "preconditions",
+        "scientific_name",
+        "support",
+        "temporal_scope",
+        "terminates_state_refs"
+      ],
+      "PROC_CA_RELEASE_AND_TROPONIN_BINDING": [
+        "action_category",
+        "effect_state_refs",
+        "effects",
+        "evidence_ids",
+        "exceptions",
+        "input_roles",
+        "observables",
+        "output_roles",
+        "participants",
+        "precondition_state_refs",
+        "preconditions",
+        "scientific_name",
+        "support",
+        "temporal_scope",
+        "terminates_state_refs"
+      ],
+      "PROC_CONTRACTION_CROSSBRIDGE_CYCLE": [
+        "action_category",
+        "effect_state_refs",
+        "effects",
+        "evidence_ids",
+        "exceptions",
+        "input_roles",
+        "observables",
+        "output_roles",
+        "participants",
+        "precondition_state_refs",
+        "preconditions",
+        "scientific_name",
+        "support",
+        "temporal_scope",
+        "terminates_state_refs"
+      ],
+      "PROC_RELAXATION": [
+        "action_category",
+        "effect_state_refs",
+        "effects",
+        "evidence_ids",
+        "exceptions",
+        "input_roles",
+        "observables",
+        "output_roles",
+        "participants",
+        "precondition_state_refs",
+        "preconditions",
+        "scientific_name",
+        "support",
+        "temporal_scope",
+        "terminates_state_refs"
+      ],
+      "ST_SARCOLEMMA_DEPOLARIZED": [
+        "evidence_ids",
+        "producer_process_id",
+        "property",
+        "required_by_process_ids",
+        "scope",
+        "state_kind",
+        "subject_ref",
+        "support",
+        "value"
+      ],
+      "ST_CA_IN_SARCOPLASM": [
+        "evidence_ids",
+        "producer_process_id",
+        "property",
+        "required_by_process_ids",
+        "scope",
+        "state_kind",
+        "subject_ref",
+        "support",
+        "value"
+      ],
+      "ST_ACTIN_SITES_SHIELDED": [
+        "evidence_ids",
+        "producer_process_id",
+        "property",
+        "required_by_process_ids",
+        "scope",
+        "state_kind",
+        "subject_ref",
+        "support",
+        "value"
+      ],
+      "ST_ACTIN_SITES_UNSHIELDED": [
+        "evidence_ids",
+        "producer_process_id",
+        "property",
+        "required_by_process_ids",
+        "scope",
+        "state_kind",
+        "subject_ref",
+        "support",
+        "value"
+      ],
+      "ST_ATP_AVAILABLE": [
+        "evidence_ids",
+        "producer_process_id",
+        "property",
+        "required_by_process_ids",
+        "scope",
+        "state_kind",
+        "subject_ref",
+        "support",
+        "value"
+      ],
+      "ST_SARCOMERE_SHORTENED": [
+        "evidence_ids",
+        "producer_process_id",
+        "property",
+        "required_by_process_ids",
+        "scope",
+        "state_kind",
+        "subject_ref",
+        "support",
+        "value"
+      ],
+      "ST_SARCOLEMMA_REPOLARIZED": [
+        "evidence_ids",
+        "producer_process_id",
+        "property",
+        "required_by_process_ids",
+        "scope",
+        "state_kind",
+        "subject_ref",
+        "support",
+        "value"
+      ],
+      "ST_CA_RETURNED_TO_SR": [
+        "evidence_ids",
+        "producer_process_id",
+        "property",
+        "required_by_process_ids",
+        "scope",
+        "state_kind",
+        "subject_ref",
+        "support",
+        "value"
+      ],
+      "ST_FIBRE_RELAXED": [
+        "evidence_ids",
+        "producer_process_id",
+        "property",
+        "required_by_process_ids",
+        "scope",
+        "state_kind",
+        "subject_ref",
+        "support",
+        "value"
+      ],
+      "scope": [
+        "included_processes",
+        "excluded_processes",
+        "simplifications"
+      ]
+    },
+    "allowed_reference_ids": [
+      "ENT_ACTIN_MYOSIN_SARCOMERE",
+      "ENT_MOTOR_NEURON_TERMINAL",
+      "ENT_SARCOLEMMA_T_TUBULES",
+      "ENT_SR",
+      "ENT_TROPONIN_TROPOMYOSIN",
+      "PROC_CA_RELEASE_AND_TROPONIN_BINDING",
+      "PROC_CONTRACTION_CROSSBRIDGE_CYCLE",
+      "PROC_EXCITATION",
+      "PROC_RELAXATION",
+      "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+      "REL_CROSSBRIDGE_ACTIN_MYOSIN",
+      "REL_NEURON_TO_SARCOLEMMA",
+      "REL_SARCOLEMMA_TO_SR",
+      "ST_ACTIN_SITES_SHIELDED",
+      "ST_ACTIN_SITES_UNSHIELDED",
+      "ST_ATP_AVAILABLE",
+      "ST_CA_IN_SARCOPLASM",
+      "ST_CA_RETURNED_TO_SR",
+      "ST_FIBRE_RELAXED",
+      "ST_SARCOLEMMA_DEPOLARIZED",
+      "ST_SARCOLEMMA_REPOLARIZED",
+      "ST_SARCOMERE_SHORTENED"
+    ],
+    "required_evidence_ids": [
+      "E_d6fd3723dbb7"
+    ],
+    "evidence_ids": [
+      "E_87d1ca57845e",
+      "E_01bd17d3a0f1",
+      "E_0c18da6b2687",
+      "E_8996a30b8401",
+      "E_97ecc43b9a70",
+      "E_97cb28f1ec29",
+      "E_d6fd3723dbb7"
+    ],
+    "protected_requirements": [
+      "For grades10-12, explain how an excitation of a vertebrate skeletal muscle fibre leads to contraction and then relaxation. Establish the necessary participants, causal steps, initial conditions and recovery states from independently retrieved sources. Do not replace the requested mechanism by a generic movement description. Molecular atomic detail is unnecessary, but required causal intermediate steps must not be omitted."
+    ],
+    "repair_goal": "source_entity is ENT_SR, but the relation modelled is Ca2+ (a released ion in the sarcoplasm) binding troponin. The SR is the source/store, not the actor binding troponin. The relation's source does not match the stated definition, breaking the causal chain between Ca2+ release and troponin binding.",
+    "acceptance_conditions": [
+      "schema",
+      "references",
+      "causality",
+      "independent_review"
+    ]
+  },
+  "attempts": [
+    {
+      "proposal": {
+        "commands": [
+          {
+            "operation": "update_relation",
+            "target_id": "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+            "fields": {
+              "source_entity": "ENT_CA_ION_SARCOPLASM",
+              "definition": "Ca2+ in the sarcoplasm binds troponin, causing tropomyosin to slide away and expose myosin-binding sites on actin",
+              "relation_type": "binds_and_unshields",
+              "target_entity": "ENT_TROPONIN_TROPOMYOSIN",
+              "evidence_ids": [
+                "E_d6fd3723dbb7"
+              ],
+              "support": [
+                {
+                  "evidence_id": "E_d6fd3723dbb7",
+                  "quote": "The first step in the process of contraction is for Ca ++ to bind to troponin so that tropomyosin can slide away from the binding sites on the actin strands.",
+                  "location": "paragraph_11"
+                }
+              ]
+            }
+          },
+          {
+            "operation": "add_entity",
+            "target_id": "ENT_CA_ION_SARCOPLASM",
+            "fields": {
+              "semantic_id": "ENT_CA_ION_SARCOPLASM",
+              "scientific_name": "Calcium ions (Ca2+) in the sarcoplasm of the skeletal muscle fibre",
+              "entity_type": "ion",
+              "evidence_ids": [
+                "E_d6fd3723dbb7"
+              ],
+              "support": [
+                {
+                  "evidence_id": "E_d6fd3723dbb7",
+                  "quote": "As long as Ca ++ ions remain in the sarcoplasm to bind to troponin, which keeps the actin-binding sites “unshielded,”",
+                  "location": "paragraph_1"
+                }
+              ],
+              "cardinality": 1
+            }
+          }
+        ],
+        "extensions": [
+          {
+            "target_id": "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+            "reason": "Introduced ENT_CA_ION_SARCOPLASM as the correct actor (sarcoplasmic Ca2+) and repointed source_entity; ENT_SR retained as the store/release source via REL_SARCOLEMMA_TO_SR and the SR entity, preserving causal chain. Requires lifecycle for new entity missing from record schema—extensions flags unresolved binding."
+          }
+        ]
+      },
+      "result": {
+        "status": "PREFLIGHT_REJECTED",
+        "errors": [
+          {
+            "code": "INVALID_EXTENSION",
+            "request": {
+              "target_id": "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+              "reason": "Introduced ENT_CA_ION_SARCOPLASM as the correct actor (sarcoplasmic Ca2+) and repointed source_entity; ENT_SR retained as the store/release source via REL_SARCOLEMMA_TO_SR and the SR entity, preserving causal chain. Requires lifecycle for new entity missing from record schema—extensions flags unresolved binding."
+            }
+          },
+          {
+            "code": "MISSING_EVIDENCE",
+            "target_id": "REL_CA_TO_TROPONIN_TROPOMYOSIN"
+          },
+          {
+            "code": "INVALID_ADDITION",
+            "target_id": "ENT_CA_ION_SARCOPLASM"
+          },
+          {
+            "code": "STRUCTURE_OR_SCOPE",
+            "message": "Undefined relation entity reference"
+          }
+        ],
+        "rollback_hash": "f89d4ec483ae29cc60db00c51f76c60ec36b3fba29235f0452b115f30f555d3c"
+      }
+    },
+    {
+      "proposal": {
+        "commands": [
+          {
+            "operation": "add_entity",
+            "target_id": "ENT_CALCIUM_ION_SARCOPLASM",
+            "fields": {
+              "semantic_id": "ENT_CALCIUM_ION_SARCOPLASM",
+              "scientific_name": "Calcium ion (Ca2+) in the sarcoplasm of the skeletal muscle fibre",
+              "entity_type": "ion",
+              "evidence_ids": [
+                "E_d6fd3723dbb7"
+              ],
+              "support": [
+                {
+                  "evidence_id": "E_d6fd3723dbb7",
+                  "quote": "As long as Ca ++ ions remain in the sarcoplasm to bind to troponin, which keeps the actin-binding sites “unshielded,”",
+                  "location": "paragraph_1"
+                },
+                {
+                  "evidence_id": "E_d6fd3723dbb7",
+                  "quote": "The first step in the process of contraction is for Ca ++ to bind to troponin so that tropomyosin can slide away from the binding sites on the actin strands.",
+                  "location": "paragraph_11"
+                }
+              ],
+              "cardinality": 1
+            },
+            "support": [
+              {
+                "evidence_id": "E_d6fd3723dbb7",
+                "quote": "As long as Ca ++ ions remain in the sarcoplasm to bind to troponin, which keeps the actin-binding sites “unshielded,”",
+                "location": "paragraph_1"
+              }
+            ]
+          },
+          {
+            "operation": "update_relation",
+            "target_id": "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+            "fields": {
+              "definition": "Ca2+ in the sarcoplasm binds to troponin on the thin filament, causing tropomyosin to slide away and expose myosin-binding sites on actin",
+              "source_entity": "ENT_CALCIUM_ION_SARCOPLASM",
+              "target_entity": "ENT_TROPONIN_TROPOMYOSIN",
+              "relation_type": "binds_and_unshields",
+              "evidence_ids": [
+                "E_d6fd3723dbb7"
+              ],
+              "support": [
+                {
+                  "evidence_id": "E_d6fd3723dbb7",
+                  "quote": "The first step in the process of contraction is for Ca ++ to bind to troponin so that tropomyosin can slide away from the binding sites on the actin strands.",
+                  "location": "paragraph_11"
+                }
+              ]
+            },
+            "support": [
+              {
+                "evidence_id": "E_d6fd3723dbb7",
+                "quote": "The first step in the process of contraction is for Ca ++ to bind to troponin so that tropomyosin can slide away from the binding sites on the actin strands.",
+                "location": "paragraph_11"
+              }
+            ]
+          },
+          {
+            "operation": "update_entity",
+            "target_id": "ENT_SR",
+            "fields": {
+              "semantic_id": "ENT_SR",
+              "scientific_name": "Sarcoplasmic reticulum (SR) of the skeletal muscle fibre",
+              "entity_type": "organelle",
+              "evidence_ids": [
+                "E_d6fd3723dbb7"
+              ],
+              "support": [
+                {
+                  "evidence_id": "E_d6fd3723dbb7",
+                  "quote": "This triggers the release of calcium ions (Ca ++ ) from storage in the sarcoplasmic reticulum (SR).",
+                  "location": "paragraph_1"
+                },
+                {
+                  "evidence_id": "E_d6fd3723dbb7",
+                  "quote": "Ca ++ ions are then pumped back into the SR, which causes the tropomyosin to reshield (or re-cover) the binding sites on the actin strands.",
+                  "location": "paragraph_3"
+                }
+              ],
+              "cardinality": 1
+            },
+            "support": [
+              {
+                "evidence_id": "E_d6fd3723dbb7",
+                "quote": "This triggers the release of calcium ions (Ca ++ ) from storage in the sarcoplasmic reticulum (SR).",
+                "location": "paragraph_1"
+              }
+            ]
+          }
+        ],
+        "extensions": [
+          {
+            "target_id": "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+            "reason": "Repaired source_entity to new ENT_CALCIUM_ION_SARCOPLASM (sarcoplasmic Ca2+), the actual actor binding troponin. ENT_SR retained as store/release source; causal chain SR release -> Ca2+ in sarcoplasm -> troponin binding preserved via REL_SARCOLEMMA_TO_SR and new ion entity. New ion entity needs lifecycle confirmation in program state."
+          }
+        ]
+      },
+      "result": {
+        "status": "PREFLIGHT_REJECTED",
+        "errors": [
+          {
+            "code": "INVALID_EXTENSION",
+            "request": {
+              "target_id": "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+              "reason": "Repaired source_entity to new ENT_CALCIUM_ION_SARCOPLASM (sarcoplasmic Ca2+), the actual actor binding troponin. ENT_SR retained as store/release source; causal chain SR release -> Ca2+ in sarcoplasm -> troponin binding preserved via REL_SARCOLEMMA_TO_SR and new ion entity. New ion entity needs lifecycle confirmation in program state."
+            }
+          },
+          {
+            "code": "INVALID_ADDITION",
+            "target_id": "ENT_CALCIUM_ION_SARCOPLASM"
+          },
+          {
+            "code": "TARGET_OUTSIDE_TASK",
+            "target_id": "ENT_SR",
+            "allowed_targets": [
+              "REL_CA_TO_TROPONIN_TROPOMYOSIN"
+            ]
+          },
+          {
+            "code": "FORBIDDEN_FIELDS",
+            "target_id": "ENT_SR",
+            "fields": [
+              "semantic_id"
+            ]
+          },
+          {
+            "code": "STRUCTURE_OR_SCOPE",
+            "message": "Undefined relation entity reference"
+          }
+        ],
+        "rollback_hash": "f89d4ec483ae29cc60db00c51f76c60ec36b3fba29235f0452b115f30f555d3c"
+      }
+    }
+  ],
+  "result": {
+    "status": "NEEDS_HUMAN_REVIEW",
+    "errors": [
+      {
+        "code": "INVALID_EXTENSION",
+        "request": {
+          "target_id": "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+          "reason": "Repaired source_entity to new ENT_CALCIUM_ION_SARCOPLASM (sarcoplasmic Ca2+), the actual actor binding troponin. ENT_SR retained as store/release source; causal chain SR release -> Ca2+ in sarcoplasm -> troponin binding preserved via REL_SARCOLEMMA_TO_SR and new ion entity. New ion entity needs lifecycle confirmation in program state."
+        }
+      },
+      {
+        "code": "INVALID_ADDITION",
+        "target_id": "ENT_CALCIUM_ION_SARCOPLASM"
+      },
+      {
+        "code": "TARGET_OUTSIDE_TASK",
+        "target_id": "ENT_SR",
+        "allowed_targets": [
+          "REL_CA_TO_TROPONIN_TROPOMYOSIN"
+        ]
+      },
+      {
+        "code": "FORBIDDEN_FIELDS",
+        "target_id": "ENT_SR",
+        "fields": [
+          "semantic_id"
+        ]
+      },
+      {
+        "code": "STRUCTURE_OR_SCOPE",
+        "message": "Undefined relation entity reference"
+      }
+    ]
+  }
+}

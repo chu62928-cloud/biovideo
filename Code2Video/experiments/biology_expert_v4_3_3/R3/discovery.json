@@ -1,0 +1,70 @@
+{
+  "topic_id": "pupil_light_reflex",
+  "scientific_queries": [
+    "pupillary light reflex afferent optic nerve efferent oculomotor nerve Edinger-Westphal nucleus pathway review",
+    "pupil constriction bright light parasympathetic sphincter pupillae mechanism textbook",
+    "pupillary light reflex pretectal nucleus olivary pretectal nucleus circuit anatomy",
+    "consensual pupillary light reflex pathway mechanism primary literature",
+    "pupillary light reflex high school biology explanation sensory coordinating effector steps"
+  ],
+  "candidate_urls": [
+    "https://www.ncbi.nlm.nih.gov/books/NBK537237/",
+    "https://www.ncbi.nlm.nih.gov/books/NBK513253/",
+    "https://openstax.org/books/anatomy-and-physiology-2e/pages/15-2-autonomic-reflexes-and-homeostasis"
+  ],
+  "visual_queries": [
+    "eye cross section bright light pupil constriction sphincter pupillae diagram high school schematic",
+    "retina ganglion cell optic nerve pretectal nucleus Edinger-Westphal oculomotor nerve ciliary ganglion pupil pathway schematic",
+    "pupillary light reflex direct consensual response diagram sensory afferent efferent effector",
+    "iris sphincter pupillae circular muscle contraction pupil diameter decrease schematic"
+  ],
+  "visual_objects": [
+    "eye globe cross-section",
+    "retina photoreceptors and retinal ganglion cells",
+    "optic nerve",
+    "optic chiasm",
+    "pretectal nucleus",
+    "Edinger-Westphal nucleus",
+    "oculomotor nerve",
+    "ciliary ganglion",
+    "short ciliary nerves",
+    "iris sphincter pupillae muscle",
+    "iris dilator pupillae muscle",
+    "pupil aperture"
+  ],
+  "visual_states": [
+    "low light: pupil dilated, dilator pupillae active, sphincter relaxed",
+    "bright light: pupil constricted, sphincter pupillae contracted, dilator relaxed",
+    "light stimulus onset at retina",
+    "afferent signal traveling via optic nerve to pretectal area",
+    "bilateral pretectal projection to Edinger-Westphal nuclei",
+    "parasympathetic efferent signal via oculomotor nerve to ciliary ganglion",
+    "postganglionic short ciliary nerve signal to sphincter pupillae",
+    "direct response: illuminated eye constricts",
+    "consensual response: contralateral eye constricts",
+    "return to dim light: pupil redilates"
+  ],
+  "scope": {
+    "included": [
+      "stimulus: increased light intensity at retina",
+      "sensory afferent: retinal ganglion cell axons in optic nerve to pretectal nucleus",
+      "coordinating center: pretectal nucleus projecting bilaterally to Edinger-Westphal parasympathetic nuclei",
+      "efferent: oculomotor nerve (CN III) preganglionic parasympathetic fibers to ciliary ganglion, postganglionic short ciliary nerves to iris",
+      "effector: sphincter pupillae (circular smooth muscle) contraction reducing pupil diameter",
+      "direct and consensual pupillary light reflex",
+      "protective function: reducing retinal illumination and improving depth of focus",
+      "distinction between pupillary light reflex (brainstem) and conscious visual perception"
+    ],
+    "excluded": [
+      "detailed phototransduction molecular cascade",
+      "intrinsically photosensitive retinal ganglion cells and melanopsin unless needed for bright-light sustained response",
+      "pharmacology of pupil-active drugs",
+      "clinical testing procedures and grading scales",
+      "pupil abnormalities and lesions",
+      "accommodation reflex and near triad",
+      "circadian effects of light",
+      "species comparisons beyond human",
+      "mathematical modeling of pupil dynamics"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "wan": {
+    "submission_status": "DRY_RUN",
+    "submitted": false,
+    "request_sha256": "2c2c5f9859f5493a416ed2a3f6dd7fd4c6e03e5a220cc81e0674d1f83ab7c49d",
+    "capabilities": {
+      "valid": true,
+      "errors": [],
+      "entitlement": "REAL_SUBMISSION_REQUIRED",
+      "docs": null
+    },
+    "estimate": {
+      "estimated_cny": 1.5,
+      "basis": "Official Beijing output seconds list price; actual billed cost may differ",
+      "actual_cost": null
+    }
+  },
+  "seedance": {
+    "submission_status": "DRY_RUN",
+    "submitted": false,
+    "capabilities": {
+      "valid": false,
+      "status": "NOT_SELECTED",
+      "reason": "Current user selected Wan only; exact model/endpoint and key not configured."
+    }
+  }
+}

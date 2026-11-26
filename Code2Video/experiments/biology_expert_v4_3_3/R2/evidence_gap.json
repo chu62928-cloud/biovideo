@@ -1,0 +1,13 @@
+{
+  "issue": {
+    "target_id": "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+    "reason": "source_entity is ENT_SR, but the relation modelled is Ca2+ (a released ion in the sarcoplasm) binding troponin. The SR is the source/store, not the actor binding troponin. The relation's source does not match the stated definition, breaking the causal chain between Ca2+ release and troponin binding.",
+    "evidence_ids": [
+      "E_d6fd3723dbb7"
+    ]
+  },
+  "source": "original independent review and prior targeted retrieval",
+  "evidence_ids": [
+    "E_d6fd3723dbb7"
+  ]
+}

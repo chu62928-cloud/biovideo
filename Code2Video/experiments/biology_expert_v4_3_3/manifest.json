@@ -1,0 +1,34 @@
+{
+  "experiment": "V4.3.3",
+  "git_commit": "d521fda443963cf24f3ae4d85e346e2bba39a828",
+  "production_code_hash": "2b043f5d4de73043212107f84741725bbe2daf95",
+  "historical_inputs_unchanged": true,
+  "models_used": [
+    "deepseek-flash",
+    "qwen3.8-27b"
+  ],
+  "api_usage": {
+    "prompt_tokens": 56650,
+    "completion_tokens": 11254,
+    "deepseek": 9,
+    "qwen": 2,
+    "wan": 0,
+    "seedance": 0,
+    "actual_cost": null
+  },
+  "human_interventions": [
+    "developer defined benchmark mutations and selected R2",
+    "developer adapted fallback scene and manually revised its visual geometry after first video review"
+  ],
+  "artifacts": {
+    "videos/CANDIDATE_mitosis.mp4": "ecb2239da9cfa0686e2bdcb80c444fe88d05f847916e8e83f5870bdd62201f3a",
+    "videos/final_scene.json": "c29ab5769208ce2cf869200377af01759641ab9e16965e568fc8eb02ddf161fb",
+    "videos/final_trace.json.gz": "3526a6d5fb91e487b6e45f4e662c721b9b70f3a3f765cb20fb708760032a3b8e",
+    "videos/independent_review.json": "e2b663009bb0abdba15fd2f3168a645173a49668b217034ef6eef398cb47e35b",
+    "benchmark.json": "04333e3fbddcfa5a6a82637d7cf7a87e5c96e582eaca1005be842df4525782fb",
+    "scientific_models.json": "a5bc3af9df3c9914ff90765852a8d9f05cef0fe543ad0d9488903e31aea7e052",
+    "repair_traces.json": "a94a79d473a5197f833ab107e5971f7b770d95c078af75882f96215f86a0dad1",
+    "evidence.json": "ebd670d06a3419d07ef8b942af1140b519329ef00711b0f5e04a1a91361cf9c5",
+    "evaluation.json": "4c9b0d19181b12f68e92530fea9b6931a4a3d219b4b8165d8ea3b1c911d36da9"
+  }
+}
