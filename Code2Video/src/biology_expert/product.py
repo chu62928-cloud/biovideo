@@ -107,20 +107,20 @@ def run(agent, task):
         if has('fact_sheet'):
             context=get('fact_sheet')
         else:
-            context=request('fact_sheet','Create compact evidence-backed claims for this prompt. Return JSON '
-                '{claims:[{id,statement,evidence_id,location}],learning_objectives:[string],'
+            passages={str(i): (e,p) for i,(e,p) in enumerate(
+                ((e,p) for e in evidence for p in source_quality(e)['usable_passages']),1)}
+            context=request('fact_sheet','Create 3-5 compact evidence-backed claims. Return JSON '
+                '{claims:[{id,statement,passage_id}],learning_objectives:[string],'
                 'required_entities:[string],required_dynamic_mechanisms:[string],forbidden_outcomes:[string],'
-                'allowed_simplifications:[string]}. Use only supplied passages. '+json.dumps(dict(task=task,evidence=evidence),ensure_ascii=False))
-            passages={(e['evidence_id'],p['location']):(e['url'],p['text'])
-                      for e in evidence for p in source_quality(e)['usable_passages']}
+                'allowed_simplifications:[string]}. Each passage_id must be an exact single key from passages. '
+                +json.dumps(dict(task=task,passages={i:p['text'] for i,(e,p) in passages.items()}),ensure_ascii=False))
             claims=context['claims']
             if not claims or len({c['id'] for c in claims})!=len(claims):
                 raise ValueError('Claim IDs must be unique')
             for claim in claims:
-                url, body=passages[(claim['evidence_id'],claim['location'])]
-                claim['source_url']=url
-                claim['support']=body
-            result=request('fact_review','Independently check entailment and original educational coverage. '
+                e,p=passages[str(claim['passage_id'])]
+                claim.update(source_url=e['url'],support=p['text'],evidence_id=e['evidence_id'],location=p['location'])
+            result=request('fact_review','This is a standalone fact-sheet review. Evaluate the supplied facts only for entailment and original educational coverage. Later artifacts do not exist at this point and are outside this review. '
                 'Return JSON {decision:PASS|REVISE, passed_ids:[string], blocking_reason:string}. '
                 +json.dumps(dict(task=task,facts=context),ensure_ascii=False))
             context.update(review=result,verified=result['decision']=='PASS'
