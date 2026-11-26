@@ -54,6 +54,7 @@ def bind_decision(model_action, observation, video_hash, issues):
 def run(agent, task):
     root=agent.root
     gateway=agent.gateway
+    gateway.limits['qwen']=2
     get=lambda name:read(root/(name+'.json'))
     save=lambda name,data:write(root/(name+'.json'),data)
     has=lambda name:(root/(name+'.json')).exists()
@@ -109,24 +110,29 @@ def run(agent, task):
         else:
             passages={str(i): (e,p) for i,(e,p) in enumerate(
                 ((e,p) for e in evidence for p in source_quality(e)['usable_passages']),1)}
-            context=request('fact_sheet','Create 3-5 compact evidence-backed claims. Return JSON '
-                '{claims:[{id,statement,passage_id}],learning_objectives:[string],'
-                'required_entities:[string],required_dynamic_mechanisms:[string],forbidden_outcomes:[string],'
-                'allowed_simplifications:[string]}. Each passage_id must be an exact single key from passages. '
-                +json.dumps(dict(task=task,passages={i:p['text'] for i,(e,p) in passages.items()}),ensure_ascii=False))
-            claims=context['claims']
-            if not claims or len({c['id'] for c in claims})!=len(claims):
-                raise ValueError('Claim IDs must be unique')
-            for claim in claims:
-                e,p=passages[str(claim['passage_id'])]
-                claim.update(source_url=e['url'],support=p['text'],evidence_id=e['evidence_id'],location=p['location'])
-            result=request('fact_review','This is a standalone fact-sheet review. Evaluate the supplied facts only for entailment and original educational coverage. Later artifacts do not exist at this point and are outside this review. '
-                'Return JSON {decision:PASS|REVISE, passed_ids:[string], blocking_reason:string}. '
-                +json.dumps(dict(task=task,facts=context),ensure_ascii=False))
-            context.update(review=result,verified=result['decision']=='PASS'
-                           and set(result['passed_ids'])=={c['id'] for c in claims})
-            save('fact_sheet',context)
-            event('verify_scientific_claims',result['decision'],result)
+            feedback=None
+            for attempt_number in range(2):
+                context=request('fact_sheet','Create 3-5 compact evidence-backed claims and only the learning objectives necessary for the user request. If supplied a prior review, resolve its genuine task coverage gaps without adding optional topics. Return JSON '
+                    '{claims:[{id,statement,passage_id}],learning_objectives:[string],'
+                    'required_entities:[string],required_dynamic_mechanisms:[string],forbidden_outcomes:[string],'
+                    'allowed_simplifications:[string]}. Each passage_id must be an exact single key from passages. '
+                    +json.dumps(dict(task=task,prior_review=feedback,passages={i:p['text'] for i,(e,p) in passages.items()}),ensure_ascii=False))
+                claims=context['claims']
+                if not claims or len({c['id'] for c in claims})!=len(claims):
+                    raise ValueError('Claim IDs must be unique')
+                for claim in claims:
+                    e,p=passages[str(claim['passage_id'])]
+                    claim.update(source_url=e['url'],support=p['text'],evidence_id=e['evidence_id'],location=p['location'])
+                result=request('fact_review','This is a standalone fact-sheet review. Evaluate the supplied facts only for entailment and original educational coverage. Later artifacts do not exist at this point and are outside this review. '
+                    'Return JSON {decision:PASS|REVISE, passed_ids:[string], blocking_reason:string}. '
+                    +json.dumps(dict(task=task,facts=context),ensure_ascii=False))
+                context.update(review=result,verified=result['decision']=='PASS'
+                               and set(result['passed_ids'])=={c['id'] for c in claims})
+                save('fact_sheet',context)
+                event('verify_scientific_claims',result['decision'],result)
+                if context['verified'] or not result.get('blocking_reason'):
+                    break
+                feedback=result
         if not context['verified']:
             raise ValueError(context['review'].get('blocking_reason') or 'Independent facts review incomplete')
         stage='planning'
@@ -150,12 +156,38 @@ def run(agent, task):
                 raise ValueError('Persisted video changed')
         else:
             code=adapter.code(section)
-            video=render(root,code,'initial')
+            try:
+                video=render(root,code,'initial')
+            except Exception as render_error:
+                log_path=attempt/'render.log'
+                detail=log_path.read_text(errors='replace')[-2000:] if log_path.exists() else str(render_error)
+                failure_observation={'scene_id':'section_1','error':detail,'code_sha256':sha(attempt/'lesson.py')}
+                event('upstream_coder_and_render','RENDER_FAILED',failure_observation,execution='FAILED')
+                if task['workflow']=='agent':
+                    decision=request('render_recovery','Choose repair_scene or request_human_review. Return JSON {tool,scene_id,reason,repair_instruction}. Fix only the observed runtime error. '+json.dumps(failure_observation))
+                    event(decision.get('tool'),'SELECTED',decision | {'observation_hash':digest(failure_observation)},'LLM_DECISION')
+                    if decision.get('tool')!='repair_scene' or decision.get('scene_id')!='section_1':
+                        raise
+                    instruction=decision['repair_instruction']
+                else:
+                    instruction='Correct the rendering error while preserving the lesson.'
+                record={'observation':failure_observation,'status':'PENDING','kind':'render_error'}
+                save('render_repair',record)
+                try:
+                    adapter.agent.section_codes[section.id]=code
+                    video=render(root,adapter.code(section,instruction+'\n'+detail),'render_repair')
+                except Exception:
+                    save('render_repair',record | {'status':'ROLLED_BACK'})
+                    raise
+                attempt=root/'generated_code'/'render_repair'
+                save('render_repair',record | {'status':'RENDERED','video_sha256':sha(video)})
+
             save('video',dict(path=video.name,sha256=sha(video),**probe(video)))
             event('upstream_coder_and_render','RENDERED',get('video'))
         stage='review'
         review=get('validation') if has('validation') else critic(gateway,task,video)
         if review['video_sha256']!=sha(video):
+            review=None
             raise ValueError('Stale video review')
         save('validation',review)
         event('review_video',review['domain_status'],review)

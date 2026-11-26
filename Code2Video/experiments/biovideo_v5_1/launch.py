@@ -9,4 +9,5 @@ os.environ.update(DEEPSEEK_THINKING='disabled',QWEN_MODEL='qwen3.8-27b')
 E=Path(__file__).resolve().parent
 R=E.parents[1]
 os.environ['PATH']=str(Path(sys.executable).parent)+':'+os.environ['PATH']
-subprocess.run([sys.executable,str(R/'generate_biology_video.py'),*sys.argv[1:]],check=True)
+target='web_demo.py' if sys.argv[1:2]==['--web'] else 'generate_biology_video.py'
+subprocess.run([sys.executable,str(R/target),*sys.argv[2 if target=='web_demo.py' else 1:]],check=True)

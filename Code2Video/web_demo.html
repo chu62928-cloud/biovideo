@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>BioVideo Studio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Instrument+Serif&display=swap');
+*{box-sizing:border-box}body{margin:0;background:#10252a;color:#f3f8ee;font:16px 'DM Sans',sans-serif}main{max-width:920px;margin:64px auto;padding:0 20px}h1{font:64px 'Instrument Serif',Georgia;margin:0 0 14px}section,form{border:1px solid #3c575a;background:#183237;border-radius:18px;padding:24px;margin-bottom:20px}label{display:block;margin:8px 0}input,select,textarea,button{font:inherit;padding:10px;border-radius:8px}textarea{width:100%;background:#10252a;color:inherit;border:1px solid #6e898b}button{background:#cef2a6;color:#12311f;border:0;font-weight:700;margin-top:14px}video{width:100%}a{color:#cef2a6}#status{color:#cef2a6}
+</style><main><h1>BioVideo Studio</h1><form id="form">
+<label for="request">Teaching request</label><textarea required rows="3" name="request" id="request" placeholder="Explain how enzymes bind substrates."></textarea>
+<label for="duration">Target duration (seconds)</label><input id="duration" name="duration" type="number" min="6" max="120" value="30">
+<label for="backend">Animation backend</label><select id="backend" name="backend"><option value="manim">Manim</option><option value="auto">Automatic</option></select><br><button>Generate video</button></form>
+<section><h2>Current run</h2><p id="status" role="status">Ready</p><ol id="steps"></ol><video id="video" controls hidden></video><a id="download" hidden>Download MP4</a><ul id="sources"></ul></section></main>
+<script>
+const el=id=>document.getElementById(id);
+el('form').addEventListener('submit',async event=>{
+ event.preventDefault();const button=event.target.querySelector('button');
+ button.disabled=true;el('video').hidden=true;el('download').hidden=true;el('steps').replaceChildren();el('sources').replaceChildren();
+ try {
+ const response=await fetch('/runs',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(event.target)))});
+ const job=await response.json();if(!response.ok)throw Error(job.error||'Unable to start');
+ while(true){
+ const poll=await fetch('/status/'+job.id);if(!poll.ok)throw Error('Unable to read current run');
+ const run=await poll.json();el('status').textContent=run.release_status||(run.done?'Generation stopped':'Generating');
+ el('steps').replaceChildren(...run.steps.map(step=>{const li=document.createElement('li');li.textContent=[step.tool,step.status,step.reason].filter(Boolean).join(' · ');return li;}));
+ el('sources').replaceChildren(...run.sources.map(source=>{const li=document.createElement('li');li.textContent=source;return li;}));
+ if(run.done){
+ if(run.failure)el('status').textContent+=' · '+run.failure.stage;
+ if(run.video_path){const path='/video/'+job.id;el('video').src=path;el('video').hidden=false;el('download').href=path;el('download').download=run.release_status+'.mp4';el('download').hidden=false;}
+ break;
+ }
+ await new Promise(resolve=>setTimeout(resolve,1500));
+ }
+ }catch(error){el('status').textContent=error.message;}finally{button.disabled=false;}
+});
+</script>
