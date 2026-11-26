@@ -86,3 +86,5 @@ VERIFIED权限恢复：Wan workspace retry任务2783b818-02d0-442c-ad9e-785fdcfe
 Immediate continuation：先读取logs/model_calls.json最后v42_21_ef4bacb6(402)和science_formal/vesicle_transport/automatic/repairs/attempt_1/{candidate.json,review.json,causal.json,result.json}。确认用户账户恢复后，保留账本并明确ack已知失败，再从既有patch/cache恢复，不能重跑成功模型步骤。当前run_reliability_formal.py没有topic级result跳过逻辑，需通过现存审计/repair缓存只恢复缺失步骤，避免多扣费。最高36为本次已有授权下界定的总调用ceiling，不重置已21。
 
 还需完成DNA/有丝分裂正式迁移和独立复核、囊泡剩余一次有实质差异补丁；真正未见科学主题冻结后成功闭环尚无证据。若达尝试上限保留NEEDS_HUMAN_REVIEW，不为特定生物答案改通用引擎。Science总目标active，当前交付是检查点，不是完成。新无首尾帧视频没有新增付费授权，0提交。仓库旧DNA专用动画repair仍存在，topic_coupling_audit.json已披露；本轮新路径未用。
+
+2026-11-26 14:19北京时间免费GET/user/balance复核：is_available=false，总余额-0.04CNY。无新增付费请求。check_resume.py已实现并运行，确认科学源码freeze变化0、囊泡前两次结果缓存完好、DNA/mitosis未开始。恢复状态resume_status.json；仍需用户账户余额恢复，目标active。
