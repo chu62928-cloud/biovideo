@@ -22,6 +22,9 @@ class BiologyExpertAgent:
   for name,callback in [('topic_analyzer',topic_analyzer),('evidence_fetch',self.retriever.fetch_source),('extractive_builder',supplement),('evidence_retriever',self.retriever.retrieve),('knowledge_builder',self.knowledge.build),('support_verifier',self.knowledge.verify),('fact_verifier',self.review_tools.verify_facts),('mechanism_validator',mechanism_validator),('artifact_reviewer',self.review_tools.artifact_review),('video_reviewer',self.review_tools.video_review),('repair_planner',plan_repair),('skill_manager',self.skills.propose)]:
    self.registry.register(name,callback)
  def _call(self,name,args,goal,reason):return self.registry.invoke(name,args,goal,reason)
+ def generate_video(self,task):
+  from .video_controller import run
+  return run(self,task)
  def choose_next(self,situation):
   # Explicit bounded action policy: evidence gaps, measured errors and visual ambiguity have different paths.
   if not situation.get('has_evidence'):return 'evidence_retriever','Scientific evidence is missing; retrieve before making claims.'

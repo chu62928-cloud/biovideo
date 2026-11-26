@@ -55,6 +55,7 @@ def preflight(model, task, commands, evidence, extensions=()):
     additions=[]
     for command in commands:
         target,op = command.get('target_id'),command.get('operation')
+        support = command.get('support',[])
         group = OPS.get(op)
         def reject(code,**detail):
             errors.append(dict(code=code,target_id=target,**detail))
@@ -69,7 +70,6 @@ def preflight(model, task, commands, evidence, extensions=()):
             continue
         if target not in targets:
             reject('TARGET_OUTSIDE_TASK',allowed_targets=sorted(targets))
-        support = command.get('support',[])
         if not exact_support(support,evidence):
             reject('MISSING_EVIDENCE')
         if group is None:

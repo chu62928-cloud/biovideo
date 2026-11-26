@@ -126,8 +126,15 @@
             }
           },
           "cardinality": {
-            "type": "integer",
-            "minimum": 1
+            "oneOf": [
+              {
+                "type": "integer",
+                "minimum": 1
+              },
+              {
+                "const": "unspecified_collection"
+              }
+            ]
           },
           "states": {
             "type": "object"
