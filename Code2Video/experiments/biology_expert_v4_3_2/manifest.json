@@ -167,5 +167,11 @@
     "seconds": 109.54
   },
   "final_science_status": "SCIENCE_PARTIALLY_VALIDATED",
-  "final_formal_attempts_completed": true
+  "final_formal_attempts_completed": true,
+  "post_audit_tests": {
+    "passed": 97,
+    "seconds": 110.72
+  },
+  "formal_experiment_code_version_preserved": true,
+  "current_code_differs_from_formal_freeze": true
 }

@@ -66,11 +66,15 @@ class ScientificCausalGraphValidator:
             for sid in out:
                 if sid not in states:issue('MISSING_STATE_PRODUCER',p['process_semantic_id'],{'unknown_state_ref':sid})
             return [sid for sid in out if sid in states]
+        for pid,p in processes.items():
+            for key in ['precondition_state_refs','effect_state_refs']:
+                if key not in p:issue('NOT_MEASURED',pid,{'missing_required_state_binding':key})
         requirements={pid:refs(p,'precondition_state_refs') for pid,p in processes.items()};effects={pid:refs(p,'effect_state_refs') for pid,p in processes.items()}
         for pid,p in processes.items():
             if not p.get('temporal_scope',{}).get('start_condition') or not p.get('temporal_scope',{}).get('end_condition'):issue('NOT_MEASURED',pid,'Explicit start/end conditions missing')
             for sid in effects[pid]:
-                if states[sid].get('producer_process_id')!=pid:issue('MISSING_STATE_PRODUCER',pid,{'state_id':sid,'declared_producer':states[sid].get('producer_process_id')})
+                maintained_initial=states[sid]['state_kind']=='INITIAL_CONDITION' and sid in initial_refs and sid in requirements[pid]
+                if not maintained_initial and states[sid].get('producer_process_id')!=pid:issue('MISSING_STATE_PRODUCER',pid,{'state_id':sid,'declared_producer':states[sid].get('producer_process_id')})
             for sid in requirements[pid]:
                 s=states[sid];producers=[qid for qid in processes if any(slot(states[x])==slot(s) and states[x]['value']==s['value'] for x in effects[qid])]
                 if sid not in initial_refs and not any(slot(states[x])==slot(s) and states[x]['value']==s['value'] for x in initial_refs) and not producers:issue('MISSING_STATE_PRODUCER',pid,{'state_id':sid})

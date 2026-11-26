@@ -1,0 +1,83 @@
+{
+  "results": [
+    {
+      "topic": "vesicle_transport",
+      "original_formal_causal_status": "PASS",
+      "post_audit_status": "PASS",
+      "issues": [],
+      "independent_science_review_unchanged": "REVISE",
+      "model_changed": false
+    },
+    {
+      "topic": "dna_replication",
+      "original_formal_causal_status": "PASS",
+      "post_audit_status": "PASS",
+      "issues": [],
+      "independent_science_review_unchanged": "REVISE",
+      "model_changed": false
+    },
+    {
+      "topic": "mitosis",
+      "original_formal_causal_status": "REVISE",
+      "post_audit_status": "REVISE",
+      "issues": [
+        {
+          "issue_id": "STATE_1",
+          "issue_type": "MISSING_STATE_PRODUCER",
+          "affected_process_ids": [
+            "PROC_metaphase_alignment"
+          ],
+          "status": "DETECTED",
+          "explanation": {
+            "state_id": "ST_cohesin_holding_sister_chromatids"
+          }
+        },
+        {
+          "issue_id": "STATE_2",
+          "issue_type": "MISSING_STATE_PRODUCER",
+          "affected_process_ids": [
+            "PROC_anaphase_sister_separation"
+          ],
+          "status": "DETECTED",
+          "explanation": {
+            "state_id": "ST_cohesin_holding_sister_chromatids"
+          }
+        },
+        {
+          "issue_id": "STATE_3",
+          "issue_type": "UNREACHABLE_PRECONDITION",
+          "affected_process_ids": [
+            "PROC_metaphase_alignment"
+          ],
+          "status": "DETECTED",
+          "explanation": {
+            "required_state_refs": [
+              "ST_bipolar_kinetochore_attachment",
+              "ST_sister_kinetochores_face_opposite_poles",
+              "ST_cohesin_holding_sister_chromatids"
+            ]
+          }
+        },
+        {
+          "issue_id": "STATE_4",
+          "issue_type": "UNREACHABLE_PRECONDITION",
+          "affected_process_ids": [
+            "PROC_anaphase_sister_separation"
+          ],
+          "status": "DETECTED",
+          "explanation": {
+            "required_state_refs": [
+              "ST_duplicated_chromosome_aligned_at_metaphase_plate",
+              "ST_bipolar_kinetochore_attachment",
+              "ST_cohesin_holding_sister_chromatids"
+            ]
+          }
+        }
+      ],
+      "independent_science_review_unchanged": "REVISE",
+      "model_changed": false
+    }
+  ],
+  "new_model_requests": 0,
+  "note": "Original formal source freeze and results retained. Separate general implementation correction, not a retrospective change to formal experiment or theme data."
+}

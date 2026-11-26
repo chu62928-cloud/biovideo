@@ -1,0 +1,72 @@
+{
+  "purpose": "Post-experiment generic validator counterexample audit; no theme-specific repair or model calls",
+  "cases": [
+    {
+      "case": "schema1.1_with_legacy_preconditions_but_no_typed_refs",
+      "expected": "NOT_MEASURED or REVISE, never PASS",
+      "observed": {
+        "model_sha256": "6dead4cb9b840acdaa9d3d1241748a4d49ad6178e7f51026c34bf6fa52aa9feb",
+        "status": "PASS",
+        "issues": [],
+        "reachable_process_ids": [
+          "P"
+        ],
+        "witnesses": {
+          "P": {
+            "completed_before": [],
+            "required_state_refs": [],
+            "produced_state_refs": []
+          }
+        },
+        "states_explored": 2,
+        "exhaustive": true,
+        "limit": 4096,
+        "semantics": "Bounded single-execution state paths on explicit subject/property/value; no claim about chemistry, loops or all continuous trajectories."
+      },
+      "finding": "False PASS: absent reference fields silently default to empty predicates"
+    },
+    {
+      "case": "declared_initial_state_also_maintained_as_effect",
+      "expected": "PASS if same value already initial; not missing producer",
+      "observed": {
+        "model_sha256": "1a7975a4435c8ed878483ea2cc6ee8af584b7adf555a458a65c2938f9ebb3c10",
+        "status": "REVISE",
+        "issues": [
+          {
+            "issue_id": "STATE_1",
+            "issue_type": "MISSING_STATE_PRODUCER",
+            "affected_process_ids": [
+              "P"
+            ],
+            "status": "DETECTED",
+            "explanation": {
+              "state_id": "I",
+              "declared_producer": null
+            }
+          }
+        ],
+        "reachable_process_ids": [
+          "P"
+        ],
+        "witnesses": {
+          "P": {
+            "completed_before": [],
+            "required_state_refs": [
+              "I"
+            ],
+            "produced_state_refs": [
+              "I"
+            ]
+          }
+        },
+        "states_explored": 2,
+        "exhaustive": true,
+        "limit": 4096,
+        "semantics": "Bounded single-execution state paths on explicit subject/property/value; no claim about chemistry, loops or all continuous trajectories."
+      },
+      "finding": "False rejection: identity effect on initial condition always requires producer"
+    }
+  ],
+  "production_science_code_changed": false,
+  "original_science_reviews_unchanged": true
+}

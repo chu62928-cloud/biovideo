@@ -69,3 +69,16 @@ def test_wan_text_mode_no_frames(tmp_path,monkeypatch):
  p=Wan3Provider(tmp_path,{'model_id':'wan3.0-video','base_url':'https://example.com'})
  request={'input_mode':'text_to_video','prompt':'generic mechanism','duration':5}
  assert 'media' not in p.prepare_request(request)['input'];assert p.submit(request,dry_run=True)['submitted'] is False
+
+def test_missing_typed_state_binding_not_pass():
+ m=typed();m['processes'][0].pop('precondition_state_refs');result=ScientificCausalGraphValidator().validate(m)
+ assert result['status']!='PASS' and any(i['issue_type']=='NOT_MEASURED' for i in result['issues'])
+def test_explicit_empty_state_bindings_are_valid():
+ m=typed();m['processes'][0]['precondition_state_refs']=[]
+ assert ScientificCausalGraphValidator().validate(m)['status']=='PASS'
+def test_initial_state_identity_effect_maintains_condition():
+ m=typed();m['states']=m['states'][:1];m['processes']=m['processes'][:1];m['processes'][0]['effect_state_refs']=['I']
+ assert ScientificCausalGraphValidator().validate(m)['status']=='PASS'
+def test_initial_state_cannot_be_created_without_requiring_it():
+ m=typed();m['processes'][0]['precondition_state_refs']=[];m['processes'][0]['effect_state_refs']=['I','M']
+ assert ScientificCausalGraphValidator().validate(m)['status']=='REVISE'

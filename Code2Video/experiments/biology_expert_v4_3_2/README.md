@@ -38,3 +38,6 @@
 先前README中的402中断是历史检查点，现已恢复并执行完毕；当前无账户阻塞或后台任务。本轮视频仍只dry-run，未新增付费视频。
 
 最终累计用量：{"deepseek_calls": 41, "qwen_calls": 0, "wan_tasks": 0, "seedance_tasks": 0, "input_tokens": 389013, "output_tokens": 105189, "actual_cost": null, "failed_requests": 2}
+
+## 实验后通用实现审计
+额外反例发现：schema1.1过程未给状态引用可能空检查PASS；已有初态原样维持却可能被误要求生产者。已以通用A对象复现并修复，新增4项正反测试。新生产代码版本与原正式冻结版本不同，原实验记录保持不变，后续重验证单列post_audit_revalidation.json。三个最终候选结果未变，独立科学审核仍全部REVISE。不能把通用验证器修复当作科学模型自主修复成功。

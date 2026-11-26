@@ -1,0 +1,7 @@
+{
+  "passed": 97,
+  "failed": 0,
+  "seconds": 110.72,
+  "original_formal_tests": 93,
+  "production_revision": "Post-experiment generic implementation fixes; separate revalidation, not original frozen run"
+}
