@@ -116,3 +116,6 @@ Immediate continuation：先读取logs/model_calls.json最后v42_21_ef4bacb6(402
 
 ## 补丁失败的离线归因
 patch_failure_diagnostics.json列出首个错误后的全部可检测接口问题：attempt0修改ENT_SR与PROC_EXCITATION超出任务；attempt1向3个关系写scientific_name（不在允许字段），并有observable角色关系端点不一致；attempt2仍有同一实体绑定不一致。未持久化绕过门禁的候选，未批准。新机制补丁失败不应全部解释为来源缺失：生成器接口遵循/一致性是直接阻塞。该诊断0新模型请求，0生产改动。
+
+## 发布判定与执行停止
+release_decision.json核对三主题各3次和新主题有界失败，0批准新模型。Science状态SCIENCE_PARTIALLY_VALIDATED，不建议稳定维护。当前无运行任务，科学源码freeze未变。目标尚未达到；依据任务书有限尝试与禁止无限扩框架要求，现有协议已耗尽，不再自动新增主题/重置次数。继续证明目标需要另定一轮模型/结构化输出策略与独立评测协议，不能把失败包装成完成。

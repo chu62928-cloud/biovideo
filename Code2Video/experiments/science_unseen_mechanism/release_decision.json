@@ -1,0 +1,31 @@
+{
+  "objective_proven": false,
+  "science_release": "SCIENCE_PARTIALLY_VALIDATED",
+  "stable_maintenance_recommended": false,
+  "current_jobs_running": false,
+  "formal_existing_topics": {
+    "count": 3,
+    "attempts_per_topic": 3,
+    "approved_models": 0
+  },
+  "prospective_new_task": {
+    "original_zero_intervention_run": "FAILED_MODEL_BUILD",
+    "assisted_recovery_run": "FAILED_THREE_LOCAL_PATCHES",
+    "frozen_science_code_changed": false,
+    "human_assistance_disclosed": true
+  },
+  "hard_stop_basis": "V4.3.2 requires finite retries, stopping after no progress, no unlimited new frameworks or repeated sampling for PASS. Existing formal samples and prospective recovered sample exhausted their bounded repair protocols.",
+  "remaining_required_evidence": [
+    "Successful unassisted original-task-preserving repair on a new frozen evaluation",
+    "Independent scientific approval",
+    "Reliable patch protocol and role/reference consistency"
+  ],
+  "current_impasse": "No remaining trial under completed protocols can prove objective; developer cannot supply biology answers or relabel assisted recovery as autonomy. Further experiments require a separately defined evaluation/model configuration rather than resetting existing attempt counts.",
+  "new_paid_requests": 0,
+  "future_options_not_executed": [
+    "Revise general structured-output strategy in a new version, freeze and select new independent evaluation",
+    "Compare a different scientific model using a separately bounded protocol",
+    "Obtain human scientific adjudication of evidence gaps"
+  ],
+  "historical_failures_preserved": true
+}
