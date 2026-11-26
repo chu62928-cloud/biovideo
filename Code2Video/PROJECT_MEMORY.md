@@ -104,3 +104,5 @@ Immediate continuation：先读取logs/model_calls.json最后v42_21_ef4bacb6(402
 
 ## 完成性审计补充
 经最小通用反例复现，当前局部补丁接口不允许更正scope，即使独立Reviewer指出旧范围与新增事实矛盾。此为已证明的通用表达限制，不应把所有失败都归因科学来源不足。新增repair_expression_audit.json和completion_audit.json逐Gate保留部分完成与未证明项。未重跑三主题、未新增付费调用、未扩大架构。本轮3次问题返工限制已耗尽；稳定维护成功结论仍不成立。未来若修scope接口，必须新版本及独立评测，不能回改本轮正式结果。
+
+2026-11-26通用scope接口维护在独立worktree /autodl-tmp/code2biovideo/biovideo-science-maintenance，maintenance/science-repair-scope分支。允许明确scope任务纠正范围，禁止删包含过程/新增排除/换物种与主题，精确正文证据必需。无新付费调用，不重跑已耗尽3次的主题。不宣布稳定，仍需冻结后独立机制评测。

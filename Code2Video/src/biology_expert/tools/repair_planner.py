@@ -58,8 +58,10 @@ def plan_model_repairs(issues,model):
  from ..contracts import digest
  tasks=[]
  ids={x.get('semantic_id',x.get('process_semantic_id')) for x in model['entities']+model['relations']+model['processes']}
+ ids.add('scope')
  for n,issue in enumerate(issues):
   targets=issue.get('target_ids',[])+issue.get('affected_process_ids',[])+[x for x in [issue.get('affected_process_id'),issue.get('affected_entity_id')] if x]
+  if issue.get('target_id')=='scope' or issue.get('issue_type')=='SCOPE_MISMATCH':targets.append('scope')
   targets=list(dict.fromkeys(x for x in targets if x in ids))
   # Direct relation dependencies of affected participants belong to same repair scope.
   entities={x['entity_ref'] for p in model['processes'] if p['process_semantic_id'] in targets for x in p['participants']}

@@ -1,0 +1,33 @@
+{
+  "question": "Can frozen Science code discover gaps, retrieve evidence, repair typed model, pass independent original-task review without topic-specific code?",
+  "development_themes": [
+    "DNA replication",
+    "Mitosis",
+    "Vesicle transport"
+  ],
+  "new_evaluation_task": "Not yet supplied to the frozen engine; select a distinct multi-step mechanism, not a simpler synthetic replacement",
+  "freeze_required": true,
+  "max_substantively_distinct_repairs": 3,
+  "no_source_answer_injection": true,
+  "success_requires": [
+    "real independent source retrieval",
+    "exact quotes and claim entailment",
+    "localized structural model patch",
+    "schema and explicit state reachability",
+    "independent model review against original task",
+    "no new topic code or prompt answer key",
+    "all failed attempts retained"
+  ],
+  "failure_attribution": [
+    "RETRIEVAL_EVIDENCE",
+    "MODEL_PATCH_FOLLOWING",
+    "SCIENCE_SEMANTICS",
+    "VALIDATOR_IMPLEMENTATION",
+    "INTERFACE_EXPRESSION"
+  ],
+  "do_not_claim": [
+    "One success proves arbitrary science",
+    "synthetic tests establish biological reliability",
+    "same-provider separate request equals human expert"
+  ]
+}
