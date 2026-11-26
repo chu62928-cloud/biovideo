@@ -1,0 +1,95 @@
+[
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=vertebrate+skeletal+muscle+excitation+contraction+relaxation+mechanism+calcium+troponin+tropomyosin+crossbridge+ATP+fatigue+rigor+alternative+termination&format=json&pageSize=3&resultType=core",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T07:17:56Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "11af5ce8ad8fc76d9a3fb0fb308fd15a5d91c5b630468cc4cba1c212d788c919"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10716970/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T07:17:58Z",
+    "status": "UNVERIFIED",
+    "http_status": 500,
+    "error": "HTTPError"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC1913977/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T07:18:08Z",
+    "status": "UNVERIFIED",
+    "error": "ReadTimeout"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC1913948/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T07:18:33Z",
+    "status": "UNVERIFIED",
+    "http_status": 500,
+    "error": "HTTPError"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK537139/",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T07:18:49Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "716bb19a670e0dabbcf83736906f4c0debad2f78e69263f61aeddb71192b821a"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK556013/",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T07:18:49Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "80c2e5edbf29e7847645a091eb7f30dd5c3a3f7f2d46a8403c1b20d2b7333b3c"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=vertebrate+skeletal+muscle+excitation+contraction+relaxation+mechanism+calcium+sarcoplasmic+reticulum+troponin+tropomyosin+cross-bridge+ATP+motor+neuron+acetylcholine+cessation+fatigue+rigor&format=json&pageSize=3&resultType=core",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T07:18:59Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "2d56bb619071b7e5fbcb6f13ee80cd1b8524a53594956b61c1e5f4baef662310"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6027950/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T07:19:18Z",
+    "status": "UNVERIFIED",
+    "error": "ReadTimeout"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6916202/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T07:19:43Z",
+    "status": "UNVERIFIED",
+    "error": "ReadTimeout"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10716970/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T07:20:09Z",
+    "status": "UNVERIFIED",
+    "http_status": 500,
+    "error": "HTTPError"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK537325/",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T07:20:24Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "bca0961abaa5c50ee7727bafcb1adb19e28ff0f3c00a6b2eba23670e1b1a776a"
+  },
+  {
+    "url": "https://openstax.org/books/biology-2e/pages/38-4-muscle-contraction-and-locomotion",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T07:20:25Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "29a63e9402a5f3658d0ac917339c972d3b49c6c562e281bc3ed8dd34b7691336"
+  }
+]

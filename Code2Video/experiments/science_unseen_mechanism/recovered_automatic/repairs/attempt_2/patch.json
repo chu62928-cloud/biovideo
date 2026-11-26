@@ -1,0 +1,367 @@
+{
+  "operations": [
+    {
+      "op": "update",
+      "collection": "processes",
+      "target_id": "PROC_RELAXATION",
+      "fields": {
+        "scientific_name": "Cessation of ACh-driven signalling, repolarization, SR Ca2+ reuptake and reshielding of actin-binding sites",
+        "preconditions": {
+          "motor_neuron_stops_ACh_release": true,
+          "ATP_available_for_pumps": true
+        },
+        "effects": {
+          "sarcolemma_repolarized": true,
+          "ca_returned_to_SR": true,
+          "actin_binding_sites_reshielded": true,
+          "muscle_fibre_relaxed": true
+        },
+        "temporal_scope": {
+          "start_condition": "Motor neuron stops releasing ACh (normal pathway); alternatively ATP depletion/fatigue can terminate contraction without normal relaxation",
+          "end_condition": "Actin-binding sites reshielded and fibre loses tension (normal pathway)",
+          "after": [
+            "PROC_CONTRACTION_CROSSBRIDGE_CYCLE"
+          ]
+        },
+        "exceptions": [
+          {
+            "description": "A muscle also can stop contracting when it runs out of ATP and becomes fatigued; this ATP-depletion route is not modelled here as normal relaxation and does not produce the ST_FIBRE_RELAXED effect.",
+            "evidence_quote": "A muscle also can stop contracting when it runs out of ATP and becomes fatigued ( Figure 10.9 ).",
+            "location": "paragraph_3"
+          }
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "Muscle contraction usually stops when signaling from the motor neuron ends, which repolarizes the sarcolemma and T-tubules, and closes the voltage-gated calcium channels in the SR.",
+            "location": "paragraph_3"
+          },
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "ATP-driven pumps will move Ca ++ out of the sarcoplasm back into the SR. This results in the “reshielding” of the actin-binding sites on the thin filaments. Without the ability to form cross-bridges between the thin and thick filaments, the muscle fiber loses its tension and relaxes.",
+            "location": "paragraph_26"
+          }
+        ]
+      }
+    },
+    {
+      "op": "update",
+      "collection": "relations",
+      "target_id": "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+      "fields": {
+        "definition": "Ca2+ released into the sarcoplasm binds troponin, causing tropomyosin to slide away and expose myosin-binding sites on actin",
+        "source_entity": "ENT_TROPONIN_TROPOMYOSIN",
+        "target_entity": "ENT_ACTIN_MYOSIN_SARCOMERE",
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "The first step in the process of contraction is for Ca ++ to bind to troponin so that tropomyosin can slide away from the binding sites on the actin strands.",
+            "location": "paragraph_11"
+          }
+        ]
+      }
+    },
+    {
+      "op": "update",
+      "collection": "processes",
+      "target_id": "PROC_CONTRACTION_CROSSBRIDGE_CYCLE",
+      "fields": {
+        "observables": [
+          {
+            "constraint_id": "OBS_CONTRACTION_REQUIRES_CA_AND_ATP",
+            "predicate": "relation_holds_during",
+            "relation_ref": "REL_CROSSBRIDGE_ACTIN_MYOSIN",
+            "source_role": "contractile_filaments",
+            "target_role": "contractile_filaments",
+            "capability": "PARTIAL",
+            "evidence_ids": [
+              "E_d6fd3723dbb7"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_d6fd3723dbb7",
+                "quote": "As long as Ca ++ ions remain in the sarcoplasm to bind to troponin, which keeps the actin-binding sites “unshielded,” and as long as ATP is available to drive the cross-bridge cycling and the pulling of actin strands by myosin, the muscle fiber will continue to shorten to an anatomical limit.",
+                "location": "paragraph_1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "state_upgrade": {
+    "schema_version": "1.1",
+    "clip_start": {
+      "stage": "resting_fibre_with_motor_neuron_available",
+      "existing_entity_refs": [
+        "ENT_MOTOR_NEURON_TERMINAL",
+        "ENT_SARCOLEMMA_T_TUBULES",
+        "ENT_SR",
+        "ENT_TROPONIN_TROPOMYOSIN",
+        "ENT_ACTIN_MYOSIN_SARCOMERE"
+      ],
+      "omitted_processes": []
+    },
+    "states": [
+      {
+        "state_id": "ST_SARCOLEMMA_DEPOLARIZED",
+        "subject_ref": "ENT_SARCOLEMMA_T_TUBULES",
+        "property": "membrane_potential_state",
+        "value": "depolarized",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "process": "PROC_EXCITATION"
+        },
+        "producer_process_id": "PROC_EXCITATION",
+        "required_by_process_ids": [
+          "PROC_CA_RELEASE_AND_TROPONIN_BINDING"
+        ],
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "The local membrane of the fiber will depolarize as positively charged sodium ions (Na + ) enter, triggering an action potential that spreads to the rest of the membrane which will depolarize, including the T-tubules.",
+            "location": "paragraph_1"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_CA_IN_SARCOPLASM",
+        "subject_ref": "ENT_SR",
+        "property": "ca2+_location",
+        "value": "elevated_in_sarcoplasm",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "process": "PROC_CA_RELEASE_AND_TROPONIN_BINDING"
+        },
+        "producer_process_id": "PROC_CA_RELEASE_AND_TROPONIN_BINDING",
+        "required_by_process_ids": [
+          "PROC_CONTRACTION_CROSSBRIDGE_CYCLE"
+        ],
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "This triggers the release of calcium ions (Ca ++ ) from storage in the sarcoplasmic reticulum (SR).",
+            "location": "paragraph_1"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_ACTIN_SITES_SHIELDED",
+        "subject_ref": "ENT_ACTIN_MYOSIN_SARCOMERE",
+        "property": "myosin_binding_site_exposure",
+        "value": "shielded",
+        "state_kind": "INITIAL_CONDITION",
+        "scope": {
+          "phase": "resting_fibre"
+        },
+        "producer_process_id": null,
+        "required_by_process_ids": [
+          "PROC_CA_RELEASE_AND_TROPONIN_BINDING"
+        ],
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "Tropomyosin is a protein that winds around the chains of the actin filament and covers the myosin-binding sites to prevent actin from binding to myosin.",
+            "location": "paragraph_10"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_ACTIN_SITES_UNSHIELDED",
+        "subject_ref": "ENT_ACTIN_MYOSIN_SARCOMERE",
+        "property": "myosin_binding_site_exposure",
+        "value": "unshielded",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "process": "PROC_CA_RELEASE_AND_TROPONIN_BINDING"
+        },
+        "producer_process_id": "PROC_CA_RELEASE_AND_TROPONIN_BINDING",
+        "required_by_process_ids": [
+          "PROC_CONTRACTION_CROSSBRIDGE_CYCLE"
+        ],
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "The first step in the process of contraction is for Ca ++ to bind to troponin so that tropomyosin can slide away from the binding sites on the actin strands.",
+            "location": "paragraph_11"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_ATP_AVAILABLE",
+        "subject_ref": "ENT_ACTIN_MYOSIN_SARCOMERE",
+        "property": "atp_availability",
+        "value": "available",
+        "state_kind": "REQUIRED_PRECONDITION",
+        "scope": {
+          "process": "PROC_CONTRACTION_CROSSBRIDGE_CYCLE"
+        },
+        "producer_process_id": null,
+        "required_by_process_ids": [
+          "PROC_CONTRACTION_CROSSBRIDGE_CYCLE",
+          "PROC_RELAXATION"
+        ],
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "As long as Ca ++ ions remain in the sarcoplasm to bind to troponin, which keeps the actin-binding sites “unshielded,” and as long as ATP is available to drive the cross-bridge cycling and the pulling of actin strands by myosin, the muscle fiber will continue to shorten to an anatomical limit.",
+            "location": "paragraph_1"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_SARCOMERE_SHORTENED",
+        "subject_ref": "ENT_ACTIN_MYOSIN_SARCOMERE",
+        "property": "sarcomere_length",
+        "value": "shortened",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "process": "PROC_CONTRACTION_CROSSBRIDGE_CYCLE"
+        },
+        "producer_process_id": "PROC_CONTRACTION_CROSSBRIDGE_CYCLE",
+        "required_by_process_ids": [
+          "PROC_RELAXATION"
+        ],
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "The contraction of a striated muscle fiber occurs as the sarcomeres, linearly arranged within myofibrils, shorten as myosin heads pull on the actin filaments.",
+            "location": "paragraph_6"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_SARCOLEMMA_REPOLARIZED",
+        "subject_ref": "ENT_SARCOLEMMA_T_TUBULES",
+        "property": "membrane_potential_state",
+        "value": "repolarized",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "process": "PROC_RELAXATION"
+        },
+        "producer_process_id": "PROC_RELAXATION",
+        "required_by_process_ids": [],
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "Muscle contraction usually stops when signaling from the motor neuron ends, which repolarizes the sarcolemma and T-tubules, and closes the voltage-gated calcium channels in the SR.",
+            "location": "paragraph_3"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_CA_RETURNED_TO_SR",
+        "subject_ref": "ENT_SR",
+        "property": "ca2+_location",
+        "value": "returned_to_SR",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "process": "PROC_RELAXATION"
+        },
+        "producer_process_id": "PROC_RELAXATION",
+        "required_by_process_ids": [],
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "ATP-driven pumps will move Ca ++ out of the sarcoplasm back into the SR.",
+            "location": "paragraph_26"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_FIBRE_RELAXED",
+        "subject_ref": "ENT_ACTIN_MYOSIN_SARCOMERE",
+        "property": "fibre_tension",
+        "value": "relaxed",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "process": "PROC_RELAXATION"
+        },
+        "producer_process_id": "PROC_RELAXATION",
+        "required_by_process_ids": [],
+        "evidence_ids": [
+          "E_d6fd3723dbb7"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d6fd3723dbb7",
+            "quote": "Without the ability to form cross-bridges between the thin and thick filaments, the muscle fiber loses its tension and relaxes.",
+            "location": "paragraph_26"
+          }
+        ]
+      }
+    ]
+  },
+  "issue_resolution": [
+    {
+      "issue_id": "INDEPENDENT_0",
+      "changed_target_ids": [
+        "PROC_RELAXATION"
+      ],
+      "reason": "Clarified that the neural-off route is the modelled normal relaxation pathway; ATP-depletion/fatigue remains an explicit exception and is not conflated with normal relaxation. The process no longer asserts the neuronal-off route as the sole possible termination.",
+      "evidence_ids": [
+        "E_d6fd3723dbb7"
+      ]
+    },
+    {
+      "issue_id": "INDEPENDENT_1",
+      "changed_target_ids": [],
+      "reason": "No process/relation fields were updated for this issue because the mislocated state subject (ENT_SR vs sarcoplasm) cannot be corrected within the allowed process/relation field set; ST_CA_IN_SARCOPLASM remains with subject_ref ENT_SR as an SR Ca2+-location change. The issue is noted but not resolved by this patch.",
+      "evidence_ids": [
+        "E_d6fd3723dbb7"
+      ]
+    },
+    {
+      "issue_id": "INDEPENDENT_2",
+      "changed_target_ids": [
+        "REL_CA_TO_TROPONIN_TROPOMYOSIN"
+      ],
+      "reason": "Relation source changed to ENT_TROPONIN_TROPOMYOSIN and target to ENT_ACTIN_MYOSIN_SARCOMERE, so the source now matches the actor binding Ca2+ and the target is the actin site whose exposure changes, consistent with the quote.",
+      "evidence_ids": [
+        "E_d6fd3723dbb7"
+      ]
+    },
+    {
+      "issue_id": "INDEPENDENT_3",
+      "changed_target_ids": [
+        "PROC_CONTRACTION_CROSSBRIDGE_CYCLE"
+      ],
+      "reason": "Observable role mapping changed to contractile_filaments for both source and target of REL_CROSSBRIDGE_ACTIN_MYOSIN, aligning the observable with the relation semantics (myosin-head binding to actin within the actin-myosin system) rather than using the regulatory complex as the source actor.",
+      "evidence_ids": [
+        "E_d6fd3723dbb7"
+      ]
+    },
+    {
+      "issue_id": "INDEPENDENT_4",
+      "changed_target_ids": [],
+      "reason": "No entity/process fields were updated for this issue; state subject mapping was corrected in state_upgrade (ST_ACTIN_SITES_SHIELDED and ST_ACTIN_SITES_UNSHIELDED now have subject_ref ENT_ACTIN_MYOSIN_SARCOMERE), but this repair iteration's operations do not include entity fields. The issue is noted for verification.",
+      "evidence_ids": [
+        "E_d6fd3723dbb7"
+      ]
+    }
+  ]
+}

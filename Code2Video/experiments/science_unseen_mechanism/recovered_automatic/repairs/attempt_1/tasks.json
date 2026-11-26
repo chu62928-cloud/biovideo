@@ -1,0 +1,170 @@
+[
+  {
+    "repair_id": "MODEL_REPAIR_1",
+    "issue_id": "INDEPENDENT_0",
+    "target_artifact": "typed_science_model",
+    "target_ids": [
+      "PROC_RELAXATION",
+      "REL_NEURON_TO_SARCOLEMMA",
+      "REL_SARCOLEMMA_TO_SR",
+      "REL_CA_TO_TROPONIN_TROPOMYOSIN"
+    ],
+    "target_fields": [
+      "participants",
+      "preconditions",
+      "effects",
+      "temporal_scope",
+      "precondition_state_refs",
+      "effect_state_refs",
+      "support",
+      "scientific_name",
+      "definition"
+    ],
+    "required_evidence_ids": [
+      "E_d6fd3723dbb7"
+    ],
+    "repair_goal": "Sets 'motor_neuron_stops_ACh_release' as a required precondition, but source states contraction 'usually' stops this way and also can stop via ATP depletion/fatigue; the model treats the neuronal-off pathway as the only causal route and relegates ATP-depletion to an exception without modelling the fatigue termination route. This overstates necessity and under-represents the stated alternative termination condition, and 'effects relaxation:true' conflicts with the fatigue exception (ATP depletion prevents normal relaxation/rigor).",
+    "acceptance_predicates": [
+      "exact_evidence_support",
+      "original_requirements_preserved",
+      "typed_state_reachable",
+      "independent_science_review",
+      "target_issue_resolved"
+    ],
+    "status": "PENDING",
+    "before_model_sha256": "f89d4ec483ae29cc60db00c51f76c60ec36b3fba29235f0452b115f30f555d3c"
+  },
+  {
+    "repair_id": "MODEL_REPAIR_2",
+    "issue_id": "INDEPENDENT_1",
+    "target_artifact": "typed_science_model",
+    "target_ids": [
+      "PROC_CA_RELEASE_AND_TROPONIN_BINDING",
+      "PROC_CONTRACTION_CROSSBRIDGE_CYCLE",
+      "REL_SARCOLEMMA_TO_SR",
+      "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+      "REL_CROSSBRIDGE_ACTIN_MYOSIN"
+    ],
+    "target_fields": [
+      "participants",
+      "preconditions",
+      "effects",
+      "temporal_scope",
+      "precondition_state_refs",
+      "effect_state_refs",
+      "support",
+      "scientific_name",
+      "definition"
+    ],
+    "required_evidence_ids": [
+      "E_d6fd3723dbb7"
+    ],
+    "repair_goal": "Subject is ENT_SR (the store) but the property is 'ca2+_location = elevated_in_sarcoplasm'; the state subject should be the sarcoplasm/cytosol or the fibre, not the SR. This mislocates the produced state and could make Ca2+ release appear as a property of the SR rather than a change in sarcoplasmic Ca2+.",
+    "acceptance_predicates": [
+      "exact_evidence_support",
+      "original_requirements_preserved",
+      "typed_state_reachable",
+      "independent_science_review",
+      "target_issue_resolved"
+    ],
+    "status": "PENDING",
+    "before_model_sha256": "f89d4ec483ae29cc60db00c51f76c60ec36b3fba29235f0452b115f30f555d3c"
+  },
+  {
+    "repair_id": "MODEL_REPAIR_3",
+    "issue_id": "INDEPENDENT_2",
+    "target_artifact": "typed_science_model",
+    "target_ids": [
+      "REL_CA_TO_TROPONIN_TROPOMYOSIN"
+    ],
+    "target_fields": [
+      "participants",
+      "preconditions",
+      "effects",
+      "temporal_scope",
+      "precondition_state_refs",
+      "effect_state_refs",
+      "support",
+      "scientific_name",
+      "definition"
+    ],
+    "required_evidence_ids": [
+      "E_d6fd3723dbb7"
+    ],
+    "repair_goal": "source_entity is ENT_SR, but the relation modelled is Ca2+ (a released ion in the sarcoplasm) binding troponin. The SR is the source/store, not the actor binding troponin. The relation's source does not match the stated definition, breaking the causal chain between Ca2+ release and troponin binding.",
+    "acceptance_predicates": [
+      "exact_evidence_support",
+      "original_requirements_preserved",
+      "typed_state_reachable",
+      "independent_science_review",
+      "target_issue_resolved"
+    ],
+    "status": "PENDING",
+    "before_model_sha256": "f89d4ec483ae29cc60db00c51f76c60ec36b3fba29235f0452b115f30f555d3c"
+  },
+  {
+    "repair_id": "MODEL_REPAIR_4",
+    "issue_id": "INDEPENDENT_3",
+    "target_artifact": "typed_science_model",
+    "target_ids": [
+      "PROC_CONTRACTION_CROSSBRIDGE_CYCLE",
+      "REL_CROSSBRIDGE_ACTIN_MYOSIN"
+    ],
+    "target_fields": [
+      "participants",
+      "preconditions",
+      "effects",
+      "temporal_scope",
+      "precondition_state_refs",
+      "effect_state_refs",
+      "support",
+      "scientific_name",
+      "definition"
+    ],
+    "required_evidence_ids": [
+      "E_d6fd3723dbb7"
+    ],
+    "repair_goal": "Observable OBS_CONTRACTION_REQUIRES_CA_AND_ATP is 'relation_holds_during' REL_CROSSBRIDGE_ACTIN_MYOSIN with source_role 'regulatory_complex' and target_role 'contractile_filaments', but that relation's definition involves myosin-head binding to actin sites; the regulatory complex (troponin-tropomyosin) is not the myosin actor. Role mapping does not match the relation semantics, so the observable does not verify what it claims.",
+    "acceptance_predicates": [
+      "exact_evidence_support",
+      "original_requirements_preserved",
+      "typed_state_reachable",
+      "independent_science_review",
+      "target_issue_resolved"
+    ],
+    "status": "PENDING",
+    "before_model_sha256": "f89d4ec483ae29cc60db00c51f76c60ec36b3fba29235f0452b115f30f555d3c"
+  },
+  {
+    "repair_id": "MODEL_REPAIR_5",
+    "issue_id": "INDEPENDENT_4",
+    "target_artifact": "typed_science_model",
+    "target_ids": [
+      "ENT_TROPONIN_TROPOMYOSIN"
+    ],
+    "target_fields": [
+      "participants",
+      "preconditions",
+      "effects",
+      "temporal_scope",
+      "precondition_state_refs",
+      "effect_state_refs",
+      "support",
+      "scientific_name",
+      "definition"
+    ],
+    "required_evidence_ids": [
+      "E_d6fd3723dbb7"
+    ],
+    "repair_goal": "Support quotes describe tropomyosin covering sites and troponin having a Ca2+-binding site, but the model asserts 'Ca2+ binds troponin causes tropomyosin to slide away' with the quote in paragraph_11. Acceptable, but the entity is used as the subject of states ST_ACTIN_SITES_SHIELDED/UNSHIELDED while the actual shielded/unshielded object is the actin myosin-binding site on ENT_ACTIN_MYOSIN_SARCOMERE. State subject conflates regulatory complex with the actin site whose exposure changes.",
+    "acceptance_predicates": [
+      "exact_evidence_support",
+      "original_requirements_preserved",
+      "typed_state_reachable",
+      "independent_science_review",
+      "target_issue_resolved"
+    ],
+    "status": "PENDING",
+    "before_model_sha256": "f89d4ec483ae29cc60db00c51f76c60ec36b3fba29235f0452b115f30f555d3c"
+  }
+]

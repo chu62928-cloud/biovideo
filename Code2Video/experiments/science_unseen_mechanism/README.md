@@ -9,3 +9,8 @@
 原始模型、Schema拒绝原因、真实检索正文摘录、请求/响应、截断用量、任务及预先冻结协议均在本目录；无新视频。
 
 实际用量：{"deepseek_calls": 3, "input_tokens": 24447, "output_tokens": 17790, "failed_calls": 1, "actual_cost": null}
+
+## 协助恢复阶段（不得冒充原完全自主评测）
+截断响应中candidate对象实际完整，开发者使用JSONDecoder原样提取，未编辑科学字段。该候选Schema/精确引用PASS，但独立科学和状态检查REVISE。冻结引擎随后按审核意见定向研究并进行了3次局部补丁，分别因目标超出任务、字段越权、observable参与者类型不一致而回滚。没有独立批准新模型。原自主评测失败保留；这次格式协助不能算零人工介入。没有新增主题分支，也不重置3次限制继续追PASS。
+
+累计调用：{"deepseek_calls": 10, "input_tokens": 108250, "output_tokens": 41873, "failed_provider_requests": 1, "actual_cost": null}

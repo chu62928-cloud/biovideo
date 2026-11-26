@@ -1,0 +1,94 @@
+{
+  "decision": "REVISE",
+  "issues": [
+    {
+      "target_id": "PROC_RELAXATION",
+      "reason": "Sets 'motor_neuron_stops_ACh_release' as a required precondition, but source states contraction 'usually' stops this way and also can stop via ATP depletion/fatigue; the model treats the neuronal-off pathway as the only causal route and relegates ATP-depletion to an exception without modelling the fatigue termination route. This overstates necessity and under-represents the stated alternative termination condition, and 'effects relaxation:true' conflicts with the fatigue exception (ATP depletion prevents normal relaxation/rigor).",
+      "evidence_ids": [
+        "E_d6fd3723dbb7"
+      ]
+    },
+    {
+      "target_id": "ST_CA_IN_SARCOPLASM",
+      "reason": "Subject is ENT_SR (the store) but the property is 'ca2+_location = elevated_in_sarcoplasm'; the state subject should be the sarcoplasm/cytosol or the fibre, not the SR. This mislocates the produced state and could make Ca2+ release appear as a property of the SR rather than a change in sarcoplasmic Ca2+.",
+      "evidence_ids": [
+        "E_d6fd3723dbb7"
+      ]
+    },
+    {
+      "target_id": "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+      "reason": "source_entity is ENT_SR, but the relation modelled is Ca2+ (a released ion in the sarcoplasm) binding troponin. The SR is the source/store, not the actor binding troponin. The relation's source does not match the stated definition, breaking the causal chain between Ca2+ release and troponin binding.",
+      "evidence_ids": [
+        "E_d6fd3723dbb7"
+      ]
+    },
+    {
+      "target_id": "PROC_CONTRACTION_CROSSBRIDGE_CYCLE",
+      "reason": "Observable OBS_CONTRACTION_REQUIRES_CA_AND_ATP is 'relation_holds_during' REL_CROSSBRIDGE_ACTIN_MYOSIN with source_role 'regulatory_complex' and target_role 'contractile_filaments', but that relation's definition involves myosin-head binding to actin sites; the regulatory complex (troponin-tropomyosin) is not the myosin actor. Role mapping does not match the relation semantics, so the observable does not verify what it claims.",
+      "evidence_ids": [
+        "E_d6fd3723dbb7"
+      ]
+    },
+    {
+      "target_id": "ENT_TROPONIN_TROPOMYOSIN",
+      "reason": "Support quotes describe tropomyosin covering sites and troponin having a Ca2+-binding site, but the model asserts 'Ca2+ binds troponin causes tropomyosin to slide away' with the quote in paragraph_11. Acceptable, but the entity is used as the subject of states ST_ACTIN_SITES_SHIELDED/UNSHIELDED while the actual shielded/unshielded object is the actin myosin-binding site on ENT_ACTIN_MYOSIN_SARCOMERE. State subject conflates regulatory complex with the actin site whose exposure changes.",
+      "evidence_ids": [
+        "E_d6fd3723dbb7"
+      ]
+    }
+  ],
+  "observable_reviews": [
+    {
+      "constraint_id": "OBS_EXCITATION_DEPOLARIZATION",
+      "decision": "PASS",
+      "reason": "Source explicitly states ACh from motor neuron leads to local fibre membrane depolarization via Na+ entry and action potential spread including T-tubules; exact scope/order preserved.",
+      "evidence_ids": [
+        "E_d6fd3723dbb7"
+      ]
+    },
+    {
+      "constraint_id": "OBS_CA_RELEASE_REQUIRES_DEPOLARIZATION",
+      "decision": "PASS",
+      "reason": "Source states T-tubule depolarization 'triggers' SR Ca2+ release; ordered precedence excitation→release is directly entailed.",
+      "evidence_ids": [
+        "E_d6fd3723dbb7"
+      ]
+    },
+    {
+      "constraint_id": "OBS_SITE_UNSHIELDING",
+      "decision": "PASS",
+      "reason": "Source states Ca2+ binds troponin so tropomyosin slides away from actin binding sites; state transition matches. Subject mismatch noted in issue for ENT_TROPONIN_TROPOMYOSIN but the observable semantics are source-supported.",
+      "evidence_ids": [
+        "E_d6fd3723dbb7"
+      ]
+    },
+    {
+      "constraint_id": "OBS_CONTRACTION_REQUIRES_CA_AND_ATP",
+      "decision": "REVISE",
+      "reason": "Source supports Ca2+ and ATP requirement for continued shortening, but the observable's role mapping (regulatory_complex→contractile_filaments) does not encode the myosin-actin cross-bridge relation it cites.",
+      "evidence_ids": [
+        "E_d6fd3723dbb7"
+      ]
+    },
+    {
+      "constraint_id": "OBS_RELAXATION_REQUIRES_CA_REUPTAKE",
+      "decision": "PASS",
+      "reason": "Source states Ca2+ pumped back into SR causes tropomyosin to reshield actin sites; the reuptake→reshielding transition is entailed.",
+      "evidence_ids": [
+        "E_d6fd3723dbb7"
+      ]
+    },
+    {
+      "constraint_id": "OBS_RELAXATION_FOLLOWS_CONTRACTION",
+      "decision": "PASS",
+      "reason": "Relaxation is described as following the contraction/signalling phase; temporal precedence is source-supported.",
+      "evidence_ids": [
+        "E_d6fd3723dbb7"
+      ]
+    }
+  ],
+  "scope_review": "Scope correctly restricts to a single vertebrate skeletal fibre and excludes cardiac/insect muscle and molecular atomic detail, matching the task's audience and mechanism requirement. The core causal chain (ACh→sarcolemma/T-tubule depolarization→SR Ca2+ release→troponin binding/tropomyosin shift→cross-bridge cycling→cessation+Ca2+ reuptake→relaxation) is present and is not replaced by a generic movement description. However, the model overstates the necessity of motor-neuron cessation as the sole relaxation trigger and under-models the ATP-depletion/fatigue termination alternative, and several relation/state subject bindings (SR as Ca2+ binder, SR as subject of sarcoplasmic Ca2+ state, regulatory complex as source of cross-bridge relation) weaken formal source entailment. The unresolved coupling-protein gap is honestly declared and is not required at this level.",
+  "model_hash": "f89d4ec483ae29cc60db00c51f76c60ec36b3fba29235f0452b115f30f555d3c",
+  "separate_request": true,
+  "independent_provider": false
+}

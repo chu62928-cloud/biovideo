@@ -1,0 +1,98 @@
+{
+  "model_sha256": "f89d4ec483ae29cc60db00c51f76c60ec36b3fba29235f0452b115f30f555d3c",
+  "status": "REVISE",
+  "issues": [
+    {
+      "issue_id": "STATE_1",
+      "issue_type": "MISSING_STATE_PRODUCER",
+      "affected_process_ids": [
+        "PROC_CONTRACTION_CROSSBRIDGE_CYCLE"
+      ],
+      "status": "DETECTED",
+      "explanation": {
+        "state_id": "ST_ATP_AVAILABLE"
+      }
+    },
+    {
+      "issue_id": "STATE_2",
+      "issue_type": "MISSING_STATE_PRODUCER",
+      "affected_process_ids": [
+        "PROC_RELAXATION"
+      ],
+      "status": "DETECTED",
+      "explanation": {
+        "state_id": "ST_ACTIN_SITES_SHIELDED",
+        "declared_producer": null
+      }
+    },
+    {
+      "issue_id": "STATE_3",
+      "issue_type": "MISSING_STATE_PRODUCER",
+      "affected_process_ids": [
+        "PROC_RELAXATION"
+      ],
+      "status": "DETECTED",
+      "explanation": {
+        "state_id": "ST_ATP_AVAILABLE"
+      }
+    },
+    {
+      "issue_id": "STATE_4",
+      "issue_type": "UNREACHABLE_PRECONDITION",
+      "affected_process_ids": [
+        "PROC_CONTRACTION_CROSSBRIDGE_CYCLE"
+      ],
+      "status": "DETECTED",
+      "explanation": {
+        "required_state_refs": [
+          "ST_CA_IN_SARCOPLASM",
+          "ST_ACTIN_SITES_UNSHIELDED",
+          "ST_ATP_AVAILABLE"
+        ]
+      }
+    },
+    {
+      "issue_id": "STATE_5",
+      "issue_type": "UNREACHABLE_PRECONDITION",
+      "affected_process_ids": [
+        "PROC_RELAXATION"
+      ],
+      "status": "DETECTED",
+      "explanation": {
+        "required_state_refs": [
+          "ST_SARCOMERE_SHORTENED",
+          "ST_ATP_AVAILABLE"
+        ]
+      }
+    }
+  ],
+  "reachable_process_ids": [
+    "PROC_CA_RELEASE_AND_TROPONIN_BINDING",
+    "PROC_EXCITATION"
+  ],
+  "witnesses": {
+    "PROC_EXCITATION": {
+      "completed_before": [],
+      "required_state_refs": [],
+      "produced_state_refs": [
+        "ST_SARCOLEMMA_DEPOLARIZED"
+      ]
+    },
+    "PROC_CA_RELEASE_AND_TROPONIN_BINDING": {
+      "completed_before": [
+        "PROC_EXCITATION"
+      ],
+      "required_state_refs": [
+        "ST_SARCOLEMMA_DEPOLARIZED"
+      ],
+      "produced_state_refs": [
+        "ST_CA_IN_SARCOPLASM",
+        "ST_ACTIN_SITES_UNSHIELDED"
+      ]
+    }
+  },
+  "states_explored": 3,
+  "exhaustive": true,
+  "limit": 4096,
+  "semantics": "Bounded single-execution state paths on explicit subject/property/value; no claim about chemistry, loops or all continuous trajectories."
+}

@@ -1,0 +1,8 @@
+{
+  "original_finish_reason": "length",
+  "recovery_type": "Read complete candidate value from truncated envelope; no model or biological edits",
+  "offset": 17,
+  "complete_candidate_json": true,
+  "candidate_end_offset": 30648,
+  "validation": "PASS"
+}

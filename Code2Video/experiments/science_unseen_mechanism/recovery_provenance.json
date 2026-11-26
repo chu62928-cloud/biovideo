@@ -1,0 +1,9 @@
+{
+  "original_prospective_run": "ENGINEERING_BLOCKED_AT_MODEL_BUILD",
+  "additional_phase": "developer-assisted-envelope-recovery",
+  "scientific_fields_edited_by_developer": false,
+  "code_changed": false,
+  "developer_intervention": "Extract complete candidate JSON value from truncated envelope using JSONDecoder.raw_decode; map state review target IDs to referenced process IDs for existing repair task routing",
+  "autonomy_claim": "End-to-end zero-intervention success cannot be claimed even if recovered candidate later passes",
+  "original_raw_response_preserved": true
+}

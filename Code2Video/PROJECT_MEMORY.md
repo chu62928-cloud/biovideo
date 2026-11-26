@@ -108,3 +108,8 @@ Immediate continuation：先读取logs/model_calls.json最后v42_21_ef4bacb6(402
 2026-11-26通用scope接口维护在独立worktree /autodl-tmp/code2biovideo/biovideo-science-maintenance，maintenance/science-repair-scope分支。允许明确scope任务纠正范围，禁止删包含过程/新增排除/换物种与主题，精确正文证据必需。无新付费调用，不重跑已耗尽3次的主题。不宣布稳定，仍需冻结后独立机制评测。
 
 2026-11-26独立新任务评测science_unseen_mechanism：骨骼肌收缩舒张，新任务未预给机制答案。a4ffcbb科学代码hash不变。3次DeepSeek，初模型Undefined input/output role；Schema修复9000输出截断，独立审核/科学返工未执行。初候选与失败保留，无手改，无新增生产分支。未证明稳定候选，104工程测试不能代替端到端成功。
+
+## 协助恢复阶段（不得冒充原完全自主评测）
+截断响应中candidate对象实际完整，开发者使用JSONDecoder原样提取，未编辑科学字段。该候选Schema/精确引用PASS，但独立科学和状态检查REVISE。冻结引擎随后按审核意见定向研究并进行了3次局部补丁，分别因目标超出任务、字段越权、observable参与者类型不一致而回滚。没有独立批准新模型。原自主评测失败保留；这次格式协助不能算零人工介入。没有新增主题分支，也不重置3次限制继续追PASS。
+
+证据science_unseen_mechanism/recovered_final_result.json，10次累计DeepSeek，原始截断1次。没有后台任务，尚未证明目标。
