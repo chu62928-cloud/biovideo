@@ -1,0 +1,12 @@
+{
+  "audit": "Requirement-to-capability completion audit",
+  "scope_correction_counterexample": {
+    "error_type": "ValueError",
+    "message": "Scope change not allowed in state upgrade"
+  },
+  "classification": "IMPLEMENTATION_EXPRESSION_LIMITATION",
+  "impact": "Original rejected scope remains immutable through allowed local patch interface, even when independent review locates a scope contradiction. This is a generic interface limitation, not proof of missing biological evidence.",
+  "formal_candidates_rerun": false,
+  "new_paid_calls": 0,
+  "recommendation": "Future version may add task-targeted scope/simplification edits with immutable original requirements and independent scope review. Do not reset this experiment attempt limits or claim a correction has been demonstrated."
+}

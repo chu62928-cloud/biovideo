@@ -1,0 +1,49 @@
+{
+  "objective_achieved": false,
+  "stable_candidate": false,
+  "requirements": [
+    {
+      "gate": "Gate0",
+      "status": "PARTIAL",
+      "evidence_boundary": "Historical files preserved; new path generic; legacy theme-specific path disclosed. Whole repository no-hardcoding claim unsupported."
+    },
+    {
+      "gate": "Gate1",
+      "status": "PARTIAL",
+      "evidence_boundary": "Invalid array/query and title gates tested; retrieval contextual relevance remains weak in real runs."
+    },
+    {
+      "gate": "Gate2",
+      "status": "PARTIAL",
+      "evidence_boundary": "Typed states exist;97 tests including counterexamples; two candidates causally reachable but molecular semantics not proven."
+    },
+    {
+      "gate": "Gate3",
+      "status": "PARTIAL",
+      "evidence_boundary": "Actual chains reached independent review,0 approved;3attempts per theme exhausted."
+    },
+    {
+      "gate": "Gate4",
+      "status": "PARTIAL",
+      "evidence_boundary": "Actual decoded frames and trace aligned; no every-frame independent object tracking."
+    },
+    {
+      "gate": "Gate5",
+      "status": "PARTIAL",
+      "evidence_boundary": "Wan text-only dryrun; Seedance is unconfigured stub; no new paid authorization."
+    },
+    {
+      "gate": "Gate6",
+      "status": "PARTIAL",
+      "evidence_boundary": "Same generic modules executed3themes; no successful untouched unseen biological test."
+    }
+  ],
+  "new_evidence": "repair_expression_audit.json",
+  "reasons_not_to_continue_same_experiment": [
+    "Per-issue3candidate stop condition reached",
+    "User explicitly disallows endless architecture expansion to chase theme PASS",
+    "New independent task not selected/frozen; repeated development samples cannot prove new-theme transfer"
+  ],
+  "next_decision": "Freeze partial experimental result. Future change must be separately versioned, driven by demonstrated generic scope-edit limitation, followed by a fresh independent evaluation.",
+  "new_model_calls": 0
+}

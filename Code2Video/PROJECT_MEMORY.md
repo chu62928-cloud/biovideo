@@ -101,3 +101,6 @@ Immediate continuation：先读取logs/model_calls.json最后v42_21_ef4bacb6(402
 实验最终证据science_results.json；已完成有界实验，结论部分验证，不是成功证明。不要继续同一主题增加补丁或重置三次尝试。
 
 2026-11-26实验后审计发现并修复两个通用实现缺陷：schema1.1缺失state-ref字段误PASS；维持已有初态identity effect误报。新增4测试。原formal freeze结果保留，post_audit_revalidation.json对三候选重验证结果未变。没有新增模型调用或主题补丁。当前代码不同于formal freeze，需新独立评测才能支持稳定发布。
+
+## 完成性审计补充
+经最小通用反例复现，当前局部补丁接口不允许更正scope，即使独立Reviewer指出旧范围与新增事实矛盾。此为已证明的通用表达限制，不应把所有失败都归因科学来源不足。新增repair_expression_audit.json和completion_audit.json逐Gate保留部分完成与未证明项。未重跑三主题、未新增付费调用、未扩大架构。本轮3次问题返工限制已耗尽；稳定维护成功结论仍不成立。未来若修scope接口，必须新版本及独立评测，不能回改本轮正式结果。
