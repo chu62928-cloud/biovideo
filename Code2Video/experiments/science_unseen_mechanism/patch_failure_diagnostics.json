@@ -1,0 +1,103 @@
+{
+  "results": [
+    {
+      "attempt": "attempt_0",
+      "all_detectable_interface_errors": [
+        {
+          "operation_index": 0,
+          "error": "TARGET_OUTSIDE_TASK",
+          "target_id": "ENT_SR"
+        },
+        {
+          "operation_index": 6,
+          "error": "TARGET_OUTSIDE_TASK",
+          "target_id": "PROC_EXCITATION"
+        }
+      ],
+      "original_first_error": "Patch target outside repair task",
+      "classification": "MODEL_PATCH_PROTOCOL_OR_BINDING_ERROR",
+      "science_validity": "NOT_REACHED",
+      "projected_candidate_committed": false
+    },
+    {
+      "attempt": "attempt_1",
+      "all_detectable_interface_errors": [
+        {
+          "operation_index": 1,
+          "error": "FORBIDDEN_FIELDS",
+          "target_id": "REL_NEURON_TO_SARCOLEMMA",
+          "fields": [
+            "scientific_name"
+          ]
+        },
+        {
+          "operation_index": 2,
+          "error": "FORBIDDEN_FIELDS",
+          "target_id": "REL_SARCOLEMMA_TO_SR",
+          "fields": [
+            "scientific_name"
+          ]
+        },
+        {
+          "operation_index": 3,
+          "error": "FORBIDDEN_FIELDS",
+          "target_id": "REL_CA_TO_TROPONIN_TROPOMYOSIN",
+          "fields": [
+            "scientific_name"
+          ]
+        },
+        {
+          "error": "OBSERVABLE_ROLE_RELATION_MISMATCH",
+          "process_id": "PROC_CONTRACTION_CROSSBRIDGE_CYCLE",
+          "observable_id": "OBS_CONTRACTION_REQUIRES_CA_AND_ATP",
+          "relation_id": "REL_CROSSBRIDGE_ACTIN_MYOSIN",
+          "role_entities": [
+            "ENT_ACTIN_MYOSIN_SARCOMERE",
+            "ENT_ACTIN_MYOSIN_SARCOMERE"
+          ],
+          "relation_entities": [
+            "ENT_TROPONIN_TROPOMYOSIN",
+            "ENT_ACTIN_MYOSIN_SARCOMERE"
+          ]
+        }
+      ],
+      "original_first_error": "Patch touches forbidden field",
+      "classification": "MODEL_PATCH_PROTOCOL_OR_BINDING_ERROR",
+      "science_validity": "NOT_REACHED",
+      "projected_candidate_committed": false
+    },
+    {
+      "attempt": "attempt_2",
+      "all_detectable_interface_errors": [
+        {
+          "error": "OBSERVABLE_ROLE_RELATION_MISMATCH",
+          "process_id": "PROC_CONTRACTION_CROSSBRIDGE_CYCLE",
+          "observable_id": "OBS_CONTRACTION_REQUIRES_CA_AND_ATP",
+          "relation_id": "REL_CROSSBRIDGE_ACTIN_MYOSIN",
+          "role_entities": [
+            "ENT_ACTIN_MYOSIN_SARCOMERE",
+            "ENT_ACTIN_MYOSIN_SARCOMERE"
+          ],
+          "relation_entities": [
+            "ENT_TROPONIN_TROPOMYOSIN",
+            "ENT_ACTIN_MYOSIN_SARCOMERE"
+          ]
+        }
+      ],
+      "original_first_error": "Observable participant type/reference mismatch",
+      "classification": "MODEL_PATCH_PROTOCOL_OR_BINDING_ERROR",
+      "science_validity": "NOT_REACHED",
+      "projected_candidate_committed": false
+    }
+  ],
+  "new_paid_calls": 0,
+  "production_code_changed": false,
+  "note": "Offline projection used solely to list errors hidden behind first rejection. No invalid projected candidate saved or approved. Relation scientific_name is outside frozen Schema interface; rejecting it was not a biological error. Editing ENT_SR and PROC_EXCITATION also exceeded task scope; possible task-scope adequacy requires independent review, not automatic broadening.",
+  "remaining_release_blockers": [
+    "Initial builder output format recovery required developer intervention",
+    "Patch generator repeatedly violates declared target/field/role interface",
+    "Relevant scientific evidence still only partially supports new claims",
+    "No independently approved successful scientific repair",
+    "Fresh frozen evaluation must follow any future generic repair, with development contamination disclosed"
+  ]
+}

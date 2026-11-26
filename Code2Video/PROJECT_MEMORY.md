@@ -113,3 +113,6 @@ Immediate continuation：先读取logs/model_calls.json最后v42_21_ef4bacb6(402
 截断响应中candidate对象实际完整，开发者使用JSONDecoder原样提取，未编辑科学字段。该候选Schema/精确引用PASS，但独立科学和状态检查REVISE。冻结引擎随后按审核意见定向研究并进行了3次局部补丁，分别因目标超出任务、字段越权、observable参与者类型不一致而回滚。没有独立批准新模型。原自主评测失败保留；这次格式协助不能算零人工介入。没有新增主题分支，也不重置3次限制继续追PASS。
 
 证据science_unseen_mechanism/recovered_final_result.json，10次累计DeepSeek，原始截断1次。没有后台任务，尚未证明目标。
+
+## 补丁失败的离线归因
+patch_failure_diagnostics.json列出首个错误后的全部可检测接口问题：attempt0修改ENT_SR与PROC_EXCITATION超出任务；attempt1向3个关系写scientific_name（不在允许字段），并有observable角色关系端点不一致；attempt2仍有同一实体绑定不一致。未持久化绕过门禁的候选，未批准。新机制补丁失败不应全部解释为来源缺失：生成器接口遵循/一致性是直接阻塞。该诊断0新模型请求，0生产改动。
