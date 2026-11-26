@@ -1,0 +1,379 @@
+{
+  "operations": [
+    {
+      "op": "update",
+      "collection": "processes",
+      "target_id": "PROC_kinetochore_attachment_orientation",
+      "fields": {
+        "precondition_state_refs": [
+          "ST_kinetochore_formed_per_chromatid",
+          "ST_spindle_microtubules_present"
+        ],
+        "effect_state_refs": [
+          "ST_bipolar_kinetochore_attachment",
+          "ST_sister_kinetochores_face_opposite_poles"
+        ],
+        "terminates_state_refs": []
+      }
+    },
+    {
+      "op": "update",
+      "collection": "processes",
+      "target_id": "PROC_metaphase_alignment",
+      "fields": {
+        "precondition_state_refs": [
+          "ST_bipolar_kinetochore_attachment",
+          "ST_cohesin_holding_sister_chromatids"
+        ],
+        "effect_state_refs": [
+          "ST_duplicated_chromosome_aligned_at_metaphase_plate"
+        ],
+        "terminates_state_refs": []
+      }
+    },
+    {
+      "op": "update",
+      "collection": "processes",
+      "target_id": "PROC_anaphase_sister_separation",
+      "fields": {
+        "precondition_state_refs": [
+          "ST_duplicated_chromosome_aligned_at_metaphase_plate",
+          "ST_bipolar_kinetochore_attachment",
+          "ST_cohesin_holding_sister_chromatids"
+        ],
+        "effect_state_refs": [
+          "ST_sister_chromatid_connection_broken",
+          "ST_two_daughter_chromatids_distinct",
+          "ST_daughter_chromatids_moving_to_opposite_poles"
+        ],
+        "terminates_state_refs": [
+          "ST_cohesin_holding_sister_chromatids",
+          "ST_duplicated_chromosome_aligned_at_metaphase_plate"
+        ]
+      }
+    }
+  ],
+  "state_upgrade": {
+    "schema_version": 1.1,
+    "clip_start": {
+      "stage": "prometaphase (after interphase replication and prophase; kinetochores formed and spindle microtubules present)",
+      "existing_entity_refs": [
+        "ENT_duplicated_chromosome",
+        "ENT_sister_chromatid",
+        "ENT_kinetochore",
+        "ENT_mitotic_spindle_microtubule",
+        "ENT_spatial_landmark"
+      ],
+      "omitted_processes": [
+        {
+          "description": "Interphase DNA replication producing sister chromatids",
+          "reason": "Explicitly excluded from model scope; prior context only.",
+          "required_by_task": false
+        },
+        {
+          "description": "Prophase nuclear envelope breakdown and centrosome separation",
+          "reason": "Explicitly excluded from model scope; prior context only.",
+          "required_by_task": false
+        },
+        {
+          "description": "Molecular mechanism of cohesin degradation/cleavage",
+          "reason": "Explicitly excluded; only observable connection breakdown modeled.",
+          "required_by_task": false
+        }
+      ]
+    },
+    "states": [
+      {
+        "state_id": "ST_kinetochore_formed_per_chromatid",
+        "subject_ref": "ENT_kinetochore",
+        "property": "formation_status",
+        "value": "formed at centromeric region of each sister chromatid",
+        "state_kind": "INITIAL_CONDITION",
+        "scope": {
+          "entities": [
+            "ENT_kinetochore",
+            "ENT_sister_chromatid"
+          ],
+          "process": "PROC_kinetochore_attachment_orientation"
+        },
+        "producer_process_id": null,
+        "required_by_process_ids": [
+          "PROC_kinetochore_attachment_orientation"
+        ],
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "Each sister chromatid develops a protein structure called a kinetochore in the centromeric region",
+            "location": "paragraph_27"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_spindle_microtubules_present",
+        "subject_ref": "ENT_mitotic_spindle_microtubule",
+        "property": "presence",
+        "value": "present and extending from centrosomes",
+        "state_kind": "INITIAL_CONDITION",
+        "scope": {
+          "entities": [
+            "ENT_mitotic_spindle_microtubule"
+          ],
+          "process": "PROC_kinetochore_attachment_orientation"
+        },
+        "producer_process_id": null,
+        "required_by_process_ids": [
+          "PROC_kinetochore_attachment_orientation"
+        ],
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "The mitotic spindle continues to develop as more microtubules assemble and stretch across the length of the former nuclear area.",
+            "location": "paragraph_27"
+          },
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "As the spindle microtubules extend from the centrosomes, some of these microtubules come into contact with and firmly bind to the kinetochores.",
+            "location": "paragraph_27"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_bipolar_kinetochore_attachment",
+        "subject_ref": "ENT_duplicated_chromosome",
+        "property": "kinetochore_microtubule_attachment",
+        "value": "bipolar: sister chromatids attached via kinetochores to microtubules from opposite poles",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "entities": [
+            "ENT_duplicated_chromosome",
+            "ENT_sister_chromatid",
+            "ENT_kinetochore",
+            "ENT_mitotic_spindle_microtubule",
+            "ENT_spatial_landmark"
+          ],
+          "process": "PROC_kinetochore_attachment_orientation"
+        },
+        "producer_process_id": "PROC_kinetochore_attachment_orientation",
+        "required_by_process_ids": [
+          "PROC_metaphase_alignment",
+          "PROC_anaphase_sister_separation"
+        ],
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "mitotic spindle microtubules from opposite poles attach to each sister chromatid at the kinetochore",
+            "location": "paragraph_28"
+          },
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "Eventually, all the sister chromatids will be attached via their kinetochores to microtubules from opposing poles.",
+            "location": "paragraph_27"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_sister_kinetochores_face_opposite_poles",
+        "subject_ref": "ENT_sister_chromatid",
+        "property": "kinetochore_orientation",
+        "value": "kinetochores of sister chromatids face opposite poles",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "entities": [
+            "ENT_sister_chromatid",
+            "ENT_kinetochore",
+            "ENT_spatial_landmark"
+          ],
+          "process": "PROC_kinetochore_attachment_orientation"
+        },
+        "producer_process_id": "PROC_kinetochore_attachment_orientation",
+        "required_by_process_ids": [
+          "PROC_metaphase_alignment"
+        ],
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "the kinetochores of sister chromatids face the opposite poles.",
+            "location": "paragraph_27"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_cohesin_holding_sister_chromatids",
+        "subject_ref": "ENT_duplicated_chromosome",
+        "property": "sister_chromatid_attachment",
+        "value": "attached (held together by cohesin proteins at centromeric region)",
+        "state_kind": "MAINTAINED_STATE",
+        "scope": {
+          "entities": [
+            "ENT_duplicated_chromosome",
+            "ENT_sister_chromatid"
+          ],
+          "process": "PROC_metaphase_alignment"
+        },
+        "producer_process_id": null,
+        "required_by_process_ids": [
+          "PROC_metaphase_alignment",
+          "PROC_anaphase_sister_separation"
+        ],
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "The sister chromatids are still tightly attached to each other by cohesin proteins.",
+            "location": "paragraph_29"
+          },
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "identical pairs of DNA molecules—sister chromatids—that are firmly attached at the centromeric region",
+            "location": "paragraph_17"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_duplicated_chromosome_aligned_at_metaphase_plate",
+        "subject_ref": "ENT_duplicated_chromosome",
+        "property": "spatial_position",
+        "value": "aligned at metaphase plate (equatorial plane, midway between poles)",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "entities": [
+            "ENT_duplicated_chromosome",
+            "ENT_spatial_landmark"
+          ],
+          "process": "PROC_metaphase_alignment"
+        },
+        "producer_process_id": "PROC_metaphase_alignment",
+        "required_by_process_ids": [
+          "PROC_anaphase_sister_separation"
+        ],
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "all the chromosomes are aligned in a plane called the metaphase plate , or the equatorial plane, midway between the two poles of the cell.",
+            "location": "paragraph_29"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_sister_chromatid_connection_broken",
+        "subject_ref": "ENT_duplicated_chromosome",
+        "property": "sister_chromatid_connection",
+        "value": "broken down (no longer firmly attached)",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "entities": [
+            "ENT_duplicated_chromosome",
+            "ENT_sister_chromatid"
+          ],
+          "process": "PROC_anaphase_sister_separation"
+        },
+        "producer_process_id": "PROC_anaphase_sister_separation",
+        "required_by_process_ids": [
+          "PROC_anaphase_sister_separation"
+        ],
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "In anaphase, the connection between the sister chromatids breaks down, and the microtubules pull the chromosomes toward opposite poles.",
+            "location": "paragraph_28"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_two_daughter_chromatids_distinct",
+        "subject_ref": "ENT_daughter_chromatid",
+        "property": "entity_identity",
+        "value": "two distinct daughter chromatids (each now called a chromosome)",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "entities": [
+            "ENT_daughter_chromatid"
+          ],
+          "process": "PROC_anaphase_sister_separation"
+        },
+        "producer_process_id": "PROC_anaphase_sister_separation",
+        "required_by_process_ids": [
+          "PROC_anaphase_sister_separation"
+        ],
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "Each chromatid, now called a chromosome, is pulled rapidly toward the centrosome to which its microtubule is attached.",
+            "location": "paragraph_30"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_daughter_chromatids_moving_to_opposite_poles",
+        "subject_ref": "ENT_daughter_chromatid",
+        "property": "movement_direction",
+        "value": "moving toward opposite poles (each toward its attached centrosome)",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "entities": [
+            "ENT_daughter_chromatid",
+            "ENT_mitotic_spindle_microtubule",
+            "ENT_spatial_landmark"
+          ],
+          "process": "PROC_anaphase_sister_separation"
+        },
+        "producer_process_id": "PROC_anaphase_sister_separation",
+        "required_by_process_ids": [
+          "PROC_anaphase_sister_separation"
+        ],
+        "evidence_ids": [
+          "E_dcb0de9a22b0"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "Each chromatid, now called a chromosome, is pulled rapidly toward the centrosome to which its microtubule is attached.",
+            "location": "paragraph_30"
+          },
+          {
+            "evidence_id": "E_dcb0de9a22b0",
+            "quote": "the microtubules pull the chromosomes toward opposite poles.",
+            "location": "paragraph_28"
+          }
+        ]
+      }
+    ]
+  },
+  "issue_resolution": [
+    {
+      "issue_id": "STATE_MODEL_MIGRATION",
+      "changed_target_ids": [
+        "PROC_kinetochore_attachment_orientation",
+        "PROC_metaphase_alignment",
+        "PROC_anaphase_sister_separation"
+      ],
+      "reason": "Added typed precondition/effect state references and a state_upgrade block identifying supported initial conditions (kinetochores formed, spindle microtubules present) and explicitly produced/maintained/terminated states. This makes preconditions traceable and prevents silent seeding of required preconditions, while preserving all original process_semantic_ids, constraint_ids, and user-required mechanisms.",
+      "evidence_ids": [
+        "E_dcb0de9a22b0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+[
+  {
+    "repair_id": "MODEL_REPAIR_1",
+    "issue_id": "ISS_001",
+    "target_artifact": "typed_science_model",
+    "target_ids": [
+      "PROC_PRIMER_REMOVAL",
+      "ENT_RNASE_H",
+      "REL_RNASE_H_REMOVES_PRIMER"
+    ],
+    "target_fields": [
+      "participants",
+      "preconditions",
+      "effects",
+      "temporal_scope",
+      "precondition_state_refs",
+      "effect_state_refs",
+      "support",
+      "scientific_name",
+      "definition"
+    ],
+    "required_evidence_ids": [
+      "E_d8ffea5a5785"
+    ],
+    "repair_goal": "Source snippet explicitly equates 'RNase H (AKA flap endonuclease)'; no passage distinguishes or identifies the activity. Need source that either identifies the enzyme as RNase H alone, flap endonuclease (FEN1) alone, or clarifies their distinct roles in primer removal.",
+    "acceptance_predicates": [
+      "exact_evidence_support",
+      "original_requirements_preserved",
+      "typed_state_reachable",
+      "independent_science_review",
+      "target_issue_resolved"
+    ],
+    "status": "PENDING",
+    "before_model_sha256": "0b010f9f174be631781ddedb93a1e3099c02622e7c904d37745116403de614be"
+  },
+  {
+    "repair_id": "MODEL_REPAIR_2",
+    "issue_id": "ISS_002",
+    "target_artifact": "typed_science_model",
+    "target_ids": [
+      "PROC_POL_DELTA_EXTENSION",
+      "ENT_POL_DELTA",
+      "REL_POL_DELTA_SYNTHESIZES_LAGGING_DNA",
+      "REL_POL_DELTA_DISPLACES_PRIMER"
+    ],
+    "target_fields": [
+      "participants",
+      "preconditions",
+      "effects",
+      "temporal_scope",
+      "precondition_state_refs",
+      "effect_state_refs",
+      "support",
+      "scientific_name",
+      "definition"
+    ],
+    "required_evidence_ids": [
+      "E_d8ffea5a5785"
+    ],
+    "repair_goal": "Source states pol α adds short DNA 'on both strands, and then hands off to a second polymerase' but does not specify pol δ as the lagging-strand recipient. Need source explicitly stating pol α hands off to pol δ on the lagging strand, or model must flag this as schematic inference.",
+    "acceptance_predicates": [
+      "exact_evidence_support",
+      "original_requirements_preserved",
+      "typed_state_reachable",
+      "independent_science_review",
+      "target_issue_resolved"
+    ],
+    "status": "PENDING",
+    "before_model_sha256": "0b010f9f174be631781ddedb93a1e3099c02622e7c904d37745116403de614be"
+  },
+  {
+    "repair_id": "MODEL_REPAIR_3",
+    "issue_id": "ISS_003",
+    "target_artifact": "typed_science_model",
+    "target_ids": [
+      "PROC_LIGATION",
+      "ENT_GAP_SUBSTRATE",
+      "REL_LIGASE_SEALS_GAP"
+    ],
+    "target_fields": [
+      "participants",
+      "preconditions",
+      "effects",
+      "temporal_scope",
+      "precondition_state_refs",
+      "effect_state_refs",
+      "support",
+      "scientific_name",
+      "definition"
+    ],
+    "required_evidence_ids": [
+      "E_d8ffea5a5785"
+    ],
+    "repair_goal": "Source says displaced primer RNA is 'removed ... and replaced with DNA nucleotides' and ligase seals remaining gaps. Model excludes replacement synthesis but ligation precondition requires 'primers_replaced'. Need either (a) model a replacement step, or (b) redefine ligation precondition to be conditional on an unmodeled replacement state explicitly marked as external/assumed.",
+    "acceptance_predicates": [
+      "exact_evidence_support",
+      "original_requirements_preserved",
+      "typed_state_reachable",
+      "independent_science_review",
+      "target_issue_resolved"
+    ],
+    "status": "PENDING",
+    "before_model_sha256": "0b010f9f174be631781ddedb93a1e3099c02622e7c904d37745116403de614be"
+  },
+  {
+    "repair_id": "MODEL_REPAIR_4",
+    "issue_id": "ISS_004",
+    "target_artifact": "typed_science_model",
+    "target_ids": [
+      "PROC_POL_DELTA_EXTENSION",
+      "ENT_RNA_PRIMER",
+      "REL_POL_DELTA_SYNTHESIZES_LAGGING_DNA",
+      "REL_POL_DELTA_DISPLACES_PRIMER"
+    ],
+    "target_fields": [
+      "participants",
+      "preconditions",
+      "effects",
+      "temporal_scope",
+      "precondition_state_refs",
+      "effect_state_refs",
+      "support",
+      "scientific_name",
+      "definition"
+    ],
+    "required_evidence_ids": [
+      "E_d8ffea5a5785"
+    ],
+    "repair_goal": "Source describes pol δ 'displaces it [primer RNA] from the DNA template' — a strand-displacement event creating a displaced-primer state. Model lists primer as 'displaced_target' participant but does not model displaced-primer as a distinct state; the same entity also appears as removal target in PROC_PRIMER_REMOVAL without an explicit state transition linking displacement to removal-competence.",
+    "acceptance_predicates": [
+      "exact_evidence_support",
+      "original_requirements_preserved",
+      "typed_state_reachable",
+      "independent_science_review",
+      "target_issue_resolved"
+    ],
+    "status": "PENDING",
+    "before_model_sha256": "0b010f9f174be631781ddedb93a1e3099c02622e7c904d37745116403de614be"
+  },
+  {
+    "repair_id": "MODEL_REPAIR_5",
+    "issue_id": "ISS_005",
+    "target_artifact": "typed_science_model",
+    "target_ids": [
+      "PROC_LIGATION",
+      "ENT_GAP_SUBSTRATE",
+      "REL_LIGASE_SEALS_GAP"
+    ],
+    "target_fields": [
+      "participants",
+      "preconditions",
+      "effects",
+      "temporal_scope",
+      "precondition_state_refs",
+      "effect_state_refs",
+      "support",
+      "scientific_name",
+      "definition"
+    ],
+    "required_evidence_ids": [
+      "E_d8ffea5a5785"
+    ],
+    "repair_goal": "Source's 'gaps that remain' refer to nicks/breaks between Okazaki fragments after primer replacement. Model treats gap as a nucleic_acid_region entity sealed by ligase but never represents the nicked phosphodiester-backbone state or its formation. Need explicit nick state definition or acknowledgment that gap_state is a simplified placeholder.",
+    "acceptance_predicates": [
+      "exact_evidence_support",
+      "original_requirements_preserved",
+      "typed_state_reachable",
+      "independent_science_review",
+      "target_issue_resolved"
+    ],
+    "status": "PENDING",
+    "before_model_sha256": "0b010f9f174be631781ddedb93a1e3099c02622e7c904d37745116403de614be"
+  },
+  {
+    "repair_id": "MODEL_REPAIR_6",
+    "issue_id": "STATE_MODEL_MIGRATION",
+    "target_artifact": "typed_science_model",
+    "target_ids": [
+      "PROC_PRIMER_FORMATION",
+      "PROC_POL_ALPHA_EXTENSION",
+      "PROC_POL_DELTA_EXTENSION",
+      "PROC_PRIMER_REMOVAL",
+      "PROC_LIGATION",
+      "REL_PRIMASE_FORMS_PRIMER",
+      "REL_POL_ALPHA_EXTENDS_PRIMER",
+      "REL_POL_DELTA_SYNTHESIZES_LAGGING_DNA",
+      "REL_POL_DELTA_DISPLACES_PRIMER",
+      "REL_RNASE_H_REMOVES_PRIMER",
+      "REL_LIGASE_SEALS_GAP"
+    ],
+    "target_fields": [
+      "participants",
+      "preconditions",
+      "effects",
+      "temporal_scope",
+      "precondition_state_refs",
+      "effect_state_refs",
+      "support",
+      "scientific_name",
+      "definition"
+    ],
+    "required_evidence_ids": [
+      "E_d8ffea5a5785"
+    ],
+    "repair_goal": "Identify supported pre-clip conditions, explicit subject/property/value states and missing state producers without omitting user-required mechanisms. Preserve actual user teaching scope.",
+    "acceptance_predicates": [
+      "exact_evidence_support",
+      "original_requirements_preserved",
+      "typed_state_reachable",
+      "independent_science_review",
+      "target_issue_resolved"
+    ],
+    "status": "PENDING",
+    "before_model_sha256": "0b010f9f174be631781ddedb93a1e3099c02622e7c904d37745116403de614be"
+  }
+]

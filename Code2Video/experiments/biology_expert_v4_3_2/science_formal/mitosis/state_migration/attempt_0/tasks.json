@@ -1,0 +1,40 @@
+[
+  {
+    "repair_id": "MODEL_REPAIR_1",
+    "issue_id": "STATE_MODEL_MIGRATION",
+    "target_artifact": "typed_science_model",
+    "target_ids": [
+      "PROC_kinetochore_attachment_orientation",
+      "PROC_metaphase_alignment",
+      "PROC_anaphase_sister_separation",
+      "REL_kinetochore_part_of_sister_chromatid",
+      "REL_sister_chromatid_part_of_duplicated_chromosome",
+      "REL_microtubule_binds_kinetochore",
+      "REL_duplicated_chromosome_at_metaphase_plate"
+    ],
+    "target_fields": [
+      "participants",
+      "preconditions",
+      "effects",
+      "temporal_scope",
+      "precondition_state_refs",
+      "effect_state_refs",
+      "support",
+      "scientific_name",
+      "definition"
+    ],
+    "required_evidence_ids": [
+      "E_dcb0de9a22b0"
+    ],
+    "repair_goal": "Identify supported pre-clip conditions, explicit subject/property/value states and missing state producers without omitting user-required mechanisms. Preserve actual user teaching scope.",
+    "acceptance_predicates": [
+      "exact_evidence_support",
+      "original_requirements_preserved",
+      "typed_state_reachable",
+      "independent_science_review",
+      "target_issue_resolved"
+    ],
+    "status": "PENDING",
+    "before_model_sha256": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5"
+  }
+]

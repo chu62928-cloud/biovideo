@@ -1,0 +1,66 @@
+{
+  "decision": "REVISE",
+  "issues": [
+    {
+      "target_id": "REL_duplicated_chromosome_at_metaphase_plate",
+      "reason": "Source states all chromosomes align at the metaphase plate. Model instantiates this for one chromosome and marks the observable capability PARTIAL, but the relation definition asserts alignment as a property of ENT_duplicated_chromosome without preserving the universal quantification or explicitly encoding it as an instantiated instance. This risks overstating what the single-entity observable proves.",
+      "evidence_ids": [
+        "E_dcb0de9a22b0"
+      ]
+    },
+    {
+      "target_id": "PROC_anaphase_sister_separation",
+      "reason": "The process includes 'breakdown of sister-chromatid connection' and poleward movement but does not model cohesin degradation as a causal step. Source explicitly states cohesin proteins degrade during anaphase. While allowed to exclude molecular mechanism, the process effect 'connection_breakdown_observed' is stated as an observed transition without a modeled cause; the model acknowledges this in exceptions but the observable OBS_connection_breakdown_after_alignment only checks temporal order, not the causal state change required by the source. This could mislead by implying breakdown is merely sequential rather than causally linked to cohesin degradation.",
+      "evidence_ids": [
+        "E_dcb0de9a22b0"
+      ]
+    },
+    {
+      "target_id": "OBS_two_daughter_chromatids_after_separation",
+      "reason": "State transition 'separated' is asserted for ENT_duplicated_chromosome, but the entity's states dictionary says separated is 'no longer modeled on this entity; see ENT_daughter_chromatid instances after separation'. The observable uses state_key 'sister_chromatid_attachment' with to_value 'separated', which refers to a state not defined on any entity. This is a schema/ontology mismatch and makes the observable's semantics unclear.",
+      "evidence_ids": [
+        "E_dcb0de9a22b0"
+      ]
+    },
+    {
+      "target_id": "PROC_kinetochore_attachment_orientation",
+      "reason": "Precondition state ST_spindle_microtubules_present cites evidence that microtubules assemble and bind, but the initial condition asserts 'present and extending from centrosomes' as an initial condition. Source says spindle develops during prometaphase; presenting it as an initial condition is a teaching simplification but not explicitly delimited as such in the state definition. Minor, but should be noted to avoid implying pre-existing complete spindle.",
+      "evidence_ids": [
+        "E_dcb0de9a22b0"
+      ]
+    },
+    {
+      "target_id": "ENT_daughter_chromatid",
+      "reason": "Entity is defined as 'individual chromatid after separation (now called a chromosome)' with cardinality 2, but the source quote says 'Each chromatid, now called a chromosome, is pulled...' This is acceptable, but the entity type 'chromosome_structure' and semantic_id 'ENT_daughter_chromatid' may conflict with standard terminology where after separation each is a chromosome (not chromatid). The model acknowledges the renaming in the scientific_name but the semantic_id retains 'chromatid'. This is a labeling inconsistency that could confuse learners about the identity change.",
+      "evidence_ids": [
+        "E_dcb0de9a22b0"
+      ]
+    }
+  ],
+  "observable_reviews": [
+    {
+      "constraint_id": "OBS_bipolar_attachment_during_prometaphase",
+      "decision": "PASS",
+      "reason": "Source directly states microtubules from opposite poles attach to each sister chromatid at the kinetochore. Observable checks relation holds during prometaphase. Scope and persistence are source-supported."
+    },
+    {
+      "constraint_id": "OBS_alignment_during_metaphase",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "reason": "Source says 'all the chromosomes are aligned' at metaphase plate. Model instantiates for one chromosome and marks PARTIAL, but the observable relation does not explicitly encode that this is an instantiation of a universal statement. Cannot confirm the single-entity observable preserves the source's universal scope without explicit delimitation in the relation/observable semantics."
+    },
+    {
+      "constraint_id": "OBS_connection_breakdown_after_alignment",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "reason": "Source states connection breaks down in anaphase and cohesin degrades. Observable only checks that separation process occurs after alignment process. It does not check the causal state change (breakdown of connection) nor the role of cohesin degradation. The temporal order is source-supported, but the observable's semantics are too narrow to prove the connection breakdown itself."
+    },
+    {
+      "constraint_id": "OBS_two_daughter_chromatids_after_separation",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "reason": "Source states each chromatid, now called a chromosome, is pulled toward centrosome. Observable uses undefined state_key 'sister_chromatid_attachment' with value 'separated'. The state transition is not tied to any defined entity state. Cannot verify semantics."
+    }
+  ],
+  "scope_review": "The model scope is appropriately narrow: one duplicated chromosome, prometaphase to anaphase, excluding replication, prophase, telophase, cytokinesis, and molecular mechanisms. Simplifications are mostly declared. However, the instantiation of the universal alignment statement and the undefined state transition in OBS_two_daughter_chromatids_after_separation introduce ambiguity. The model does not claim causal sufficiency of microtubule pulling for connection breakdown, which is good. Organism context is animal cell example, with plant/fungi differences noted but not modeled. Overall, the model is largely source-faithful but needs revision to clarify the scope of the alignment observable and to define the state used in the separation observable.",
+  "model_hash": "bcb4271396ce2bcdef95c677a78975ce006697bb34ac0d89d2872983756ed339",
+  "separate_request": true,
+  "independent_provider": false
+}

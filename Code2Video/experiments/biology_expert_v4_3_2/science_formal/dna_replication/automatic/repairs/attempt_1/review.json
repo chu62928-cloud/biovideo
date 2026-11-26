@@ -1,0 +1,76 @@
+{
+  "decision": "REVISE",
+  "issues": [
+    {
+      "target_id": "REL_POL_DELTA_DISPLACES_PRIMER",
+      "reason": "Source says pol δ displaces primer RNA when it runs into it on the lagging strand, but the model inserts this displacement as a required effect of pol δ extension in the local lagging-strand context. The source does not establish that pol δ displaces the primer on the same Okazaki fragment it is extending; classical maturation involves pol δ extending the upstream fragment to displace the downstream primer. The relation as stated conflates extension with downstream primer displacement.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    },
+    {
+      "target_id": "ST_REPLACEMENT_GAP_EXTERNAL",
+      "reason": "The model marks RNA primer replacement with DNA as an external precondition rather than a modeled process, yet uses it as the required precondition for ligation. The source explicitly states primers are replaced with DNA nucleotides and Okazaki fragments are joined after replacement. By externalizing replacement, the model can show ligation without representing the required DNA synthesis that fills the gap, risking a biologically false jump from primer removal to ligation.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    },
+    {
+      "target_id": "ENT_RNASE_H",
+      "reason": "Source says RNase H is 'AKA flap endonuclease', but model lists RNase H as a single enzyme entity while unresolved_questions note the ambiguity. The entity support quotes the parenthetical equivalence, but the model does not resolve whether one or both activities are required. The observable OBS_PRIMER_REMOVED attributes removal to RNase H alone, which may overstate source support if flap endonuclease is a distinct activity.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    },
+    {
+      "target_id": "PROC_POL_DELTA_EXTENSION",
+      "reason": "Precondition 'pol_alpha_handoff_complete' is supported by source saying pol α hands off to a second polymerase, but the source does not specify that the second polymerase on the lagging strand is pol δ in direct hand-off from pol α at the same primer. The model asserts sequential hand-off from pol α to pol δ as a precondition, which is a mechanistic inference not directly entailed by the source.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    },
+    {
+      "target_id": "OBS_ALPHA_EXTENDS_PRIMER",
+      "reason": "The source says pol α adds a short DNA fragment to the RNA primer on both strands and then hands off. The observable is marked PARTIAL, but the model's state ST_SHORT_DNA_ADDED subject_ref is ENT_RNA_PRIMER with property extension. This conflates the primer with the extended product; the primer is RNA, and the added DNA is a separate product. The observable should distinguish primer from newly synthesized DNA.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    }
+  ],
+  "observable_reviews": [
+    {
+      "constraint_id": "OBS_PRIMER_FORMED",
+      "decision": "PASS",
+      "reason": "Source states primers are formed by primase and using the primer DNA pol can start synthesis. Exact scope and order are preserved."
+    },
+    {
+      "constraint_id": "OBS_ALPHA_EXTENDS_PRIMER",
+      "decision": "REVISE",
+      "reason": "Source supports pol α adding short DNA to RNA primer, but model observable conflates primer and extended product; should represent added DNA as distinct product."
+    },
+    {
+      "constraint_id": "OBS_DELTA_SYNTHESIZES_LAGGING_DNA",
+      "decision": "PASS",
+      "reason": "Source states lagging strand is synthesized by pol δ. Scope is local lagging-strand synthesis."
+    },
+    {
+      "constraint_id": "OBS_DELTA_DISPLACES_PRIMER",
+      "decision": "REVISE",
+      "reason": "Source supports pol δ running into primer RNA and displacing it, but model places displacement as effect of extending the same primer rather than downstream primer displacement; causal ordering is ambiguous."
+    },
+    {
+      "constraint_id": "OBS_PRIMER_REMOVED",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "reason": "Source states displaced primer RNA removed by RNase H (AKA flap endonuclease), but ambiguity between RNase H and flap endonuclease means exact actor identity is not resolved; model should not assert single-actor removal without qualification."
+    },
+    {
+      "constraint_id": "OBS_GAPS_SEALED",
+      "decision": "PASS",
+      "reason": "Source states gaps remaining are sealed by DNA ligase forming phosphodiester bond. Scope and order after replacement are supported, though replacement process is externalized."
+    }
+  ],
+  "scope_review": "The proposed model covers local eukaryotic lagging-strand priming, pol α extension, pol δ synthesis, primer displacement/removal, and ligation, which matches the requested local priming, extension, and one maturation event. Origins, helicase, topoisomerase, leading-strand pol ε, telomerase, nucleosome handling, and proofreading are appropriately excluded. However, the model externalizes RNA primer replacement with DNA as a precondition rather than a modeled process, creating a gap between primer removal and ligation that the source explicitly bridges with replacement. The model also asserts a direct pol α to pol δ hand-off and same-fragment primer displacement that are not directly entailed. These issues require revision before PASS.",
+  "model_hash": "c7d48808cab1ca6e8e98bde299229de8fdbbf725e61d6c7d6eee4fe261e51b2d",
+  "separate_request": true,
+  "independent_provider": false
+}

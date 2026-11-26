@@ -2466,35 +2466,10 @@
     {
       "topic": "vesicle_transport",
       "sample_class": "formal",
-      "gap_hash": "de63c5f24aede539ebb86c74b8bad265b0f3f92effc77e57f10065200a57cfa1",
       "stop_reason": "NO_EFFECTIVE_INFORMATION_GAIN",
       "queries_attempted": [
         "kinesin dynein motor protein dependent vesicle transport along microtubules mechanism directionality organism specificity review",
         "motor protein dependent vesicle transport along microtubules kinesin dynein ATP mechanism cell biology grades 10-12"
-      ],
-      "queries_rejected": [],
-      "sources_retrieved": [
-        {
-          "evidence_id": "E_3717dae1f63f",
-          "url": "https://europepmc.org/article/MED/42804373",
-          "title": "Tau hyperphosphorylation impairs cooperative binding to microtubules and perturbs organelle trafficking in neurons.",
-          "evidence_level": "ABSTRACT",
-          "content_sha256": "b2a55240e11ec07f3b7bc494501cf75f4d3279aaa06dd49d36de3acc97920359"
-        },
-        {
-          "evidence_id": "E_3eaea6ae41d5",
-          "url": "https://europepmc.org/article/MED/41373689",
-          "title": "The Fluidic Connectome in Brain Disease: Integrating Aquaporin-4 Polarity with Multisystem Pathways in Neurodegeneration.",
-          "evidence_level": "ABSTRACT",
-          "content_sha256": "832426ef467be6c8e3a257d349597384c406884b0ee6b34cb5bb405147e84db4"
-        },
-        {
-          "evidence_id": "E_a7a76831c1a0",
-          "url": "https://europepmc.org/article/MED/37345829",
-          "title": "Differential modification of the C-terminal tails of different α-tubulins and their importance for microtubule function in vivo.",
-          "evidence_level": "ABSTRACT",
-          "content_sha256": "dcfe12abc6a1ce73bc6becec1bf91732751218928c59f1310c2e966f3b870a4a"
-        }
       ],
       "claim_evidence_matches": [
         {
@@ -2608,6 +2583,74 @@
         }
       ],
       "complete_evidence_path": "science_formal/vesicle_transport/automatic/research_cache/de63c5f24aede539ebb86c74b8bad265b0f3f92effc77e57f10065200a57cfa1.json",
+      "sources_retrieved": [
+        {
+          "evidence_id": "E_3717dae1f63f",
+          "url": "https://europepmc.org/article/MED/42804373",
+          "title": "Tau hyperphosphorylation impairs cooperative binding to microtubules and perturbs organelle trafficking in neurons.",
+          "author_or_institution": "Beaudet D, Berger CL, Hendricks AG.",
+          "source_type": "bibliographic_abstract",
+          "evidence_level": "ABSTRACT",
+          "biological_scope": "Requires claim-specific scope review",
+          "status": "RETRIEVED_ABSTRACT",
+          "content_sha256": "b2a55240e11ec07f3b7bc494501cf75f4d3279aaa06dd49d36de3acc97920359",
+          "passages": [
+            {
+              "location": "abstract",
+              "text": "Tau, a neuronal microtubule-associated protein (MAP), organizes the axonal cytoskeleton, and regulates intracellular transport. Tau hyperphosphorylation is linked to neurodegeneration in tauopathies, including Alzheimer's disease. Tau binds microtubules cooperatively to form cohesive envelopes, which are thought to control access to the microtubule lattice and regulate the activity of motor proteins and other MAPs. However, how disease-related perturbations affect tau dynamics and its function as a selective barrier to intracellular transport remains unclear. Using tau phospho-variants in vitro and in live neurons, we show that tau hyperphosphorylation disrupts cooperative microtubule binding and dysregulates lysosome transport. Hyperphosphorylated tau does not form envelopes, distributes more uniformly along the axon, and dissociates faster from microtubules. Tau weakly inhibits KIF5C motility, but strongly inhibits KIF1A. Hyperphosphorylation reduces KIF5C inhibition but increases KIF1A inhibition by decreasing processivity and accelerating detachment. Consistent with these effects, hyperphosphorylated tau alters lysosome transport in neurons. While phospho-resistant tau inhibits processive lysosome motility, hyperphosphorylated tau weakens tau-mediated regulation of lysosome transport, mimicking tau knockout neurons that exhibit enhanced processivity. Altogether, these findings show that hyperphosphorylation disrupts tau envelopes and impairs lysosome trafficking, likely contributing to early defects in degradative pathways that drive neurodegeneration.",
+              "evidence_level": "ABSTRACT"
+            }
+          ],
+          "figures": [],
+          "limitations": [
+            "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+          ]
+        },
+        {
+          "evidence_id": "E_3eaea6ae41d5",
+          "url": "https://europepmc.org/article/MED/41373689",
+          "title": "The Fluidic Connectome in Brain Disease: Integrating Aquaporin-4 Polarity with Multisystem Pathways in Neurodegeneration.",
+          "author_or_institution": "Brehar FM, Costea D, Tataru CP, Rădoi MP, Ciurea AV, Munteanu O, Tulin A.",
+          "source_type": "bibliographic_abstract",
+          "evidence_level": "ABSTRACT",
+          "biological_scope": "Requires claim-specific scope review",
+          "status": "RETRIEVED_ABSTRACT",
+          "content_sha256": "832426ef467be6c8e3a257d349597384c406884b0ee6b34cb5bb405147e84db4",
+          "passages": [
+            {
+              "location": "abstract",
+              "text": "The way in which Aquaporin-4 (AQP4) is localized on the astrocytes' surface-i.e., with AQP4 channels predominantly located on the endfeet of astrocytes near the blood vessels-represents an important structural element for maintaining brain fluid homeostasis. In addition to this structural function, AQP4 polarity also facilitates glymphatic transport, the maintenance of the blood-brain barrier (BBB) functions, ion buffering, and neurotransmitter removal, and helps regulate neurovascular communications. The growing body of literature suggests that the loss of AQP4 polarity-a loss in the organization of AQP4 channels to the perivascular membrane-is associated with increased vascular, inflammatory, and metabolic disturbances in the context of many neurological diseases. As a result, this review attempts to synthesize both experimental and clinical studies to highlight that AQP4 depolarization often occurs in conjunction with early signs of neurodegeneration and neuroinflammation; however, we are aware that the loss of AQP4 polarity is only one factor in a complex pathophysiological environment. This review examines the molecular structure responsible for maintaining the polarity of AQP4-such as dystrophin-syntrophin complexes, orthogonal particle arrays, lipid microdomains, trafficking pathways, and transcriptional regulators-and describes how the vulnerability of these systems to various types of vascular stress, inflammatory signals, energy deficits, and mechanical injury can lead to a loss of AQP4 polarity. Furthermore, we will explore how a loss of AQP4 polarity can lead to the disruption of perivascular fluid movement, changes in blood-brain barrier morphology, enhanced neuroimmune activity, changes in ionic and metabolic balance, and disruptions in the global neural network synchronization. Importantly, we recognize that each of these disruptions will likely occur in concert with other disease-specific mechanisms. Alterations in AQP4 polarity have been observed in a variety of neurological disorders including Alzheimer's disease, Parkinson's disease, multiple sclerosis, traumatic brain injury, and glioma; however, we also observe that the same alterations in fluid regulation occur across all of these different diseases, but that no single upstream event accounts for the alteration in polarity. Ultimately, we will outline emerging therapeutic avenues to restore perivascular fluid transport, and will include molecular-based therapeutic agents designed to modify the anchoring of AQP4, methods designed to modulate the state of astrocytes, biomaterials-based drug delivery systems, and therapeutic methods that leverage dynamic modulation of the neurovascular interface. Future advances in multi-omic profiling, spatial proteomics, glymphatic imaging, and artificial intelligence will allow for earlier identification of AQP4 polarity disturbances and potentially allow for the development of more personalized treatment plans. Ultimately, by linking these concepts together, this review aims to frame AQP4 polarity as a modifiable aspect of the \"fluidic connectome\", and highlight its importance in maintaining overall brain health across disease states.",
+              "evidence_level": "ABSTRACT"
+            }
+          ],
+          "figures": [],
+          "limitations": [
+            "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+          ]
+        },
+        {
+          "evidence_id": "E_a7a76831c1a0",
+          "url": "https://europepmc.org/article/MED/37345829",
+          "title": "Differential modification of the C-terminal tails of different α-tubulins and their importance for microtubule function in vivo.",
+          "author_or_institution": "Bao M, Dörig RE, Vazquez-Pianzola PM, Beuchle D, Suter B.",
+          "source_type": "bibliographic_abstract",
+          "evidence_level": "ABSTRACT",
+          "biological_scope": "Requires claim-specific scope review",
+          "status": "RETRIEVED_ABSTRACT",
+          "content_sha256": "dcfe12abc6a1ce73bc6becec1bf91732751218928c59f1310c2e966f3b870a4a",
+          "passages": [
+            {
+              "location": "abstract",
+              "text": "Microtubules (MTs) are built from α-/β-tubulin dimers and used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell. Tubulins are subjected to several post-translational modifications (PTMs). Glutamylation is one of them, and it is responsible for adding one or more glutamic acid residues as branched peptide chains to the C-terminal tails of both α- and β-tubulin. However, very little is known about the specific modifications found on the different tubulin isotypes in vivo and the role of these PTMs in MT transport and other cellular processes in vivo. In this study, we found that in Drosophila ovaries, glutamylation of α-tubulin isotypes occurred clearly on the C-terminal ends of αTub84B and αTub84D (αTub84B/D). In contrast, the ovarian α-tubulin, αTub67C, is not glutamylated. The C-terminal ends of αTub84B/D are glutamylated at several glutamyl sidechains in various combinations. Drosophila TTLL5 is required for the mono- and poly-glutamylation of ovarian αTub84B/D and with this for the proper localization of glutamylated microtubules. Similarly, the normal distribution of kinesin-1 in the germline relies on TTLL5 . Next, two kinesin-1-dependent processes, the precise localization of Staufen and the fast, bidirectional ooplasmic streaming, depend on TTLL5 , too, suggesting a causative pathway. In the nervous system, a mutation of TTLL5 that inactivates its enzymatic activity decreases the pausing of anterograde axonal transport of mitochondria. Our results demonstrate in vivo roles of TTLL5 in differential glutamylation of α-tubulins and point to the in vivo importance of α-tubulin glutamylation for cellular functions involving microtubule transport.",
+              "evidence_level": "ABSTRACT"
+            }
+          ],
+          "figures": [],
+          "limitations": [
+            "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+          ]
+        }
+      ],
       "attempts": [
         {
           "plan": {
@@ -4723,6 +4766,1954 @@
                 "biological_scope": "State modeling of intracellular transport; initial conditions; motor engagement; vesicle position along microtubule",
                 "support": [],
                 "reason": "No provided source excerpt addresses state modeling, initial conditions requiring vesicles, microtubules, motor proteins, and ATP, tracking of vesicle position, or motor engagement as a state producer. The abstracts describe biological mechanisms but do not contain the formal state-model claims requested."
+              }
+            ],
+            "decision": "INSUFFICIENT_EVIDENCE"
+          },
+          "resolved_gap_ids": []
+        }
+      ]
+    },
+    {
+      "topic": "dna_replication",
+      "sample_class": "formal",
+      "stop_reason": "NO_EFFECTIVE_INFORMATION_GAIN",
+      "queries_attempted": [
+        "eukaryotic lagging strand DNA replication Okazaki fragment priming extension RNase H FEN1 polymerase delta primer removal ligation mechanism review",
+        "eukaryotic DNA replication Okazaki fragment maturation RNase H FEN1 pol alpha pol delta primer removal DNA replacement ligation nick sealing mechanism review"
+      ],
+      "claim_evidence_matches": [
+        {
+          "claim_id": "ISS_001",
+          "claim_text": "Clarification that RNase H (which degrades RNA in RNA-DNA hybrids) and flap endonuclease 1 (FEN1, which cleaves displaced 5' RNA flaps) are distinct activities/enzymes, or alternatively that the source conflates them; the model entity 'RNase H' must not be presented as a single definitive enzyme if the source equates it with flap endonuclease.",
+          "entailment_status": "INSUFFICIENT_EVIDENCE",
+          "biological_scope": "Eukaryotic nuclear DNA replication; lagging-strand RNA primer removal; Saccharomyces cerevisiae and/or mammalian (human) enzymes; in vitro and in vivo mechanistic studies.",
+          "support": [],
+          "reason": "None of the provided sources contain passages discussing RNase H, FEN1, or their roles in RNA primer removal. Source E_c341856dc478 discusses ribonucleotide incorporation and removal via ribonucleotide excision repair and topoisomerase I, not primer removal. Sources E_713fa1a1e2bd and E_afc7ced3996a are about genetic instability and mutagenesis, respectively, with no mention of RNase H or FEN1. Source E_b73e1f0d3573 is unrelated (thyroid cancer). Thus, no evidence exists to support or contradict the required claim."
+        },
+        {
+          "claim_id": "ISS_002",
+          "claim_text": "Either direct evidentiary support that pol α hands off to pol δ on the lagging strand, or confirmation that the recipient polymerase identity is a schematic inference from the source; the model must flag hand-off recipient identity as inferred if not directly stated.",
+          "entailment_status": "INSUFFICIENT_EVIDENCE",
+          "biological_scope": "Eukaryotic nuclear DNA replication; lagging-strand synthesis; DNA polymerase alpha (primase-associated) and DNA polymerase delta; Saccharomyces cerevisiae and mammalian systems.",
+          "support": [],
+          "reason": "No source passage explicitly states a hand-off from pol α to pol δ on the lagging strand. Source E_afc7ced3996a mentions that replication involves Pols α, δ and ε but does not describe a hand-off or specify lagging-strand recipient. Other sources do not address polymerase switching. Therefore, the evidence is insufficient to support or contradict the claim."
+        },
+        {
+          "claim_id": "ISS_003",
+          "claim_text": "Identification that primer removal is followed by replacement with DNA nucleotides (gap-filling synthesis) prior to ligase sealing, and characterization of this replacement step as necessary for ligation-competent substrate; the model must either represent this step or explicitly mark it as an unmodeled assumed external state.",
+          "entailment_status": "INSUFFICIENT_EVIDENCE",
+          "biological_scope": "Eukaryotic nuclear DNA replication; lagging-strand Okazaki fragment maturation; primer removal, gap-filling DNA synthesis, and ligation by DNA ligase I.",
+          "support": [],
+          "reason": "No provided source passage describes a DNA replacement synthesis step after primer removal and before ligation. Source E_c341856dc478 discusses ribonucleotide removal but not gap-filling synthesis or ligation. Other sources are unrelated to Okazaki fragment maturation. Thus, no evidence supports or contradicts the claim."
+        },
+        {
+          "claim_id": "ISS_004",
+          "claim_text": "Description of strand-displacement by pol δ generating a displaced 5' RNA flap, and characterization of the displaced-primer state as the substrate for subsequent flap endonuclease cleavage; the model must represent or explicitly hand off this displaced state.",
+          "entailment_status": "INSUFFICIENT_EVIDENCE",
+          "biological_scope": "Eukaryotic nuclear DNA replication; lagging-strand Okazaki fragment maturation; DNA polymerase delta strand displacement; displaced RNA primer/flap intermediate; FEN1 substrate.",
+          "support": [],
+          "reason": "No source passage mentions DNA polymerase delta strand displacement, displaced RNA flaps, or FEN1 cleavage. Source E_afc7ced3996a mentions Pol δ but not strand displacement. Therefore, the evidence is insufficient."
+        },
+        {
+          "claim_id": "ISS_005",
+          "claim_text": "Definition of the ligase substrate as a nick (missing phosphodiester bond between adjacent DNA fragments) rather than a gap with missing nucleotides, and clarification of how this nicked state arises after primer replacement; the model must define nick state or explicitly mark gap_state as a simplified placeholder.",
+          "entailment_status": "INSUFFICIENT_EVIDENCE",
+          "biological_scope": "Eukaryotic nuclear DNA replication; lagging-strand Okazaki fragment maturation; DNA ligase I substrate; nicked phosphodiester backbone intermediate.",
+          "support": [],
+          "reason": "No provided source passage describes the molecular nature of the ligase substrate (nick vs. gap) or the nicked state after primer replacement. Source E_c341856dc478 discusses ribonucleotide excision repair but not ligase substrate. Thus, no evidence supports or contradicts the claim."
+        },
+        {
+          "claim_id": "STATE_MODEL_MIGRATION",
+          "claim_text": "Identification of explicit initial states (substrate and template conditions), state properties and values for each of the five processes, and missing state producers—while preserving the user-required teaching scope of local priming, extension, and one maturation event.",
+          "entailment_status": "INSUFFICIENT_EVIDENCE",
+          "biological_scope": "Eukaryotic nuclear DNA replication; local primed origin region; processes: RNA primer formation, pol α extension, pol δ extension, primer removal, ligation; grades 10-12 teaching scope.",
+          "support": [],
+          "reason": "None of the provided sources contain passages detailing initial conditions, state properties, or state producers for the five listed processes. Source E_afc7ced3996a mentions general replication components but does not provide the required state model information. Therefore, the evidence is insufficient."
+        }
+      ],
+      "complete_evidence_path": "science_formal/dna_replication/automatic/research_cache/65e6c48aa7447716edd59507732525b2b8693f331dac136d192d0fb3355aaff7.json",
+      "sources_retrieved": [
+        {
+          "evidence_id": "E_c341856dc478",
+          "url": "https://europepmc.org/article/MED/27093943",
+          "title": "Processing ribonucleotides incorporated during eukaryotic DNA replication.",
+          "author_or_institution": "Williams JS, Lujan SA, Kunkel TA.",
+          "source_type": "bibliographic_abstract",
+          "evidence_level": "ABSTRACT",
+          "biological_scope": "Requires claim-specific scope review",
+          "status": "RETRIEVED_ABSTRACT",
+          "content_sha256": "e6916b5e6e2164867180ceaaf90bdb31cff4fa6f0a8e629a8554ca9f39bb9289",
+          "passages": [
+            {
+              "location": "abstract",
+              "text": "The information encoded in DNA is influenced by the presence of non-canonical nucleotides, the most frequent of which are ribonucleotides. In this Review, we discuss recent discoveries about ribonucleotide incorporation into DNA during replication by the three major eukaryotic replicases, DNA polymerases α, δ and ε. The presence of ribonucleotides in DNA causes short deletion mutations and may result in the generation of single- and double-strand DNA breaks, leading to genome instability. We describe how these ribonucleotides are removed from DNA through ribonucleotide excision repair and by topoisomerase I. We discuss the biological consequences and the physiological roles of ribonucleotides in DNA, and consider how deficiencies in their removal from DNA may be important in the aetiology of disease.",
+              "evidence_level": "ABSTRACT"
+            }
+          ],
+          "figures": [],
+          "limitations": [
+            "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+          ]
+        },
+        {
+          "evidence_id": "E_713fa1a1e2bd",
+          "url": "https://europepmc.org/article/MED/26109598",
+          "title": "Genetic instability in budding and fission yeast-sources and mechanisms.",
+          "author_or_institution": "Skoneczna A, Kaniak A, Skoneczny M.",
+          "source_type": "bibliographic_abstract",
+          "evidence_level": "ABSTRACT",
+          "biological_scope": "Requires claim-specific scope review",
+          "status": "RETRIEVED_ABSTRACT",
+          "content_sha256": "767b5079315798978a55ea94607a9eb81955da7fb0532cbf4bd65f58199e960c",
+          "passages": [
+            {
+              "location": "abstract",
+              "text": "Cells are constantly confronted with endogenous and exogenous factors that affect their genomes. Eons of evolution have allowed the cellular mechanisms responsible for preserving the genome to adjust for achieving contradictory objectives: to maintain the genome unchanged and to acquire mutations that allow adaptation to environmental changes. One evolutionary mechanism that has been refined for survival is genetic variation. In this review, we describe the mechanisms responsible for two biological processes: genome maintenance and mutation tolerance involved in generations of genetic variations in mitotic cells of both Saccharomyces cerevisiae and Schizosaccharomyces pombe. These processes encompass mechanisms that ensure the fidelity of replication, DNA lesion sensing and DNA damage response pathways, as well as mechanisms that ensure precision in chromosome segregation during cell division. We discuss various factors that may influence genome stability, such as cellular ploidy, the phase of the cell cycle, transcriptional activity of a particular region of DNA, the proficiency of DNA quality control systems, the metabolic stage of the cell and its respiratory potential, and finally potential exposure to endogenous or environmental stress.",
+              "evidence_level": "ABSTRACT"
+            }
+          ],
+          "figures": [],
+          "limitations": [
+            "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+          ]
+        },
+        {
+          "evidence_id": "E_afc7ced3996a",
+          "url": "https://europepmc.org/article/MED/23055184",
+          "title": "Modulation of mutagenesis in eukaryotes by DNA replication fork dynamics and quality of nucleotide pools.",
+          "author_or_institution": "Waisertreiger IS, Liston VG, Menezes MR, Kim HM, Lobachev KS, Stepchenkova EI, Tahirov TH, Rogozin IB, Pavlov YI.",
+          "source_type": "bibliographic_abstract",
+          "evidence_level": "ABSTRACT",
+          "biological_scope": "Requires claim-specific scope review",
+          "status": "RETRIEVED_ABSTRACT",
+          "content_sha256": "344f74f6c7a561089fcda05ed544acfb5d3a6e80d3f4fddf8f8cce682f1f0449",
+          "passages": [
+            {
+              "location": "abstract",
+              "text": "The rate of mutations in eukaryotes depends on a plethora of factors and is not immediately derived from the fidelity of DNA polymerases (Pols). Replication of chromosomes containing the anti-parallel strands of duplex DNA occurs through the copying of leading and lagging strand templates by a trio of Pols α, δ and ϵ, with the assistance of Pol ζ and Y-family Pols at difficult DNA template structures or sites of DNA damage. The parameters of the synthesis at a given location are dictated by the quality and quantity of nucleotides in the pools, replication fork architecture, transcription status, regulation of Pol switches, and structure of chromatin. The result of these transactions is a subject of survey and editing by DNA repair.",
+              "evidence_level": "ABSTRACT"
+            }
+          ],
+          "figures": [],
+          "limitations": [
+            "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+          ]
+        },
+        {
+          "evidence_id": "E_b73e1f0d3573",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4765135/",
+          "title": "A scoring system is an effective tool for predicting central lymph node metastasis in papillary thyroid microcarcinoma: a case-control study - PMC",
+          "author_or_institution": "www.ncbi.nlm.nih.gov",
+          "source_type": "retrieved_scientific_webpage",
+          "biological_scope": "Requires independent scope verification against quoted passages",
+          "accessed_utc": "2026-11-26T06:29:37Z",
+          "content_sha256": "b3a83e959b3a45e70a0868cc12137aaae024e2730b635bea7d6c175a623d6761",
+          "saved_text": "/autodl-tmp/code2biovideo/biovideo-v4.3.2/Code2Video/experiments/biology_expert_v4_3_2/science_formal/dna_replication/automatic/retrieval/dna_replication/E_b73e1f0d3573.txt",
+          "passages": [
+            {
+              "location": "paragraph_0",
+              "text": "Official websites use .gov A .gov website belongs to an official\n                            government organization in the United States."
+            },
+            {
+              "location": "paragraph_1",
+              "text": "Secure .gov websites use HTTPS A lock ( Lock Locked padlock icon ) or https:// means you've safely\n                                connected to the .gov website. Share sensitive\n                                information only on official, secure websites."
+            },
+            {
+              "location": "paragraph_3",
+              "text": "Received 2015 Aug 21; Accepted 2016 Feb 17; Collection date 2016."
+            },
+            {
+              "location": "paragraph_4",
+              "text": "Open Access This article is distributed under the terms of the Creative Commons Attribution 4.0 International License ( http://creativecommons.org/licenses/by/4.0/ ), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The Creative Commons Public Domain Dedication waiver ( http://creativecommons.org/publicdomain/zero/1.0/ ) applies to the data made available in this article, unless otherwise stated."
+            },
+            {
+              "location": "paragraph_5",
+              "text": "The purpose of this study was to evaluate the clinicopathologic and ultrasonographic (US) characteristics and establish an effective scoring system for predicting central lymph node metastasis (CLNM) in papillary thyroid microcarcinoma (PTMC)."
+            },
+            {
+              "location": "paragraph_6",
+              "text": "A total of 498 patients with PTMC who underwent total thyroidectomy or lobectomy with therapeutic central lymph node dissection (CLND) were enrolled. Univariate and multivariate analyses were performed to find the independent predictors for CLNM based on clinicopathological and US characteristics. Using the standardized regression coefficient, a 10-point score system was constructed in line with these independent predictors. Then, the scoring system was evaluated for the diagnostic value in predicting CLNM."
+            },
+            {
+              "location": "paragraph_7",
+              "text": "Tumor location (the lower polo), tumor size (>5 mm), extrathyroidal extension, margin (no well-defined), display of enlarged lymph node, and contact of >25 % with the adjacent capsule were independent predictors for CLNM. Verifying the scoring system, a cutoff value of 5 points was found to be the best prediction for CLNM, the sensitivity and specificity were 64.7 and 80.5 %, respectively, and the positive and negative predictive values were 77.3 and 69.0 %, respectively."
+            },
+            {
+              "location": "paragraph_8",
+              "text": "The points ≤ 5 could be considered as a low risk for CLNM, and the points > 5 could be identified as a high risk for CLNM. More advanced diagnostic approaches and prophylactic CLND are needed for patients with the points > 5."
+            },
+            {
+              "location": "paragraph_9",
+              "text": "Keywords: Thyroid, Papillary thyroid microcarcinoma, Central lymph node, Central lymph node dissection, Predictive factor, Scoring system"
+            },
+            {
+              "location": "paragraph_10",
+              "text": "Papillary thyroid microcarcinoma (PTMC) is defined as a papillary thyroid carcinoma measuring 1.0 cm or less in maximal diameter [ 1 ]. In the past, most patients with PTMC were diagnosed from specimens of thyroid removed for benign diseases, such as Graves’ disease, follicular adenoma, and multinodular goiter. In recent years, due to the use of ultrasonography (US) and US-guided fine-needle aspiration cytology (FNAC), the number of patients with PTMC has been increasing. Although PTMC is usually associated with a favorable prognosis, regional lymph node metastasis (LNM), particularly in the central cervical compartment, is not uncommon [ 2 ]. The central lymph nodes are considered as the first echelon of lymphatic metastasis and are the level most frequently involved in papillary thyroid carcinoma (PTC) [ 3 ]. Recent studies demonstrated that the presence of nodal involvement was commonly associated with local recurrence and cancer-specific mortality [ 4 , 5 ]. Therefore, it is crucial to detect the metastatic lymph nodes preoperatively for PTMC, especially the central lymph nodes."
+            },
+            {
+              "location": "paragraph_11",
+              "text": "Nevertheless, the central lymph node metastasis (CLNM) is frequently diagnosed with microscopic LNM by pathology (metastatic deposits within a lymph node of less than 2 mm in maximal diameter) which is not easily detected preoperatively [ 6 , 7 ]. In clinical node-negative (cN0) PTMC, the presence of microscopic LNM is frequently detected in surgical specimens, and the prevalence of subclinical CLNM ranges from 30 % to approximately 65 % [ 2 , 8 ]. Therefore, it is generally agreed that prophylactic central lymph node dissection (pCLND) should be performed to remove microscopic LNM because this treatment reduced local recurrence and cancer-specific mortality. However, pCLND remains a controversial subject. Zetoune et al. [ 9 ] showed that pCLND did not greatly reduce local recurrence in thyroid cancer. Carling et al. [ 10 ] demonstrated that the pCLND would lead to higher rates of hypoparathyroidism and recurrent laryngeal nerve injury. Moreover, a major argument against pCLND was a possibly increased risk of operative complications and medical cost which added the burden of patients. A prospective randomized controlled single-institution study demonstrated that cN0 patients with PTC treated with pCLND showed a similar outcome. Although one advantage pCLND could reduce necessity to repeat (131) I treatments, the disadvantage was a higher prevalence of permanent hypoparathyroidism. Actually, the different findings on this studies of pCLND could be explained with the variant percents of CLNM in different studies. Almost all clinicians agreed that central lymph node dissection (CLND) should be done with evidence of CLNM preoperatively. Hence, how to evaluate accurately the status of CLNM and choose the CLND as an optimum operation plan for PTMC are very important in thyroid operation."
+            },
+            {
+              "location": "paragraph_12",
+              "text": "Our study focused on investigating the relationship between CLNM and the clinicopathological and US characteristics to find the risk predictors for CLNM in PTMC. In addition, using the standardized regression coefficient, we developed a scoring system to identify the risk of CLNM and evaluate the predictive value of the scoring system."
+            },
+            {
+              "location": "paragraph_13",
+              "text": "We conducted a retrospective case-control study involving 498 patients who underwent total thyroidectomy or lobectomy with prophylactic central lymph node at the First Affiliated Hospital of Wenzhou Medical University from January 2009 to December 2012. All patients had no history of thyroid or neck surgery for nonthyroidial cancer, as well as of neck irradiation. The patients were divided into the case group (252 patients) and the control group (246 patients), according to the status of CLNM."
+            },
+            {
+              "location": "paragraph_14",
+              "text": "The surgical procedures were performed in the same operation team of the department of surgical oncology. The patients’ clinical data were obtained from their electronic medical records. The research protocol used in this study was approved by the Ethics Committee of the First Affiliated Hospital of Wenzhou Medical University, and informed consent was obtained from each patient."
+            },
+            {
+              "location": "paragraph_15",
+              "text": "Clinicopathologic and US characteristics were used to analyze risk factors of CLNM: a total of 16 selected factors in Table 1 . All pathological diagnoses were made by an experienced pathologist. Primary tumor size based on US was measured by the standard of change in echo edge. When multiple PTMC were found in the specimen, the largest tumor or the most suspicious dominant nodule was analyzed. We used the age of 45 years as the cutoff because of its wide use as a clinical factor for prognosis. When multiple PTC were found in the specimen, the largest tumor or the most suspicious dominant nodule was analyzed. US calcification was defined as the hyperechoic spots with or without acoustic shadows or as the simple fine acoustic shadows in ultrasound [ 11 ]. ETE was defined as the tumor perimeter in contact with >25 % of the thyroid capsule in a malignant lesion or the loss of the capsule line according to the ultrasound [ 12 ]. Tumor location was classified in four areas (upper, middle, lower, and isthmus) based on preoperative ultrasonographic findings. LNM was obtained from the final pathologic reports. All the ultrasound features of the thyroid nodules were retrospectively reviewed by two experienced radiologists."
+            },
+            {
+              "location": "paragraph_16",
+              "text": "Baseline characteristics of papillary thyroid microcarcinoma patients stratified by the status of metastatic central lymph node"
+            },
+            {
+              "location": "paragraph_17",
+              "text": "Data on normal distribution were expressed as mean ± standard variation (SD) and were compared with t test. Categorical variables were expressed as percentage and were compared with chi-square test or Fisher’s exact test, as appropriate. Logistic regression analysis was also performed to estimate the odds ratios (OR) of certain parameters. Variables with p < 0.05 in the univariate analysis were progressed to a multivariate analysis using forward stepwise selection. The standardized regression coefficient was used to quantify the discriminating power of each factor and to construct a 10-point score system. The best point for the score system was performed by receiver-operating characteristic (ROC) curves. All p values were two sided, and a p value of <0.05 was considered statistically significant. Statistical analysis was performed with SPSS software version 19.0 (SPSS, Chicago, IL, USA)."
+            },
+            {
+              "location": "paragraph_18",
+              "text": "According to the status of metastatic central lymph node, patients were divided into two groups (the case group: CLNM positive; the control group: CLNM negative). Differences in clinicopathological and US features between two groups were compared in Table 1 . Seven factors were significantly associated with CLNM: display of enlarged lymph node ( p < 0.001), contact of >25 % with the adjacent capsule ( p < 0.001), no well-defined margin ( p < 0.001), tumor size ( p < 0.001), tumor location ( p < 0.001), extrathyroidal extension ( p < 0.001), and calcification ( p < 0.001)."
+            },
+            {
+              "location": "paragraph_19",
+              "text": "In the multivariate logistic regression, tumor size > 5 mm (OR 2.986; p < 0.001; 95 % confidence interval (CI) 1.861–4.790; standardized coefficient regression (Coef) 1.094), the lower polo (OR 3.568; p < 0.001; 95 % CI 2.211–5.758; Coef 1.272), extrathyroidal extension (OR 2.631; p < 0.001; 95 % CI 1.720–4.023; Coef 0.967), no well-defined margin (OR 2.459; p < 0.001; 95 % CI 1.611–3.754; Coef 0.9), display of metastatic lymph node (OR 3.01; p < 0.001; 95 % CI 1.954–4.634; Coef 1.102), and contact of >25 % with the adjacent capsule (OR 2.471; p < 0.001; 95 % CI 1.556–3.922; Coef 0.904) had highly independent association with central LNM. The relevant information is shown in Table 2 ."
+            },
+            {
+              "location": "paragraph_20",
+              "text": "Multivariate analysis (logistic regression) and 10-point scoring system"
+            },
+            {
+              "location": "paragraph_21",
+              "text": "Coef standardized coefficient regression, OR odds ratio, 95 % CI 95 % confidence interval"
+            },
+            {
+              "location": "paragraph_22",
+              "text": "As shown in Table 2 , the standardized regression coefficient is used to quantify the discriminating power (Coef value) of six predictors and construct a 10-point scoring system based on their relative predictive weight. The sum of the points was evaluated to distinguish between patients with and without CLNM. The mean index points were 5.71 ± 1.72 in the CLNM-positive group and 3.55 ± 1.95 in the CLNM-negative group, which showed statistically significant difference ( p < 0.001). Using ROC curve, the area under the ROC curve was 0.791 (Fig. 1 ). Then, the cutoff value of 5 was found to be the best points. The sensitivity and specificity for this scoring system were 64.7 and 80.5 %, respectively, and the positive predictive value and negative predictive value were 77.2 and 69.0 %, respectively. When comparing to other single independent predictors, the scoring system had more satisfied predictive value (Table 3 )."
+            },
+            {
+              "location": "paragraph_24",
+              "text": "Receiver-operating characteristic (ROC) curve for the scoring system. The area under the ROC curve was 0.791. According to the ROC curve, a cutoff value of 5 points was found to be best for distinguishing between patients without and with central LNM. The sensitivity and specificity were 64.7 and 80.5 %, respectively, and the positive predictive value and negative predictive value were 77.2 and 69.0 %, respectively. The dotted line represents the 95 % CI"
+            },
+            {
+              "location": "paragraph_25",
+              "text": "Receiver-operating characteristic (ROC) curve for the scoring system. The area under the ROC curve was 0.791. According to the ROC curve, a cutoff value of 5 points was found to be best for distinguishing between patients without and with central LNM. The sensitivity and specificity were 64.7 and 80.5 %, respectively, and the positive predictive value and negative predictive value were 77.2 and 69.0 %, respectively. The dotted line represents the 95 % CI"
+            },
+            {
+              "location": "paragraph_26",
+              "text": "The predictive value for the scoring system and independent predictors"
+            },
+            {
+              "location": "paragraph_27",
+              "text": "+PV positive predictive value, −PV negative predictive value"
+            },
+            {
+              "location": "paragraph_28",
+              "text": "In our study, we listed a total of 16 potential predictors according to the clinicopathological and US features. Using the univariate analysis, we found that seven predicting factors were significantly associated with the status of central LNM. In addition, six independent predictors of tumor size (>5 mm), tumor location (the lower polo), extrathyroidal extension, margin (no well-defined), display of enlarged lymph node, and contact of >25 % with the adjacent capsule for CLNM were confirmed by multivariate logistic regression analysis."
+            },
+            {
+              "location": "paragraph_29",
+              "text": "The incidence of CLNM in PTMC patients has been reported ranging from 24.1 to 64.1 % [ 2 , 8 ]. In this study, we found that the CLNM rate was 50.6 %, which was in accordance with the incidence rate."
+            },
+            {
+              "location": "paragraph_30",
+              "text": "Wada et al. [ 2 ] had reported that the location of PTMC within the thyroid was related to the prevalence of CLNM. Xu et al. [ 13 ] found that a tumor located in the lower third of the thyroid lobe was a high-risk factor of central lymph node metastasis. Zhang et al. [ 14 ] showed that the patients with a tumor located in the upper pole of the thyroid lobe conferred a lower risk for CLNM and a higher risk for lateral cervical metastasis. Similarly, we discovered that tumor location was an independent predictor for CLNM. The tumor located in the lower polo of the thyroid has a higher risk for CLNM, while the tumor located in the upper third may be a lower risk for CLNM."
+            },
+            {
+              "location": "paragraph_31",
+              "text": "Moon et al. [ 15 ] certified that PTMC with minimal ETE more frequently had CLNM than without. He et al. [ 16 ] found that extrathyroidal extension was associated with subclinical CLNM. Varshney et al. [ 17 ] declared the ETE was associated with the CLNM of PTMC. In agreement with previous results, we found that thyroid nodules with ETE were an independent predictive factor for CLNM."
+            },
+            {
+              "location": "paragraph_32",
+              "text": "Generally, no well-defined margin of the thyroid nodule has the strongest risk of malignance. Ito et al. [ 18 ] suggested that no well-defined margin was an important US feature of biologically aggressive PTMC. Also, we found that the margin was a highly independent predictor for CLNM in PTMC."
+            },
+            {
+              "location": "paragraph_33",
+              "text": "Traditionally, patients who have PTMC presenting with palpable lymphadenopathy, by preoperative US, should have cervical node dissection [ 2 ]. PTMC with ultrasonographical display of metastatic lymph nodes, especially enlarged lymph nodes, was more likely to recur in the regional lymph nodes [ 19 ]. According to the univariate and multivariate analyses, we found that display of enlarged lymph nodes was an independent predictor for CLNM."
+            },
+            {
+              "location": "paragraph_34",
+              "text": "Our study found contact of >25 % with the adjacent capsule was an independent predicting factor for CLNM. This US feature is a very important and visualized in ultrasonic examination. Many literatures suggest that the presence of contact with the adjacent capsule can provide a useful predictive information about ETE [ 20 , 21 ]. According to the above analysis, about the relation between ETE and CLNM, there was an indirect relationship between contact of >25 % with the adjacent capsule and CLNM."
+            },
+            {
+              "location": "paragraph_35",
+              "text": "Many literatures confirmed that tumor size was associated with CLNM. [ 2 , 22 ]. Many literatures confirmed that tumor size has significant relation with CLNM in PTMC using the cutoff value of 5 mm [ 13 , 23 , 24 ]. Therefore, in the present study, the tumor size of 5 mm was regarded as the cutoff value and was proved as an independent predictor for CLNM."
+            },
+            {
+              "location": "paragraph_36",
+              "text": "In this study, calcification was not an independent factor for central LNM, although it was statistically significant on the univariate analysis, which was similar to two previous reports [ 20 , 25 ]. Age is known to be an important prognostic factor for patients with PTC. However, its predictive value in PTMC was uncertain [ 2 , 23 ]. In our study, the gender has no association with CLNM. Similarly, Liu et al. [ 23 ] demonstrate that there was no relation observed between CLNM and gender in a meta-analysis. The association between multifocality and CLNM was still debatable [ 22 , 23 , 26 ]. In our study, no relevance was found between them. The main reason may be explained that the incidence rate of multifocality in the present study is very lower than other studies."
+            },
+            {
+              "location": "paragraph_37",
+              "text": "The role of pCLND was still a debate. In our opinion, those previous studies which analyzed the clinical results of pCLND had a deficiency. When assessing complication rates after thyroidectomy, most data are from high-volume endocrine surgery centers of excellence where the surgeons have more operation experience and lower complications rates [ 10 ]. In other words, the surgeons’ operation experience on CLND and hospital level had important influence on survival, postoperative region recurrence, and complications in PTMC. Hence, the issue of pCLND is likely to remain so."
+            },
+            {
+              "location": "paragraph_38",
+              "text": "If the CLNM could be diagnosed definitively preoperatively, the CLND can be easily established. However, in many patients, CLNM may not show any abnormal finding in preoperative imaging examinations due to their limitation. To improve the diagnostic accuracy, we used a combination of clinicopathologic and US characteristics to find six independent predictors for CLNM and developed a scoring system for predicting CLNM in PTMC. Using ROC curves, we identified the cutoff value of 5 points as the best score for detection of CLNM with a sensitivity of 64.7 %, a specificity of 80.5 %, positive predictive value of 77.2 %, and negative predictive value of 69.0 %. The scoring system has obvious advantages in predicting CLNM in PTMC relative to other single factor. Moreover, the predictors in this scoring system mainly come from US characteristics, which is convenient and feasible for predicting CLNM."
+            },
+            {
+              "location": "paragraph_39",
+              "text": "At present, there are many PTC-specific mutations, such as BRAF V600E and TERT promoter, which can predict the risk of CLNM in PTMC [ 27 – 29 ]. However, in Asia, most countries are the developing countries and their medical levels are lower than Europe and the USA. Patients often cannot afford to take more medical examination like molecular test. Therefore, in many Asian developing countries, the scoring system we raised has the advantages of simplicity and high sensitivity and specificity (compared with ultrasound) and will be helpful for surgeons to decide the essential surgical strategy for patients with PTMC, in particular the subclinical CLNM. In addition, we think that the use of this scoring system will reduce the surgical complications and develop the individual therapy for PTMC."
+            },
+            {
+              "location": "paragraph_40",
+              "text": "However, there are several potential limitations in this study. Firstly, the PTMC has very favorable prognosis and the follow-up time would be at least 10 years. Our study did not analyze data from the long-term follow-up period, such as disease recurrence and disease-free survival; thus, we cannot directly conclude that the scoring system can predict the prognosis. Secondly, this study was conducted in a cross-sectional design, rather than longitudinal observations. Thirdly, single-center verification is not accurate enough. The scoring system needs multicenter validation to check its predictive value. Further investigation with a longer duration is needed."
+            },
+            {
+              "location": "paragraph_41",
+              "text": "In conclusion, we first established a scoring system for predicting CLNM preoperatively in PTMC. The scoring system of clinicopathological and US characteristics for the prediction of CLNM can be another alternative diagnostic approach when the results of preoperative diagnostic evaluation for CLNM are not adequate or obvious. The points ≤ 5 could be considered as a low risk for CLNM, and the points > 5 could be considered as a high risk for CLNM. More aggressive diagnostic approaches and prophylactic CLND are needed for the points > 5. Therefore, the scoring system will be helpful for surgeons to decide the most suitable surgical strategy for patients with PTMC, especially the subclinical CLNM."
+            },
+            {
+              "location": "paragraph_42",
+              "text": "This work was supported by a grant from the National High Technology Research and Development Program of 863 project of China (NO. 2012AA02A210), Scientific Research Incubator Project of the First Affiliated Hospital of Wenzhou Medical University (NO. FHY2014018), and the Wenzhou City Science and Technology Bureau (NO. Y20140136)."
+            },
+            {
+              "location": "paragraph_46",
+              "text": "prophylactic central lymph node dissection"
+            },
+            {
+              "location": "paragraph_49",
+              "text": "Ye-feng Cai and Qing-xuan Wang are co-first authors."
+            },
+            {
+              "location": "paragraph_51",
+              "text": "The authors declare that they have no competing interests."
+            },
+            {
+              "location": "paragraph_53",
+              "text": "X-HZ, Y-FC, QL and C-JN designed the study. C-JN, Q-XW, H-MZ, and X-JZ collected the data. Y-FC, E-DC, and QL did the statistical analyses. Y-FC, C-JN, S-YD, X-HZ and QL reviewed the results, interpreted the data, and wrote the manuscript. All authors saw and approved the final version of the paper."
+            },
+            {
+              "location": "paragraph_54",
+              "text": "Ye-feng Cai, Email: cyfoncology@gmail.com."
+            },
+            {
+              "location": "paragraph_55",
+              "text": "Qing-xuan Wang, Email: wangqingxuan1991@163.com."
+            },
+            {
+              "location": "paragraph_57",
+              "text": "Xiang-jian Zhang, Email: zxjzhongliu@126.com."
+            },
+            {
+              "location": "paragraph_58",
+              "text": "En-dong Chen, Email: chenendong.oncology@gmail.com."
+            },
+            {
+              "location": "paragraph_59",
+              "text": "Si-yang Dong, Email: dsyoncology@163.com."
+            },
+            {
+              "location": "paragraph_60",
+              "text": "Hua-min Zheng, Email: zhmoncology@163.com."
+            },
+            {
+              "location": "paragraph_61",
+              "text": "Xiao-hua Zhang, Phone: +86 0577 55579462, Email: zxhoncology@126.com."
+            },
+            {
+              "location": "paragraph_62",
+              "text": "Quan Li, Phone: +86 0577 55579461, Email: lqsky1106@126.com."
+            }
+          ],
+          "figures": [
+            {
+              "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/a553/4765135/67db653222b8/12957_2016_808_Fig1_HTML.jpg",
+              "caption": "Fig 1. Open in a new tab Receiver-operating characteristic (ROC) curve for the scoring system. The area under the ROC curve was 0.791. According to the ROC curve, a cutoff value of 5 points was found to be best for distinguishing between patients without and with central LNM. The sensitivity and specificity were 64.7 and 80.5 %, respectively, and the positive predictive value and negative predictive value were 77.2 and 69.0 %, respectively. The dotted line represents the 95 % CI",
+              "alt": "Fig 1",
+              "source_page": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4765135/"
+            }
+          ],
+          "fact_support": [],
+          "conflicts": [],
+          "trust_limitations": "Publisher authority and exact quotes do not establish entailment; independent contract review required",
+          "status": "RETRIEVED",
+          "evidence_level": "FULL_TEXT"
+        }
+      ],
+      "attempts": [
+        {
+          "plan": {
+            "requests": [
+              {
+                "issue_id": "ISS_001",
+                "research_question": "What enzyme(s) remove RNA primers during eukaryotic lagging-strand DNA replication, and what are the distinct roles of RNase H and flap endonuclease (FEN1)?",
+                "required_claim": "RNase H and flap endonuclease (FEN1) are distinct enzymes with distinct roles in RNA primer removal; RNase H is not equated with flap endonuclease.",
+                "biological_scope": "Eukaryotic nuclear DNA replication, lagging strand, RNA primer removal",
+                "source_preferences": [
+                  "peer-reviewed review article",
+                  "textbook chapter",
+                  "primary research article"
+                ],
+                "search_queries": [
+                  "eukaryotic lagging strand RNA primer removal RNase H FEN1 flap endonuclease distinct roles review",
+                  "RNase H versus flap endonuclease FEN1 Okazaki fragment maturation eukaryotic DNA replication mechanism"
+                ],
+                "expected_evidence_type": "MECHANISM_DESCRIPTION"
+              },
+              {
+                "issue_id": "ISS_002",
+                "research_question": "Does DNA polymerase alpha hand off to DNA polymerase delta on the lagging strand during eukaryotic DNA replication?",
+                "required_claim": "DNA polymerase alpha synthesizes a short RNA-DNA primer and hands off to DNA polymerase delta for processive lagging-strand synthesis.",
+                "biological_scope": "Eukaryotic nuclear DNA replication, lagging strand, polymerase switching",
+                "source_preferences": [
+                  "peer-reviewed review article",
+                  "primary research article",
+                  "textbook chapter"
+                ],
+                "search_queries": [
+                  "eukaryotic DNA replication polymerase alpha to polymerase delta handoff lagging strand switch mechanism",
+                  "polymerase switching pol alpha pol delta lagging strand Okazaki fragment synthesis eukaryotes review"
+                ],
+                "expected_evidence_type": "MECHANISM_DESCRIPTION"
+              },
+              {
+                "issue_id": "ISS_003",
+                "research_question": "How does RNA primer replacement by DNA and subsequent nick ligation occur during eukaryotic Okazaki fragment maturation, and what states link primer removal to ligation?",
+                "required_claim": "After primer removal, the resulting gap is filled by DNA synthesis (replacement) leaving a nick that DNA ligase seals; a replacement synthesis step intervenes between primer removal and ligation.",
+                "biological_scope": "Eukaryotic nuclear DNA replication, lagging strand, Okazaki fragment maturation and ligation",
+                "source_preferences": [
+                  "peer-reviewed review article",
+                  "textbook chapter",
+                  "primary research article"
+                ],
+                "search_queries": [
+                  "eukaryotic Okazaki fragment maturation primer removal DNA replacement gap filling ligase sealing nick mechanism",
+                  "RNA primer replacement DNA synthesis before DNA ligase Okazaki fragment maturation eukaryotes review"
+                ],
+                "expected_evidence_type": "MECHANISM_DESCRIPTION"
+              },
+              {
+                "issue_id": "ISS_004",
+                "research_question": "How does DNA polymerase delta displace the RNA primer during eukaryotic lagging-strand synthesis, and what is the displaced-primer state that precedes removal?",
+                "required_claim": "DNA polymerase delta strand-displaces the downstream RNA primer, creating a displaced primer flap that is subsequently removed; displacement and removal are distinct sequential states.",
+                "biological_scope": "Eukaryotic nuclear DNA replication, lagging strand, primer displacement by pol delta",
+                "source_preferences": [
+                  "peer-reviewed review article",
+                  "primary research article",
+                  "textbook chapter"
+                ],
+                "search_queries": [
+                  "DNA polymerase delta strand displacement RNA primer flap Okazaki fragment eukaryotes mechanism",
+                  "pol delta displaces downstream primer displaced flap state Okazaki fragment maturation review"
+                ],
+                "expected_evidence_type": "MECHANISM_DESCRIPTION"
+              },
+              {
+                "issue_id": "ISS_005",
+                "research_question": "What is the nick (missing phosphodiester bond) state between adjacent Okazaki fragments, and how is it formed prior to sealing by DNA ligase?",
+                "required_claim": "A nick is a missing phosphodiester bond between adjacent DNA fragments formed after primer replacement; DNA ligase seals this nick to complete the sugar-phosphate backbone.",
+                "biological_scope": "Eukaryotic nuclear DNA replication, lagging strand, nick formation and ligation",
+                "source_preferences": [
+                  "peer-reviewed review article",
+                  "textbook chapter",
+                  "primary research article"
+                ],
+                "search_queries": [
+                  "DNA nick missing phosphodiester bond Okazaki fragment formation before DNA ligase sealing eukaryotes",
+                  "nicked DNA intermediate Okazaki fragment maturation ligase seals phosphodiester backbone review"
+                ],
+                "expected_evidence_type": "MECHANISM_DESCRIPTION"
+              },
+              {
+                "issue_id": "STATE_MODEL_MIGRATION",
+                "research_question": "What are the supported pre-clip initial states, explicit subject/property/value states, and missing state producers across eukaryotic DNA replication priming, extension, primer removal, and ligation for grades 10-12?",
+                "required_claim": "Each modeled process has identifiable input states (substrates, template, primer) produced by a prior step or explicitly assumed, covering primer formation, pol alpha extension, pol delta extension, primer removal, and ligation without omitting user-required mechanisms.",
+                "biological_scope": "Eukaryotic nuclear DNA replication, lagging strand, priming through ligation",
+                "source_preferences": [
+                  "peer-reviewed review article",
+                  "textbook chapter",
+                  "primary research article"
+                ],
+                "search_queries": [
+                  "eukaryotic DNA replication lagging strand priming extension primer removal ligation state transitions review",
+                  "Okazaki fragment synthesis maturation stages substrate states eukaryotes DNA replication textbook"
+                ],
+                "expected_evidence_type": "MECHANISM_DESCRIPTION"
+              }
+            ],
+            "candidate_urls": [
+              "https://www.ncbi.nlm.nih.gov/books/NBK26845/",
+              "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4765135/"
+            ],
+            "scientific_queries": [
+              "eukaryotic lagging strand DNA replication Okazaki fragment priming extension RNase H FEN1 polymerase delta primer removal ligation mechanism review"
+            ]
+          },
+          "retrieval": {
+            "evidence": [
+              {
+                "evidence_id": "E_c341856dc478",
+                "url": "https://europepmc.org/article/MED/27093943",
+                "title": "Processing ribonucleotides incorporated during eukaryotic DNA replication.",
+                "author_or_institution": "Williams JS, Lujan SA, Kunkel TA.",
+                "source_type": "bibliographic_abstract",
+                "evidence_level": "ABSTRACT",
+                "biological_scope": "Requires claim-specific scope review",
+                "status": "RETRIEVED_ABSTRACT",
+                "content_sha256": "e6916b5e6e2164867180ceaaf90bdb31cff4fa6f0a8e629a8554ca9f39bb9289",
+                "passages": [
+                  {
+                    "location": "abstract",
+                    "text": "The information encoded in DNA is influenced by the presence of non-canonical nucleotides, the most frequent of which are ribonucleotides. In this Review, we discuss recent discoveries about ribonucleotide incorporation into DNA during replication by the three major eukaryotic replicases, DNA polymerases α, δ and ε. The presence of ribonucleotides in DNA causes short deletion mutations and may result in the generation of single- and double-strand DNA breaks, leading to genome instability. We describe how these ribonucleotides are removed from DNA through ribonucleotide excision repair and by topoisomerase I. We discuss the biological consequences and the physiological roles of ribonucleotides in DNA, and consider how deficiencies in their removal from DNA may be important in the aetiology of disease.",
+                    "evidence_level": "ABSTRACT"
+                  }
+                ],
+                "figures": [],
+                "limitations": [
+                  "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+                ]
+              },
+              {
+                "evidence_id": "E_713fa1a1e2bd",
+                "url": "https://europepmc.org/article/MED/26109598",
+                "title": "Genetic instability in budding and fission yeast-sources and mechanisms.",
+                "author_or_institution": "Skoneczna A, Kaniak A, Skoneczny M.",
+                "source_type": "bibliographic_abstract",
+                "evidence_level": "ABSTRACT",
+                "biological_scope": "Requires claim-specific scope review",
+                "status": "RETRIEVED_ABSTRACT",
+                "content_sha256": "767b5079315798978a55ea94607a9eb81955da7fb0532cbf4bd65f58199e960c",
+                "passages": [
+                  {
+                    "location": "abstract",
+                    "text": "Cells are constantly confronted with endogenous and exogenous factors that affect their genomes. Eons of evolution have allowed the cellular mechanisms responsible for preserving the genome to adjust for achieving contradictory objectives: to maintain the genome unchanged and to acquire mutations that allow adaptation to environmental changes. One evolutionary mechanism that has been refined for survival is genetic variation. In this review, we describe the mechanisms responsible for two biological processes: genome maintenance and mutation tolerance involved in generations of genetic variations in mitotic cells of both Saccharomyces cerevisiae and Schizosaccharomyces pombe. These processes encompass mechanisms that ensure the fidelity of replication, DNA lesion sensing and DNA damage response pathways, as well as mechanisms that ensure precision in chromosome segregation during cell division. We discuss various factors that may influence genome stability, such as cellular ploidy, the phase of the cell cycle, transcriptional activity of a particular region of DNA, the proficiency of DNA quality control systems, the metabolic stage of the cell and its respiratory potential, and finally potential exposure to endogenous or environmental stress.",
+                    "evidence_level": "ABSTRACT"
+                  }
+                ],
+                "figures": [],
+                "limitations": [
+                  "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+                ]
+              },
+              {
+                "evidence_id": "E_afc7ced3996a",
+                "url": "https://europepmc.org/article/MED/23055184",
+                "title": "Modulation of mutagenesis in eukaryotes by DNA replication fork dynamics and quality of nucleotide pools.",
+                "author_or_institution": "Waisertreiger IS, Liston VG, Menezes MR, Kim HM, Lobachev KS, Stepchenkova EI, Tahirov TH, Rogozin IB, Pavlov YI.",
+                "source_type": "bibliographic_abstract",
+                "evidence_level": "ABSTRACT",
+                "biological_scope": "Requires claim-specific scope review",
+                "status": "RETRIEVED_ABSTRACT",
+                "content_sha256": "344f74f6c7a561089fcda05ed544acfb5d3a6e80d3f4fddf8f8cce682f1f0449",
+                "passages": [
+                  {
+                    "location": "abstract",
+                    "text": "The rate of mutations in eukaryotes depends on a plethora of factors and is not immediately derived from the fidelity of DNA polymerases (Pols). Replication of chromosomes containing the anti-parallel strands of duplex DNA occurs through the copying of leading and lagging strand templates by a trio of Pols α, δ and ϵ, with the assistance of Pol ζ and Y-family Pols at difficult DNA template structures or sites of DNA damage. The parameters of the synthesis at a given location are dictated by the quality and quantity of nucleotides in the pools, replication fork architecture, transcription status, regulation of Pol switches, and structure of chromatin. The result of these transactions is a subject of survey and editing by DNA repair.",
+                    "evidence_level": "ABSTRACT"
+                  }
+                ],
+                "figures": [],
+                "limitations": [
+                  "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+                ]
+              },
+              {
+                "evidence_id": "E_b73e1f0d3573",
+                "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4765135/",
+                "title": "A scoring system is an effective tool for predicting central lymph node metastasis in papillary thyroid microcarcinoma: a case-control study - PMC",
+                "author_or_institution": "www.ncbi.nlm.nih.gov",
+                "source_type": "retrieved_scientific_webpage",
+                "biological_scope": "Requires independent scope verification against quoted passages",
+                "accessed_utc": "2026-11-26T06:29:37Z",
+                "content_sha256": "b3a83e959b3a45e70a0868cc12137aaae024e2730b635bea7d6c175a623d6761",
+                "saved_text": "/autodl-tmp/code2biovideo/biovideo-v4.3.2/Code2Video/experiments/biology_expert_v4_3_2/science_formal/dna_replication/automatic/retrieval/dna_replication/E_b73e1f0d3573.txt",
+                "passages": [
+                  {
+                    "location": "paragraph_0",
+                    "text": "Official websites use .gov A .gov website belongs to an official\n                            government organization in the United States."
+                  },
+                  {
+                    "location": "paragraph_1",
+                    "text": "Secure .gov websites use HTTPS A lock ( Lock Locked padlock icon ) or https:// means you've safely\n                                connected to the .gov website. Share sensitive\n                                information only on official, secure websites."
+                  },
+                  {
+                    "location": "paragraph_3",
+                    "text": "Received 2015 Aug 21; Accepted 2016 Feb 17; Collection date 2016."
+                  },
+                  {
+                    "location": "paragraph_4",
+                    "text": "Open Access This article is distributed under the terms of the Creative Commons Attribution 4.0 International License ( http://creativecommons.org/licenses/by/4.0/ ), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The Creative Commons Public Domain Dedication waiver ( http://creativecommons.org/publicdomain/zero/1.0/ ) applies to the data made available in this article, unless otherwise stated."
+                  },
+                  {
+                    "location": "paragraph_5",
+                    "text": "The purpose of this study was to evaluate the clinicopathologic and ultrasonographic (US) characteristics and establish an effective scoring system for predicting central lymph node metastasis (CLNM) in papillary thyroid microcarcinoma (PTMC)."
+                  },
+                  {
+                    "location": "paragraph_6",
+                    "text": "A total of 498 patients with PTMC who underwent total thyroidectomy or lobectomy with therapeutic central lymph node dissection (CLND) were enrolled. Univariate and multivariate analyses were performed to find the independent predictors for CLNM based on clinicopathological and US characteristics. Using the standardized regression coefficient, a 10-point score system was constructed in line with these independent predictors. Then, the scoring system was evaluated for the diagnostic value in predicting CLNM."
+                  },
+                  {
+                    "location": "paragraph_7",
+                    "text": "Tumor location (the lower polo), tumor size (>5 mm), extrathyroidal extension, margin (no well-defined), display of enlarged lymph node, and contact of >25 % with the adjacent capsule were independent predictors for CLNM. Verifying the scoring system, a cutoff value of 5 points was found to be the best prediction for CLNM, the sensitivity and specificity were 64.7 and 80.5 %, respectively, and the positive and negative predictive values were 77.3 and 69.0 %, respectively."
+                  },
+                  {
+                    "location": "paragraph_8",
+                    "text": "The points ≤ 5 could be considered as a low risk for CLNM, and the points > 5 could be identified as a high risk for CLNM. More advanced diagnostic approaches and prophylactic CLND are needed for patients with the points > 5."
+                  },
+                  {
+                    "location": "paragraph_9",
+                    "text": "Keywords: Thyroid, Papillary thyroid microcarcinoma, Central lymph node, Central lymph node dissection, Predictive factor, Scoring system"
+                  },
+                  {
+                    "location": "paragraph_10",
+                    "text": "Papillary thyroid microcarcinoma (PTMC) is defined as a papillary thyroid carcinoma measuring 1.0 cm or less in maximal diameter [ 1 ]. In the past, most patients with PTMC were diagnosed from specimens of thyroid removed for benign diseases, such as Graves’ disease, follicular adenoma, and multinodular goiter. In recent years, due to the use of ultrasonography (US) and US-guided fine-needle aspiration cytology (FNAC), the number of patients with PTMC has been increasing. Although PTMC is usually associated with a favorable prognosis, regional lymph node metastasis (LNM), particularly in the central cervical compartment, is not uncommon [ 2 ]. The central lymph nodes are considered as the first echelon of lymphatic metastasis and are the level most frequently involved in papillary thyroid carcinoma (PTC) [ 3 ]. Recent studies demonstrated that the presence of nodal involvement was commonly associated with local recurrence and cancer-specific mortality [ 4 , 5 ]. Therefore, it is crucial to detect the metastatic lymph nodes preoperatively for PTMC, especially the central lymph nodes."
+                  },
+                  {
+                    "location": "paragraph_11",
+                    "text": "Nevertheless, the central lymph node metastasis (CLNM) is frequently diagnosed with microscopic LNM by pathology (metastatic deposits within a lymph node of less than 2 mm in maximal diameter) which is not easily detected preoperatively [ 6 , 7 ]. In clinical node-negative (cN0) PTMC, the presence of microscopic LNM is frequently detected in surgical specimens, and the prevalence of subclinical CLNM ranges from 30 % to approximately 65 % [ 2 , 8 ]. Therefore, it is generally agreed that prophylactic central lymph node dissection (pCLND) should be performed to remove microscopic LNM because this treatment reduced local recurrence and cancer-specific mortality. However, pCLND remains a controversial subject. Zetoune et al. [ 9 ] showed that pCLND did not greatly reduce local recurrence in thyroid cancer. Carling et al. [ 10 ] demonstrated that the pCLND would lead to higher rates of hypoparathyroidism and recurrent laryngeal nerve injury. Moreover, a major argument against pCLND was a possibly increased risk of operative complications and medical cost which added the burden of patients. A prospective randomized controlled single-institution study demonstrated that cN0 patients with PTC treated with pCLND showed a similar outcome. Although one advantage pCLND could reduce necessity to repeat (131) I treatments, the disadvantage was a higher prevalence of permanent hypoparathyroidism. Actually, the different findings on this studies of pCLND could be explained with the variant percents of CLNM in different studies. Almost all clinicians agreed that central lymph node dissection (CLND) should be done with evidence of CLNM preoperatively. Hence, how to evaluate accurately the status of CLNM and choose the CLND as an optimum operation plan for PTMC are very important in thyroid operation."
+                  },
+                  {
+                    "location": "paragraph_12",
+                    "text": "Our study focused on investigating the relationship between CLNM and the clinicopathological and US characteristics to find the risk predictors for CLNM in PTMC. In addition, using the standardized regression coefficient, we developed a scoring system to identify the risk of CLNM and evaluate the predictive value of the scoring system."
+                  },
+                  {
+                    "location": "paragraph_13",
+                    "text": "We conducted a retrospective case-control study involving 498 patients who underwent total thyroidectomy or lobectomy with prophylactic central lymph node at the First Affiliated Hospital of Wenzhou Medical University from January 2009 to December 2012. All patients had no history of thyroid or neck surgery for nonthyroidial cancer, as well as of neck irradiation. The patients were divided into the case group (252 patients) and the control group (246 patients), according to the status of CLNM."
+                  },
+                  {
+                    "location": "paragraph_14",
+                    "text": "The surgical procedures were performed in the same operation team of the department of surgical oncology. The patients’ clinical data were obtained from their electronic medical records. The research protocol used in this study was approved by the Ethics Committee of the First Affiliated Hospital of Wenzhou Medical University, and informed consent was obtained from each patient."
+                  },
+                  {
+                    "location": "paragraph_15",
+                    "text": "Clinicopathologic and US characteristics were used to analyze risk factors of CLNM: a total of 16 selected factors in Table 1 . All pathological diagnoses were made by an experienced pathologist. Primary tumor size based on US was measured by the standard of change in echo edge. When multiple PTMC were found in the specimen, the largest tumor or the most suspicious dominant nodule was analyzed. We used the age of 45 years as the cutoff because of its wide use as a clinical factor for prognosis. When multiple PTC were found in the specimen, the largest tumor or the most suspicious dominant nodule was analyzed. US calcification was defined as the hyperechoic spots with or without acoustic shadows or as the simple fine acoustic shadows in ultrasound [ 11 ]. ETE was defined as the tumor perimeter in contact with >25 % of the thyroid capsule in a malignant lesion or the loss of the capsule line according to the ultrasound [ 12 ]. Tumor location was classified in four areas (upper, middle, lower, and isthmus) based on preoperative ultrasonographic findings. LNM was obtained from the final pathologic reports. All the ultrasound features of the thyroid nodules were retrospectively reviewed by two experienced radiologists."
+                  },
+                  {
+                    "location": "paragraph_16",
+                    "text": "Baseline characteristics of papillary thyroid microcarcinoma patients stratified by the status of metastatic central lymph node"
+                  },
+                  {
+                    "location": "paragraph_17",
+                    "text": "Data on normal distribution were expressed as mean ± standard variation (SD) and were compared with t test. Categorical variables were expressed as percentage and were compared with chi-square test or Fisher’s exact test, as appropriate. Logistic regression analysis was also performed to estimate the odds ratios (OR) of certain parameters. Variables with p < 0.05 in the univariate analysis were progressed to a multivariate analysis using forward stepwise selection. The standardized regression coefficient was used to quantify the discriminating power of each factor and to construct a 10-point score system. The best point for the score system was performed by receiver-operating characteristic (ROC) curves. All p values were two sided, and a p value of <0.05 was considered statistically significant. Statistical analysis was performed with SPSS software version 19.0 (SPSS, Chicago, IL, USA)."
+                  },
+                  {
+                    "location": "paragraph_18",
+                    "text": "According to the status of metastatic central lymph node, patients were divided into two groups (the case group: CLNM positive; the control group: CLNM negative). Differences in clinicopathological and US features between two groups were compared in Table 1 . Seven factors were significantly associated with CLNM: display of enlarged lymph node ( p < 0.001), contact of >25 % with the adjacent capsule ( p < 0.001), no well-defined margin ( p < 0.001), tumor size ( p < 0.001), tumor location ( p < 0.001), extrathyroidal extension ( p < 0.001), and calcification ( p < 0.001)."
+                  },
+                  {
+                    "location": "paragraph_19",
+                    "text": "In the multivariate logistic regression, tumor size > 5 mm (OR 2.986; p < 0.001; 95 % confidence interval (CI) 1.861–4.790; standardized coefficient regression (Coef) 1.094), the lower polo (OR 3.568; p < 0.001; 95 % CI 2.211–5.758; Coef 1.272), extrathyroidal extension (OR 2.631; p < 0.001; 95 % CI 1.720–4.023; Coef 0.967), no well-defined margin (OR 2.459; p < 0.001; 95 % CI 1.611–3.754; Coef 0.9), display of metastatic lymph node (OR 3.01; p < 0.001; 95 % CI 1.954–4.634; Coef 1.102), and contact of >25 % with the adjacent capsule (OR 2.471; p < 0.001; 95 % CI 1.556–3.922; Coef 0.904) had highly independent association with central LNM. The relevant information is shown in Table 2 ."
+                  },
+                  {
+                    "location": "paragraph_20",
+                    "text": "Multivariate analysis (logistic regression) and 10-point scoring system"
+                  },
+                  {
+                    "location": "paragraph_21",
+                    "text": "Coef standardized coefficient regression, OR odds ratio, 95 % CI 95 % confidence interval"
+                  },
+                  {
+                    "location": "paragraph_22",
+                    "text": "As shown in Table 2 , the standardized regression coefficient is used to quantify the discriminating power (Coef value) of six predictors and construct a 10-point scoring system based on their relative predictive weight. The sum of the points was evaluated to distinguish between patients with and without CLNM. The mean index points were 5.71 ± 1.72 in the CLNM-positive group and 3.55 ± 1.95 in the CLNM-negative group, which showed statistically significant difference ( p < 0.001). Using ROC curve, the area under the ROC curve was 0.791 (Fig. 1 ). Then, the cutoff value of 5 was found to be the best points. The sensitivity and specificity for this scoring system were 64.7 and 80.5 %, respectively, and the positive predictive value and negative predictive value were 77.2 and 69.0 %, respectively. When comparing to other single independent predictors, the scoring system had more satisfied predictive value (Table 3 )."
+                  },
+                  {
+                    "location": "paragraph_24",
+                    "text": "Receiver-operating characteristic (ROC) curve for the scoring system. The area under the ROC curve was 0.791. According to the ROC curve, a cutoff value of 5 points was found to be best for distinguishing between patients without and with central LNM. The sensitivity and specificity were 64.7 and 80.5 %, respectively, and the positive predictive value and negative predictive value were 77.2 and 69.0 %, respectively. The dotted line represents the 95 % CI"
+                  },
+                  {
+                    "location": "paragraph_25",
+                    "text": "Receiver-operating characteristic (ROC) curve for the scoring system. The area under the ROC curve was 0.791. According to the ROC curve, a cutoff value of 5 points was found to be best for distinguishing between patients without and with central LNM. The sensitivity and specificity were 64.7 and 80.5 %, respectively, and the positive predictive value and negative predictive value were 77.2 and 69.0 %, respectively. The dotted line represents the 95 % CI"
+                  },
+                  {
+                    "location": "paragraph_26",
+                    "text": "The predictive value for the scoring system and independent predictors"
+                  },
+                  {
+                    "location": "paragraph_27",
+                    "text": "+PV positive predictive value, −PV negative predictive value"
+                  },
+                  {
+                    "location": "paragraph_28",
+                    "text": "In our study, we listed a total of 16 potential predictors according to the clinicopathological and US features. Using the univariate analysis, we found that seven predicting factors were significantly associated with the status of central LNM. In addition, six independent predictors of tumor size (>5 mm), tumor location (the lower polo), extrathyroidal extension, margin (no well-defined), display of enlarged lymph node, and contact of >25 % with the adjacent capsule for CLNM were confirmed by multivariate logistic regression analysis."
+                  },
+                  {
+                    "location": "paragraph_29",
+                    "text": "The incidence of CLNM in PTMC patients has been reported ranging from 24.1 to 64.1 % [ 2 , 8 ]. In this study, we found that the CLNM rate was 50.6 %, which was in accordance with the incidence rate."
+                  },
+                  {
+                    "location": "paragraph_30",
+                    "text": "Wada et al. [ 2 ] had reported that the location of PTMC within the thyroid was related to the prevalence of CLNM. Xu et al. [ 13 ] found that a tumor located in the lower third of the thyroid lobe was a high-risk factor of central lymph node metastasis. Zhang et al. [ 14 ] showed that the patients with a tumor located in the upper pole of the thyroid lobe conferred a lower risk for CLNM and a higher risk for lateral cervical metastasis. Similarly, we discovered that tumor location was an independent predictor for CLNM. The tumor located in the lower polo of the thyroid has a higher risk for CLNM, while the tumor located in the upper third may be a lower risk for CLNM."
+                  },
+                  {
+                    "location": "paragraph_31",
+                    "text": "Moon et al. [ 15 ] certified that PTMC with minimal ETE more frequently had CLNM than without. He et al. [ 16 ] found that extrathyroidal extension was associated with subclinical CLNM. Varshney et al. [ 17 ] declared the ETE was associated with the CLNM of PTMC. In agreement with previous results, we found that thyroid nodules with ETE were an independent predictive factor for CLNM."
+                  },
+                  {
+                    "location": "paragraph_32",
+                    "text": "Generally, no well-defined margin of the thyroid nodule has the strongest risk of malignance. Ito et al. [ 18 ] suggested that no well-defined margin was an important US feature of biologically aggressive PTMC. Also, we found that the margin was a highly independent predictor for CLNM in PTMC."
+                  },
+                  {
+                    "location": "paragraph_33",
+                    "text": "Traditionally, patients who have PTMC presenting with palpable lymphadenopathy, by preoperative US, should have cervical node dissection [ 2 ]. PTMC with ultrasonographical display of metastatic lymph nodes, especially enlarged lymph nodes, was more likely to recur in the regional lymph nodes [ 19 ]. According to the univariate and multivariate analyses, we found that display of enlarged lymph nodes was an independent predictor for CLNM."
+                  },
+                  {
+                    "location": "paragraph_34",
+                    "text": "Our study found contact of >25 % with the adjacent capsule was an independent predicting factor for CLNM. This US feature is a very important and visualized in ultrasonic examination. Many literatures suggest that the presence of contact with the adjacent capsule can provide a useful predictive information about ETE [ 20 , 21 ]. According to the above analysis, about the relation between ETE and CLNM, there was an indirect relationship between contact of >25 % with the adjacent capsule and CLNM."
+                  },
+                  {
+                    "location": "paragraph_35",
+                    "text": "Many literatures confirmed that tumor size was associated with CLNM. [ 2 , 22 ]. Many literatures confirmed that tumor size has significant relation with CLNM in PTMC using the cutoff value of 5 mm [ 13 , 23 , 24 ]. Therefore, in the present study, the tumor size of 5 mm was regarded as the cutoff value and was proved as an independent predictor for CLNM."
+                  },
+                  {
+                    "location": "paragraph_36",
+                    "text": "In this study, calcification was not an independent factor for central LNM, although it was statistically significant on the univariate analysis, which was similar to two previous reports [ 20 , 25 ]. Age is known to be an important prognostic factor for patients with PTC. However, its predictive value in PTMC was uncertain [ 2 , 23 ]. In our study, the gender has no association with CLNM. Similarly, Liu et al. [ 23 ] demonstrate that there was no relation observed between CLNM and gender in a meta-analysis. The association between multifocality and CLNM was still debatable [ 22 , 23 , 26 ]. In our study, no relevance was found between them. The main reason may be explained that the incidence rate of multifocality in the present study is very lower than other studies."
+                  },
+                  {
+                    "location": "paragraph_37",
+                    "text": "The role of pCLND was still a debate. In our opinion, those previous studies which analyzed the clinical results of pCLND had a deficiency. When assessing complication rates after thyroidectomy, most data are from high-volume endocrine surgery centers of excellence where the surgeons have more operation experience and lower complications rates [ 10 ]. In other words, the surgeons’ operation experience on CLND and hospital level had important influence on survival, postoperative region recurrence, and complications in PTMC. Hence, the issue of pCLND is likely to remain so."
+                  },
+                  {
+                    "location": "paragraph_38",
+                    "text": "If the CLNM could be diagnosed definitively preoperatively, the CLND can be easily established. However, in many patients, CLNM may not show any abnormal finding in preoperative imaging examinations due to their limitation. To improve the diagnostic accuracy, we used a combination of clinicopathologic and US characteristics to find six independent predictors for CLNM and developed a scoring system for predicting CLNM in PTMC. Using ROC curves, we identified the cutoff value of 5 points as the best score for detection of CLNM with a sensitivity of 64.7 %, a specificity of 80.5 %, positive predictive value of 77.2 %, and negative predictive value of 69.0 %. The scoring system has obvious advantages in predicting CLNM in PTMC relative to other single factor. Moreover, the predictors in this scoring system mainly come from US characteristics, which is convenient and feasible for predicting CLNM."
+                  },
+                  {
+                    "location": "paragraph_39",
+                    "text": "At present, there are many PTC-specific mutations, such as BRAF V600E and TERT promoter, which can predict the risk of CLNM in PTMC [ 27 – 29 ]. However, in Asia, most countries are the developing countries and their medical levels are lower than Europe and the USA. Patients often cannot afford to take more medical examination like molecular test. Therefore, in many Asian developing countries, the scoring system we raised has the advantages of simplicity and high sensitivity and specificity (compared with ultrasound) and will be helpful for surgeons to decide the essential surgical strategy for patients with PTMC, in particular the subclinical CLNM. In addition, we think that the use of this scoring system will reduce the surgical complications and develop the individual therapy for PTMC."
+                  },
+                  {
+                    "location": "paragraph_40",
+                    "text": "However, there are several potential limitations in this study. Firstly, the PTMC has very favorable prognosis and the follow-up time would be at least 10 years. Our study did not analyze data from the long-term follow-up period, such as disease recurrence and disease-free survival; thus, we cannot directly conclude that the scoring system can predict the prognosis. Secondly, this study was conducted in a cross-sectional design, rather than longitudinal observations. Thirdly, single-center verification is not accurate enough. The scoring system needs multicenter validation to check its predictive value. Further investigation with a longer duration is needed."
+                  },
+                  {
+                    "location": "paragraph_41",
+                    "text": "In conclusion, we first established a scoring system for predicting CLNM preoperatively in PTMC. The scoring system of clinicopathological and US characteristics for the prediction of CLNM can be another alternative diagnostic approach when the results of preoperative diagnostic evaluation for CLNM are not adequate or obvious. The points ≤ 5 could be considered as a low risk for CLNM, and the points > 5 could be considered as a high risk for CLNM. More aggressive diagnostic approaches and prophylactic CLND are needed for the points > 5. Therefore, the scoring system will be helpful for surgeons to decide the most suitable surgical strategy for patients with PTMC, especially the subclinical CLNM."
+                  },
+                  {
+                    "location": "paragraph_42",
+                    "text": "This work was supported by a grant from the National High Technology Research and Development Program of 863 project of China (NO. 2012AA02A210), Scientific Research Incubator Project of the First Affiliated Hospital of Wenzhou Medical University (NO. FHY2014018), and the Wenzhou City Science and Technology Bureau (NO. Y20140136)."
+                  },
+                  {
+                    "location": "paragraph_46",
+                    "text": "prophylactic central lymph node dissection"
+                  },
+                  {
+                    "location": "paragraph_49",
+                    "text": "Ye-feng Cai and Qing-xuan Wang are co-first authors."
+                  },
+                  {
+                    "location": "paragraph_51",
+                    "text": "The authors declare that they have no competing interests."
+                  },
+                  {
+                    "location": "paragraph_53",
+                    "text": "X-HZ, Y-FC, QL and C-JN designed the study. C-JN, Q-XW, H-MZ, and X-JZ collected the data. Y-FC, E-DC, and QL did the statistical analyses. Y-FC, C-JN, S-YD, X-HZ and QL reviewed the results, interpreted the data, and wrote the manuscript. All authors saw and approved the final version of the paper."
+                  },
+                  {
+                    "location": "paragraph_54",
+                    "text": "Ye-feng Cai, Email: cyfoncology@gmail.com."
+                  },
+                  {
+                    "location": "paragraph_55",
+                    "text": "Qing-xuan Wang, Email: wangqingxuan1991@163.com."
+                  },
+                  {
+                    "location": "paragraph_57",
+                    "text": "Xiang-jian Zhang, Email: zxjzhongliu@126.com."
+                  },
+                  {
+                    "location": "paragraph_58",
+                    "text": "En-dong Chen, Email: chenendong.oncology@gmail.com."
+                  },
+                  {
+                    "location": "paragraph_59",
+                    "text": "Si-yang Dong, Email: dsyoncology@163.com."
+                  },
+                  {
+                    "location": "paragraph_60",
+                    "text": "Hua-min Zheng, Email: zhmoncology@163.com."
+                  },
+                  {
+                    "location": "paragraph_61",
+                    "text": "Xiao-hua Zhang, Phone: +86 0577 55579462, Email: zxhoncology@126.com."
+                  },
+                  {
+                    "location": "paragraph_62",
+                    "text": "Quan Li, Phone: +86 0577 55579461, Email: lqsky1106@126.com."
+                  }
+                ],
+                "figures": [
+                  {
+                    "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/a553/4765135/67db653222b8/12957_2016_808_Fig1_HTML.jpg",
+                    "caption": "Fig 1. Open in a new tab Receiver-operating characteristic (ROC) curve for the scoring system. The area under the ROC curve was 0.791. According to the ROC curve, a cutoff value of 5 points was found to be best for distinguishing between patients without and with central LNM. The sensitivity and specificity were 64.7 and 80.5 %, respectively, and the positive predictive value and negative predictive value were 77.2 and 69.0 %, respectively. The dotted line represents the 95 % CI",
+                    "alt": "Fig 1",
+                    "source_page": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4765135/"
+                  }
+                ],
+                "fact_support": [],
+                "conflicts": [],
+                "trust_limitations": "Publisher authority and exact quotes do not establish entailment; independent contract review required",
+                "status": "RETRIEVED",
+                "evidence_level": "FULL_TEXT"
+              }
+            ],
+            "failures": [
+              {
+                "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5445644/fullTextXML",
+                "error": "HTTPError",
+                "status": "FULL_TEXT_UNAVAILABLE"
+              },
+              {
+                "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4608483/fullTextXML",
+                "error": "FeatureNotFound",
+                "status": "FULL_TEXT_UNAVAILABLE"
+              },
+              {
+                "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3893020/fullTextXML",
+                "error": "ReadTimeout",
+                "status": "FULL_TEXT_UNAVAILABLE"
+              },
+              {
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26845/",
+                "error": "ValueError",
+                "status": "FULL_TEXT_UNAVAILABLE"
+              }
+            ],
+            "search_records": [
+              {
+                "query": "eukaryotic lagging strand DNA replication Okazaki fragment priming extension RNase H FEN1 polymerase delta primer removal ligation mechanism review",
+                "service": "Europe PMC",
+                "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=eukaryotic+lagging+strand+DNA+replication+Okazaki+fragment+priming+extension+RNase+H+FEN1+polymerase+delta+primer+removal+ligation+mechanism+review&format=json&pageSize=3&resultType=core",
+                "results": [
+                  {
+                    "id": "27093943",
+                    "source": "MED",
+                    "pmid": "27093943",
+                    "pmcid": "PMC5445644",
+                    "fullTextIdList": {
+                      "fullTextId": [
+                        "PMC5445644"
+                      ]
+                    },
+                    "doi": "10.1038/nrm.2016.37",
+                    "title": "Processing ribonucleotides incorporated during eukaryotic DNA replication.",
+                    "authorString": "Williams JS, Lujan SA, Kunkel TA.",
+                    "authorList": {
+                      "author": [
+                        {
+                          "fullName": "Williams JS",
+                          "lastName": "Williams",
+                          "firstName": "Jessica S",
+                          "initials": "JS",
+                          "authorAffiliationDetailsList": {
+                            "authorAffiliation": [
+                              {
+                                "affiliation": "Genome Integrity and Structural Biology Laboratory, National Institute of Environmental Health Sciences, National Institutes of Health, Department of Health and Human Services (DHHS), Research Triangle Park, North Carolina 27709, USA."
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "fullName": "Lujan SA",
+                          "lastName": "Lujan",
+                          "firstName": "Scott A",
+                          "initials": "SA",
+                          "authorAffiliationDetailsList": {
+                            "authorAffiliation": [
+                              {
+                                "affiliation": "Genome Integrity and Structural Biology Laboratory, National Institute of Environmental Health Sciences, National Institutes of Health, Department of Health and Human Services (DHHS), Research Triangle Park, North Carolina 27709, USA."
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "fullName": "Kunkel TA",
+                          "lastName": "Kunkel",
+                          "firstName": "Thomas A",
+                          "initials": "TA",
+                          "authorId": {
+                            "type": "ORCID",
+                            "value": "0000-0002-9900-1788"
+                          },
+                          "authorAffiliationDetailsList": {
+                            "authorAffiliation": [
+                              {
+                                "affiliation": "Genome Integrity and Structural Biology Laboratory, National Institute of Environmental Health Sciences, National Institutes of Health, Department of Health and Human Services (DHHS), Research Triangle Park, North Carolina 27709, USA."
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    "authorIdList": {
+                      "authorId": [
+                        {
+                          "type": "ORCID",
+                          "value": "0000-0002-9900-1788"
+                        }
+                      ]
+                    },
+                    "dataLinksTagsList": {
+                      "dataLinkstag": [
+                        "altmetrics",
+                        "supporting_data"
+                      ]
+                    },
+                    "journalInfo": {
+                      "issue": "6",
+                      "volume": "17",
+                      "journalIssueId": 2411129,
+                      "dateOfPublication": "2016 Jun",
+                      "monthOfPublication": 6,
+                      "yearOfPublication": 2016,
+                      "journal": {
+                        "medlineAbbreviation": "Nat Rev Mol Cell Biol",
+                        "title": "Nature reviews. Molecular cell biology",
+                        "essn": "1471-0080",
+                        "issn": "1471-0072",
+                        "nlmid": "100962782",
+                        "isoabbreviation": "Nat Rev Mol Cell Biol"
+                      },
+                      "printPublicationDate": "2016-06-01"
+                    },
+                    "pubYear": "2016",
+                    "pageInfo": "350-363",
+                    "abstractText": "The information encoded in DNA is influenced by the presence of non-canonical nucleotides, the most frequent of which are ribonucleotides. In this Review, we discuss recent discoveries about ribonucleotide incorporation into DNA during replication by the three major eukaryotic replicases, DNA polymerases α, δ and ε. The presence of ribonucleotides in DNA causes short deletion mutations and may result in the generation of single- and double-strand DNA breaks, leading to genome instability. We describe how these ribonucleotides are removed from DNA through ribonucleotide excision repair and by topoisomerase I. We discuss the biological consequences and the physiological roles of ribonucleotides in DNA, and consider how deficiencies in their removal from DNA may be important in the aetiology of disease.",
+                    "affiliation": "Genome Integrity and Structural Biology Laboratory, National Institute of Environmental Health Sciences, National Institutes of Health, Department of Health and Human Services (DHHS), Research Triangle Park, North Carolina 27709, USA.",
+                    "publicationStatus": "ppublish",
+                    "language": "eng",
+                    "pubModel": "Print-Electronic",
+                    "pubTypeList": {
+                      "pubType": [
+                        "research-article",
+                        "Review",
+                        "Journal Article"
+                      ]
+                    },
+                    "grantsList": {
+                      "grant": [
+                        {
+                          "agency": "Intramural NIH HHS",
+                          "acronym": "ImNIH",
+                          "grantId": "Z01 ES065070",
+                          "orderIn": 0
+                        }
+                      ]
+                    },
+                    "meshHeadingList": {
+                      "meshHeading": [
+                        {
+                          "majorTopic_YN": "N",
+                          "descriptorName": "Animals"
+                        },
+                        {
+                          "majorTopic_YN": "N",
+                          "descriptorName": "Humans"
+                        },
+                        {
+                          "majorTopic_YN": "N",
+                          "descriptorName": "DNA",
+                          "meshQualifierList": {
+                            "meshQualifier": [
+                              {
+                                "majorTopic_YN": "N",
+                                "abbreviation": "BI",
+                                "qualifierName": "biosynthesis"
+                              },
+                              {
+                                "majorTopic_YN": "N",
+                                "abbreviation": "GE",
+                                "qualifierName": "genetics"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "majorTopic_YN": "N",
+                          "descriptorName": "Ribonucleotides",
+                          "meshQualifierList": {
+                            "meshQualifier": [
+                              {
+                                "majorTopic_YN": "Y",
+                                "abbreviation": "ME",
+                                "qualifierName": "metabolism"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "majorTopic_YN": "N",
+                          "descriptorName": "DNA Repair"
+                        },
+                        {
+                          "majorTopic_YN": "Y",
+                          "descriptorName": "DNA Replication"
+                        },
+                        {
+                          "majorTopic_YN": "N",
+                          "descriptorName": "Polymerization"
+                        }
+                      ]
+                    },
+                    "chemicalList": {
+                      "chemical": [
+                        {
+                          "name": "DNA",
+                          "registryNumber": "9007-49-2"
+                        },
+                        {
+                          "name": "Ribonucleotides",
+                          "registryNumber": "0"
+                        }
+                      ]
+                    },
+                    "subsetList": {
+                      "subset": [
+                        {
+                          "code": "IM",
+                          "name": "Index Medicus"
+                        }
+                      ]
+                    },
+                    "fullTextUrlList": {
+                      "fullTextUrl": [
+                        {
+                          "availability": "Subscription required",
+                          "availabilityCode": "S",
+                          "documentStyle": "doi",
+                          "site": "DOI",
+                          "url": "https://doi.org/10.1038/nrm.2016.37"
+                        },
+                        {
+                          "availability": "Free",
+                          "availabilityCode": "F",
+                          "documentStyle": "html",
+                          "site": "Europe_PMC",
+                          "url": "https://europepmc.org/articles/PMC5445644"
+                        },
+                        {
+                          "availability": "Free",
+                          "availabilityCode": "F",
+                          "documentStyle": "pdf",
+                          "site": "Europe_PMC",
+                          "url": "https://europepmc.org/articles/PMC5445644?pdf=render"
+                        },
+                        {
+                          "availability": "Free",
+                          "availabilityCode": "F",
+                          "documentStyle": "doi",
+                          "site": "DOI",
+                          "url": "https://doi.org/10.1038/nrm.2016.37"
+                        }
+                      ]
+                    },
+                    "isOpenAccess": "N",
+                    "inEPMC": "Y",
+                    "inPMC": "Y",
+                    "citedByCount": 166,
+                    "hasReferences": "Y",
+                    "hasTextMinedTerms": "Y",
+                    "hasDbCrossReferences": "N",
+                    "hasPDF": "Y",
+                    "hasBook": "N",
+                    "hasSuppl": "N",
+                    "hasLabsLinks": "Y",
+                    "hasData": "Y",
+                    "authMan": "Y",
+                    "epmcAuthMan": "N",
+                    "nihAuthMan": "Y",
+                    "manuscriptId": "NIHMS857794",
+                    "hasTMAccessionNumbers": "Y",
+                    "tmAccessionTypeList": {
+                      "accessionType": [
+                        "doi"
+                      ]
+                    },
+                    "dateOfCompletion": "2017-05-15",
+                    "dateOfCreation": "2016-04-21",
+                    "dateOfRevision": "2025-05-29",
+                    "electronicPublicationDate": "2016-04-20",
+                    "firstPublicationDate": "2016-04-20",
+                    "firstIndexDate": "2016-04-21",
+                    "fullTextReceivedDate": "2025-02-05",
+                    "hasEvaluations": "N"
+                  },
+                  {
+                    "id": "26109598",
+                    "source": "MED",
+                    "pmid": "26109598",
+                    "pmcid": "PMC4608483",
+                    "fullTextIdList": {
+                      "fullTextId": [
+                        "PMC4608483"
+                      ]
+                    },
+                    "doi": "10.1093/femsre/fuv028",
+                    "title": "Genetic instability in budding and fission yeast-sources and mechanisms.",
+                    "authorString": "Skoneczna A, Kaniak A, Skoneczny M.",
+                    "authorList": {
+                      "author": [
+                        {
+                          "fullName": "Skoneczna A",
+                          "lastName": "Skoneczna",
+                          "firstName": "Adrianna",
+                          "initials": "A",
+                          "authorId": {
+                            "type": "ORCID",
+                            "value": "0000-0003-4059-2146"
+                          },
+                          "authorAffiliationDetailsList": {
+                            "authorAffiliation": [
+                              {
+                                "affiliation": "Laboratory of Mutagenesis and DNA Repair, Institute of Biochemistry and Biophysics, Polish Academy of Science, 02-106 Warsaw, Poland ada@ibb.waw.pl."
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "fullName": "Kaniak A",
+                          "lastName": "Kaniak",
+                          "firstName": "Aneta",
+                          "initials": "A",
+                          "authorAffiliationDetailsList": {
+                            "authorAffiliation": [
+                              {
+                                "affiliation": "Laboratory of Mutagenesis and DNA Repair, Institute of Biochemistry and Biophysics, Polish Academy of Science, 02-106 Warsaw, Poland."
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "fullName": "Skoneczny M",
+                          "lastName": "Skoneczny",
+                          "firstName": "Marek",
+                          "initials": "M",
+                          "authorId": {
+                            "type": "ORCID",
+                            "value": "0000-0001-9922-2276"
+                          },
+                          "authorAffiliationDetailsList": {
+                            "authorAffiliation": [
+                              {
+                                "affiliation": "Department of Genetics, Institute of Biochemistry and Biophysics, Polish Academy of Science, 02-106 Warsaw, Poland."
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    "authorIdList": {
+                      "authorId": [
+                        {
+                          "type": "ORCID",
+                          "value": "0000-0001-9922-2276"
+                        },
+                        {
+                          "type": "ORCID",
+                          "value": "0000-0003-4027-6282"
+                        },
+                        {
+                          "type": "ORCID",
+                          "value": "0000-0003-4059-2146"
+                        }
+                      ]
+                    },
+                    "dataLinksTagsList": {
+                      "dataLinkstag": [
+                        "altmetrics",
+                        "related_data",
+                        "wikipedia"
+                      ]
+                    },
+                    "journalInfo": {
+                      "issue": "6",
+                      "volume": "39",
+                      "journalIssueId": 2333059,
+                      "dateOfPublication": "2015 Nov",
+                      "monthOfPublication": 11,
+                      "yearOfPublication": 2015,
+                      "journal": {
+                        "medlineAbbreviation": "FEMS Microbiol Rev",
+                        "title": "FEMS microbiology reviews",
+                        "essn": "1574-6976",
+                        "issn": "0168-6445",
+                        "nlmid": "8902526",
+                        "isoabbreviation": "FEMS Microbiol Rev"
+                      },
+                      "printPublicationDate": "2015-11-01"
+                    },
+                    "pubYear": "2015",
+                    "pageInfo": "917-967",
+                    "abstractText": "Cells are constantly confronted with endogenous and exogenous factors that affect their genomes. Eons of evolution have allowed the cellular mechanisms responsible for preserving the genome to adjust for achieving contradictory objectives: to maintain the genome unchanged and to acquire mutations that allow adaptation to environmental changes. One evolutionary mechanism that has been refined for survival is genetic variation. In this review, we describe the mechanisms responsible for two biological processes: genome maintenance and mutation tolerance involved in generations of genetic variations in mitotic cells of both Saccharomyces cerevisiae and Schizosaccharomyces pombe. These processes encompass mechanisms that ensure the fidelity of replication, DNA lesion sensing and DNA damage response pathways, as well as mechanisms that ensure precision in chromosome segregation during cell division. We discuss various factors that may influence genome stability, such as cellular ploidy, the phase of the cell cycle, transcriptional activity of a particular region of DNA, the proficiency of DNA quality control systems, the metabolic stage of the cell and its respiratory potential, and finally potential exposure to endogenous or environmental stress.",
+                    "affiliation": "Laboratory of Mutagenesis and DNA Repair, Institute of Biochemistry and Biophysics, Polish Academy of Science, 02-106 Warsaw, Poland ada@ibb.waw.pl.",
+                    "publicationStatus": "ppublish",
+                    "language": "eng",
+                    "pubModel": "Print-Electronic",
+                    "pubTypeList": {
+                      "pubType": [
+                        "Research Support, Non-U.S. Gov't",
+                        "review-article",
+                        "Review",
+                        "Journal Article"
+                      ]
+                    },
+                    "meshHeadingList": {
+                      "meshHeading": [
+                        {
+                          "majorTopic_YN": "N",
+                          "descriptorName": "Saccharomyces cerevisiae",
+                          "meshQualifierList": {
+                            "meshQualifier": [
+                              {
+                                "majorTopic_YN": "Y",
+                                "abbreviation": "GE",
+                                "qualifierName": "genetics"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "majorTopic_YN": "N",
+                          "descriptorName": "Schizosaccharomyces",
+                          "meshQualifierList": {
+                            "meshQualifier": [
+                              {
+                                "majorTopic_YN": "Y",
+                                "abbreviation": "GE",
+                                "qualifierName": "genetics"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "majorTopic_YN": "N",
+                          "descriptorName": "DNA Damage",
+                          "meshQualifierList": {
+                            "meshQualifier": [
+                              {
+                                "majorTopic_YN": "N",
+                                "abbreviation": "PH",
+                                "qualifierName": "physiology"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "majorTopic_YN": "N",
+                          "descriptorName": "Genomic Instability",
+                          "meshQualifierList": {
+                            "meshQualifier": [
+                              {
+                                "majorTopic_YN": "Y",
+                                "abbreviation": "GE",
+                                "qualifierName": "genetics"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "majorTopic_YN": "N",
+                          "descriptorName": "Environment"
+                        },
+                        {
+                          "majorTopic_YN": "N",
+                          "descriptorName": "DNA Replication",
+                          "meshQualifierList": {
+                            "meshQualifier": [
+                              {
+                                "majorTopic_YN": "N",
+                                "abbreviation": "GE",
+                                "qualifierName": "genetics"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "majorTopic_YN": "N",
+                          "descriptorName": "Mutation"
+                        },
+                        {
+                          "majorTopic_YN": "Y",
+                          "descriptorName": "Stress, Physiological"
+                        },
+                        {
+                          "majorTopic_YN": "N",
+                          "descriptorName": "Genetic Variation"
+                        }
+                      ]
+                    },
+                    "keywordList": {
+                      "keyword": [
+                        "Aneuploidy",
+                        "Homologous Recombination",
+                        "Transcription-associated Genome Instability",
+                        "Dntp Pool",
+                        "Fidelity Of Replication",
+                        "Mitochondrial Genome Maintenance"
+                      ]
+                    },
+                    "subsetList": {
+                      "subset": [
+                        {
+                          "code": "IM",
+                          "name": "Index Medicus"
+                        }
+                      ]
+                    },
+                    "fullTextUrlList": {
+                      "fullTextUrl": [
+                        {
+                          "availability": "Subscription required",
+                          "availabilityCode": "S",
+                          "documentStyle": "doi",
+                          "site": "DOI",
+                          "url": "https://doi.org/10.1093/femsre/fuv028"
+                        },
+                        {
+                          "availability": "Open access",
+                          "availabilityCode": "OA",
+                          "documentStyle": "html",
+                          "site": "Europe_PMC",
+                          "url": "https://europepmc.org/articles/PMC4608483"
+                        },
+                        {
+                          "availability": "Open access",
+                          "availabilityCode": "OA",
+                          "documentStyle": "pdf",
+                          "site": "Europe_PMC",
+                          "url": "https://europepmc.org/articles/PMC4608483?pdf=render"
+                        }
+                      ]
+                    },
+                    "isOpenAccess": "Y",
+                    "inEPMC": "Y",
+                    "inPMC": "Y",
+                    "citedByCount": 46,
+                    "hasReferences": "Y",
+                    "hasTextMinedTerms": "Y",
+                    "hasDbCrossReferences": "N",
+                    "hasPDF": "Y",
+                    "hasBook": "N",
+                    "hasSuppl": "N",
+                    "hasLabsLinks": "Y",
+                    "hasData": "Y",
+                    "license": "cc by-nc",
+                    "authMan": "N",
+                    "epmcAuthMan": "N",
+                    "nihAuthMan": "N",
+                    "hasTMAccessionNumbers": "N",
+                    "dateOfCompletion": "2016-04-07",
+                    "dateOfCreation": "2015-06-26",
+                    "dateOfRevision": "2018-11-13",
+                    "electronicPublicationDate": "2015-06-24",
+                    "firstPublicationDate": "2015-06-24",
+                    "firstIndexDate": "2015-06-26",
+                    "fullTextReceivedDate": "2025-02-03",
+                    "hasEvaluations": "N"
+                  },
+                  {
+                    "id": "23055184",
+                    "source": "MED",
+                    "pmid": "23055184",
+                    "pmcid": "PMC3893020",
+                    "fullTextIdList": {
+                      "fullTextId": [
+                        "PMC3893020"
+                      ]
+                    },
+                    "doi": "10.1002/em.21735",
+                    "title": "Modulation of mutagenesis in eukaryotes by DNA replication fork dynamics and quality of nucleotide pools.",
+                    "authorString": "Waisertreiger IS, Liston VG, Menezes MR, Kim HM, Lobachev KS, Stepchenkova EI, Tahirov TH, Rogozin IB, Pavlov YI.",
+                    "authorList": {
+                      "author": [
+                        {
+                          "fullName": "Waisertreiger IS",
+                          "lastName": "Waisertreiger",
+                          "firstName": "Irina S-R",
+                          "initials": "IS",
+                          "authorAffiliationDetailsList": {
+                            "authorAffiliation": [
+                              {
+                                "affiliation": "Eppley Institute for Research in Cancer and Allied Diseases, ESH 7009, 986805 Nebraska Medical Center, University of Nebraska, Omaha, NE, USA."
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "fullName": "Liston VG",
+                          "lastName": "Liston",
+                          "firstName": "Victoria G",
+                          "initials": "VG"
+                        },
+                        {
+                          "fullName": "Menezes MR",
+                          "lastName": "Menezes",
+                          "firstName": "Miriam R",
+                          "initials": "MR",
+                          "authorId": {
+                            "type": "ORCID",
+                            "value": "0000-0001-6478-9600"
+                          }
+                        },
+                        {
+                          "fullName": "Kim HM",
+                          "lastName": "Kim",
+                          "firstName": "Hyun-Min",
+                          "initials": "HM",
+                          "authorId": {
+                            "type": "ORCID",
+                            "value": "0000-0003-4610-3606"
+                          }
+                        },
+                        {
+                          "fullName": "Lobachev KS",
+                          "lastName": "Lobachev",
+                          "firstName": "Kirill S",
+                          "initials": "KS"
+                        },
+                        {
+                          "fullName": "Stepchenkova EI",
+                          "lastName": "Stepchenkova",
+                          "firstName": "Elena I",
+                          "initials": "EI",
+                          "authorId": {
+                            "type": "ORCID",
+                            "value": "0000-0002-5854-8701"
+                          }
+                        },
+                        {
+                          "fullName": "Tahirov TH",
+                          "lastName": "Tahirov",
+                          "firstName": "Tahir H",
+                          "initials": "TH",
+                          "authorId": {
+                            "type": "ORCID",
+                            "value": "0000-0002-1238-0069"
+                          }
+                        },
+                        {
+                          "fullName": "Rogozin IB",
+                          "lastName": "Rogozin",
+                          "firstName": "Igor B",
+                          "initials": "IB",
+                          "authorId": {
+                            "type": "ORCID",
+                            "value": "0000-0003-0802-4851"
+                          }
+                        },
+                        {
+                          "fullName": "Pavlov YI",
+                          "lastName": "Pavlov",
+                          "firstName": "Youri I",
+                          "initials": "YI",
+                          "authorId": {
+                            "type": "ORCID",
+                            "value": "0000-0003-1179-5796"
+                          }
+                        }
+                      ]
+                    },
+                    "authorIdList": {
+                      "authorId": [
+                        {
+                          "type": "ORCID",
+                          "value": "0000-0001-6478-9600"
+                        },
+                        {
+                          "type": "ORCID",
+                          "value": "0000-0002-1238-0069"
+                        },
+                        {
+                          "type": "ORCID",
+                          "value": "0000-0002-5854-8701"
+                        },
+                        {
+                          "type": "ORCID",
+                          "value": "0000-0003-0802-4851"
+                        },
+                        {
+                          "type": "ORCID",
+                          "value": "0000-0003-1179-5796"
+                        },
+                        {
+                          "type": "ORCID",
+                          "value": "0000-0003-4610-3606"
+                        }
+                      ]
+                    },
+                    "dataLinksTagsList": {
+                      "dataLinkstag": [
+                        "altmetrics"
+                      ]
+                    },
+                    "journalInfo": {
+                      "issue": "9",
+                      "volume": "53",
+                      "journalIssueId": 1982416,
+                      "dateOfPublication": "2012 Dec",
+                      "monthOfPublication": 12,
+                      "yearOfPublication": 2012,
+                      "journal": {
+                        "medlineAbbreviation": "Environ Mol Mutagen",
+                        "title": "Environmental and molecular mutagenesis",
+                        "essn": "1098-2280",
+                        "issn": "0893-6692",
+                        "nlmid": "8800109",
+                        "isoabbreviation": "Environ Mol Mutagen"
+                      },
+                      "printPublicationDate": "2012-12-01"
+                    },
+                    "pubYear": "2012",
+                    "pageInfo": "699-724",
+                    "abstractText": "The rate of mutations in eukaryotes depends on a plethora of factors and is not immediately derived from the fidelity of DNA polymerases (Pols). Replication of chromosomes containing the anti-parallel strands of duplex DNA occurs through the copying of leading and lagging strand templates by a trio of Pols α, δ and ϵ, with the assistance of Pol ζ and Y-family Pols at difficult DNA template structures or sites of DNA damage. The parameters of the synthesis at a given location are dictated by the quality and quantity of nucleotides in the pools, replication fork architecture, transcription status, regulation of Pol switches, and structure of chromatin. The result of these transactions is a subject of survey and editing by DNA repair.",
+                    "affiliation": "Eppley Institute for Research in Cancer and Allied Diseases, ESH 7009, 986805 Nebraska Medical Center, University of Nebraska, Omaha, NE, USA.",
+                    "publicationStatus": "ppublish",
+                    "language": "eng",
+                    "pubModel": "Print-Electronic",
+                    "pubTypeList": {
+                      "pubType": [
+                        "Research Support, U.S. Gov't, P.H.S.",
+                        "Research Support, Non-U.S. Gov't",
+                        "research-article",
+                        "Review",
+                        "Journal Article",
+                        "Research Support, N.I.H., Extramural"
+                      ]
+                    },
+                    "grantsList": {
+                      "grant": [
+                        {
+                          "agency": "NIGMS NIH HHS",
+                          "acronym": "GM",
+                          "grantId": "8P20GM103427",
+                          "orderIn": 0
+                        },
+                        {
+                          "agency": "NCI NIH HHS",
+                          "acronym": "CA",
+                          "grantId": "CA129925",
+                          "orderIn": 0
+                        },
+                        {
+                          "agency": "NIGMS NIH HHS",
+                          "acronym": "GM",
+                          "grantId": "R01GM0825950",
+                          "orderIn": 0
+                        },
+                        {
+                          "agency": "NIGMS NIH HHS",
+                          "acronym": "GM",
+                          "grantId": "R01GM082923",
+                          "orderIn": 0
+                        },
+                        {
+                          "agency": "PHS HHS",
+                          "grantId": "2011-27",
+                          "orderIn": 0
+                        },
+                        {
+                          "agency": "NIGMS NIH HHS",
+                          "acronym": "GM",
+                          "grantId": "R01 GM082923",
+                          "orderIn": 0
+                        },
+                        {
+                          "agency": "NCRR NIH HHS",
+                          "acronym": "RR",
+                          "grantId": "P20 RR016469",
+                          "orderIn": 0
+                        },
+                        {
+                          "agency": "NCRR NIH HHS",
+                          "acronym": "RR",
+                          "grantId": "5P20RR016469",
+                          "orderIn": 0
+                        },
+                        {
+                          "agency": "NCI NIH HHS",
+                          "acronym": "CA",
+                          "grantId": "R01 CA129925",
+                          "orderIn": 0
+                        },
+                        {
+                          "agency": "NIGMS NIH HHS",
+                          "acronym": "GM",
+                          "grantId": "P20 GM103427",
+                          "orderIn": 0
+                        }
+                      ]
+                    },
+                    "meshHeadingList": {
+                      "meshHeading": [
+                        {
+                          "majorTopic_YN": "N",
+                          "descriptorName": "Animals"
+                        },
+                        {
+                          "majorTopic_YN": "N",
+                          "descriptorName": "Humans"
+                        },
+                        {
+                          "majorTopic_YN": "N",
+                          "descriptorName": "DNA-Directed DNA Polymerase",
+                          "meshQualifierList": {
+                            "meshQualifier": [
+                              {
+                                "majorTopic_YN": "N",
+                                "abbreviation": "ME",
+                                "qualifierName": "metabolism"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "majorTopic_YN": "N",
+                          "descriptorName": "Nucleotides",
+                          "meshQualifierList": {
+                            "meshQualifier": [
+                              {
+                                "majorTopic_YN": "Y",
+                                "abbreviation": "ME",
+                                "qualifierName": "metabolism"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "majorTopic_YN": "Y",
+                          "descriptorName": "DNA Replication"
+                        },
+                        {
+                          "majorTopic_YN": "Y",
+                          "descriptorName": "Mutagenesis"
+                        }
+                      ]
+                    },
+                    "chemicalList": {
+                      "chemical": [
+                        {
+                          "name": "Nucleotides",
+                          "registryNumber": "0"
+                        },
+                        {
+                          "name": "DNA-Directed DNA Polymerase",
+                          "registryNumber": "EC 2.7.7.7"
+                        }
+                      ]
+                    },
+                    "subsetList": {
+                      "subset": [
+                        {
+                          "code": "IM",
+                          "name": "Index Medicus"
+                        }
+                      ]
+                    },
+                    "fullTextUrlList": {
+                      "fullTextUrl": [
+                        {
+                          "availability": "Subscription required",
+                          "availabilityCode": "S",
+                          "documentStyle": "doi",
+                          "site": "DOI",
+                          "url": "https://doi.org/10.1002/em.21735"
+                        },
+                        {
+                          "availability": "Free",
+                          "availabilityCode": "F",
+                          "documentStyle": "html",
+                          "site": "Europe_PMC",
+                          "url": "https://europepmc.org/articles/PMC3893020"
+                        },
+                        {
+                          "availability": "Free",
+                          "availabilityCode": "F",
+                          "documentStyle": "pdf",
+                          "site": "Europe_PMC",
+                          "url": "https://europepmc.org/articles/PMC3893020?pdf=render"
+                        },
+                        {
+                          "availability": "Free",
+                          "availabilityCode": "F",
+                          "documentStyle": "doi",
+                          "site": "DOI",
+                          "url": "https://doi.org/10.1002/em.21735"
+                        }
+                      ]
+                    },
+                    "isOpenAccess": "N",
+                    "inEPMC": "Y",
+                    "inPMC": "Y",
+                    "citedByCount": 22,
+                    "hasReferences": "Y",
+                    "hasTextMinedTerms": "Y",
+                    "hasDbCrossReferences": "N",
+                    "hasPDF": "Y",
+                    "hasBook": "N",
+                    "hasSuppl": "N",
+                    "hasLabsLinks": "Y",
+                    "hasData": "N",
+                    "authMan": "Y",
+                    "epmcAuthMan": "N",
+                    "nihAuthMan": "Y",
+                    "manuscriptId": "NIHMS543861",
+                    "hasTMAccessionNumbers": "N",
+                    "dateOfCompletion": "2013-01-08",
+                    "dateOfCreation": "2012-10-12",
+                    "dateOfRevision": "2021-10-21",
+                    "electronicPublicationDate": "2012-10-10",
+                    "firstPublicationDate": "2012-10-10",
+                    "firstIndexDate": "2012-10-12",
+                    "fullTextReceivedDate": "2025-02-05",
+                    "hasEvaluations": "N"
+                  }
+                ]
+              }
+            ],
+            "research_status": "RETRIEVED_UNREVIEWED",
+            "discovery": "Validated list queries, structured Europe PMC search/abstract/full text, candidate source fetch; source relevance is not assumed"
+          },
+          "new_sources": 4,
+          "entailment": {
+            "claims": [
+              {
+                "claim_id": "ISS_001",
+                "claim_text": "RNase H and flap endonuclease (FEN1) are distinct enzymes with distinct roles in RNA primer removal; RNase H is not equated with flap endonuclease.",
+                "entailment_status": "INSUFFICIENT_EVIDENCE",
+                "biological_scope": "Eukaryotic nuclear DNA replication, lagging strand, RNA primer removal",
+                "support": [],
+                "reason": "The provided source passages do not mention RNase H, FEN1, flap endonuclease, or any mechanism of RNA primer removal during eukaryotic lagging-strand replication. The abstracts discuss ribonucleotide incorporation, genetic instability, and mutagenesis, but do not address the required claim. Therefore, the actual source paragraphs do not resolve this evidence request."
+              },
+              {
+                "claim_id": "ISS_002",
+                "claim_text": "DNA polymerase alpha synthesizes a short RNA-DNA primer and hands off to DNA polymerase delta for processive lagging-strand synthesis.",
+                "entailment_status": "INSUFFICIENT_EVIDENCE",
+                "biological_scope": "Eukaryotic nuclear DNA replication, lagging strand, polymerase switching",
+                "support": [],
+                "reason": "No provided source passage describes a handoff from DNA polymerase alpha to DNA polymerase delta on the lagging strand. The abstracts mention DNA polymerases α, δ and ε generally, but do not state primer synthesis by pol alpha or polymerase switching. The claim is not entailed by the actual source paragraphs."
+              },
+              {
+                "claim_id": "ISS_003",
+                "claim_text": "After primer removal, the resulting gap is filled by DNA synthesis (replacement) leaving a nick that DNA ligase seals; a replacement synthesis step intervenes between primer removal and ligation.",
+                "entailment_status": "INSUFFICIENT_EVIDENCE",
+                "biological_scope": "Eukaryotic nuclear DNA replication, lagging strand, Okazaki fragment maturation and ligation",
+                "support": [],
+                "reason": "The provided source passages do not describe Okazaki fragment maturation, gap filling, nick formation, or DNA ligase sealing in the context of eukaryotic lagging-strand replication. No passage addresses the sequence from primer removal to ligation. The claim is not resolved by the actual sources."
+              },
+              {
+                "claim_id": "ISS_004",
+                "claim_text": "DNA polymerase delta strand-displaces the downstream RNA primer, creating a displaced primer flap that is subsequently removed; displacement and removal are distinct sequential states.",
+                "entailment_status": "INSUFFICIENT_EVIDENCE",
+                "biological_scope": "Eukaryotic nuclear DNA replication, lagging strand, primer displacement by pol delta",
+                "support": [],
+                "reason": "None of the provided source passages mention DNA polymerase delta displacing an RNA primer, flap formation, or sequential states of displacement and removal. The abstracts discuss DNA polymerases α, δ and ε but not this mechanism. The claim is not entailed."
+              },
+              {
+                "claim_id": "ISS_005",
+                "claim_text": "A nick is a missing phosphodiester bond between adjacent DNA fragments formed after primer replacement; DNA ligase seals this nick to complete the sugar-phosphate backbone.",
+                "entailment_status": "INSUFFICIENT_EVIDENCE",
+                "biological_scope": "Eukaryotic nuclear DNA replication, lagging strand, nick formation and ligation",
+                "support": [],
+                "reason": "The provided source passages do not define a nick, describe its formation after primer replacement, or state that DNA ligase seals it during eukaryotic lagging-strand replication. No passage addresses this claim. Therefore, the sources are insufficient."
+              },
+              {
+                "claim_id": "STATE_MODEL_MIGRATION",
+                "claim_text": "Each modeled process has identifiable input states (substrates, template, primer) produced by a prior step or explicitly assumed, covering primer formation, pol alpha extension, pol delta extension, primer removal, and ligation without omitting user-required mechanisms.",
+                "entailment_status": "INSUFFICIENT_EVIDENCE",
+                "biological_scope": "Eukaryotic nuclear DNA replication, lagging strand, priming through ligation",
+                "support": [],
+                "reason": "The provided source passages do not describe the sequence of priming, extension, primer removal, and ligation with identifiable input states for eukaryotic lagging-strand replication. The abstracts discuss ribonucleotide incorporation, genetic instability, and mutagenesis but do not provide the required state model details. The claim is not resolved."
+              }
+            ],
+            "decision": "INSUFFICIENT_EVIDENCE"
+          },
+          "resolved_gap_ids": []
+        },
+        {
+          "plan": {
+            "requests": [
+              {
+                "issue_id": "ISS_001",
+                "research_question": "In eukaryotic nuclear DNA replication, are RNase H and flap endonuclease (FEN1) the same enzyme or distinct enzymes with distinct roles in removing RNA primers from Okazaki fragments?",
+                "required_claim": "Clarification that RNase H (which degrades RNA in RNA-DNA hybrids) and flap endonuclease 1 (FEN1, which cleaves displaced 5' RNA flaps) are distinct activities/enzymes, or alternatively that the source conflates them; the model entity 'RNase H' must not be presented as a single definitive enzyme if the source equates it with flap endonuclease.",
+                "biological_scope": "Eukaryotic nuclear DNA replication; lagging-strand RNA primer removal; Saccharomyces cerevisiae and/or mammalian (human) enzymes; in vitro and in vivo mechanistic studies.",
+                "source_preferences": [
+                  "Peer-reviewed review articles in molecular biology journals (e.g., Annual Review of Biochemistry, Nature Reviews Molecular Cell Biology, Cold Spring Harbor Perspectives in Biology)",
+                  "Primary research articles on FEN1 and RNase H2 in primer removal",
+                  "Authoritative textbooks (e.g., Molecular Biology of the Gene, Lewin's Genes)"
+                ],
+                "search_queries": [
+                  "distinct roles of RNase H2 and flap endonuclease FEN1 in eukaryotic Okazaki fragment RNA primer removal",
+                  "eukaryotic DNA replication RNA primer removal RNase H versus FEN1 mechanism review",
+                  "FEN1 flap endonuclease and RNase H2 separate enzymes primer removal Saccharomyces cerevisiae"
+                ],
+                "expected_evidence_type": "MECHANISM_DESCRIPTION"
+              },
+              {
+                "issue_id": "ISS_002",
+                "research_question": "Does the source literature explicitly state that DNA polymerase alpha hands off to DNA polymerase delta on the lagging strand during eukaryotic DNA replication?",
+                "required_claim": "Either direct evidentiary support that pol α hands off to pol δ on the lagging strand, or confirmation that the recipient polymerase identity is a schematic inference from the source; the model must flag hand-off recipient identity as inferred if not directly stated.",
+                "biological_scope": "Eukaryotic nuclear DNA replication; lagging-strand synthesis; DNA polymerase alpha (primase-associated) and DNA polymerase delta; Saccharomyces cerevisiae and mammalian systems.",
+                "source_preferences": [
+                  "Peer-reviewed mechanistic reviews on eukaryotic replication polymerase switching",
+                  "Primary biochemical studies on pol α to pol δ hand-off",
+                  "Authoritative molecular biology textbooks"
+                ],
+                "search_queries": [
+                  "DNA polymerase alpha to polymerase delta handoff lagging strand eukaryotic DNA replication mechanism",
+                  "polymerase switching pol alpha pol delta Okazaki fragment synthesis eukaryotic replication review",
+                  "eukaryotic lagging strand polymerase handoff evidence pol delta recipient"
+                ],
+                "expected_evidence_type": "MECHANISM_DESCRIPTION"
+              },
+              {
+                "issue_id": "ISS_003",
+                "research_question": "What is the evidence for a DNA replacement synthesis step after RNA primer removal and before ligation of Okazaki fragments in eukaryotic DNA replication?",
+                "required_claim": "Identification that primer removal is followed by replacement with DNA nucleotides (gap-filling synthesis) prior to ligase sealing, and characterization of this replacement step as necessary for ligation-competent substrate; the model must either represent this step or explicitly mark it as an unmodeled assumed external state.",
+                "biological_scope": "Eukaryotic nuclear DNA replication; lagging-strand Okazaki fragment maturation; primer removal, gap-filling DNA synthesis, and ligation by DNA ligase I.",
+                "source_preferences": [
+                  "Peer-reviewed reviews on Okazaki fragment maturation",
+                  "Primary studies on DNA ligase I substrate requirements",
+                  "Authoritative textbooks on replication"
+                ],
+                "search_queries": [
+                  "Okazaki fragment maturation primer removal DNA replacement synthesis before ligation eukaryotic replication",
+                  "gap filling DNA synthesis required for ligase sealing Okazaki fragment eukaryotic",
+                  "eukaryotic DNA replication primer removal replaced with DNA nucleotides ligation mechanism review"
+                ],
+                "expected_evidence_type": "MECHANISM_DESCRIPTION"
+              },
+              {
+                "issue_id": "ISS_004",
+                "research_question": "How is the displaced RNA primer state generated by polymerase delta strand displacement represented mechanistically, and how does this displaced state relate to primer removal competence in eukaryotic DNA replication?",
+                "required_claim": "Description of strand-displacement by pol δ generating a displaced 5' RNA flap, and characterization of the displaced-primer state as the substrate for subsequent flap endonuclease cleavage; the model must represent or explicitly hand off this displaced state.",
+                "biological_scope": "Eukaryotic nuclear DNA replication; lagging-strand Okazaki fragment maturation; DNA polymerase delta strand displacement; displaced RNA primer/flap intermediate; FEN1 substrate.",
+                "source_preferences": [
+                  "Peer-reviewed reviews on Okazaki fragment maturation and flap generation",
+                  "Primary biochemical studies on pol δ strand displacement activity",
+                  "Authoritative molecular biology references"
+                ],
+                "search_queries": [
+                  "DNA polymerase delta strand displacement generates displaced RNA primer flap Okazaki fragment eukaryotic",
+                  "displaced RNA primer flap intermediate FEN1 cleavage Okazaki fragment maturation",
+                  "polymerase delta strand displacement activity eukaryotic lagging strand primer displacement mechanism"
+                ],
+                "expected_evidence_type": "MECHANISM_DESCRIPTION"
+              },
+              {
+                "issue_id": "ISS_005",
+                "research_question": "What is the molecular nature of the gap/nick sealed by DNA ligase I after primer removal in eukaryotic Okazaki fragment maturation?",
+                "required_claim": "Definition of the ligase substrate as a nick (missing phosphodiester bond between adjacent DNA fragments) rather than a gap with missing nucleotides, and clarification of how this nicked state arises after primer replacement; the model must define nick state or explicitly mark gap_state as a simplified placeholder.",
+                "biological_scope": "Eukaryotic nuclear DNA replication; lagging-strand Okazaki fragment maturation; DNA ligase I substrate; nicked phosphodiester backbone intermediate.",
+                "source_preferences": [
+                  "Peer-reviewed reviews on DNA ligase mechanism and Okazaki fragment maturation",
+                  "Structural/biochemical studies on DNA ligase I substrate specificity",
+                  "Authoritative molecular biology textbooks"
+                ],
+                "search_queries": [
+                  "DNA ligase I substrate nick phosphodiester backbone Okazaki fragment sealing eukaryotic",
+                  "nick versus gap ligase substrate Okazaki fragment maturation eukaryotic DNA replication",
+                  "eukaryotic DNA ligase I seals nick between adjacent fragments Okazaki maturation mechanism"
+                ],
+                "expected_evidence_type": "MECHANISM_DESCRIPTION"
+              },
+              {
+                "issue_id": "STATE_MODEL_MIGRATION",
+                "research_question": "What are the supported pre-clip initial conditions and required state producers for a local eukaryotic DNA replication model covering primer formation, pol alpha extension, pol delta extension, primer removal, and ligation, without omitting user-required mechanisms for grades 10-12?",
+                "required_claim": "Identification of explicit initial states (substrate and template conditions), state properties and values for each of the five processes, and missing state producers—while preserving the user-required teaching scope of local priming, extension, and one maturation event.",
+                "biological_scope": "Eukaryotic nuclear DNA replication; local primed origin region; processes: RNA primer formation, pol α extension, pol δ extension, primer removal, ligation; grades 10-12 teaching scope.",
+                "source_preferences": [
+                  "Peer-reviewed mechanistic reviews covering all five processes",
+                  "Authoritative textbooks (e.g., Molecular Biology of the Gene, Molecular Cell Biology) for state descriptions",
+                  "Educational resources aligned to undergraduate molecular biology curricula"
+                ],
+                "search_queries": [
+                  "eukaryotic DNA replication initiation primer formation polymerase extension primer removal ligation initial conditions mechanism",
+                  "eukaryotic DNA replication local priming extension maturation state transitions teaching mechanism review",
+                  "eukaryotic Okazaki fragment RNA primer formation pol alpha extension pol delta primer removal ligation initial substrate conditions"
+                ],
+                "expected_evidence_type": "MECHANISM_DESCRIPTION"
+              }
+            ],
+            "candidate_urls": [
+              "https://www.ncbi.nlm.nih.gov/books/NBK26845/",
+              "https://www.annualreviews.org/doi/10.1146/annurev.biochem.75.103004.142539"
+            ],
+            "scientific_queries": [
+              "eukaryotic DNA replication Okazaki fragment maturation RNase H FEN1 pol alpha pol delta primer removal DNA replacement ligation nick sealing mechanism review"
+            ]
+          },
+          "retrieval": {
+            "evidence": [],
+            "failures": [
+              {
+                "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=eukaryotic+DNA+replication+Okazaki+fragment+maturation+RNase+H+FEN1+pol+alpha+pol+delta+primer+removal+DNA+replacement+ligation+nick+sealing+mechanism+review&format=json&pageSize=3&resultType=core",
+                "error": "ReadTimeout",
+                "status": "SEARCH_FAILED"
+              },
+              {
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK26845/",
+                "error": "ValueError",
+                "status": "FULL_TEXT_UNAVAILABLE"
+              },
+              {
+                "url": "https://www.annualreviews.org/doi/10.1146/annurev.biochem.75.103004.142539",
+                "error": "HTTPError",
+                "status": "FULL_TEXT_UNAVAILABLE"
+              }
+            ],
+            "search_records": [],
+            "research_status": "UNVERIFIED",
+            "discovery": "Validated list queries, structured Europe PMC search/abstract/full text, candidate source fetch; source relevance is not assumed"
+          },
+          "new_sources": 0,
+          "entailment": {
+            "claims": [
+              {
+                "claim_id": "ISS_001",
+                "claim_text": "Clarification that RNase H (which degrades RNA in RNA-DNA hybrids) and flap endonuclease 1 (FEN1, which cleaves displaced 5' RNA flaps) are distinct activities/enzymes, or alternatively that the source conflates them; the model entity 'RNase H' must not be presented as a single definitive enzyme if the source equates it with flap endonuclease.",
+                "entailment_status": "INSUFFICIENT_EVIDENCE",
+                "biological_scope": "Eukaryotic nuclear DNA replication; lagging-strand RNA primer removal; Saccharomyces cerevisiae and/or mammalian (human) enzymes; in vitro and in vivo mechanistic studies.",
+                "support": [],
+                "reason": "None of the provided sources contain passages discussing RNase H, FEN1, or their roles in RNA primer removal. Source E_c341856dc478 discusses ribonucleotide incorporation and removal via ribonucleotide excision repair and topoisomerase I, not primer removal. Sources E_713fa1a1e2bd and E_afc7ced3996a are about genetic instability and mutagenesis, respectively, with no mention of RNase H or FEN1. Source E_b73e1f0d3573 is unrelated (thyroid cancer). Thus, no evidence exists to support or contradict the required claim."
+              },
+              {
+                "claim_id": "ISS_002",
+                "claim_text": "Either direct evidentiary support that pol α hands off to pol δ on the lagging strand, or confirmation that the recipient polymerase identity is a schematic inference from the source; the model must flag hand-off recipient identity as inferred if not directly stated.",
+                "entailment_status": "INSUFFICIENT_EVIDENCE",
+                "biological_scope": "Eukaryotic nuclear DNA replication; lagging-strand synthesis; DNA polymerase alpha (primase-associated) and DNA polymerase delta; Saccharomyces cerevisiae and mammalian systems.",
+                "support": [],
+                "reason": "No source passage explicitly states a hand-off from pol α to pol δ on the lagging strand. Source E_afc7ced3996a mentions that replication involves Pols α, δ and ε but does not describe a hand-off or specify lagging-strand recipient. Other sources do not address polymerase switching. Therefore, the evidence is insufficient to support or contradict the claim."
+              },
+              {
+                "claim_id": "ISS_003",
+                "claim_text": "Identification that primer removal is followed by replacement with DNA nucleotides (gap-filling synthesis) prior to ligase sealing, and characterization of this replacement step as necessary for ligation-competent substrate; the model must either represent this step or explicitly mark it as an unmodeled assumed external state.",
+                "entailment_status": "INSUFFICIENT_EVIDENCE",
+                "biological_scope": "Eukaryotic nuclear DNA replication; lagging-strand Okazaki fragment maturation; primer removal, gap-filling DNA synthesis, and ligation by DNA ligase I.",
+                "support": [],
+                "reason": "No provided source passage describes a DNA replacement synthesis step after primer removal and before ligation. Source E_c341856dc478 discusses ribonucleotide removal but not gap-filling synthesis or ligation. Other sources are unrelated to Okazaki fragment maturation. Thus, no evidence supports or contradicts the claim."
+              },
+              {
+                "claim_id": "ISS_004",
+                "claim_text": "Description of strand-displacement by pol δ generating a displaced 5' RNA flap, and characterization of the displaced-primer state as the substrate for subsequent flap endonuclease cleavage; the model must represent or explicitly hand off this displaced state.",
+                "entailment_status": "INSUFFICIENT_EVIDENCE",
+                "biological_scope": "Eukaryotic nuclear DNA replication; lagging-strand Okazaki fragment maturation; DNA polymerase delta strand displacement; displaced RNA primer/flap intermediate; FEN1 substrate.",
+                "support": [],
+                "reason": "No source passage mentions DNA polymerase delta strand displacement, displaced RNA flaps, or FEN1 cleavage. Source E_afc7ced3996a mentions Pol δ but not strand displacement. Therefore, the evidence is insufficient."
+              },
+              {
+                "claim_id": "ISS_005",
+                "claim_text": "Definition of the ligase substrate as a nick (missing phosphodiester bond between adjacent DNA fragments) rather than a gap with missing nucleotides, and clarification of how this nicked state arises after primer replacement; the model must define nick state or explicitly mark gap_state as a simplified placeholder.",
+                "entailment_status": "INSUFFICIENT_EVIDENCE",
+                "biological_scope": "Eukaryotic nuclear DNA replication; lagging-strand Okazaki fragment maturation; DNA ligase I substrate; nicked phosphodiester backbone intermediate.",
+                "support": [],
+                "reason": "No provided source passage describes the molecular nature of the ligase substrate (nick vs. gap) or the nicked state after primer replacement. Source E_c341856dc478 discusses ribonucleotide excision repair but not ligase substrate. Thus, no evidence supports or contradicts the claim."
+              },
+              {
+                "claim_id": "STATE_MODEL_MIGRATION",
+                "claim_text": "Identification of explicit initial states (substrate and template conditions), state properties and values for each of the five processes, and missing state producers—while preserving the user-required teaching scope of local priming, extension, and one maturation event.",
+                "entailment_status": "INSUFFICIENT_EVIDENCE",
+                "biological_scope": "Eukaryotic nuclear DNA replication; local primed origin region; processes: RNA primer formation, pol α extension, pol δ extension, primer removal, ligation; grades 10-12 teaching scope.",
+                "support": [],
+                "reason": "None of the provided sources contain passages detailing initial conditions, state properties, or state producers for the five listed processes. Source E_afc7ced3996a mentions general replication components but does not provide the required state model information. Therefore, the evidence is insufficient."
               }
             ],
             "decision": "INSUFFICIENT_EVIDENCE"

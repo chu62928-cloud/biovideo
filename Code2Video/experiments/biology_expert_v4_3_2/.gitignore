@@ -1,0 +1,4 @@
+**/http_cache/
+**/workflow/
+__pycache__/
+*.zip

@@ -1,0 +1,23 @@
+{
+  "evidence": [],
+  "failures": [
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=eukaryotic+DNA+replication+Okazaki+fragment+maturation+RNase+H+FEN1+pol+alpha+pol+delta+primer+removal+DNA+replacement+ligation+nick+sealing+mechanism+review&format=json&pageSize=3&resultType=core",
+      "error": "ReadTimeout",
+      "status": "SEARCH_FAILED"
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26845/",
+      "error": "ValueError",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    },
+    {
+      "url": "https://www.annualreviews.org/doi/10.1146/annurev.biochem.75.103004.142539",
+      "error": "HTTPError",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    }
+  ],
+  "search_records": [],
+  "research_status": "UNVERIFIED",
+  "discovery": "Validated list queries, structured Europe PMC search/abstract/full text, candidate source fetch; source relevance is not assumed"
+}

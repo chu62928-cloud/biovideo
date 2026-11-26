@@ -1,11 +1,589 @@
 {
   "results": [
     {
+      "topic": "vesicle_transport",
+      "original_model_hash": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da",
+      "candidate_model": {
+        "model_id": "vesicle_transport_microtubules_v1",
+        "schema_version": "1.1",
+        "scope": {
+          "topic": "Motor-protein-dependent intracellular vesicle transport along microtubules",
+          "organism_context": "eukaryotic cells (general)",
+          "audience": "grades_10_12",
+          "included_processes": [
+            "microtubule track provision for vesicle movement",
+            "vesicle transport along microtubules"
+          ],
+          "excluded_processes": [
+            "motor protein identity and mechanism (not specified in retrieved passages)",
+            "vesicle cargo selection and membrane fusion",
+            "microtubule assembly/disassembly dynamics",
+            "flagellar/ciliary motility using microtubules"
+          ],
+          "simplifications": [
+            "Motor proteins are not named or mechanistically described in the retrieved passages; the model treats them as implicit mediators of vesicle movement along microtubules.",
+            "The retrieved passage states microtubules provide a track along which vesicles move but does not document the motor-protein stepping cycle; this process is therefore not represented as a detailed molecular mechanism.",
+            "Organism context is generalized to eukaryotic cells because the source passage does not restrict the statement to a specific organism."
+          ]
+        },
+        "entities": [
+          {
+            "semantic_id": "ent_microtubule",
+            "scientific_name": "Microtubule",
+            "entity_type": "cytoskeletal polymer",
+            "evidence_ids": [
+              "E_9af4c0e6bde1"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_9af4c0e6bde1",
+                "quote": "As their name implies, microtubules are small hollow tubes.",
+                "location": "paragraph_12"
+              },
+              {
+                "evidence_id": "E_9af4c0e6bde1",
+                "quote": "Polymerized dimers of α-tubulin and β-tubulin, two globular proteins, comprise the microtubule's walls",
+                "location": "paragraph_12"
+              },
+              {
+                "evidence_id": "E_9af4c0e6bde1",
+                "quote": "provide a track along which vesicles move through the cell",
+                "location": "paragraph_12"
+              }
+            ],
+            "cardinality": 1,
+            "states": {
+              "present": "microtubule is present as a track",
+              "absent": "microtubule is not present"
+            }
+          },
+          {
+            "semantic_id": "ent_vesicle",
+            "scientific_name": "Vesicle",
+            "entity_type": "membrane-bound cargo carrier",
+            "evidence_ids": [
+              "E_9af4c0e6bde1"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_9af4c0e6bde1",
+                "quote": "provide a track along which vesicles move through the cell",
+                "location": "paragraph_12"
+              },
+              {
+                "evidence_id": "E_9af4c0e6bde1",
+                "quote": "allow cytoplasm and vesicles to move within the cell",
+                "location": "paragraph_1"
+              }
+            ],
+            "cardinality": 1,
+            "states": {
+              "moving": "vesicle is moving along a microtubule track",
+              "stationary": "vesicle is not moving along a microtubule track"
+            }
+          },
+          {
+            "semantic_id": "ent_cytoskeleton",
+            "scientific_name": "Cytoskeleton",
+            "entity_type": "cellular protein fiber network",
+            "evidence_ids": [
+              "E_9af4c0e6bde1"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_9af4c0e6bde1",
+                "quote": "Collectively, scientists call this network of protein fibers the cytoskeleton .",
+                "location": "paragraph_1"
+              },
+              {
+                "evidence_id": "E_9af4c0e6bde1",
+                "quote": "There are three types of fibers within the cytoskeleton: microfilaments, intermediate filaments, and microtubules",
+                "location": "paragraph_1"
+              }
+            ],
+            "cardinality": 1,
+            "states": {
+              "present": "cytoskeleton is present"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "semantic_id": "rel_cytoskeleton_contains_microtubule",
+            "relation_type": "contains_component",
+            "definition": "The cytoskeleton contains microtubules as one of its three fiber types.",
+            "source_entity": "ent_cytoskeleton",
+            "target_entity": "ent_microtubule",
+            "evidence_ids": [
+              "E_9af4c0e6bde1"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_9af4c0e6bde1",
+                "quote": "There are three types of fibers within the cytoskeleton: microfilaments, intermediate filaments, and microtubules",
+                "location": "paragraph_1"
+              }
+            ]
+          },
+          {
+            "semantic_id": "rel_microtubule_track_for_vesicle",
+            "relation_type": "serves_as_track_for",
+            "definition": "Microtubules provide a track along which vesicles move through the cell.",
+            "source_entity": "ent_microtubule",
+            "target_entity": "ent_vesicle",
+            "evidence_ids": [
+              "E_9af4c0e6bde1"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_9af4c0e6bde1",
+                "quote": "provide a track along which vesicles move through the cell",
+                "location": "paragraph_12"
+              }
+            ]
+          }
+        ],
+        "processes": [
+          {
+            "process_semantic_id": "proc_microtubule_track_provision",
+            "scientific_name": "Microtubule track provision for vesicle movement",
+            "action_category": "interaction",
+            "participants": [
+              {
+                "role": "track_provider",
+                "entity_ref": "ent_microtubule"
+              },
+              {
+                "role": "cargo_guided",
+                "entity_ref": "ent_vesicle"
+              }
+            ],
+            "input_roles": [
+              "track_provider",
+              "cargo_guided"
+            ],
+            "output_roles": [
+              "track_provider",
+              "cargo_guided"
+            ],
+            "preconditions": {
+              "microtubule_present": true
+            },
+            "effects": {
+              "vesicle_can_move_along_microtubule": true
+            },
+            "temporal_scope": {
+              "start_condition": "Microtubule is present and vesicle movement along it begins.",
+              "end_condition": "Vesicle movement along the microtubule ceases or the microtubule is no longer available as a track.",
+              "concurrent_with": [
+                "proc_vesicle_transport_along_microtubule"
+              ],
+              "after": []
+            },
+            "observables": [
+              {
+                "constraint_id": "obs_track_relation_during_transport",
+                "predicate": "relation_holds_during",
+                "relation_ref": "rel_microtubule_track_for_vesicle",
+                "source_role": "track_provider",
+                "target_role": "cargo_guided",
+                "capability": "DETERMINISTIC",
+                "evidence_ids": [
+                  "E_9af4c0e6bde1"
+                ],
+                "support": [
+                  {
+                    "evidence_id": "E_9af4c0e6bde1",
+                    "quote": "provide a track along which vesicles move through the cell",
+                    "location": "paragraph_12"
+                  }
+                ]
+              }
+            ],
+            "evidence_ids": [
+              "E_9af4c0e6bde1"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_9af4c0e6bde1",
+                "quote": "They help the cell resist compression, provide a track along which vesicles move through the cell, and pull replicated chromosomes to opposite ends of a dividing cell.",
+                "location": "paragraph_12"
+              }
+            ],
+            "exceptions": [
+              {
+                "exception_id": "exc_track_absent",
+                "description": "If microtubules are not present or not serving as tracks, this provision does not hold.",
+                "evidence_ids": [
+                  "E_9af4c0e6bde1"
+                ]
+              }
+            ],
+            "precondition_state_refs": [
+              "st_microtubule_present"
+            ],
+            "effect_state_refs": [
+              "st_microtubule_available_as_track"
+            ]
+          },
+          {
+            "process_semantic_id": "proc_vesicle_transport_along_microtubule",
+            "scientific_name": "Vesicle transport along microtubules",
+            "action_category": "transport",
+            "participants": [
+              {
+                "role": "cargo",
+                "entity_ref": "ent_vesicle"
+              },
+              {
+                "role": "track",
+                "entity_ref": "ent_microtubule"
+              }
+            ],
+            "input_roles": [
+              "cargo",
+              "track"
+            ],
+            "output_roles": [
+              "cargo",
+              "track"
+            ],
+            "preconditions": {
+              "microtubule_present_as_track": true,
+              "vesicle_present": true
+            },
+            "effects": {
+              "vesicle_moves_through_cell": true
+            },
+            "temporal_scope": {
+              "start_condition": "Vesicle movement along a microtubule track begins.",
+              "end_condition": "Vesicle movement along the microtubule track ends.",
+              "concurrent_with": [
+                "proc_microtubule_track_provision"
+              ],
+              "after": []
+            },
+            "observables": [
+              {
+                "constraint_id": "obs_vesicle_transport_relation",
+                "predicate": "relation_holds_during",
+                "relation_ref": "rel_microtubule_track_for_vesicle",
+                "source_role": "track",
+                "target_role": "cargo",
+                "capability": "DETERMINISTIC",
+                "evidence_ids": [
+                  "E_9af4c0e6bde1"
+                ],
+                "support": [
+                  {
+                    "evidence_id": "E_9af4c0e6bde1",
+                    "quote": "provide a track along which vesicles move through the cell",
+                    "location": "paragraph_12"
+                  }
+                ]
+              }
+            ],
+            "evidence_ids": [
+              "E_9af4c0e6bde1"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_9af4c0e6bde1",
+                "quote": "provide a track along which vesicles move through the cell",
+                "location": "paragraph_12"
+              },
+              {
+                "evidence_id": "E_9af4c0e6bde1",
+                "quote": "allow cytoplasm and vesicles to move within the cell",
+                "location": "paragraph_1"
+              }
+            ],
+            "exceptions": [
+              {
+                "exception_id": "exc_no_track",
+                "description": "Vesicle transport along microtubules does not occur if no microtubule track is available.",
+                "evidence_ids": [
+                  "E_9af4c0e6bde1"
+                ]
+              }
+            ],
+            "precondition_state_refs": [
+              "st_microtubule_available_as_track",
+              "st_vesicle_present"
+            ],
+            "effect_state_refs": [
+              "st_vesicle_moving_along_microtubule"
+            ]
+          }
+        ],
+        "unresolved_questions": [
+          {
+            "question_id": "uq_motor_protein_identity",
+            "description": "The retrieved passages state that microtubules provide a track for vesicle movement but do not name or describe the motor proteins (e.g., kinesin, dynein) or their mechanochemical cycle. Therefore, motor-protein-dependent mechanism details remain unresolved from the supplied evidence.",
+            "evidence_ids": [
+              "E_9af4c0e6bde1"
+            ],
+            "status": "unresolved"
+          },
+          {
+            "question_id": "uq_directionality",
+            "description": "The retrieved passages do not specify directionality (anterograde vs. retrograde) of vesicle transport along microtubules; this remains unresolved from the supplied evidence.",
+            "evidence_ids": [
+              "E_9af4c0e6bde1"
+            ],
+            "status": "unresolved"
+          },
+          {
+            "question_id": "uq_organism_specificity",
+            "description": "The retrieved passages do not restrict the microtubule-track statement for vesicles to a particular eukaryotic organism or cell type; organism scope is therefore generalized and unresolved.",
+            "evidence_ids": [
+              "E_9af4c0e6bde1"
+            ],
+            "status": "unresolved"
+          }
+        ],
+        "clip_start": {
+          "stage": "Steady-state eukaryotic cell in which microtubules are present as tracks and vesicles are present as cargo for movement along those tracks.",
+          "existing_entity_refs": [
+            "ent_cytoskeleton",
+            "ent_microtubule",
+            "ent_vesicle"
+          ],
+          "omitted_processes": [
+            {
+              "description": "Microtubule assembly and disassembly dynamics",
+              "reason": "Retrieved evidence notes that microtubules can disassemble and reform quickly, but the requested teaching scope is vesicle transport along microtubules, not microtubule dynamics.",
+              "required_by_task": false
+            },
+            {
+              "description": "Vesicle cargo selection and membrane fusion",
+              "reason": "The retrieved passages do not describe vesicle cargo selection or fusion mechanisms; these are outside the stated scope.",
+              "required_by_task": false
+            },
+            {
+              "description": "Motor-protein identity and detailed mechanochemical stepping cycle",
+              "reason": "The retrieved evidence E_9af4c0e6bde1 states that microtubules provide a track along which vesicles move but does not name or mechanistically describe motor proteins for vesicle transport; motor-protein-dependent details are therefore outside the supported scope of this model.",
+              "required_by_task": false
+            }
+          ]
+        },
+        "states": [
+          {
+            "state_id": "st_microtubule_present",
+            "subject_ref": "ent_microtubule",
+            "property": "present_as_track",
+            "value": true,
+            "state_kind": "INITIAL_CONDITION",
+            "scope": {
+              "process_ids": [
+                "proc_microtubule_track_provision",
+                "proc_vesicle_transport_along_microtubule"
+              ]
+            },
+            "producer_process_id": null,
+            "required_by_process_ids": [
+              "proc_microtubule_track_provision"
+            ],
+            "evidence_ids": [
+              "E_9af4c0e6bde1"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_9af4c0e6bde1",
+                "quote": "provide a track along which vesicles move through the cell",
+                "location": "paragraph_12"
+              }
+            ]
+          },
+          {
+            "state_id": "st_microtubule_available_as_track",
+            "subject_ref": "ent_microtubule",
+            "property": "available_as_track",
+            "value": true,
+            "state_kind": "PRODUCED_STATE",
+            "scope": {
+              "process_ids": [
+                "proc_microtubule_track_provision",
+                "proc_vesicle_transport_along_microtubule"
+              ]
+            },
+            "producer_process_id": "proc_microtubule_track_provision",
+            "required_by_process_ids": [
+              "proc_vesicle_transport_along_microtubule"
+            ],
+            "evidence_ids": [
+              "E_9af4c0e6bde1"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_9af4c0e6bde1",
+                "quote": "provide a track along which vesicles move through the cell",
+                "location": "paragraph_12"
+              }
+            ]
+          },
+          {
+            "state_id": "st_vesicle_present",
+            "subject_ref": "ent_vesicle",
+            "property": "present",
+            "value": true,
+            "state_kind": "INITIAL_CONDITION",
+            "scope": {
+              "process_ids": [
+                "proc_vesicle_transport_along_microtubule"
+              ]
+            },
+            "producer_process_id": null,
+            "required_by_process_ids": [
+              "proc_vesicle_transport_along_microtubule"
+            ],
+            "evidence_ids": [
+              "E_9af4c0e6bde1"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_9af4c0e6bde1",
+                "quote": "provide a track along which vesicles move through the cell",
+                "location": "paragraph_12"
+              }
+            ]
+          },
+          {
+            "state_id": "st_vesicle_moving_along_microtubule",
+            "subject_ref": "ent_vesicle",
+            "property": "moving_along_microtubule",
+            "value": true,
+            "state_kind": "PRODUCED_STATE",
+            "scope": {
+              "process_ids": [
+                "proc_vesicle_transport_along_microtubule"
+              ]
+            },
+            "producer_process_id": "proc_vesicle_transport_along_microtubule",
+            "required_by_process_ids": [],
+            "evidence_ids": [
+              "E_9af4c0e6bde1"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_9af4c0e6bde1",
+                "quote": "provide a track along which vesicles move through the cell",
+                "location": "paragraph_12"
+              },
+              {
+                "evidence_id": "E_9af4c0e6bde1",
+                "quote": "allow cytoplasm and vesicles to move within the cell",
+                "location": "paragraph_1"
+              }
+            ]
+          }
+        ]
+      },
+      "candidate_model_hash": "fed67fd4329ae98a854ade05040c372abfb44695b0d6cdf4f5d9ffc96465a04e",
+      "initial_states": [
+        {
+          "state_id": "st_microtubule_present",
+          "subject_ref": "ent_microtubule",
+          "property": "present_as_track",
+          "value": true,
+          "state_kind": "INITIAL_CONDITION",
+          "scope": {
+            "process_ids": [
+              "proc_microtubule_track_provision",
+              "proc_vesicle_transport_along_microtubule"
+            ]
+          },
+          "producer_process_id": null,
+          "required_by_process_ids": [
+            "proc_microtubule_track_provision"
+          ],
+          "evidence_ids": [
+            "E_9af4c0e6bde1"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_9af4c0e6bde1",
+              "quote": "provide a track along which vesicles move through the cell",
+              "location": "paragraph_12"
+            }
+          ]
+        },
+        {
+          "state_id": "st_vesicle_present",
+          "subject_ref": "ent_vesicle",
+          "property": "present",
+          "value": true,
+          "state_kind": "INITIAL_CONDITION",
+          "scope": {
+            "process_ids": [
+              "proc_vesicle_transport_along_microtubule"
+            ]
+          },
+          "producer_process_id": null,
+          "required_by_process_ids": [
+            "proc_vesicle_transport_along_microtubule"
+          ],
+          "evidence_ids": [
+            "E_9af4c0e6bde1"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_9af4c0e6bde1",
+              "quote": "provide a track along which vesicles move through the cell",
+              "location": "paragraph_12"
+            }
+          ]
+        }
+      ],
+      "causal_status": "PASS",
+      "independent_review": "REVISE",
+      "remaining_issues": [
+        {
+          "target_id": "scope",
+          "reason": "Task explicitly requests 'motor-protein-dependent' vesicle transport, but the model excludes motor proteins (identity AND mechanism) as out-of-scope because the single retrieved OpenStax excerpt never mentions motors. The model thus formally represents only passive track provision, not the motor-dependent transport the task asked for. This is a scope/evidence-gap mismatch that must be flagged and either the evidence supplemented or the scope honestly delimited as 'motor dependence not evidenced here'.",
+          "evidence_ids": [
+            "E_9af4c0e6bde1"
+          ]
+        },
+        {
+          "target_id": "proc_vesicle_transport_along_microtubule",
+          "reason": "The process is labeled 'transport' with effect 'vesicle_moves_through_cell', but the only source sentence ('provide a track along which vesicles move') does not entail an active motor-driven transport process as the process semantically encodes. Treating movement along the microtubule as a process distinct from the 'track provision' process is un-entailed duplication; the source supports a single passive track relationship, not two coupled processes with shared concurrent scope.",
+          "evidence_ids": [
+            "E_9af4c0e6bde1"
+          ]
+        },
+        {
+          "target_id": "proc_microtubule_track_provision",
+          "reason": "This 'process' has identical input and output roles (track_provider, cargo_guided) and produces a state 'available_as_track' that is merely a re-labeling of the initial condition 'present_as_track'. It is not a source-supported causal state change; the excerpt asserts a static structural capability, not a process that transforms microtubules into tracks. This inflates a structural relation into an unsupported process with no measured transition.",
+          "evidence_ids": [
+            "E_9af4c0e6bde1"
+          ]
+        },
+        {
+          "target_id": "obs_vesicle_transport_relation / obs_track_relation_during_transport",
+          "reason": "Both observables are declared DETERMINISTIC but the source only states that microtubules 'provide a track along which vesicles move' (a general structural statement) plus 'allow cytoplasm and vesicles to move within the cell'. Neither entails a deterministic, per-vesicle observable that a vesicle is moving along a specific microtubule during a bounded temporal window. Marking as DETERMINISTIC overstates entailment; capability should reflect uncertain/qualitative source framing.",
+          "evidence_ids": [
+            "E_9af4c0e6bde1"
+          ]
+        },
+        {
+          "target_id": "organism_context / excluded_processes",
+          "reason": "Organism context generalized to 'eukaryotic cells' is defensible, but excluded processes list claims motor mechanism is 'not specified in retrieved passages' while the task demanded motor dependence — the model silently converts a required teaching element into an exclusion instead of surfacing it as a blocking evidence gap. Teaching simplification must be labeled as such (not-motor-evidenced), not presented as an approved scope decision.",
+          "evidence_ids": [
+            "E_9af4c0e6bde1"
+          ]
+        }
+      ],
+      "accepted": false,
+      "attempts": 3,
+      "candidate_path": "science_formal/vesicle_transport/automatic/repairs/attempt_2/candidate.json"
+    },
+    {
       "topic": "dna_replication",
       "original_model_hash": "0b010f9f174be631781ddedb93a1e3099c02622e7c904d37745116403de614be",
       "candidate_model": {
         "model_id": "dna_replication_local_eukaryotic_priming_extension_maturation_v1",
-        "schema_version": "1.0",
+        "schema_version": "1.1",
         "scope": {
           "topic": "dna replication",
           "organism_context": "eukaryote",
@@ -150,6 +728,36 @@
               {
                 "evidence_id": "E_d8ffea5a5785",
                 "quote": "The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond.",
+                "location": "paragraph_4"
+              }
+            ]
+          },
+          {
+            "semantic_id": "ENT_DNA_TEMPLATE",
+            "scientific_name": "DNA template strand (local lagging-strand region)",
+            "entity_type": "nucleic_acid",
+            "evidence_ids": [
+              "E_d8ffea5a5785"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_d8ffea5a5785",
+                "quote": "Before replication can start, the DNA has to be made available as a template.",
+                "location": "paragraph_3"
+              }
+            ]
+          },
+          {
+            "semantic_id": "ENT_DNA_REPLACEMENT_PRODUCT",
+            "scientific_name": "DNA replacement synthesis product (gap-filling DNA)",
+            "entity_type": "nucleic_acid",
+            "evidence_ids": [
+              "E_d8ffea5a5785"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_d8ffea5a5785",
+                "quote": "The displaced primer RNA is then removed by RNase H (AKA flap endonuclease ) and replaced with DNA nucleotides.",
                 "location": "paragraph_4"
               }
             ]
@@ -322,7 +930,13 @@
                 "location": "paragraph_4"
               }
             ],
-            "exceptions": []
+            "exceptions": [],
+            "precondition_state_refs": [
+              "ST_DNA_TEMPLATE_AVAILABLE"
+            ],
+            "effect_state_refs": [
+              "ST_PRIMER_PRESENT"
+            ]
           },
           {
             "process_semantic_id": "PROC_POL_ALPHA_EXTENSION",
@@ -390,7 +1004,14 @@
                 "location": "paragraph_4"
               }
             ],
-            "exceptions": []
+            "exceptions": [],
+            "precondition_state_refs": [
+              "ST_PRIMER_PRESENT"
+            ],
+            "effect_state_refs": [
+              "ST_SHORT_DNA_ADDED",
+              "ST_HANDOFF_READY"
+            ]
           },
           {
             "process_semantic_id": "PROC_POL_DELTA_EXTENSION",
@@ -418,7 +1039,7 @@
               "product"
             ],
             "preconditions": {
-              "pol_alpha_handoff_complete": "DNA polymerase alpha has added a short DNA fragment and handed off"
+              "pol_alpha_handoff_complete": "DNA polymerase alpha has added a short DNA fragment and handed off (generic second polymerase; specific identity to pol δ on lagging strand is schematic inference, flagged)"
             },
             "effects": {
               "okazaki_fragment_synthesized": "lagging strand DNA synthesized in a short stretch",
@@ -480,7 +1101,14 @@
                 "location": "paragraph_4"
               }
             ],
-            "exceptions": []
+            "exceptions": [],
+            "precondition_state_refs": [
+              "ST_HANDOFF_READY"
+            ],
+            "effect_state_refs": [
+              "ST_OKAZAKI_FRAGMENT_SYNTHESIZED",
+              "ST_PRIMER_DISPLACED"
+            ]
           },
           {
             "process_semantic_id": "PROC_PRIMER_REMOVAL",
@@ -548,7 +1176,16 @@
                 "location": "paragraph_4"
               }
             ],
-            "exceptions": []
+            "exceptions": [],
+            "precondition_state_refs": [
+              "ST_PRIMER_DISPLACED"
+            ],
+            "effect_state_refs": [
+              "ST_PRIMER_REMOVED"
+            ],
+            "terminates_state_refs": [
+              "ST_PRIMER_DISPLACED"
+            ]
           },
           {
             "process_semantic_id": "PROC_LIGATION",
@@ -572,7 +1209,7 @@
               "substrate"
             ],
             "preconditions": {
-              "primers_replaced": "RNA primers replaced with DNA nucleotides"
+              "primers_replaced": "RNA primers replaced with DNA nucleotides (modeled by PROC_PRIMER_REPLACEMENT)"
             },
             "effects": {
               "gaps_sealed": "gaps sealed by DNA ligase forming phosphodiester bond",
@@ -616,7 +1253,88 @@
                 "location": "paragraph_4"
               }
             ],
-            "exceptions": []
+            "exceptions": [],
+            "precondition_state_refs": [
+              "ST_GAP_SUBSTRATE_READY"
+            ],
+            "effect_state_refs": [
+              "ST_GAPS_SEALED",
+              "ST_OKAZAKI_FRAGMENTS_JOINED"
+            ]
+          },
+          {
+            "process_semantic_id": "PROC_PRIMER_REPLACEMENT",
+            "scientific_name": "Replacement of removed primer RNA with DNA nucleotides",
+            "action_category": "synthesis",
+            "participants": [
+              {
+                "role": "product",
+                "entity_ref": "ENT_DNA_REPLACEMENT_PRODUCT"
+              },
+              {
+                "role": "template",
+                "entity_ref": "ENT_DNA_TEMPLATE"
+              }
+            ],
+            "input_roles": [
+              "template"
+            ],
+            "output_roles": [
+              "product"
+            ],
+            "preconditions": {
+              "primer_removed": "displaced primer RNA removed by RNase H"
+            },
+            "effects": {
+              "replacement_dna_synthesized": "DNA nucleotides replace removed RNA primer",
+              "gap_substrate_ready": "remaining gap between DNA fragments available for ligation"
+            },
+            "temporal_scope": {
+              "start_condition": "primer RNA removed",
+              "end_condition": "DNA nucleotides replace RNA primer",
+              "concurrent_with": [],
+              "after": [
+                "PROC_PRIMER_REMOVAL"
+              ]
+            },
+            "observables": [
+              {
+                "constraint_id": "OBS_PRIMER_REPLACED_WITH_DNA",
+                "predicate": "state_transition_allowed",
+                "state_key": "replacement_state",
+                "source_role": "template",
+                "target_role": "product",
+                "capability": "PARTIAL",
+                "evidence_ids": [
+                  "E_d8ffea5a5785"
+                ],
+                "support": [
+                  {
+                    "evidence_id": "E_d8ffea5a5785",
+                    "quote": "and replaced with DNA nucleotides",
+                    "location": "paragraph_4"
+                  }
+                ]
+              }
+            ],
+            "evidence_ids": [
+              "E_d8ffea5a5785"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_d8ffea5a5785",
+                "quote": "The displaced primer RNA is then removed by RNase H (AKA flap endonuclease ) and replaced with DNA nucleotides.",
+                "location": "paragraph_4"
+              }
+            ],
+            "exceptions": [],
+            "precondition_state_refs": [
+              "ST_PRIMER_REMOVED"
+            ],
+            "effect_state_refs": [
+              "ST_REPLACEMENT_DNA_SYNTHESIZED",
+              "ST_GAP_SUBSTRATE_READY"
+            ]
           }
         ],
         "unresolved_questions": [
@@ -640,31 +1358,405 @@
             "question": "The identity of the DNA polymerase or process that replaces removed RNA primer with DNA nucleotides is not specified in the supplied passage.",
             "status": "unresolved"
           }
+        ],
+        "clip_start": {
+          "stage": "local lagging-strand region after origin unwinding; DNA template accessible and primase recruited",
+          "existing_entity_refs": [
+            "ENT_DNA_TEMPLATE",
+            "ENT_PRIMASE",
+            "ENT_RNA_PRIMER",
+            "ENT_POL_ALPHA",
+            "ENT_POL_DELTA",
+            "ENT_RNASE_H",
+            "ENT_DNA_LIGASE",
+            "ENT_LAGGING_DNA_PRODUCT",
+            "ENT_GAP_SUBSTRATE",
+            "ENT_DNA_REPLACEMENT_PRODUCT"
+          ],
+          "omitted_processes": [
+            {
+              "description": "Origin recognition and pre-replication complex assembly",
+              "reason": "Task states origins already covered; excluded by scope.",
+              "required_by_task": false
+            },
+            {
+              "description": "Helicase unwinding and topoisomerase supercoiling relief",
+              "reason": "Excluded by scope; template accessibility treated as initial condition supported by source general statement.",
+              "required_by_task": false
+            },
+            {
+              "description": "Leading-strand continuous synthesis by DNA polymerase epsilon",
+              "reason": "Excluded by scope; local lagging-strand region only.",
+              "required_by_task": false
+            },
+            {
+              "description": "Telomerase-mediated telomere elongation",
+              "reason": "Excluded by scope; not local replication maturation event requested.",
+              "required_by_task": false
+            },
+            {
+              "description": "Nucleosome/histone removal and replacement",
+              "reason": "Excluded by scope; not required for local priming/extension/maturation explanation.",
+              "required_by_task": false
+            },
+            {
+              "description": "Proofreading and mismatch repair",
+              "reason": "Excluded by scope; not required for described local events.",
+              "required_by_task": false
+            }
+          ]
+        },
+        "states": [
+          {
+            "state_id": "ST_DNA_TEMPLATE_AVAILABLE",
+            "subject_ref": "ENT_DNA_TEMPLATE",
+            "property": "template_availability",
+            "value": "accessible",
+            "state_kind": "INITIAL_CONDITION",
+            "scope": {
+              "region": "local lagging-strand region",
+              "clip": "before primer formation"
+            },
+            "producer_process_id": null,
+            "required_by_process_ids": [
+              "PROC_PRIMER_FORMATION"
+            ],
+            "evidence_ids": [
+              "E_d8ffea5a5785"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_d8ffea5a5785",
+                "quote": "Before replication can start, the DNA has to be made available as a template.",
+                "location": "paragraph_3"
+              }
+            ]
+          },
+          {
+            "state_id": "ST_PRIMER_PRESENT",
+            "subject_ref": "ENT_RNA_PRIMER",
+            "property": "presence",
+            "value": "formed",
+            "state_kind": "PRODUCED_STATE",
+            "scope": {
+              "region": "local lagging-strand region",
+              "clip": "after primase action"
+            },
+            "producer_process_id": "PROC_PRIMER_FORMATION",
+            "required_by_process_ids": [
+              "PROC_POL_ALPHA_EXTENSION"
+            ],
+            "evidence_ids": [
+              "E_d8ffea5a5785"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_d8ffea5a5785",
+                "quote": "Primers are formed by the enzyme primase, and using the primer, DNA pol can start synthesis.",
+                "location": "paragraph_4"
+              }
+            ]
+          },
+          {
+            "state_id": "ST_SHORT_DNA_ADDED",
+            "subject_ref": "ENT_RNA_PRIMER",
+            "property": "extension",
+            "value": "short_dna_fragment_added",
+            "state_kind": "PRODUCED_STATE",
+            "scope": {
+              "region": "local lagging-strand region",
+              "clip": "after pol alpha extension"
+            },
+            "producer_process_id": "PROC_POL_ALPHA_EXTENSION",
+            "required_by_process_ids": [],
+            "evidence_ids": [
+              "E_d8ffea5a5785"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_d8ffea5a5785",
+                "quote": "DNA pol α adds a short (20 to 30 nucleotides) DNA fragment to the RNA primer on both strands",
+                "location": "paragraph_4"
+              }
+            ],
+            "uncertainty": "Subject is the primer; the added DNA is a distinct product. Observable OBS_ALPHA_EXTENDS_PRIMER remains PARTIAL; representation preserves source wording while acknowledging primer/DNA distinction (review issue)."
+          },
+          {
+            "state_id": "ST_HANDOFF_READY",
+            "subject_ref": "ENT_POL_ALPHA",
+            "property": "handoff_status",
+            "value": "ready_for_second_polymerase",
+            "state_kind": "PRODUCED_STATE",
+            "scope": {
+              "region": "local lagging-strand region",
+              "clip": "after pol alpha extension"
+            },
+            "producer_process_id": "PROC_POL_ALPHA_EXTENSION",
+            "required_by_process_ids": [
+              "PROC_POL_DELTA_EXTENSION"
+            ],
+            "evidence_ids": [
+              "E_d8ffea5a5785"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_d8ffea5a5785",
+                "quote": "and then hands off to a second polymerase",
+                "location": "paragraph_4"
+              }
+            ],
+            "uncertainty": "Source names only 'a second polymerase'; direct handoff to pol δ on lagging strand is schematic inference (ISS_002, review)."
+          },
+          {
+            "state_id": "ST_OKAZAKI_FRAGMENT_SYNTHESIZED",
+            "subject_ref": "ENT_LAGGING_DNA_PRODUCT",
+            "property": "synthesis_status",
+            "value": "short_stretch_synthesized",
+            "state_kind": "PRODUCED_STATE",
+            "scope": {
+              "region": "local lagging-strand region",
+              "clip": "during pol delta extension"
+            },
+            "producer_process_id": "PROC_POL_DELTA_EXTENSION",
+            "required_by_process_ids": [],
+            "evidence_ids": [
+              "E_d8ffea5a5785"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_d8ffea5a5785",
+                "quote": "the lagging strand is synthesized by pol δ .",
+                "location": "paragraph_4"
+              }
+            ]
+          },
+          {
+            "state_id": "ST_PRIMER_DISPLACED",
+            "subject_ref": "ENT_RNA_PRIMER",
+            "property": "template_attachment",
+            "value": "displaced_from_template",
+            "state_kind": "PRODUCED_STATE",
+            "scope": {
+              "region": "local lagging-strand region",
+              "clip": "when pol delta reaches primer"
+            },
+            "producer_process_id": "PROC_POL_DELTA_EXTENSION",
+            "required_by_process_ids": [
+              "PROC_PRIMER_REMOVAL"
+            ],
+            "evidence_ids": [
+              "E_d8ffea5a5785"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_d8ffea5a5785",
+                "quote": "As pol δ runs into the primer RNA on the lagging strand, it displaces it from the DNA template.",
+                "location": "paragraph_4"
+              }
+            ],
+            "uncertainty": "Source does not specify whether displaced primer belongs to same Okazaki fragment being extended or downstream fragment; local context preserved but exact fragment identity unresolved (review issue)."
+          },
+          {
+            "state_id": "ST_PRIMER_REMOVED",
+            "subject_ref": "ENT_RNA_PRIMER",
+            "property": "presence",
+            "value": "removed",
+            "state_kind": "PRODUCED_STATE",
+            "scope": {
+              "region": "local lagging-strand region",
+              "clip": "after RNase H action"
+            },
+            "producer_process_id": "PROC_PRIMER_REMOVAL",
+            "required_by_process_ids": [
+              "PROC_PRIMER_REPLACEMENT"
+            ],
+            "evidence_ids": [
+              "E_d8ffea5a5785"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_d8ffea5a5785",
+                "quote": "The displaced primer RNA is then removed by RNase H (AKA flap endonuclease )",
+                "location": "paragraph_4"
+              }
+            ],
+            "uncertainty": "Source parenthetically equates RNase H with flap endonuclease; single-actor removal is not asserted beyond source wording (ISS_001, review observable INSUFFICIENT_EVIDENCE)."
+          },
+          {
+            "state_id": "ST_REPLACEMENT_DNA_SYNTHESIZED",
+            "subject_ref": "ENT_DNA_REPLACEMENT_PRODUCT",
+            "property": "synthesis_status",
+            "value": "replacement_dna_synthesized",
+            "state_kind": "PRODUCED_STATE",
+            "scope": {
+              "region": "local lagging-strand region",
+              "clip": "after primer replacement"
+            },
+            "producer_process_id": "PROC_PRIMER_REPLACEMENT",
+            "required_by_process_ids": [],
+            "evidence_ids": [
+              "E_d8ffea5a5785"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_d8ffea5a5785",
+                "quote": "and replaced with DNA nucleotides",
+                "location": "paragraph_4"
+              }
+            ],
+            "uncertainty": "Source does not specify polymerase identity for replacement; process modeled generically to preserve mechanism without asserting unsupported actor (ISS_003)."
+          },
+          {
+            "state_id": "ST_GAP_SUBSTRATE_READY",
+            "subject_ref": "ENT_GAP_SUBSTRATE",
+            "property": "replacement_status",
+            "value": "dna_replacement_completed",
+            "state_kind": "PRODUCED_STATE",
+            "scope": {
+              "region": "local lagging-strand region",
+              "clip": "between primer replacement and ligation"
+            },
+            "producer_process_id": "PROC_PRIMER_REPLACEMENT",
+            "required_by_process_ids": [
+              "PROC_LIGATION"
+            ],
+            "evidence_ids": [
+              "E_d8ffea5a5785"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_d8ffea5a5785",
+                "quote": "The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond.",
+                "location": "paragraph_4"
+              }
+            ],
+            "uncertainty": "Gap substrate is a simplified nucleic-acid-region placeholder; distinct nicked phosphodiester-backbone state not modeled (ISS_005)."
+          },
+          {
+            "state_id": "ST_GAPS_SEALED",
+            "subject_ref": "ENT_GAP_SUBSTRATE",
+            "property": "seal_status",
+            "value": "sealed",
+            "state_kind": "PRODUCED_STATE",
+            "scope": {
+              "region": "local lagging-strand region",
+              "clip": "after ligation"
+            },
+            "producer_process_id": "PROC_LIGATION",
+            "required_by_process_ids": [],
+            "evidence_ids": [
+              "E_d8ffea5a5785"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_d8ffea5a5785",
+                "quote": "The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond.",
+                "location": "paragraph_4"
+              }
+            ]
+          },
+          {
+            "state_id": "ST_OKAZAKI_FRAGMENTS_JOINED",
+            "subject_ref": "ENT_LAGGING_DNA_PRODUCT",
+            "property": "fragment_joining",
+            "value": "joined",
+            "state_kind": "PRODUCED_STATE",
+            "scope": {
+              "region": "local lagging-strand region",
+              "clip": "after ligation"
+            },
+            "producer_process_id": "PROC_LIGATION",
+            "required_by_process_ids": [],
+            "evidence_ids": [
+              "E_d8ffea5a5785"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_d8ffea5a5785",
+                "quote": "The Okazaki fragments in the lagging strand are joined after the replacement of the RNA primers with DNA.",
+                "location": "paragraph_4"
+              }
+            ]
+          }
         ]
       },
-      "candidate_model_hash": "0b010f9f174be631781ddedb93a1e3099c02622e7c904d37745116403de614be",
-      "initial_states": [],
-      "causal_status": "REVIEW_INCOMPLETE",
-      "independent_review": "NEW_REVIEW_NOT_EXECUTED",
-      "historical_independent_review": "REVISE",
-      "remaining_issues": [
+      "candidate_model_hash": "ca007e0b60def85401c0ff2d8be6c4ef20fe707ad14f5968fcb350e496233b7a",
+      "initial_states": [
         {
-          "reason": "Current API402 blocked new migration/review; historical model retained"
+          "state_id": "ST_DNA_TEMPLATE_AVAILABLE",
+          "subject_ref": "ENT_DNA_TEMPLATE",
+          "property": "template_availability",
+          "value": "accessible",
+          "state_kind": "INITIAL_CONDITION",
+          "scope": {
+            "region": "local lagging-strand region",
+            "clip": "before primer formation"
+          },
+          "producer_process_id": null,
+          "required_by_process_ids": [
+            "PROC_PRIMER_FORMATION"
+          ],
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_d8ffea5a5785",
+              "quote": "Before replication can start, the DNA has to be made available as a template.",
+              "location": "paragraph_3"
+            }
+          ]
         }
       ],
-      "formal_error": {
-        "error_type": "RuntimeError",
-        "message": "Prior uncertain/failed API state for this provider; paid requests stopped",
-        "stage": "SCIENCE_LOOP"
-      },
-      "candidate_path": null
+      "causal_status": "PASS",
+      "independent_review": "REVISE",
+      "remaining_issues": [
+        {
+          "target_id": "PROC_PRIMER_REPLACEMENT",
+          "reason": "Source states removed primer RNA is 'replaced with DNA nucleotides' but does not identify any enzyme, template usage, or process actor; modeling this as a template-directed synthesis process with a DNA replacement product adds an unsupported mechanism and actor. Also, this process is required for ligation precondition but is not listed in scope.included_processes, and it is not the 'one local maturation event' requested.",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ]
+        },
+        {
+          "target_id": "ST_HANDOFF_READY",
+          "reason": "Source says pol α 'hands off to a second polymerase' without naming pol δ on the lagging strand. The model's PROC_POL_DELTA_EXTENSION precondition explicitly treats handoff to pol δ as schematic inference, yet the state is encoded as a required deterministic causal link to pol δ. This conflates source-supported generic handoff with an unsupported specific identity.",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ]
+        },
+        {
+          "target_id": "ENT_RNASE_H",
+          "reason": "Source parenthetically labels RNase H as 'AKA flap endonuclease', which is biologically inaccurate; RNase H and flap endonuclease are distinct activities. The model correctly flags unresolved equivalence in unresolved_questions and simplifications, but the entity scientific_name 'RNase H' and REL_RNASE_H_REMOVES_PRIMER plus OBS_PRIMER_REMOVED still assert a single actor removes displaced primer. For grades 10-12 this risks teaching a misleading equivalence unless the observable is marked INSUFFICIENT_EVIDENCE or the entity is genericized.",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ]
+        },
+        {
+          "target_id": "OBS_ALPHA_EXTENDS_PRIMER",
+          "reason": "Source says pol α adds a short DNA fragment 'to the RNA primer'; the model's observable uses relation_holds_during with target_role 'substrate' = ENT_RNA_PRIMER and state ST_SHORT_DNA_ADDED has subject_ref ENT_RNA_PRIMER with property 'extension'. This conflates primer as substrate with the added DNA as a distinct product; the model itself notes subject/product distinction uncertainty. Observable semantics are therefore only partially source-supported and should be revised to explicitly represent product DNA or downgraded.",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ]
+        },
+        {
+          "target_id": "ST_GAP_SUBSTRATE_READY",
+          "reason": "Source distinguishes Okazaki fragment joining after primer replacement and says 'gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond.' The model's ENT_GAP_SUBSTRATE is a generic nucleic_acid_region and ST_GAP_SUBSTRATE_READY value 'dna_replacement_completed' does not preserve the nicked phosphodiester-backbone state that ligase actually seals. The observable OBS_GAPS_SEALED is marked PARTIAL but the state semantics are ambiguous and could mislead about what ligase does.",
+          "evidence_ids": [
+            "E_d8ffea5a5785"
+          ]
+        }
+      ],
+      "accepted": false,
+      "attempts": 3,
+      "candidate_path": "science_formal/dna_replication/automatic/repairs/attempt_2/candidate.json"
     },
     {
       "topic": "mitosis",
       "original_model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
       "candidate_model": {
         "model_id": "mitosis_chromosome_alignment_separation_v3",
-        "schema_version": "1.0",
+        "schema_version": "1.1",
         "scope": {
           "topic": "Mitosis: duplicated chromosome alignment and sister chromatid separation in eukaryotic cells",
           "organism_context": "eukaryotic cells (animal cell examples with centrosomes/centrioles; plant/fungi differences noted but not modeled)",
@@ -878,7 +1970,7 @@
           {
             "semantic_id": "REL_duplicated_chromosome_at_metaphase_plate",
             "relation_type": "located_at",
-            "definition": "During metaphase, the modeled single duplicated chromosome is aligned at the metaphase plate (equatorial plane); this is an instantiation of the source's statement that all chromosomes are so aligned.",
+            "definition": "Instantiation of the source's universal statement: for the single modeled duplicated chromosome (one sister-chromatid pair), during metaphase it is aligned at the metaphase plate (equatorial plane) midway between the two poles. The relation holds for this instance only; it does not assert universal quantification across all chromosomes.",
             "source_entity": "ENT_duplicated_chromosome",
             "target_entity": "ENT_spatial_landmark",
             "evidence_ids": [
@@ -887,7 +1979,7 @@
             "support": [
               {
                 "evidence_id": "E_dcb0de9a22b0",
-                "quote": "all the chromosomes are aligned in a plane called the metaphase plate , or the equatorial plane, midway between the two poles of the cell.",
+                "quote": "all the chromosomes are aligned in a plane called the metaphase plate",
                 "location": "paragraph_29"
               }
             ]
@@ -984,7 +2076,16 @@
                 "location": "paragraph_27"
               }
             ],
-            "exceptions": []
+            "exceptions": [],
+            "precondition_state_refs": [
+              "ST_kinetochore_formed_per_chromatid",
+              "ST_spindle_microtubules_present"
+            ],
+            "effect_state_refs": [
+              "ST_bipolar_kinetochore_attachment",
+              "ST_sister_kinetochores_face_opposite_poles"
+            ],
+            "terminates_state_refs": []
           },
           {
             "process_semantic_id": "PROC_metaphase_alignment",
@@ -1053,7 +2154,16 @@
                 "location": "paragraph_29"
               }
             ],
-            "exceptions": []
+            "exceptions": [],
+            "precondition_state_refs": [
+              "ST_bipolar_kinetochore_attachment",
+              "ST_sister_kinetochores_face_opposite_poles",
+              "ST_cohesin_holding_sister_chromatids"
+            ],
+            "effect_state_refs": [
+              "ST_duplicated_chromosome_aligned_at_metaphase_plate"
+            ],
+            "terminates_state_refs": []
           },
           {
             "process_semantic_id": "PROC_anaphase_sister_separation",
@@ -1132,9 +2242,10 @@
                 "constraint_id": "OBS_two_daughter_chromatids_after_separation",
                 "predicate": "state_transition_allowed",
                 "state_key": "sister_chromatid_attachment",
-                "to_value": "separated",
+                "to_value": "broken down",
                 "precondition": {
-                  "metaphase_alignment": "Duplicated chromosome aligned at metaphase plate (schematic phase order)."
+                  "metaphase_alignment": "Duplicated chromosome aligned at metaphase plate (schematic phase order).",
+                  "cohesin_present_prior": "Sister chromatids still tightly attached by cohesin proteins prior to anaphase."
                 },
                 "capability": "PARTIAL",
                 "evidence_ids": [
@@ -1166,8 +2277,22 @@
             ],
             "exceptions": [
               {
-                "note": "Source also states 'the cohesin proteins degrade' (paragraph_30); this molecular mechanism is acknowledged but deliberately not modeled as a causal agent, and the process asserts only the observable breakdown and separation."
+                "note": "Source also states 'the cohesin proteins degrade' (paragraph_30); this molecular mechanism is acknowledged but deliberately not modeled as a causal agent. The process asserts only the observable breakdown and separation; no causal sufficiency of microtubule pulling alone is claimed."
               }
+            ],
+            "precondition_state_refs": [
+              "ST_duplicated_chromosome_aligned_at_metaphase_plate",
+              "ST_bipolar_kinetochore_attachment",
+              "ST_cohesin_holding_sister_chromatids"
+            ],
+            "effect_state_refs": [
+              "ST_sister_chromatid_connection_broken",
+              "ST_two_daughter_chromatids_distinct",
+              "ST_daughter_chromatids_moving_to_opposite_poles"
+            ],
+            "terminates_state_refs": [
+              "ST_cohesin_holding_sister_chromatids",
+              "ST_duplicated_chromosome_aligned_at_metaphase_plate"
             ]
           }
         ],
@@ -1188,939 +2313,421 @@
             "question": "Whether phase order (metaphase alignment before anaphase separation) constitutes a strict per-chromosome mechanistic precondition is not explicitly stated; modeled as schematic phase order only.",
             "status": "unresolved"
           }
-        ]
-      },
-      "candidate_model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
-      "initial_states": [],
-      "causal_status": "REVIEW_INCOMPLETE",
-      "independent_review": "NEW_REVIEW_NOT_EXECUTED",
-      "historical_independent_review": "PASS",
-      "remaining_issues": [
-        {
-          "reason": "Current API402 blocked new migration/review; historical model retained"
-        }
-      ],
-      "formal_error": {
-        "error_type": "RuntimeError",
-        "message": "Prior uncertain/failed API state for this provider; paid requests stopped",
-        "stage": "SCIENCE_LOOP"
-      },
-      "candidate_path": null
-    },
-    {
-      "topic": "vesicle_transport",
-      "original_model_hash": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da",
-      "candidate_model": {
-        "model_id": "vesicle_transport_microtubules_v1",
-        "schema_version": "1.1",
-        "scope": {
-          "topic": "Motor-protein-dependent intracellular vesicle transport along microtubules",
-          "organism_context": "eukaryotic cells (general)",
-          "audience": "grades_10_12",
-          "included_processes": [
-            "microtubule track provision for vesicle movement",
-            "vesicle transport along microtubules"
-          ],
-          "excluded_processes": [
-            "motor protein identity and mechanism (not specified in retrieved passages)",
-            "vesicle cargo selection and membrane fusion",
-            "microtubule assembly/disassembly dynamics",
-            "flagellar/ciliary motility using microtubules"
-          ],
-          "simplifications": [
-            "Motor proteins are not named or mechanistically described in the retrieved passages; the model treats them as implicit mediators of vesicle movement along microtubules.",
-            "The retrieved passage states microtubules provide a track along which vesicles move but does not document the motor-protein stepping cycle; this process is therefore not represented as a detailed molecular mechanism.",
-            "Organism context is generalized to eukaryotic cells because the source passage does not restrict the statement to a specific organism."
-          ]
-        },
-        "entities": [
-          {
-            "semantic_id": "ent_microtubule",
-            "scientific_name": "Microtubule",
-            "entity_type": "cytoskeletal polymer",
-            "evidence_ids": [
-              "E_9af4c0e6bde1",
-              "E_a7a76831c1a0"
-            ],
-            "support": [
-              {
-                "evidence_id": "E_9af4c0e6bde1",
-                "quote": "As their name implies, microtubules are small hollow tubes.",
-                "location": "paragraph_12"
-              },
-              {
-                "evidence_id": "E_9af4c0e6bde1",
-                "quote": "Polymerized dimers of α-tubulin and β-tubulin, two globular proteins, comprise the microtubule's walls",
-                "location": "paragraph_12"
-              },
-              {
-                "evidence_id": "E_9af4c0e6bde1",
-                "quote": "provide a track along which vesicles move through the cell",
-                "location": "paragraph_12"
-              },
-              {
-                "evidence_id": "E_a7a76831c1a0",
-                "quote": "Microtubules (MTs) are built from α-/β-tubulin dimers and used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell.",
-                "location": "abstract"
-              }
-            ],
-            "cardinality": 1,
-            "states": {
-              "present": "microtubule is present as a track",
-              "absent": "microtubule is not present",
-              "available_as_track": "microtubule is available as a track for motor-protein-driven cargo transport"
-            }
-          },
-          {
-            "semantic_id": "ent_vesicle",
-            "scientific_name": "Vesicle",
-            "entity_type": "membrane-bound cargo carrier",
-            "evidence_ids": [
-              "E_9af4c0e6bde1",
-              "E_a7a76831c1a0"
-            ],
-            "support": [
-              {
-                "evidence_id": "E_9af4c0e6bde1",
-                "quote": "provide a track along which vesicles move through the cell",
-                "location": "paragraph_12"
-              },
-              {
-                "evidence_id": "E_9af4c0e6bde1",
-                "quote": "allow cytoplasm and vesicles to move within the cell",
-                "location": "paragraph_1"
-              },
-              {
-                "evidence_id": "E_a7a76831c1a0",
-                "quote": "used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell",
-                "location": "abstract"
-              }
-            ],
-            "cardinality": 1,
-            "states": {
-              "moving_along_microtubule": "vesicle is moving along a microtubule track",
-              "stationary": "vesicle is not moving along a microtubule track",
-              "cargo_bound_to_motor": "vesicle cargo is bound to a microtubule motor protein"
-            }
-          },
-          {
-            "semantic_id": "ent_cytoskeleton",
-            "scientific_name": "Cytoskeleton",
-            "entity_type": "cellular protein fiber network",
-            "evidence_ids": [
-              "E_9af4c0e6bde1"
-            ],
-            "support": [
-              {
-                "evidence_id": "E_9af4c0e6bde1",
-                "quote": "Collectively, scientists call this network of protein fibers the cytoskeleton .",
-                "location": "paragraph_1"
-              },
-              {
-                "evidence_id": "E_9af4c0e6bde1",
-                "quote": "There are three types of fibers within the cytoskeleton: microfilaments, intermediate filaments, and microtubules",
-                "location": "paragraph_1"
-              }
-            ],
-            "cardinality": 1,
-            "states": {
-              "present": "cytoskeleton is present"
-            }
-          },
-          {
-            "semantic_id": "ent_motor_protein",
-            "scientific_name": "Microtubule motor protein (kinesin/dynein)",
-            "entity_type": "ATPase motor protein",
-            "evidence_ids": [
-              "E_a7a76831c1a0",
-              "E_3717dae1f63f"
-            ],
-            "support": [
-              {
-                "evidence_id": "E_a7a76831c1a0",
-                "quote": "used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell",
-                "location": "abstract"
-              },
-              {
-                "evidence_id": "E_3717dae1f63f",
-                "quote": "Tau binds microtubules cooperatively to form cohesive envelopes, which are thought to control access to the microtubule lattice and regulate the activity of motor proteins and other MAPs.",
-                "location": "abstract"
-              }
-            ],
-            "cardinality": 1,
-            "states": {
-              "active": "motor protein is active and capable of driving cargo movement along microtubules",
-              "bound_to_cargo": "motor protein is bound to vesicle cargo",
-              "bound_to_microtubule": "motor protein is bound to the microtubule track",
-              "inactive": "motor protein is not driving cargo movement"
-            }
-          }
-        ],
-        "relations": [
-          {
-            "semantic_id": "rel_cytoskeleton_contains_microtubule",
-            "relation_type": "contains_component",
-            "definition": "The cytoskeleton contains microtubules as one of its three fiber types.",
-            "source_entity": "ent_cytoskeleton",
-            "target_entity": "ent_microtubule",
-            "evidence_ids": [
-              "E_9af4c0e6bde1"
-            ],
-            "support": [
-              {
-                "evidence_id": "E_9af4c0e6bde1",
-                "quote": "There are three types of fibers within the cytoskeleton: microfilaments, intermediate filaments, and microtubules",
-                "location": "paragraph_1"
-              }
-            ]
-          },
-          {
-            "semantic_id": "rel_microtubule_track_for_vesicle",
-            "relation_type": "serves_as_track_for_motor_protein_driven_transport_of",
-            "definition": "Microtubules serve as tracks used by kinesin and dynein motor proteins to transport cargoes including vesicles within the cell.",
-            "source_entity": "ent_microtubule",
-            "target_entity": "ent_vesicle",
-            "evidence_ids": [
-              "E_9af4c0e6bde1",
-              "E_a7a76831c1a0"
-            ],
-            "support": [
-              {
-                "evidence_id": "E_9af4c0e6bde1",
-                "quote": "provide a track along which vesicles move through the cell",
-                "location": "paragraph_12"
-              },
-              {
-                "evidence_id": "E_a7a76831c1a0",
-                "quote": "used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell",
-                "location": "abstract"
-              }
-            ]
-          },
-          {
-            "semantic_id": "rel_motor_protein_transports_vesicle",
-            "relation_type": "transports",
-            "definition": "Kinesin and dynein motor proteins transport vesicle cargos along microtubule tracks within the cell.",
-            "source_entity": "ent_motor_protein",
-            "target_entity": "ent_vesicle",
-            "evidence_ids": [
-              "E_a7a76831c1a0"
-            ],
-            "support": [
-              {
-                "evidence_id": "E_a7a76831c1a0",
-                "quote": "used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell",
-                "location": "abstract"
-              }
-            ]
-          },
-          {
-            "semantic_id": "rel_motor_protein_moves_along_microtubule",
-            "relation_type": "moves_along",
-            "definition": "Kinesin and dynein motor proteins move along microtubule tracks while transporting cargo.",
-            "source_entity": "ent_motor_protein",
-            "target_entity": "ent_microtubule",
-            "evidence_ids": [
-              "E_a7a76831c1a0"
-            ],
-            "support": [
-              {
-                "evidence_id": "E_a7a76831c1a0",
-                "quote": "used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell",
-                "location": "abstract"
-              }
-            ]
-          }
-        ],
-        "processes": [
-          {
-            "process_semantic_id": "proc_microtubule_track_provision",
-            "scientific_name": "Microtubule track provision for motor-protein-driven vesicle transport",
-            "action_category": "interaction",
-            "participants": [
-              {
-                "role": "track_provider",
-                "entity_ref": "ent_microtubule"
-              },
-              {
-                "role": "cargo_guided",
-                "entity_ref": "ent_vesicle"
-              },
-              {
-                "role": "motor",
-                "entity_ref": "ent_motor_protein"
-              }
-            ],
-            "input_roles": [
-              "track_provider",
-              "cargo_guided",
-              "motor"
-            ],
-            "output_roles": [
-              "track_provider",
-              "cargo_guided",
-              "motor"
-            ],
-            "preconditions": {
-              "microtubule_present": true,
-              "motor_protein_available": true
-            },
-            "effects": {
-              "vesicle_can_be_transported_along_microtubule_by_motor_protein": true
-            },
-            "temporal_scope": {
-              "start_condition": "Microtubule is present and a motor protein is available to mediate vesicle movement along it.",
-              "end_condition": "Motor-protein-mediated vesicle movement along the microtubule ceases or the microtubule is no longer available as a track.",
-              "concurrent_with": [
-                "proc_motor_protein_binding_to_cargo",
-                "proc_vesicle_transport_along_microtubule"
-              ],
-              "after": []
-            },
-            "observables": [
-              {
-                "constraint_id": "obs_track_relation_during_transport",
-                "predicate": "relation_holds_during",
-                "relation_ref": "rel_microtubule_track_for_vesicle",
-                "source_role": "track_provider",
-                "target_role": "cargo_guided",
-                "capability": "PARTIAL",
-                "evidence_ids": [
-                  "E_9af4c0e6bde1",
-                  "E_a7a76831c1a0"
-                ],
-                "support": [
-                  {
-                    "evidence_id": "E_9af4c0e6bde1",
-                    "quote": "provide a track along which vesicles move through the cell",
-                    "location": "paragraph_12"
-                  },
-                  {
-                    "evidence_id": "E_a7a76831c1a0",
-                    "quote": "used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell",
-                    "location": "abstract"
-                  }
-                ]
-              }
-            ],
-            "evidence_ids": [
-              "E_9af4c0e6bde1",
-              "E_a7a76831c1a0"
-            ],
-            "support": [
-              {
-                "evidence_id": "E_9af4c0e6bde1",
-                "quote": "They help the cell resist compression, provide a track along which vesicles move through the cell, and pull replicated chromosomes to opposite ends of a dividing cell.",
-                "location": "paragraph_12"
-              },
-              {
-                "evidence_id": "E_a7a76831c1a0",
-                "quote": "Microtubules (MTs) are built from α-/β-tubulin dimers and used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell.",
-                "location": "abstract"
-              }
-            ],
-            "exceptions": [
-              {
-                "exception_id": "exc_track_absent",
-                "description": "If microtubules are not present or not serving as tracks, this provision does not hold.",
-                "evidence_ids": [
-                  "E_9af4c0e6bde1"
-                ]
-              }
-            ],
-            "precondition_state_refs": [
-              "st_microtubule_present",
-              "st_motor_protein_active"
-            ],
-            "effect_state_refs": [
-              "st_microtubule_available_as_track"
-            ]
-          },
-          {
-            "process_semantic_id": "proc_vesicle_transport_along_microtubule",
-            "scientific_name": "Motor-protein-dependent vesicle transport along microtubules",
-            "action_category": "transport",
-            "participants": [
-              {
-                "role": "cargo",
-                "entity_ref": "ent_vesicle"
-              },
-              {
-                "role": "track",
-                "entity_ref": "ent_microtubule"
-              },
-              {
-                "role": "motor",
-                "entity_ref": "ent_motor_protein"
-              }
-            ],
-            "input_roles": [
-              "cargo",
-              "track",
-              "motor"
-            ],
-            "output_roles": [
-              "cargo",
-              "track",
-              "motor"
-            ],
-            "preconditions": {
-              "microtubule_present_as_track": true,
-              "vesicle_present": true,
-              "motor_protein_active": true
-            },
-            "effects": {
-              "vesicle_moves_through_cell_via_motor_protein": true
-            },
-            "temporal_scope": {
-              "start_condition": "A motor protein engaged with a vesicle cargo begins moving along a microtubule track.",
-              "end_condition": "Motor-protein-driven movement of the vesicle along the microtubule track ends.",
-              "concurrent_with": [
-                "proc_microtubule_track_provision",
-                "proc_motor_protein_binding_to_cargo"
-              ],
-              "after": []
-            },
-            "observables": [
-              {
-                "constraint_id": "obs_vesicle_transport_relation",
-                "predicate": "relation_holds_during",
-                "relation_ref": "rel_motor_protein_transports_vesicle",
-                "source_role": "motor",
-                "target_role": "cargo",
-                "capability": "PARTIAL",
-                "evidence_ids": [
-                  "E_a7a76831c1a0"
-                ],
-                "support": [
-                  {
-                    "evidence_id": "E_a7a76831c1a0",
-                    "quote": "used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell",
-                    "location": "abstract"
-                  }
-                ]
-              },
-              {
-                "constraint_id": "obs_vesicle_on_microtubule_during_transport",
-                "predicate": "relation_holds_during",
-                "relation_ref": "rel_microtubule_track_for_vesicle",
-                "source_role": "track",
-                "target_role": "cargo",
-                "capability": "PARTIAL",
-                "evidence_ids": [
-                  "E_9af4c0e6bde1",
-                  "E_a7a76831c1a0"
-                ],
-                "support": [
-                  {
-                    "evidence_id": "E_9af4c0e6bde1",
-                    "quote": "provide a track along which vesicles move through the cell",
-                    "location": "paragraph_12"
-                  },
-                  {
-                    "evidence_id": "E_a7a76831c1a0",
-                    "quote": "used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell",
-                    "location": "abstract"
-                  }
-                ]
-              }
-            ],
-            "evidence_ids": [
-              "E_9af4c0e6bde1",
-              "E_a7a76831c1a0"
-            ],
-            "support": [
-              {
-                "evidence_id": "E_9af4c0e6bde1",
-                "quote": "provide a track along which vesicles move through the cell",
-                "location": "paragraph_12"
-              },
-              {
-                "evidence_id": "E_a7a76831c1a0",
-                "quote": "used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell",
-                "location": "abstract"
-              }
-            ],
-            "exceptions": [
-              {
-                "exception_id": "exc_no_track",
-                "description": "Motor-protein-dependent vesicle transport along microtubules does not occur if no microtubule track is available.",
-                "evidence_ids": [
-                  "E_9af4c0e6bde1"
-                ]
-              },
-              {
-                "exception_id": "exc_no_motor",
-                "description": "If no active motor protein is available to engage the vesicle cargo, transport along the microtubule does not proceed.",
-                "evidence_ids": [
-                  "E_a7a76831c1a0"
-                ]
-              }
-            ],
-            "precondition_state_refs": [
-              "st_microtubule_available_as_track",
-              "st_vesicle_present",
-              "st_motor_protein_active"
-            ],
-            "effect_state_refs": [
-              "st_vesicle_moving_along_microtubule"
-            ]
-          },
-          {
-            "process_semantic_id": "proc_motor_protein_binding_to_cargo",
-            "scientific_name": "Motor protein binding to vesicle cargo",
-            "action_category": "binding",
-            "participants": [
-              {
-                "role": "motor",
-                "entity_ref": "ent_motor_protein"
-              },
-              {
-                "role": "cargo",
-                "entity_ref": "ent_vesicle"
-              }
-            ],
-            "input_roles": [
-              "motor",
-              "cargo"
-            ],
-            "output_roles": [
-              "motor",
-              "cargo"
-            ],
-            "preconditions": {
-              "motor_protein_active": true,
-              "vesicle_present": true
-            },
-            "effects": {
-              "motor_protein_bound_to_cargo": true
-            },
-            "temporal_scope": {
-              "start_condition": "An active motor protein encounters and engages a vesicle cargo.",
-              "end_condition": "The motor protein binds the vesicle cargo, enabling subsequent movement along a microtubule.",
-              "concurrent_with": [
-                "proc_microtubule_track_provision",
-                "proc_vesicle_transport_along_microtubule"
-              ],
-              "after": []
-            },
-            "observables": [
-              {
-                "constraint_id": "obs_motor_cargo_binding",
-                "predicate": "relation_holds_during",
-                "relation_ref": "rel_motor_protein_transports_vesicle",
-                "source_role": "motor",
-                "target_role": "cargo",
-                "capability": "PARTIAL",
-                "evidence_ids": [
-                  "E_a7a76831c1a0"
-                ],
-                "support": [
-                  {
-                    "evidence_id": "E_a7a76831c1a0",
-                    "quote": "used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell",
-                    "location": "abstract"
-                  }
-                ]
-              }
-            ],
-            "evidence_ids": [
-              "E_a7a76831c1a0"
-            ],
-            "support": [
-              {
-                "evidence_id": "E_a7a76831c1a0",
-                "quote": "Microtubules (MTs) are built from α-/β-tubulin dimers and used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell.",
-                "location": "abstract"
-              }
-            ],
-            "exceptions": [
-              {
-                "exception_id": "exc_no_motor_cargo_binding",
-                "description": "If no active motor protein engages the vesicle, this binding process does not occur.",
-                "evidence_ids": [
-                  "E_a7a76831c1a0"
-                ]
-              }
-            ],
-            "precondition_state_refs": [
-              "st_motor_protein_active",
-              "st_vesicle_present"
-            ],
-            "effect_state_refs": [
-              "st_motor_protein_bound_to_cargo"
-            ]
-          }
-        ],
-        "unresolved_questions": [
-          {
-            "question_id": "uq_motor_protein_identity",
-            "description": "The retrieved passages state that microtubules provide a track for vesicle movement but do not name or describe the motor proteins (e.g., kinesin, dynein) or their mechanochemical cycle. Therefore, motor-protein-dependent mechanism details remain unresolved from the supplied evidence.",
-            "evidence_ids": [
-              "E_9af4c0e6bde1"
-            ],
-            "status": "unresolved"
-          },
-          {
-            "question_id": "uq_directionality",
-            "description": "The retrieved passages do not specify directionality (anterograde vs. retrograde) of vesicle transport along microtubules; this remains unresolved from the supplied evidence.",
-            "evidence_ids": [
-              "E_9af4c0e6bde1"
-            ],
-            "status": "unresolved"
-          },
-          {
-            "question_id": "uq_organism_specificity",
-            "description": "The retrieved passages do not restrict the microtubule-track statement for vesicles to a particular eukaryotic organism or cell type; organism scope is therefore generalized and unresolved.",
-            "evidence_ids": [
-              "E_9af4c0e6bde1"
-            ],
-            "status": "unresolved"
-          }
         ],
         "clip_start": {
-          "stage": "Steady-state eukaryotic cell in which microtubules are present and available as tracks, motor proteins are active, and vesicles are present as cargo.",
+          "stage": "prometaphase (after interphase replication and prophase; kinetochores formed and spindle microtubules present)",
           "existing_entity_refs": [
-            "ent_cytoskeleton",
-            "ent_microtubule",
-            "ent_vesicle",
-            "ent_motor_protein"
+            "ENT_duplicated_chromosome",
+            "ENT_sister_chromatid",
+            "ENT_kinetochore",
+            "ENT_mitotic_spindle_microtubule",
+            "ENT_spatial_landmark"
           ],
           "omitted_processes": [
             {
-              "description": "Microtubule assembly and disassembly dynamics",
-              "reason": "Retrieved evidence notes that microtubules can disassemble and reform quickly, but the requested teaching scope is motor-protein-dependent transport, not microtubule dynamics.",
+              "description": "Interphase DNA replication producing sister chromatids",
+              "reason": "Explicitly excluded from model scope; prior context only.",
               "required_by_task": false
             },
             {
-              "description": "Vesicle cargo selection and membrane fusion",
-              "reason": "The retrieved passages do not describe vesicle cargo selection or fusion mechanisms; these are outside the stated scope.",
+              "description": "Prophase nuclear envelope breakdown and centrosome separation",
+              "reason": "Explicitly excluded from model scope; prior context only.",
               "required_by_task": false
             },
             {
-              "description": "Detailed mechanochemical stepping cycle of kinesin/dynein",
-              "reason": "Evidence identifies kinesin and dynein as motors transporting cargo along microtubules but does not provide a detailed stepping-cycle description in the retrieved passages.",
+              "description": "Molecular mechanism of cohesin degradation/cleavage",
+              "reason": "Explicitly excluded; only observable connection breakdown modeled.",
               "required_by_task": false
             }
           ]
         },
         "states": [
           {
-            "state_id": "st_microtubule_present",
-            "subject_ref": "ent_microtubule",
-            "property": "present_as_track",
-            "value": true,
+            "state_id": "ST_kinetochore_formed_per_chromatid",
+            "subject_ref": "ENT_kinetochore",
+            "property": "formation_status",
+            "value": "formed at centromeric region of each sister chromatid",
             "state_kind": "INITIAL_CONDITION",
             "scope": {
-              "process_ids": [
-                "proc_microtubule_track_provision",
-                "proc_vesicle_transport_along_microtubule"
-              ]
+              "entities": [
+                "ENT_kinetochore",
+                "ENT_sister_chromatid"
+              ],
+              "process": "PROC_kinetochore_attachment_orientation"
             },
             "producer_process_id": null,
             "required_by_process_ids": [
-              "proc_microtubule_track_provision"
+              "PROC_kinetochore_attachment_orientation"
             ],
             "evidence_ids": [
-              "E_9af4c0e6bde1"
+              "E_dcb0de9a22b0"
             ],
             "support": [
               {
-                "evidence_id": "E_9af4c0e6bde1",
-                "quote": "provide a track along which vesicles move through the cell",
-                "location": "paragraph_12"
+                "evidence_id": "E_dcb0de9a22b0",
+                "quote": "Each sister chromatid develops a protein structure called a kinetochore in the centromeric region",
+                "location": "paragraph_27"
               }
             ]
           },
           {
-            "state_id": "st_microtubule_available_as_track",
-            "subject_ref": "ent_microtubule",
-            "property": "available_as_track",
-            "value": true,
-            "state_kind": "PRODUCED_STATE",
+            "state_id": "ST_spindle_microtubules_present",
+            "subject_ref": "ENT_mitotic_spindle_microtubule",
+            "property": "presence",
+            "value": "present and extending from centrosomes (developing spindle at prometaphase onset; not a complete pre-existing spindle)",
+            "state_kind": "INITIAL_CONDITION",
             "scope": {
-              "process_ids": [
-                "proc_microtubule_track_provision",
-                "proc_vesicle_transport_along_microtubule"
-              ]
+              "entities": [
+                "ENT_mitotic_spindle_microtubule"
+              ],
+              "process": "PROC_kinetochore_attachment_orientation"
             },
-            "producer_process_id": "proc_microtubule_track_provision",
+            "producer_process_id": null,
             "required_by_process_ids": [
-              "proc_vesicle_transport_along_microtubule"
+              "PROC_kinetochore_attachment_orientation"
             ],
             "evidence_ids": [
-              "E_9af4c0e6bde1",
-              "E_a7a76831c1a0"
+              "E_dcb0de9a22b0"
             ],
             "support": [
               {
-                "evidence_id": "E_9af4c0e6bde1",
-                "quote": "provide a track along which vesicles move through the cell",
-                "location": "paragraph_12"
+                "evidence_id": "E_dcb0de9a22b0",
+                "quote": "The mitotic spindle continues to develop as more microtubules assemble and stretch across the length of the former nuclear area.",
+                "location": "paragraph_27"
               },
               {
-                "evidence_id": "E_a7a76831c1a0",
-                "quote": "used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell",
-                "location": "abstract"
+                "evidence_id": "E_dcb0de9a22b0",
+                "quote": "As the spindle microtubules extend from the centrosomes, some of these microtubules come into contact with and firmly bind to the kinetochores.",
+                "location": "paragraph_27"
               }
             ]
           },
           {
-            "state_id": "st_motor_protein_active",
-            "subject_ref": "ent_motor_protein",
-            "property": "active",
-            "value": true,
-            "state_kind": "INITIAL_CONDITION",
-            "scope": {
-              "process_ids": [
-                "proc_microtubule_track_provision",
-                "proc_motor_protein_binding_to_cargo",
-                "proc_vesicle_transport_along_microtubule"
-              ]
-            },
-            "producer_process_id": null,
-            "required_by_process_ids": [
-              "proc_microtubule_track_provision",
-              "proc_motor_protein_binding_to_cargo",
-              "proc_vesicle_transport_along_microtubule"
-            ],
-            "evidence_ids": [
-              "E_a7a76831c1a0"
-            ],
-            "support": [
-              {
-                "evidence_id": "E_a7a76831c1a0",
-                "quote": "used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell",
-                "location": "abstract"
-              }
-            ]
-          },
-          {
-            "state_id": "st_vesicle_present",
-            "subject_ref": "ent_vesicle",
-            "property": "present",
-            "value": true,
-            "state_kind": "INITIAL_CONDITION",
-            "scope": {
-              "process_ids": [
-                "proc_motor_protein_binding_to_cargo",
-                "proc_vesicle_transport_along_microtubule"
-              ]
-            },
-            "producer_process_id": null,
-            "required_by_process_ids": [
-              "proc_motor_protein_binding_to_cargo",
-              "proc_vesicle_transport_along_microtubule"
-            ],
-            "evidence_ids": [
-              "E_9af4c0e6bde1"
-            ],
-            "support": [
-              {
-                "evidence_id": "E_9af4c0e6bde1",
-                "quote": "provide a track along which vesicles move through the cell",
-                "location": "paragraph_12"
-              }
-            ]
-          },
-          {
-            "state_id": "st_motor_protein_bound_to_cargo",
-            "subject_ref": "ent_motor_protein",
-            "property": "bound_to_cargo",
-            "value": true,
+            "state_id": "ST_bipolar_kinetochore_attachment",
+            "subject_ref": "ENT_duplicated_chromosome",
+            "property": "kinetochore_microtubule_attachment",
+            "value": "bipolar: sister chromatids attached via kinetochores to microtubules from opposite poles",
             "state_kind": "PRODUCED_STATE",
             "scope": {
-              "process_ids": [
-                "proc_motor_protein_binding_to_cargo",
-                "proc_vesicle_transport_along_microtubule"
-              ]
+              "entities": [
+                "ENT_duplicated_chromosome",
+                "ENT_sister_chromatid",
+                "ENT_kinetochore",
+                "ENT_mitotic_spindle_microtubule",
+                "ENT_spatial_landmark"
+              ],
+              "process": "PROC_kinetochore_attachment_orientation"
             },
-            "producer_process_id": "proc_motor_protein_binding_to_cargo",
+            "producer_process_id": "PROC_kinetochore_attachment_orientation",
             "required_by_process_ids": [
-              "proc_vesicle_transport_along_microtubule"
+              "PROC_metaphase_alignment",
+              "PROC_anaphase_sister_separation"
             ],
             "evidence_ids": [
-              "E_a7a76831c1a0"
+              "E_dcb0de9a22b0"
             ],
             "support": [
               {
-                "evidence_id": "E_a7a76831c1a0",
-                "quote": "used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell",
-                "location": "abstract"
-              }
-            ]
-          },
-          {
-            "state_id": "st_vesicle_moving_along_microtubule",
-            "subject_ref": "ent_vesicle",
-            "property": "moving_along_microtubule",
-            "value": true,
-            "state_kind": "PRODUCED_STATE",
-            "scope": {
-              "process_ids": [
-                "proc_vesicle_transport_along_microtubule"
-              ]
-            },
-            "producer_process_id": "proc_vesicle_transport_along_microtubule",
-            "required_by_process_ids": [],
-            "evidence_ids": [
-              "E_9af4c0e6bde1",
-              "E_a7a76831c1a0"
-            ],
-            "support": [
-              {
-                "evidence_id": "E_9af4c0e6bde1",
-                "quote": "provide a track along which vesicles move through the cell",
-                "location": "paragraph_12"
+                "evidence_id": "E_dcb0de9a22b0",
+                "quote": "mitotic spindle microtubules from opposite poles attach to each sister chromatid at the kinetochore",
+                "location": "paragraph_28"
               },
               {
-                "evidence_id": "E_a7a76831c1a0",
-                "quote": "used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell",
-                "location": "abstract"
+                "evidence_id": "E_dcb0de9a22b0",
+                "quote": "Eventually, all the sister chromatids will be attached via their kinetochores to microtubules from opposing poles.",
+                "location": "paragraph_27"
+              }
+            ]
+          },
+          {
+            "state_id": "ST_sister_kinetochores_face_opposite_poles",
+            "subject_ref": "ENT_sister_chromatid",
+            "property": "kinetochore_orientation",
+            "value": "kinetochores of sister chromatids face opposite poles",
+            "state_kind": "PRODUCED_STATE",
+            "scope": {
+              "entities": [
+                "ENT_sister_chromatid",
+                "ENT_kinetochore",
+                "ENT_spatial_landmark"
+              ],
+              "process": "PROC_kinetochore_attachment_orientation"
+            },
+            "producer_process_id": "PROC_kinetochore_attachment_orientation",
+            "required_by_process_ids": [
+              "PROC_metaphase_alignment"
+            ],
+            "evidence_ids": [
+              "E_dcb0de9a22b0"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_dcb0de9a22b0",
+                "quote": "the kinetochores of sister chromatids face the opposite poles.",
+                "location": "paragraph_27"
+              }
+            ]
+          },
+          {
+            "state_id": "ST_cohesin_holding_sister_chromatids",
+            "subject_ref": "ENT_duplicated_chromosome",
+            "property": "sister_chromatid_attachment",
+            "value": "attached (held together by cohesin proteins at centromeric region)",
+            "state_kind": "MAINTAINED_STATE",
+            "scope": {
+              "entities": [
+                "ENT_duplicated_chromosome",
+                "ENT_sister_chromatid"
+              ],
+              "process": "PROC_metaphase_alignment"
+            },
+            "producer_process_id": null,
+            "required_by_process_ids": [
+              "PROC_metaphase_alignment",
+              "PROC_anaphase_sister_separation"
+            ],
+            "evidence_ids": [
+              "E_dcb0de9a22b0"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_dcb0de9a22b0",
+                "quote": "The sister chromatids are still tightly attached to each other by cohesin proteins.",
+                "location": "paragraph_29"
+              },
+              {
+                "evidence_id": "E_dcb0de9a22b0",
+                "quote": "identical pairs of DNA molecules—sister chromatids—that are firmly attached at the centromeric region",
+                "location": "paragraph_17"
+              }
+            ]
+          },
+          {
+            "state_id": "ST_duplicated_chromosome_aligned_at_metaphase_plate",
+            "subject_ref": "ENT_duplicated_chromosome",
+            "property": "spatial_position",
+            "value": "aligned at metaphase plate (equatorial plane, midway between poles)",
+            "state_kind": "PRODUCED_STATE",
+            "scope": {
+              "entities": [
+                "ENT_duplicated_chromosome",
+                "ENT_spatial_landmark"
+              ],
+              "process": "PROC_metaphase_alignment"
+            },
+            "producer_process_id": "PROC_metaphase_alignment",
+            "required_by_process_ids": [
+              "PROC_anaphase_sister_separation"
+            ],
+            "evidence_ids": [
+              "E_dcb0de9a22b0"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_dcb0de9a22b0",
+                "quote": "all the chromosomes are aligned in a plane called the metaphase plate",
+                "location": "paragraph_29"
+              }
+            ]
+          },
+          {
+            "state_id": "ST_sister_chromatid_connection_broken",
+            "subject_ref": "ENT_duplicated_chromosome",
+            "property": "sister_chromatid_connection",
+            "value": "broken down (no longer firmly attached)",
+            "state_kind": "PRODUCED_STATE",
+            "scope": {
+              "entities": [
+                "ENT_duplicated_chromosome",
+                "ENT_sister_chromatid"
+              ],
+              "process": "PROC_anaphase_sister_separation"
+            },
+            "producer_process_id": "PROC_anaphase_sister_separation",
+            "required_by_process_ids": [
+              "PROC_anaphase_sister_separation"
+            ],
+            "evidence_ids": [
+              "E_dcb0de9a22b0"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_dcb0de9a22b0",
+                "quote": "In anaphase, the connection between the sister chromatids breaks down, and the microtubules pull the chromosomes toward opposite poles.",
+                "location": "paragraph_28"
+              }
+            ]
+          },
+          {
+            "state_id": "ST_two_daughter_chromatids_distinct",
+            "subject_ref": "ENT_daughter_chromatid",
+            "property": "entity_identity",
+            "value": "two distinct daughter chromatids (each now called a chromosome)",
+            "state_kind": "PRODUCED_STATE",
+            "scope": {
+              "entities": [
+                "ENT_daughter_chromatid"
+              ],
+              "process": "PROC_anaphase_sister_separation"
+            },
+            "producer_process_id": "PROC_anaphase_sister_separation",
+            "required_by_process_ids": [
+              "PROC_anaphase_sister_separation"
+            ],
+            "evidence_ids": [
+              "E_dcb0de9a22b0"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_dcb0de9a22b0",
+                "quote": "Each chromatid, now called a chromosome, is pulled rapidly toward the centrosome to which its microtubule is attached.",
+                "location": "paragraph_30"
+              }
+            ]
+          },
+          {
+            "state_id": "ST_daughter_chromatids_moving_to_opposite_poles",
+            "subject_ref": "ENT_daughter_chromatid",
+            "property": "movement_direction",
+            "value": "moving toward opposite poles (each toward its attached centrosome)",
+            "state_kind": "PRODUCED_STATE",
+            "scope": {
+              "entities": [
+                "ENT_daughter_chromatid",
+                "ENT_mitotic_spindle_microtubule",
+                "ENT_spatial_landmark"
+              ],
+              "process": "PROC_anaphase_sister_separation"
+            },
+            "producer_process_id": "PROC_anaphase_sister_separation",
+            "required_by_process_ids": [
+              "PROC_anaphase_sister_separation"
+            ],
+            "evidence_ids": [
+              "E_dcb0de9a22b0"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_dcb0de9a22b0",
+                "quote": "Each chromatid, now called a chromosome, is pulled rapidly toward the centrosome to which its microtubule is attached.",
+                "location": "paragraph_30"
+              },
+              {
+                "evidence_id": "E_dcb0de9a22b0",
+                "quote": "the microtubules pull the chromosomes toward opposite poles.",
+                "location": "paragraph_28"
               }
             ]
           }
         ]
       },
-      "candidate_model_hash": "acbbd03a10c9f47846ddb088f1aa8e61a6e7396049013d1fcd09221212e2c29b",
+      "candidate_model_hash": "853e6eb9881906c4143da20e4cc219bcefb38df9fd49514f90efcd7383fdff72",
       "initial_states": [
         {
-          "state_id": "st_microtubule_present",
-          "subject_ref": "ent_microtubule",
-          "property": "present_as_track",
-          "value": true,
+          "state_id": "ST_kinetochore_formed_per_chromatid",
+          "subject_ref": "ENT_kinetochore",
+          "property": "formation_status",
+          "value": "formed at centromeric region of each sister chromatid",
           "state_kind": "INITIAL_CONDITION",
           "scope": {
-            "process_ids": [
-              "proc_microtubule_track_provision",
-              "proc_vesicle_transport_along_microtubule"
-            ]
+            "entities": [
+              "ENT_kinetochore",
+              "ENT_sister_chromatid"
+            ],
+            "process": "PROC_kinetochore_attachment_orientation"
           },
           "producer_process_id": null,
           "required_by_process_ids": [
-            "proc_microtubule_track_provision"
+            "PROC_kinetochore_attachment_orientation"
           ],
           "evidence_ids": [
-            "E_9af4c0e6bde1"
+            "E_dcb0de9a22b0"
           ],
           "support": [
             {
-              "evidence_id": "E_9af4c0e6bde1",
-              "quote": "provide a track along which vesicles move through the cell",
-              "location": "paragraph_12"
+              "evidence_id": "E_dcb0de9a22b0",
+              "quote": "Each sister chromatid develops a protein structure called a kinetochore in the centromeric region",
+              "location": "paragraph_27"
             }
           ]
         },
         {
-          "state_id": "st_motor_protein_active",
-          "subject_ref": "ent_motor_protein",
-          "property": "active",
-          "value": true,
+          "state_id": "ST_spindle_microtubules_present",
+          "subject_ref": "ENT_mitotic_spindle_microtubule",
+          "property": "presence",
+          "value": "present and extending from centrosomes (developing spindle at prometaphase onset; not a complete pre-existing spindle)",
           "state_kind": "INITIAL_CONDITION",
           "scope": {
-            "process_ids": [
-              "proc_microtubule_track_provision",
-              "proc_motor_protein_binding_to_cargo",
-              "proc_vesicle_transport_along_microtubule"
-            ]
+            "entities": [
+              "ENT_mitotic_spindle_microtubule"
+            ],
+            "process": "PROC_kinetochore_attachment_orientation"
           },
           "producer_process_id": null,
           "required_by_process_ids": [
-            "proc_microtubule_track_provision",
-            "proc_motor_protein_binding_to_cargo",
-            "proc_vesicle_transport_along_microtubule"
+            "PROC_kinetochore_attachment_orientation"
           ],
           "evidence_ids": [
-            "E_a7a76831c1a0"
+            "E_dcb0de9a22b0"
           ],
           "support": [
             {
-              "evidence_id": "E_a7a76831c1a0",
-              "quote": "used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell",
-              "location": "abstract"
-            }
-          ]
-        },
-        {
-          "state_id": "st_vesicle_present",
-          "subject_ref": "ent_vesicle",
-          "property": "present",
-          "value": true,
-          "state_kind": "INITIAL_CONDITION",
-          "scope": {
-            "process_ids": [
-              "proc_motor_protein_binding_to_cargo",
-              "proc_vesicle_transport_along_microtubule"
-            ]
-          },
-          "producer_process_id": null,
-          "required_by_process_ids": [
-            "proc_motor_protein_binding_to_cargo",
-            "proc_vesicle_transport_along_microtubule"
-          ],
-          "evidence_ids": [
-            "E_9af4c0e6bde1"
-          ],
-          "support": [
+              "evidence_id": "E_dcb0de9a22b0",
+              "quote": "The mitotic spindle continues to develop as more microtubules assemble and stretch across the length of the former nuclear area.",
+              "location": "paragraph_27"
+            },
             {
-              "evidence_id": "E_9af4c0e6bde1",
-              "quote": "provide a track along which vesicles move through the cell",
-              "location": "paragraph_12"
+              "evidence_id": "E_dcb0de9a22b0",
+              "quote": "As the spindle microtubules extend from the centrosomes, some of these microtubules come into contact with and firmly bind to the kinetochores.",
+              "location": "paragraph_27"
             }
           ]
         }
       ],
-      "causal_status": "PASS",
+      "causal_status": "REVISE",
       "independent_review": "REVISE",
-      "historical_independent_review": "REVISE",
       "remaining_issues": [
         {
-          "target_id": "proc_microtubule_track_provision",
-          "reason": "A microtubule is a static polymer that can serve as a track; it is not an actor that 'provides' a track as an active process. This framing implies an activity the source does not attribute to microtubules. Additionally, this 'process' requires a motor and a cargo even though track availability is independent of both.",
+          "target_id": "PROC_kinetochore_attachment_orientation",
+          "reason": "The process asserts 'kinetochore microtubules from opposite poles attach to the two sister chromatids' as an effect of this single process, but the source describes attachment as progressive: an initial mitotic fiber attaches to a chromosome, the chromosome is oriented until sister kinetochores face opposite poles, and eventually all sister chromatids become attached from opposing poles. Treating bipolar attachment as a direct effect of one process without modeling the intermediate orientation/attachment progression oversimplifies the source's stated order and risks implying simultaneous attachment rather than sequential attachment and orientation.",
           "evidence_ids": [
-            "E_9af4c0e6bde1",
-            "E_a7a76831c1a0"
+            "E_dcb0de9a22b0"
           ]
         },
         {
-          "target_id": "proc_motor_protein_binding_to_cargo",
-          "reason": "No retrieved passage states that motor proteins bind vesicles. Kinesin/dynein are said to transport cargos such as 'mRNAs, proteins, and organelles,' not specifically vesicles, and the binding step is never described. The model substitutes a specific cargo identity (vesicle) for the source's generic 'cargos.'",
+          "target_id": "OBS_connection_breakdown_after_alignment",
+          "reason": "The observable is labeled 'event_precedes' between metaphase alignment and anaphase separation, but the source does not explicitly state that alignment is a strict temporal prerequisite for connection breakdown; it describes phases in sequence. The model itself acknowledges this as 'schematic phase order,' yet the observable predicate asserts a stronger ordering relation than the source entails. The observable should be downgraded or qualified to match only source-supported phase sequence, not a causal/temporal precedence claim.",
           "evidence_ids": [
-            "E_a7a76831c1a0"
+            "E_dcb0de9a22b0"
           ]
         },
         {
-          "target_id": "obs_vesicle_transport_relation",
-          "reason": "The source only supports that kinesin/dynein transport 'a variety of cargos, such as mRNAs, proteins, and organelles,' and that microtubules are tracks 'along which vesicles move.' It does not entail that a motor protein transports a vesicle specifically, and it never describes a motor-cargo binding or a transport relation directed at vesicles.",
+          "target_id": "OBS_two_daughter_chromatids_after_separation",
+          "reason": "The observable uses state_transition_allowed from 'attached' to 'broken down' with a precondition that sister chromatids were 'still tightly attached by cohesin proteins prior to anaphase.' While source supports cohesin presence at metaphase and degradation at anaphase, the model explicitly excludes the molecular mechanism of cohesin degradation/cleavage. Using 'cohesin_present_prior' as a precondition for an observable about connection breakdown conflates the excluded molecular mechanism with the included observable, creating a semantic mismatch between what is modeled and what the observable claims to check.",
           "evidence_ids": [
-            "E_a7a76831c1a0",
-            "E_9af4c0e6bde1"
+            "E_dcb0de9a22b0"
           ]
         },
         {
-          "target_id": "st_motor_protein_bound_to_cargo",
-          "reason": "This produced state, and the derived step 'motor protein binds vesicle cargo,' are not source-entailed. The passages neither describe motor-cargo binding as a discrete process nor restrict the cargo to vesicles; the assertion is a model inference, not a documented finding.",
+          "target_id": "REL_microtubule_binds_kinetochore",
+          "reason": "The relation definition states 'mitotic spindle microtubules from opposite poles bind to kinetochores of the two sister chromatids (one chromatid's kinetochore facing one pole, the other facing the opposite pole).' The source passage cited (paragraph_27) supports that kinetochores attract and bind microtubules and that chromosomes orient until sister kinetochores face opposite poles, but the specific claim that 'one chromatid's kinetochore facing one pole, the other facing the opposite pole' at the time of binding is not directly entailed by the cited quote; it is an inference from subsequent orientation description. The relation should be narrowed to what the source directly states.",
           "evidence_ids": [
-            "E_a7a76831c1a0"
+            "E_dcb0de9a22b0"
           ]
         },
         {
-          "target_id": "scope.excluded_processes.motor_protein_identity_and_mechanism",
-          "reason": "The scope statement says motor-protein identity is 'not specified in retrieved passages,' but the model nevertheless names 'kinesin/dynein' and builds a transport process around them. The scope therefore contradicts the retrieved evidence (E_a7a76831c1a0 names kinesin and dynein explicitly). Choose either a generic 'motor protein' framing or a kinesin/dynein framing, and make the scope and the observable model agree.",
+          "target_id": "scope",
+          "reason": "The model's scope correctly notes that only one duplicated chromosome is modeled and that 'all chromosomes' statements are instantiated for a single pair. However, the source explicitly states that at metaphase 'all the chromosomes are aligned' and that 'eventually, all the sister chromatids will be attached via their kinetochores to microtubules from opposing poles.' The model's single-chromosome instantiation is a legitimate teaching simplification only if the animation/script clearly delimits that the model demonstrates the behavior of one chromosome representative of the population, not that the cell contains only one chromosome. The scope review should require an explicit delimiting statement in the observable review and animation script; otherwise the schematic risks implying a false cellular state (a cell with only one chromosome).",
           "evidence_ids": [
-            "E_a7a76831c1a0"
+            "E_dcb0de9a22b0"
           ]
         }
       ],
-      "formal_error": {
-        "error_type": "APIStatusError",
-        "message": "Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: 02c53d6e-e151-4b53-8aff-a54ac856492d)', 'type': 'insufficient_balance_error', 'param': None, 'code': 'invalid_request_error'}}",
-        "stage": "SCIENCE_LOOP"
-      },
-      "candidate_path": "science_formal/vesicle_transport/automatic/repairs/attempt_1/candidate.json"
+      "accepted": false,
+      "attempts": 3,
+      "candidate_path": "science_formal/mitosis/state_migration/attempt_2/candidate.json"
     }
   ],
   "release_status": "SCIENCE_PARTIALLY_VALIDATED",
-  "active_goal_complete": false,
-  "conclusion": "Frozen-system autonomous scientific repair success has NOT been proven. One real candidate reached independent review, remained REVISE; provider402 blocked further topics."
+  "conclusion": "All three bounded formal attempts completed. No candidate approved. Autonomous successful repair without topic patches remains unproven; do not enter Science stable maintenance."
 }

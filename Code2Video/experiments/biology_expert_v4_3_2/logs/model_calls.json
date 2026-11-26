@@ -470,5 +470,419 @@
     "error_type": "APIStatusError",
     "http_status": 402,
     "elapsed_seconds": 0.559
+  },
+  {
+    "call_id": "v42_22_0310957a",
+    "provider": "deepseek",
+    "purpose": "local_scientific_model_patch",
+    "status": "ok",
+    "started": 1795674461.2300675,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 3351,
+      "prompt_tokens": 17947,
+      "total_tokens": 21298,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 11520
+      },
+      "prompt_cache_hit_tokens": 11520,
+      "prompt_cache_miss_tokens": 6427
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 11.253
+  },
+  {
+    "call_id": "v42_23_8911f834",
+    "provider": "deepseek",
+    "purpose": "independent_typed_science_review",
+    "status": "ok",
+    "started": 1795674472.5058615,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 1011,
+      "prompt_tokens": 4209,
+      "total_tokens": 5220,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 512
+      },
+      "prompt_cache_hit_tokens": 512,
+      "prompt_cache_miss_tokens": 3697
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 10.783
+  },
+  {
+    "call_id": "v42_24_43b6aa48",
+    "provider": "deepseek",
+    "purpose": "evidence_sufficiency_audit",
+    "status": "ok",
+    "started": 1795674483.32522,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 2073,
+      "prompt_tokens": 13591,
+      "total_tokens": 15664,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 13440
+      },
+      "prompt_cache_hit_tokens": 13440,
+      "prompt_cache_miss_tokens": 151
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 9.988
+  },
+  {
+    "call_id": "v42_25_0b1e750d",
+    "provider": "deepseek",
+    "purpose": "gap_driven_research_plan",
+    "status": "ok",
+    "started": 1795674493.3264287,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 1342,
+      "prompt_tokens": 2006,
+      "total_tokens": 3348,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 128
+      },
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 1878
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 7.077
+  },
+  {
+    "call_id": "v42_26_9383151f",
+    "provider": "deepseek",
+    "purpose": "independent_gap_evidence_entailment",
+    "status": "ok",
+    "started": 1795674578.2728503,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 1005,
+      "prompt_tokens": 7274,
+      "total_tokens": 8279,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 128
+      },
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 7146
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 4.688
+  },
+  {
+    "call_id": "v42_27_0749590d",
+    "provider": "deepseek",
+    "purpose": "gap_driven_research_plan",
+    "status": "ok",
+    "started": 1795674582.9655309,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 1855,
+      "prompt_tokens": 2006,
+      "total_tokens": 3861,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 1792
+      },
+      "prompt_cache_hit_tokens": 1792,
+      "prompt_cache_miss_tokens": 214
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 11.096
+  },
+  {
+    "call_id": "v42_28_df8c57b0",
+    "provider": "deepseek",
+    "purpose": "independent_gap_evidence_entailment",
+    "status": "ok",
+    "started": 1795674620.8697574,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 1319,
+      "prompt_tokens": 7763,
+      "total_tokens": 9082,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 128
+      },
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 7635
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 9.342
+  },
+  {
+    "call_id": "v42_29_ef63653f",
+    "provider": "deepseek",
+    "purpose": "local_scientific_model_patch",
+    "status": "ok",
+    "started": 1795674630.2486124,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 3581,
+      "prompt_tokens": 17892,
+      "total_tokens": 21473,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 384
+      },
+      "prompt_cache_hit_tokens": 384,
+      "prompt_cache_miss_tokens": 17508
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 13.564
+  },
+  {
+    "call_id": "v42_30_bcc068b0",
+    "provider": "deepseek",
+    "purpose": "local_scientific_model_patch",
+    "status": "ok",
+    "started": 1795674643.8628151,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 3906,
+      "prompt_tokens": 21231,
+      "total_tokens": 25137,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 15232
+      },
+      "prompt_cache_hit_tokens": 15232,
+      "prompt_cache_miss_tokens": 5999
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 17.689
+  },
+  {
+    "call_id": "v42_31_3eb16b2d",
+    "provider": "deepseek",
+    "purpose": "independent_typed_science_review",
+    "status": "ok",
+    "started": 1795674661.5948296,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 1237,
+      "prompt_tokens": 8015,
+      "total_tokens": 9252,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 256
+      },
+      "prompt_cache_hit_tokens": 256,
+      "prompt_cache_miss_tokens": 7759
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 7.626
+  },
+  {
+    "call_id": "v42_32_d750ae66",
+    "provider": "deepseek",
+    "purpose": "local_scientific_model_patch",
+    "status": "ok",
+    "started": 1795674669.2479665,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 5148,
+      "prompt_tokens": 22625,
+      "total_tokens": 27773,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 15232
+      },
+      "prompt_cache_hit_tokens": 15232,
+      "prompt_cache_miss_tokens": 7393
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 16.912
+  },
+  {
+    "call_id": "v42_33_ea4884f3",
+    "provider": "deepseek",
+    "purpose": "independent_typed_science_review",
+    "status": "ok",
+    "started": 1795674686.206276,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 1491,
+      "prompt_tokens": 8936,
+      "total_tokens": 10427,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 1408
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 7528
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 8.745
+  },
+  {
+    "call_id": "v42_34_5d04bbce",
+    "provider": "deepseek",
+    "purpose": "evidence_sufficiency_audit",
+    "status": "ok",
+    "started": 1795674694.9865704,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 495,
+      "prompt_tokens": 11200,
+      "total_tokens": 11695,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 11008
+      },
+      "prompt_cache_hit_tokens": 11008,
+      "prompt_cache_miss_tokens": 192
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 3.99
+  },
+  {
+    "call_id": "v42_35_03f795f9",
+    "provider": "deepseek",
+    "purpose": "local_scientific_model_patch",
+    "status": "ok",
+    "started": 1795674698.9965465,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 3456,
+      "prompt_tokens": 9503,
+      "total_tokens": 12959,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 384
+      },
+      "prompt_cache_hit_tokens": 384,
+      "prompt_cache_miss_tokens": 9119
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 16.758
+  },
+  {
+    "call_id": "v42_36_78eb5924",
+    "provider": "deepseek",
+    "purpose": "local_scientific_model_patch",
+    "status": "ok",
+    "started": 1795674811.5562465,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 3354,
+      "prompt_tokens": 12492,
+      "total_tokens": 15846,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 5248
+      },
+      "prompt_cache_hit_tokens": 5248,
+      "prompt_cache_miss_tokens": 7244
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 14.012
+  },
+  {
+    "call_id": "v42_37_a3ede157",
+    "provider": "deepseek",
+    "purpose": "independent_typed_science_review",
+    "status": "ok",
+    "started": 1795674825.6024323,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 1292,
+      "prompt_tokens": 8411,
+      "total_tokens": 9703,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 256
+      },
+      "prompt_cache_hit_tokens": 256,
+      "prompt_cache_miss_tokens": 8155
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 7.59
+  },
+  {
+    "call_id": "v42_38_fd447529",
+    "provider": "deepseek",
+    "purpose": "local_scientific_model_patch",
+    "status": "ok",
+    "started": 1795674833.2125592,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 4106,
+      "prompt_tokens": 13710,
+      "total_tokens": 17816,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 7296
+      },
+      "prompt_cache_hit_tokens": 7296,
+      "prompt_cache_miss_tokens": 6414
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 12.261
+  },
+  {
+    "call_id": "v42_39_601e361f",
+    "provider": "deepseek",
+    "purpose": "independent_typed_science_review",
+    "status": "ok",
+    "started": 1795674845.5167873,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 1689,
+      "prompt_tokens": 8482,
+      "total_tokens": 10171,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 2176
+      },
+      "prompt_cache_hit_tokens": 2176,
+      "prompt_cache_miss_tokens": 6306
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 15.846
   }
 ]

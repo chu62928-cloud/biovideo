@@ -1,0 +1,56 @@
+{
+  "decision": "REVISE",
+  "issues": [
+    {
+      "target_id": "scope",
+      "reason": "Task explicitly requests 'motor-protein-dependent' vesicle transport, but the model excludes motor proteins (identity AND mechanism) as out-of-scope because the single retrieved OpenStax excerpt never mentions motors. The model thus formally represents only passive track provision, not the motor-dependent transport the task asked for. This is a scope/evidence-gap mismatch that must be flagged and either the evidence supplemented or the scope honestly delimited as 'motor dependence not evidenced here'.",
+      "evidence_ids": [
+        "E_9af4c0e6bde1"
+      ]
+    },
+    {
+      "target_id": "proc_vesicle_transport_along_microtubule",
+      "reason": "The process is labeled 'transport' with effect 'vesicle_moves_through_cell', but the only source sentence ('provide a track along which vesicles move') does not entail an active motor-driven transport process as the process semantically encodes. Treating movement along the microtubule as a process distinct from the 'track provision' process is un-entailed duplication; the source supports a single passive track relationship, not two coupled processes with shared concurrent scope.",
+      "evidence_ids": [
+        "E_9af4c0e6bde1"
+      ]
+    },
+    {
+      "target_id": "proc_microtubule_track_provision",
+      "reason": "This 'process' has identical input and output roles (track_provider, cargo_guided) and produces a state 'available_as_track' that is merely a re-labeling of the initial condition 'present_as_track'. It is not a source-supported causal state change; the excerpt asserts a static structural capability, not a process that transforms microtubules into tracks. This inflates a structural relation into an unsupported process with no measured transition.",
+      "evidence_ids": [
+        "E_9af4c0e6bde1"
+      ]
+    },
+    {
+      "target_id": "obs_vesicle_transport_relation / obs_track_relation_during_transport",
+      "reason": "Both observables are declared DETERMINISTIC but the source only states that microtubules 'provide a track along which vesicles move' (a general structural statement) plus 'allow cytoplasm and vesicles to move within the cell'. Neither entails a deterministic, per-vesicle observable that a vesicle is moving along a specific microtubule during a bounded temporal window. Marking as DETERMINISTIC overstates entailment; capability should reflect uncertain/qualitative source framing.",
+      "evidence_ids": [
+        "E_9af4c0e6bde1"
+      ]
+    },
+    {
+      "target_id": "organism_context / excluded_processes",
+      "reason": "Organism context generalized to 'eukaryotic cells' is defensible, but excluded processes list claims motor mechanism is 'not specified in retrieved passages' while the task demanded motor dependence — the model silently converts a required teaching element into an exclusion instead of surfacing it as a blocking evidence gap. Teaching simplification must be labeled as such (not-motor-evidenced), not presented as an approved scope decision.",
+      "evidence_ids": [
+        "E_9af4c0e6bde1"
+      ]
+    }
+  ],
+  "observable_reviews": [
+    {
+      "constraint_id": "obs_track_relation_during_transport",
+      "decision": "REVISE",
+      "reason": "Source entails only that microtubules structurally provide a track for vesicle movement; it does not entail a deterministic 'relation_holds_during' observable of a specific vesicle-track pairing within a bounded transport window. Narrow the observable to structural capability or downgrade capability."
+    },
+    {
+      "constraint_id": "obs_vesicle_transport_relation",
+      "decision": "REVISE",
+      "reason": "Same source sentence cannot support a DETERMINISTIC transport-during relation for a specific cargo/track pair; entailment is at the general structural-capability level only. Also duplicates the track-provision observable without distinct source support."
+    }
+  ],
+  "scope_review": "The single retrieved excerpt (OpenStax 4.5) supports only: microtubules are hollow tubulin polymers, part of the cytoskeleton (one of three fiber types), and provide a track along which vesicles move through the cell; the cytoskeleton allows cytoplasm and vesicles to move. It does NOT entail: motor protein identity, motor dependence, directionality, a distinct causal 'track provision' process, per-vesicle deterministic transport observables, or two coupled concurrent processes. The user task specifically requested motor-protein-dependent transport, which is not evidenced; this must be surfaced as a blocking evidence gap or an explicit honest simplification labeled 'not motor-evidenced', not as an approved scope exclusion. Because motor dependence is the core requested phenomenon and is unverified, and because process/observable semantics overstate the structural source statement, the model cannot be approved. No PASS is given; the relevant checks (motor dependence, process causal-state honesty, observable determinism) fail. Structural entity/relation facts (microtubule composition, cytoskeleton membership, track relationship) are reasonably supported and may be retained.",
+  "model_hash": "fed67fd4329ae98a854ade05040c372abfb44695b0d6cdf4f5d9ffc96465a04e",
+  "separate_request": true,
+  "independent_provider": false
+}

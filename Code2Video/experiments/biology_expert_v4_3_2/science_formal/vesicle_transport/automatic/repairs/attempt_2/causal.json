@@ -1,0 +1,36 @@
+{
+  "model_sha256": "fed67fd4329ae98a854ade05040c372abfb44695b0d6cdf4f5d9ffc96465a04e",
+  "status": "PASS",
+  "issues": [],
+  "reachable_process_ids": [
+    "proc_microtubule_track_provision",
+    "proc_vesicle_transport_along_microtubule"
+  ],
+  "witnesses": {
+    "proc_microtubule_track_provision": {
+      "completed_before": [],
+      "required_state_refs": [
+        "st_microtubule_present"
+      ],
+      "produced_state_refs": [
+        "st_microtubule_available_as_track"
+      ]
+    },
+    "proc_vesicle_transport_along_microtubule": {
+      "completed_before": [
+        "proc_microtubule_track_provision"
+      ],
+      "required_state_refs": [
+        "st_microtubule_available_as_track",
+        "st_vesicle_present"
+      ],
+      "produced_state_refs": [
+        "st_vesicle_moving_along_microtubule"
+      ]
+    }
+  },
+  "states_explored": 3,
+  "exhaustive": true,
+  "limit": 4096,
+  "semantics": "Bounded single-execution state paths on explicit subject/property/value; no claim about chemistry, loops or all continuous trajectories."
+}

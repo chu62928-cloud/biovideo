@@ -1,0 +1,36 @@
+{
+  "id": "650b956e-f932-427b-8afa-e56750add10d",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "```json\n{\n  \"issues\": [],\n  \"requirements\": [\n    {\n      \"requirement_id\": \"REQ_duplicated_chromosome_structure\",\n      \"requirement\": \"Define a duplicated chromosome as two sister chromatids joined at the centromeric region, with cohesin maintaining the attachment prior to separation.\",\n      \"covered_by_process_ids\": [\"PROC_kinetochore_attachment_orientation\", \"PROC_metaphase_alignment\"]\n    },\n    {\n      \"requirement_id\": \"REQ_kinetochore_microtubule_attachment\",\n      \"requirement\": \"Describe kinetochore formation on each sister chromatid and bipolar attachment of spindle microtubules from opposite poles.\",\n      \"covered_by_process_ids\": [\"PROC_kinetochore_attachment_orientation\"]\n    },\n    {\n      \"requirement_id\": \"REQ_metaphase_plate_alignment\",\n      \"requirement\": \"Explain alignment of the duplicated chromosome at the metaphase plate (equatorial plane) midway between poles.\",\n      \"covered_by_process_ids\": [\"PROC_metaphase_alignment\"]\n    },\n    {\n      \"requirement_id\": \"REQ_sister_chromatid_separation\",\n      \"requirement\": \"Explain breakdown of the sister-chromatid connection and separation into two distinct daughter chromatids (now called chromosomes).\",\n      \"covered_by_process_ids\": [\"PROC_anaphase_sister_separation\"]\n    },\n    {\n      \"requirement_id\": \"REQ_poleward_movement\",\n      \"requirement\": \"Describe poleward movement of separated daughter chromatids toward opposite centrosomes/poles via attached microtubules.\",\n      \"covered_by_process_ids\": [\"PROC_anaphase_sister_separation\"]\n    },\n    {\n      \"requirement_id\": \"REQ_scope_bounded_eukaryote\",\n      \"requirement\": \"Restrict claims to eukaryotic (animal-cell example) context and single-chromosome instantiation; exclude replication, prophase, telophase, cytokinesis, checkpoint, and molecular cohesin cleavage.\",\n      \"covered_by_process_ids\": [\"PROC_kinetochore_attachment_orientation\", \"PROC_metaphase_alignment\", \"PROC_anaphase_sister_separation\"]\n    }\n  ],\n  \"coverage_status\": \"PASS\"\n}\n```",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1795674695,
+  "model": "deepseek-flash",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+  "usage": {
+    "completion_tokens": 495,
+    "prompt_tokens": 11200,
+    "total_tokens": 11695,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 11008
+    },
+    "prompt_cache_hit_tokens": 11008,
+    "prompt_cache_miss_tokens": 192
+  }
+}

@@ -147,17 +147,14 @@
   "historical_inputs_unchanged": true,
   "changed_historical_files": [],
   "model_usage": {
-    "deepseek_calls": 23,
+    "deepseek_calls": 41,
     "qwen_calls": 0,
     "wan_tasks": 0,
     "seedance_tasks": 0,
-    "input_tokens": 191720,
-    "output_tokens": 63478,
+    "input_tokens": 389013,
+    "output_tokens": 105189,
     "actual_cost": null,
-    "failed_requests": 2,
-    "unknown_usage_requests": [
-      "v42_21_ef4bacb6"
-    ]
+    "failed_requests": 2
   },
   "environment": {
     "python": "3.12.4",
@@ -168,5 +165,7 @@
     "passed": 93,
     "failed": 0,
     "seconds": 109.54
-  }
+  },
+  "final_science_status": "SCIENCE_PARTIALLY_VALIDATED",
+  "final_formal_attempts_completed": true
 }

@@ -88,3 +88,14 @@ Immediate continuation：先读取logs/model_calls.json最后v42_21_ef4bacb6(402
 还需完成DNA/有丝分裂正式迁移和独立复核、囊泡剩余一次有实质差异补丁；真正未见科学主题冻结后成功闭环尚无证据。若达尝试上限保留NEEDS_HUMAN_REVIEW，不为特定生物答案改通用引擎。Science总目标active，当前交付是检查点，不是完成。新无首尾帧视频没有新增付费授权，0提交。仓库旧DNA专用动画repair仍存在，topic_coupling_audit.json已披露；本轮新路径未用。
 
 2026-11-26 14:19北京时间免费GET/user/balance复核：is_available=false，总余额-0.04CNY。无新增付费请求。check_resume.py已实现并运行，确认科学源码freeze变化0、囊泡前两次结果缓存完好、DNA/mitosis未开始。恢复状态resume_status.json；仍需用户账户余额恢复，目标active。
+
+## 账户恢复后的最终有界实验结果
+2026-11-26账户余额恢复至19.95元后，复用缓存继续，未重复成功请求。囊泡、DNA、有丝分裂各三次正式候选尝试均已完成，没有新科学模型被批准。囊泡和DNA末次候选均状态可达性PASS但科学REVISE；有丝分裂迁移末次结果见science_results.json。全部失败候选和回滚保留。Science正式冻结代码无变化。
+
+本轮问题的答案是：尚不能证明系统能自主可靠修复新的机制模型，因此结论SCIENCE_PARTIALLY_VALIDATED，不能进入稳定维护。该结论来自实际有界实验，不继续为特定问题改引擎或无限追求PASS。剩余问题分别归因于检索证据质量/相关性、模型补丁与科学语义能力、以及已有接口的范围修订表达限制。没有证据表明需要再次扩建一套Agent。后续优先改善研究资料和模型遵循能力，并用独立新任务评测；不把这些失败主题反复调参结果当未见泛化。
+
+先前README中的402中断是历史检查点，现已恢复并执行完毕；当前无账户阻塞或后台任务。本轮视频仍只dry-run，未新增付费视频。
+
+最终累计用量：{"deepseek_calls": 41, "qwen_calls": 0, "wan_tasks": 0, "seedance_tasks": 0, "input_tokens": 389013, "output_tokens": 105189, "actual_cost": null, "failed_requests": 2}
+
+实验最终证据science_results.json；已完成有界实验，结论部分验证，不是成功证明。不要继续同一主题增加补丁或重置三次尝试。

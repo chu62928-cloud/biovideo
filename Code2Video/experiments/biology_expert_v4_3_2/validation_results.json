@@ -1814,10 +1814,30 @@
   "gates": {
     "Gate0": "PASS_WITH_DISCLOSED_LEGACY_COUPLING",
     "Gate1": "ENGINEERING_PASS_REAL_RELEVANCE_PARTIAL",
-    "Gate2": "ONE_REAL_CANDIDATE_CAUSAL_PASS_OTHER_TWO_NOT_MIGRATED",
-    "Gate3": "REAL_CHAIN_EXECUTED_SCIENCE_REVISE",
+    "Gate2": "THREE_REAL_TYPED_MIGRATIONS_EXECUTED_RESULTS_RETAINED",
+    "Gate3": "REAL_CHAINS_COMPLETED_NO_SCIENCE_APPROVAL",
     "Gate4": "SAMPLED_EVIDENCE_PASS_LIMITED_COVERAGE",
     "Gate5": "WAN_TEXT_DRYRUN_PASS_SEEDANCE_NOT_CONFIGURED",
-    "Gate6": "SYNTHETIC_AND_LEGACY_REGRESSION_PASS_FULL_THREE_TOPIC_REAL_CLOSURE_INCOMPLETE"
-  }
+    "Gate6": "COMMON_CODE_EXECUTED_THREE_TOPICS_NO_SUCCESSFUL_UNSEEN_REPAIR"
+  },
+  "final_all_topics": [
+    {
+      "topic": "vesicle_transport",
+      "causal_status": "PASS",
+      "independent_review": "REVISE",
+      "accepted": false
+    },
+    {
+      "topic": "dna_replication",
+      "causal_status": "PASS",
+      "independent_review": "REVISE",
+      "accepted": false
+    },
+    {
+      "topic": "mitosis",
+      "causal_status": "REVISE",
+      "independent_review": "REVISE",
+      "accepted": false
+    }
+  ]
 }

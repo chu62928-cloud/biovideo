@@ -29,3 +29,12 @@
 实际调用：{"deepseek_calls": 23, "qwen_calls": 0, "wan_tasks": 0, "seedance_tasks": 0, "input_tokens": 191720, "output_tokens": 63478, "actual_cost": null, "failed_requests": 2, "unknown_usage_requests": ["v42_21_ef4bacb6"]}。费用API不返回，未知不写零。
 
 测试源码提交：3b1ece1fc3630d95a9071f409de9206200261e9f。最终93/93测试通过，用时109.54秒。
+
+## 账户恢复后的最终有界实验结果
+2026-11-26账户余额恢复至19.95元后，复用缓存继续，未重复成功请求。囊泡、DNA、有丝分裂各三次正式候选尝试均已完成，没有新科学模型被批准。囊泡和DNA末次候选均状态可达性PASS但科学REVISE；有丝分裂迁移末次结果见science_results.json。全部失败候选和回滚保留。Science正式冻结代码无变化。
+
+本轮问题的答案是：尚不能证明系统能自主可靠修复新的机制模型，因此结论SCIENCE_PARTIALLY_VALIDATED，不能进入稳定维护。该结论来自实际有界实验，不继续为特定问题改引擎或无限追求PASS。剩余问题分别归因于检索证据质量/相关性、模型补丁与科学语义能力、以及已有接口的范围修订表达限制。没有证据表明需要再次扩建一套Agent。后续优先改善研究资料和模型遵循能力，并用独立新任务评测；不把这些失败主题反复调参结果当未见泛化。
+
+先前README中的402中断是历史检查点，现已恢复并执行完毕；当前无账户阻塞或后台任务。本轮视频仍只dry-run，未新增付费视频。
+
+最终累计用量：{"deepseek_calls": 41, "qwen_calls": 0, "wan_tasks": 0, "seedance_tasks": 0, "input_tokens": 389013, "output_tokens": 105189, "actual_cost": null, "failed_requests": 2}

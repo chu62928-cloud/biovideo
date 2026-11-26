@@ -1,0 +1,77 @@
+{
+  "checked_utc": "2026-11-26T06:27:38.301580+00:00",
+  "provider": {
+    "http_status": 200,
+    "available": true,
+    "balance_infos": [
+      {
+        "currency": "CNY",
+        "total_balance": "19.95",
+        "granted_balance": "0.00",
+        "topped_up_balance": "19.95"
+      }
+    ]
+  },
+  "model_calls_preserved": 21,
+  "latest_call": {
+    "call_id": "v42_21_ef4bacb6",
+    "provider": "deepseek",
+    "purpose": "local_scientific_model_patch",
+    "status": "error",
+    "started": 1795673482.140789,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "error_type": "APIStatusError",
+    "http_status": 402,
+    "elapsed_seconds": 0.559
+  },
+  "topics": [
+    {
+      "topic": "vesicle_transport",
+      "audit_cached": true,
+      "attempts": [
+        {
+          "path": "science_formal/vesicle_transport/automatic/repairs/attempt_0/result.json",
+          "status": "ROLLED_BACK",
+          "review": "NOT_EXECUTED",
+          "candidate_hash": null
+        },
+        {
+          "path": "science_formal/vesicle_transport/automatic/repairs/attempt_1/result.json",
+          "status": "ROLLED_BACK",
+          "review": "REVISE",
+          "candidate_hash": "acbbd03a10c9f47846ddb088f1aa8e61a6e7396049013d1fcd09221212e2c29b"
+        }
+      ],
+      "error": {
+        "error_type": "APIStatusError",
+        "message": "Error code: 402 - {'error': {'message': 'Insufficient Balance (request_id: 02c53d6e-e151-4b53-8aff-a54ac856492d)', 'type': 'insufficient_balance_error', 'param': None, 'code': 'invalid_request_error'}}",
+        "stage": "SCIENCE_LOOP"
+      }
+    },
+    {
+      "topic": "dna_replication",
+      "audit_cached": false,
+      "attempts": [],
+      "error": {
+        "error_type": "RuntimeError",
+        "message": "Prior uncertain/failed API state for this provider; paid requests stopped",
+        "stage": "SCIENCE_LOOP"
+      }
+    },
+    {
+      "topic": "mitosis",
+      "audit_cached": false,
+      "attempts": [],
+      "error": {
+        "error_type": "RuntimeError",
+        "message": "Prior uncertain/failed API state for this provider; paid requests stopped",
+        "stage": "SCIENCE_LOOP"
+      }
+    }
+  ],
+  "science_code_changed_after_freeze": [],
+  "can_resume_paid_requests": true,
+  "next_action": "Restore account balance, verify again, then acknowledge the confirmed 402 and resume only missing steps. No automatic retries or ledger reset.",
+  "paid_requests_submitted": 0
+}

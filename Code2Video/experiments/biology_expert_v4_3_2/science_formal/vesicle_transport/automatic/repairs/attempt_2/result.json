@@ -1,0 +1,747 @@
+{
+  "before_hash": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da",
+  "repair_tasks": [
+    {
+      "repair_id": "MODEL_REPAIR_1",
+      "issue_id": "ISS-001",
+      "target_artifact": "typed_science_model",
+      "target_ids": [
+        "proc_vesicle_transport_along_microtubule",
+        "rel_microtubule_track_for_vesicle"
+      ],
+      "target_fields": [
+        "participants",
+        "preconditions",
+        "effects",
+        "temporal_scope",
+        "precondition_state_refs",
+        "effect_state_refs",
+        "support",
+        "scientific_name",
+        "definition"
+      ],
+      "required_evidence_ids": [
+        "E_9af4c0e6bde1"
+      ],
+      "repair_goal": "Task requires motor-protein-dependent transport; evidence must name or describe motor proteins (e.g., kinesin/dynein) as actors mediating vesicle movement along microtubules.",
+      "acceptance_predicates": [
+        "exact_evidence_support",
+        "original_requirements_preserved",
+        "typed_state_reachable",
+        "independent_science_review",
+        "target_issue_resolved"
+      ],
+      "status": "PENDING",
+      "before_model_sha256": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da"
+    },
+    {
+      "repair_id": "MODEL_REPAIR_2",
+      "issue_id": "ISS-002",
+      "target_artifact": "typed_science_model",
+      "target_ids": [
+        "proc_vesicle_transport_along_microtubule",
+        "ent_vesicle",
+        "rel_microtubule_track_for_vesicle"
+      ],
+      "target_fields": [
+        "participants",
+        "preconditions",
+        "effects",
+        "temporal_scope",
+        "precondition_state_refs",
+        "effect_state_refs",
+        "support",
+        "scientific_name",
+        "definition"
+      ],
+      "required_evidence_ids": [
+        "E_9af4c0e6bde1"
+      ],
+      "repair_goal": "Evidence that vesicle movement along microtubules is causally mediated by motor proteins, or at minimum that vesicles (not just cytoplasm) specifically move along microtubules.",
+      "acceptance_predicates": [
+        "exact_evidence_support",
+        "original_requirements_preserved",
+        "typed_state_reachable",
+        "independent_science_review",
+        "target_issue_resolved"
+      ],
+      "status": "PENDING",
+      "before_model_sha256": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da"
+    },
+    {
+      "repair_id": "MODEL_REPAIR_3",
+      "issue_id": "ISS-003",
+      "target_artifact": "typed_science_model",
+      "target_ids": [
+        "proc_vesicle_transport_along_microtubule",
+        "rel_microtubule_track_for_vesicle"
+      ],
+      "target_fields": [
+        "participants",
+        "preconditions",
+        "effects",
+        "temporal_scope",
+        "precondition_state_refs",
+        "effect_state_refs",
+        "support",
+        "scientific_name",
+        "definition"
+      ],
+      "required_evidence_ids": [
+        "E_9af4c0e6bde1"
+      ],
+      "repair_goal": "Evidence supporting the deterministic observable that a specific vesicle is on/along a microtubule track during a defined transport interval with persistence semantics.",
+      "acceptance_predicates": [
+        "exact_evidence_support",
+        "original_requirements_preserved",
+        "typed_state_reachable",
+        "independent_science_review",
+        "target_issue_resolved"
+      ],
+      "status": "PENDING",
+      "before_model_sha256": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da"
+    },
+    {
+      "repair_id": "MODEL_REPAIR_4",
+      "issue_id": "ISS-004",
+      "target_artifact": "typed_science_model",
+      "target_ids": [
+        "proc_microtubule_track_provision",
+        "ent_microtubule",
+        "rel_microtubule_track_for_vesicle"
+      ],
+      "target_fields": [
+        "participants",
+        "preconditions",
+        "effects",
+        "temporal_scope",
+        "precondition_state_refs",
+        "effect_state_refs",
+        "support",
+        "scientific_name",
+        "definition"
+      ],
+      "required_evidence_ids": [
+        "E_9af4c0e6bde1"
+      ],
+      "repair_goal": "Evidence that track provision is a distinct process with start/end conditions and concurrency with transport, rather than a structural capability.",
+      "acceptance_predicates": [
+        "exact_evidence_support",
+        "original_requirements_preserved",
+        "typed_state_reachable",
+        "independent_science_review",
+        "target_issue_resolved"
+      ],
+      "status": "PENDING",
+      "before_model_sha256": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da"
+    },
+    {
+      "repair_id": "MODEL_REPAIR_5",
+      "issue_id": "ISS-005",
+      "target_artifact": "typed_science_model",
+      "target_ids": [
+        "ent_vesicle"
+      ],
+      "target_fields": [
+        "participants",
+        "preconditions",
+        "effects",
+        "temporal_scope",
+        "precondition_state_refs",
+        "effect_state_refs",
+        "support",
+        "scientific_name",
+        "definition"
+      ],
+      "required_evidence_ids": [
+        "E_9af4c0e6bde1"
+      ],
+      "repair_goal": "Evidence that vesicles are membrane-bound cargo carriers and that their moving/stationary states are specifically along microtubules.",
+      "acceptance_predicates": [
+        "exact_evidence_support",
+        "original_requirements_preserved",
+        "typed_state_reachable",
+        "independent_science_review",
+        "target_issue_resolved"
+      ],
+      "status": "PENDING",
+      "before_model_sha256": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da"
+    },
+    {
+      "repair_id": "MODEL_REPAIR_6",
+      "issue_id": "ISS-006",
+      "target_artifact": "typed_science_model",
+      "target_ids": [],
+      "target_fields": [
+        "participants",
+        "preconditions",
+        "effects",
+        "temporal_scope",
+        "precondition_state_refs",
+        "effect_state_refs",
+        "support",
+        "scientific_name",
+        "definition"
+      ],
+      "required_evidence_ids": [
+        "E_9af4c0e6bde1"
+      ],
+      "repair_goal": "Consistency between the task topic 'motor-protein-dependent transport' and the model's actual supported content.",
+      "acceptance_predicates": [
+        "exact_evidence_support",
+        "original_requirements_preserved",
+        "typed_state_reachable",
+        "independent_science_review",
+        "target_issue_resolved"
+      ],
+      "status": "PENDING",
+      "before_model_sha256": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da"
+    },
+    {
+      "repair_id": "MODEL_REPAIR_7",
+      "issue_id": "ISS-007",
+      "target_artifact": "typed_science_model",
+      "target_ids": [],
+      "target_fields": [
+        "participants",
+        "preconditions",
+        "effects",
+        "temporal_scope",
+        "precondition_state_refs",
+        "effect_state_refs",
+        "support",
+        "scientific_name",
+        "definition"
+      ],
+      "required_evidence_ids": [
+        "E_9af4c0e6bde1"
+      ],
+      "repair_goal": "Evidence resolving directionality (anterograde vs retrograde), motor protein identity (kinesin/dynein), and organism specificity for the vesicle-microtubule transport claim.",
+      "acceptance_predicates": [
+        "exact_evidence_support",
+        "original_requirements_preserved",
+        "typed_state_reachable",
+        "independent_science_review",
+        "target_issue_resolved"
+      ],
+      "status": "PENDING",
+      "before_model_sha256": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da"
+    },
+    {
+      "repair_id": "MODEL_REPAIR_8",
+      "issue_id": "STATE_MODEL_MIGRATION",
+      "target_artifact": "typed_science_model",
+      "target_ids": [
+        "proc_microtubule_track_provision",
+        "proc_vesicle_transport_along_microtubule",
+        "rel_microtubule_track_for_vesicle"
+      ],
+      "target_fields": [
+        "participants",
+        "preconditions",
+        "effects",
+        "temporal_scope",
+        "precondition_state_refs",
+        "effect_state_refs",
+        "support",
+        "scientific_name",
+        "definition"
+      ],
+      "required_evidence_ids": [
+        "E_9af4c0e6bde1"
+      ],
+      "repair_goal": "Identify supported pre-clip conditions, explicit subject/property/value states and missing state producers without omitting user-required mechanisms. Preserve actual user teaching scope.",
+      "acceptance_predicates": [
+        "exact_evidence_support",
+        "original_requirements_preserved",
+        "typed_state_reachable",
+        "independent_science_review",
+        "target_issue_resolved"
+      ],
+      "status": "PENDING",
+      "before_model_sha256": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da"
+    }
+  ],
+  "patch": {
+    "operations": [
+      {
+        "op": "update",
+        "collection": "processes",
+        "target_id": "proc_microtubule_track_provision",
+        "fields": {
+          "scientific_name": "Microtubule track provision for vesicle movement",
+          "action_category": "interaction",
+          "participants": [
+            {
+              "role": "track_provider",
+              "entity_ref": "ent_microtubule"
+            },
+            {
+              "role": "cargo_guided",
+              "entity_ref": "ent_vesicle"
+            }
+          ],
+          "input_roles": [
+            "track_provider",
+            "cargo_guided"
+          ],
+          "output_roles": [
+            "track_provider",
+            "cargo_guided"
+          ],
+          "preconditions": {
+            "microtubule_present": true
+          },
+          "effects": {
+            "vesicle_can_move_along_microtubule": true
+          },
+          "temporal_scope": {
+            "start_condition": "Microtubule is present and vesicle movement along it begins.",
+            "end_condition": "Vesicle movement along the microtubule ceases or the microtubule is no longer available as a track.",
+            "concurrent_with": [
+              "proc_vesicle_transport_along_microtubule"
+            ],
+            "after": []
+          },
+          "observables": [
+            {
+              "constraint_id": "obs_track_relation_during_transport",
+              "predicate": "relation_holds_during",
+              "relation_ref": "rel_microtubule_track_for_vesicle",
+              "source_role": "track_provider",
+              "target_role": "cargo_guided",
+              "capability": "DETERMINISTIC",
+              "evidence_ids": [
+                "E_9af4c0e6bde1"
+              ],
+              "support": [
+                {
+                  "evidence_id": "E_9af4c0e6bde1",
+                  "quote": "provide a track along which vesicles move through the cell",
+                  "location": "paragraph_12"
+                }
+              ]
+            }
+          ],
+          "evidence_ids": [
+            "E_9af4c0e6bde1"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_9af4c0e6bde1",
+              "quote": "They help the cell resist compression, provide a track along which vesicles move through the cell, and pull replicated chromosomes to opposite ends of a dividing cell.",
+              "location": "paragraph_12"
+            }
+          ],
+          "exceptions": [
+            {
+              "exception_id": "exc_track_absent",
+              "description": "If microtubules are not present or not serving as tracks, this provision does not hold.",
+              "evidence_ids": [
+                "E_9af4c0e6bde1"
+              ]
+            }
+          ],
+          "precondition_state_refs": [
+            "st_microtubule_present"
+          ],
+          "effect_state_refs": [
+            "st_microtubule_available_as_track"
+          ]
+        }
+      },
+      {
+        "op": "update",
+        "collection": "processes",
+        "target_id": "proc_vesicle_transport_along_microtubule",
+        "fields": {
+          "scientific_name": "Vesicle transport along microtubules",
+          "action_category": "transport",
+          "participants": [
+            {
+              "role": "cargo",
+              "entity_ref": "ent_vesicle"
+            },
+            {
+              "role": "track",
+              "entity_ref": "ent_microtubule"
+            }
+          ],
+          "input_roles": [
+            "cargo",
+            "track"
+          ],
+          "output_roles": [
+            "cargo",
+            "track"
+          ],
+          "preconditions": {
+            "microtubule_present_as_track": true,
+            "vesicle_present": true
+          },
+          "effects": {
+            "vesicle_moves_through_cell": true
+          },
+          "temporal_scope": {
+            "start_condition": "Vesicle movement along a microtubule track begins.",
+            "end_condition": "Vesicle movement along the microtubule track ends.",
+            "concurrent_with": [
+              "proc_microtubule_track_provision"
+            ],
+            "after": []
+          },
+          "observables": [
+            {
+              "constraint_id": "obs_vesicle_transport_relation",
+              "predicate": "relation_holds_during",
+              "relation_ref": "rel_microtubule_track_for_vesicle",
+              "source_role": "track",
+              "target_role": "cargo",
+              "capability": "DETERMINISTIC",
+              "evidence_ids": [
+                "E_9af4c0e6bde1"
+              ],
+              "support": [
+                {
+                  "evidence_id": "E_9af4c0e6bde1",
+                  "quote": "provide a track along which vesicles move through the cell",
+                  "location": "paragraph_12"
+                }
+              ]
+            }
+          ],
+          "evidence_ids": [
+            "E_9af4c0e6bde1"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_9af4c0e6bde1",
+              "quote": "provide a track along which vesicles move through the cell",
+              "location": "paragraph_12"
+            },
+            {
+              "evidence_id": "E_9af4c0e6bde1",
+              "quote": "allow cytoplasm and vesicles to move within the cell",
+              "location": "paragraph_1"
+            }
+          ],
+          "exceptions": [
+            {
+              "exception_id": "exc_no_track",
+              "description": "Vesicle transport along microtubules does not occur if no microtubule track is available.",
+              "evidence_ids": [
+                "E_9af4c0e6bde1"
+              ]
+            }
+          ],
+          "precondition_state_refs": [
+            "st_microtubule_available_as_track",
+            "st_vesicle_present"
+          ],
+          "effect_state_refs": [
+            "st_vesicle_moving_along_microtubule"
+          ]
+        }
+      }
+    ],
+    "state_upgrade": {
+      "schema_version": "1.1",
+      "clip_start": {
+        "stage": "Steady-state eukaryotic cell in which microtubules are present as tracks and vesicles are present as cargo for movement along those tracks.",
+        "existing_entity_refs": [
+          "ent_cytoskeleton",
+          "ent_microtubule",
+          "ent_vesicle"
+        ],
+        "omitted_processes": [
+          {
+            "description": "Microtubule assembly and disassembly dynamics",
+            "reason": "Retrieved evidence notes that microtubules can disassemble and reform quickly, but the requested teaching scope is vesicle transport along microtubules, not microtubule dynamics.",
+            "required_by_task": false
+          },
+          {
+            "description": "Vesicle cargo selection and membrane fusion",
+            "reason": "The retrieved passages do not describe vesicle cargo selection or fusion mechanisms; these are outside the stated scope.",
+            "required_by_task": false
+          },
+          {
+            "description": "Motor-protein identity and detailed mechanochemical stepping cycle",
+            "reason": "The retrieved evidence E_9af4c0e6bde1 states that microtubules provide a track along which vesicles move but does not name or mechanistically describe motor proteins for vesicle transport; motor-protein-dependent details are therefore outside the supported scope of this model.",
+            "required_by_task": false
+          }
+        ]
+      },
+      "states": [
+        {
+          "state_id": "st_microtubule_present",
+          "subject_ref": "ent_microtubule",
+          "property": "present_as_track",
+          "value": true,
+          "state_kind": "INITIAL_CONDITION",
+          "scope": {
+            "process_ids": [
+              "proc_microtubule_track_provision",
+              "proc_vesicle_transport_along_microtubule"
+            ]
+          },
+          "producer_process_id": null,
+          "required_by_process_ids": [
+            "proc_microtubule_track_provision"
+          ],
+          "evidence_ids": [
+            "E_9af4c0e6bde1"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_9af4c0e6bde1",
+              "quote": "provide a track along which vesicles move through the cell",
+              "location": "paragraph_12"
+            }
+          ]
+        },
+        {
+          "state_id": "st_microtubule_available_as_track",
+          "subject_ref": "ent_microtubule",
+          "property": "available_as_track",
+          "value": true,
+          "state_kind": "PRODUCED_STATE",
+          "scope": {
+            "process_ids": [
+              "proc_microtubule_track_provision",
+              "proc_vesicle_transport_along_microtubule"
+            ]
+          },
+          "producer_process_id": "proc_microtubule_track_provision",
+          "required_by_process_ids": [
+            "proc_vesicle_transport_along_microtubule"
+          ],
+          "evidence_ids": [
+            "E_9af4c0e6bde1"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_9af4c0e6bde1",
+              "quote": "provide a track along which vesicles move through the cell",
+              "location": "paragraph_12"
+            }
+          ]
+        },
+        {
+          "state_id": "st_vesicle_present",
+          "subject_ref": "ent_vesicle",
+          "property": "present",
+          "value": true,
+          "state_kind": "INITIAL_CONDITION",
+          "scope": {
+            "process_ids": [
+              "proc_vesicle_transport_along_microtubule"
+            ]
+          },
+          "producer_process_id": null,
+          "required_by_process_ids": [
+            "proc_vesicle_transport_along_microtubule"
+          ],
+          "evidence_ids": [
+            "E_9af4c0e6bde1"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_9af4c0e6bde1",
+              "quote": "provide a track along which vesicles move through the cell",
+              "location": "paragraph_12"
+            }
+          ]
+        },
+        {
+          "state_id": "st_vesicle_moving_along_microtubule",
+          "subject_ref": "ent_vesicle",
+          "property": "moving_along_microtubule",
+          "value": true,
+          "state_kind": "PRODUCED_STATE",
+          "scope": {
+            "process_ids": [
+              "proc_vesicle_transport_along_microtubule"
+            ]
+          },
+          "producer_process_id": "proc_vesicle_transport_along_microtubule",
+          "required_by_process_ids": [],
+          "evidence_ids": [
+            "E_9af4c0e6bde1"
+          ],
+          "support": [
+            {
+              "evidence_id": "E_9af4c0e6bde1",
+              "quote": "provide a track along which vesicles move through the cell",
+              "location": "paragraph_12"
+            },
+            {
+              "evidence_id": "E_9af4c0e6bde1",
+              "quote": "allow cytoplasm and vesicles to move within the cell",
+              "location": "paragraph_1"
+            }
+          ]
+        }
+      ]
+    },
+    "issue_resolution": [
+      {
+        "issue_id": "ISS-001",
+        "changed_target_ids": [
+          "proc_vesicle_transport_along_microtubule",
+          "proc_microtubule_track_provision"
+        ],
+        "reason": "Reverted to the original source-supported framing: E_9af4c0e6bde1 states microtubules provide a track along which vesicles move, but does not name or describe motor proteins mediating vesicle transport. Motor-protein-dependent claims are left unresolved rather than asserted.",
+        "evidence_ids": [
+          "E_9af4c0e6bde1"
+        ]
+      },
+      {
+        "issue_id": "ISS-002",
+        "changed_target_ids": [
+          "proc_vesicle_transport_along_microtubule",
+          "ent_vesicle",
+          "rel_microtubule_track_for_vesicle"
+        ],
+        "reason": "Removed the motor-protein-mediated causal chain and motor-cargo binding process because the retrieved evidence does not support motor proteins as actors in vesicle-specific transport; E_9af4c0e6bde1 supports only that vesicles move along microtubule tracks.",
+        "evidence_ids": [
+          "E_9af4c0e6bde1"
+        ]
+      },
+      {
+        "issue_id": "ISS-003",
+        "changed_target_ids": [
+          "proc_vesicle_transport_along_microtubule"
+        ],
+        "reason": "The observable obs_vesicle_transport_relation now uses only the source-supported relation (rel_microtubule_track_for_vesicle) with DETERMINISTIC capability, directly quoting E_9af4c0e6bde1 on vesicles moving along microtubule tracks.",
+        "evidence_ids": [
+          "E_9af4c0e6bde1"
+        ]
+      },
+      {
+        "issue_id": "ISS-004",
+        "changed_target_ids": [
+          "proc_microtubule_track_provision"
+        ],
+        "reason": "Track provision is reframed as the source-supported structural/interaction process: microtubules provide a track for vesicle movement, with start/end tied to vesicle movement; no unsupported motor-protein requirement is retained. E_9af4c0e6bde1 does not describe track provision as an active microtubule process, so this remains a teaching simplification.",
+        "evidence_ids": [
+          "E_9af4c0e6bde1"
+        ]
+      },
+      {
+        "issue_id": "ISS-005",
+        "changed_target_ids": [
+          "ent_vesicle"
+        ],
+        "reason": "Vesicle states are limited to moving_along_microtubule and stationary, supported by E_9af4c0e6bde1; unsupported motor-bound state removed.",
+        "evidence_ids": [
+          "E_9af4c0e6bde1"
+        ]
+      },
+      {
+        "issue_id": "ISS-006",
+        "changed_target_ids": [
+          "proc_vesicle_transport_along_microtubule",
+          "proc_microtubule_track_provision"
+        ],
+        "reason": "Model content now matches the supported scope of E_9af4c0e6bde1 (microtubule tracks for vesicle movement) and does not assert motor-protein-dependent mechanisms that the evidence does not support; this limitation is recorded in unresolved_questions.",
+        "evidence_ids": [
+          "E_9af4c0e6bde1"
+        ]
+      },
+      {
+        "issue_id": "ISS-007",
+        "changed_target_ids": [],
+        "reason": "Directionality, motor protein identity (kinesin/dynein), and organism specificity remain unresolved because the retrieved evidence E_9af4c0e6bde1 does not specify them; no unsupported claims added.",
+        "evidence_ids": [
+          "E_9af4c0e6bde1"
+        ]
+      },
+      {
+        "issue_id": "STATE_MODEL_MIGRATION",
+        "changed_target_ids": [
+          "proc_microtubule_track_provision",
+          "proc_vesicle_transport_along_microtubule",
+          "st_microtubule_present",
+          "st_microtubule_available_as_track",
+          "st_vesicle_present",
+          "st_vesicle_moving_along_microtubule"
+        ],
+        "reason": "Migrated to typed state model: initial conditions are microtubule present as track and vesicle present; track provision produces microtubule available as track; transport requires available track and vesicle present and produces vesicle moving along microtubule. All states supported by E_9af4c0e6bde1. No unsupported motor-protein states retained.",
+        "evidence_ids": [
+          "E_9af4c0e6bde1"
+        ]
+      }
+    ]
+  },
+  "accepted": false,
+  "status": "ROLLED_BACK",
+  "independent_review": "REVISE",
+  "after_hash": "fed67fd4329ae98a854ade05040c372abfb44695b0d6cdf4f5d9ffc96465a04e",
+  "changed_fields": [
+    "processes/proc_microtubule_track_provision/precondition_state_refs",
+    "processes/proc_microtubule_track_provision/effect_state_refs",
+    "processes/proc_vesicle_transport_along_microtubule/precondition_state_refs",
+    "processes/proc_vesicle_transport_along_microtubule/effect_state_refs",
+    "schema_version",
+    "clip_start",
+    "states"
+  ],
+  "causal_status": "PASS",
+  "review": {
+    "decision": "REVISE",
+    "issues": [
+      {
+        "target_id": "scope",
+        "reason": "Task explicitly requests 'motor-protein-dependent' vesicle transport, but the model excludes motor proteins (identity AND mechanism) as out-of-scope because the single retrieved OpenStax excerpt never mentions motors. The model thus formally represents only passive track provision, not the motor-dependent transport the task asked for. This is a scope/evidence-gap mismatch that must be flagged and either the evidence supplemented or the scope honestly delimited as 'motor dependence not evidenced here'.",
+        "evidence_ids": [
+          "E_9af4c0e6bde1"
+        ]
+      },
+      {
+        "target_id": "proc_vesicle_transport_along_microtubule",
+        "reason": "The process is labeled 'transport' with effect 'vesicle_moves_through_cell', but the only source sentence ('provide a track along which vesicles move') does not entail an active motor-driven transport process as the process semantically encodes. Treating movement along the microtubule as a process distinct from the 'track provision' process is un-entailed duplication; the source supports a single passive track relationship, not two coupled processes with shared concurrent scope.",
+        "evidence_ids": [
+          "E_9af4c0e6bde1"
+        ]
+      },
+      {
+        "target_id": "proc_microtubule_track_provision",
+        "reason": "This 'process' has identical input and output roles (track_provider, cargo_guided) and produces a state 'available_as_track' that is merely a re-labeling of the initial condition 'present_as_track'. It is not a source-supported causal state change; the excerpt asserts a static structural capability, not a process that transforms microtubules into tracks. This inflates a structural relation into an unsupported process with no measured transition.",
+        "evidence_ids": [
+          "E_9af4c0e6bde1"
+        ]
+      },
+      {
+        "target_id": "obs_vesicle_transport_relation / obs_track_relation_during_transport",
+        "reason": "Both observables are declared DETERMINISTIC but the source only states that microtubules 'provide a track along which vesicles move' (a general structural statement) plus 'allow cytoplasm and vesicles to move within the cell'. Neither entails a deterministic, per-vesicle observable that a vesicle is moving along a specific microtubule during a bounded temporal window. Marking as DETERMINISTIC overstates entailment; capability should reflect uncertain/qualitative source framing.",
+        "evidence_ids": [
+          "E_9af4c0e6bde1"
+        ]
+      },
+      {
+        "target_id": "organism_context / excluded_processes",
+        "reason": "Organism context generalized to 'eukaryotic cells' is defensible, but excluded processes list claims motor mechanism is 'not specified in retrieved passages' while the task demanded motor dependence — the model silently converts a required teaching element into an exclusion instead of surfacing it as a blocking evidence gap. Teaching simplification must be labeled as such (not-motor-evidenced), not presented as an approved scope decision.",
+        "evidence_ids": [
+          "E_9af4c0e6bde1"
+        ]
+      }
+    ],
+    "observable_reviews": [
+      {
+        "constraint_id": "obs_track_relation_during_transport",
+        "decision": "REVISE",
+        "reason": "Source entails only that microtubules structurally provide a track for vesicle movement; it does not entail a deterministic 'relation_holds_during' observable of a specific vesicle-track pairing within a bounded transport window. Narrow the observable to structural capability or downgrade capability."
+      },
+      {
+        "constraint_id": "obs_vesicle_transport_relation",
+        "decision": "REVISE",
+        "reason": "Same source sentence cannot support a DETERMINISTIC transport-during relation for a specific cargo/track pair; entailment is at the general structural-capability level only. Also duplicates the track-provision observable without distinct source support."
+      }
+    ],
+    "scope_review": "The single retrieved excerpt (OpenStax 4.5) supports only: microtubules are hollow tubulin polymers, part of the cytoskeleton (one of three fiber types), and provide a track along which vesicles move through the cell; the cytoskeleton allows cytoplasm and vesicles to move. It does NOT entail: motor protein identity, motor dependence, directionality, a distinct causal 'track provision' process, per-vesicle deterministic transport observables, or two coupled concurrent processes. The user task specifically requested motor-protein-dependent transport, which is not evidenced; this must be surfaced as a blocking evidence gap or an explicit honest simplification labeled 'not motor-evidenced', not as an approved scope exclusion. Because motor dependence is the core requested phenomenon and is unverified, and because process/observable semantics overstate the structural source statement, the model cannot be approved. No PASS is given; the relevant checks (motor dependence, process causal-state honesty, observable determinism) fail. Structural entity/relation facts (microtubule composition, cytoskeleton membership, track relationship) are reasonably supported and may be retained.",
+    "model_hash": "fed67fd4329ae98a854ade05040c372abfb44695b0d6cdf4f5d9ffc96465a04e",
+    "separate_request": true,
+    "independent_provider": false
+  },
+  "rollback_hash": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da"
+}

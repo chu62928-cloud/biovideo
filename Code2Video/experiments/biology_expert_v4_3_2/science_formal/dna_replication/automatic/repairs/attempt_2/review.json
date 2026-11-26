@@ -1,0 +1,81 @@
+{
+  "decision": "REVISE",
+  "issues": [
+    {
+      "target_id": "PROC_PRIMER_REPLACEMENT",
+      "reason": "Source states removed primer RNA is 'replaced with DNA nucleotides' but does not identify any enzyme, template usage, or process actor; modeling this as a template-directed synthesis process with a DNA replacement product adds an unsupported mechanism and actor. Also, this process is required for ligation precondition but is not listed in scope.included_processes, and it is not the 'one local maturation event' requested.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    },
+    {
+      "target_id": "ST_HANDOFF_READY",
+      "reason": "Source says pol α 'hands off to a second polymerase' without naming pol δ on the lagging strand. The model's PROC_POL_DELTA_EXTENSION precondition explicitly treats handoff to pol δ as schematic inference, yet the state is encoded as a required deterministic causal link to pol δ. This conflates source-supported generic handoff with an unsupported specific identity.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    },
+    {
+      "target_id": "ENT_RNASE_H",
+      "reason": "Source parenthetically labels RNase H as 'AKA flap endonuclease', which is biologically inaccurate; RNase H and flap endonuclease are distinct activities. The model correctly flags unresolved equivalence in unresolved_questions and simplifications, but the entity scientific_name 'RNase H' and REL_RNASE_H_REMOVES_PRIMER plus OBS_PRIMER_REMOVED still assert a single actor removes displaced primer. For grades 10-12 this risks teaching a misleading equivalence unless the observable is marked INSUFFICIENT_EVIDENCE or the entity is genericized.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    },
+    {
+      "target_id": "OBS_ALPHA_EXTENDS_PRIMER",
+      "reason": "Source says pol α adds a short DNA fragment 'to the RNA primer'; the model's observable uses relation_holds_during with target_role 'substrate' = ENT_RNA_PRIMER and state ST_SHORT_DNA_ADDED has subject_ref ENT_RNA_PRIMER with property 'extension'. This conflates primer as substrate with the added DNA as a distinct product; the model itself notes subject/product distinction uncertainty. Observable semantics are therefore only partially source-supported and should be revised to explicitly represent product DNA or downgraded.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    },
+    {
+      "target_id": "ST_GAP_SUBSTRATE_READY",
+      "reason": "Source distinguishes Okazaki fragment joining after primer replacement and says 'gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond.' The model's ENT_GAP_SUBSTRATE is a generic nucleic_acid_region and ST_GAP_SUBSTRATE_READY value 'dna_replacement_completed' does not preserve the nicked phosphodiester-backbone state that ligase actually seals. The observable OBS_GAPS_SEALED is marked PARTIAL but the state semantics are ambiguous and could mislead about what ligase does.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    }
+  ],
+  "observable_reviews": [
+    {
+      "constraint_id": "OBS_PRIMER_FORMED",
+      "decision": "PASS",
+      "reason": "Source directly states primers are formed by primase and DNA pol can then start synthesis; state transition from template-available to primer-present is entailed at this schematic scope."
+    },
+    {
+      "constraint_id": "OBS_ALPHA_EXTENDS_PRIMER",
+      "decision": "REVISE",
+      "reason": "Source entails pol α adds a short DNA fragment to the RNA primer, but the observable's target role is the primer itself and does not preserve the distinct added-DNA product; partial capability plus noted subject/product uncertainty is insufficient for approval as written."
+    },
+    {
+      "constraint_id": "OBS_DELTA_SYNTHESIZES_LAGGING_DNA",
+      "decision": "PASS",
+      "reason": "Source directly states lagging strand is synthesized by pol δ; relation holds during local Okazaki fragment synthesis at schematic scope."
+    },
+    {
+      "constraint_id": "OBS_DELTA_DISPLACES_PRIMER",
+      "decision": "PASS",
+      "reason": "Source directly states pol δ runs into primer RNA on lagging strand and displaces it from DNA template; relation and participant roles match."
+    },
+    {
+      "constraint_id": "OBS_PRIMER_REMOVED",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "reason": "Source says displaced primer RNA is removed by RNase H (AKA flap endonuclease), but the parenthetical equivalence is biologically suspect and the source does not resolve which activity acts here. A single-actor removal observable is not directly entailed without qualification."
+    },
+    {
+      "constraint_id": "OBS_PRIMER_REPLACED_WITH_DNA",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "reason": "Source states replacement with DNA nucleotides but supplies no actor, template usage, or process; the model's observable asserts a template-to-product state transition not entailed by the excerpt."
+    },
+    {
+      "constraint_id": "OBS_GAPS_SEALED",
+      "decision": "REVISE",
+      "reason": "Source entails DNA ligase seals remaining gaps by forming phosphodiester bond, but the model's gap substrate state is a generic region and 'dna_replacement_completed' does not explicitly preserve the nicked-backbone substrate; observable semantics need tightening to avoid ambiguity."
+    }
+  ],
+  "scope_review": "Included processes mostly match the requested local priming, extension, and one maturation event: primer formation, pol α extension, pol δ lagging synthesis and primer displacement, primer removal, and ligation are source-supported. However, the model adds PROC_PRIMER_REPLACEMENT, which is not listed in included_processes and is not the single local maturation event requested; it introduces an unsupported mechanistic process with no identified actor. Origin recognition, helicase/topoisomerase, leading-strand pol ε, telomerase, nucleosome handling, and proofreading/MMR are appropriately excluded. The organism context is eukaryote and the source is eukaryotic. The model correctly flags several unresolved questions, but the RNase H/flap endonuclease parenthetical and the handoff-to-pol δ identity are presented too strongly in entities/relations/states despite being marked uncertain in text. Teaching simplifications are acceptable only if they honestly delimit what is proven; the primer replacement process and the RNase H single-actor removal currently overstate source support.",
+  "model_hash": "ca007e0b60def85401c0ff2d8be6c4ef20fe707ad14f5968fcb350e496233b7a",
+  "separate_request": true,
+  "independent_provider": false
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=eukaryotic+lagging+strand+DNA+replication+Okazaki+fragment+priming+extension+RNase+H+FEN1+polymerase+delta+primer+removal+ligation+mechanism+review&format=json&pageSize=3&resultType=core",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:28:20Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "86fc55e180fea640be5fa50bc32214a1f00b812ce1d0738be463f2398b8a1b02"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5445644/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:28:26Z",
+    "status": "UNVERIFIED",
+    "http_status": 500,
+    "error": "HTTPError"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4608483/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:28:46Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "70a18de55f4498207b32c0b078351cb521bc4e28bf497cb16c81fad6c99935e4"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3893020/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:29:09Z",
+    "status": "UNVERIFIED",
+    "error": "ReadTimeout"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK26845/",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:29:35Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "b3f59077f4a890af1862a12c827b8531bda69734581a2885a7eceff7bc8987eb"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4765135/",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:29:36Z",
+    "status": "redirect",
+    "http_status": 301,
+    "destination": "https://pmc.ncbi.nlm.nih.gov:443/articles/PMC4765135/"
+  },
+  {
+    "url": "https://pmc.ncbi.nlm.nih.gov:443/articles/PMC4765135/",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:29:37Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "95517e9411f06f8632bb13778e60dc016298288ca323d7bf3109492b269cfb20"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=eukaryotic+DNA+replication+Okazaki+fragment+maturation+RNase+H+FEN1+pol+alpha+pol+delta+primer+removal+DNA+replacement+ligation+nick+sealing+mechanism+review&format=json&pageSize=3&resultType=core",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:29:54Z",
+    "status": "UNVERIFIED",
+    "error": "ReadTimeout"
+  },
+  {
+    "url": "https://www.annualreviews.org/doi/10.1146/annurev.biochem.75.103004.142539",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:30:19Z",
+    "status": "UNVERIFIED",
+    "http_status": 403,
+    "error": "HTTPError"
+  }
+]

@@ -1,0 +1,97 @@
+{
+  "model_sha256": "ca007e0b60def85401c0ff2d8be6c4ef20fe707ad14f5968fcb350e496233b7a",
+  "status": "PASS",
+  "issues": [],
+  "reachable_process_ids": [
+    "PROC_LIGATION",
+    "PROC_POL_ALPHA_EXTENSION",
+    "PROC_POL_DELTA_EXTENSION",
+    "PROC_PRIMER_FORMATION",
+    "PROC_PRIMER_REMOVAL",
+    "PROC_PRIMER_REPLACEMENT"
+  ],
+  "witnesses": {
+    "PROC_PRIMER_FORMATION": {
+      "completed_before": [],
+      "required_state_refs": [
+        "ST_DNA_TEMPLATE_AVAILABLE"
+      ],
+      "produced_state_refs": [
+        "ST_PRIMER_PRESENT"
+      ]
+    },
+    "PROC_POL_ALPHA_EXTENSION": {
+      "completed_before": [
+        "PROC_PRIMER_FORMATION"
+      ],
+      "required_state_refs": [
+        "ST_PRIMER_PRESENT"
+      ],
+      "produced_state_refs": [
+        "ST_SHORT_DNA_ADDED",
+        "ST_HANDOFF_READY"
+      ]
+    },
+    "PROC_POL_DELTA_EXTENSION": {
+      "completed_before": [
+        "PROC_POL_ALPHA_EXTENSION",
+        "PROC_PRIMER_FORMATION"
+      ],
+      "required_state_refs": [
+        "ST_HANDOFF_READY"
+      ],
+      "produced_state_refs": [
+        "ST_OKAZAKI_FRAGMENT_SYNTHESIZED",
+        "ST_PRIMER_DISPLACED"
+      ]
+    },
+    "PROC_PRIMER_REMOVAL": {
+      "completed_before": [
+        "PROC_POL_ALPHA_EXTENSION",
+        "PROC_POL_DELTA_EXTENSION",
+        "PROC_PRIMER_FORMATION"
+      ],
+      "required_state_refs": [
+        "ST_PRIMER_DISPLACED"
+      ],
+      "produced_state_refs": [
+        "ST_PRIMER_REMOVED"
+      ]
+    },
+    "PROC_PRIMER_REPLACEMENT": {
+      "completed_before": [
+        "PROC_POL_ALPHA_EXTENSION",
+        "PROC_POL_DELTA_EXTENSION",
+        "PROC_PRIMER_FORMATION",
+        "PROC_PRIMER_REMOVAL"
+      ],
+      "required_state_refs": [
+        "ST_PRIMER_REMOVED"
+      ],
+      "produced_state_refs": [
+        "ST_REPLACEMENT_DNA_SYNTHESIZED",
+        "ST_GAP_SUBSTRATE_READY"
+      ]
+    },
+    "PROC_LIGATION": {
+      "completed_before": [
+        "PROC_POL_ALPHA_EXTENSION",
+        "PROC_POL_DELTA_EXTENSION",
+        "PROC_PRIMER_FORMATION",
+        "PROC_PRIMER_REMOVAL",
+        "PROC_PRIMER_REPLACEMENT"
+      ],
+      "required_state_refs": [
+        "ST_GAP_SUBSTRATE_READY"
+      ],
+      "produced_state_refs": [
+        "ST_GAPS_SEALED",
+        "ST_OKAZAKI_FRAGMENTS_JOINED"
+      ]
+    }
+  },
+  "states_explored": 7,
+  "exhaustive": true,
+  "limit": 4096,
+  "semantics": "Bounded single-execution state paths on explicit subject/property/value; no claim about chemistry, loops or all continuous trajectories."
+}

@@ -77,7 +77,6 @@
     },
     {
       "topic": "vesicle_transport",
-      "sample_class": "formal",
       "repair_id": "science_formal/vesicle_transport/automatic/repairs/attempt_0",
       "issue_ids": [
         "ISS-001",
@@ -92,9 +91,7 @@
       "before_hash": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da",
       "after_hash": null,
       "changed_fields": [],
-      "new_evidence_ids": [],
       "target_issue_resolved": false,
-      "regression_status": "NOT_EXECUTED",
       "independent_review": "NOT_EXECUTED",
       "accepted": false,
       "status": "ROLLED_BACK",
@@ -103,7 +100,6 @@
     },
     {
       "topic": "vesicle_transport",
-      "sample_class": "formal",
       "repair_id": "science_formal/vesicle_transport/automatic/repairs/attempt_1",
       "issue_ids": [
         "ISS-001",
@@ -161,14 +157,220 @@
         "clip_start",
         "states"
       ],
-      "new_evidence_ids": [],
       "target_issue_resolved": false,
-      "regression_status": "PASS",
       "independent_review": "REVISE",
       "accepted": false,
       "status": "ROLLED_BACK",
       "error": null,
       "full_record_path": "science_formal/vesicle_transport/automatic/repairs/attempt_1/result.json"
+    },
+    {
+      "topic": "vesicle_transport",
+      "repair_id": "science_formal/vesicle_transport/automatic/repairs/attempt_2",
+      "issue_ids": [
+        "ISS-001",
+        "ISS-002",
+        "ISS-003",
+        "ISS-004",
+        "ISS-005",
+        "ISS-006",
+        "ISS-007",
+        "STATE_MODEL_MIGRATION"
+      ],
+      "before_hash": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da",
+      "after_hash": "fed67fd4329ae98a854ade05040c372abfb44695b0d6cdf4f5d9ffc96465a04e",
+      "changed_fields": [
+        "processes/proc_microtubule_track_provision/precondition_state_refs",
+        "processes/proc_microtubule_track_provision/effect_state_refs",
+        "processes/proc_vesicle_transport_along_microtubule/precondition_state_refs",
+        "processes/proc_vesicle_transport_along_microtubule/effect_state_refs",
+        "schema_version",
+        "clip_start",
+        "states"
+      ],
+      "target_issue_resolved": false,
+      "independent_review": "REVISE",
+      "accepted": false,
+      "status": "ROLLED_BACK",
+      "error": null,
+      "full_record_path": "science_formal/vesicle_transport/automatic/repairs/attempt_2/result.json"
+    },
+    {
+      "topic": "dna_replication",
+      "repair_id": "science_formal/dna_replication/automatic/repairs/attempt_0",
+      "issue_ids": [
+        "ISS_001",
+        "ISS_002",
+        "ISS_003",
+        "ISS_004",
+        "ISS_005",
+        "STATE_MODEL_MIGRATION"
+      ],
+      "before_hash": "0b010f9f174be631781ddedb93a1e3099c02622e7c904d37745116403de614be",
+      "after_hash": null,
+      "changed_fields": [],
+      "target_issue_resolved": false,
+      "independent_review": "NOT_EXECUTED",
+      "accepted": false,
+      "status": "ROLLED_BACK",
+      "error": "Undefined state subject",
+      "full_record_path": "science_formal/dna_replication/automatic/repairs/attempt_0/result.json"
+    },
+    {
+      "topic": "dna_replication",
+      "repair_id": "science_formal/dna_replication/automatic/repairs/attempt_1",
+      "issue_ids": [
+        "ISS_001",
+        "ISS_002",
+        "ISS_003",
+        "ISS_004",
+        "ISS_005",
+        "STATE_MODEL_MIGRATION"
+      ],
+      "before_hash": "0b010f9f174be631781ddedb93a1e3099c02622e7c904d37745116403de614be",
+      "after_hash": "c7d48808cab1ca6e8e98bde299229de8fdbbf725e61d6c7d6eee4fe261e51b2d",
+      "changed_fields": [
+        "entities/ENT_DNA_TEMPLATE",
+        "processes/PROC_PRIMER_FORMATION/precondition_state_refs",
+        "processes/PROC_PRIMER_FORMATION/effect_state_refs",
+        "processes/PROC_POL_ALPHA_EXTENSION/precondition_state_refs",
+        "processes/PROC_POL_ALPHA_EXTENSION/effect_state_refs",
+        "processes/PROC_POL_DELTA_EXTENSION/precondition_state_refs",
+        "processes/PROC_POL_DELTA_EXTENSION/effect_state_refs",
+        "processes/PROC_PRIMER_REMOVAL/precondition_state_refs",
+        "processes/PROC_PRIMER_REMOVAL/effect_state_refs",
+        "processes/PROC_PRIMER_REMOVAL/terminates_state_refs",
+        "processes/PROC_LIGATION/precondition_state_refs",
+        "processes/PROC_LIGATION/effect_state_refs",
+        "schema_version",
+        "clip_start",
+        "states"
+      ],
+      "target_issue_resolved": false,
+      "independent_review": "REVISE",
+      "accepted": false,
+      "status": "ROLLED_BACK",
+      "error": null,
+      "full_record_path": "science_formal/dna_replication/automatic/repairs/attempt_1/result.json"
+    },
+    {
+      "topic": "dna_replication",
+      "repair_id": "science_formal/dna_replication/automatic/repairs/attempt_2",
+      "issue_ids": [
+        "ISS_001",
+        "ISS_002",
+        "ISS_003",
+        "ISS_004",
+        "ISS_005",
+        "STATE_MODEL_MIGRATION"
+      ],
+      "before_hash": "0b010f9f174be631781ddedb93a1e3099c02622e7c904d37745116403de614be",
+      "after_hash": "ca007e0b60def85401c0ff2d8be6c4ef20fe707ad14f5968fcb350e496233b7a",
+      "changed_fields": [
+        "entities/ENT_DNA_TEMPLATE",
+        "entities/ENT_DNA_REPLACEMENT_PRODUCT",
+        "processes/PROC_PRIMER_REPLACEMENT",
+        "processes/PROC_PRIMER_FORMATION/precondition_state_refs",
+        "processes/PROC_PRIMER_FORMATION/effect_state_refs",
+        "processes/PROC_POL_ALPHA_EXTENSION/precondition_state_refs",
+        "processes/PROC_POL_ALPHA_EXTENSION/effect_state_refs",
+        "processes/PROC_POL_DELTA_EXTENSION/precondition_state_refs",
+        "processes/PROC_POL_DELTA_EXTENSION/effect_state_refs",
+        "processes/PROC_POL_DELTA_EXTENSION/preconditions",
+        "processes/PROC_PRIMER_REMOVAL/precondition_state_refs",
+        "processes/PROC_PRIMER_REMOVAL/effect_state_refs",
+        "processes/PROC_PRIMER_REMOVAL/terminates_state_refs",
+        "processes/PROC_LIGATION/precondition_state_refs",
+        "processes/PROC_LIGATION/effect_state_refs",
+        "processes/PROC_LIGATION/preconditions",
+        "schema_version",
+        "clip_start",
+        "states"
+      ],
+      "target_issue_resolved": false,
+      "independent_review": "REVISE",
+      "accepted": false,
+      "status": "ROLLED_BACK",
+      "error": null,
+      "full_record_path": "science_formal/dna_replication/automatic/repairs/attempt_2/result.json"
+    },
+    {
+      "topic": "mitosis",
+      "repair_id": "science_formal/mitosis/state_migration/attempt_0",
+      "issue_ids": [
+        "STATE_MODEL_MIGRATION"
+      ],
+      "before_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+      "after_hash": null,
+      "changed_fields": [],
+      "target_issue_resolved": false,
+      "independent_review": "NOT_EXECUTED",
+      "accepted": false,
+      "status": "ROLLED_BACK",
+      "error": "1.1 is not one of ['1.0', '1.1']\n\nFailed validating 'enum' in schema['properties']['schema_version']:\n    {'enum': ['1.0', '1.1']}\n\nOn instance['schema_version']:\n    1.1",
+      "full_record_path": "science_formal/mitosis/state_migration/attempt_0/result.json"
+    },
+    {
+      "topic": "mitosis",
+      "repair_id": "science_formal/mitosis/state_migration/attempt_1",
+      "issue_ids": [
+        "STATE_MODEL_MIGRATION"
+      ],
+      "before_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+      "after_hash": "bcb4271396ce2bcdef95c677a78975ce006697bb34ac0d89d2872983756ed339",
+      "changed_fields": [
+        "processes/PROC_kinetochore_attachment_orientation/precondition_state_refs",
+        "processes/PROC_kinetochore_attachment_orientation/effect_state_refs",
+        "processes/PROC_kinetochore_attachment_orientation/terminates_state_refs",
+        "processes/PROC_metaphase_alignment/precondition_state_refs",
+        "processes/PROC_metaphase_alignment/effect_state_refs",
+        "processes/PROC_metaphase_alignment/terminates_state_refs",
+        "processes/PROC_anaphase_sister_separation/precondition_state_refs",
+        "processes/PROC_anaphase_sister_separation/effect_state_refs",
+        "processes/PROC_anaphase_sister_separation/terminates_state_refs",
+        "schema_version",
+        "clip_start",
+        "states"
+      ],
+      "target_issue_resolved": false,
+      "independent_review": "REVISE",
+      "accepted": false,
+      "status": "ROLLED_BACK",
+      "error": null,
+      "full_record_path": "science_formal/mitosis/state_migration/attempt_1/result.json"
+    },
+    {
+      "topic": "mitosis",
+      "repair_id": "science_formal/mitosis/state_migration/attempt_2",
+      "issue_ids": [
+        "STATE_MODEL_MIGRATION"
+      ],
+      "before_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+      "after_hash": "853e6eb9881906c4143da20e4cc219bcefb38df9fd49514f90efcd7383fdff72",
+      "changed_fields": [
+        "relations/REL_duplicated_chromosome_at_metaphase_plate/definition",
+        "relations/REL_duplicated_chromosome_at_metaphase_plate/support",
+        "processes/PROC_metaphase_alignment/precondition_state_refs",
+        "processes/PROC_metaphase_alignment/effect_state_refs",
+        "processes/PROC_metaphase_alignment/terminates_state_refs",
+        "processes/PROC_kinetochore_attachment_orientation/precondition_state_refs",
+        "processes/PROC_kinetochore_attachment_orientation/effect_state_refs",
+        "processes/PROC_kinetochore_attachment_orientation/terminates_state_refs",
+        "processes/PROC_anaphase_sister_separation/precondition_state_refs",
+        "processes/PROC_anaphase_sister_separation/effect_state_refs",
+        "processes/PROC_anaphase_sister_separation/terminates_state_refs",
+        "processes/PROC_anaphase_sister_separation/observables",
+        "processes/PROC_anaphase_sister_separation/exceptions",
+        "schema_version",
+        "clip_start",
+        "states"
+      ],
+      "target_issue_resolved": false,
+      "independent_review": "REVISE",
+      "accepted": false,
+      "status": "ROLLED_BACK",
+      "error": null,
+      "full_record_path": "science_formal/mitosis/state_migration/attempt_2/result.json"
     }
   ],
   "development_failures_preserved": true,

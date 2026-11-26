@@ -1,0 +1,463 @@
+{
+  "operations": [
+    {
+      "op": "add",
+      "collection": "entities",
+      "item": {
+        "semantic_id": "ENT_DNA_TEMPLATE",
+        "scientific_name": "DNA template strand (local lagging-strand region)",
+        "entity_type": "nucleic_acid",
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d8ffea5a5785",
+            "quote": "Before replication can start, the DNA has to be made available as a template.",
+            "location": "paragraph_3"
+          }
+        ]
+      },
+      "justifies_issue_id": "STATE_MODEL_MIGRATION"
+    },
+    {
+      "op": "update",
+      "collection": "processes",
+      "target_id": "PROC_PRIMER_FORMATION",
+      "fields": {
+        "precondition_state_refs": [
+          "ST_DNA_TEMPLATE_AVAILABLE"
+        ],
+        "effect_state_refs": [
+          "ST_PRIMER_PRESENT"
+        ]
+      }
+    },
+    {
+      "op": "update",
+      "collection": "processes",
+      "target_id": "PROC_POL_ALPHA_EXTENSION",
+      "fields": {
+        "precondition_state_refs": [
+          "ST_PRIMER_PRESENT"
+        ],
+        "effect_state_refs": [
+          "ST_SHORT_DNA_ADDED",
+          "ST_HANDOFF_READY"
+        ]
+      }
+    },
+    {
+      "op": "update",
+      "collection": "processes",
+      "target_id": "PROC_POL_DELTA_EXTENSION",
+      "fields": {
+        "precondition_state_refs": [
+          "ST_HANDOFF_READY"
+        ],
+        "effect_state_refs": [
+          "ST_OKAZAKI_FRAGMENT_SYNTHESIZED",
+          "ST_PRIMER_DISPLACED"
+        ]
+      }
+    },
+    {
+      "op": "update",
+      "collection": "processes",
+      "target_id": "PROC_PRIMER_REMOVAL",
+      "fields": {
+        "precondition_state_refs": [
+          "ST_PRIMER_DISPLACED"
+        ],
+        "effect_state_refs": [
+          "ST_PRIMER_REMOVED",
+          "ST_REPLACEMENT_GAP_EXTERNAL"
+        ],
+        "terminates_state_refs": [
+          "ST_PRIMER_DISPLACED"
+        ]
+      }
+    },
+    {
+      "op": "update",
+      "collection": "processes",
+      "target_id": "PROC_LIGATION",
+      "fields": {
+        "precondition_state_refs": [
+          "ST_REPLACEMENT_GAP_EXTERNAL"
+        ],
+        "effect_state_refs": [
+          "ST_GAPS_SEALED",
+          "ST_OKAZAKI_FRAGMENTS_JOINED"
+        ]
+      }
+    }
+  ],
+  "state_upgrade": {
+    "schema_version": "1.1",
+    "clip_start": {
+      "stage": "local lagging-strand region after origin unwinding; DNA template accessible and primase recruited",
+      "existing_entity_refs": [
+        "ENT_DNA_TEMPLATE",
+        "ENT_PRIMASE",
+        "ENT_RNA_PRIMER",
+        "ENT_POL_ALPHA",
+        "ENT_POL_DELTA",
+        "ENT_RNASE_H",
+        "ENT_DNA_LIGASE",
+        "ENT_LAGGING_DNA_PRODUCT",
+        "ENT_GAP_SUBSTRATE"
+      ],
+      "omitted_processes": [
+        {
+          "description": "Origin recognition and pre-replication complex assembly",
+          "reason": "Task states origins already covered; excluded by scope.",
+          "required_by_task": false
+        },
+        {
+          "description": "Helicase unwinding and topoisomerase supercoiling relief",
+          "reason": "Excluded by scope; template accessibility treated as initial condition supported by source general statement.",
+          "required_by_task": false
+        },
+        {
+          "description": "Leading-strand continuous synthesis by DNA polymerase epsilon",
+          "reason": "Excluded by scope; local lagging-strand region only.",
+          "required_by_task": false
+        },
+        {
+          "description": "Telomerase-mediated telomere elongation",
+          "reason": "Excluded by scope; not local replication maturation event requested.",
+          "required_by_task": false
+        },
+        {
+          "description": "Nucleosome/histone removal and replacement",
+          "reason": "Excluded by scope; not required for local priming/extension/maturation explanation.",
+          "required_by_task": false
+        },
+        {
+          "description": "Proofreading and mismatch repair",
+          "reason": "Excluded by scope; not required for described local events.",
+          "required_by_task": false
+        }
+      ]
+    },
+    "states": [
+      {
+        "state_id": "ST_DNA_TEMPLATE_AVAILABLE",
+        "subject_ref": "ENT_DNA_TEMPLATE",
+        "property": "template_availability",
+        "value": "accessible",
+        "state_kind": "INITIAL_CONDITION",
+        "scope": {
+          "region": "local lagging-strand region",
+          "clip": "before primer formation"
+        },
+        "producer_process_id": null,
+        "required_by_process_ids": [
+          "PROC_PRIMER_FORMATION"
+        ],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d8ffea5a5785",
+            "quote": "Before replication can start, the DNA has to be made available as a template.",
+            "location": "paragraph_3"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_PRIMER_PRESENT",
+        "subject_ref": "ENT_RNA_PRIMER",
+        "property": "presence",
+        "value": "formed",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "region": "local lagging-strand region",
+          "clip": "after primase action"
+        },
+        "producer_process_id": "PROC_PRIMER_FORMATION",
+        "required_by_process_ids": [
+          "PROC_POL_ALPHA_EXTENSION"
+        ],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d8ffea5a5785",
+            "quote": "Primers are formed by the enzyme primase, and using the primer, DNA pol can start synthesis.",
+            "location": "paragraph_4"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_SHORT_DNA_ADDED",
+        "subject_ref": "ENT_RNA_PRIMER",
+        "property": "extension",
+        "value": "short_dna_fragment_added",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "region": "local lagging-strand region",
+          "clip": "after pol alpha extension"
+        },
+        "producer_process_id": "PROC_POL_ALPHA_EXTENSION",
+        "required_by_process_ids": [],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d8ffea5a5785",
+            "quote": "DNA pol α adds a short (20 to 30 nucleotides) DNA fragment to the RNA primer on both strands",
+            "location": "paragraph_4"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_HANDOFF_READY",
+        "subject_ref": "ENT_POL_ALPHA",
+        "property": "handoff_status",
+        "value": "ready_for_second_polymerase",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "region": "local lagging-strand region",
+          "clip": "after pol alpha extension"
+        },
+        "producer_process_id": "PROC_POL_ALPHA_EXTENSION",
+        "required_by_process_ids": [
+          "PROC_POL_DELTA_EXTENSION"
+        ],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d8ffea5a5785",
+            "quote": "and then hands off to a second polymerase",
+            "location": "paragraph_4"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_OKAZAKI_FRAGMENT_SYNTHESIZED",
+        "subject_ref": "ENT_LAGGING_DNA_PRODUCT",
+        "property": "synthesis_status",
+        "value": "short_stretch_synthesized",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "region": "local lagging-strand region",
+          "clip": "during pol delta extension"
+        },
+        "producer_process_id": "PROC_POL_DELTA_EXTENSION",
+        "required_by_process_ids": [],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d8ffea5a5785",
+            "quote": "the lagging strand is synthesized by pol δ .",
+            "location": "paragraph_4"
+          }
+        ],
+        "uncertainty": "Process identity of pol delta on lagging strand is supported broadly; handoff from pol alpha to pol delta is schematic inference (ISS_002)."
+      },
+      {
+        "state_id": "ST_PRIMER_DISPLACED",
+        "subject_ref": "ENT_RNA_PRIMER",
+        "property": "template_attachment",
+        "value": "displaced_from_template",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "region": "local lagging-strand region",
+          "clip": "when pol delta reaches primer"
+        },
+        "producer_process_id": "PROC_POL_DELTA_EXTENSION",
+        "required_by_process_ids": [
+          "PROC_PRIMER_REMOVAL"
+        ],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d8ffea5a5785",
+            "quote": "As pol δ runs into the primer RNA on the lagging strand, it displaces it from the DNA template.",
+            "location": "paragraph_4"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_PRIMER_REMOVED",
+        "subject_ref": "ENT_RNA_PRIMER",
+        "property": "presence",
+        "value": "removed",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "region": "local lagging-strand region",
+          "clip": "after RNase H action"
+        },
+        "producer_process_id": "PROC_PRIMER_REMOVAL",
+        "required_by_process_ids": [],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d8ffea5a5785",
+            "quote": "The displaced primer RNA is then removed by RNase H (AKA flap endonuclease )",
+            "location": "paragraph_4"
+          }
+        ],
+        "uncertainty": "Source equates RNase H and flap endonuclease parenthetically; no distinct activity identity is asserted (ISS_001)."
+      },
+      {
+        "state_id": "ST_REPLACEMENT_GAP_EXTERNAL",
+        "subject_ref": "ENT_GAP_SUBSTRATE",
+        "property": "replacement_status",
+        "value": "assumed_dna_replacement_completed_external",
+        "state_kind": "REQUIRED_PRECONDITION",
+        "scope": {
+          "region": "local lagging-strand region",
+          "clip": "between primer removal and ligation"
+        },
+        "producer_process_id": null,
+        "required_by_process_ids": [
+          "PROC_LIGATION"
+        ],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d8ffea5a5785",
+            "quote": "and replaced with DNA nucleotides",
+            "location": "paragraph_4"
+          }
+        ],
+        "assumption_note": "Replacement synthesis is excluded from model scope; state represents an externally supplied precondition, not a modeled process product. This preserves ligation precondition reachability without asserting a specific polymerase (ISS_003, ISS_005)."
+      },
+      {
+        "state_id": "ST_GAPS_SEALED",
+        "subject_ref": "ENT_GAP_SUBSTRATE",
+        "property": "seal_status",
+        "value": "sealed",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "region": "local lagging-strand region",
+          "clip": "after ligation"
+        },
+        "producer_process_id": "PROC_LIGATION",
+        "required_by_process_ids": [],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d8ffea5a5785",
+            "quote": "The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond.",
+            "location": "paragraph_4"
+          }
+        ]
+      },
+      {
+        "state_id": "ST_OKAZAKI_FRAGMENTS_JOINED",
+        "subject_ref": "ENT_LAGGING_DNA_PRODUCT",
+        "property": "fragment_joining",
+        "value": "joined",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "region": "local lagging-strand region",
+          "clip": "after ligation"
+        },
+        "producer_process_id": "PROC_LIGATION",
+        "required_by_process_ids": [],
+        "evidence_ids": [
+          "E_d8ffea5a5785"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_d8ffea5a5785",
+            "quote": "The Okazaki fragments in the lagging strand are joined after the replacement of the RNA primers with DNA.",
+            "location": "paragraph_4"
+          }
+        ]
+      }
+    ]
+  },
+  "issue_resolution": [
+    {
+      "issue_id": "ISS_001",
+      "changed_target_ids": [
+        "PROC_PRIMER_REMOVAL",
+        "ENT_RNASE_H"
+      ],
+      "reason": "Source explicitly parenthesizes 'RNase H (AKA flap endonuclease)'; no distinction is supported. Model retains unresolved identity and does not assert equivalence beyond source wording; state added documents the uncertainty. No new evidence found to separate activities.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    },
+    {
+      "issue_id": "ISS_002",
+      "changed_target_ids": [
+        "PROC_POL_DELTA_EXTENSION",
+        "PROC_POL_ALPHA_EXTENSION"
+      ],
+      "reason": "Source says pol alpha 'hands off to a second polymerase' without naming pol delta as lagging-strand recipient. Typed state ST_HANDOFF_READY is modeled as generic handoff; pol delta assignment to lagging strand is supported separately by 'the lagging strand is synthesized by pol δ', but the specific alpha→delta handoff remains schematic inference flagged in state uncertainty.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    },
+    {
+      "issue_id": "ISS_003",
+      "changed_target_ids": [
+        "PROC_LIGATION",
+        "ST_REPLACEMENT_GAP_EXTERNAL"
+      ],
+      "reason": "Replacement synthesis is excluded by scope, so a modeled replacement process would exceed task scope. Instead, precondition is represented as an externally supplied REQUIRED_PRECONDITION state marked as assumed external; this keeps typed state reachable without silently seeding or asserting an unsupported polymerase identity.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    },
+    {
+      "issue_id": "ISS_004",
+      "changed_target_ids": [
+        "PROC_POL_DELTA_EXTENSION",
+        "PROC_PRIMER_REMOVAL"
+      ],
+      "reason": "Added explicit state ST_PRIMER_DISPLACED produced by pol delta extension and required by primer removal; primer removal terminates this state. This makes the displacement-to-removal-competence transition explicit rather than implicit via participant listing.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    },
+    {
+      "issue_id": "ISS_005",
+      "changed_target_ids": [
+        "PROC_LIGATION",
+        "ST_REPLACEMENT_GAP_EXTERNAL",
+        "ST_GAPS_SEALED"
+      ],
+      "reason": "The source's 'gaps that remain' are treated as a simplified nucleic-acid-region placeholder; the model does not claim a distinct nicked phosphodiester-backbone state. ST_REPLACEMENT_GAP_EXTERNAL acknowledges simplification and external replacement assumption; ST_GAPS_SEALED records the source-supported sealed outcome.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    },
+    {
+      "issue_id": "STATE_MODEL_MIGRATION",
+      "changed_target_ids": [
+        "PROC_PRIMER_FORMATION",
+        "PROC_POL_ALPHA_EXTENSION",
+        "PROC_POL_DELTA_EXTENSION",
+        "PROC_PRIMER_REMOVAL",
+        "PROC_LIGATION",
+        "ENT_DNA_TEMPLATE"
+      ],
+      "reason": "Added ENT_DNA_TEMPLATE entity because ST_DNA_TEMPLATE_AVAILABLE references it; previous patch error was 'Undefined state subject'. Added typed precondition/effect state refs across all five processes and a states collection. Only state slots required by included mechanisms were created; no required mechanism omitted and no excluded process silently modeled as included. Initial condition is only the source-supported template-availability state.",
+      "evidence_ids": [
+        "E_d8ffea5a5785"
+      ]
+    }
+  ]
+}
