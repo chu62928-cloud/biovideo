@@ -1,0 +1,17 @@
+{
+  "freeze": "719b38a2dfcb624750e5daf27648f7ec3730992a",
+  "duration": {
+    "V5 / Plant cell": 24.0,
+    "Code2Video / Red blood cell": 13.266667,
+    "Code2Video / Plant cell": 35.933333
+  },
+  "artifacts": {
+    "videos/T02.mp4": "32606341926247d2550ab4bfb77fbf4d0644300051bf096e9363ae4a01e193f2",
+    "comparison_videos/T01/video.mp4": "5f2afc6f05db567c6af0ce1864acf1ae445b1de0c100db47056031e4b4823ed2",
+    "comparison_videos/T02/video.mp4": "95455d3727f78b1b6d6bcf1e39716cf4ee5da4889258fb38090582f579ef0016",
+    "agent_trajectories.jsonl": "faa182e8d1e27aec39fb9c505f51594ec1a7cd15a9187e9606f2082ddb3ab9a3",
+    "evaluation.json": "48e2829e9a7d6c48192a4c47f4cea580d1d3c2b01ebf01fffef71362b2c21991",
+    "comparison.json": "c47454059fe9d88749da6e3e8e9202e2352a5fb4ab150de3a704abdb87e926ed",
+    "keyframes.jpg": "cd672f66e51e2d6942fa69ae9a64512cbda183ee5c496e2e49a523dd0300a312"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "model_id": "enzyme_catalysis_stage1_v1",
+  "scope": {
+    "topic": "Explain how an enzyme and its substrate interact during catalysis.",
+    "organism_context": "General cell biology (no specific organism; generic cellular context)",
+    "audience": "Introductory undergraduate biology students",
+    "included_processes": [
+      "Substrate binding at the active site forming an enzyme-substrate complex",
+      "Induced fit between enzyme and substrate",
+      "Lowering of activation energy via the enzyme-substrate complex"
+    ],
+    "excluded_processes": [
+      "Environmental effects of temperature and pH on enzyme activity",
+      "Competitive and noncompetitive inhibition",
+      "Allosteric regulation by activators and inhibitors",
+      "Detailed kinetic models and rate equations"
+    ],
+    "simplifications": [
+      "The active site is treated as a single static region, though it undergoes a mild conformational shift (induced fit).",
+      "Multiple catalytic mechanisms (orientation, microenvironment, contortion, covalent participation) are grouped under 'lowering activation energy'.",
+      "The enzyme is depicted as returning to its original state after releasing product(s) without detailed intermediate steps."
+    ]
+  },
+  "entities": [
+    {
+      "semantic_id": "enzyme",
+      "scientific_name": "Enzyme (protein catalyst)",
+      "entity_type": "protein",
+      "evidence_ids": [
+        "E_a9e0203e9a90"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_a9e0203e9a90",
+          "quote": "Almost all enzymes are proteins, comprised of amino acid chains, and they perform the critical task of lowering the activation energies of chemical reactions inside the cell.",
+          "location": "paragraph_1"
+        }
+      ],
+      "cardinality": "unspecified_collection",
+      "states": {
+        "initial": "free enzyme",
+        "complexed": "bound in enzyme-substrate complex",
+        "final": "returned to original state"
+      }
+    },
+    {
+      "semantic_id": "substrate",
+      "scientific_name": "Substrate (reactant molecule)",
+      "entity_type": "molecule",
+      "evidence_ids": [
+        "E_a9e0203e9a90"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_a9e0203e9a90",
+          "quote": "The chemical reactants to which an enzyme binds are the enzyme’s substrates .",
+          "location": "paragraph_3"
+        }
+      ],
+      "cardinality": "unspecified_collection",
+      "states": {
+        "initial": "free substrate",
+        "bound": "bound at active site",
+        "final": "released as product(s)"
+      }
+    },
+    {
+      "semantic_id": "active_site",
+      "scientific_name": "Active site",
+      "entity_type": "region_of_protein",
+      "evidence_ids": [
+        "E_a9e0203e9a90"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_a9e0203e9a90",
+          "quote": "The location within the enzyme where the substrate binds is the enzyme’s active site .",
+          "location": "paragraph_3"
+        }
+      ],
+      "cardinality": 1,
+      "states": {
+        "available": "available for binding",
+        "occupied": "occupied by substrate",
+        "restored": "restored after product release"
+      }
+    },
+    {
+      "semantic_id": "enzyme_substrate_complex",
+      "scientific_name": "Enzyme-substrate complex",
+      "entity_type": "complex",
+      "evidence_ids": [
+        "E_a9e0203e9a90"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_a9e0203e9a90",
+          "quote": "When an enzyme binds its substrate, it forms an enzyme-substrate complex.",
+          "location": "paragraph_7"
+        },
+        {
+          "evidence_id": "E_a9e0203e9a90",
+          "quote": "The enzyme-substrate complex can lower the activation energy by contorting substrate molecules in such a way as to facilitate bond-breaking, helping to reach the transition state.",
+          "location": "paragraph_8"
+        }
+      ],
+      "cardinality": 1,
+      "states": {
+        "formed": "formed on substrate binding",
+        "catalyzing": "lowering activation energy",
+        "dissociated": "dissociated after product release"
+      }
+    },
+    {
+      "semantic_id": "product",
+      "scientific_name": "Product(s)",
+      "entity_type": "molecule",
+      "evidence_ids": [
+        "E_a9e0203e9a90"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_a9e0203e9a90",
+          "quote": "After an enzyme catalyzes a reaction, it releases its product(s).",
+          "location": "paragraph_8"
+        }
+      ],
+      "cardinality": "unspecified_collection",
+      "states": {
+        "bound": "bound in complex",
+        "released": "released from enzyme"
+      }
+    }
+  ]
+}

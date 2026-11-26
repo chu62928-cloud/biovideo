@@ -1,0 +1,23 @@
+{
+  "objectives": [
+    "Explain chromosome alignment at the metaphase plate",
+    "Describe sister chromatid separation during anaphase",
+    "Distinguish alignment from separation stages for grades 10-12"
+  ],
+  "figures": [
+    {
+      "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/9164050222aea02b2e227df8a18237e79017ab20",
+      "caption": "Figure 10.6 G2 of Interphase – The last stage of interphase is the second gap period, G2. During this stage, cells grow, replenish energy and synthesize needed macromolecules, such as proteins and lipids. Mitosis - When G2 is complete, the cell will enter mitosis. Although there are 5 phases in mitosis, with the exception of the metaphase to anaphase transition, these phases are not discrete and happen as a continuous process. Prophase is the first stage in mitosis. The nuclear envelope begins to break down and chromosomes condense and are now visible. Spindle fibers start to appear and centrosomes begin to move towards opposite poles. Prometaphase - Chromosomes continue to condense and are more visible. Kinetochores appear at the centromere and kinetochore microtubules attach. Centrosomes continue to move towards opposite poles. Metaphase – The mitotic spindle is fully developed and centrosomes are at opposite poles. Chromosomes are aligned at the “equatorial plate”, and each sister chromatid rests on one side of the plate, with spindle fibers attached to them. Anaphase - Sister chromatids are pulled apart by spindle fibers and are separated from each other. Each chromatid is now a chromosome. Telophase and Cytokinesis - Chromosomes arrive at opposite poles and start to decondense and become less visible. The nuclear envelope reassembles and begins to surround each new set of chromosomes. The mitotic spindle assembly breaks down and the division of the cytoplasm begins via cytokinesis. This physical separation into two cells are remarkably different processes in plant and animal cells. Credit: Rao, A., Hawkins, A.and Fletcher, S. Department of Biology, Texas A&M University.",
+      "alt": "This diagram shows the five phases of mitosis and cytokinesis. During prophase, the chromosomes condense and become visible, spindle fibers emerge from the centrosomes, the nuclear envelope breaks down, and the nucleolus disappears. During prometaphase, the chromosomes continue to condense and kinetochores appear at the centromeres. Mitotic spindle microtubules attach to the kinetochores, and centrosomes move toward opposite poles. During metaphase, the mitotic spindle is fully developed, and centrosomes are at opposite poles of the cell. Chromosomes line up at the metaphase plate and each sister chromatid is attached to a spindle fiber originating from the opposite pole. During anaphase, the cohesin proteins that were binding the sister chromatids together break down. The sister chromatids, which are now called chromosomes, move toward opposite poles of the cell. Non-kinetochore spindle fibers lengthen, elongating the cell. During telophase, chromosomes arrive at the opposite poles and begin to decondense. The nuclear envelope reforms. During cytokinesis in animals, a cleavage furrow separates the two daughter cells. In plants, a cell plate separates the two cells.",
+      "source_page": "https://openstax.org/books/biology-2e/pages/10-2-the-cell-cycle"
+    },
+    {
+      "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/9b62280332a75d63fe6f73c3486751a2b76fe639",
+      "caption": "Figure 10.8 Mitotic Cell at Metaphase. The microtubule spindle has completed the alignment of chromosomes at the metaphase plate in preparation for the\nseparation of sister chromatids during anaphase. Credit: Fletcher, S., Ryan, K. and Rao, A., Department of Biology, Texas A&M University.",
+      "alt": "A cell shows overlapping microtubules extending throughout the cell.  At the center of the cell, sister chomratids line up. At their center are kinetochores. And at the very ends of the cell, away from the center, are centrosomes.",
+      "source_page": "https://openstax.org/books/biology-2e/pages/10-2-the-cell-cycle"
+    }
+  ],
+  "license": "external pixels not imported; captions used for original schematic",
+  "upload": false
+}

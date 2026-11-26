@@ -1,0 +1,69 @@
+[
+  {
+    "evidence_id": "E_a9e0203e9a90",
+    "url": "https://openstax.org/books/biology-2e/pages/6-5-enzymes",
+    "title": "6.5 Enzymes - Biology 2e | OpenStax",
+    "author_or_institution": "openstax.org",
+    "source_type": "retrieved_scientific_webpage",
+    "biological_scope": "Requires independent scope verification against quoted passages",
+    "accessed_utc": "2026-11-26T09:12:59Z",
+    "content_sha256": "aa0e3174832462c5873466bfcf1c746410d59ebf24773a2b762ff94266d944c4",
+    "saved_text": "/root/autodl-tmp/code2biovideo/biovideo-v5/Code2Video/experiments/biovideo_v5/tasks/T03/research/chapter/E_a9e0203e9a90.txt",
+    "passages": [
+      {
+        "location": "paragraph_7",
+        "text": "When an enzyme binds its substrate, it forms an enzyme-substrate complex. This complex lowers the reaction's activation energy and promotes its rapid progression in one of many ways. On a basic level, enzymes promote chemical reactions that involve more than one substrate by bringing the substrates together in an optimal orientation. The appropriate region (atoms and bonds) of one molecule is juxtaposed to the other molecule's appropriate region with which it must react. Another way in which enzymes promote substrate reaction is by creating an optimal environment within the active site for the reaction to occur. Certain chemical reactions might proceed best in a slightly acidic or non-polar environment. The chemical properties that emerge from the particular arrangement of amino acid residues within an active site create the perfect environment for an enzyme’s specific substrates to react."
+      },
+      {
+        "location": "paragraph_4",
+        "text": "The fact that active sites are so perfectly suited to provide specific environmental conditions also means that they are subject to local environmental influences. It is true that increasing the environmental temperature generally increases reaction rates, enzyme-catalyzed or otherwise. However, increasing or decreasing the temperature outside of an optimal range can affect chemical bonds within the active site in such a way that they are less well suited to bind substrates. High temperatures will eventually cause enzymes, like other biological molecules, to denature , a process that changes the substance's natural properties. Likewise, the local environment's pH can also affect enzyme function. Active site amino acid residues have their own acidic or basic properties that are optimal for catalysis. These residues are sensitive to changes in pH that can impair the way substrate molecules bind. Enzymes are suited to function best within a certain pH range, and, as with temperature, extreme environmental pH values (acidic or basic) can cause enzymes to denature."
+      },
+      {
+        "location": "paragraph_8",
+        "text": "You have learned that the activation energy required for many reactions includes the energy involved in manipulating or slightly contorting chemical bonds so that they can easily break and allow others to reform. Enzymatic action can aid this process. The enzyme-substrate complex can lower the activation energy by contorting substrate molecules in such a way as to facilitate bond-breaking, helping to reach the transition state. Finally, enzymes can also lower activation energies by taking part in the chemical reaction itself. The amino acid residues can provide certain ions or chemical groups that actually form covalent bonds with substrate molecules as a necessary step of the reaction process. In these cases, it is important to remember that the enzyme will always return to its original state at the reaction's completion. One of enzymes' hallmark properties is that they remain ultimately unchanged by the reactions they catalyze. After an enzyme catalyzes a reaction, it releases its product(s)."
+      },
+      {
+        "location": "paragraph_3",
+        "text": "The chemical reactants to which an enzyme binds are the enzyme’s substrates . There may be one or more substrates, depending on the particular chemical reaction. In some reactions, a single-reactant substrate breaks down into multiple products. In others, two substrates may come together to create one larger molecule. Two reactants might also enter a reaction, both become modified, and leave the reaction as two products. The location within the enzyme where the substrate binds is the enzyme’s active site . This is where the “action” happens. Since enzymes are proteins, there is a unique combination of amino acid residues (also side chains, or R groups) within the active site. Different properties characterize each residue. These can be large or small, weakly acidic or basic, hydrophilic or hydrophobic, positively or negatively charged, or neutral. The unique combination of amino acid residues, their positions, sequences, structures, and properties, creates a very specific chemical environment within the active site. This specific environment is suited to bind, albeit briefly, to a specific chemical substrate (or substrates). Due to this jigsaw puzzle-like match between an enzyme and its substrates (which adapts to find the best fit between the transition state and the active site), enzymes are known for their specificity. The “best fit” results from the shape and the amino acid functional group’s attraction to the substrate. There is a specifically matched enzyme for each substrate and, thus, for each chemical reaction; however, there is flexibility as well."
+      },
+      {
+        "location": "paragraph_5",
+        "text": "For many years, scientists thought that enzyme-substrate binding took place in a simple “lock-and-key” fashion. This model asserted that the enzyme and substrate fit together perfectly in one instantaneous step. However, current research supports a more refined view scientists call induced fit ( Figure 6.16 ). This model expands upon the lock-and-key model by describing a more dynamic interaction between enzyme and substrate. As the enzyme and substrate come together, their interaction causes a mild shift in the enzyme’s structure that confirms an ideal binding arrangement between the enzyme and the substrate's transition state. This ideal binding maximizes the enzyme’s ability to catalyze its reaction."
+      },
+      {
+        "location": "paragraph_12",
+        "text": "Enzymes can be regulated in ways that either promote or reduce their activity. There are many different kinds of molecules that inhibit or promote enzyme function, and various mechanisms exist for doing so. For example, in some cases of enzyme inhibition, an inhibitor molecule is similar enough to a substrate that it can bind to the active site and simply block the substrate from binding. When this happens, the enzyme is inhibited through competitive inhibition , because an inhibitor molecule competes with the substrate for active site binding ( Figure 6.17 ). On the other hand, in noncompetitive inhibition , an inhibitor molecule binds to the enzyme in a location other than the active site, called an allosteric site, but still manages to prevent substrate binding to the active site. Some inhibitor molecules bind to enzymes in a location where their binding induces a conformational change that reduces the enzyme activity as it no longer effectively catalyzes the conversion of the substrate to product."
+      },
+      {
+        "location": "paragraph_14",
+        "text": "Some inhibitor molecules bind to enzymes in a location where their binding induces a conformational change that reduces the enzyme's affinity for its substrate. This type of inhibition is an allosteric inhibition ( Figure 6.18 ). More than one polypeptide comprise most allosterically regulated enzymes, meaning that they have more than one protein subunit. When an allosteric inhibitor binds to an enzyme, all active sites on the protein subunits change slightly such that they bind their substrates with less efficiency. There are allosteric activators as well as inhibitors. Allosteric activators bind to locations on an enzyme away from the active site, inducing a conformational change that increases the affinity of the enzyme’s active site(s) for its substrate(s)."
+      },
+      {
+        "location": "paragraph_15",
+        "text": "Figure 6.18 Allosteric inhibitors modify the enzyme's active site so that substrate binding is reduced or prevented. In contrast, allosteric activators modify the enzyme's active site so that the affinity for the substrate increases. Credit: Rao, A., Hawkins, A., Fletcher, S. and Tag, A.\nDepartment of Biology, Texas A&M University."
+      },
+      {
+        "location": "paragraph_1",
+        "text": "A substance that helps a chemical reaction to occur is a catalyst, and the special molecules that catalyze biochemical reactions are enzymes. Almost all enzymes are proteins, comprised of amino acid chains, and they perform the critical task of lowering the activation energies of chemical reactions inside the cell. Enzymes do this by binding to the reactant molecules, and holding them in such a way as to make the chemical bond-breaking and bond-forming processes take place more readily. It is important to remember that enzymes do not change the reaction's ∆G. In other words, they do not change whether a reaction is exergonic (spontaneous) or endergonic. This is because they do not change the reactants' or products' free energy. They only reduce the activation energy required to reach the transition state ( Figure 6.15 )."
+      }
+    ],
+    "figures": [
+      {
+        "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/065386871b944db2faf13ef55cbfebddbfba6394",
+        "caption": "Figure 6.16 According to the induced-fit model, both enzyme and substrate undergo dynamic conformational changes upon binding. The enzyme contorts the substrate into its transition state, thereby increasing the reaction's rate.",
+        "alt": "In this diagram, a substrate binds the active site of an enzyme and, in the process, both the shape of the enzyme and the shape of the substrate change. The substrate is converted to products that then leave the enzymes active site.",
+        "source_page": "https://openstax.org/books/biology-2e/pages/6-5-enzymes"
+      },
+      {
+        "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/d31b8c27c8c0e0168bc78d4d16ec06c1b0d2e7c3",
+        "caption": "Figure 6.18 Allosteric inhibitors modify the enzyme's active site so that substrate binding is reduced or prevented. In contrast, allosteric activators modify the enzyme's active site so that the affinity for the substrate increases. Credit: Rao, A., Hawkins, A., Fletcher, S. and Tag, A.\nDepartment of Biology, Texas A&M University.",
+        "alt": "The left part of this diagram shows allosteric inhibition. The allosteric inhibitor binds to the enzyme at a site other than the active site. The shape of the active site is altered so that the enzyme can no longer bind to its substrate. The right part of this diagram shows allosteric activation. The allosteric activator binds to the enzyme at a site other than the active site. The shape of the active site is changed, allowing substrate to bind at a higher affinity.",
+        "source_page": "https://openstax.org/books/biology-2e/pages/6-5-enzymes"
+      }
+    ],
+    "fact_support": [],
+    "conflicts": [],
+    "trust_limitations": "Publisher authority and exact quotes do not establish entailment; independent contract review required",
+    "status": "RETRIEVED"
+  }
+]

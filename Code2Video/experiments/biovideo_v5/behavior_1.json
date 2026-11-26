@@ -1,0 +1,28 @@
+{
+  "inputs": [
+    [
+      "Scene rendered cleanly",
+      "Render failed: geometry invalid in scene 2"
+    ]
+  ],
+  "model": {
+    "cases": [
+      {
+        "normal_tool": "render_review",
+        "changed_tool": "repair_scene",
+        "reason": "Render failure is geometric; repair the affected scene before re-rendering."
+      }
+    ]
+  },
+  "mock_dispatch": [
+    {
+      "normal": [
+        "render_review"
+      ],
+      "changed": [
+        "repair_scene"
+      ]
+    }
+  ],
+  "fixed_workflow": "next scheduled action independent of observation"
+}

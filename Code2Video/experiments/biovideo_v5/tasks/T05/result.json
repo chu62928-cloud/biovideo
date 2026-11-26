@@ -1,0 +1,11 @@
+{
+  "unmeasured_strict_requirements": false,
+  "generation_status": "NOT_RENDERED",
+  "release_status": "REVIEW_INCOMPLETE",
+  "video_path": null,
+  "video_sha256": null,
+  "science_status": null,
+  "visual_status": null,
+  "agent_steps": 3,
+  "stop_reason": "Repeated identical failure: {'error': '404 Client Error: Not Found for url: https://openstax.org/books/biology-2e/pages/30-3-stems', 'type': 'HTTPError'}"
+}

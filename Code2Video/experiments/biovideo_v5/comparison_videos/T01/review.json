@@ -1,0 +1,23 @@
+{
+  "science": {
+    "decision": "PASS"
+  },
+  "visual": {
+    "decision": "PASS"
+  },
+  "coverage": "Covers the biconcave disc geometry (indented on both faces), the resulting ~30% surface-area gain vs. an equal-volume sphere, the consequence for O2 loading/unloading (diffusion across a larger membrane), and the deformability that lets the cell pass through narrow capillaries. This directly addresses 'how shape supports oxygen transport.' Not covered (out of scope for this goal): hemoglobin chemistry of actual O2 binding.",
+  "issues": [
+    {
+      "seconds": "5-8",
+      "description": "The '30% more surface area' figure is a standard teaching approximation; primary sources often report ~30-40% for a biconcave disc vs. an equal-volume sphere. Non-blocking, but ideally phrased as 'about 30%' or 'up to ~40%'."
+    },
+    {
+      "seconds": "9-12",
+      "description": "The capillary-squeeze animation shows the RBC as a rigid ellipse translating through the gap, while the text claims a 'flexible shape squeezes.' The deformation (shape change during passage) is not visually depicted. Minor visual simplification; non-blocking for an introductory schematic."
+    },
+    {
+      "seconds": "3-4",
+      "description": "The 'indented both sides / donut-like' cue is rendered as a darker inner ellipse in top-down view (central pallor). This is a reasonable 2D stand-in for the biconcave dimple but is ambiguous as a true 3D indentation; acceptable, noted for clarity."
+    }
+  ]
+}

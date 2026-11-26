@@ -1,0 +1,11 @@
+{
+  "unmeasured_strict_requirements": true,
+  "generation_status": "NOT_RENDERED",
+  "release_status": "REVIEW_INCOMPLETE",
+  "video_path": null,
+  "video_sha256": null,
+  "science_status": null,
+  "visual_status": null,
+  "agent_steps": 4,
+  "stop_reason": "Persisted model budget exhausted"
+}

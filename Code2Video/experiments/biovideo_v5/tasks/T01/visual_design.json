@@ -1,0 +1,24 @@
+{
+  "objectives": [
+    "Explain how biconcave disc shape supports oxygen transport",
+    "Relate high surface area-to-volume ratio to diffusion rate",
+    "Describe RBC deformability in capillaries",
+    "Connect hemoglobin content to oxygen carrying capacity"
+  ],
+  "figures": [
+    {
+      "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/687a93f8015ab116f5f9bc537521e3999fcc4e5b",
+      "caption": "Figure 18.6 Shape of Red Blood Cells Erythrocytes are biconcave discs with very shallow centers. This shape optimizes the ratio of surface area to volume, facilitating gas exchange. It also enables them to fold up as they move through narrow blood vessels.",
+      "alt": "This photograph shows a few red blood cells.",
+      "source_page": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes"
+    },
+    {
+      "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/ab6707af19ab8baaac84106459b655a9a356afae",
+      "caption": "Figure 18.9 Sickle Cells Sickle cell anemia is caused by a mutation in one of the hemoglobin genes. Erythrocytes produce an abnormal type of hemoglobin, which causes the cell to take on a sickle or crescent shape. (credit: Janice Haney Carr)",
+      "alt": "This photograph shows red blood cells of a person suffering from sickle cell anemia. Instead of being discoid shaped like healthy blood cells, sickle red blood cells are shaped like a sickle.",
+      "source_page": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-3-erythrocytes"
+    }
+  ],
+  "license": "external pixels not imported; captions used for original schematic",
+  "upload": false
+}

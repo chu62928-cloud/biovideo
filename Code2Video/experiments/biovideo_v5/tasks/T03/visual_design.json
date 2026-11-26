@@ -1,0 +1,23 @@
+{
+  "objectives": [
+    "Describe how an enzyme binds its substrate at the active site",
+    "Explain the enzyme-substrate complex and lowering of activation energy",
+    "Describe induced fit and specificity of enzyme-substrate interaction"
+  ],
+  "figures": [
+    {
+      "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/065386871b944db2faf13ef55cbfebddbfba6394",
+      "caption": "Figure 6.16 According to the induced-fit model, both enzyme and substrate undergo dynamic conformational changes upon binding. The enzyme contorts the substrate into its transition state, thereby increasing the reaction's rate.",
+      "alt": "In this diagram, a substrate binds the active site of an enzyme and, in the process, both the shape of the enzyme and the shape of the substrate change. The substrate is converted to products that then leave the enzymes active site.",
+      "source_page": "https://openstax.org/books/biology-2e/pages/6-5-enzymes"
+    },
+    {
+      "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/d31b8c27c8c0e0168bc78d4d16ec06c1b0d2e7c3",
+      "caption": "Figure 6.18 Allosteric inhibitors modify the enzyme's active site so that substrate binding is reduced or prevented. In contrast, allosteric activators modify the enzyme's active site so that the affinity for the substrate increases. Credit: Rao, A., Hawkins, A., Fletcher, S. and Tag, A.\nDepartment of Biology, Texas A&M University.",
+      "alt": "The left part of this diagram shows allosteric inhibition. The allosteric inhibitor binds to the enzyme at a site other than the active site. The shape of the active site is altered so that the enzyme can no longer bind to its substrate. The right part of this diagram shows allosteric activation. The allosteric activator binds to the enzyme at a site other than the active site. The shape of the active site is changed, allowing substrate to bind at a higher affinity.",
+      "source_page": "https://openstax.org/books/biology-2e/pages/6-5-enzymes"
+    }
+  ],
+  "license": "external pixels not imported; captions used for original schematic",
+  "upload": false
+}

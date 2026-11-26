@@ -1,0 +1,412 @@
+[
+  {
+    "title": "Learning goal: shape supports oxygen transport",
+    "caption": "How does a red blood cell's biconcave shape help it carry and deliver oxygen?",
+    "claim_ids": [
+      "C1"
+    ],
+    "verification": [
+      "CLAIM",
+      "ENTITY",
+      "VISUAL"
+    ],
+    "reference_use": "Figure 18.6 biconcave disc with shallow center and plump periphery",
+    "objects": [
+      {
+        "id": "rbc_biconcave",
+        "label": "RBC",
+        "color": "#C0392B",
+        "closed": true,
+        "points": [
+          [
+            -2.0,
+            0.0
+          ],
+          [
+            -1.6,
+            0.55
+          ],
+          [
+            -0.8,
+            0.75
+          ],
+          [
+            0.0,
+            0.35
+          ],
+          [
+            0.8,
+            0.75
+          ],
+          [
+            1.6,
+            0.55
+          ],
+          [
+            2.0,
+            0.0
+          ],
+          [
+            1.6,
+            -0.55
+          ],
+          [
+            0.8,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.35
+          ],
+          [
+            -0.8,
+            -0.75
+          ],
+          [
+            -1.6,
+            -0.55
+          ]
+        ],
+        "shift": [
+          0.0,
+          0.9
+        ],
+        "label_offset": [
+          0.0,
+          -1.4
+        ]
+      },
+      {
+        "id": "sphere_compare",
+        "label": "Sphere",
+        "color": "#7F8C8D",
+        "closed": true,
+        "points": [
+          [
+            -1.2,
+            -0.9
+          ],
+          [
+            -0.7,
+            -0.5
+          ],
+          [
+            0.7,
+            -0.5
+          ],
+          [
+            1.2,
+            -0.9
+          ],
+          [
+            0.7,
+            -1.3
+          ],
+          [
+            -0.7,
+            -1.3
+          ]
+        ],
+        "shift": [
+          3.6,
+          0.0
+        ],
+        "label_offset": [
+          0.0,
+          0.6
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Mechanism: larger surface area speeds gas exchange",
+    "caption": "Greater surface area relative to volume lets O2 and CO2 diffuse across the membrane in capillaries.",
+    "claim_ids": [
+      "C2"
+    ],
+    "verification": [
+      "CLAIM",
+      "ENTITY",
+      "RELATION",
+      "STATE",
+      "VISUAL"
+    ],
+    "reference_use": "Figure 18.6 caption: shape optimizes surface area to volume ratio, facilitating gas exchange",
+    "objects": [
+      {
+        "id": "rbc_biconcave",
+        "label": "RBC",
+        "color": "#C0392B",
+        "closed": true,
+        "points": [
+          [
+            -2.0,
+            0.0
+          ],
+          [
+            -1.6,
+            0.55
+          ],
+          [
+            -0.8,
+            0.75
+          ],
+          [
+            0.0,
+            0.35
+          ],
+          [
+            0.8,
+            0.75
+          ],
+          [
+            1.6,
+            0.55
+          ],
+          [
+            2.0,
+            0.0
+          ],
+          [
+            1.6,
+            -0.55
+          ],
+          [
+            0.8,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.35
+          ],
+          [
+            -0.8,
+            -0.75
+          ],
+          [
+            -1.6,
+            -0.55
+          ]
+        ],
+        "shift": [
+          -2.2,
+          0.0
+        ],
+        "label_offset": [
+          0.0,
+          -1.3
+        ]
+      },
+      {
+        "id": "capillary_wall",
+        "label": "Capillary",
+        "color": "#2980B9",
+        "closed": false,
+        "points": [
+          [
+            -5.5,
+            1.4
+          ],
+          [
+            5.0,
+            1.4
+          ]
+        ],
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "label_offset": [
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "id": "o2_arrows",
+        "label": "O2 out",
+        "color": "#F1C40F",
+        "closed": false,
+        "points": [
+          [
+            -2.2,
+            -0.8
+          ],
+          [
+            -2.2,
+            -1.6
+          ]
+        ],
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "label_offset": [
+          0.6,
+          -0.2
+        ]
+      },
+      {
+        "id": "co2_arrows",
+        "label": "CO2 in",
+        "color": "#8E44AD",
+        "closed": false,
+        "points": [
+          [
+            -1.4,
+            -1.6
+          ],
+          [
+            -1.4,
+            -0.8
+          ]
+        ],
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "label_offset": [
+          0.7,
+          -0.2
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Summary: no mitochondria preserves oxygen cargo",
+    "caption": "Lacking mitochondria, mature RBCs do not use carried oxygen, so it can diffuse to tissue cells.",
+    "claim_ids": [
+      "C3",
+      "C4"
+    ],
+    "verification": [
+      "CLAIM",
+      "ENTITY",
+      "RELATION",
+      "STATE",
+      "VISUAL"
+    ],
+    "reference_use": "Figure 18.6 folding through narrow vessels; paragraph 3 no mitochondria, anaerobic respiration",
+    "objects": [
+      {
+        "id": "rbc_biconcave",
+        "label": "RBC",
+        "color": "#C0392B",
+        "closed": true,
+        "points": [
+          [
+            -2.0,
+            0.0
+          ],
+          [
+            -1.6,
+            0.55
+          ],
+          [
+            -0.8,
+            0.75
+          ],
+          [
+            0.0,
+            0.35
+          ],
+          [
+            0.8,
+            0.75
+          ],
+          [
+            1.6,
+            0.55
+          ],
+          [
+            2.0,
+            0.0
+          ],
+          [
+            1.6,
+            -0.55
+          ],
+          [
+            0.8,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.35
+          ],
+          [
+            -0.8,
+            -0.75
+          ],
+          [
+            -1.6,
+            -0.55
+          ]
+        ],
+        "shift": [
+          0.0,
+          0.4
+        ],
+        "label_offset": [
+          0.0,
+          -1.4
+        ]
+      },
+      {
+        "id": "tissue_cell",
+        "label": "Tissue",
+        "color": "#27AE60",
+        "closed": true,
+        "points": [
+          [
+            2.2,
+            -1.2
+          ],
+          [
+            3.2,
+            -0.6
+          ],
+          [
+            3.9,
+            -1.3
+          ],
+          [
+            3.1,
+            -1.9
+          ]
+        ],
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "label_offset": [
+          0.0,
+          0.7
+        ]
+      },
+      {
+        "id": "o2_delivery",
+        "label": "O2",
+        "color": "#F1C40F",
+        "closed": false,
+        "points": [
+          [
+            0.6,
+            -0.9
+          ],
+          [
+            1.9,
+            -1.2
+          ]
+        ],
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "label_offset": [
+          0.0,
+          0.5
+        ]
+      }
+    ]
+  }
+]

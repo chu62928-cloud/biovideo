@@ -1,0 +1,172 @@
+{
+  "relations": [
+    {
+      "semantic_id": "rel_biconcave_surface_area",
+      "relation_type": "structural_functional_property",
+      "definition": "The biconcave disc geometry of an erythrocyte yields a higher surface-area-to-volume ratio than a sphere of similar diameter, increasing the area available for gas exchange.",
+      "source_entity": "rbc_biconcave_disc",
+      "target_entity": "oxygen_molecule",
+      "evidence_ids": [
+        "E_05a73a220035"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_05a73a220035",
+          "quote": "The biconcave shape also provides a greater surface area across which gas exchange can occur, relative to its volume; a sphere of a similar diameter would have a lower surface area-to-volume ratio.",
+          "location": "paragraph_4"
+        },
+        {
+          "evidence_id": "E_05a73a220035",
+          "quote": "This shape optimizes the ratio of surface area to volume, facilitating gas exchange.",
+          "location": "paragraph_5"
+        }
+      ]
+    },
+    {
+      "semantic_id": "rel_hemoglobin_binds_oxygen",
+      "relation_type": "binding",
+      "definition": "Each heme iron ion in hemoglobin binds one oxygen molecule, so one hemoglobin molecule can transport four oxygen molecules, forming oxyhemoglobin in the lungs.",
+      "source_entity": "hemoglobin_complex",
+      "target_entity": "oxygen_molecule",
+      "evidence_ids": [
+        "E_05a73a220035"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_05a73a220035",
+          "quote": "Each iron ion in the heme can bind to one oxygen molecule; therefore, each hemoglobin molecule can transport four oxygen molecules.",
+          "location": "paragraph_8"
+        },
+        {
+          "evidence_id": "E_05a73a220035",
+          "quote": "In the lungs, hemoglobin picks up oxygen, which binds to the iron ions, forming oxyhemoglobin .",
+          "location": "paragraph_9"
+        }
+      ]
+    },
+    {
+      "semantic_id": "rel_spectrin_deformation",
+      "relation_type": "enabling_capability",
+      "definition": "Flexible spectrin cytoskeletal proteins allow the erythrocyte to fold and spring back, enabling passage through narrow capillaries.",
+      "source_entity": "spectrin_cytoskeleton",
+      "target_entity": "rbc_biconcave_disc",
+      "evidence_ids": [
+        "E_05a73a220035"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_05a73a220035",
+          "quote": "their structural proteins like spectrin are flexible, allowing them to bend over themselves to a surprising degree, then spring back again when they enter a wider vessel.",
+          "location": "paragraph_4"
+        },
+        {
+          "evidence_id": "E_05a73a220035",
+          "quote": "This includes the protein spectrin, a cytoskeletal protein element.",
+          "location": "paragraph_3"
+        }
+      ]
+    },
+    {
+      "semantic_id": "rel_capillary_narrow_passage",
+      "relation_type": "anatomical_constraint",
+      "definition": "Narrow capillary lumens force erythrocytes to fold as they pass, while slowing flow and extending the opportunity for gas exchange.",
+      "source_entity": "capillary_bed",
+      "target_entity": "rbc_biconcave_disc",
+      "evidence_ids": [
+        "E_05a73a220035"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_05a73a220035",
+          "quote": "Capillary beds are extremely narrow, slowing the passage of the erythrocytes and providing an extended opportunity for gas exchange to occur.",
+          "location": "paragraph_4"
+        },
+        {
+          "evidence_id": "E_05a73a220035",
+          "quote": "the space within capillaries can be so minute that, despite their own small size, erythrocytes may have to fold in on themselves if they are to make their way through.",
+          "location": "paragraph_4"
+        }
+      ]
+    }
+  ],
+  "bindings": [
+    {
+      "process_semantic_id": "rel_biconcave_surface_area",
+      "participants": [
+        {
+          "role": "gas_exchange_surface",
+          "entity_ref": "rbc_biconcave_disc"
+        },
+        {
+          "role": "exchanged_gas",
+          "entity_ref": "oxygen_molecule"
+        }
+      ],
+      "input_roles": [
+        "gas_exchange_surface"
+      ],
+      "output_roles": [
+        "exchanged_gas"
+      ]
+    },
+    {
+      "process_semantic_id": "rel_hemoglobin_binds_oxygen",
+      "participants": [
+        {
+          "role": "oxygen_carrier",
+          "entity_ref": "hemoglobin_complex"
+        },
+        {
+          "role": "bound_ligand",
+          "entity_ref": "oxygen_molecule"
+        }
+      ],
+      "input_roles": [
+        "oxygen_carrier",
+        "bound_ligand"
+      ],
+      "output_roles": [
+        "bound_ligand"
+      ]
+    },
+    {
+      "process_semantic_id": "rel_spectrin_deformation",
+      "participants": [
+        {
+          "role": "structural_enabler",
+          "entity_ref": "spectrin_cytoskeleton"
+        },
+        {
+          "role": "deformable_cell",
+          "entity_ref": "rbc_biconcave_disc"
+        }
+      ],
+      "input_roles": [
+        "structural_enabler"
+      ],
+      "output_roles": [
+        "deformable_cell"
+      ]
+    },
+    {
+      "process_semantic_id": "rel_capillary_narrow_passage",
+      "participants": [
+        {
+          "role": "narrow_conduit",
+          "entity_ref": "capillary_bed"
+        },
+        {
+          "role": "transiting_cell",
+          "entity_ref": "rbc_biconcave_disc"
+        }
+      ],
+      "input_roles": [
+        "narrow_conduit",
+        "transiting_cell"
+      ],
+      "output_roles": [
+        "transiting_cell"
+      ]
+    }
+  ]
+}

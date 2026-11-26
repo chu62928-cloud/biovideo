@@ -1,0 +1,181 @@
+{
+  "controlled_simulation": [
+    {
+      "inputs": [
+        [
+          "Evidence chapter retrieved",
+          "HTTP 404, no evidence"
+        ]
+      ],
+      "model": {
+        "cases": [
+          {
+            "normal_tool": "research",
+            "changed_tool": "research",
+            "reason": "404 left no usable evidence; retry research with a valid OpenStax URL to obtain chapter text and figure captions."
+          }
+        ]
+      },
+      "mock_dispatch": [
+        {
+          "normal": [
+            "research"
+          ],
+          "changed": [
+            "research"
+          ]
+        }
+      ],
+      "fixed_workflow": "next scheduled action independent of observation"
+    },
+    {
+      "inputs": [
+        [
+          "Scene rendered cleanly",
+          "Render failed: geometry invalid in scene 2"
+        ]
+      ],
+      "model": {
+        "cases": [
+          {
+            "normal_tool": "render_review",
+            "changed_tool": "repair_scene",
+            "reason": "Render failure is geometric; repair the affected scene before re-rendering."
+          }
+        ]
+      },
+      "mock_dispatch": [
+        {
+          "normal": [
+            "render_review"
+          ],
+          "changed": [
+            "repair_scene"
+          ]
+        }
+      ],
+      "fixed_workflow": "next scheduled action independent of observation"
+    },
+    {
+      "inputs": [
+        [
+          "Actual video and all claims reviewed PASS",
+          "Video review REVISE: misleading label in scene 2"
+        ],
+        [
+          "Model schema and scientific verification complete",
+          "Optional typed model failed; verified facts and storyboard available"
+        ]
+      ],
+      "model": {
+        "cases": [
+          {
+            "normal_tool": "finish",
+            "changed_tool": "repair_scene",
+            "reason": "Scene 2 has a misleading label, so the earliest faulty stage is the storyboard; fix only that scene and keep approved artifacts."
+          },
+          {
+            "normal_tool": "finish",
+            "changed_tool": "finish",
+            "reason": "Scientific verification is complete and no blocking issue remains; the optional model was not needed, so return the reviewed result."
+          }
+        ]
+      },
+      "mock_dispatch": [
+        {
+          "normal": [
+            "finish"
+          ],
+          "changed": [
+            "repair_scene"
+          ]
+        },
+        {
+          "normal": [
+            "finish"
+          ],
+          "changed": [
+            "finish"
+          ]
+        }
+      ],
+      "fixed_workflow": "next scheduled action independent of observation"
+    }
+  ],
+  "baseline": [
+    {
+      "science": {
+        "decision": "PASS"
+      },
+      "visual": {
+        "decision": "PASS"
+      },
+      "coverage": "Covers the biconcave disc geometry (indented on both faces), the resulting ~30% surface-area gain vs. an equal-volume sphere, the consequence for O2 loading/unloading (diffusion across a larger membrane), and the deformability that lets the cell pass through narrow capillaries. This directly addresses 'how shape supports oxygen transport.' Not covered (out of scope for this goal): hemoglobin chemistry of actual O2 binding.",
+      "issues": [
+        {
+          "seconds": "5-8",
+          "description": "The '30% more surface area' figure is a standard teaching approximation; primary sources often report ~30-40% for a biconcave disc vs. an equal-volume sphere. Non-blocking, but ideally phrased as 'about 30%' or 'up to ~40%'."
+        },
+        {
+          "seconds": "9-12",
+          "description": "The capillary-squeeze animation shows the RBC as a rigid ellipse translating through the gap, while the text claims a 'flexible shape squeezes.' The deformation (shape change during passage) is not visually depicted. Minor visual simplification; non-blocking for an introductory schematic."
+        },
+        {
+          "seconds": "3-4",
+          "description": "The 'indented both sides / donut-like' cue is rendered as a darker inner ellipse in top-down view (central pallor). This is a reasonable 2D stand-in for the biconcave dimple but is ambiguous as a true 3D indentation; acceptable, noted for clarity."
+        }
+      ]
+    },
+    {
+      "science": {
+        "decision": "PASS"
+      },
+      "visual": {
+        "decision": "PASS"
+      },
+      "coverage": "Covers the full causal chain: (1) water in the central vacuole pushes outward against the cell wall = turgor pressure; (2) osmosis moves water across the semipermeable membrane from low-solute/high-water side to high-solute/low-water side; (3) net water gain (hypotonic/pure water) swells the vacuole -> turgid/firm, net water loss (hypertonic) shrinks it -> flaccid/soft; (4) at organism level turgor keeps plants upright, loss causes wilting. The central question (how water movement across the membrane changes firmness) is explicitly answered and tied to a real time trajectory (vacuole growing 1-5s then shrinking 7-9s; arrows crossing the membrane 14-18s).",
+      "issues": [
+        {
+          "seconds": 11,
+          "description": "Text 'Water goes from high to low concentration' is referentially ambiguous (concentration of water vs solute). It is corrected in-line by 'water follows solute toward the saltier side' and by the diagram, so it is a minor phrasing risk, not a factual error."
+        },
+        {
+          "seconds": 24,
+          "description": "The three section-3 captions ('Hypotonic -> Turgid', 'Isotonic -> Normal', 'Hypertonic -> Flaccid') are rendered on one line and visually overlap/collide, making the middle label hard to read. Content is correct; readability only."
+        },
+        {
+          "seconds": 33,
+          "description": "The 'Shriveled cell' icon shows a shrunken protoplast that appears detached from the wall (plasmolysis) without a label explaining the wall-vs-protoplast distinction. Accurate but could confuse learners who expect the wall to shrink too."
+        }
+      ]
+    }
+  ],
+  "providers": {
+    "wan": {
+      "submission_status": "DRY_RUN",
+      "submitted": false,
+      "request_sha256": "f5820a4ebe3b1a5fb36ff86a1f558bffd3f16593f725fd03470c9dd249a34625",
+      "capabilities": {
+        "valid": true,
+        "errors": [],
+        "entitlement": "REAL_SUBMISSION_REQUIRED",
+        "docs": null
+      },
+      "estimate": {
+        "estimated_cny": 1.5,
+        "basis": "Official Beijing output seconds list price; actual billed cost may differ",
+        "actual_cost": null
+      }
+    },
+    "seedance": {
+      "submission_status": "DRY_RUN",
+      "submitted": false,
+      "capabilities": {
+        "valid": false,
+        "status": "NOT_SELECTED",
+        "reason": "Current user selected Wan only; exact model/endpoint and key not configured."
+      }
+    }
+  },
+  "limitations": "mock fixed path; no paired executable fixed workflow under same budget; source baseline prompts and split vary"
+}

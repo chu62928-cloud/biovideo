@@ -1,0 +1,100 @@
+{
+  "evidence_hash": "e72d4ad31f8e8780adaafaf8fe43d6f859e6a48e3e5337fbbf00b28b352aa2e3",
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "An enzyme binds its substrate at a specific region called the active site, forming an enzyme-substrate complex.",
+      "support": [
+        {
+          "evidence_id": "E_a9e0203e9a90",
+          "location": "paragraph_7",
+          "quote": "When an enzyme binds its substrate, it forms an enzyme-substrate complex. This complex lowers the reaction's activation energy and promotes its rapid progression in one of many ways. On a basic level, enzymes promote chemical reactions that involve more than one substrate by bringing the substrates together in an optimal orientation. The appropriate region (atoms and bonds) of one molecule is juxtaposed to the other molecule's appropriate region with which it must react. Another way in which enzymes promote substrate reaction is by creating an optimal environment within the active site for the reaction to occur. Certain chemical reactions might proceed best in a slightly acidic or non-polar environment. The chemical properties that emerge from the particular arrangement of amino acid residues within an active site create the perfect environment for an enzyme’s specific substrates to react."
+        },
+        {
+          "evidence_id": "E_a9e0203e9a90",
+          "location": "paragraph_3",
+          "quote": "The chemical reactants to which an enzyme binds are the enzyme’s substrates . There may be one or more substrates, depending on the particular chemical reaction. In some reactions, a single-reactant substrate breaks down into multiple products. In others, two substrates may come together to create one larger molecule. Two reactants might also enter a reaction, both become modified, and leave the reaction as two products. The location within the enzyme where the substrate binds is the enzyme’s active site . This is where the “action” happens. Since enzymes are proteins, there is a unique combination of amino acid residues (also side chains, or R groups) within the active site. Different properties characterize each residue. These can be large or small, weakly acidic or basic, hydrophilic or hydrophobic, positively or negatively charged, or neutral. The unique combination of amino acid residues, their positions, sequences, structures, and properties, creates a very specific chemical environment within the active site. This specific environment is suited to bind, albeit briefly, to a specific chemical substrate (or substrates). Due to this jigsaw puzzle-like match between an enzyme and its substrates (which adapts to find the best fit between the transition state and the active site), enzymes are known for their specificity. The “best fit” results from the shape and the amino acid functional group’s attraction to the substrate. There is a specifically matched enzyme for each substrate and, thus, for each chemical reaction; however, there is flexibility as well."
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "The enzyme-substrate complex lowers the reaction's activation energy, for example by bringing substrates together in optimal orientation, creating an optimal active-site environment, or contorting substrate bonds toward the transition state.",
+      "support": [
+        {
+          "evidence_id": "E_a9e0203e9a90",
+          "location": "paragraph_7",
+          "quote": "When an enzyme binds its substrate, it forms an enzyme-substrate complex. This complex lowers the reaction's activation energy and promotes its rapid progression in one of many ways. On a basic level, enzymes promote chemical reactions that involve more than one substrate by bringing the substrates together in an optimal orientation. The appropriate region (atoms and bonds) of one molecule is juxtaposed to the other molecule's appropriate region with which it must react. Another way in which enzymes promote substrate reaction is by creating an optimal environment within the active site for the reaction to occur. Certain chemical reactions might proceed best in a slightly acidic or non-polar environment. The chemical properties that emerge from the particular arrangement of amino acid residues within an active site create the perfect environment for an enzyme’s specific substrates to react."
+        },
+        {
+          "evidence_id": "E_a9e0203e9a90",
+          "location": "paragraph_8",
+          "quote": "You have learned that the activation energy required for many reactions includes the energy involved in manipulating or slightly contorting chemical bonds so that they can easily break and allow others to reform. Enzymatic action can aid this process. The enzyme-substrate complex can lower the activation energy by contorting substrate molecules in such a way as to facilitate bond-breaking, helping to reach the transition state. Finally, enzymes can also lower activation energies by taking part in the chemical reaction itself. The amino acid residues can provide certain ions or chemical groups that actually form covalent bonds with substrate molecules as a necessary step of the reaction process. In these cases, it is important to remember that the enzyme will always return to its original state at the reaction's completion. One of enzymes' hallmark properties is that they remain ultimately unchanged by the reactions they catalyze. After an enzyme catalyzes a reaction, it releases its product(s)."
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Under the induced-fit model, binding causes a mild shift in the enzyme's structure that yields an ideal arrangement with the substrate's transition state; this explains enzyme specificity.",
+      "support": [
+        {
+          "evidence_id": "E_a9e0203e9a90",
+          "location": "paragraph_5",
+          "quote": "For many years, scientists thought that enzyme-substrate binding took place in a simple “lock-and-key” fashion. This model asserted that the enzyme and substrate fit together perfectly in one instantaneous step. However, current research supports a more refined view scientists call induced fit ( Figure 6.16 ). This model expands upon the lock-and-key model by describing a more dynamic interaction between enzyme and substrate. As the enzyme and substrate come together, their interaction causes a mild shift in the enzyme’s structure that confirms an ideal binding arrangement between the enzyme and the substrate's transition state. This ideal binding maximizes the enzyme’s ability to catalyze its reaction."
+        }
+      ]
+    },
+    {
+      "id": "C4",
+      "statement": "After catalysis the enzyme releases its product(s) and returns to its original state; enzymes lower activation energy but do not change the reaction's free-energy change.",
+      "support": [
+        {
+          "evidence_id": "E_a9e0203e9a90",
+          "location": "paragraph_8",
+          "quote": "You have learned that the activation energy required for many reactions includes the energy involved in manipulating or slightly contorting chemical bonds so that they can easily break and allow others to reform. Enzymatic action can aid this process. The enzyme-substrate complex can lower the activation energy by contorting substrate molecules in such a way as to facilitate bond-breaking, helping to reach the transition state. Finally, enzymes can also lower activation energies by taking part in the chemical reaction itself. The amino acid residues can provide certain ions or chemical groups that actually form covalent bonds with substrate molecules as a necessary step of the reaction process. In these cases, it is important to remember that the enzyme will always return to its original state at the reaction's completion. One of enzymes' hallmark properties is that they remain ultimately unchanged by the reactions they catalyze. After an enzyme catalyzes a reaction, it releases its product(s)."
+        },
+        {
+          "evidence_id": "E_a9e0203e9a90",
+          "location": "paragraph_1",
+          "quote": "A substance that helps a chemical reaction to occur is a catalyst, and the special molecules that catalyze biochemical reactions are enzymes. Almost all enzymes are proteins, comprised of amino acid chains, and they perform the critical task of lowering the activation energies of chemical reactions inside the cell. Enzymes do this by binding to the reactant molecules, and holding them in such a way as to make the chemical bond-breaking and bond-forming processes take place more readily. It is important to remember that enzymes do not change the reaction's ∆G. In other words, they do not change whether a reaction is exergonic (spontaneous) or endergonic. This is because they do not change the reactants' or products' free energy. They only reduce the activation energy required to reach the transition state ( Figure 6.15 )."
+        }
+      ]
+    }
+  ],
+  "simplifications": [
+    {
+      "text": "Present the animation as a simplified single-substrate induced-fit model; note real active sites involve many amino acid residues and may involve covalent intermediate steps.",
+      "basis": "paragraphs 3, 8"
+    },
+    {
+      "text": "Avoid depicting lock-and-key as current; mention it only as a historical model if at all.",
+      "basis": "paragraph 5"
+    }
+  ],
+  "review": {
+    "decision": "PASS",
+    "claim_reviews": [
+      {
+        "id": "C1",
+        "decision": "PASS",
+        "reason": "Exact evidence states enzyme binds substrate at active site forming enzyme-substrate complex; clearly supported."
+      },
+      {
+        "id": "C2",
+        "decision": "PASS",
+        "reason": "All three mechanisms (orientation, active-site environment, bond contortion) are directly quoted; accurately attributed."
+      },
+      {
+        "id": "C3",
+        "decision": "PASS",
+        "reason": "Matches induced-fit quote: mild structural shift yields ideal arrangement with transition state and maximizes catalysis/specificity."
+      },
+      {
+        "id": "C4",
+        "decision": "PASS",
+        "reason": "Supported: enzyme releases product(s) and returns to original state; does not change ΔG, only lowers activation energy."
+      }
+    ]
+  },
+  "verified": true
+}

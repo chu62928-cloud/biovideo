@@ -1,0 +1,23 @@
+{
+  "objectives": [
+    "Explain how a sensory receptor converts a stimulus into an electrical signal",
+    "Describe receptor potential and its role in triggering action potentials",
+    "Distinguish stimulus modality, transduction, and encoding for grades 10-12"
+  ],
+  "figures": [
+    {
+      "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/44ad5f5320cf6c85829f37ba2f78c3585833c7ff",
+      "caption": "Figure 36.2 (a) Mechanosensitive ion channels are gated ion channels that respond to mechanical deformation of the plasma membrane. A mechanosensitive channel is connected to the plasma membrane and the cytoskeleton by hair-like tethers. When pressure causes the extracellular matrix to move, the channel opens, allowing ions to enter or exit the cell. (b) Stereocilia in the human ear are connected to mechanosensitive ion channels. When a sound causes the stereocilia to move, mechanosensitive ion channels transduce the signal to the cochlear nerve.",
+      "alt": "Illustration A shows a closed gated ion channel embedded in the plasma membrane. A hair-like tether connects the channel to the extracellular matrix outside the cell, and another tether connects the channel to the inner cytoskeleton. When the extracellular matrix is deflected, the tether tugs on the gated ion channel, pulling it open. Ions may now enter or exit the cell. Illustration B shows stereocilia, hair-like projections on outer hair cells that are attached to the tectorial membrane of the inner ear. The outer hair cells are connected to the cochlear nerve.",
+      "source_page": "https://openstax.org/books/biology-2e/pages/36-1-sensory-processes"
+    },
+    {
+      "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/be9b1989ecf35559b3f934e2d89b4806d64893ae",
+      "caption": "Figure 36.3 In humans, with the exception of olfaction, all sensory signals are routed from the (a) thalamus to (b) final processing regions in the cortex of the brain. (credit b: modification of work by Polina Tishina)",
+      "alt": "Illustration A shows side view of a human brain. The thalamus is in the inner, middle part. Illustration B shows the location of sensory processing regions in the brain. The visual processing region is at the back of the brain, the auditory processing region is in the middle of the brain, and the somatosensory processing region is located in a sliver-like region in the upper part of the brain and extending halfway down.",
+      "source_page": "https://openstax.org/books/biology-2e/pages/36-1-sensory-processes"
+    }
+  ],
+  "license": "external pixels not imported; captions used for original schematic",
+  "upload": false
+}

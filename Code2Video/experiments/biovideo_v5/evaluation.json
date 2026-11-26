@@ -1,0 +1,117 @@
+{
+  "final_status": "V5_AGENT_PARTIALLY_VALIDATED",
+  "agent_control_status": "AGENT_CONTROL_PARTIALLY_VALIDATED",
+  "formal_tasks_total": 5,
+  "videos_generated": 1,
+  "videos_approved": 0,
+  "held_out_videos_approved": 0,
+  "distinct_tool_paths": 5,
+  "actual_retrieval_recoveries": 1,
+  "successful_scene_repairs": 0,
+  "results": [
+    {
+      "task": "T01",
+      "unmeasured_strict_requirements": true,
+      "generation_status": "NOT_RENDERED",
+      "release_status": "REVIEW_INCOMPLETE",
+      "video_path": null,
+      "video_sha256": null,
+      "science_status": null,
+      "visual_status": null,
+      "agent_steps": 5,
+      "stop_reason": "Persisted model budget exhausted",
+      "path": [
+        "research",
+        "facts",
+        "storyboard",
+        "strict_model",
+        "strict_model"
+      ]
+    },
+    {
+      "task": "T02",
+      "unmeasured_strict_requirements": true,
+      "generation_status": "RENDERED",
+      "release_status": "REVISE",
+      "video_path": "candidate_83b862d50a32.mp4",
+      "video_sha256": "32606341926247d2550ab4bfb77fbf4d0644300051bf096e9363ae4a01e193f2",
+      "science_status": "REVISE",
+      "visual_status": "REVISE",
+      "agent_steps": 9,
+      "stop_reason": "Persisted model budget exhausted",
+      "path": [
+        "research",
+        "facts",
+        "storyboard",
+        "render_review",
+        "repair_scene",
+        "repair_scene",
+        "finish",
+        "finish",
+        "repair_scene"
+      ]
+    },
+    {
+      "task": "T03",
+      "unmeasured_strict_requirements": true,
+      "generation_status": "NOT_RENDERED",
+      "release_status": "REVIEW_INCOMPLETE",
+      "video_path": null,
+      "video_sha256": null,
+      "science_status": null,
+      "visual_status": null,
+      "agent_steps": 4,
+      "stop_reason": "Persisted model budget exhausted",
+      "path": [
+        "research",
+        "facts",
+        "storyboard",
+        "strict_model"
+      ]
+    },
+    {
+      "task": "T04",
+      "unmeasured_strict_requirements": false,
+      "generation_status": "NOT_RENDERED",
+      "release_status": "REVIEW_INCOMPLETE",
+      "video_path": null,
+      "video_sha256": null,
+      "science_status": null,
+      "visual_status": null,
+      "agent_steps": 6,
+      "stop_reason": "Persisted model budget exhausted",
+      "path": [
+        "research",
+        "research",
+        "facts",
+        "strict_model",
+        "strict_model",
+        "strict_model"
+      ]
+    },
+    {
+      "task": "T05",
+      "unmeasured_strict_requirements": false,
+      "generation_status": "NOT_RENDERED",
+      "release_status": "REVIEW_INCOMPLETE",
+      "video_path": null,
+      "video_sha256": null,
+      "science_status": null,
+      "visual_status": null,
+      "agent_steps": 3,
+      "stop_reason": "Repeated identical failure: {'error': '404 Client Error: Not Found for url: https://openstax.org/books/biology-2e/pages/30-3-stems', 'type': 'HTTPError'}",
+      "path": [
+        "research",
+        "research",
+        "research"
+      ]
+    }
+  ],
+  "api_usage": {
+    "prompt_tokens": 192618,
+    "completion_tokens": 56908,
+    "text": 60,
+    "multimodal": 3,
+    "cost": null
+  }
+}

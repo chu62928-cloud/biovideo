@@ -1,0 +1,28 @@
+{
+  "inputs": [
+    [
+      "Evidence chapter retrieved",
+      "HTTP 404, no evidence"
+    ]
+  ],
+  "model": {
+    "cases": [
+      {
+        "normal_tool": "research",
+        "changed_tool": "research",
+        "reason": "404 left no usable evidence; retry research with a valid OpenStax URL to obtain chapter text and figure captions."
+      }
+    ]
+  },
+  "mock_dispatch": [
+    {
+      "normal": [
+        "research"
+      ],
+      "changed": [
+        "research"
+      ]
+    }
+  ],
+  "fixed_workflow": "next scheduled action independent of observation"
+}

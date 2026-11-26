@@ -1,0 +1,44 @@
+{
+  "science": {
+    "decision": "REVISE"
+  },
+  "visual": {
+    "decision": "REVISE"
+  },
+  "coverage": "PASS",
+  "mechanism_observable": "PARTIAL",
+  "mechanism_evidence": [
+    "0-7s: static diagram; blue 'Water in' arrow at left membrane, no animated water trajectory or vacuole swelling shown across the 8s hold",
+    "8-15s: 'Water enters' arrow + red 'Turgor pressure' arrow at top-left corner; vacuole/membrane shapes static, no visible swelling or pressing motion",
+    "16-23s: 'Water leaves' arrow; green membrane layer shown inset with a brown gap to the wall (static detachment), no animated water exit or progressive shrinkage"
+  ],
+  "checks": [
+    {
+      "claim_id": "c1",
+      "status": "FAIL",
+      "seconds": "0-7",
+      "observation": "Caption direction (high→low water) is correct, but the on-screen label 'Cytoplasm (high water)' contradicts the 'Water in' arrow: water entering requires the cytoplasm to have LOWER water (higher solute) than outside. Label/arrow are mutually inconsistent."
+    },
+    {
+      "claim_id": "c2",
+      "status": "PASS",
+      "seconds": "8-15",
+      "observation": "Water entry → vacuole swelling → membrane pressed against rigid wall → turgor pressure → stiffening, wall limits expansion (no lysis). All elements present and consistent."
+    },
+    {
+      "claim_id": "c3",
+      "status": "PASS",
+      "seconds": "16-23",
+      "observation": "Hypertonic outside → water leaves → wall prevents shrinkage → membrane detaches (plasmolysis) → turgor lost → wilting. Depiction (inset membrane with gap to wall, shrunken vacuole) matches."
+    }
+  ],
+  "issues": [
+    "Scene 1 (0-7s): scientific/label contradiction — 'Cytoplasm (high water)' shown alongside a 'Water in' arrow; for osmotic inflow the cytoplasm must be lower in water (higher solute). Relabel or remove the parenthetical.",
+    "Scene 1 (0-7s): the large white curved line on the left is unlabeled and its meaning (outside fluid boundary vs. a flow path) is ambiguous.",
+    "Scene 2 (8-15s): the red 'Turgor pressure' arrow at the top-left corner points ambiguously (into the wall corner); it does not clearly convey outward pressure of the membrane/vacuole on the wall.",
+    "Scene 3 (16-23s): text overlap — 'Hypertonic outside' and 'Water leaves' collide at the left membrane, reducing legibility.",
+    "All scenes: motion is conveyed only by static arrows; no real-time trajectory of water or progressive vacuole swelling/shrinkage is animated, so direction and state change are asserted rather than observed (mechanism only partially visible)."
+  ],
+  "video_sha256": "32606341926247d2550ab4bfb77fbf4d0644300051bf096e9363ae4a01e193f2",
+  "evidence_level": "VLM_INFERRED"
+}

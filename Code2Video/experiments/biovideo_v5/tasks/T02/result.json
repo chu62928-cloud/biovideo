@@ -1,0 +1,11 @@
+{
+  "unmeasured_strict_requirements": true,
+  "generation_status": "RENDERED",
+  "release_status": "REVISE",
+  "video_path": "candidate_83b862d50a32.mp4",
+  "video_sha256": "32606341926247d2550ab4bfb77fbf4d0644300051bf096e9363ae4a01e193f2",
+  "science_status": "REVISE",
+  "visual_status": "REVISE",
+  "agent_steps": 9,
+  "stop_reason": "Persisted model budget exhausted"
+}

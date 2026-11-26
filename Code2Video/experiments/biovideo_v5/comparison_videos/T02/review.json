@@ -1,0 +1,23 @@
+{
+  "science": {
+    "decision": "PASS"
+  },
+  "visual": {
+    "decision": "PASS"
+  },
+  "coverage": "Covers the full causal chain: (1) water in the central vacuole pushes outward against the cell wall = turgor pressure; (2) osmosis moves water across the semipermeable membrane from low-solute/high-water side to high-solute/low-water side; (3) net water gain (hypotonic/pure water) swells the vacuole -> turgid/firm, net water loss (hypertonic) shrinks it -> flaccid/soft; (4) at organism level turgor keeps plants upright, loss causes wilting. The central question (how water movement across the membrane changes firmness) is explicitly answered and tied to a real time trajectory (vacuole growing 1-5s then shrinking 7-9s; arrows crossing the membrane 14-18s).",
+  "issues": [
+    {
+      "seconds": 11,
+      "description": "Text 'Water goes from high to low concentration' is referentially ambiguous (concentration of water vs solute). It is corrected in-line by 'water follows solute toward the saltier side' and by the diagram, so it is a minor phrasing risk, not a factual error."
+    },
+    {
+      "seconds": 24,
+      "description": "The three section-3 captions ('Hypotonic -> Turgid', 'Isotonic -> Normal', 'Hypertonic -> Flaccid') are rendered on one line and visually overlap/collide, making the middle label hard to read. Content is correct; readability only."
+    },
+    {
+      "seconds": 33,
+      "description": "The 'Shriveled cell' icon shows a shrunken protoplast that appears detached from the wall (plasmolysis) without a label explaining the wall-vs-protoplast distinction. Accurate but could confuse learners who expect the wall to shrink too."
+    }
+  ]
+}

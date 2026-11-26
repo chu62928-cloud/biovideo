@@ -1,0 +1,198 @@
+{
+  "relations": [
+    {
+      "semantic_id": "rel_enzyme_binds_substrate",
+      "relation_type": "binds",
+      "definition": "The enzyme binds its substrate at the active site, forming an enzyme-substrate complex.",
+      "source_entity": "enzyme",
+      "target_entity": "substrate",
+      "evidence_ids": [
+        "E_a9e0203e9a90"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_a9e0203e9a90",
+          "quote": "When an enzyme binds its substrate, it forms an enzyme-substrate complex.",
+          "location": "paragraph_7"
+        },
+        {
+          "evidence_id": "E_a9e0203e9a90",
+          "quote": "The location within the enzyme where the substrate binds is the enzyme’s active site .",
+          "location": "paragraph_3"
+        }
+      ]
+    },
+    {
+      "semantic_id": "rel_active_site_hosts_binding",
+      "relation_type": "located_at",
+      "definition": "Substrate binding occurs at the enzyme's active site, the region where the catalytic action happens.",
+      "source_entity": "substrate",
+      "target_entity": "active_site",
+      "evidence_ids": [
+        "E_a9e0203e9a90"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_a9e0203e9a90",
+          "quote": "The location within the enzyme where the substrate binds is the enzyme’s active site . This is where the “action” happens.",
+          "location": "paragraph_3"
+        }
+      ]
+    },
+    {
+      "semantic_id": "rel_induced_fit",
+      "relation_type": "conformationally_adapts_to",
+      "definition": "As enzyme and substrate come together, the interaction causes a mild shift in the enzyme's structure that yields an ideal binding arrangement with the substrate's transition state.",
+      "source_entity": "enzyme",
+      "target_entity": "substrate",
+      "evidence_ids": [
+        "E_a9e0203e9a90"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_a9e0203e9a90",
+          "quote": "As the enzyme and substrate come together, their interaction causes a mild shift in the enzyme’s structure that confirms an ideal binding arrangement between the enzyme and the substrate's transition state.",
+          "location": "paragraph_5"
+        }
+      ]
+    },
+    {
+      "semantic_id": "rel_complex_lowers_activation_energy",
+      "relation_type": "lowers_activation_energy_of",
+      "definition": "The enzyme-substrate complex lowers the activation energy of the reaction, for example by contorting substrate molecules to facilitate bond-breaking toward the transition state.",
+      "source_entity": "enzyme_substrate_complex",
+      "target_entity": "substrate",
+      "evidence_ids": [
+        "E_a9e0203e9a90"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_a9e0203e9a90",
+          "quote": "The enzyme-substrate complex can lower the activation energy by contorting substrate molecules in such a way as to facilitate bond-breaking, helping to reach the transition state.",
+          "location": "paragraph_8"
+        },
+        {
+          "evidence_id": "E_a9e0203e9a90",
+          "quote": "This complex lowers the reaction's activation energy and promotes its rapid progression in one of many ways.",
+          "location": "paragraph_7"
+        }
+      ]
+    },
+    {
+      "semantic_id": "rel_complex_releases_product",
+      "relation_type": "releases",
+      "definition": "After catalysis, the enzyme releases its product(s) and returns to its original state.",
+      "source_entity": "enzyme_substrate_complex",
+      "target_entity": "product",
+      "evidence_ids": [
+        "E_a9e0203e9a90"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_a9e0203e9a90",
+          "quote": "After an enzyme catalyzes a reaction, it releases its product(s).",
+          "location": "paragraph_8"
+        },
+        {
+          "evidence_id": "E_a9e0203e9a90",
+          "quote": "the enzyme will always return to its original state at the reaction's completion",
+          "location": "paragraph_8"
+        }
+      ]
+    }
+  ],
+  "bindings": [
+    {
+      "process_semantic_id": "rel_enzyme_binds_substrate",
+      "participants": [
+        {
+          "role": "enzyme",
+          "entity_ref": "enzyme"
+        },
+        {
+          "role": "substrate",
+          "entity_ref": "substrate"
+        },
+        {
+          "role": "active_site",
+          "entity_ref": "active_site"
+        },
+        {
+          "role": "complex",
+          "entity_ref": "enzyme_substrate_complex"
+        }
+      ],
+      "input_roles": [
+        "enzyme",
+        "substrate"
+      ],
+      "output_roles": [
+        "complex"
+      ]
+    },
+    {
+      "process_semantic_id": "rel_induced_fit",
+      "participants": [
+        {
+          "role": "enzyme",
+          "entity_ref": "enzyme"
+        },
+        {
+          "role": "substrate",
+          "entity_ref": "substrate"
+        }
+      ],
+      "input_roles": [
+        "enzyme",
+        "substrate"
+      ],
+      "output_roles": [
+        "enzyme"
+      ]
+    },
+    {
+      "process_semantic_id": "rel_complex_lowers_activation_energy",
+      "participants": [
+        {
+          "role": "complex",
+          "entity_ref": "enzyme_substrate_complex"
+        },
+        {
+          "role": "substrate",
+          "entity_ref": "substrate"
+        }
+      ],
+      "input_roles": [
+        "complex",
+        "substrate"
+      ],
+      "output_roles": [
+        "substrate"
+      ]
+    },
+    {
+      "process_semantic_id": "rel_complex_releases_product",
+      "participants": [
+        {
+          "role": "complex",
+          "entity_ref": "enzyme_substrate_complex"
+        },
+        {
+          "role": "product",
+          "entity_ref": "product"
+        },
+        {
+          "role": "enzyme",
+          "entity_ref": "enzyme"
+        }
+      ],
+      "input_roles": [
+        "complex"
+      ],
+      "output_roles": [
+        "product",
+        "enzyme"
+      ]
+    }
+  ]
+}

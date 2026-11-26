@@ -1,0 +1,81 @@
+{
+  "evidence_hash": "f72085e01283a0b87e4d8e123aeb6f0d3d6439661e90e95526fb47d254e5bc02",
+  "claims": [
+    {
+      "id": "c1",
+      "statement": "Osmosis is the movement of water across a semipermeable membrane from higher water concentration (lower solute concentration) to lower water concentration (higher solute concentration).",
+      "support": [
+        {
+          "evidence_id": "E_bc51b24509d1",
+          "location": "paragraph_21",
+          "quote": "Osmosis is the movement of free water molecules through a semipermeable membrane according to the water's concentration gradient across the membrane, which is inversely proportional to the solutes' concentration. While diffusion transports material across membranes and within cells, osmosis transports only water across a membrane and the membrane limits the solutes' diffusion in the water. Not surprisingly, the aquaporins that facilitate water movement play a large role in osmosis, most prominently in red blood cells and the membranes of kidney tubules."
+        },
+        {
+          "evidence_id": "E_bc51b24509d1",
+          "location": "paragraph_26",
+          "quote": "Tonicity describes how an extracellular solution can change a cell's volume by affecting osmosis. A solution's tonicity often directly correlates with the solution's osmolarity. Osmolarity describes the solution's total solute concentration. A solution with low osmolarity has a greater number of water molecules relative to the number of solute particles. A solution with high osmolarity has fewer water molecules with respect to solute particles. In a situation in which a membrane permeable to water, though not to the solute separates two different osmolarities, water will move from the membrane's side with lower osmolarity (and more water) to the side with higher osmolarity (and less water). This effect makes sense if you remember that the solute cannot move across the membrane, and thus the only component in the system that can move—the water—moves along its own concentration gradient. An important distinction that concerns living systems is that osmolarity measures the number of particles (which may be molecules) in a solution. Therefore, a solution that is cloudy with cells may have a lower osmolarity than a solution that is clear, if the second solution contains more dissolved molecules than there are cells."
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "statement": "In plant cells, water entering the cell produces turgor pressure that presses the plasma membrane against the rigid cell wall and stiffens the cell.",
+      "support": [
+        {
+          "evidence_id": "E_bc51b24509d1",
+          "location": "paragraph_36",
+          "quote": "Various living things have ways of controlling the effects of osmosis—a mechanism we call osmoregulation. Some organisms, such as plants, fungi, bacteria, and some protists, have cell walls that surround the plasma membrane and prevent cell lysis in a hypotonic solution. The plasma membrane can only expand to the cell wall's limit, so the cell will not lyse. The cytoplasm in plants is always slightly hypertonic to the cellular environment, and water will always enter a cell if water is available. This water inflow produces turgor pressure, which stiffens the plant's cell walls ( Figure 5.13 ). In nonwoody plants, turgor pressure supports the plant. Conversely, if you do not water the plant, the extracellular fluid will become hypertonic, causing water to leave the cell. In this condition, the cell does not shrink because the cell wall is not flexible. However, the cell membrane detaches from the wall and constricts the cytoplasm. We call this plasmolysis . Plants lose turgor pressure in this condition and wilt ( Figure 5.14 )."
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "statement": "When extracellular fluid becomes hypertonic, water leaves the cell; the rigid cell wall prevents shrinking, but the plasma membrane detaches from the wall (plasmolysis) and turgor pressure is lost, causing wilting.",
+      "support": [
+        {
+          "evidence_id": "E_bc51b24509d1",
+          "location": "paragraph_36",
+          "quote": "Various living things have ways of controlling the effects of osmosis—a mechanism we call osmoregulation. Some organisms, such as plants, fungi, bacteria, and some protists, have cell walls that surround the plasma membrane and prevent cell lysis in a hypotonic solution. The plasma membrane can only expand to the cell wall's limit, so the cell will not lyse. The cytoplasm in plants is always slightly hypertonic to the cellular environment, and water will always enter a cell if water is available. This water inflow produces turgor pressure, which stiffens the plant's cell walls ( Figure 5.13 ). In nonwoody plants, turgor pressure supports the plant. Conversely, if you do not water the plant, the extracellular fluid will become hypertonic, causing water to leave the cell. In this condition, the cell does not shrink because the cell wall is not flexible. However, the cell membrane detaches from the wall and constricts the cytoplasm. We call this plasmolysis . Plants lose turgor pressure in this condition and wilt ( Figure 5.14 )."
+        },
+        {
+          "evidence_id": "E_bc51b24509d1",
+          "location": "paragraph_38",
+          "quote": "Figure 5.14 Without adequate water, the plant on the left has lost turgor pressure, visible in its wilting. Watering the plant (right) will restore the turgor pressure. (credit: Victor M. Vicente Selvas)"
+        }
+      ]
+    }
+  ],
+  "simplifications": [
+    {
+      "id": "s1",
+      "statement": "Treating the cell wall as fully rigid while the vacuole/membrane volume changes is a simplification; real walls have some elasticity.",
+      "kind": "teaching_simplification"
+    },
+    {
+      "id": "s2",
+      "statement": "Equating turgor pressure directly with 'firmness' is a reasonable teaching shorthand, though firmness also depends on wall mechanical properties.",
+      "kind": "teaching_simplification"
+    }
+  ],
+  "review": {
+    "decision": "PASS",
+    "claim_reviews": [
+      {
+        "id": "c1",
+        "decision": "PASS",
+        "reason": "Matches quoted evidence: water moves across semipermeable membrane from lower solute (higher water) to higher solute (lower water) concentration."
+      },
+      {
+        "id": "c2",
+        "decision": "PASS",
+        "reason": "Directly supported: water inflow produces turgor pressure stiffening cell walls; wall limits expansion."
+      },
+      {
+        "id": "c3",
+        "decision": "PASS",
+        "reason": "Supported: hypertonic extracellular fluid causes water efflux, wall prevents shrinking, membrane detaches (plasmolysis), turgor lost, plant wilts."
+      }
+    ]
+  },
+  "verified": true
+}

@@ -1,0 +1,161 @@
+{
+  "model_id": "rbc_shape_oxygen_transport_stage1",
+  "scope": {
+    "topic": "Explain how the shape of a human red blood cell supports oxygen transport.",
+    "organism_context": "Homo sapiens (human), red blood cells (erythrocytes) within the vascular network",
+    "audience": "compact scientific teaching model (learner)",
+    "included_processes": [
+      "biconcave disc geometry providing high surface area-to-volume ratio for gas exchange",
+      "hemoglobin-mediated oxygen binding and transport (oxyhemoglobin/deoxyhemoglobin)",
+      "flexible deformation (spectrin) enabling passage through narrow capillaries"
+    ],
+    "excluded_processes": [
+      "erythropoiesis and reticulocyte maturation details beyond shape/hemoglobin relevance",
+      "carbon dioxide transport and bicarbonate/carbaminohemoglobin chemistry",
+      "leukocyte function and immune roles",
+      "clinical anemia diagnosis and percent saturation measurement",
+      "cellular respiration pathways"
+    ],
+    "simplifications": [
+      "Capillary beds described only as narrow passages that slow flow and require cell folding; detailed hemodynamics omitted.",
+      "Hemoglobin represented as a single functional unit binding four oxygen molecules, without quaternary structural dynamics.",
+      "Shape effect summarized as optimized surface area-to-volume relative to a sphere of similar diameter, without quantitative modeling."
+    ]
+  },
+  "entities": [
+    {
+      "semantic_id": "rbc_biconcave_disc",
+      "scientific_name": "Erythrocyte (red blood cell), biconcave disc",
+      "entity_type": "cell",
+      "evidence_ids": [
+        "E_05a73a220035"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_05a73a220035",
+          "quote": "Erythrocytes are biconcave disks; that is, they are plump at their periphery and very thin in the center",
+          "location": "paragraph_4"
+        },
+        {
+          "evidence_id": "E_05a73a220035",
+          "quote": "The biconcave shape also provides a greater surface area across which gas exchange can occur, relative to its volume; a sphere of a similar diameter would have a lower surface area-to-volume ratio.",
+          "location": "paragraph_4"
+        },
+        {
+          "evidence_id": "E_05a73a220035",
+          "quote": "This shape optimizes the ratio of surface area to volume, facilitating gas exchange.",
+          "location": "paragraph_5"
+        }
+      ],
+      "cardinality": "unspecified_collection",
+      "states": {
+        "shape": "biconcave_disc",
+        "functional_property": "high surface_area_to_volume_ratio"
+      }
+    },
+    {
+      "semantic_id": "hemoglobin_complex",
+      "scientific_name": "Hemoglobin (globin chains with heme iron)",
+      "entity_type": "molecule",
+      "evidence_ids": [
+        "E_05a73a220035"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_05a73a220035",
+          "quote": "Hemoglobin is a large molecule made up of proteins and iron.",
+          "location": "paragraph_6"
+        },
+        {
+          "evidence_id": "E_05a73a220035",
+          "quote": "Each iron ion in the heme can bind to one oxygen molecule; therefore, each hemoglobin molecule can transport four oxygen molecules.",
+          "location": "paragraph_8"
+        },
+        {
+          "evidence_id": "E_05a73a220035",
+          "quote": "A single erythrocyte can contain 300 million hemoglobin molecules, and thus more than 1 billion oxygen molecules.",
+          "location": "paragraph_7"
+        }
+      ],
+      "cardinality": "unspecified_collection",
+      "states": {
+        "oxygenated": "oxyhemoglobin",
+        "deoxygenated": "deoxyhemoglobin"
+      }
+    },
+    {
+      "semantic_id": "oxygen_molecule",
+      "scientific_name": "O2 (molecular oxygen)",
+      "entity_type": "molecule",
+      "evidence_ids": [
+        "E_05a73a220035"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_05a73a220035",
+          "quote": "Each iron ion in the heme can bind to one oxygen molecule",
+          "location": "paragraph_8"
+        },
+        {
+          "evidence_id": "E_05a73a220035",
+          "quote": "In the capillaries, the oxygen carried by the erythrocytes can diffuse into the plasma and then through the capillary walls to reach the cells",
+          "location": "paragraph_4"
+        }
+      ],
+      "cardinality": "unspecified_collection",
+      "states": {
+        "bound": "bound_to_heme_iron",
+        "free": "diffusing_in_plasma"
+      }
+    },
+    {
+      "semantic_id": "spectrin_cytoskeleton",
+      "scientific_name": "Spectrin (cytoskeletal protein)",
+      "entity_type": "protein",
+      "evidence_ids": [
+        "E_05a73a220035"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_05a73a220035",
+          "quote": "Fortunately, their structural proteins like spectrin are flexible, allowing them to bend over themselves to a surprising degree, then spring back again when they enter a wider vessel.",
+          "location": "paragraph_4"
+        },
+        {
+          "evidence_id": "E_05a73a220035",
+          "quote": "This includes the protein spectrin, a cytoskeletal protein element.",
+          "location": "paragraph_3"
+        }
+      ],
+      "cardinality": "unspecified_collection",
+      "states": {
+        "deformed": "folded_in_capillary",
+        "relaxed": "biconcave_in_wider_vessel"
+      }
+    },
+    {
+      "semantic_id": "capillary_bed",
+      "scientific_name": "Blood capillary",
+      "entity_type": "anatomical_structure",
+      "evidence_ids": [
+        "E_05a73a220035"
+      ],
+      "support": [
+        {
+          "evidence_id": "E_05a73a220035",
+          "quote": "Capillary beds are extremely narrow, slowing the passage of the erythrocytes and providing an extended opportunity for gas exchange to occur.",
+          "location": "paragraph_4"
+        },
+        {
+          "evidence_id": "E_05a73a220035",
+          "quote": "the space within capillaries can be so minute that, despite their own small size, erythrocytes may have to fold in on themselves if they are to make their way through.",
+          "location": "paragraph_4"
+        }
+      ],
+      "cardinality": "unspecified_collection",
+      "states": {
+        "lumen": "narrow"
+      }
+    }
+  ]
+}

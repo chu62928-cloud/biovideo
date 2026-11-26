@@ -1,0 +1,473 @@
+[
+  {
+    "title": "Learning Goal: Enzyme, Substrate, Active Site",
+    "caption": "Enzymes bind specific substrates at the active site, forming an enzyme-substrate complex.",
+    "claim_ids": [
+      "C1"
+    ],
+    "verification": [
+      "CLAIM",
+      "ENTITY",
+      "RELATION",
+      "VISUAL"
+    ],
+    "reference_use": "Figure 6.16 geometry informs enzyme body and substrate shape; original coordinates.",
+    "objects": [
+      {
+        "id": "enzyme",
+        "label": "Enzyme",
+        "color": "#4A90D9",
+        "closed": true,
+        "points": [
+          [
+            -4.0,
+            -1.6
+          ],
+          [
+            -2.0,
+            -1.8
+          ],
+          [
+            -0.8,
+            -1.0
+          ],
+          [
+            -1.0,
+            0.6
+          ],
+          [
+            -2.4,
+            1.4
+          ],
+          [
+            -4.2,
+            1.0
+          ],
+          [
+            -4.8,
+            -0.3
+          ]
+        ],
+        "shift": [
+          0,
+          0
+        ],
+        "label_offset": [
+          -1.2,
+          1.9
+        ]
+      },
+      {
+        "id": "active_site",
+        "label": "Active site",
+        "color": "#F5A623",
+        "closed": false,
+        "points": [
+          [
+            -1.0,
+            0.6
+          ],
+          [
+            -0.6,
+            -0.2
+          ],
+          [
+            -0.9,
+            -0.9
+          ],
+          [
+            -1.6,
+            -1.0
+          ],
+          [
+            -1.9,
+            -0.2
+          ],
+          [
+            -1.6,
+            0.6
+          ]
+        ],
+        "shift": [
+          0,
+          0
+        ],
+        "label_offset": [
+          0.3,
+          -1.4
+        ]
+      },
+      {
+        "id": "substrate",
+        "label": "Substrate",
+        "color": "#7ED321",
+        "closed": true,
+        "points": [
+          [
+            1.4,
+            0.4
+          ],
+          [
+            1.9,
+            -0.4
+          ],
+          [
+            2.7,
+            -0.5
+          ],
+          [
+            3.1,
+            0.2
+          ],
+          [
+            2.7,
+            0.9
+          ],
+          [
+            1.9,
+            0.9
+          ]
+        ],
+        "shift": [
+          -3.7,
+          0
+        ],
+        "label_offset": [
+          0.6,
+          1.5
+        ]
+      },
+      {
+        "id": "complex_label",
+        "label": "Enzyme-substrate complex",
+        "color": "#9013FE",
+        "closed": false,
+        "points": [
+          [
+            -3.0,
+            -1.9
+          ],
+          [
+            -3.0,
+            -1.7
+          ]
+        ],
+        "shift": [
+          0,
+          0
+        ],
+        "label_offset": [
+          0,
+          -0.5
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Lowering Activation Energy",
+    "caption": "Binding aligns substrates and the active site contorts bonds toward the transition state, lowering activation energy.",
+    "claim_ids": [
+      "C2",
+      "C3"
+    ],
+    "verification": [
+      "CLAIM",
+      "RELATION",
+      "STATE",
+      "TEMPORAL",
+      "VISUAL"
+    ],
+    "reference_use": "Figure 6.16 caption on induced fit and substrate contortion.",
+    "objects": [
+      {
+        "id": "enzyme",
+        "label": "Enzyme",
+        "color": "#4A90D9",
+        "closed": true,
+        "points": [
+          [
+            -4.0,
+            -1.6
+          ],
+          [
+            -2.0,
+            -1.8
+          ],
+          [
+            -0.8,
+            -1.0
+          ],
+          [
+            -1.0,
+            0.6
+          ],
+          [
+            -2.4,
+            1.4
+          ],
+          [
+            -4.2,
+            1.0
+          ],
+          [
+            -4.8,
+            -0.3
+          ]
+        ],
+        "shift": [
+          0,
+          0
+        ],
+        "label_offset": [
+          -1.2,
+          1.9
+        ]
+      },
+      {
+        "id": "active_site",
+        "label": "Active site",
+        "color": "#F5A623",
+        "closed": false,
+        "points": [
+          [
+            -1.0,
+            0.6
+          ],
+          [
+            -0.6,
+            -0.2
+          ],
+          [
+            -0.9,
+            -0.9
+          ],
+          [
+            -1.6,
+            -1.0
+          ],
+          [
+            -1.9,
+            -0.2
+          ],
+          [
+            -1.6,
+            0.6
+          ]
+        ],
+        "shift": [
+          0.3,
+          0.2
+        ],
+        "label_offset": [
+          0.3,
+          -1.4
+        ]
+      },
+      {
+        "id": "substrate",
+        "label": "Substrate (transition state)",
+        "color": "#7ED321",
+        "closed": true,
+        "points": [
+          [
+            -1.6,
+            0.1
+          ],
+          [
+            -1.2,
+            -0.5
+          ],
+          [
+            -0.6,
+            -0.6
+          ],
+          [
+            -0.2,
+            -0.1
+          ],
+          [
+            -0.5,
+            0.5
+          ],
+          [
+            -1.2,
+            0.6
+          ]
+        ],
+        "shift": [
+          0,
+          0
+        ],
+        "label_offset": [
+          0.8,
+          1.6
+        ]
+      },
+      {
+        "id": "induced_fit_note",
+        "label": "induced fit",
+        "color": "#9013FE",
+        "closed": false,
+        "points": [
+          [
+            -3.2,
+            1.9
+          ],
+          [
+            -3.0,
+            1.9
+          ]
+        ],
+        "shift": [
+          0,
+          0
+        ],
+        "label_offset": [
+          0,
+          0.3
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Summary: Release and Recycling",
+    "caption": "Products are released and the enzyme returns to its original state, unchanged overall.",
+    "claim_ids": [
+      "C4"
+    ],
+    "verification": [
+      "CLAIM",
+      "STATE",
+      "TEMPORAL",
+      "CONSERVATION",
+      "VISUAL"
+    ],
+    "reference_use": "Figure 6.16 product-release stage.",
+    "objects": [
+      {
+        "id": "enzyme",
+        "label": "Enzyme (restored)",
+        "color": "#4A90D9",
+        "closed": true,
+        "points": [
+          [
+            -4.0,
+            -1.6
+          ],
+          [
+            -2.0,
+            -1.8
+          ],
+          [
+            -0.8,
+            -1.0
+          ],
+          [
+            -1.0,
+            0.6
+          ],
+          [
+            -2.4,
+            1.4
+          ],
+          [
+            -4.2,
+            1.0
+          ],
+          [
+            -4.8,
+            -0.3
+          ]
+        ],
+        "shift": [
+          0,
+          0
+        ],
+        "label_offset": [
+          -1.2,
+          1.9
+        ]
+      },
+      {
+        "id": "active_site",
+        "label": "Active site",
+        "color": "#F5A623",
+        "closed": false,
+        "points": [
+          [
+            -1.0,
+            0.6
+          ],
+          [
+            -0.6,
+            -0.2
+          ],
+          [
+            -0.9,
+            -0.9
+          ],
+          [
+            -1.6,
+            -1.0
+          ],
+          [
+            -1.9,
+            -0.2
+          ],
+          [
+            -1.6,
+            0.6
+          ]
+        ],
+        "shift": [
+          0,
+          0
+        ],
+        "label_offset": [
+          0.3,
+          -1.4
+        ]
+      },
+      {
+        "id": "product",
+        "label": "Product(s)",
+        "color": "#7ED321",
+        "closed": true,
+        "points": [
+          [
+            2.0,
+            -0.6
+          ],
+          [
+            2.6,
+            -1.1
+          ],
+          [
+            3.3,
+            -0.8
+          ],
+          [
+            3.4,
+            -0.1
+          ],
+          [
+            2.8,
+            0.3
+          ],
+          [
+            2.1,
+            0.1
+          ]
+        ],
+        "shift": [
+          0,
+          0
+        ],
+        "label_offset": [
+          0.6,
+          1.3
+        ]
+      }
+    ]
+  }
+]

@@ -121,3 +121,5 @@ patch_failure_diagnostics.json列出首个错误后的全部可检测接口问�
 release_decision.json核对三主题各3次和新主题有界失败，0批准新模型。Science状态SCIENCE_PARTIALLY_VALIDATED，不建议稳定维护。当前无运行任务，科学源码freeze未变。目标尚未达到；依据任务书有限尝试与禁止无限扩框架要求，现有协议已耗尽，不再自动新增主题/重置次数。继续证明目标需要另定一轮模型/结构化输出策略与独立评测协议，不能把失败包装成完成。
 
 V4.3.3: 122 tests pass, paired editing 8/10 vs 6/10, both reject 2/2. No new approved models; R3 pupil response stopped at stage 1. New 24s mitosis candidate reviewed twice, final REVISE. See experiments/biology_expert_v4_3_3/README.md.
+
+V5 freeze 719b38a; 1/5 videos, 0 approved, two baseline MP4. See experiments/biovideo_v5/README.md.

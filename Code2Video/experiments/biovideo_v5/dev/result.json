@@ -1,0 +1,10 @@
+{
+  "generation_status": "NOT_RENDERED",
+  "release_status": "REVIEW_INCOMPLETE",
+  "video_path": null,
+  "video_sha256": null,
+  "science_status": null,
+  "visual_status": null,
+  "agent_steps": 5,
+  "stop_reason": "Repeated identical failure: {'error': 'Invalid tool or observation reference', 'type': 'ValueError'}"
+}

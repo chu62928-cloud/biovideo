@@ -1,0 +1,1 @@
+{"status": "FAILED", "reason": "", "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/code2biovideo/biovideo-v5/Code2Video/experiments/biovideo_v5/baseline.py\", line 30, in <module>\n    clips.append(next((folder/'media').rglob(name+'.mp4')))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nStopIteration\n"}

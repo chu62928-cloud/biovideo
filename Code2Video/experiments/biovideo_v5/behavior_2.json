@@ -1,0 +1,45 @@
+{
+  "inputs": [
+    [
+      "Actual video and all claims reviewed PASS",
+      "Video review REVISE: misleading label in scene 2"
+    ],
+    [
+      "Model schema and scientific verification complete",
+      "Optional typed model failed; verified facts and storyboard available"
+    ]
+  ],
+  "model": {
+    "cases": [
+      {
+        "normal_tool": "finish",
+        "changed_tool": "repair_scene",
+        "reason": "Scene 2 has a misleading label, so the earliest faulty stage is the storyboard; fix only that scene and keep approved artifacts."
+      },
+      {
+        "normal_tool": "finish",
+        "changed_tool": "finish",
+        "reason": "Scientific verification is complete and no blocking issue remains; the optional model was not needed, so return the reviewed result."
+      }
+    ]
+  },
+  "mock_dispatch": [
+    {
+      "normal": [
+        "finish"
+      ],
+      "changed": [
+        "repair_scene"
+      ]
+    },
+    {
+      "normal": [
+        "finish"
+      ],
+      "changed": [
+        "finish"
+      ]
+    }
+  ],
+  "fixed_workflow": "next scheduled action independent of observation"
+}
