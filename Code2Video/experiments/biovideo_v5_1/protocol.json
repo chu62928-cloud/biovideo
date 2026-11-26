@@ -1,0 +1,30 @@
+{
+  "baseline": "5de83df7a76a59b0bbe59064d324265c20abaf63",
+  "duration": 30,
+  "dev": [
+    [
+      "D01",
+      "Explain how the shape of a human red blood cell helps it transport oxygen."
+    ],
+    [
+      "D02",
+      "Explain how water movement across the cell membrane changes the firmness of a plant cell."
+    ]
+  ],
+  "groups": {
+    "G0": "historical videos, re-reviewed",
+    "G1": "fixed",
+    "G2": "agent"
+  },
+  "limits": {
+    "text_per_run": 8,
+    "review_per_run": 2,
+    "held_out_requests_per_run": 10,
+    "wan": 0,
+    "seedance": 0
+  },
+  "phase_B_condition": "Both G2 topics rendered and at least one G2 approval",
+  "rubric": "src/biology_expert/product.py:RUBRIC",
+  "approval": "Both science and visual PASS plus eight dimension checks",
+  "status": "pre-registered"
+}

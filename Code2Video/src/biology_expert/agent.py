@@ -23,7 +23,7 @@ class BiologyExpertAgent:
    self.registry.register(name,callback)
  def _call(self,name,args,goal,reason):return self.registry.invoke(name,args,goal,reason)
  def generate_video(self,task):
-  from .video_controller import run
+  from .product import run
   return run(self,task)
  def choose_next(self,situation):
   # Explicit bounded action policy: evidence gaps, measured errors and visual ambiguity have different paths.
