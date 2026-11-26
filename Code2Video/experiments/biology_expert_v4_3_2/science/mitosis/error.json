@@ -1,0 +1,5 @@
+{
+  "error_type": "RuntimeError",
+  "message": "Persisted model budget exhausted",
+  "stage": "SCIENCE_LOOP"
+}

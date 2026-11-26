@@ -16,7 +16,10 @@
       "minLength": 1
     },
     "schema_version": {
-      "const": "1.0"
+      "enum": [
+        "1.0",
+        "1.1"
+      ]
     },
     "scope": {
       "type": "object",
@@ -452,6 +455,24 @@
             "items": {
               "type": "object"
             }
+          },
+          "precondition_state_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "effect_state_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "terminates_state_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }
@@ -459,6 +480,153 @@
     "unresolved_questions": {
       "type": "array",
       "items": {}
+    },
+    "states": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "state_id",
+          "subject_ref",
+          "property",
+          "value",
+          "state_kind",
+          "scope",
+          "producer_process_id",
+          "required_by_process_ids",
+          "evidence_ids",
+          "support"
+        ],
+        "properties": {
+          "state_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "subject_ref": {
+            "type": "string"
+          },
+          "property": {
+            "type": "string"
+          },
+          "value": {},
+          "state_kind": {
+            "enum": [
+              "INITIAL_CONDITION",
+              "PRODUCED_STATE",
+              "REQUIRED_PRECONDITION",
+              "MAINTAINED_STATE",
+              "TERMINATED_STATE",
+              "OUT_OF_SCOPE",
+              "UNKNOWN"
+            ]
+          },
+          "scope": {
+            "type": "object"
+          },
+          "producer_process_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "required_by_process_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "support": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "evidence_id",
+                "quote",
+                "location"
+              ],
+              "properties": {
+                "evidence_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "quote": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "location": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "clip_start": {
+      "type": "object",
+      "required": [
+        "stage",
+        "existing_entity_refs",
+        "omitted_processes"
+      ],
+      "properties": {
+        "stage": {
+          "type": "string"
+        },
+        "existing_entity_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "omitted_processes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "description",
+              "reason",
+              "required_by_task"
+            ],
+            "properties": {
+              "description": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "string"
+              },
+              "required_by_task": {
+                "const": false
+              }
+            }
+          }
+        }
+      }
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "schema_version": {
+            "const": "1.1"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "states",
+          "clip_start"
+        ]
+      }
+    }
+  ]
 }

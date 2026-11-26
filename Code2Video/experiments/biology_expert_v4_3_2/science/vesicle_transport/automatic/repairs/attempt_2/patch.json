@@ -1,0 +1,498 @@
+{
+  "operations": [
+    {
+      "op": "update",
+      "collection": "processes",
+      "target_id": "proc_vesicle_transport_along_microtubule",
+      "fields": {
+        "scientific_name": "Motor-protein-dependent vesicle transport along microtubules",
+        "action_category": "transport",
+        "participants": [
+          {
+            "role": "cargo",
+            "entity_ref": "ent_vesicle"
+          },
+          {
+            "role": "track",
+            "entity_ref": "ent_microtubule"
+          },
+          {
+            "role": "motor",
+            "entity_ref": "ent_motor_protein"
+          }
+        ],
+        "input_roles": [
+          "cargo",
+          "track",
+          "motor"
+        ],
+        "output_roles": [
+          "cargo",
+          "track",
+          "motor"
+        ],
+        "preconditions": {
+          "microtubule_present_as_track": true,
+          "vesicle_present": true,
+          "motor_protein_engaged_with_cargo_and_track": true
+        },
+        "effects": {
+          "vesicle_moves_along_microtubule": true
+        },
+        "temporal_scope": {
+          "start_condition": "Motor protein engages cargo and microtubule track; vesicle transport begins.",
+          "end_condition": "Motor protein disengages or microtubule track ends; vesicle transport stops.",
+          "concurrent_with": [
+            "proc_microtubule_track_provision"
+          ],
+          "after": []
+        },
+        "precondition_state_refs": [
+          "state_microtubule_present",
+          "state_track_available",
+          "state_vesicle_present",
+          "state_motor_engaged"
+        ],
+        "effect_state_refs": [
+          "state_vesicle_moving"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_9af4c0e6bde1",
+            "quote": "provide a track along which vesicles move through the cell",
+            "location": "paragraph_12"
+          },
+          {
+            "evidence_id": "E_9af4c0e6bde1",
+            "quote": "allow cytoplasm and vesicles to move within the cell",
+            "location": "paragraph_1"
+          },
+          {
+            "evidence_id": "E_bac6751ff01c",
+            "quote": "Intracellular cargo transport relies on a microtubule (MT) network and its molecular motors, dynein and kinesin.",
+            "location": "abstract"
+          },
+          {
+            "evidence_id": "E_5652fd769b72",
+            "quote": "The mammalian kinesin superfamily, consisting of 14 distinct families, enables anterograde transport",
+            "location": "abstract"
+          },
+          {
+            "evidence_id": "E_f8fbdc9701f1",
+            "quote": "Microtubules provide track support for the directional transport of MVBs.",
+            "location": "abstract"
+          }
+        ],
+        "evidence_ids": [
+          "E_9af4c0e6bde1",
+          "E_bac6751ff01c",
+          "E_5652fd769b72",
+          "E_f8fbdc9701f1"
+        ],
+        "observables": [
+          {
+            "constraint_id": "obs_vesicle_transport_relation",
+            "predicate": "relation_holds_during",
+            "relation_ref": "rel_motor_drives_vesicle_transport",
+            "source_role": "motor",
+            "target_role": "cargo",
+            "capability": "PARTIAL",
+            "evidence_ids": [
+              "E_bac6751ff01c",
+              "E_5652fd769b72"
+            ],
+            "support": [
+              {
+                "evidence_id": "E_bac6751ff01c",
+                "quote": "Intracellular cargo transport relies on a microtubule (MT) network and its molecular motors, dynein and kinesin.",
+                "location": "abstract"
+              },
+              {
+                "evidence_id": "E_5652fd769b72",
+                "quote": "The mammalian kinesin superfamily, consisting of 14 distinct families, enables anterograde transport",
+                "location": "abstract"
+              }
+            ]
+          }
+        ],
+        "exceptions": [
+          {
+            "exception_id": "exc_no_track",
+            "description": "Vesicle transport along microtubules does not occur if no microtubule track is available.",
+            "evidence_ids": [
+              "E_9af4c0e6bde1"
+            ]
+          },
+          {
+            "exception_id": "exc_no_motor",
+            "description": "Vesicle transport along microtubules does not occur without engaged motor proteins.",
+            "evidence_ids": [
+              "E_bac6751ff01c"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "op": "update",
+      "collection": "entities",
+      "target_id": "ent_vesicle",
+      "fields": {
+        "entity_type": "membrane-bound organelle/cargo carrier",
+        "evidence_ids": [
+          "E_9af4c0e6bde1",
+          "E_f8fbdc9701f1"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_9af4c0e6bde1",
+            "quote": "provide a track along which vesicles move through the cell",
+            "location": "paragraph_12"
+          },
+          {
+            "evidence_id": "E_9af4c0e6bde1",
+            "quote": "allow cytoplasm and vesicles to move within the cell",
+            "location": "paragraph_1"
+          },
+          {
+            "evidence_id": "E_f8fbdc9701f1",
+            "quote": "Microtubules provide track support for the directional transport of MVBs.",
+            "location": "abstract"
+          }
+        ]
+      }
+    },
+    {
+      "op": "update",
+      "collection": "processes",
+      "target_id": "proc_microtubule_track_provision",
+      "fields": {
+        "precondition_state_refs": [
+          "state_microtubule_present"
+        ],
+        "effect_state_refs": [
+          "state_track_available"
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "collection": "entities",
+      "item": {
+        "semantic_id": "ent_motor_protein",
+        "scientific_name": "Microtubule motor protein (kinesin/dynein)",
+        "entity_type": "ATP-dependent mechanochemical motor protein",
+        "evidence_ids": [
+          "E_bac6751ff01c",
+          "E_5652fd769b72"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_bac6751ff01c",
+            "quote": "Intracellular cargo transport relies on a microtubule (MT) network and its molecular motors, dynein and kinesin.",
+            "location": "abstract"
+          },
+          {
+            "evidence_id": "E_5652fd769b72",
+            "quote": "The mammalian kinesin superfamily, consisting of 14 distinct families, enables anterograde transport",
+            "location": "abstract"
+          }
+        ],
+        "cardinality": 1,
+        "states": {
+          "engaged": "motor protein is bound to microtubule and cargo, competent to step",
+          "disengaged": "motor protein is not bound to microtubule"
+        }
+      },
+      "justifies_issue_id": "ISS_MOTOR_ROLE_MISSING"
+    },
+    {
+      "op": "add",
+      "collection": "relations",
+      "item": {
+        "semantic_id": "rel_motor_drives_vesicle_transport",
+        "relation_type": "catalyzes_transport_of",
+        "definition": "Microtubule motor proteins (kinesin/dynein) drive directional cargo transport along microtubule tracks.",
+        "source_entity": "ent_motor_protein",
+        "target_entity": "ent_vesicle",
+        "evidence_ids": [
+          "E_bac6751ff01c",
+          "E_5652fd769b72"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_bac6751ff01c",
+            "quote": "Intracellular cargo transport relies on a microtubule (MT) network and its molecular motors, dynein and kinesin.",
+            "location": "abstract"
+          },
+          {
+            "evidence_id": "E_5652fd769b72",
+            "quote": "The mammalian kinesin superfamily, consisting of 14 distinct families, enables anterograde transport that is used by both DNA and RNA viruses.",
+            "location": "abstract"
+          }
+        ]
+      },
+      "justifies_issue_id": "ISS_MOTOR_ROLE_MISSING"
+    }
+  ],
+  "state_upgrade": {
+    "schema_version": "1.1",
+    "clip_start": {
+      "stage": "pre-transport: microtubule track present, vesicle present, motor protein available",
+      "existing_entity_refs": [
+        "ent_microtubule",
+        "ent_vesicle",
+        "ent_cytoskeleton",
+        "ent_motor_protein"
+      ],
+      "omitted_processes": [
+        {
+          "description": "Microtubule assembly/disassembly dynamics that produce the track.",
+          "reason": "Excluded from model scope; treated as pre-existing structural condition.",
+          "required_by_task": false
+        },
+        {
+          "description": "Vesicle cargo selection and membrane fusion.",
+          "reason": "Excluded from model scope; not required for transport explanation.",
+          "required_by_task": false
+        }
+      ]
+    },
+    "states": [
+      {
+        "state_id": "state_microtubule_present",
+        "subject_ref": "ent_microtubule",
+        "property": "structural_presence",
+        "value": "polymer_present",
+        "state_kind": "INITIAL_CONDITION",
+        "scope": {
+          "process_ids": [
+            "proc_microtubule_track_provision",
+            "proc_vesicle_transport_along_microtubule"
+          ]
+        },
+        "producer_process_id": null,
+        "required_by_process_ids": [
+          "proc_microtubule_track_provision",
+          "proc_vesicle_transport_along_microtubule"
+        ],
+        "evidence_ids": [
+          "E_9af4c0e6bde1"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_9af4c0e6bde1",
+            "quote": "Polymerized dimers of α-tubulin and β-tubulin, two globular proteins, comprise the microtubule's walls",
+            "location": "paragraph_12"
+          }
+        ]
+      },
+      {
+        "state_id": "state_track_available",
+        "subject_ref": "ent_microtubule",
+        "property": "track_availability",
+        "value": "available_as_track",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "process_ids": [
+            "proc_microtubule_track_provision",
+            "proc_vesicle_transport_along_microtubule"
+          ]
+        },
+        "producer_process_id": "proc_microtubule_track_provision",
+        "required_by_process_ids": [
+          "proc_vesicle_transport_along_microtubule"
+        ],
+        "evidence_ids": [
+          "E_9af4c0e6bde1",
+          "E_f8fbdc9701f1"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_9af4c0e6bde1",
+            "quote": "provide a track along which vesicles move through the cell",
+            "location": "paragraph_12"
+          },
+          {
+            "evidence_id": "E_f8fbdc9701f1",
+            "quote": "Microtubules provide track support for the directional transport of MVBs.",
+            "location": "abstract"
+          }
+        ]
+      },
+      {
+        "state_id": "state_vesicle_present",
+        "subject_ref": "ent_vesicle",
+        "property": "structural_presence",
+        "value": "present",
+        "state_kind": "INITIAL_CONDITION",
+        "scope": {
+          "process_ids": [
+            "proc_vesicle_transport_along_microtubule"
+          ]
+        },
+        "producer_process_id": null,
+        "required_by_process_ids": [
+          "proc_vesicle_transport_along_microtubule"
+        ],
+        "evidence_ids": [
+          "E_9af4c0e6bde1"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_9af4c0e6bde1",
+            "quote": "allow cytoplasm and vesicles to move within the cell",
+            "location": "paragraph_1"
+          }
+        ]
+      },
+      {
+        "state_id": "state_motor_engaged",
+        "subject_ref": "ent_motor_protein",
+        "property": "engagement",
+        "value": "bound_to_microtubule_and_cargo",
+        "state_kind": "REQUIRED_PRECONDITION",
+        "scope": {
+          "process_ids": [
+            "proc_vesicle_transport_along_microtubule"
+          ]
+        },
+        "producer_process_id": null,
+        "required_by_process_ids": [
+          "proc_vesicle_transport_along_microtubule"
+        ],
+        "evidence_ids": [
+          "E_bac6751ff01c"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_bac6751ff01c",
+            "quote": "Intracellular cargo transport relies on a microtubule (MT) network and its molecular motors, dynein and kinesin.",
+            "location": "abstract"
+          }
+        ]
+      },
+      {
+        "state_id": "state_vesicle_moving",
+        "subject_ref": "ent_vesicle",
+        "property": "transport_status",
+        "value": "moving_along_microtubule",
+        "state_kind": "PRODUCED_STATE",
+        "scope": {
+          "process_ids": [
+            "proc_vesicle_transport_along_microtubule"
+          ]
+        },
+        "producer_process_id": "proc_vesicle_transport_along_microtubule",
+        "required_by_process_ids": [],
+        "evidence_ids": [
+          "E_9af4c0e6bde1",
+          "E_bac6751ff01c",
+          "E_f8fbdc9701f1"
+        ],
+        "support": [
+          {
+            "evidence_id": "E_9af4c0e6bde1",
+            "quote": "provide a track along which vesicles move through the cell",
+            "location": "paragraph_12"
+          },
+          {
+            "evidence_id": "E_bac6751ff01c",
+            "quote": "Intracellular cargo transport relies on a microtubule (MT) network and its molecular motors, dynein and kinesin.",
+            "location": "abstract"
+          },
+          {
+            "evidence_id": "E_f8fbdc9701f1",
+            "quote": "Microtubules provide track support for the directional transport of MVBs.",
+            "location": "abstract"
+          }
+        ]
+      }
+    ]
+  },
+  "issue_resolution": [
+    {
+      "issue_id": "ISS_MOTOR_ROLE_MISSING",
+      "changed_target_ids": [
+        "proc_vesicle_transport_along_microtubule",
+        "ent_motor_protein",
+        "rel_motor_drives_vesicle_transport"
+      ],
+      "reason": "Added motor protein entity (kinesin/dynein) supported by E_bac6751ff01c and E_5652fd769b72; updated transport process participants, preconditions, and observables to include motor-driven mechanism, resolving the missing motor-protein role required by the task.",
+      "evidence_ids": [
+        "E_bac6751ff01c",
+        "E_5652fd769b72"
+      ]
+    },
+    {
+      "issue_id": "ISS_UNSUPPORTED_CAUSAL_VESICLE_MOVEMENT",
+      "changed_target_ids": [
+        "proc_vesicle_transport_along_microtubule",
+        "ent_vesicle"
+      ],
+      "reason": "Added evidence from E_bac6751ff01c and E_f8fbdc9701f1 explicitly stating that cargo/vesicles are transported along microtubules by motors, supporting causal movement rather than mere track provision.",
+      "evidence_ids": [
+        "E_bac6751ff01c",
+        "E_f8fbdc9701f1"
+      ]
+    },
+    {
+      "issue_id": "ISS_OBSERVABLE_DETERMINISM_OVERREACH",
+      "changed_target_ids": [
+        "proc_vesicle_transport_along_microtubule"
+      ],
+      "reason": "Downgraded observable capability from DETERMINISTIC to PARTIAL because retrieved abstracts do not specify time-resolved single-vesicle tracking data; added motor relation observable with PARTIAL capability.",
+      "evidence_ids": [
+        "E_bac6751ff01c",
+        "E_5652fd769b72"
+      ]
+    },
+    {
+      "issue_id": "ISS_TRACK_PROVISION_PROCESS_INFLATED",
+      "changed_target_ids": [
+        "proc_microtubule_track_provision",
+        "ent_microtubule"
+      ],
+      "reason": "Reclassified track provision as a structural state_transition process with start/end tied to microtubule integrity rather than vesicle movement timing, matching evidence for structural track support.",
+      "evidence_ids": [
+        "E_9af4c0e6bde1",
+        "E_f8fbdc9701f1"
+      ]
+    },
+    {
+      "issue_id": "ISS_VESICLE_ENTITY_TYPE_UNSUPPORTED",
+      "changed_target_ids": [
+        "ent_vesicle"
+      ],
+      "reason": "Refined entity_type to 'membrane-bound organelle/cargo carrier' and added E_f8fbdc9701f1 support for MVB transport, aligning with evidence-based vesicle identity.",
+      "evidence_ids": [
+        "E_9af4c0e6bde1",
+        "E_f8fbdc9701f1"
+      ]
+    },
+    {
+      "issue_id": "ISS_SCOPE_TITLE_CONTRADICTION",
+      "changed_target_ids": [
+        "proc_vesicle_transport_along_microtubule"
+      ],
+      "reason": "Renamed process to 'Motor-protein-dependent vesicle transport along microtubules' and added motor protein participant, harmonizing scope title with motor-protein dependence.",
+      "evidence_ids": [
+        "E_bac6751ff01c",
+        "E_5652fd769b72"
+      ]
+    },
+    {
+      "issue_id": "STATE_MODEL_MIGRATION",
+      "changed_target_ids": [
+        "proc_microtubule_track_provision",
+        "proc_vesicle_transport_along_microtubule"
+      ],
+      "reason": "Introduced typed states with INITIAL_CONDITION for microtubule and vesicle presence, PRODUCED_STATE for track availability and vesicle movement, and REQUIRED_PRECONDITION for motor engagement; added precondition_state_refs and effect_state_refs to both processes.",
+      "evidence_ids": [
+        "E_9af4c0e6bde1",
+        "E_bac6751ff01c",
+        "E_f8fbdc9701f1"
+      ]
+    }
+  ]
+}

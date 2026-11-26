@@ -1,0 +1,98 @@
+[
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=kinesin+dynein+motor+protein+dependent+vesicle+transport+along+microtubules+mechanism+directionality+organism+specificity+review&format=json&pageSize=3&resultType=core",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:07:48Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "7ea38cec6b81e31b95c81e30511d91f1632df9e138544271ba5fb4a2d9eb95df"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13619133/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:08:00Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "4dfc4428369c7a3dcca5170b1dddc46834b8f8715046e59202cff857f25f2227"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12691810/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:08:27Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "b9f6699262d56a25c134de64a106d52a3724c9a5e00debf37f051d300acf0b0b"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10335831/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:08:51Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "9f43d211f20da30d3a18239f44bffc722a73ca8f985289e28b88ceaff6d4dbb2"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK9905/",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:09:09Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "c44363b25b061e9835d26eed6131c80903f2c710864b2eeab5a69789446d1dd7"
+  },
+  {
+    "url": "https://www.molbiolcell.org/doi/10.1091/mbc.E14-10-1470",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:09:10Z",
+    "status": "UNVERIFIED",
+    "http_status": 403,
+    "error": "HTTPError"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=motor+protein+dependent+vesicle+transport+along+microtubules+kinesin+dynein+ATP+mechanism+cell+biology+grades+10-12&format=json&pageSize=3&resultType=core",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:09:27Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "c660cd45545095b299dddfbfc6390003ada21f21c3be320054bac9dd2cc35f8b"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12560119/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:09:37Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "334325154069259223e6a0886ddd4d3ac677bbe2488a370e566c8b6e868929fc"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12772631/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:09:55Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "f696defec4c6668ac9fd10836c67a61a659e593330478cdb426d11a24d5ea452"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11208286/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:10:07Z",
+    "status": "UNVERIFIED",
+    "http_status": 500,
+    "error": "HTTPError"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:10:23Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "3a8653bec1fcf8967553bb050619dfda2c53f81a43a277496113568312c1e35f"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK9963/",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:10:24Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "6b5c5943f2d37b7009df1f546871c6de009b1117c2ac6f8363fc843edbd208c9"
+  }
+]

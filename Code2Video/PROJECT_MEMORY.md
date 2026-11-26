@@ -4,10 +4,10 @@
 2026-11-25，北京时间；SSH motion-data，当前V4.3.1 worktree。最新状态以本文件末尾V4.3.1条目与实验报告为准。
 
 ## Objective
-当前V3：一个BiologyExpertAgent、多工具、通用证据知识包、科学审核与受预算/状态机约束的最小返工闭环。只修一个Section事件，不重跑六节。V1/V2冻结。用户2026-11-24追加Qwen2次额度，须先诊断再重试；已执行1次有效重试。
+V4.3.2验证冻结后科学智能体能否自主定位缺口、检索、局部修复、独立复核，无主题专用补丁。目标未完成。
 
 ## Current state
-VERIFIED：V3 MVP已实现并完成实验；28项离线测试通过。DNA方向候选实际渲染/解码及方向检查通过，完整科学视频复核REVISE，事务保持历史配对，无APPROVED。有丝分裂知识包动态构建，正常脚本PASS、4项注错均检出；初始编码/格式失败完整保留。详见experiments/biology_expert_v3/RESULTS.md和metrics.json。
+VERIFIED 2026-11-26：独立worktree biovideo-v4.3.2。93测试通过，正式冻结科学源码不变、历史文件不变。真实囊泡局部补丁完成Schema/精确引文/状态可达性PASS，独立科学REVISE后回滚。DeepSeek第三次补丁请求402 Insufficient Balance；DNA与有丝分裂后续新审核被网关停止。SCIENCE_PARTIALLY_VALIDATED，不能宣布稳定版。视觉规范与Wan文生dry-run已完成，付费视频0；Seedance未配置。
 
 ## Verified results and evidence
 - 上游commit637509294e936b231d220bb555cf74eeedcb9dfd。
@@ -79,3 +79,10 @@ VERIFIED：独立worktree /autodl-tmp/code2biovideo/biovideo-v4.3.1，基线aaee
 VERIFIED补充：用户提供业务空间域名后，已审核首尾图和用户原样纯文本示例各POST1次，均403 AccessDenied.Unpurchased，无task_id。累计3POST无生成。最后request_id39ad03bb-e778-991f-84d7-318140513158。后续先控制台核对空间/密钥权限，不能再说只试过旧域名。
 
 VERIFIED权限恢复：Wan workspace retry任务2783b818-02d0-442c-ad9e-785fdcfe411c真实SUCCEEDED，5秒480P30fps，完整解码通过。用户后续希望360P先试；480P已提交且为官方最低档，现导出640x360预览，无额外高清生成。独立Wan视频审核正在进行，见v431_wan_review.log；科学批准未定。视频SHA4d433eb2815683d510802b4823fd94644b069944b4a6d97943564a24e1224009。
+
+## 2026-11-26 V4.3.2续跑检查点
+源码与产物 /autodl-tmp/code2biovideo/biovideo-v4.3.2/Code2Video。实验目录experiments/biology_expert_v4_3_2。当前没有后台运行任务。真实DeepSeek23请求（科学21+视觉2），2失败：一次9000输出截断，最后402余额不足；已知输入191720输出63478，402用量未知。Qwen/Wan/Seedance本轮0。93/93测试通过。正式科学文件hash固定见formal_science_code_freeze.json；早期开发轮通用依赖scope/action_category缺陷修后重冻结，开发失败不可当独立评测。
+
+Immediate continuation：先读取logs/model_calls.json最后v42_21_ef4bacb6(402)和science_formal/vesicle_transport/automatic/repairs/attempt_1/{candidate.json,review.json,causal.json,result.json}。确认用户账户恢复后，保留账本并明确ack已知失败，再从既有patch/cache恢复，不能重跑成功模型步骤。当前run_reliability_formal.py没有topic级result跳过逻辑，需通过现存审计/repair缓存只恢复缺失步骤，避免多扣费。最高36为本次已有授权下界定的总调用ceiling，不重置已21。
+
+还需完成DNA/有丝分裂正式迁移和独立复核、囊泡剩余一次有实质差异补丁；真正未见科学主题冻结后成功闭环尚无证据。若达尝试上限保留NEEDS_HUMAN_REVIEW，不为特定生物答案改通用引擎。Science总目标active，当前交付是检查点，不是完成。新无首尾帧视频没有新增付费授权，0提交。仓库旧DNA专用动画repair仍存在，topic_coupling_audit.json已披露；本轮新路径未用。

@@ -53,3 +53,18 @@ Use the CURRENT actual variable names. The lower blue TEMPLATE has 5prime at lef
 During each addition move pol_fill adjacent to that segment (above the strand, roughly0.55 scene units), using existing Mobject methods; keep labels following appropriately. Do not add new imports or access file/network/processes.
 Task:\n"""+json.dumps(task,ensure_ascii=False)+'\nCURRENT VERIFIED MODULE:\n'+code
   return self.gateway.request('deepseek','scientific_event5_repair',prompt)
+
+def plan_model_repairs(issues,model):
+ from ..contracts import digest
+ tasks=[]
+ ids={x.get('semantic_id',x.get('process_semantic_id')) for x in model['entities']+model['relations']+model['processes']}
+ for n,issue in enumerate(issues):
+  targets=issue.get('target_ids',[])+issue.get('affected_process_ids',[])+[x for x in [issue.get('affected_process_id'),issue.get('affected_entity_id')] if x]
+  targets=list(dict.fromkeys(x for x in targets if x in ids))
+  # Direct relation dependencies of affected participants belong to same repair scope.
+  entities={x['entity_ref'] for p in model['processes'] if p['process_semantic_id'] in targets for x in p['participants']}
+  for relation in model['relations']:
+   if relation['source_entity'] in entities and relation['target_entity'] in entities:targets.append(relation['semantic_id'])
+  targets=list(dict.fromkeys(targets))
+  tasks.append({'repair_id':'MODEL_REPAIR_'+str(n+1),'issue_id':issue['issue_id'],'target_artifact':'typed_science_model','target_ids':targets,'target_fields':['participants','preconditions','effects','temporal_scope','precondition_state_refs','effect_state_refs','support','scientific_name','definition'],'required_evidence_ids':issue.get('evidence_ids',[]),'repair_goal':issue.get('required_evidence',issue.get('explanation',issue.get('reason','Resolve cited gap'))),'acceptance_predicates':['exact_evidence_support','original_requirements_preserved','typed_state_reachable','independent_science_review','target_issue_resolved'],'status':'PENDING','before_model_sha256':digest(model)})
+ return tasks

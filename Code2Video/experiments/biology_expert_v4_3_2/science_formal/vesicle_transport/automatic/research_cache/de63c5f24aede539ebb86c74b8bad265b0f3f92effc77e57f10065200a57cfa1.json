@@ -1,0 +1,2305 @@
+{
+  "gap_hash": "de63c5f24aede539ebb86c74b8bad265b0f3f92effc77e57f10065200a57cfa1",
+  "attempts": [
+    {
+      "plan": {
+        "requests": [
+          {
+            "issue_id": "ISS-001",
+            "research_question": "Which motor proteins mediate vesicle transport along microtubules, and in which direction/discipline are they described for cell biology teaching?",
+            "required_claim": "Motor proteins (kinesin and/or dynein) are the actors that move vesicles along microtubules, converting ATP hydrolysis into mechanical stepping.",
+            "biological_scope": "Eukaryotic intracellular transport; microtubule-based vesicle motility; motor protein families (kinesin superfamily, cytoplasmic dynein).",
+            "source_preferences": [
+              "review articles on intracellular transport",
+              "cell biology textbooks (open access)",
+              "molecular motors review"
+            ],
+            "search_queries": [
+              "kinesin dynein motor proteins vesicle transport along microtubules review mechanism",
+              "motor protein dependent vesicle transport microtubules ATP hydrolysis cell biology",
+              "intracellular vesicle transport kinesin dynein directionality microtubule review"
+            ],
+            "expected_evidence_type": "MECHANISM_DESCRIPTION"
+          },
+          {
+            "issue_id": "ISS-002",
+            "research_question": "What evidence establishes that vesicle movement along microtubules is causally mediated by motor proteins rather than passive movement?",
+            "required_claim": "Vesicle motility along microtubule tracks depends causally on motor protein activity (ATP-dependent stepping), not merely on microtubule presence.",
+            "biological_scope": "Mechanistic cell biology; in vitro and in vivo motor-dependent transport assays; axonemal and axonal transport.",
+            "source_preferences": [
+              "primary research on motor-driven motility",
+              "reviews on axonal transport",
+              "cell biology textbook mechanistic chapters"
+            ],
+            "search_queries": [
+              "causal evidence motor proteins drive vesicle movement along microtubules in vitro motility assay",
+              "ATP dependent vesicle transport microtubules kinesin mechanism evidence",
+              "axonal transport motor protein dependence vesicle movement mechanism review"
+            ],
+            "expected_evidence_type": "MECHANISM_DESCRIPTION"
+          },
+          {
+            "issue_id": "ISS-003",
+            "research_question": "Can a specific vesicle be tracked as present on/along a microtubule track during a defined transport interval with persistence semantics?",
+            "required_claim": "Single-vesicle tracking or live imaging demonstrates vesicles remain associated with microtubule tracks during defined transport intervals.",
+            "biological_scope": "Live-cell imaging and single-particle tracking of vesicle-microtubule interactions; temporal persistence of track association.",
+            "source_preferences": [
+              "single-vesicle tracking studies",
+              "live imaging reviews",
+              "quantitative transport reviews"
+            ],
+            "search_queries": [
+              "single vesicle tracking microtubule transport persistence live imaging",
+              "vesicle microtubule association duration tracking quantitative transport",
+              "live cell imaging vesicle movement along microtubules temporal tracking"
+            ],
+            "expected_evidence_type": "MECHANISM_DESCRIPTION"
+          },
+          {
+            "issue_id": "ISS-004",
+            "research_question": "Is 'microtubule track provision' a distinct process with start/end and concurrency semantics, or a structural capability of microtubules?",
+            "required_claim": "Microtubules function as structural tracks (polar filaments) that enable transport; track provision is a structural capability rather than a temporally bounded process.",
+            "biological_scope": "Microtubule structure and polarity; cytoskeletal organization; distinction between structural capability and process.",
+            "source_preferences": [
+              "cell biology textbooks on cytoskeleton",
+              "microtubule structure reviews",
+              "cytoskeleton organization reviews"
+            ],
+            "search_queries": [
+              "microtubule structural track vesicle transport polarity cytoskeleton review",
+              "microtubule polarity plus end minus end directed transport cell biology",
+              "cytoskeleton microtubule function track structural capability review"
+            ],
+            "expected_evidence_type": "MECHANISM_DESCRIPTION"
+          },
+          {
+            "issue_id": "ISS-005",
+            "research_question": "What is the identity of vesicles as membrane-bound cargo carriers, and is their movement specifically along microtubules?",
+            "required_claim": "Vesicles are membrane-bound cargo carriers whose transport occurs specifically along microtubules (distinct from general cytoplasm streaming).",
+            "biological_scope": "Vesicle definition (membrane-bound organelles), cargo transport, microtubule-specific transport vs general cytoplasmic movement.",
+            "source_preferences": [
+              "cell biology textbooks",
+              "membrane trafficking reviews",
+              "organelle transport reviews"
+            ],
+            "search_queries": [
+              "vesicle membrane bound cargo carrier definition intracellular transport review",
+              "vesicle transport specifically along microtubules membrane trafficking cell biology",
+              "membrane bound vesicle movement microtubules organelle transport review"
+            ],
+            "expected_evidence_type": "MECHANISM_DESCRIPTION"
+          },
+          {
+            "issue_id": "ISS-006",
+            "research_question": "What scope is needed to support a motor-protein-dependent vesicle transport topic, and what non-claims must be explicit if evidence is narrow?",
+            "required_claim": "The topic scope requires motor protein identity/mechanism; if evidence is limited, scope must be explicitly narrowed with stated non-claims.",
+            "biological_scope": "Scope definition for teaching model; motor-protein-dependent transport mechanism; organism and cell-type specificity.",
+            "source_preferences": [
+              "teaching-focused reviews",
+              "cell biology education resources",
+              "mechanistic transport reviews"
+            ],
+            "search_queries": [
+              "motor protein dependent vesicle transport microtubules teaching mechanism review",
+              "kinesin dynein vesicle transport scope organism specificity review",
+              "intracellular transport motor proteins microtubules educational review mechanism"
+            ],
+            "expected_evidence_type": "MECHANISM_DESCRIPTION"
+          },
+          {
+            "issue_id": "ISS-007",
+            "research_question": "What is the directionality (anterograde vs retrograde), motor identity (kinesin/dynein), and organism specificity of vesicle transport along microtubules?",
+            "required_claim": "Kinesins generally drive anterograde/plus-end-directed transport; cytoplasmic dynein drives retrograde/minus-end-directed transport; specificity varies by organism/cell type.",
+            "biological_scope": "Motor directionality conventions; plus-end vs minus-end; neuron axon vs other cell types; organism variation.",
+            "source_preferences": [
+              "axonal transport reviews",
+              "molecular motor reviews",
+              "cell biology textbooks"
+            ],
+            "search_queries": [
+              "kinesin anterograde dynein retrograde microtubule directionality vesicle transport review",
+              "plus end minus end directed motor proteins vesicle transport axon neuron",
+              "organism specific vesicle transport motor protein identity directionality review"
+            ],
+            "expected_evidence_type": "MECHANISM_DESCRIPTION"
+          },
+          {
+            "issue_id": "STATE_MODEL_MIGRATION",
+            "research_question": "What pre-clip states, subject/property/value conditions, and state producers are supported for microtubule track provision and vesicle transport, without omitting user-required mechanisms?",
+            "required_claim": "Initial states for vesicle (position, motor association) and microtubule (polarity, availability) must be evidenced; motor protein and ATP states are necessary producers for transport.",
+            "biological_scope": "State modeling of intracellular transport; initial conditions; motor-vesicle-microtubule association states; ATP availability.",
+            "source_preferences": [
+              "mechanistic transport reviews",
+              "cell biology textbooks on motor complexes",
+              "live imaging state studies"
+            ],
+            "search_queries": [
+              "initial state vesicle motor microtubule association ATP transport mechanism review",
+              "motor cargo vesicle microtubule binding states transport cell biology",
+              "state conditions vesicle transport microtubules kinesin dynein ATP review"
+            ],
+            "expected_evidence_type": "MECHANISM_DESCRIPTION"
+          }
+        ],
+        "candidate_urls": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK9905/",
+          "https://www.molbiolcell.org/doi/10.1091/mbc.E14-10-1470"
+        ],
+        "scientific_queries": [
+          "kinesin dynein motor protein dependent vesicle transport along microtubules mechanism directionality organism specificity review"
+        ]
+      },
+      "retrieval": {
+        "evidence": [
+          {
+            "evidence_id": "E_3717dae1f63f",
+            "url": "https://europepmc.org/article/MED/42804373",
+            "title": "Tau hyperphosphorylation impairs cooperative binding to microtubules and perturbs organelle trafficking in neurons.",
+            "author_or_institution": "Beaudet D, Berger CL, Hendricks AG.",
+            "source_type": "bibliographic_abstract",
+            "evidence_level": "ABSTRACT",
+            "biological_scope": "Requires claim-specific scope review",
+            "status": "RETRIEVED_ABSTRACT",
+            "content_sha256": "b2a55240e11ec07f3b7bc494501cf75f4d3279aaa06dd49d36de3acc97920359",
+            "passages": [
+              {
+                "location": "abstract",
+                "text": "Tau, a neuronal microtubule-associated protein (MAP), organizes the axonal cytoskeleton, and regulates intracellular transport. Tau hyperphosphorylation is linked to neurodegeneration in tauopathies, including Alzheimer's disease. Tau binds microtubules cooperatively to form cohesive envelopes, which are thought to control access to the microtubule lattice and regulate the activity of motor proteins and other MAPs. However, how disease-related perturbations affect tau dynamics and its function as a selective barrier to intracellular transport remains unclear. Using tau phospho-variants in vitro and in live neurons, we show that tau hyperphosphorylation disrupts cooperative microtubule binding and dysregulates lysosome transport. Hyperphosphorylated tau does not form envelopes, distributes more uniformly along the axon, and dissociates faster from microtubules. Tau weakly inhibits KIF5C motility, but strongly inhibits KIF1A. Hyperphosphorylation reduces KIF5C inhibition but increases KIF1A inhibition by decreasing processivity and accelerating detachment. Consistent with these effects, hyperphosphorylated tau alters lysosome transport in neurons. While phospho-resistant tau inhibits processive lysosome motility, hyperphosphorylated tau weakens tau-mediated regulation of lysosome transport, mimicking tau knockout neurons that exhibit enhanced processivity. Altogether, these findings show that hyperphosphorylation disrupts tau envelopes and impairs lysosome trafficking, likely contributing to early defects in degradative pathways that drive neurodegeneration.",
+                "evidence_level": "ABSTRACT"
+              }
+            ],
+            "figures": [],
+            "limitations": [
+              "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+            ]
+          },
+          {
+            "evidence_id": "E_3eaea6ae41d5",
+            "url": "https://europepmc.org/article/MED/41373689",
+            "title": "The Fluidic Connectome in Brain Disease: Integrating Aquaporin-4 Polarity with Multisystem Pathways in Neurodegeneration.",
+            "author_or_institution": "Brehar FM, Costea D, Tataru CP, Rădoi MP, Ciurea AV, Munteanu O, Tulin A.",
+            "source_type": "bibliographic_abstract",
+            "evidence_level": "ABSTRACT",
+            "biological_scope": "Requires claim-specific scope review",
+            "status": "RETRIEVED_ABSTRACT",
+            "content_sha256": "832426ef467be6c8e3a257d349597384c406884b0ee6b34cb5bb405147e84db4",
+            "passages": [
+              {
+                "location": "abstract",
+                "text": "The way in which Aquaporin-4 (AQP4) is localized on the astrocytes' surface-i.e., with AQP4 channels predominantly located on the endfeet of astrocytes near the blood vessels-represents an important structural element for maintaining brain fluid homeostasis. In addition to this structural function, AQP4 polarity also facilitates glymphatic transport, the maintenance of the blood-brain barrier (BBB) functions, ion buffering, and neurotransmitter removal, and helps regulate neurovascular communications. The growing body of literature suggests that the loss of AQP4 polarity-a loss in the organization of AQP4 channels to the perivascular membrane-is associated with increased vascular, inflammatory, and metabolic disturbances in the context of many neurological diseases. As a result, this review attempts to synthesize both experimental and clinical studies to highlight that AQP4 depolarization often occurs in conjunction with early signs of neurodegeneration and neuroinflammation; however, we are aware that the loss of AQP4 polarity is only one factor in a complex pathophysiological environment. This review examines the molecular structure responsible for maintaining the polarity of AQP4-such as dystrophin-syntrophin complexes, orthogonal particle arrays, lipid microdomains, trafficking pathways, and transcriptional regulators-and describes how the vulnerability of these systems to various types of vascular stress, inflammatory signals, energy deficits, and mechanical injury can lead to a loss of AQP4 polarity. Furthermore, we will explore how a loss of AQP4 polarity can lead to the disruption of perivascular fluid movement, changes in blood-brain barrier morphology, enhanced neuroimmune activity, changes in ionic and metabolic balance, and disruptions in the global neural network synchronization. Importantly, we recognize that each of these disruptions will likely occur in concert with other disease-specific mechanisms. Alterations in AQP4 polarity have been observed in a variety of neurological disorders including Alzheimer's disease, Parkinson's disease, multiple sclerosis, traumatic brain injury, and glioma; however, we also observe that the same alterations in fluid regulation occur across all of these different diseases, but that no single upstream event accounts for the alteration in polarity. Ultimately, we will outline emerging therapeutic avenues to restore perivascular fluid transport, and will include molecular-based therapeutic agents designed to modify the anchoring of AQP4, methods designed to modulate the state of astrocytes, biomaterials-based drug delivery systems, and therapeutic methods that leverage dynamic modulation of the neurovascular interface. Future advances in multi-omic profiling, spatial proteomics, glymphatic imaging, and artificial intelligence will allow for earlier identification of AQP4 polarity disturbances and potentially allow for the development of more personalized treatment plans. Ultimately, by linking these concepts together, this review aims to frame AQP4 polarity as a modifiable aspect of the \"fluidic connectome\", and highlight its importance in maintaining overall brain health across disease states.",
+                "evidence_level": "ABSTRACT"
+              }
+            ],
+            "figures": [],
+            "limitations": [
+              "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+            ]
+          },
+          {
+            "evidence_id": "E_a7a76831c1a0",
+            "url": "https://europepmc.org/article/MED/37345829",
+            "title": "Differential modification of the C-terminal tails of different α-tubulins and their importance for microtubule function in vivo.",
+            "author_or_institution": "Bao M, Dörig RE, Vazquez-Pianzola PM, Beuchle D, Suter B.",
+            "source_type": "bibliographic_abstract",
+            "evidence_level": "ABSTRACT",
+            "biological_scope": "Requires claim-specific scope review",
+            "status": "RETRIEVED_ABSTRACT",
+            "content_sha256": "dcfe12abc6a1ce73bc6becec1bf91732751218928c59f1310c2e966f3b870a4a",
+            "passages": [
+              {
+                "location": "abstract",
+                "text": "Microtubules (MTs) are built from α-/β-tubulin dimers and used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell. Tubulins are subjected to several post-translational modifications (PTMs). Glutamylation is one of them, and it is responsible for adding one or more glutamic acid residues as branched peptide chains to the C-terminal tails of both α- and β-tubulin. However, very little is known about the specific modifications found on the different tubulin isotypes in vivo and the role of these PTMs in MT transport and other cellular processes in vivo. In this study, we found that in Drosophila ovaries, glutamylation of α-tubulin isotypes occurred clearly on the C-terminal ends of αTub84B and αTub84D (αTub84B/D). In contrast, the ovarian α-tubulin, αTub67C, is not glutamylated. The C-terminal ends of αTub84B/D are glutamylated at several glutamyl sidechains in various combinations. Drosophila TTLL5 is required for the mono- and poly-glutamylation of ovarian αTub84B/D and with this for the proper localization of glutamylated microtubules. Similarly, the normal distribution of kinesin-1 in the germline relies on TTLL5 . Next, two kinesin-1-dependent processes, the precise localization of Staufen and the fast, bidirectional ooplasmic streaming, depend on TTLL5 , too, suggesting a causative pathway. In the nervous system, a mutation of TTLL5 that inactivates its enzymatic activity decreases the pausing of anterograde axonal transport of mitochondria. Our results demonstrate in vivo roles of TTLL5 in differential glutamylation of α-tubulins and point to the in vivo importance of α-tubulin glutamylation for cellular functions involving microtubule transport.",
+                "evidence_level": "ABSTRACT"
+              }
+            ],
+            "figures": [],
+            "limitations": [
+              "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+            ]
+          }
+        ],
+        "failures": [
+          {
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13619133/fullTextXML",
+            "error": "FeatureNotFound",
+            "status": "FULL_TEXT_UNAVAILABLE"
+          },
+          {
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12691810/fullTextXML",
+            "error": "FeatureNotFound",
+            "status": "FULL_TEXT_UNAVAILABLE"
+          },
+          {
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10335831/fullTextXML",
+            "error": "FeatureNotFound",
+            "status": "FULL_TEXT_UNAVAILABLE"
+          },
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK9905/",
+            "error": "ValueError",
+            "status": "FULL_TEXT_UNAVAILABLE"
+          },
+          {
+            "url": "https://www.molbiolcell.org/doi/10.1091/mbc.E14-10-1470",
+            "error": "HTTPError",
+            "status": "FULL_TEXT_UNAVAILABLE"
+          }
+        ],
+        "search_records": [
+          {
+            "query": "kinesin dynein motor protein dependent vesicle transport along microtubules mechanism directionality organism specificity review",
+            "service": "Europe PMC",
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=kinesin+dynein+motor+protein+dependent+vesicle+transport+along+microtubules+mechanism+directionality+organism+specificity+review&format=json&pageSize=3&resultType=core",
+            "results": [
+              {
+                "id": "42804373",
+                "source": "MED",
+                "pmid": "42804373",
+                "pmcid": "PMC13619133",
+                "fullTextIdList": {
+                  "fullTextId": [
+                    "PMC13619133"
+                  ]
+                },
+                "doi": "10.7554/elife.110011",
+                "title": "Tau hyperphosphorylation impairs cooperative binding to microtubules and perturbs organelle trafficking in neurons.",
+                "authorString": "Beaudet D, Berger CL, Hendricks AG.",
+                "authorList": {
+                  "author": [
+                    {
+                      "fullName": "Beaudet D",
+                      "lastName": "Beaudet",
+                      "firstName": "Daniel",
+                      "initials": "D",
+                      "authorId": {
+                        "type": "ORCID",
+                        "value": "0009-0001-5955-3721"
+                      },
+                      "authorAffiliationDetailsList": {
+                        "authorAffiliation": [
+                          {
+                            "affiliation": "Department of Bioengineering, McGill University, Montreal, Canada."
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "fullName": "Berger CL",
+                      "lastName": "Berger",
+                      "firstName": "Christopher L",
+                      "initials": "CL",
+                      "authorAffiliationDetailsList": {
+                        "authorAffiliation": [
+                          {
+                            "affiliation": "Department of Molecular Physiology and Biophysics, University of Vermont, Burlington, United States."
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "fullName": "Hendricks AG",
+                      "lastName": "Hendricks",
+                      "firstName": "Adam G",
+                      "initials": "AG",
+                      "authorId": {
+                        "type": "ORCID",
+                        "value": "0000-0003-3635-1577"
+                      },
+                      "authorAffiliationDetailsList": {
+                        "authorAffiliation": [
+                          {
+                            "affiliation": "Department of Bioengineering, McGill University, Montreal, Canada."
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "authorIdList": {
+                  "authorId": [
+                    {
+                      "type": "ORCID",
+                      "value": "0000-0003-3635-1577"
+                    },
+                    {
+                      "type": "ORCID",
+                      "value": "0009-0001-5955-3721"
+                    }
+                  ]
+                },
+                "dataLinksTagsList": {
+                  "dataLinkstag": [
+                    "altmetrics"
+                  ]
+                },
+                "journalInfo": {
+                  "volume": "15",
+                  "journalIssueId": 4251858,
+                  "dateOfPublication": "2026 Sep",
+                  "monthOfPublication": 9,
+                  "yearOfPublication": 2026,
+                  "journal": {
+                    "medlineAbbreviation": "Elife",
+                    "title": "eLife",
+                    "essn": "2050-084X",
+                    "issn": "2050-084X",
+                    "nlmid": "101579614",
+                    "isoabbreviation": "Elife"
+                  },
+                  "printPublicationDate": "2026-09-01"
+                },
+                "pubYear": "2026",
+                "pageInfo": "RP110011",
+                "abstractText": "Tau, a neuronal microtubule-associated protein (MAP), organizes the axonal cytoskeleton, and regulates intracellular transport. Tau hyperphosphorylation is linked to neurodegeneration in tauopathies, including Alzheimer's disease. Tau binds microtubules cooperatively to form cohesive envelopes, which are thought to control access to the microtubule lattice and regulate the activity of motor proteins and other MAPs. However, how disease-related perturbations affect tau dynamics and its function as a selective barrier to intracellular transport remains unclear. Using tau phospho-variants in vitro and in live neurons, we show that tau hyperphosphorylation disrupts cooperative microtubule binding and dysregulates lysosome transport. Hyperphosphorylated tau does not form envelopes, distributes more uniformly along the axon, and dissociates faster from microtubules. Tau weakly inhibits KIF5C motility, but strongly inhibits KIF1A. Hyperphosphorylation reduces KIF5C inhibition but increases KIF1A inhibition by decreasing processivity and accelerating detachment. Consistent with these effects, hyperphosphorylated tau alters lysosome transport in neurons. While phospho-resistant tau inhibits processive lysosome motility, hyperphosphorylated tau weakens tau-mediated regulation of lysosome transport, mimicking tau knockout neurons that exhibit enhanced processivity. Altogether, these findings show that hyperphosphorylation disrupts tau envelopes and impairs lysosome trafficking, likely contributing to early defects in degradative pathways that drive neurodegeneration.",
+                "affiliation": "Department of Bioengineering, McGill University, Montreal, Canada.",
+                "publicationStatus": "epublish",
+                "language": "eng",
+                "pubModel": "Electronic",
+                "pubTypeList": {
+                  "pubType": [
+                    "research-article",
+                    "Journal Article"
+                  ]
+                },
+                "grantsList": {
+                  "grant": [
+                    {
+                      "agency": "NIGMS NIH HHS",
+                      "acronym": "GM",
+                      "grantId": "R01 GM132646",
+                      "orderIn": 0
+                    },
+                    {
+                      "agency": "NIH HHS",
+                      "acronym": "NH",
+                      "grantId": "R01GM132646",
+                      "orderIn": 0
+                    },
+                    {
+                      "agency": "CIHR",
+                      "acronym": "CAPMC",
+                      "grantId": "PJT-185997",
+                      "orderIn": 0
+                    }
+                  ]
+                },
+                "meshHeadingList": {
+                  "meshHeading": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "descriptorName": "Neurons",
+                      "meshQualifierList": {
+                        "meshQualifier": [
+                          {
+                            "majorTopic_YN": "N",
+                            "abbreviation": "ME",
+                            "qualifierName": "metabolism"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "descriptorName": "Microtubules",
+                      "meshQualifierList": {
+                        "meshQualifier": [
+                          {
+                            "majorTopic_YN": "N",
+                            "abbreviation": "ME",
+                            "qualifierName": "metabolism"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "descriptorName": "Lysosomes",
+                      "meshQualifierList": {
+                        "meshQualifier": [
+                          {
+                            "majorTopic_YN": "N",
+                            "abbreviation": "ME",
+                            "qualifierName": "metabolism"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "descriptorName": "Animals"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "descriptorName": "Humans"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "descriptorName": "Rats"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "descriptorName": "tau Proteins",
+                      "meshQualifierList": {
+                        "meshQualifier": [
+                          {
+                            "majorTopic_YN": "N",
+                            "abbreviation": "GE",
+                            "qualifierName": "genetics"
+                          },
+                          {
+                            "majorTopic_YN": "N",
+                            "abbreviation": "ME",
+                            "qualifierName": "metabolism"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "descriptorName": "Protein Binding"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "descriptorName": "Phosphorylation"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "descriptorName": "Kinesins",
+                      "meshQualifierList": {
+                        "meshQualifier": [
+                          {
+                            "majorTopic_YN": "N",
+                            "abbreviation": "ME",
+                            "qualifierName": "metabolism"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "keywordList": {
+                  "keyword": [
+                    "Cell biology",
+                    "Alzheimer's disease",
+                    "Tau",
+                    "Neuroscience",
+                    "Microtubule-associated protein",
+                    "Ipscs",
+                    "In Vitro Reconstitution"
+                  ]
+                },
+                "chemicalList": {
+                  "chemical": [
+                    {
+                      "name": "tau Proteins",
+                      "registryNumber": "0"
+                    },
+                    {
+                      "name": "Kinesins",
+                      "registryNumber": "EC 3.6.4.4"
+                    }
+                  ]
+                },
+                "subsetList": {
+                  "subset": [
+                    {
+                      "code": "IM",
+                      "name": "Index Medicus"
+                    }
+                  ]
+                },
+                "fullTextUrlList": {
+                  "fullTextUrl": [
+                    {
+                      "availability": "Subscription required",
+                      "availabilityCode": "S",
+                      "documentStyle": "doi",
+                      "site": "DOI",
+                      "url": "https://doi.org/10.7554/eLife.110011"
+                    },
+                    {
+                      "availability": "Open access",
+                      "availabilityCode": "OA",
+                      "documentStyle": "html",
+                      "site": "Europe_PMC",
+                      "url": "https://europepmc.org/articles/PMC13619133"
+                    },
+                    {
+                      "availability": "Open access",
+                      "availabilityCode": "OA",
+                      "documentStyle": "pdf",
+                      "site": "Europe_PMC",
+                      "url": "https://europepmc.org/articles/PMC13619133?pdf=render"
+                    }
+                  ]
+                },
+                "commentCorrectionList": {
+                  "commentCorrection": [
+                    {
+                      "source": "PPR",
+                      "id": "PPR1059087",
+                      "type": "Preprint in",
+                      "note": "Link created based on a title-first author match",
+                      "orderIn": 10002
+                    }
+                  ]
+                },
+                "isOpenAccess": "Y",
+                "inEPMC": "Y",
+                "inPMC": "Y",
+                "citedByCount": 0,
+                "hasReferences": "Y",
+                "hasTextMinedTerms": "Y",
+                "hasDbCrossReferences": "N",
+                "hasPDF": "Y",
+                "hasBook": "N",
+                "hasSuppl": "Y",
+                "hasLabsLinks": "Y",
+                "hasData": "Y",
+                "license": "cc by",
+                "authMan": "N",
+                "epmcAuthMan": "N",
+                "nihAuthMan": "N",
+                "hasTMAccessionNumbers": "N",
+                "dateOfCompletion": "2026-09-28",
+                "dateOfCreation": "2026-09-28",
+                "dateOfRevision": "2026-09-30",
+                "electronicPublicationDate": "2026-09-28",
+                "firstPublicationDate": "2026-09-28",
+                "firstIndexDate": "2026-09-29",
+                "fullTextReceivedDate": "2026-09-29",
+                "hasEvaluations": "N"
+              },
+              {
+                "id": "41373689",
+                "source": "MED",
+                "pmid": "41373689",
+                "pmcid": "PMC12691810",
+                "fullTextIdList": {
+                  "fullTextId": [
+                    "PMC12691810"
+                  ]
+                },
+                "doi": "10.3390/ijms262311536",
+                "title": "The Fluidic Connectome in Brain Disease: Integrating Aquaporin-4 Polarity with Multisystem Pathways in Neurodegeneration.",
+                "authorString": "Brehar FM, Costea D, Tataru CP, Rădoi MP, Ciurea AV, Munteanu O, Tulin A.",
+                "authorList": {
+                  "author": [
+                    {
+                      "fullName": "Brehar FM",
+                      "lastName": "Brehar",
+                      "firstName": "Felix-Mircea",
+                      "initials": "FM",
+                      "authorAffiliationDetailsList": {
+                        "authorAffiliation": [
+                          {
+                            "affiliation": "Puls Med Association, 051885 Bucharest, Romania."
+                          },
+                          {
+                            "affiliation": "Department of Neurosurgery, \"Carol Davila\" University of Medicine and Pharmacy, 050474 Bucharest, Romania."
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "fullName": "Costea D",
+                      "lastName": "Costea",
+                      "firstName": "Daniel",
+                      "initials": "D",
+                      "authorAffiliationDetailsList": {
+                        "authorAffiliation": [
+                          {
+                            "affiliation": "Puls Med Association, 051885 Bucharest, Romania."
+                          },
+                          {
+                            "affiliation": "Department of Neurosurgery, \"Victor Babes\" University of Medicine and Pharmacy, 300041 Timisoara, Romania."
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "fullName": "Tataru CP",
+                      "lastName": "Tataru",
+                      "firstName": "Calin Petru",
+                      "initials": "CP",
+                      "authorId": {
+                        "type": "ORCID",
+                        "value": "0009-0003-6335-3567"
+                      },
+                      "authorAffiliationDetailsList": {
+                        "authorAffiliation": [
+                          {
+                            "affiliation": "Puls Med Association, 051885 Bucharest, Romania."
+                          },
+                          {
+                            "affiliation": "Department of Ophthalmology, \"Carol Davila\" University of Medicine and Pharmacy, 050474 Bucharest, Romania."
+                          },
+                          {
+                            "affiliation": "Central Military Emergency Hospital \"Dr. Carol Davila\", 010825 Bucharest, Romania."
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "fullName": "Rădoi MP",
+                      "lastName": "Rădoi",
+                      "firstName": "Mugurel Petrinel",
+                      "initials": "MP",
+                      "authorAffiliationDetailsList": {
+                        "authorAffiliation": [
+                          {
+                            "affiliation": "Puls Med Association, 051885 Bucharest, Romania."
+                          },
+                          {
+                            "affiliation": "Department of Neurosurgery, \"Carol Davila\" University of Medicine and Pharmacy, 050474 Bucharest, Romania."
+                          },
+                          {
+                            "affiliation": "Department of Vascular Neurosurgery, National Institute of Neurology and Neurovascular Diseases, 077160 Bucharest, Romania."
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "fullName": "Ciurea AV",
+                      "lastName": "Ciurea",
+                      "firstName": "Alexandru Vlad",
+                      "initials": "AV",
+                      "authorAffiliationDetailsList": {
+                        "authorAffiliation": [
+                          {
+                            "affiliation": "Puls Med Association, 051885 Bucharest, Romania."
+                          },
+                          {
+                            "affiliation": "Department of Neurosurgery, \"Carol Davila\" University of Medicine and Pharmacy, 050474 Bucharest, Romania."
+                          },
+                          {
+                            "affiliation": "Medical Section, Romanian Academy, 010071 Bucharest, Romania."
+                          },
+                          {
+                            "affiliation": "Neurosurgery Department, Sanador Clinical Hospital, 010991 Bucharest, Romania."
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "fullName": "Munteanu O",
+                      "lastName": "Munteanu",
+                      "firstName": "Octavian",
+                      "initials": "O",
+                      "authorAffiliationDetailsList": {
+                        "authorAffiliation": [
+                          {
+                            "affiliation": "Puls Med Association, 051885 Bucharest, Romania."
+                          },
+                          {
+                            "affiliation": "Department of Anatomy, \"Carol Davila\" University of Medicine and Pharmacy, 050474 Bucharest, Romania."
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "fullName": "Tulin A",
+                      "lastName": "Tulin",
+                      "firstName": "Adrian",
+                      "initials": "A",
+                      "authorAffiliationDetailsList": {
+                        "authorAffiliation": [
+                          {
+                            "affiliation": "Department of Anatomy, \"Carol Davila\" University of Medicine and Pharmacy, 050474 Bucharest, Romania."
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "authorIdList": {
+                  "authorId": [
+                    {
+                      "type": "ORCID",
+                      "value": "0009-0003-6335-3567"
+                    }
+                  ]
+                },
+                "dataLinksTagsList": {
+                  "dataLinkstag": [
+                    "altmetrics",
+                    "supporting_data"
+                  ]
+                },
+                "journalInfo": {
+                  "issue": "23",
+                  "volume": "26",
+                  "journalIssueId": 4055376,
+                  "dateOfPublication": "2025 Nov",
+                  "monthOfPublication": 11,
+                  "yearOfPublication": 2025,
+                  "journal": {
+                    "medlineAbbreviation": "Int J Mol Sci",
+                    "title": "International journal of molecular sciences",
+                    "essn": "1422-0067",
+                    "issn": "1422-0067",
+                    "nlmid": "101092791",
+                    "isoabbreviation": "Int J Mol Sci"
+                  },
+                  "printPublicationDate": "2025-11-01"
+                },
+                "pubYear": "2025",
+                "pageInfo": "11536",
+                "abstractText": "The way in which Aquaporin-4 (AQP4) is localized on the astrocytes' surface-i.e., with AQP4 channels predominantly located on the endfeet of astrocytes near the blood vessels-represents an important structural element for maintaining brain fluid homeostasis. In addition to this structural function, AQP4 polarity also facilitates glymphatic transport, the maintenance of the blood-brain barrier (BBB) functions, ion buffering, and neurotransmitter removal, and helps regulate neurovascular communications. The growing body of literature suggests that the loss of AQP4 polarity-a loss in the organization of AQP4 channels to the perivascular membrane-is associated with increased vascular, inflammatory, and metabolic disturbances in the context of many neurological diseases. As a result, this review attempts to synthesize both experimental and clinical studies to highlight that AQP4 depolarization often occurs in conjunction with early signs of neurodegeneration and neuroinflammation; however, we are aware that the loss of AQP4 polarity is only one factor in a complex pathophysiological environment. This review examines the molecular structure responsible for maintaining the polarity of AQP4-such as dystrophin-syntrophin complexes, orthogonal particle arrays, lipid microdomains, trafficking pathways, and transcriptional regulators-and describes how the vulnerability of these systems to various types of vascular stress, inflammatory signals, energy deficits, and mechanical injury can lead to a loss of AQP4 polarity. Furthermore, we will explore how a loss of AQP4 polarity can lead to the disruption of perivascular fluid movement, changes in blood-brain barrier morphology, enhanced neuroimmune activity, changes in ionic and metabolic balance, and disruptions in the global neural network synchronization. Importantly, we recognize that each of these disruptions will likely occur in concert with other disease-specific mechanisms. Alterations in AQP4 polarity have been observed in a variety of neurological disorders including Alzheimer's disease, Parkinson's disease, multiple sclerosis, traumatic brain injury, and glioma; however, we also observe that the same alterations in fluid regulation occur across all of these different diseases, but that no single upstream event accounts for the alteration in polarity. Ultimately, we will outline emerging therapeutic avenues to restore perivascular fluid transport, and will include molecular-based therapeutic agents designed to modify the anchoring of AQP4, methods designed to modulate the state of astrocytes, biomaterials-based drug delivery systems, and therapeutic methods that leverage dynamic modulation of the neurovascular interface. Future advances in multi-omic profiling, spatial proteomics, glymphatic imaging, and artificial intelligence will allow for earlier identification of AQP4 polarity disturbances and potentially allow for the development of more personalized treatment plans. Ultimately, by linking these concepts together, this review aims to frame AQP4 polarity as a modifiable aspect of the \"fluidic connectome\", and highlight its importance in maintaining overall brain health across disease states.",
+                "affiliation": "Puls Med Association, 051885 Bucharest, Romania.",
+                "publicationStatus": "epublish",
+                "language": "eng",
+                "pubModel": "Electronic",
+                "pubTypeList": {
+                  "pubType": [
+                    "review-article",
+                    "Review",
+                    "Journal Article"
+                  ]
+                },
+                "grantsList": {
+                  "grant": [
+                    {
+                      "agency": "University of Medicine and Pharmacy Carol Davila",
+                      "orderIn": 0
+                    }
+                  ]
+                },
+                "meshHeadingList": {
+                  "meshHeading": [
+                    {
+                      "majorTopic_YN": "N",
+                      "descriptorName": "Blood-Brain Barrier",
+                      "meshQualifierList": {
+                        "meshQualifier": [
+                          {
+                            "majorTopic_YN": "N",
+                            "abbreviation": "ME",
+                            "qualifierName": "metabolism"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "descriptorName": "Astrocytes",
+                      "meshQualifierList": {
+                        "meshQualifier": [
+                          {
+                            "majorTopic_YN": "N",
+                            "abbreviation": "ME",
+                            "qualifierName": "metabolism"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "descriptorName": "Animals"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "descriptorName": "Humans"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "descriptorName": "Brain Diseases",
+                      "meshQualifierList": {
+                        "meshQualifier": [
+                          {
+                            "majorTopic_YN": "N",
+                            "abbreviation": "ME",
+                            "qualifierName": "metabolism"
+                          },
+                          {
+                            "majorTopic_YN": "N",
+                            "abbreviation": "PA",
+                            "qualifierName": "pathology"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "descriptorName": "Neurodegenerative Diseases",
+                      "meshQualifierList": {
+                        "meshQualifier": [
+                          {
+                            "majorTopic_YN": "N",
+                            "abbreviation": "ME",
+                            "qualifierName": "metabolism"
+                          },
+                          {
+                            "majorTopic_YN": "N",
+                            "abbreviation": "PA",
+                            "qualifierName": "pathology"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "descriptorName": "Aquaporin 4",
+                      "meshQualifierList": {
+                        "meshQualifier": [
+                          {
+                            "majorTopic_YN": "N",
+                            "abbreviation": "ME",
+                            "qualifierName": "metabolism"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "descriptorName": "Connectome",
+                      "meshQualifierList": {
+                        "meshQualifier": [
+                          {
+                            "majorTopic_YN": "N",
+                            "abbreviation": "MT",
+                            "qualifierName": "methods"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "descriptorName": "Glymphatic System",
+                      "meshQualifierList": {
+                        "meshQualifier": [
+                          {
+                            "majorTopic_YN": "N",
+                            "abbreviation": "ME",
+                            "qualifierName": "metabolism"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "keywordList": {
+                  "keyword": [
+                    "Artificial intelligence",
+                    "Neurodegeneration",
+                    "neuroinflammation",
+                    "Extracellular Vesicles",
+                    "Precision Medicine",
+                    "Cerebrospinal Fluid Biomarkers",
+                    "Glymphatic System",
+                    "Single-cell Transcriptomics",
+                    "Multi-omics Integration",
+                    "Aquaporin-4 Polarity"
+                  ]
+                },
+                "chemicalList": {
+                  "chemical": [
+                    {
+                      "name": "aquaporin 4",
+                      "registryNumber": "0"
+                    }
+                  ]
+                },
+                "subsetList": {
+                  "subset": [
+                    {
+                      "code": "IM",
+                      "name": "Index Medicus"
+                    }
+                  ]
+                },
+                "fullTextUrlList": {
+                  "fullTextUrl": [
+                    {
+                      "availability": "Subscription required",
+                      "availabilityCode": "S",
+                      "documentStyle": "doi",
+                      "site": "DOI",
+                      "url": "https://doi.org/10.3390/ijms262311536"
+                    },
+                    {
+                      "availability": "Open access",
+                      "availabilityCode": "OA",
+                      "documentStyle": "html",
+                      "site": "Europe_PMC",
+                      "url": "https://europepmc.org/articles/PMC12691810"
+                    },
+                    {
+                      "availability": "Open access",
+                      "availabilityCode": "OA",
+                      "documentStyle": "pdf",
+                      "site": "Europe_PMC",
+                      "url": "https://europepmc.org/articles/PMC12691810?pdf=render"
+                    }
+                  ]
+                },
+                "isOpenAccess": "Y",
+                "inEPMC": "Y",
+                "inPMC": "Y",
+                "citedByCount": 6,
+                "hasReferences": "Y",
+                "hasTextMinedTerms": "Y",
+                "hasDbCrossReferences": "N",
+                "hasPDF": "Y",
+                "hasBook": "N",
+                "hasSuppl": "N",
+                "hasLabsLinks": "Y",
+                "hasData": "Y",
+                "license": "cc by",
+                "authMan": "N",
+                "epmcAuthMan": "N",
+                "nihAuthMan": "N",
+                "hasTMAccessionNumbers": "Y",
+                "tmAccessionTypeList": {
+                  "accessionType": [
+                    "doi"
+                  ]
+                },
+                "dateOfCompletion": "2025-12-11",
+                "dateOfCreation": "2025-12-11",
+                "dateOfRevision": "2025-12-14",
+                "electronicPublicationDate": "2025-11-28",
+                "firstPublicationDate": "2025-11-28",
+                "firstIndexDate": "2025-12-11",
+                "fullTextReceivedDate": "2025-12-22",
+                "hasEvaluations": "N"
+              },
+              {
+                "id": "37345829",
+                "source": "MED",
+                "pmid": "37345829",
+                "pmcid": "PMC10335831",
+                "fullTextIdList": {
+                  "fullTextId": [
+                    "PMC10335831"
+                  ]
+                },
+                "doi": "10.7554/elife.87125",
+                "title": "Differential modification of the C-terminal tails of different α-tubulins and their importance for microtubule function in vivo.",
+                "authorString": "Bao M, Dörig RE, Vazquez-Pianzola PM, Beuchle D, Suter B.",
+                "authorList": {
+                  "author": [
+                    {
+                      "fullName": "Bao M",
+                      "lastName": "Bao",
+                      "firstName": "Mengjing",
+                      "initials": "M",
+                      "authorId": {
+                        "type": "ORCID",
+                        "value": "0000-0002-5523-2314"
+                      },
+                      "authorAffiliationDetailsList": {
+                        "authorAffiliation": [
+                          {
+                            "affiliation": "Institute of Cell Biology, University of Bern, Bern, Switzerland."
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "fullName": "Dörig RE",
+                      "lastName": "Dörig",
+                      "firstName": "Ruth E",
+                      "initials": "RE",
+                      "authorAffiliationDetailsList": {
+                        "authorAffiliation": [
+                          {
+                            "affiliation": "Institute of Cell Biology, University of Bern, Bern, Switzerland."
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "fullName": "Vazquez-Pianzola PM",
+                      "lastName": "Vazquez-Pianzola",
+                      "firstName": "Paula Maria",
+                      "initials": "PM",
+                      "authorAffiliationDetailsList": {
+                        "authorAffiliation": [
+                          {
+                            "affiliation": "Institute of Cell Biology, University of Bern, Bern, Switzerland."
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "fullName": "Beuchle D",
+                      "lastName": "Beuchle",
+                      "firstName": "Dirk",
+                      "initials": "D",
+                      "authorAffiliationDetailsList": {
+                        "authorAffiliation": [
+                          {
+                            "affiliation": "Institute of Cell Biology, University of Bern, Bern, Switzerland."
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "fullName": "Suter B",
+                      "lastName": "Suter",
+                      "firstName": "Beat",
+                      "initials": "B",
+                      "authorId": {
+                        "type": "ORCID",
+                        "value": "0000-0002-0510-746X"
+                      },
+                      "authorAffiliationDetailsList": {
+                        "authorAffiliation": [
+                          {
+                            "affiliation": "Institute of Cell Biology, University of Bern, Bern, Switzerland."
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "authorIdList": {
+                  "authorId": [
+                    {
+                      "type": "ORCID",
+                      "value": "0000-0002-0510-746X"
+                    },
+                    {
+                      "type": "ORCID",
+                      "value": "0000-0002-5523-2314"
+                    }
+                  ]
+                },
+                "dataLinksTagsList": {
+                  "dataLinkstag": [
+                    "altmetrics",
+                    "supporting_data",
+                    "related_data"
+                  ]
+                },
+                "journalInfo": {
+                  "volume": "12",
+                  "journalIssueId": 3579179,
+                  "dateOfPublication": "2023 Jun",
+                  "monthOfPublication": 6,
+                  "yearOfPublication": 2023,
+                  "journal": {
+                    "medlineAbbreviation": "Elife",
+                    "title": "eLife",
+                    "essn": "2050-084X",
+                    "issn": "2050-084X",
+                    "nlmid": "101579614",
+                    "isoabbreviation": "Elife"
+                  },
+                  "printPublicationDate": "2023-06-01"
+                },
+                "pubYear": "2023",
+                "pageInfo": "e87125",
+                "abstractText": "Microtubules (MTs) are built from α-/β-tubulin dimers and used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell. Tubulins are subjected to several post-translational modifications (PTMs). Glutamylation is one of them, and it is responsible for adding one or more glutamic acid residues as branched peptide chains to the C-terminal tails of both α- and β-tubulin. However, very little is known about the specific modifications found on the different tubulin isotypes in vivo and the role of these PTMs in MT transport and other cellular processes in vivo. In this study, we found that in <i>Drosophila</i> ovaries, glutamylation of α-tubulin isotypes occurred clearly on the C-terminal ends of αTub84B and αTub84D (αTub84B/D). In contrast, the ovarian α-tubulin, αTub67C, is not glutamylated. The C-terminal ends of αTub84B/D are glutamylated at several glutamyl sidechains in various combinations. Drosophila <i>TTLL5</i> is required for the mono- and poly-glutamylation of ovarian αTub84B/D and with this for the proper localization of glutamylated microtubules. Similarly, the normal distribution of kinesin-1 in the germline relies on <i>TTLL5</i>. Next, two kinesin-1-dependent processes, the precise localization of Staufen and the fast, bidirectional ooplasmic streaming, depend on <i>TTLL5</i>, too, suggesting a causative pathway. In the nervous system, a mutation of <i>TTLL5</i> that inactivates its enzymatic activity decreases the pausing of anterograde axonal transport of mitochondria. Our results demonstrate in vivo roles of TTLL5 in differential glutamylation of α-tubulins and point to the in vivo importance of α-tubulin glutamylation for cellular functions involving microtubule transport.",
+                "affiliation": "Institute of Cell Biology, University of Bern, Bern, Switzerland.",
+                "publicationStatus": "epublish",
+                "language": "eng",
+                "pubModel": "Electronic",
+                "pubTypeList": {
+                  "pubType": [
+                    "Research Support, Non-U.S. Gov't",
+                    "research-article",
+                    "Journal Article"
+                  ]
+                },
+                "grantsList": {
+                  "grant": [
+                    {
+                      "agency": "Swiss National Science Foundation",
+                      "grantId": "205075",
+                      "orderIn": 0
+                    },
+                    {
+                      "agency": "Swiss National Science Foundation",
+                      "acronym": "SNSF_",
+                      "grantId": "Project Grant 310030_205075",
+                      "orderIn": 0
+                    },
+                    {
+                      "agency": "Swiss National Science Foundation",
+                      "acronym": "SNSF_",
+                      "grantId": "project grant 31003A_173188",
+                      "orderIn": 0
+                    },
+                    {
+                      "agency": "Swiss National Science Foundation",
+                      "grantId": "150824",
+                      "orderIn": 0
+                    },
+                    {
+                      "agency": "Swiss National Science Foundation",
+                      "grantId": "310030",
+                      "orderIn": 0
+                    },
+                    {
+                      "agency": "University of Bern",
+                      "orderIn": 0
+                    },
+                    {
+                      "agency": "Swiss National Science Foundation",
+                      "grantId": "173188",
+                      "orderIn": 0
+                    },
+                    {
+                      "agency": "Swiss National Science Foundation",
+                      "grantId": "316030",
+                      "orderIn": 0
+                    }
+                  ]
+                },
+                "meshHeadingList": {
+                  "meshHeading": [
+                    {
+                      "majorTopic_YN": "N",
+                      "descriptorName": "Microtubules",
+                      "meshQualifierList": {
+                        "meshQualifier": [
+                          {
+                            "majorTopic_YN": "N",
+                            "abbreviation": "ME",
+                            "qualifierName": "metabolism"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "descriptorName": "Animals"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "descriptorName": "Drosophila",
+                      "meshQualifierList": {
+                        "meshQualifier": [
+                          {
+                            "majorTopic_YN": "N",
+                            "abbreviation": "ME",
+                            "qualifierName": "metabolism"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "descriptorName": "Tubulin",
+                      "meshQualifierList": {
+                        "meshQualifier": [
+                          {
+                            "majorTopic_YN": "N",
+                            "abbreviation": "ME",
+                            "qualifierName": "metabolism"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "descriptorName": "Glutamic Acid",
+                      "meshQualifierList": {
+                        "meshQualifier": [
+                          {
+                            "majorTopic_YN": "N",
+                            "abbreviation": "ME",
+                            "qualifierName": "metabolism"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "descriptorName": "Protein Processing, Post-Translational"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "descriptorName": "Kinesins",
+                      "meshQualifierList": {
+                        "meshQualifier": [
+                          {
+                            "majorTopic_YN": "N",
+                            "abbreviation": "GE",
+                            "qualifierName": "genetics"
+                          },
+                          {
+                            "majorTopic_YN": "N",
+                            "abbreviation": "ME",
+                            "qualifierName": "metabolism"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "keywordList": {
+                  "keyword": [
+                    "Cell biology",
+                    "Oogenesis",
+                    "developmental biology",
+                    "Axonal Transport",
+                    "D. Melanogaster",
+                    "Microtubule Transport",
+                    "Tttamylation"
+                  ]
+                },
+                "chemicalList": {
+                  "chemical": [
+                    {
+                      "name": "Tubulin",
+                      "registryNumber": "0"
+                    },
+                    {
+                      "name": "Glutamic Acid",
+                      "registryNumber": "3KX376GY7L"
+                    },
+                    {
+                      "name": "Kinesins",
+                      "registryNumber": "EC 3.6.4.4"
+                    }
+                  ]
+                },
+                "subsetList": {
+                  "subset": [
+                    {
+                      "code": "IM",
+                      "name": "Index Medicus"
+                    }
+                  ]
+                },
+                "fullTextUrlList": {
+                  "fullTextUrl": [
+                    {
+                      "availability": "Subscription required",
+                      "availabilityCode": "S",
+                      "documentStyle": "doi",
+                      "site": "DOI",
+                      "url": "https://doi.org/10.7554/eLife.87125"
+                    },
+                    {
+                      "availability": "Open access",
+                      "availabilityCode": "OA",
+                      "documentStyle": "html",
+                      "site": "Europe_PMC",
+                      "url": "https://europepmc.org/articles/PMC10335831"
+                    },
+                    {
+                      "availability": "Open access",
+                      "availabilityCode": "OA",
+                      "documentStyle": "pdf",
+                      "site": "Europe_PMC",
+                      "url": "https://europepmc.org/articles/PMC10335831?pdf=render"
+                    }
+                  ]
+                },
+                "commentCorrectionList": {
+                  "commentCorrection": [
+                    {
+                      "source": "PPR",
+                      "id": "PPR504277",
+                      "type": "Preprint in",
+                      "note": "CrossRef Pre-print loader",
+                      "orderIn": 10002
+                    }
+                  ]
+                },
+                "isOpenAccess": "Y",
+                "inEPMC": "Y",
+                "inPMC": "Y",
+                "citedByCount": 11,
+                "hasReferences": "Y",
+                "hasTextMinedTerms": "Y",
+                "hasDbCrossReferences": "N",
+                "hasPDF": "Y",
+                "hasBook": "N",
+                "hasSuppl": "Y",
+                "hasLabsLinks": "Y",
+                "hasData": "Y",
+                "license": "cc by",
+                "authMan": "N",
+                "epmcAuthMan": "N",
+                "nihAuthMan": "N",
+                "hasTMAccessionNumbers": "Y",
+                "tmAccessionTypeList": {
+                  "accessionType": [
+                    "pxd",
+                    "uniprot",
+                    "doi"
+                  ]
+                },
+                "dateOfCompletion": "2023-07-13",
+                "dateOfCreation": "2023-06-22",
+                "dateOfRevision": "2023-07-18",
+                "electronicPublicationDate": "2023-06-22",
+                "firstPublicationDate": "2023-06-22",
+                "firstIndexDate": "2023-06-22",
+                "fullTextReceivedDate": "2025-02-04",
+                "hasEvaluations": "N"
+              }
+            ]
+          }
+        ],
+        "research_status": "RETRIEVED_UNREVIEWED",
+        "discovery": "Validated list queries, structured Europe PMC search/abstract/full text, candidate source fetch; source relevance is not assumed"
+      },
+      "new_sources": 3,
+      "entailment": {
+        "claims": [
+          {
+            "claim_id": "ISS-001",
+            "claim_text": "Motor proteins (kinesin and/or dynein) are the actors that move vesicles along microtubules, converting ATP hydrolysis into mechanical stepping.",
+            "entailment_status": "PARTIALLY_SUPPORTED",
+            "biological_scope": "Eukaryotic intracellular transport; microtubule-based vesicle motility; motor protein families (kinesin superfamily, cytoplasmic dynein).",
+            "support": [
+              {
+                "evidence_id": "E_a7a76831c1a0",
+                "location": "abstract",
+                "quote": "Microtubules (MTs) are built from α-/β-tubulin dimers and used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell."
+              },
+              {
+                "evidence_id": "E_3717dae1f63f",
+                "location": "abstract",
+                "quote": "Tau binds microtubules cooperatively to form cohesive envelopes, which are thought to control access to the microtubule lattice and regulate the activity of motor proteins and other MAPs."
+              }
+            ],
+            "reason": "Sources state that kinesin and dynein motors use microtubules as tracks to transport cargo including organelles, and mention motor protein activity regulation. However, no source explicitly states that ATP hydrolysis is converted into mechanical stepping, nor specifically identifies vesicles as the cargo in the quoted passages. The core motor-identity and track-use claim is supported, but the ATP-stepping mechanism is not entailed by the provided excerpts."
+          },
+          {
+            "claim_id": "ISS-002",
+            "claim_text": "Vesicle motility along microtubule tracks depends causally on motor protein activity (ATP-dependent stepping), not merely on microtubule presence.",
+            "entailment_status": "INSUFFICIENT_EVIDENCE",
+            "biological_scope": "Mechanistic cell biology; in vitro and in vivo motor-dependent transport assays; axonemal and axonal transport.",
+            "support": [
+              {
+                "evidence_id": "E_3717dae1f63f",
+                "location": "abstract",
+                "quote": "Tau weakly inhibits KIF5C motility, but strongly inhibits KIF1A. Hyperphosphorylation reduces KIF5C inhibition but increases KIF1A inhibition by decreasing processivity and accelerating detachment."
+              },
+              {
+                "evidence_id": "E_a7a76831c1a0",
+                "location": "abstract",
+                "quote": "two kinesin-1-dependent processes, the precise localization of Staufen and the fast, bidirectional ooplasmic streaming, depend on TTLL5 , too, suggesting a causative pathway."
+              }
+            ],
+            "reason": "Sources provide indirect evidence of motor-dependent processes (kinesin-1-dependent ooplasmic streaming, tau regulation of lysosome transport via KIF5C/KIF1A modulation), but no passage explicitly demonstrates causal dependence of vesicle motility on motor protein ATP-dependent stepping versus mere microtubule presence. The required claim is not directly entailed."
+          },
+          {
+            "claim_id": "ISS-003",
+            "claim_text": "Single-vesicle tracking or live imaging demonstrates vesicles remain associated with microtubule tracks during defined transport intervals.",
+            "entailment_status": "INSUFFICIENT_EVIDENCE",
+            "biological_scope": "Live-cell imaging and single-particle tracking of vesicle-microtubule interactions; temporal persistence of track association.",
+            "support": [
+              {
+                "evidence_id": "E_3717dae1f63f",
+                "location": "abstract",
+                "quote": "Using tau phospho-variants in vitro and in live neurons, we show that tau hyperphosphorylation disrupts cooperative microtubule binding and dysregulates lysosome transport."
+              }
+            ],
+            "reason": "One source mentions live neurons and lysosome transport, but does not describe single-vesicle tracking or temporal persistence of vesicle association with microtubule tracks during defined intervals. No source provides the required tracking/persistence evidence."
+          },
+          {
+            "claim_id": "ISS-004",
+            "claim_text": "Microtubules function as structural tracks (polar filaments) that enable transport; track provision is a structural capability rather than a temporally bounded process.",
+            "entailment_status": "PARTIALLY_SUPPORTED",
+            "biological_scope": "Microtubule structure and polarity; cytoskeletal organization; distinction between structural capability and process.",
+            "support": [
+              {
+                "evidence_id": "E_a7a76831c1a0",
+                "location": "abstract",
+                "quote": "Microtubules (MTs) are built from α-/β-tubulin dimers and used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell."
+              }
+            ],
+            "reason": "The source states microtubules are used as tracks by motors to transport cargo, supporting the structural track function. However, no source explicitly characterizes track provision as a structural capability rather than a temporally bounded process, nor discusses polarity in the quoted passage. The key distinction required by the claim is not entailed."
+          },
+          {
+            "claim_id": "ISS-005",
+            "claim_text": "Vesicles are membrane-bound cargo carriers whose transport occurs specifically along microtubules (distinct from general cytoplasm streaming).",
+            "entailment_status": "PARTIALLY_SUPPORTED",
+            "biological_scope": "Vesicle definition (membrane-bound organelles), cargo transport, microtubule-specific transport vs general cytoplasmic movement.",
+            "support": [
+              {
+                "evidence_id": "E_a7a76831c1a0",
+                "location": "abstract",
+                "quote": "Microtubules (MTs) are built from α-/β-tubulin dimers and used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell."
+              }
+            ],
+            "reason": "The source lists organelles among cargos transported along microtubule tracks, supporting that organelles (which include vesicles) are cargo. However, it does not define vesicles as membrane-bound, nor explicitly distinguish microtubule-specific transport from general cytoplasm streaming. The required specificity and definition are not fully entailed."
+          },
+          {
+            "claim_id": "ISS-006",
+            "claim_text": "The topic scope requires motor protein identity/mechanism; if evidence is limited, scope must be explicitly narrowed with stated non-claims.",
+            "entailment_status": "OUT_OF_SCOPE",
+            "biological_scope": "Scope definition for teaching model; motor-protein-dependent transport mechanism; organism and cell-type specificity.",
+            "support": [],
+            "reason": "This is a meta-claim about scope definition and teaching-model requirements, not a biological mechanism claim addressed by the provided sources. Sources do not discuss scope requirements or non-claims."
+          },
+          {
+            "claim_id": "ISS-007",
+            "claim_text": "Kinesins generally drive anterograde/plus-end-directed transport; cytoplasmic dynein drives retrograde/minus-end-directed transport; specificity varies by organism/cell type.",
+            "entailment_status": "INSUFFICIENT_EVIDENCE",
+            "biological_scope": "Motor directionality conventions; plus-end vs minus-end; neuron axon vs other cell types; organism variation.",
+            "support": [
+              {
+                "evidence_id": "E_a7a76831c1a0",
+                "location": "abstract",
+                "quote": "In the nervous system, a mutation of TTLL5 that inactivates its enzymatic activity decreases the pausing of anterograde axonal transport of mitochondria."
+              }
+            ],
+            "reason": "The source mentions anterograde axonal transport but does not state kinesin drives anterograde or dynein drives retrograde, nor plus-end/minus-end directionality. No directionality conventions or organism-specific variation are entailed."
+          },
+          {
+            "claim_id": "STATE_MODEL_MIGRATION",
+            "claim_text": "Initial states for vesicle (position, motor association) and microtubule (polarity, availability) must be evidenced; motor protein and ATP states are necessary producers for transport.",
+            "entailment_status": "INSUFFICIENT_EVIDENCE",
+            "biological_scope": "State modeling of intracellular transport; initial conditions; motor-vesicle-microtubule association states; ATP availability.",
+            "support": [
+              {
+                "evidence_id": "E_3717dae1f63f",
+                "location": "abstract",
+                "quote": "Tau binds microtubules cooperatively to form cohesive envelopes, which are thought to control access to the microtubule lattice and regulate the activity of motor proteins and other MAPs."
+              }
+            ],
+            "reason": "The source discusses motor protein regulation and microtubule access, but does not provide evidence for initial-state requirements (vesicle position, motor association, microtubule polarity/availability) or ATP as a necessary producer state. The state-modeling claim is not entailed."
+          }
+        ],
+        "decision": "INSUFFICIENT_EVIDENCE"
+      },
+      "resolved_gap_ids": []
+    },
+    {
+      "plan": {
+        "requests": [
+          {
+            "issue_id": "ISS-001",
+            "research_question": "Which motor proteins (kinesin, dynein) mediate vesicle transport along microtubules, and what is their causal role?",
+            "required_claim": "Motor proteins such as kinesin and cytoplasmic dynein bind vesicles and move them along microtubules in an ATP-dependent manner.",
+            "biological_scope": "Eukaryotic intracellular vesicle transport; microtubule-based motility; motor protein families",
+            "source_preferences": [
+              "cell biology textbooks",
+              "review articles in molecular biology of the cell",
+              "NCBI Bookshelf",
+              "peer-reviewed reviews"
+            ],
+            "search_queries": [
+              "kinesin dynein motor proteins vesicle transport along microtubules mechanism review",
+              "ATP-dependent motor protein vesicle movement microtubule cytoskeleton cell biology"
+            ],
+            "expected_evidence_type": "MECHANISM_DESCRIPTION"
+          },
+          {
+            "issue_id": "ISS-002",
+            "research_question": "Is vesicle movement along microtubules causally mediated by motor proteins, and are vesicles specifically the cargo moved along microtubules?",
+            "required_claim": "Vesicles are cargo carriers that are actively transported along microtubule tracks by motor proteins, establishing causal motor dependence.",
+            "biological_scope": "Intracellular vesicle trafficking; active transport; cargo-motor-microtubule coupling",
+            "source_preferences": [
+              "review articles on intracellular transport",
+              "NCBI Bookshelf cell biology chapters",
+              "Alberts Molecular Biology of the Cell"
+            ],
+            "search_queries": [
+              "vesicles actively transported along microtubules by motor proteins causal mechanism cargo",
+              "intracellular vesicle trafficking microtubule motor protein dependent transport evidence"
+            ],
+            "expected_evidence_type": "MECHANISM_DESCRIPTION"
+          },
+          {
+            "issue_id": "ISS-003",
+            "research_question": "What evidence supports tracking a specific vesicle on a microtubule track during a defined transport interval?",
+            "required_claim": "Individual vesicles can be observed moving processively along microtubules during defined intervals, supporting temporal persistence semantics.",
+            "biological_scope": "Single-vesicle tracking; processive motor movement; live-cell imaging of vesicle transport",
+            "source_preferences": [
+              "single-molecule biophysics reviews",
+              "live-cell imaging studies",
+              "methodological reviews"
+            ],
+            "search_queries": [
+              "single vesicle tracking along microtubule processive movement live cell imaging evidence",
+              "processive motor transport vesicle persistence microtubule interval observation"
+            ],
+            "expected_evidence_type": "MECHANISM_DESCRIPTION"
+          },
+          {
+            "issue_id": "ISS-004",
+            "research_question": "Is microtubule track provision a distinct process with temporal start/end conditions, or a structural capability?",
+            "required_claim": "Microtubules serve as structural tracks (cytoskeletal architecture) that enable but do not constitute a separate temporally-scoped process concurrent with vesicle transport.",
+            "biological_scope": "Cytoskeletal structure; microtubule organization; distinction between structural capability and dynamic process",
+            "source_preferences": [
+              "cell biology textbooks",
+              "cytoskeleton reviews",
+              "NCBI Bookshelf"
+            ],
+            "search_queries": [
+              "microtubule structural track cytoskeleton provides track vesicles structural capability cytology",
+              "microtubule organization track provision structural versus dynamic process distinction cell biology"
+            ],
+            "expected_evidence_type": "MECHANISM_DESCRIPTION"
+          },
+          {
+            "issue_id": "ISS-005",
+            "research_question": "What is the definition and identity of a vesicle as a membrane-bound cargo carrier in intracellular transport?",
+            "required_claim": "Vesicles are membrane-bound organelles that carry cargo and are moved within cells along cytoskeletal tracks including microtubules.",
+            "biological_scope": "Vesicle definition; membrane-bound cargo carriers; intracellular membrane trafficking",
+            "source_preferences": [
+              "cell biology textbooks",
+              "Molecular Biology of the Cell",
+              "NCBI Bookshelf"
+            ],
+            "search_queries": [
+              "vesicle definition membrane-bound cargo carrier intracellular transport biology",
+              "membrane bound vesicle cargo transport cytoskeleton microtubule movement definition"
+            ],
+            "expected_evidence_type": "MECHANISM_DESCRIPTION"
+          },
+          {
+            "issue_id": "ISS-006",
+            "research_question": "Does the model's supported content match the task topic of motor-protein-dependent vesicle transport along microtubules?",
+            "required_claim": "Motor-protein-dependent vesicle transport along microtubules is supported by evidence naming motor proteins as causal agents, resolving the scope contradiction.",
+            "biological_scope": "Motor-protein-dependent transport; kinesin/dynein; microtubule-based intracellular trafficking",
+            "source_preferences": [
+              "cell biology textbooks",
+              "review articles on motor proteins",
+              "NCBI Bookshelf"
+            ],
+            "search_queries": [
+              "motor protein dependent vesicle transport along microtubules kinesin dynein mechanism overview",
+              "microtubule motor protein vesicle trafficking scope causal dependence cell biology review"
+            ],
+            "expected_evidence_type": "MECHANISM_DESCRIPTION"
+          },
+          {
+            "issue_id": "ISS-007",
+            "research_question": "What is the directionality (anterograde/retrograde), motor identity (kinesin/dynein), and organism specificity of vesicle transport along microtubules?",
+            "required_claim": "Kinesin motors generally drive anterograde (toward plus-end) transport and cytoplasmic dynein drives retrograde (toward minus-end) transport, with organism-specific details varying across eukaryotes.",
+            "biological_scope": "Motor directionality; kinesin superfamily; cytoplasmic dynein; organism-specific variation in microtubule organization",
+            "source_preferences": [
+              "review articles on motor protein directionality",
+              "cell biology textbooks",
+              "NCBI Bookshelf"
+            ],
+            "search_queries": [
+              "kinesin anterograde dynein retrograde microtubule vesicle transport directionality organism specificity",
+              "motor protein directionality plus end minus end microtubule transport eukaryotes review"
+            ],
+            "expected_evidence_type": "MECHANISM_DESCRIPTION"
+          },
+          {
+            "issue_id": "STATE_MODEL_MIGRATION",
+            "research_question": "What are the supported pre-clip conditions, explicit subject/property/value states, and missing state producers for motor-dependent vesicle transport along microtubules?",
+            "required_claim": "Initial states require a vesicle, a microtubule track, and available motor proteins with ATP; vesicle position along the microtubule is the tracked property, and motor engagement is a required state producer.",
+            "biological_scope": "State modeling of intracellular transport; initial conditions; motor engagement; vesicle position along microtubule",
+            "source_preferences": [
+              "mechanistic reviews of motor transport",
+              "cell biology textbooks",
+              "systems biology modeling reviews"
+            ],
+            "search_queries": [
+              "vesicle microtubule motor protein transport initial conditions state model mechanism cell biology",
+              "ATP motor engagement vesicle position microtubule track state transition mechanism review"
+            ],
+            "expected_evidence_type": "MECHANISM_DESCRIPTION"
+          }
+        ],
+        "candidate_urls": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+          "https://www.ncbi.nlm.nih.gov/books/NBK9963/"
+        ],
+        "scientific_queries": [
+          "motor protein dependent vesicle transport along microtubules kinesin dynein ATP mechanism cell biology grades 10-12"
+        ]
+      },
+      "retrieval": {
+        "evidence": [],
+        "failures": [
+          {
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12560119/fullTextXML",
+            "error": "FeatureNotFound",
+            "status": "FULL_TEXT_UNAVAILABLE"
+          },
+          {
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12772631/fullTextXML",
+            "error": "FeatureNotFound",
+            "status": "FULL_TEXT_UNAVAILABLE"
+          },
+          {
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11208286/fullTextXML",
+            "error": "HTTPError",
+            "status": "FULL_TEXT_UNAVAILABLE"
+          },
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+            "error": "ValueError",
+            "status": "FULL_TEXT_UNAVAILABLE"
+          },
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK9963/",
+            "error": "ValueError",
+            "status": "FULL_TEXT_UNAVAILABLE"
+          }
+        ],
+        "search_records": [
+          {
+            "query": "motor protein dependent vesicle transport along microtubules kinesin dynein ATP mechanism cell biology grades 10-12",
+            "service": "Europe PMC",
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=motor+protein+dependent+vesicle+transport+along+microtubules+kinesin+dynein+ATP+mechanism+cell+biology+grades+10-12&format=json&pageSize=3&resultType=core",
+            "results": [
+              {
+                "id": "41147645",
+                "source": "MED",
+                "pmid": "41147645",
+                "pmcid": "PMC12560119",
+                "fullTextIdList": {
+                  "fullTextId": [
+                    "PMC12560119"
+                  ]
+                },
+                "doi": "10.1002/jev2.70157",
+                "title": "ISEV2025 Abstract Book.",
+                "authorIdList": {
+                  "authorId": [
+                    {
+                      "type": "ORCID",
+                      "value": "0000-0001-6106-6685"
+                    },
+                    {
+                      "type": "ORCID",
+                      "value": "0000-0001-8143-0958"
+                    },
+                    {
+                      "type": "ORCID",
+                      "value": "0000-0002-1964-1006"
+                    },
+                    {
+                      "type": "ORCID",
+                      "value": "0000-0003-2884-0055"
+                    },
+                    {
+                      "type": "ORCID",
+                      "value": "0000-0003-3067-2556"
+                    },
+                    {
+                      "type": "ORCID",
+                      "value": "0000-0003-3609-6270"
+                    },
+                    {
+                      "type": "ORCID",
+                      "value": "0009-0000-2168-3937"
+                    },
+                    {
+                      "type": "ORCID",
+                      "value": "0009-0002-8760-5928"
+                    }
+                  ]
+                },
+                "dataLinksTagsList": {
+                  "dataLinkstag": [
+                    "altmetrics",
+                    "supporting_data"
+                  ]
+                },
+                "journalInfo": {
+                  "issue": "S1",
+                  "volume": "14",
+                  "journalIssueId": 4038342,
+                  "dateOfPublication": "2025 Oct",
+                  "monthOfPublication": 10,
+                  "yearOfPublication": 2025,
+                  "journal": {
+                    "medlineAbbreviation": "J Extracell Vesicles",
+                    "title": "Journal of extracellular vesicles",
+                    "essn": "2001-3078",
+                    "issn": "2001-3078",
+                    "nlmid": "101610479",
+                    "isoabbreviation": "J Extracell Vesicles"
+                  },
+                  "printPublicationDate": "2025-10-01"
+                },
+                "pubYear": "2025",
+                "pageInfo": "e70157",
+                "publicationStatus": "ppublish",
+                "language": "eng",
+                "pubModel": "Print",
+                "pubTypeList": {
+                  "pubType": [
+                    "abstract",
+                    "Journal Article"
+                  ]
+                },
+                "subsetList": {
+                  "subset": [
+                    {
+                      "code": "IM",
+                      "name": "Index Medicus"
+                    }
+                  ]
+                },
+                "fullTextUrlList": {
+                  "fullTextUrl": [
+                    {
+                      "availability": "Subscription required",
+                      "availabilityCode": "S",
+                      "documentStyle": "doi",
+                      "site": "DOI",
+                      "url": "https://doi.org/10.1002/jev2.70157"
+                    },
+                    {
+                      "availability": "Open access",
+                      "availabilityCode": "OA",
+                      "documentStyle": "html",
+                      "site": "Europe_PMC",
+                      "url": "https://europepmc.org/articles/PMC12560119"
+                    },
+                    {
+                      "availability": "Open access",
+                      "availabilityCode": "OA",
+                      "documentStyle": "pdf",
+                      "site": "Europe_PMC",
+                      "url": "https://europepmc.org/articles/PMC12560119?pdf=render"
+                    }
+                  ]
+                },
+                "isOpenAccess": "Y",
+                "inEPMC": "Y",
+                "inPMC": "Y",
+                "citedByCount": 2,
+                "hasReferences": "N",
+                "hasTextMinedTerms": "Y",
+                "hasDbCrossReferences": "N",
+                "hasPDF": "Y",
+                "hasBook": "N",
+                "hasSuppl": "N",
+                "hasLabsLinks": "Y",
+                "hasData": "Y",
+                "license": "cc by-nc-nd",
+                "authMan": "N",
+                "epmcAuthMan": "N",
+                "nihAuthMan": "N",
+                "hasTMAccessionNumbers": "Y",
+                "tmAccessionTypeList": {
+                  "accessionType": [
+                    "gen",
+                    "uniprot",
+                    "nct",
+                    "doi"
+                  ]
+                },
+                "dateOfCreation": "2025-10-28",
+                "dateOfRevision": "2025-10-30",
+                "firstPublicationDate": "2025-10-01",
+                "firstIndexDate": "2025-10-28",
+                "fullTextReceivedDate": "2025-11-29",
+                "hasEvaluations": "N"
+              },
+              {
+                "id": "41493844",
+                "source": "MED",
+                "pmid": "41493844",
+                "pmcid": "PMC12772631",
+                "fullTextIdList": {
+                  "fullTextId": [
+                    "PMC12772631"
+                  ]
+                },
+                "doi": "10.1111/cas.70254",
+                "title": "Abstracts of the 84&lt;sup&gt;th&lt;/sup&gt; Annual Meeting of the Japanese Cancer Association.",
+                "journalInfo": {
+                  "volume": "117 Suppl 1",
+                  "journalIssueId": 4086054,
+                  "dateOfPublication": "2026 Jan",
+                  "monthOfPublication": 1,
+                  "yearOfPublication": 2026,
+                  "journal": {
+                    "medlineAbbreviation": "Cancer Sci",
+                    "title": "Cancer science",
+                    "essn": "1349-7006",
+                    "issn": "1347-9032",
+                    "nlmid": "101168776",
+                    "isoabbreviation": "Cancer Sci"
+                  },
+                  "printPublicationDate": "2026-01-01"
+                },
+                "pubYear": "2026",
+                "pageInfo": "1-2148",
+                "publicationStatus": "ppublish",
+                "language": "eng",
+                "pubModel": "Print",
+                "pubTypeList": {
+                  "pubType": [
+                    "abstract",
+                    "Journal Article"
+                  ]
+                },
+                "subsetList": {
+                  "subset": [
+                    {
+                      "code": "IM",
+                      "name": "Index Medicus"
+                    }
+                  ]
+                },
+                "fullTextUrlList": {
+                  "fullTextUrl": [
+                    {
+                      "availability": "Subscription required",
+                      "availabilityCode": "S",
+                      "documentStyle": "doi",
+                      "site": "DOI",
+                      "url": "https://doi.org/10.1111/cas.70254"
+                    },
+                    {
+                      "availability": "Open access",
+                      "availabilityCode": "OA",
+                      "documentStyle": "html",
+                      "site": "Europe_PMC",
+                      "url": "https://europepmc.org/articles/PMC12772631"
+                    },
+                    {
+                      "availability": "Open access",
+                      "availabilityCode": "OA",
+                      "documentStyle": "pdf",
+                      "site": "Europe_PMC",
+                      "url": "https://europepmc.org/articles/PMC12772631?pdf=render"
+                    }
+                  ]
+                },
+                "isOpenAccess": "Y",
+                "inEPMC": "Y",
+                "inPMC": "Y",
+                "citedByCount": 0,
+                "hasReferences": "N",
+                "hasTextMinedTerms": "N",
+                "hasDbCrossReferences": "N",
+                "hasPDF": "Y",
+                "hasBook": "N",
+                "hasSuppl": "N",
+                "hasLabsLinks": "N",
+                "hasData": "N",
+                "license": "cc by",
+                "authMan": "N",
+                "epmcAuthMan": "N",
+                "nihAuthMan": "N",
+                "hasTMAccessionNumbers": "N",
+                "dateOfCreation": "2026-01-06",
+                "dateOfRevision": "2026-01-08",
+                "firstPublicationDate": "2026-01-01",
+                "firstIndexDate": "2026-01-06",
+                "fullTextReceivedDate": "2026-01-08",
+                "hasEvaluations": "N"
+              },
+              {
+                "id": "PMC11208286",
+                "source": "PMC",
+                "pmcid": "PMC11208286",
+                "fullTextIdList": {
+                  "fullTextId": [
+                    "PMC11208286"
+                  ]
+                },
+                "title": "Posters",
+                "authorIdList": {
+                  "authorId": [
+                    {
+                      "type": "ORCID",
+                      "value": "0000-0002-1146-0542"
+                    }
+                  ]
+                },
+                "dataLinksTagsList": {
+                  "dataLinkstag": [
+                    "supporting_data"
+                  ]
+                },
+                "journalInfo": {
+                  "issue": "Suppl 2",
+                  "volume": "14",
+                  "journalIssueId": 3791587,
+                  "dateOfPublication": "2024 Jun",
+                  "monthOfPublication": 6,
+                  "yearOfPublication": 2024,
+                  "journal": {
+                    "medlineAbbreviation": "FEBS Open Bio",
+                    "title": "FEBS open bio",
+                    "essn": "2211-5463",
+                    "issn": "2211-5463",
+                    "nlmid": "101580716",
+                    "isoabbreviation": "FEBS Open Bio"
+                  },
+                  "printPublicationDate": "2024-06-01"
+                },
+                "pubYear": "2024",
+                "pageInfo": "92-516",
+                "language": "eng",
+                "pubModel": "Undetermined",
+                "pubTypeList": {
+                  "pubType": [
+                    "Abstract"
+                  ]
+                },
+                "fullTextUrlList": {
+                  "fullTextUrl": [
+                    {
+                      "availability": "Free",
+                      "availabilityCode": "F",
+                      "documentStyle": "html",
+                      "site": "PubMedCentral",
+                      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11208286/?tool=EBI"
+                    },
+                    {
+                      "availability": "Free",
+                      "availabilityCode": "F",
+                      "documentStyle": "pdf",
+                      "site": "PubMedCentral",
+                      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11208286/pdf/?tool=EBI"
+                    },
+                    {
+                      "availability": "Free",
+                      "availabilityCode": "F",
+                      "documentStyle": "html",
+                      "site": "Europe_PMC",
+                      "url": "https://europepmc.org/articles/PMC11208286"
+                    },
+                    {
+                      "availability": "Free",
+                      "availabilityCode": "F",
+                      "documentStyle": "pdf",
+                      "site": "Europe_PMC",
+                      "url": "https://europepmc.org/articles/PMC11208286?pdf=render"
+                    }
+                  ]
+                },
+                "isOpenAccess": "N",
+                "inEPMC": "Y",
+                "inPMC": "Y",
+                "citedByCount": 1,
+                "hasReferences": "N",
+                "hasTextMinedTerms": "Y",
+                "hasDbCrossReferences": "N",
+                "hasPDF": "Y",
+                "hasBook": "N",
+                "hasSuppl": "N",
+                "hasLabsLinks": "N",
+                "hasData": "Y",
+                "authMan": "N",
+                "epmcAuthMan": "N",
+                "nihAuthMan": "N",
+                "hasTMAccessionNumbers": "Y",
+                "tmAccessionTypeList": {
+                  "accessionType": [
+                    "geo",
+                    "gen",
+                    "refsnp",
+                    "omim",
+                    "pdb",
+                    "doi"
+                  ]
+                },
+                "dateOfCreation": "2025-02-03",
+                "dateOfRevision": "2026-11-25",
+                "electronicPublicationDate": "2024-06-01",
+                "firstPublicationDate": "2024-06-01",
+                "firstIndexDate": "2024-06-29",
+                "fullTextReceivedDate": "2025-02-03",
+                "hasEvaluations": "N"
+              }
+            ]
+          }
+        ],
+        "research_status": "UNVERIFIED",
+        "discovery": "Validated list queries, structured Europe PMC search/abstract/full text, candidate source fetch; source relevance is not assumed"
+      },
+      "new_sources": 0,
+      "entailment": {
+        "claims": [
+          {
+            "claim_id": "ISS-001",
+            "claim_text": "Motor proteins such as kinesin and cytoplasmic dynein bind vesicles and move them along microtubules in an ATP-dependent manner.",
+            "entailment_status": "PARTIALLY_SUPPORTED",
+            "biological_scope": "Eukaryotic intracellular vesicle transport; microtubule-based motility; motor protein families",
+            "support": [
+              {
+                "evidence_id": "E_a7a76831c1a0",
+                "location": "abstract",
+                "quote": "Microtubules (MTs) are built from α-/β-tubulin dimers and used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell."
+              },
+              {
+                "evidence_id": "E_3717dae1f63f",
+                "location": "abstract",
+                "quote": "Tau binds microtubules cooperatively to form cohesive envelopes, which are thought to control access to the microtubule lattice and regulate the activity of motor proteins and other MAPs."
+              }
+            ],
+            "reason": "Sources state that kinesin and dynein motors use microtubules as tracks to transport cargo including organelles, but do not explicitly state that motor proteins bind vesicles or that movement is ATP-dependent. The ATP-dependence and vesicle-binding aspects are not entailed by the provided excerpts."
+          },
+          {
+            "claim_id": "ISS-002",
+            "claim_text": "Vesicles are cargo carriers that are actively transported along microtubule tracks by motor proteins, establishing causal motor dependence.",
+            "entailment_status": "PARTIALLY_SUPPORTED",
+            "biological_scope": "Intracellular vesicle trafficking; active transport; cargo-motor-microtubule coupling",
+            "support": [
+              {
+                "evidence_id": "E_a7a76831c1a0",
+                "location": "abstract",
+                "quote": "Microtubules (MTs) are built from α-/β-tubulin dimers and used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell."
+              },
+              {
+                "evidence_id": "E_a7a76831c1a0",
+                "location": "abstract",
+                "quote": "the normal distribution of kinesin-1 in the germline relies on TTLL5 . Next, two kinesin-1-dependent processes, the precise localization of Staufen and the fast, bidirectional ooplasmic streaming, depend on TTLL5 , too, suggesting a causative pathway."
+              }
+            ],
+            "reason": "Sources support that microtubules are tracks for kinesin/dynein to transport cargos including organelles, and that some kinesin-1-dependent processes rely on microtubule modifications. However, vesicles are not explicitly named as the cargo in the quoted passages, and causal motor dependence for vesicle transport specifically is not directly established."
+          },
+          {
+            "claim_id": "ISS-003",
+            "claim_text": "Individual vesicles can be observed moving processively along microtubules during defined intervals, supporting temporal persistence semantics.",
+            "entailment_status": "INSUFFICIENT_EVIDENCE",
+            "biological_scope": "Single-vesicle tracking; processive motor movement; live-cell imaging of vesicle transport",
+            "support": [],
+            "reason": "No provided source excerpt describes single-vesicle tracking, processive movement of individual vesicles along microtubules, or defined temporal intervals of observation. The abstracts discuss lysosome transport and kinesin motility but not vesicle-specific processive tracking with temporal persistence semantics."
+          },
+          {
+            "claim_id": "ISS-004",
+            "claim_text": "Microtubules serve as structural tracks (cytoskeletal architecture) that enable but do not constitute a separate temporally-scoped process concurrent with vesicle transport.",
+            "entailment_status": "PARTIALLY_SUPPORTED",
+            "biological_scope": "Cytoskeletal structure; microtubule organization; distinction between structural capability and dynamic process",
+            "support": [
+              {
+                "evidence_id": "E_a7a76831c1a0",
+                "location": "abstract",
+                "quote": "Microtubules (MTs) are built from α-/β-tubulin dimers and used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell."
+              }
+            ],
+            "reason": "One source explicitly describes microtubules as tracks used by motors for cargo transport, supporting the structural-track role. However, no source addresses whether track provision is or is not a separate temporally-scoped process concurrent with vesicle transport; that distinction is not entailed."
+          },
+          {
+            "claim_id": "ISS-005",
+            "claim_text": "Vesicles are membrane-bound organelles that carry cargo and are moved within cells along cytoskeletal tracks including microtubules.",
+            "entailment_status": "PARTIALLY_SUPPORTED",
+            "biological_scope": "Vesicle definition; membrane-bound cargo carriers; intracellular membrane trafficking",
+            "support": [
+              {
+                "evidence_id": "E_a7a76831c1a0",
+                "location": "abstract",
+                "quote": "Microtubules (MTs) are built from α-/β-tubulin dimers and used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell."
+              }
+            ],
+            "reason": "The source supports that organelles (which could include membrane-bound compartments) are transported along microtubules by motors. However, it does not explicitly define vesicles as membrane-bound cargo carriers or state that vesicles specifically are moved along cytoskeletal tracks. The membrane-bound definition and vesicle-specific movement are not entailed."
+          },
+          {
+            "claim_id": "ISS-006",
+            "claim_text": "Motor-protein-dependent vesicle transport along microtubules is supported by evidence naming motor proteins as causal agents, resolving the scope contradiction.",
+            "entailment_status": "PARTIALLY_SUPPORTED",
+            "biological_scope": "Motor-protein-dependent transport; kinesin/dynein; microtubule-based intracellular trafficking",
+            "support": [
+              {
+                "evidence_id": "E_a7a76831c1a0",
+                "location": "abstract",
+                "quote": "Microtubules (MTs) are built from α-/β-tubulin dimers and used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell."
+              },
+              {
+                "evidence_id": "E_3717dae1f63f",
+                "location": "abstract",
+                "quote": "Tau weakly inhibits KIF5C motility, but strongly inhibits KIF1A."
+              }
+            ],
+            "reason": "Sources name kinesin and dynein as motors that transport cargo along microtubules, and describe effects on KIF5C/KIF1A motility. However, they do not explicitly establish motor-protein-dependent vesicle transport specifically, nor do they resolve a scope contradiction about vesicles as the cargo. The claim is broader than what the excerpts directly entail."
+          },
+          {
+            "claim_id": "ISS-007",
+            "claim_text": "Kinesin motors generally drive anterograde (toward plus-end) transport and cytoplasmic dynein drives retrograde (toward minus-end) transport, with organism-specific details varying across eukaryotes.",
+            "entailment_status": "INSUFFICIENT_EVIDENCE",
+            "biological_scope": "Motor directionality; kinesin superfamily; cytoplasmic dynein; organism-specific variation in microtubule organization",
+            "support": [],
+            "reason": "No provided source excerpt states the directionality of kinesin (anterograde/plus-end) versus dynein (retrograde/minus-end), nor does any excerpt discuss organism-specific variation in motor directionality. The abstracts mention kinesin-1-dependent processes and anterograde axonal transport of mitochondria, but do not define directionality of kinesin versus dynein in general."
+          },
+          {
+            "claim_id": "STATE_MODEL_MIGRATION",
+            "claim_text": "Initial states require a vesicle, a microtubule track, and available motor proteins with ATP; vesicle position along the microtubule is the tracked property, and motor engagement is a required state producer.",
+            "entailment_status": "INSUFFICIENT_EVIDENCE",
+            "biological_scope": "State modeling of intracellular transport; initial conditions; motor engagement; vesicle position along microtubule",
+            "support": [],
+            "reason": "No provided source excerpt addresses state modeling, initial conditions requiring vesicles, microtubules, motor proteins, and ATP, tracking of vesicle position, or motor engagement as a state producer. The abstracts describe biological mechanisms but do not contain the formal state-model claims requested."
+          }
+        ],
+        "decision": "INSUFFICIENT_EVIDENCE"
+      },
+      "resolved_gap_ids": []
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E_3717dae1f63f",
+      "url": "https://europepmc.org/article/MED/42804373",
+      "title": "Tau hyperphosphorylation impairs cooperative binding to microtubules and perturbs organelle trafficking in neurons.",
+      "author_or_institution": "Beaudet D, Berger CL, Hendricks AG.",
+      "source_type": "bibliographic_abstract",
+      "evidence_level": "ABSTRACT",
+      "biological_scope": "Requires claim-specific scope review",
+      "status": "RETRIEVED_ABSTRACT",
+      "content_sha256": "b2a55240e11ec07f3b7bc494501cf75f4d3279aaa06dd49d36de3acc97920359",
+      "passages": [
+        {
+          "location": "abstract",
+          "text": "Tau, a neuronal microtubule-associated protein (MAP), organizes the axonal cytoskeleton, and regulates intracellular transport. Tau hyperphosphorylation is linked to neurodegeneration in tauopathies, including Alzheimer's disease. Tau binds microtubules cooperatively to form cohesive envelopes, which are thought to control access to the microtubule lattice and regulate the activity of motor proteins and other MAPs. However, how disease-related perturbations affect tau dynamics and its function as a selective barrier to intracellular transport remains unclear. Using tau phospho-variants in vitro and in live neurons, we show that tau hyperphosphorylation disrupts cooperative microtubule binding and dysregulates lysosome transport. Hyperphosphorylated tau does not form envelopes, distributes more uniformly along the axon, and dissociates faster from microtubules. Tau weakly inhibits KIF5C motility, but strongly inhibits KIF1A. Hyperphosphorylation reduces KIF5C inhibition but increases KIF1A inhibition by decreasing processivity and accelerating detachment. Consistent with these effects, hyperphosphorylated tau alters lysosome transport in neurons. While phospho-resistant tau inhibits processive lysosome motility, hyperphosphorylated tau weakens tau-mediated regulation of lysosome transport, mimicking tau knockout neurons that exhibit enhanced processivity. Altogether, these findings show that hyperphosphorylation disrupts tau envelopes and impairs lysosome trafficking, likely contributing to early defects in degradative pathways that drive neurodegeneration.",
+          "evidence_level": "ABSTRACT"
+        }
+      ],
+      "figures": [],
+      "limitations": [
+        "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+      ]
+    },
+    {
+      "evidence_id": "E_3eaea6ae41d5",
+      "url": "https://europepmc.org/article/MED/41373689",
+      "title": "The Fluidic Connectome in Brain Disease: Integrating Aquaporin-4 Polarity with Multisystem Pathways in Neurodegeneration.",
+      "author_or_institution": "Brehar FM, Costea D, Tataru CP, Rădoi MP, Ciurea AV, Munteanu O, Tulin A.",
+      "source_type": "bibliographic_abstract",
+      "evidence_level": "ABSTRACT",
+      "biological_scope": "Requires claim-specific scope review",
+      "status": "RETRIEVED_ABSTRACT",
+      "content_sha256": "832426ef467be6c8e3a257d349597384c406884b0ee6b34cb5bb405147e84db4",
+      "passages": [
+        {
+          "location": "abstract",
+          "text": "The way in which Aquaporin-4 (AQP4) is localized on the astrocytes' surface-i.e., with AQP4 channels predominantly located on the endfeet of astrocytes near the blood vessels-represents an important structural element for maintaining brain fluid homeostasis. In addition to this structural function, AQP4 polarity also facilitates glymphatic transport, the maintenance of the blood-brain barrier (BBB) functions, ion buffering, and neurotransmitter removal, and helps regulate neurovascular communications. The growing body of literature suggests that the loss of AQP4 polarity-a loss in the organization of AQP4 channels to the perivascular membrane-is associated with increased vascular, inflammatory, and metabolic disturbances in the context of many neurological diseases. As a result, this review attempts to synthesize both experimental and clinical studies to highlight that AQP4 depolarization often occurs in conjunction with early signs of neurodegeneration and neuroinflammation; however, we are aware that the loss of AQP4 polarity is only one factor in a complex pathophysiological environment. This review examines the molecular structure responsible for maintaining the polarity of AQP4-such as dystrophin-syntrophin complexes, orthogonal particle arrays, lipid microdomains, trafficking pathways, and transcriptional regulators-and describes how the vulnerability of these systems to various types of vascular stress, inflammatory signals, energy deficits, and mechanical injury can lead to a loss of AQP4 polarity. Furthermore, we will explore how a loss of AQP4 polarity can lead to the disruption of perivascular fluid movement, changes in blood-brain barrier morphology, enhanced neuroimmune activity, changes in ionic and metabolic balance, and disruptions in the global neural network synchronization. Importantly, we recognize that each of these disruptions will likely occur in concert with other disease-specific mechanisms. Alterations in AQP4 polarity have been observed in a variety of neurological disorders including Alzheimer's disease, Parkinson's disease, multiple sclerosis, traumatic brain injury, and glioma; however, we also observe that the same alterations in fluid regulation occur across all of these different diseases, but that no single upstream event accounts for the alteration in polarity. Ultimately, we will outline emerging therapeutic avenues to restore perivascular fluid transport, and will include molecular-based therapeutic agents designed to modify the anchoring of AQP4, methods designed to modulate the state of astrocytes, biomaterials-based drug delivery systems, and therapeutic methods that leverage dynamic modulation of the neurovascular interface. Future advances in multi-omic profiling, spatial proteomics, glymphatic imaging, and artificial intelligence will allow for earlier identification of AQP4 polarity disturbances and potentially allow for the development of more personalized treatment plans. Ultimately, by linking these concepts together, this review aims to frame AQP4 polarity as a modifiable aspect of the \"fluidic connectome\", and highlight its importance in maintaining overall brain health across disease states.",
+          "evidence_level": "ABSTRACT"
+        }
+      ],
+      "figures": [],
+      "limitations": [
+        "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+      ]
+    },
+    {
+      "evidence_id": "E_a7a76831c1a0",
+      "url": "https://europepmc.org/article/MED/37345829",
+      "title": "Differential modification of the C-terminal tails of different α-tubulins and their importance for microtubule function in vivo.",
+      "author_or_institution": "Bao M, Dörig RE, Vazquez-Pianzola PM, Beuchle D, Suter B.",
+      "source_type": "bibliographic_abstract",
+      "evidence_level": "ABSTRACT",
+      "biological_scope": "Requires claim-specific scope review",
+      "status": "RETRIEVED_ABSTRACT",
+      "content_sha256": "dcfe12abc6a1ce73bc6becec1bf91732751218928c59f1310c2e966f3b870a4a",
+      "passages": [
+        {
+          "location": "abstract",
+          "text": "Microtubules (MTs) are built from α-/β-tubulin dimers and used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell. Tubulins are subjected to several post-translational modifications (PTMs). Glutamylation is one of them, and it is responsible for adding one or more glutamic acid residues as branched peptide chains to the C-terminal tails of both α- and β-tubulin. However, very little is known about the specific modifications found on the different tubulin isotypes in vivo and the role of these PTMs in MT transport and other cellular processes in vivo. In this study, we found that in Drosophila ovaries, glutamylation of α-tubulin isotypes occurred clearly on the C-terminal ends of αTub84B and αTub84D (αTub84B/D). In contrast, the ovarian α-tubulin, αTub67C, is not glutamylated. The C-terminal ends of αTub84B/D are glutamylated at several glutamyl sidechains in various combinations. Drosophila TTLL5 is required for the mono- and poly-glutamylation of ovarian αTub84B/D and with this for the proper localization of glutamylated microtubules. Similarly, the normal distribution of kinesin-1 in the germline relies on TTLL5 . Next, two kinesin-1-dependent processes, the precise localization of Staufen and the fast, bidirectional ooplasmic streaming, depend on TTLL5 , too, suggesting a causative pathway. In the nervous system, a mutation of TTLL5 that inactivates its enzymatic activity decreases the pausing of anterograde axonal transport of mitochondria. Our results demonstrate in vivo roles of TTLL5 in differential glutamylation of α-tubulins and point to the in vivo importance of α-tubulin glutamylation for cellular functions involving microtubule transport.",
+          "evidence_level": "ABSTRACT"
+        }
+      ],
+      "figures": [],
+      "limitations": [
+        "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+      ]
+    }
+  ],
+  "claim_evidence_matches": [
+    {
+      "claim_id": "ISS-001",
+      "claim_text": "Motor proteins such as kinesin and cytoplasmic dynein bind vesicles and move them along microtubules in an ATP-dependent manner.",
+      "entailment_status": "PARTIALLY_SUPPORTED",
+      "biological_scope": "Eukaryotic intracellular vesicle transport; microtubule-based motility; motor protein families",
+      "support": [
+        {
+          "evidence_id": "E_a7a76831c1a0",
+          "location": "abstract",
+          "quote": "Microtubules (MTs) are built from α-/β-tubulin dimers and used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell."
+        },
+        {
+          "evidence_id": "E_3717dae1f63f",
+          "location": "abstract",
+          "quote": "Tau binds microtubules cooperatively to form cohesive envelopes, which are thought to control access to the microtubule lattice and regulate the activity of motor proteins and other MAPs."
+        }
+      ],
+      "reason": "Sources state that kinesin and dynein motors use microtubules as tracks to transport cargo including organelles, but do not explicitly state that motor proteins bind vesicles or that movement is ATP-dependent. The ATP-dependence and vesicle-binding aspects are not entailed by the provided excerpts."
+    },
+    {
+      "claim_id": "ISS-002",
+      "claim_text": "Vesicles are cargo carriers that are actively transported along microtubule tracks by motor proteins, establishing causal motor dependence.",
+      "entailment_status": "PARTIALLY_SUPPORTED",
+      "biological_scope": "Intracellular vesicle trafficking; active transport; cargo-motor-microtubule coupling",
+      "support": [
+        {
+          "evidence_id": "E_a7a76831c1a0",
+          "location": "abstract",
+          "quote": "Microtubules (MTs) are built from α-/β-tubulin dimers and used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell."
+        },
+        {
+          "evidence_id": "E_a7a76831c1a0",
+          "location": "abstract",
+          "quote": "the normal distribution of kinesin-1 in the germline relies on TTLL5 . Next, two kinesin-1-dependent processes, the precise localization of Staufen and the fast, bidirectional ooplasmic streaming, depend on TTLL5 , too, suggesting a causative pathway."
+        }
+      ],
+      "reason": "Sources support that microtubules are tracks for kinesin/dynein to transport cargos including organelles, and that some kinesin-1-dependent processes rely on microtubule modifications. However, vesicles are not explicitly named as the cargo in the quoted passages, and causal motor dependence for vesicle transport specifically is not directly established."
+    },
+    {
+      "claim_id": "ISS-003",
+      "claim_text": "Individual vesicles can be observed moving processively along microtubules during defined intervals, supporting temporal persistence semantics.",
+      "entailment_status": "INSUFFICIENT_EVIDENCE",
+      "biological_scope": "Single-vesicle tracking; processive motor movement; live-cell imaging of vesicle transport",
+      "support": [],
+      "reason": "No provided source excerpt describes single-vesicle tracking, processive movement of individual vesicles along microtubules, or defined temporal intervals of observation. The abstracts discuss lysosome transport and kinesin motility but not vesicle-specific processive tracking with temporal persistence semantics."
+    },
+    {
+      "claim_id": "ISS-004",
+      "claim_text": "Microtubules serve as structural tracks (cytoskeletal architecture) that enable but do not constitute a separate temporally-scoped process concurrent with vesicle transport.",
+      "entailment_status": "PARTIALLY_SUPPORTED",
+      "biological_scope": "Cytoskeletal structure; microtubule organization; distinction between structural capability and dynamic process",
+      "support": [
+        {
+          "evidence_id": "E_a7a76831c1a0",
+          "location": "abstract",
+          "quote": "Microtubules (MTs) are built from α-/β-tubulin dimers and used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell."
+        }
+      ],
+      "reason": "One source explicitly describes microtubules as tracks used by motors for cargo transport, supporting the structural-track role. However, no source addresses whether track provision is or is not a separate temporally-scoped process concurrent with vesicle transport; that distinction is not entailed."
+    },
+    {
+      "claim_id": "ISS-005",
+      "claim_text": "Vesicles are membrane-bound organelles that carry cargo and are moved within cells along cytoskeletal tracks including microtubules.",
+      "entailment_status": "PARTIALLY_SUPPORTED",
+      "biological_scope": "Vesicle definition; membrane-bound cargo carriers; intracellular membrane trafficking",
+      "support": [
+        {
+          "evidence_id": "E_a7a76831c1a0",
+          "location": "abstract",
+          "quote": "Microtubules (MTs) are built from α-/β-tubulin dimers and used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell."
+        }
+      ],
+      "reason": "The source supports that organelles (which could include membrane-bound compartments) are transported along microtubules by motors. However, it does not explicitly define vesicles as membrane-bound cargo carriers or state that vesicles specifically are moved along cytoskeletal tracks. The membrane-bound definition and vesicle-specific movement are not entailed."
+    },
+    {
+      "claim_id": "ISS-006",
+      "claim_text": "Motor-protein-dependent vesicle transport along microtubules is supported by evidence naming motor proteins as causal agents, resolving the scope contradiction.",
+      "entailment_status": "PARTIALLY_SUPPORTED",
+      "biological_scope": "Motor-protein-dependent transport; kinesin/dynein; microtubule-based intracellular trafficking",
+      "support": [
+        {
+          "evidence_id": "E_a7a76831c1a0",
+          "location": "abstract",
+          "quote": "Microtubules (MTs) are built from α-/β-tubulin dimers and used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell."
+        },
+        {
+          "evidence_id": "E_3717dae1f63f",
+          "location": "abstract",
+          "quote": "Tau weakly inhibits KIF5C motility, but strongly inhibits KIF1A."
+        }
+      ],
+      "reason": "Sources name kinesin and dynein as motors that transport cargo along microtubules, and describe effects on KIF5C/KIF1A motility. However, they do not explicitly establish motor-protein-dependent vesicle transport specifically, nor do they resolve a scope contradiction about vesicles as the cargo. The claim is broader than what the excerpts directly entail."
+    },
+    {
+      "claim_id": "ISS-007",
+      "claim_text": "Kinesin motors generally drive anterograde (toward plus-end) transport and cytoplasmic dynein drives retrograde (toward minus-end) transport, with organism-specific details varying across eukaryotes.",
+      "entailment_status": "INSUFFICIENT_EVIDENCE",
+      "biological_scope": "Motor directionality; kinesin superfamily; cytoplasmic dynein; organism-specific variation in microtubule organization",
+      "support": [],
+      "reason": "No provided source excerpt states the directionality of kinesin (anterograde/plus-end) versus dynein (retrograde/minus-end), nor does any excerpt discuss organism-specific variation in motor directionality. The abstracts mention kinesin-1-dependent processes and anterograde axonal transport of mitochondria, but do not define directionality of kinesin versus dynein in general."
+    },
+    {
+      "claim_id": "STATE_MODEL_MIGRATION",
+      "claim_text": "Initial states require a vesicle, a microtubule track, and available motor proteins with ATP; vesicle position along the microtubule is the tracked property, and motor engagement is a required state producer.",
+      "entailment_status": "INSUFFICIENT_EVIDENCE",
+      "biological_scope": "State modeling of intracellular transport; initial conditions; motor engagement; vesicle position along microtubule",
+      "support": [],
+      "reason": "No provided source excerpt addresses state modeling, initial conditions requiring vesicles, microtubules, motor proteins, and ATP, tracking of vesicle position, or motor engagement as a state producer. The abstracts describe biological mechanisms but do not contain the formal state-model claims requested."
+    }
+  ],
+  "stop_reason": "NO_EFFECTIVE_INFORMATION_GAIN"
+}

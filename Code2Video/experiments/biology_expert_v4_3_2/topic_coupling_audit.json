@@ -1,0 +1,54 @@
+{
+  "new_science_modules_theme_names": [],
+  "legacy_findings": [
+    {
+      "file": "src/biology_expert/tools/repair_planner.py",
+      "line": 9,
+      "source": "issue=next((i for i in issues if i['issue_id']=='BIO-DIRECTION'),issues[0])",
+      "classification": "PREEXISTING_LEGACY_TOPIC_SPECIFIC_REPAIR_PATH_NOT_USED_BY_V432"
+    },
+    {
+      "file": "src/biology_expert/tools/repair_planner.py",
+      "line": 12,
+      "source": "if issue['issue_id']=='BIO-DIRECTION':",
+      "classification": "PREEXISTING_LEGACY_TOPIC_SPECIFIC_REPAIR_PATH_NOT_USED_BY_V432"
+    },
+    {
+      "file": "src/biology_expert/tools/repair_planner.py",
+      "line": 13,
+      "source": "task['instruction']='Repair ONLY event_5_maturation gap-fill nucleotide addition so actual visible addition progresses from the existing nascent 3prime side, consistent with the observed antiparallel lower template and 5prime-to-3prime synthesis. Cha",
+      "classification": "PREEXISTING_LEGACY_TOPIC_SPECIFIC_REPAIR_PATH_NOT_USED_BY_V432"
+    },
+    {
+      "file": "src/biology_expert/tools/repair_planner.py",
+      "line": 25,
+      "source": "targets=[(i,n) for i,n in enumerate(fn.body) if isinstance(n,ast.For) and any(isinstance(s,ast.Constant) and isinstance(s.value,str) and s.value.startswith('fill_dna_') for s in ast.walk(n))]",
+      "classification": "PREEXISTING_LEGACY_TOPIC_SPECIFIC_REPAIR_PATH_NOT_USED_BY_V432"
+    },
+    {
+      "file": "src/biology_expert/tools/repair_planner.py",
+      "line": 29,
+      "source": "loops=[n for n in ast.walk(incoming) if isinstance(n,ast.For) and any(isinstance(s,ast.Constant) and isinstance(s.value,str) and s.value.startswith('fill_dna_') for s in ast.walk(n))]",
+      "classification": "PREEXISTING_LEGACY_TOPIC_SPECIFIC_REPAIR_PATH_NOT_USED_BY_V432"
+    },
+    {
+      "file": "src/biology_expert/tools/repair_planner.py",
+      "line": 50,
+      "source": "prompt=\"\"\"You are the existing Code2Video DeepSeek Coder. Execute the scientific Repair Task with the smallest possible change. Return ONLY a complete replacement 'for i in range(n_fill):' loop in a Python code fence. This replaces the existing uniqu",
+      "classification": "PREEXISTING_LEGACY_TOPIC_SPECIFIC_REPAIR_PATH_NOT_USED_BY_V432"
+    },
+    {
+      "file": "src/biology_expert/tools/repair_planner.py",
+      "line": 52,
+      "source": "Use the CURRENT actual variable names. The lower blue TEMPLATE has 5prime at left and 3prime at right, so newly filled lower nascent DNA must grow toward the LEFT. Within the existing RNA-removed gap [lag1_primer_start, lag1_primer_start+lag1_primer_",
+      "classification": "PREEXISTING_LEGACY_TOPIC_SPECIFIC_REPAIR_PATH_NOT_USED_BY_V432"
+    },
+    {
+      "file": "src/biology_expert/tools/reviewers.py",
+      "line": 40,
+      "source": "issues.append(issue('BIO-DIRECTION' if c['check_id']=='lagging_gap_growth' else 'BIO-CONTACT',c['check_id']+' failed on actual execution evidence',c.get('object_ids',[]),c.get('fact_ids',[]),evidence={'trace_ref':artifacts.get('trace_ref','geometry_t",
+      "classification": "PREEXISTING_LEGACY_TOPIC_SPECIFIC_REPAIR_PATH_NOT_USED_BY_V432"
+    }
+  ],
+  "claim_boundary": "New model-reliability path has no theme-selected rules. Entire repository is NOT free of historical topic-specific animation repair paths."
+}

@@ -25,14 +25,19 @@ class Wan3Provider(VideoGenerationProvider):
   if not self.config.get('base_url','').startswith('https://'):errors.append('INVALID_BASE_URL')
   if not os.environ.get('DASHSCOPE_API_KEY'):errors.append('API_KEY_MISSING')
   if not 2<=request['duration']<=30:errors.append('UNSUPPORTED_DURATION')
-  for f in [request['first_frame'],request['last_frame']]:
+  mode=request.get('input_mode','first_last_frame')
+  if mode not in ['first_last_frame','text_to_video']:errors.append('UNSUPPORTED_INPUT_MODE')
+  if mode=='text_to_video' and (request.get('first_frame') or request.get('last_frame')):errors.append('TEXT_MODE_MUST_NOT_INCLUDE_FRAMES')
+  for f in ([request['first_frame'],request['last_frame']] if mode=='first_last_frame' else []):
    im=Image.open(f)
    if im.mode not in ['RGB','L'] or min(im.size)<240 or max(im.size)>8000 or max(im.size)/min(im.size)>8 or Path(f).stat().st_size>20*1024*1024:errors.append('INVALID_IMAGE')
   return {'valid':not errors,'errors':errors,'entitlement':'REAL_SUBMISSION_REQUIRED','docs':self.config.get('documentation')}
  def prepare_request(self,request):
   check=self.validate_capabilities(request)
   if not check['valid']:raise ValueError(check['errors'])
-  return {'model':self.config['model_id'],'input':{'prompt':request['prompt'],'media':[{'type':k,'url':'data:image/png;base64,'+base64.b64encode(Path(request[k]).read_bytes()).decode()} for k in ['first_frame','last_frame']]},'parameters':{'duration':request['duration'],'resolution':request.get('resolution','480P'),'ratio':'16:9','audio':False,'prompt_extend':False,'watermark':False,'seed':request.get('seed',431)}}
+  inputs={'prompt':request['prompt']}
+  if request.get('input_mode','first_last_frame')=='first_last_frame':inputs['media']=[{'type':k,'url':'data:image/png;base64,'+base64.b64encode(Path(request[k]).read_bytes()).decode()} for k in ['first_frame','last_frame']]
+  return {'model':self.config['model_id'],'input':inputs,'parameters':{'duration':request['duration'],'resolution':request.get('resolution','480P'),'ratio':'16:9','audio':False,'prompt_extend':False,'watermark':False,'seed':request.get('seed',431)}}
  def estimate_cost_if_available(self,request):return {'estimated_cny':request['duration']*self.config.get('price_cny_per_second',.3),'basis':'Official Beijing output seconds list price; actual billed cost may differ','actual_cost':None}
  def submit(self,request,dry_run=True,authorized=False):
   payload=self.prepare_request(request);signature=hashlib.sha256(json.dumps(payload,sort_keys=True).encode()).hexdigest();statepath=self.root/'task.json'
@@ -44,7 +49,7 @@ class Wan3Provider(VideoGenerationProvider):
     state=json.loads(statepath.read_text())
     if state['request_sha256']!=signature:raise ValueError('Existing run request differs; use a new authorized run directory')
     return state # pending, uncertain, failed: never automatically resubmit
-   state={'provider':'wan','model_id':self.config['model_id'],'request_sha256':signature,'first_frame_sha256':sha(request['first_frame']),'last_frame_sha256':sha(request['last_frame']),'prompt_sha256':hashlib.sha256(request['prompt'].encode()).hexdigest(),'submission_status':'SUBMITTING','generation_status':'UNKNOWN','task_id':None,'submitted_at':time.time(),'estimate':self.estimate_cost_if_available(request)};write(statepath,state)
+   state={'provider':'wan','model_id':self.config['model_id'],'request_sha256':signature,'first_frame_sha256':sha(request['first_frame']) if request.get('first_frame') else None,'last_frame_sha256':sha(request['last_frame']) if request.get('last_frame') else None,'input_mode':request.get('input_mode','first_last_frame'),'prompt_sha256':hashlib.sha256(request['prompt'].encode()).hexdigest(),'submission_status':'SUBMITTING','generation_status':'UNKNOWN','task_id':None,'submitted_at':time.time(),'estimate':self.estimate_cost_if_available(request)};write(statepath,state)
    headers={'Authorization':'Bearer '+os.environ['DASHSCOPE_API_KEY'],'X-DashScope-Async':'enable','Content-Type':'application/json'}
    try:
     response=self.http.post(self.config['base_url'].rstrip('/')+'/api/v1/services/aigc/video-generation/video-synthesis',json=payload,headers=headers,timeout=90);data=response.json();state.update(http_status=response.status_code,response=sanitized(data),task_id=data.get('output',{}).get('task_id'),submission_status='ACCEPTED' if data.get('output',{}).get('task_id') else 'REJECTED',generation_status=data.get('output',{}).get('task_status','NOT_STARTED'))

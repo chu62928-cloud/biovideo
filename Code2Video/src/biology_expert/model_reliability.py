@@ -5,6 +5,7 @@ from .providers import parse_json
 
 class ScientificCausalGraphValidator:
     def validate(self,model,max_states=4096):
+        if model.get('schema_version')=='1.1':return self._validate_typed_states(model,max_states)
         processes=model.get('processes',[]);by={p['process_semantic_id']:p for p in processes};issues=[]
         def issue(kind,pid,detail):
             issues.append({'issue_id':'CAUSAL_'+str(len(issues)+1),'issue_type':kind,'affected_process_ids':[pid] if pid else [],'status':'DETECTED','explanation':detail})
@@ -40,7 +41,68 @@ class ScientificCausalGraphValidator:
                 q=by[concurrent];conflict={k:[v,q.get('effects',{}).get(k)] for k,v in p.get('effects',{}).items() if k in q.get('effects',{}) and q['effects'][k]!=v}
                 invalidates={k:[v,p['effects'][k]] for k,v in q.get('preconditions',{}).items() if k in p.get('effects',{}) and p['effects'][k]!=v}
                 if conflict or invalidates:issue('CONCURRENT_STATE_CONFLICT',pid,{'other_process':concurrent,'conflicting_writes':conflict,'invalidated_preconditions':invalidates})
+        if queue:issue('STATE_SPACE_INCOMPLETE',None,'Finite state exploration limit reached; unvisited paths remain.')
         return {'model_sha256':digest(model),'status':('REVIEW_INCOMPLETE' if model.get('initial_states') is None else 'REVISE') if issues else 'PASS','issues':issues,'reachable_process_ids':sorted(reachable),'witnesses':witness,'states_explored':len(seen),'exhaustive':not queue,'limit':max_states,'semantics':'Finite paths with exact state values, completion dependencies, once-per-process invocation; dynamic loops and unmodeled continuous chemistry not proven.'}
+
+    def _validate_typed_states(self,model,max_states):
+        states={s['state_id']:s for s in model.get('states',[])};processes={p['process_semantic_id']:p for p in model['processes']};entities={e['semantic_id'] for e in model['entities']};issues=[];unknown=False
+        def issue(kind,pid,detail):issues.append({'issue_id':'STATE_'+str(len(issues)+1),'issue_type':kind,'affected_process_ids':[pid] if pid else [],'status':'DETECTED','explanation':detail})
+        if len(states)!=len(model.get('states',[])):issue('CONFLICTING_STATE',None,'Duplicate state IDs')
+        def slot(s):return (s['subject_ref'],s['property'])
+        initial={};initial_refs=set()
+        for sid,s in states.items():
+            if s['subject_ref'] not in entities:issue('INVALID_INITIAL_CONDITION',None,{'state_id':sid,'unknown_subject':s['subject_ref']})
+            if s['state_kind']=='UNKNOWN':unknown=True
+            if s['state_kind']=='INITIAL_CONDITION':
+                if s.get('producer_process_id'):issue('INVALID_INITIAL_CONDITION',None,{'state_id':sid,'reason':'Initial state also claims in-clip producer'})
+                key=slot(s)
+                if key in initial and initial[key]!=s['value']:issue('CONFLICTING_STATE',None,{'state_id':sid,'slot':key})
+                initial[key]=s['value'];initial_refs.add(sid)
+            if s.get('producer_process_id') and s['producer_process_id'] not in processes:issue('MISSING_STATE_PRODUCER',None,{'state_id':sid})
+        for omitted in model.get('clip_start',{}).get('omitted_processes',[]):
+            if omitted.get('required_by_task'):issue('SCOPE_MISMATCH',None,'Required teaching mechanism cannot be omitted')
+        def refs(p,key):
+            out=p.get(key,[])
+            for sid in out:
+                if sid not in states:issue('MISSING_STATE_PRODUCER',p['process_semantic_id'],{'unknown_state_ref':sid})
+            return [sid for sid in out if sid in states]
+        requirements={pid:refs(p,'precondition_state_refs') for pid,p in processes.items()};effects={pid:refs(p,'effect_state_refs') for pid,p in processes.items()}
+        for pid,p in processes.items():
+            if not p.get('temporal_scope',{}).get('start_condition') or not p.get('temporal_scope',{}).get('end_condition'):issue('NOT_MEASURED',pid,'Explicit start/end conditions missing')
+            for sid in effects[pid]:
+                if states[sid].get('producer_process_id')!=pid:issue('MISSING_STATE_PRODUCER',pid,{'state_id':sid,'declared_producer':states[sid].get('producer_process_id')})
+            for sid in requirements[pid]:
+                s=states[sid];producers=[qid for qid in processes if any(slot(states[x])==slot(s) and states[x]['value']==s['value'] for x in effects[qid])]
+                if sid not in initial_refs and not any(slot(states[x])==slot(s) and states[x]['value']==s['value'] for x in initial_refs) and not producers:issue('MISSING_STATE_PRODUCER',pid,{'state_id':sid})
+            for qid in p.get('temporal_scope',{}).get('concurrent_with',[]):
+                if qid not in processes:continue
+                conflicts=[(x,y) for x in effects[pid] for y in effects[qid] if slot(states[x])==slot(states[y]) and states[x]['value']!=states[y]['value']]
+                invalidations=[(x,y) for x in effects[pid] for y in requirements[qid] if slot(states[x])==slot(states[y]) and states[x]['value']!=states[y]['value']]
+                if conflicts or invalidations:issue('CONFLICTING_STATE',pid,{'concurrent_process':qid,'conflicting_writes':conflicts,'invalidated_preconditions':invalidations})
+        queue=[(initial,frozenset())];seen=set();reachable=set();witness={}
+        while queue and len(seen)<max_states:
+            state,done=queue.pop(0);signature=(json.dumps(sorted([(list(k),v) for k,v in state.items()]),sort_keys=True),tuple(sorted(done)))
+            if signature in seen:continue
+            seen.add(signature)
+            for pid,p in processes.items():
+                if pid in done or not set(p.get('temporal_scope',{}).get('after',[]))<=done:continue
+                if any(states[sid]['state_kind'] in ['UNKNOWN','OUT_OF_SCOPE'] or slot(states[sid]) not in state or state[slot(states[sid])]!=states[sid]['value'] for sid in requirements[pid]):continue
+                nxt=copy.deepcopy(state)
+                for sid in p.get('terminates_state_refs',[]):
+                    if sid in states:nxt.pop(slot(states[sid]),None)
+                writes={}
+                for sid in effects[pid]:
+                    key=slot(states[sid]);value=states[sid]['value']
+                    if key in writes and writes[key]!=value:issue('CONFLICTING_STATE',pid,'Single process produces incompatible state values')
+                    writes[key]=value
+                nxt.update(writes);reachable.add(pid);witness.setdefault(pid,{'completed_before':sorted(done),'required_state_refs':requirements[pid],'produced_state_refs':effects[pid]});queue.append((nxt,done|{pid}))
+        incomplete=bool(queue) or bool(model.get('requires_continuous_or_unbounded_reasoning'))
+        if incomplete:issue('STATE_SPACE_INCOMPLETE',None,'Unvisited state space or declared continuous/unbounded semantics')
+        if not incomplete:
+            for pid in processes:
+                if pid not in reachable:issue('UNREACHABLE_PRECONDITION',pid,{'required_state_refs':requirements[pid]})
+        if unknown:issue('NOT_MEASURED',None,'Explicit UNKNOWN states; no closed-world default')
+        return {'model_sha256':digest(model),'status':'STATE_SPACE_INCOMPLETE' if incomplete else 'REVIEW_INCOMPLETE' if unknown else 'REVISE' if issues else 'PASS','issues':issues,'reachable_process_ids':sorted(reachable),'witnesses':witness,'states_explored':len(seen),'exhaustive':not incomplete,'limit':max_states,'semantics':'Bounded single-execution state paths on explicit subject/property/value; no claim about chemistry, loops or all continuous trajectories.'}
 
 class EvidenceSufficiencyAuditor:
     TYPES=['MISSING_REQUIRED_ROLE','UNSUPPORTED_CAUSAL_CLAIM','INSUFFICIENT_EVIDENCE','SOURCE_CONTRADICTION','SCOPE_MISMATCH','UNRESOLVED_SCIENTIFIC_IDENTITY']
@@ -66,20 +128,35 @@ class EvidenceSufficiencyAuditor:
 class EvidenceGapResearch:
     def __init__(self,gateway,retriever,max_attempts=2):self.gateway=gateway;self.retriever=retriever;self.max_attempts=max_attempts
     def plan(self,task,issues):
-        prompt='Create targeted NEW evidence requests for these scientific gaps, not a whole-topic restart. Return JSON {candidate_urls:[2-4 likely authoritative direct content URLs],scientific_queries:[one precise query],gap_mapping:[{issue_id,question,strategy}]}. Strategy depends on missing role, causal mechanism, conflicting source, state production or organism scope. No fabricated claims; URLs will be fetched. Prefer independent specialist sources. '
-        return parse_json(self.gateway.request('deepseek','gap_driven_research_plan',prompt+json.dumps({'task':task,'issues':issues},ensure_ascii=False)))
+        prompt='Create a targeted evidence plan, not a whole-topic restart. Return JSON {requests:[{issue_id,research_question,required_claim,biological_scope,source_preferences,search_queries:[complete contextual query],expected_evidence_type:MECHANISM_DESCRIPTION}],candidate_urls:[2 likely authoritative content URLs],scientific_queries:[one complete query]}. Include every issue_id. search_queries and scientific_queries MUST be arrays, never strings. Queries retain original scientific mechanism/organism context. Source candidates are suggestions, not evidence. No theme-specific solution list is supplied.'
+        from .retrieval_quality import validate_queries
+        plan=parse_json(self.gateway.request('deepseek','gap_driven_research_plan',prompt+json.dumps({'task':task,'issues':issues},ensure_ascii=False)))
+        validate_queries(plan,task)
+        required={i['issue_id'] for i in issues};requests=plan.get('requests',[])
+        if {q.get('issue_id') for q in requests}!=required:raise ValueError('Evidence requests must cover original gaps')
+        for q in requests:
+            for key in ['research_question','required_claim','biological_scope','source_preferences','expected_evidence_type']:
+                if key not in q:raise ValueError('Missing research request '+key)
+            validate_queries(q,dict(task,**{k:q[k] for k in ['research_question','required_claim']}))
+        return plan
     def retrieve(self,task,issues,cache):
         from pathlib import Path
         from .contracts import write
+        from .retrieval_quality import EvidenceEntailmentCheck,RetrievalQueryInvalid
         path=Path(cache);key=digest({'task':task,'issues':issues});path.mkdir(parents=True,exist_ok=True);dest=path/(key+'.json')
         if dest.exists():return json.loads(dest.read_text())
-        result={'gap_hash':key,'attempts':[],'evidence':[]};known=set()
+        result={'gap_hash':key,'attempts':[],'evidence':[],'claim_evidence_matches':[]};known=set();no_gain=0
         for n in range(self.max_attempts):
-            plan=self.plan(task,issues);retrieval=self.retriever.retrieve(task,plan);new=[e for e in retrieval['evidence'] if e['content_sha256'] not in known]
-            result['attempts'].append({'plan':plan,'retrieval':retrieval,'new_sources':len(new)});result['evidence']+=new;known.update(e['content_sha256'] for e in new)
-            if new:break
-            result['stop_reason']='NO_PROGRESS'
-        write(dest,result);return result
+            try:plan=self.plan(task,issues)
+            except (RetrievalQueryInvalid,ValueError) as ex:
+                result['attempts'].append({'status':'RETRIEVAL_QUERY_INVALID','error':str(ex)});continue
+            retrieval=self.retriever.retrieve(task,plan);new=[e for e in retrieval['evidence'] if e['content_sha256'] not in known];result['evidence']+=new;known.update(e['content_sha256'] for e in new)
+            entailment=EvidenceEntailmentCheck(self.gateway).check(plan['requests'],result['evidence']);resolved={c['claim_id'] for c in entailment['claims'] if c['entailment_status'] in ['SUPPORTED','CONTRADICTED']};previous={c['claim_id'] for c in result['claim_evidence_matches'] if c['entailment_status'] in ['SUPPORTED','CONTRADICTED']}
+            result['attempts'].append({'plan':plan,'retrieval':retrieval,'new_sources':len(new),'entailment':entailment,'resolved_gap_ids':sorted(resolved)});result['claim_evidence_matches']=entailment['claims']
+            if resolved=={i['issue_id'] for i in issues}:result['stop_reason']='GAPS_SUPPORTED_OR_CONTRADICTED';break
+            no_gain=no_gain+1 if resolved<=previous else 0
+            if no_gain>=2:result['stop_reason']='NO_EFFECTIVE_INFORMATION_GAIN';break
+        result.setdefault('stop_reason','RESEARCH_ATTEMPT_LIMIT');write(dest,result);return result
 
 def validate_repair(before,after,new_evidence,issues):
     if digest(before)==digest(after):return {'accepted':False,'status':'REPAIR_NOT_EFFECTIVE','reason':'Target model unchanged'}

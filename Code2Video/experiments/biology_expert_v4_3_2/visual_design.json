@@ -1,0 +1,181 @@
+{
+  "status": "REVIEW_ONLY",
+  "typed_model_id": "mitosis_chromosome_alignment_separation_v3",
+  "review": {
+    "script": "PASS_WITH_MARKS",
+    "script_notes": "Mechanism restricted to observable attachment, alignment, separation; molecular cohesin cause and checkpoint kept unresolved; single-chromosome instantiation explicitly flagged.",
+    "role": "PASS",
+    "role_notes": "Entities/relations consistent: kinetochore part_of sister chromatid, not whole pair; post-separation identity carried by daughter chromatids.",
+    "assets": "CONDITIONAL",
+    "assets_notes": "No external images uploaded; license unverified; caption-only design basis. No pixel validation.",
+    "storyboard": "PASS",
+    "storyboard_notes": "Order: attach/orient → align → separate/pull. Schematic phase order only, not strict causal precondition.",
+    "animation_code": "N/A",
+    "animation_code_notes": "No Manim frames/geometry requested; no code to audit.",
+    "earliest_error_stage": "none",
+    "blocking_issues": [],
+    "nonblocking_issues": [
+      "Time/duration unspecified",
+      "SAC requirement not evidenced",
+      "Cohesin molecular mechanism out of scope"
+    ]
+  },
+  "scientific_process_specification": {
+    "scope": "Eukaryotic animal-cell mitosis excerpt: prometaphase bipolar kinetochore attachment/orientation, metaphase alignment, anaphase sister-chromatid separation and poleward movement. One modeled duplicated chromosome only.",
+    "entities": [
+      {
+        "id": "ENT_duplicated_chromosome",
+        "type": "chromosome_structure",
+        "cardinality": 1,
+        "note": "joined sister chromatid pair, centromeric attachment"
+      },
+      {
+        "id": "ENT_sister_chromatid",
+        "type": "chromosome_structure",
+        "cardinality": 2
+      },
+      {
+        "id": "ENT_daughter_chromatid",
+        "type": "chromosome_structure",
+        "cardinality": 2,
+        "note": "post-separation, now called chromosomes"
+      },
+      {
+        "id": "ENT_kinetochore",
+        "type": "protein_complex",
+        "cardinality": 2
+      },
+      {
+        "id": "ENT_mitotic_spindle_microtubule",
+        "type": "cytoskeletal_structure",
+        "cardinality": 2
+      },
+      {
+        "id": "ENT_spatial_landmark",
+        "type": "spatial_region",
+        "cardinality": 3,
+        "note": "metaphase plate + two poles"
+      }
+    ],
+    "processes": [
+      {
+        "id": "PROC_kinetochore_attachment_orientation",
+        "order": 1,
+        "effects": [
+          "opposite-pole microtubules bind sister-chromatid kinetochores",
+          "kinetochores face opposite poles"
+        ],
+        "observable": "relation_holds_during:binds",
+        "capability": "DETERMINISTIC"
+      },
+      {
+        "id": "PROC_metaphase_alignment",
+        "order": 2,
+        "after": [
+          "PROC_kinetochore_attachment_orientation"
+        ],
+        "effects": [
+          "modeled duplicated chromosome aligned at metaphase plate"
+        ],
+        "observable": "relation_holds_during:located_at",
+        "capability": "PARTIAL",
+        "instantiation_note": "universal 'all chromosomes' → single modeled pair"
+      },
+      {
+        "id": "PROC_anaphase_sister_separation",
+        "order": 3,
+        "after": [
+          "PROC_metaphase_alignment"
+        ],
+        "effects": [
+          "sister-chromatid connection breaks down (observable only)",
+          "two distinct daughter chromatids",
+          "poleward movement to opposite poles"
+        ],
+        "observable": "event_precedes/state_transition_allowed",
+        "capability": "PARTIAL",
+        "exclusions": [
+          "cohesin degradation/cleavage not modeled",
+          "no causal sufficiency of pulling alone"
+        ]
+      }
+    ],
+    "simplifications": [
+      "single chromosome",
+      "discrete schematic stages",
+      "molecular break mechanism omitted"
+    ],
+    "unresolved": [
+      "exact molecular break mechanism",
+      "stage timing",
+      "SAC requirement",
+      "strictness of phase-order precondition"
+    ]
+  },
+  "visual_design_specification": {
+    "style": "professional high-school biological animation; clear scientific shapes; fixed or limited camera; no rendered text",
+    "camera": "fixed wide field or single slow pan; limited",
+    "representations": {
+      "duplicated_chromosome": "two elongated sister chromatids joined at a centromeric constriction, each with a small kinetochore marker at centromere",
+      "microtubules": "thin linear filaments from two opposing pole regions; each binds only its sister-chromatid kinetochore",
+      "metaphase_plate": "indicated by subtle equatorial guide plane/band only; no labels",
+      "poles": "two opposing centrosome regions at cell periphery"
+    },
+    "motion_sequence": [
+      "filaments extend and bind the two kinetochores from opposite sides",
+      "joined pair orients and settles at equatorial band",
+      "connection visibly breaks; two chromatids become distinct and each moves toward its attached pole"
+    ],
+    "simplifications_explicit": [
+      "one chromosome only",
+      "connection breakdown shown as observed transition, not molecular chemistry",
+      "phase order schematic"
+    ],
+    "prohibited_visuals": [
+      "no DNA base chemistry",
+      "no labeled pathway text",
+      "no extra chromosomes",
+      "no cytokinesis/nuclear-envelope events",
+      "no implied cohesin cleavage depiction"
+    ]
+  },
+  "scientific_prompt": "Model one duplicated eukaryotic chromosome as two sister chromatids joined at the centromeric region, each bearing a kinetochore. Show mitotic spindle microtubules from two opposite pole regions binding the two kinetochores so kinetochores face opposite poles (prometaphase attachment/orientation). Then show the joined pair aligned at the equatorial metaphase plate between the two poles (single-chromosome instantiation of 'all chromosomes align'). Then show the sister-chromatid connection breaking down as an observed transition, yielding two distinct daughter chromatids (now chromosomes), each moving toward its attached pole (anaphase). Do not depict cohesin degradation/cleavage or claim microtubule pulling alone causes breakage; no spindle-checkpoint assertion; schematic phase order only.",
+  "visual_prompt": "Professional high-school biology animation aesthetic. Clear scientific shapes: elongated sister chromatids joined at a centromeric constriction, small kinetochore markers, thin spindle filaments from two opposing pole regions, subtle equatorial guide band. Fixed or limited slow camera; uncluttered cell field; muted textbook color palette; smooth discrete stage transitions; no rendered text or labels.",
+  "negative_constraints": [
+    "no additional chromosomes beyond the one modeled pair",
+    "no interphase replication or prophase nuclear-envelope breakdown",
+    "no telophase or cytokinesis",
+    "no molecular chemistry or DNA base-level depiction",
+    "no explicit cohesin cleavage/degradation animation",
+    "no claim that microtubule pulling alone breaks the connection",
+    "no spindle-checkpoint causality",
+    "no rendered text, labels, or numbers",
+    "no abstract circle-only diagram substituting for chromosome shapes",
+    "no invented molecular identities or counts"
+  ],
+  "combined_prompt": "Single-cell excerpt of mitosis in a eukaryotic animal-cell context, professional high-school scientific animation style, fixed/limited camera, no text. One duplicated chromosome: two elongated sister chromatids joined at a centromeric constriction, each with a small kinetochore marker. Stage 1: thin spindle microtubules from two opposite pole regions extend and bind the two kinetochores, orienting them to face opposite poles. Stage 2: the joined pair aligns at a subtle equatorial metaphase band midway between poles. Stage 3: the sister-chromatid connection visibly breaks down as an observed transition; the two chromatids become distinct daughter chromatids (now chromosomes) and each moves toward its attached pole. Schematic phase order only. Show only observable attachment, alignment, separation, and poleward movement; do not depict molecular cohesin chemistry or claim pulling alone causes breakage; no extra chromosomes, no cytokinesis, no labels.",
+  "references": [
+    {
+      "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/d5cdb8f6e4131171fba557bb489b0448b22be60f",
+      "source_url": "https://openstax.org/books/biology-ap-courses/pages/10-2-the-cell-cycle",
+      "caption": "Figure 10.8 During prometaphase, mitotic spindle microtubules from opposite poles attach to each sister chromatid at the kinetochore. In anaphase, the connection between the sister chromatids breaks down, and the microtubules pull the chromosomes toward opposite poles.",
+      "license": "UNVERIFIED",
+      "review": "CAPTION_ONLY_NOT_PIXEL_REVIEWED",
+      "use": "caption-based design only; not uploaded"
+    },
+    {
+      "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/1f1aa87959935d0a7dd075a0a6f76c2caa364595",
+      "source_url": "https://openstax.org/books/biology-ap-courses/pages/10-2-the-cell-cycle",
+      "caption": "Figure 10.6",
+      "license": "UNVERIFIED",
+      "review": "CAPTION_ONLY_NOT_PIXEL_REVIEWED",
+      "use": "caption-based design only; not uploaded"
+    }
+  ],
+  "validated": false,
+  "typed_model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+  "prompt_sha256": "25082ac74053c045e3c20f188e50597b2aabc63ea5f7a9a4f39dd8bfad45be0e",
+  "human_edits": [],
+  "reference_images_uploaded_to_provider": false,
+  "reference_license_status": "UNVERIFIED"
+}

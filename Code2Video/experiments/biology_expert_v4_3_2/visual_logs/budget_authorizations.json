@@ -1,0 +1,11 @@
+[
+  {
+    "authorization_id": "bounded_visual_retry_existing_session_authorization",
+    "source": "explicit_user_message",
+    "provider": "deepseek",
+    "additional_requests": 0,
+    "acknowledged_failed_calls": [
+      "v42_01_6e523034"
+    ]
+  }
+]

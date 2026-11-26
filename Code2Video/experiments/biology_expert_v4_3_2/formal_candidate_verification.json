@@ -1,0 +1,360 @@
+{
+  "schema": "PASS",
+  "exact_source_support": "PASS",
+  "causal": {
+    "model_sha256": "acbbd03a10c9f47846ddb088f1aa8e61a6e7396049013d1fcd09221212e2c29b",
+    "status": "PASS",
+    "issues": [],
+    "reachable_process_ids": [
+      "proc_microtubule_track_provision",
+      "proc_motor_protein_binding_to_cargo",
+      "proc_vesicle_transport_along_microtubule"
+    ],
+    "witnesses": {
+      "proc_microtubule_track_provision": {
+        "completed_before": [],
+        "required_state_refs": [
+          "st_microtubule_present",
+          "st_motor_protein_active"
+        ],
+        "produced_state_refs": [
+          "st_microtubule_available_as_track"
+        ]
+      },
+      "proc_motor_protein_binding_to_cargo": {
+        "completed_before": [],
+        "required_state_refs": [
+          "st_motor_protein_active",
+          "st_vesicle_present"
+        ],
+        "produced_state_refs": [
+          "st_motor_protein_bound_to_cargo"
+        ]
+      },
+      "proc_vesicle_transport_along_microtubule": {
+        "completed_before": [
+          "proc_microtubule_track_provision"
+        ],
+        "required_state_refs": [
+          "st_microtubule_available_as_track",
+          "st_vesicle_present",
+          "st_motor_protein_active"
+        ],
+        "produced_state_refs": [
+          "st_vesicle_moving_along_microtubule"
+        ]
+      }
+    },
+    "states_explored": 6,
+    "exhaustive": true,
+    "limit": 4096,
+    "semantics": "Bounded single-execution state paths on explicit subject/property/value; no claim about chemistry, loops or all continuous trajectories."
+  },
+  "independent_review": {
+    "decision": "REVISE",
+    "issues": [
+      {
+        "target_id": "proc_microtubule_track_provision",
+        "reason": "A microtubule is a static polymer that can serve as a track; it is not an actor that 'provides' a track as an active process. This framing implies an activity the source does not attribute to microtubules. Additionally, this 'process' requires a motor and a cargo even though track availability is independent of both.",
+        "evidence_ids": [
+          "E_9af4c0e6bde1",
+          "E_a7a76831c1a0"
+        ]
+      },
+      {
+        "target_id": "proc_motor_protein_binding_to_cargo",
+        "reason": "No retrieved passage states that motor proteins bind vesicles. Kinesin/dynein are said to transport cargos such as 'mRNAs, proteins, and organelles,' not specifically vesicles, and the binding step is never described. The model substitutes a specific cargo identity (vesicle) for the source's generic 'cargos.'",
+        "evidence_ids": [
+          "E_a7a76831c1a0"
+        ]
+      },
+      {
+        "target_id": "obs_vesicle_transport_relation",
+        "reason": "The source only supports that kinesin/dynein transport 'a variety of cargos, such as mRNAs, proteins, and organelles,' and that microtubules are tracks 'along which vesicles move.' It does not entail that a motor protein transports a vesicle specifically, and it never describes a motor-cargo binding or a transport relation directed at vesicles.",
+        "evidence_ids": [
+          "E_a7a76831c1a0",
+          "E_9af4c0e6bde1"
+        ]
+      },
+      {
+        "target_id": "st_motor_protein_bound_to_cargo",
+        "reason": "This produced state, and the derived step 'motor protein binds vesicle cargo,' are not source-entailed. The passages neither describe motor-cargo binding as a discrete process nor restrict the cargo to vesicles; the assertion is a model inference, not a documented finding.",
+        "evidence_ids": [
+          "E_a7a76831c1a0"
+        ]
+      },
+      {
+        "target_id": "scope.excluded_processes.motor_protein_identity_and_mechanism",
+        "reason": "The scope statement says motor-protein identity is 'not specified in retrieved passages,' but the model nevertheless names 'kinesin/dynein' and builds a transport process around them. The scope therefore contradicts the retrieved evidence (E_a7a76831c1a0 names kinesin and dynein explicitly). Choose either a generic 'motor protein' framing or a kinesin/dynein framing, and make the scope and the observable model agree.",
+        "evidence_ids": [
+          "E_a7a76831c1a0"
+        ]
+      }
+    ],
+    "observable_reviews": [
+      {
+        "constraint_id": "obs_track_relation_during_transport",
+        "decision": "REVISE",
+        "reason": "The source supports that microtubules are tracks 'along which vesicles move,' but it does not entail that a motor protein is required in the same relation, nor that the microtubule 'provides' a track as a process output. The observable's scope is broader than what the source entails."
+      },
+      {
+        "constraint_id": "obs_vesicle_on_microtubule_during_transport",
+        "decision": "PASS",
+        "reason": "The source directly entails that vesicles move along microtubules ('provide a track along which vesicles move through the cell'). The observable correctly preserves this narrow spatial relation during transport without overclaiming a motor mechanism."
+      },
+      {
+        "constraint_id": "obs_vesicle_transport_relation",
+        "decision": "REVISE",
+        "reason": "The source supports that kinesin/dynein transport 'cargos such as mRNAs, proteins, and organelles' and that microtubules are tracks for vesicle movement, but it does not entail a motor protein transporting a vesicle specifically. The observable asserts a motor-vesicle transport relation the source does not directly support."
+      },
+      {
+        "constraint_id": "obs_motor_cargo_binding",
+        "decision": "REVISE",
+        "reason": "No passage describes motor proteins binding to vesicle cargo. The source only says motors transport cargos; a binding relation to vesicles specifically is an unsupported inference."
+      }
+    ],
+    "scope_review": "The topic, audience, and organism generalization are consistent with the retrieved evidence, and the simplifications are honest in excluding molecular detail. However, two problems remain. First, the scope says motor-protein identity is not specified, but the model names kinesin/dynein and treats them as specific actors. Second, the model adds a motor-vesicle binding process and a motor-vesicle transport relation that the sources do not directly entail. Vesicle transport along microtubules is supported; motor-protein-dependent transport of vesicles is only partially supported, and the specific binding step is not. The model should either (a) keep the motor generic and explicitly limit its claims to 'microtubules as tracks along which vesicles move' without asserting a motor-vesicle binding step, or (b) clearly mark the kinesin/dynein transport of generic cargos as separate, source-supported but not vesicle-specific. As written, the model is not a fully faithful typed reconstruction of the retrieved sources.",
+    "model_hash": "acbbd03a10c9f47846ddb088f1aa8e61a6e7396049013d1fcd09221212e2c29b",
+    "separate_request": true,
+    "independent_provider": false
+  },
+  "compile": {
+    "model_hash": "acbbd03a10c9f47846ddb088f1aa8e61a6e7396049013d1fcd09221212e2c29b",
+    "science_review": "REVISE",
+    "constraints": [
+      {
+        "constraint_id": "obs_track_relation_during_transport",
+        "process_semantic_id": "proc_microtubule_track_provision",
+        "entity_semantic_ids": [
+          "ent_microtubule",
+          "ent_vesicle",
+          "ent_motor_protein"
+        ],
+        "relation_semantic_id": "rel_microtubule_track_for_vesicle",
+        "predicate": "relation_holds_during",
+        "spec": {
+          "predicate": "relation_holds_during",
+          "participant_roles": [
+            "track_provider",
+            "cargo_guided",
+            "motor"
+          ],
+          "interval": {
+            "event_role": "proc_microtubule_track_provision"
+          },
+          "source_role": "track_provider",
+          "target_role": "cargo_guided",
+          "relation_type": "rel_microtubule_track_for_vesicle"
+        },
+        "participant_entity_refs": {
+          "track_provider": "ent_microtubule",
+          "cargo_guided": "ent_vesicle",
+          "motor": "ent_motor_protein"
+        },
+        "evidence_ids": [
+          "E_9af4c0e6bde1",
+          "E_a7a76831c1a0"
+        ],
+        "source_support": [
+          {
+            "evidence_id": "E_9af4c0e6bde1",
+            "quote": "provide a track along which vesicles move through the cell",
+            "location": "paragraph_12"
+          },
+          {
+            "evidence_id": "E_a7a76831c1a0",
+            "quote": "used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell",
+            "location": "abstract"
+          }
+        ],
+        "compile_status": "PARTIALLY_COMPILED",
+        "full_semantics": false,
+        "exceptions": [
+          {
+            "exception_id": "exc_track_absent",
+            "description": "If microtubules are not present or not serving as tracks, this provision does not hold.",
+            "evidence_ids": [
+              "E_9af4c0e6bde1"
+            ]
+          }
+        ],
+        "model_hash": "acbbd03a10c9f47846ddb088f1aa8e61a6e7396049013d1fcd09221212e2c29b"
+      },
+      {
+        "constraint_id": "obs_vesicle_transport_relation",
+        "process_semantic_id": "proc_vesicle_transport_along_microtubule",
+        "entity_semantic_ids": [
+          "ent_vesicle",
+          "ent_microtubule",
+          "ent_motor_protein"
+        ],
+        "relation_semantic_id": "rel_motor_protein_transports_vesicle",
+        "predicate": "relation_holds_during",
+        "spec": {
+          "predicate": "relation_holds_during",
+          "participant_roles": [
+            "cargo",
+            "track",
+            "motor"
+          ],
+          "interval": {
+            "event_role": "proc_vesicle_transport_along_microtubule"
+          },
+          "source_role": "motor",
+          "target_role": "cargo",
+          "relation_type": "rel_motor_protein_transports_vesicle"
+        },
+        "participant_entity_refs": {
+          "cargo": "ent_vesicle",
+          "track": "ent_microtubule",
+          "motor": "ent_motor_protein"
+        },
+        "evidence_ids": [
+          "E_a7a76831c1a0"
+        ],
+        "source_support": [
+          {
+            "evidence_id": "E_a7a76831c1a0",
+            "quote": "used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell",
+            "location": "abstract"
+          }
+        ],
+        "compile_status": "PARTIALLY_COMPILED",
+        "full_semantics": false,
+        "exceptions": [
+          {
+            "exception_id": "exc_no_track",
+            "description": "Motor-protein-dependent vesicle transport along microtubules does not occur if no microtubule track is available.",
+            "evidence_ids": [
+              "E_9af4c0e6bde1"
+            ]
+          },
+          {
+            "exception_id": "exc_no_motor",
+            "description": "If no active motor protein is available to engage the vesicle cargo, transport along the microtubule does not proceed.",
+            "evidence_ids": [
+              "E_a7a76831c1a0"
+            ]
+          }
+        ],
+        "model_hash": "acbbd03a10c9f47846ddb088f1aa8e61a6e7396049013d1fcd09221212e2c29b"
+      },
+      {
+        "constraint_id": "obs_vesicle_on_microtubule_during_transport",
+        "process_semantic_id": "proc_vesicle_transport_along_microtubule",
+        "entity_semantic_ids": [
+          "ent_vesicle",
+          "ent_microtubule",
+          "ent_motor_protein"
+        ],
+        "relation_semantic_id": "rel_microtubule_track_for_vesicle",
+        "predicate": "relation_holds_during",
+        "spec": {
+          "predicate": "relation_holds_during",
+          "participant_roles": [
+            "cargo",
+            "track",
+            "motor"
+          ],
+          "interval": {
+            "event_role": "proc_vesicle_transport_along_microtubule"
+          },
+          "source_role": "track",
+          "target_role": "cargo",
+          "relation_type": "rel_microtubule_track_for_vesicle"
+        },
+        "participant_entity_refs": {
+          "cargo": "ent_vesicle",
+          "track": "ent_microtubule",
+          "motor": "ent_motor_protein"
+        },
+        "evidence_ids": [
+          "E_9af4c0e6bde1",
+          "E_a7a76831c1a0"
+        ],
+        "source_support": [
+          {
+            "evidence_id": "E_9af4c0e6bde1",
+            "quote": "provide a track along which vesicles move through the cell",
+            "location": "paragraph_12"
+          },
+          {
+            "evidence_id": "E_a7a76831c1a0",
+            "quote": "used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell",
+            "location": "abstract"
+          }
+        ],
+        "compile_status": "PARTIALLY_COMPILED",
+        "full_semantics": false,
+        "exceptions": [
+          {
+            "exception_id": "exc_no_track",
+            "description": "Motor-protein-dependent vesicle transport along microtubules does not occur if no microtubule track is available.",
+            "evidence_ids": [
+              "E_9af4c0e6bde1"
+            ]
+          },
+          {
+            "exception_id": "exc_no_motor",
+            "description": "If no active motor protein is available to engage the vesicle cargo, transport along the microtubule does not proceed.",
+            "evidence_ids": [
+              "E_a7a76831c1a0"
+            ]
+          }
+        ],
+        "model_hash": "acbbd03a10c9f47846ddb088f1aa8e61a6e7396049013d1fcd09221212e2c29b"
+      },
+      {
+        "constraint_id": "obs_motor_cargo_binding",
+        "process_semantic_id": "proc_motor_protein_binding_to_cargo",
+        "entity_semantic_ids": [
+          "ent_motor_protein",
+          "ent_vesicle"
+        ],
+        "relation_semantic_id": "rel_motor_protein_transports_vesicle",
+        "predicate": "relation_holds_during",
+        "spec": {
+          "predicate": "relation_holds_during",
+          "participant_roles": [
+            "motor",
+            "cargo"
+          ],
+          "interval": {
+            "event_role": "proc_motor_protein_binding_to_cargo"
+          },
+          "source_role": "motor",
+          "target_role": "cargo",
+          "relation_type": "rel_motor_protein_transports_vesicle"
+        },
+        "participant_entity_refs": {
+          "motor": "ent_motor_protein",
+          "cargo": "ent_vesicle"
+        },
+        "evidence_ids": [
+          "E_a7a76831c1a0"
+        ],
+        "source_support": [
+          {
+            "evidence_id": "E_a7a76831c1a0",
+            "quote": "used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell",
+            "location": "abstract"
+          }
+        ],
+        "compile_status": "PARTIALLY_COMPILED",
+        "full_semantics": false,
+        "exceptions": [
+          {
+            "exception_id": "exc_no_motor_cargo_binding",
+            "description": "If no active motor protein engages the vesicle, this binding process does not occur.",
+            "evidence_ids": [
+              "E_a7a76831c1a0"
+            ]
+          }
+        ],
+        "model_hash": "acbbd03a10c9f47846ddb088f1aa8e61a6e7396049013d1fcd09221212e2c29b"
+      }
+    ],
+    "frozen_standard": "Typed observable text/roles/relations as independently reviewed; no semantic replacement"
+  },
+  "scope": "Schema/exact quotations and state reachability do not override independent scientific REVISE"
+}

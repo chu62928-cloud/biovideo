@@ -1,0 +1,137 @@
+{
+  "video_sha256": "c035449dc554645baf35a11b7855b8d0a85253ea2d06af39bf780bdde32e9f2d",
+  "scene_sha256": "ed8c6c9e92eec39a4cb458514c6e8084e16b8a139c8375391f7d1dfd2a67c25a",
+  "trace_sha256": "f4b02d7ad8dde9e630839ebc9606972b005396c28ddfce7d79b5d8aae993a3d4",
+  "samples": [
+    {
+      "requested_time": 1.2,
+      "actual_trace_time": 1.1333333333333333,
+      "delta": 0.06666666666666665,
+      "frame_path": "video_evidence/actual_1.2.png",
+      "frame_sha256": "18bf913b8702280d8599a6c61c6f996b6fb95080508e5c747c21ee636cc63432",
+      "registered_label_bbox_overlaps": [],
+      "evidence_level": "RUNTIME_OBSERVED_AND_ACTUAL_DECODED_FRAME",
+      "pixel_double_image_detection": "NOT_MEASURED"
+    },
+    {
+      "requested_time": 2.2,
+      "actual_trace_time": 2.1333333333333333,
+      "delta": 0.06666666666666687,
+      "frame_path": "video_evidence/actual_2.2.png",
+      "frame_sha256": "4c92586b6d009b53195bf08775cea7a7d63ee1598d1df3b78042dbe78c36bb12",
+      "registered_label_bbox_overlaps": [],
+      "evidence_level": "RUNTIME_OBSERVED_AND_ACTUAL_DECODED_FRAME",
+      "pixel_double_image_detection": "NOT_MEASURED"
+    },
+    {
+      "requested_time": 4.2,
+      "actual_trace_time": 4.133333333333338,
+      "delta": 0.06666666666666199,
+      "frame_path": "video_evidence/actual_4.2.png",
+      "frame_sha256": "d6bafc71272d886a795d40b3da08d81e543acc794728fa9ad8c5f2cb7432090a",
+      "registered_label_bbox_overlaps": [],
+      "evidence_level": "RUNTIME_OBSERVED_AND_ACTUAL_DECODED_FRAME",
+      "pixel_double_image_detection": "NOT_MEASURED"
+    }
+  ],
+  "original_reviews": [
+    "video_evidence/video_review_23.json",
+    "video_evidence/video_review_29.json",
+    "video_evidence/video_review_32.json"
+  ],
+  "dispute_status": "NOT_CORROBORATED",
+  "interpretation": "Exact frames plus earlier isolated frame review do not corroborate specific label-doubling claim. This is not proof all frames are artifact-free; no repeat same-model PASS voting.",
+  "request_attachment_audit": [
+    {
+      "request_file": "v42_12_07c2dd5e.request.json",
+      "video_sha256": "23f7820d8c74ded518aab417c23d2efb64d6e60b832b7a02b85b3af81214cd05",
+      "include_grid": true,
+      "decoded_frame_attachments": [],
+      "reference_contamination_risk": true
+    },
+    {
+      "request_file": "v42_23_c02af519.request.json",
+      "video_sha256": "c035449dc554645baf35a11b7855b8d0a85253ea2d06af39bf780bdde32e9f2d",
+      "include_grid": false,
+      "decoded_frame_attachments": [],
+      "reference_contamination_risk": false
+    },
+    {
+      "request_file": "v42_29_4a486fcb.request.json",
+      "video_sha256": "c035449dc554645baf35a11b7855b8d0a85253ea2d06af39bf780bdde32e9f2d",
+      "include_grid": false,
+      "decoded_frame_attachments": [],
+      "reference_contamination_risk": false
+    },
+    {
+      "request_file": "v42_32_6fce19f4.request.json",
+      "video_sha256": "c035449dc554645baf35a11b7855b8d0a85253ea2d06af39bf780bdde32e9f2d",
+      "include_grid": false,
+      "decoded_frame_attachments": [
+        {
+          "path": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/actual_frame_0.2.png",
+          "sha256": "7ebc2b9708eb4fd05f0e77d547f05849f7753a123300529b938d4e9371a76ccd"
+        },
+        {
+          "path": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/actual_frame_1.2.png",
+          "sha256": "18bf913b8702280d8599a6c61c6f996b6fb95080508e5c747c21ee636cc63432"
+        },
+        {
+          "path": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/actual_frame_2.2.png",
+          "sha256": "4c92586b6d009b53195bf08775cea7a7d63ee1598d1df3b78042dbe78c36bb12"
+        },
+        {
+          "path": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/actual_frame_3.2.png",
+          "sha256": "37e5d1bee161168212fda5de9432ec769349e56ceecc5ad950a5c951732007b9"
+        },
+        {
+          "path": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/actual_frame_4.2.png",
+          "sha256": "d6bafc71272d886a795d40b3da08d81e543acc794728fa9ad8c5f2cb7432090a"
+        },
+        {
+          "path": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/actual_frame_5.2.png",
+          "sha256": "42c06bb1bed26978392281c24e340ead64bc4fa4418eb63d5e3c5610867e4549"
+        },
+        {
+          "path": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/actual_frame_6.2.png",
+          "sha256": "f2c72a593f2f263cbf3249504051b3e6a967958bfa228e5e7603100826aad711"
+        },
+        {
+          "path": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/actual_frame_7.2.png",
+          "sha256": "67cad946e0686f78282bd2bc7240328da44800655524654c569da12561d72f69"
+        },
+        {
+          "path": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/actual_frame_7.8.png",
+          "sha256": "c961752a3c0897eee9ae030997769a6cd242834158ebc1863a1772c121e7d6c3"
+        }
+      ],
+      "reference_contamination_risk": false
+    }
+  ],
+  "declared_vs_observed": {
+    "samples": 124,
+    "issues": [],
+    "relation_evidence_counts": {
+      "DECLARED_ONLY": 355
+    },
+    "object_evidence_levels": {
+      "pole_left": "DECLARED_ONLY",
+      "pole_right": "DECLARED_ONLY",
+      "metaphase_plate": "DECLARED_ONLY",
+      "sister_chromatid_A": "DECLARED_ONLY",
+      "sister_chromatid_B": "DECLARED_ONLY",
+      "kinetochore_A": "DECLARED_ONLY",
+      "kinetochore_B": "DECLARED_ONLY",
+      "kmt_left": "DECLARED_ONLY",
+      "kmt_right": "DECLARED_ONLY"
+    },
+    "pixel_verification": "NOT_MEASURED",
+    "claim": "Runtime geometry visibility and endpoints only; no pixel or biological PASS inferred."
+  },
+  "unproven": [
+    "Every-frame pixel object tracking",
+    "All molecular geometry",
+    "Assembly parent semantics",
+    "Full teaching comprehensibility"
+  ]
+}

@@ -1,0 +1,370 @@
+[
+  {
+    "evidence_id": "E_d826e3e9d749",
+    "url": "https://openstax.org/books/biology-2e/pages/14-3-basics-of-dna-replication",
+    "title": "14.3 Basics of DNA Replication - Biology 2e | OpenStax",
+    "author_or_institution": "openstax.org",
+    "source_type": "retrieved_scientific_webpage",
+    "biological_scope": "Requires independent scope verification against quoted passages",
+    "accessed_utc": "2026-11-25T10:59:17Z",
+    "content_sha256": "c906783a23b4a7971c6628849d6df7f4c5f3fba0065b97d9ca12aae843a4fa62",
+    "saved_text": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/research/dna_replication/E_d826e3e9d749.txt",
+    "passages": [
+      {
+        "location": "paragraph_0",
+        "text": "By the end of this section, you will be able to do the following:"
+      },
+      {
+        "location": "paragraph_1",
+        "text": "The elucidation of the structure of the double helix provided a hint as to how DNA divides and makes copies of itself. In their 1953 paper, Watson and Crick penned an incredible understatement: \"It has not escaped our notice that the specific pairing we have postulated immediately suggests a possible copying mechanism for the genetic material.\" With specific base pairs, the sequence of one DNA strand can be predicted from its complement. The double-helix model suggests that the two strands of the double helix separate during replication, and each strand serves as a template from which the new complementary strand is copied. What was not clear was how the replication took place. There were three models suggested ( Figure 14.12 ): conservative, semi-conservative, and dispersive ."
+      },
+      {
+        "location": "paragraph_2",
+        "text": "Figure 14.12 The three suggested models of DNA replication. Gray indicates the original DNA strands, and blue indicates newly synthesized DNA."
+      },
+      {
+        "location": "paragraph_3",
+        "text": "In conservative replication, the parental DNA remains together, and the newly formed daughter strands are together. The semi-conservative method suggests that each of the two parental DNA strands acts as a template for new DNA to be synthesized; after replication, each double-stranded DNA includes one parental or “old” strand and one “new” strand. In the dispersive model, both copies of DNA have double-stranded segments of parental DNA and newly synthesized DNA interspersed."
+      },
+      {
+        "location": "paragraph_4",
+        "text": "Meselson and Stahl were interested in understanding how DNA replicates. They grew E. coli for several generations in a medium containing a “heavy” isotope of nitrogen ( 15 N), which gets incorporated into nitrogenous bases, and eventually into the DNA ( Figure 14.13 )."
+      },
+      {
+        "location": "paragraph_5",
+        "text": "Figure 14.13 Meselson and Stahl experimented with E. coli grown first in heavy nitrogen ( 15 N) then in 14 N. DNA grown in 15 N (red band) is heavier than DNA grown in 14 N (orange band), and sediments to a lower level in cesium chloride solution in an ultracentrifuge. When DNA grown in 15 N is switched to media containing 14 N, after one round of cell division the DNA sediments halfway between the 15 N and 14 N levels, indicating that it now contains fifty percent 14 N. In subsequent cell divisions, an increasing amount of DNA contains 14 N only. These data support the semi-conservative replication model. (credit: modification of work by Mariana Ruiz Villareal)"
+      },
+      {
+        "location": "paragraph_6",
+        "text": "The E. coli culture was then placed into medium containing 14 N and allowed to grow for several generations. After each of the first few generations, the cells were harvested and the DNA was isolated, then centrifuged at high speeds in an ultracentrifuge. During the centrifugation, the DNA was loaded into a gradient (typically a solution of salt such as cesium chloride or sucrose) and spun at high speeds of 50,000 to 60,000 rpm. Under these circumstances, the DNA will form a band according to its buoyant density : the density within the gradient at which it floats. DNA grown in 15 N will form a band at a higher density position (i.e., farther down the centrifuge tube) than that grown in 14 N. Meselson and Stahl noted that after one generation of growth in 14 N after they had been shifted from 15 N, the single band observed was intermediate in position in between DNA of cells grown exclusively in 15 N and 14 N. This suggested either a semi-conservative or dispersive mode of replication. The DNA harvested from cells grown for two generations in 14 N formed two bands: one DNA band was at the intermediate position between 15 N and 14 N, and the other corresponded to the band of 14 N DNA. These results could only be explained if DNA replicates in a semi-conservative manner. And for this reason, therefore, the other two models were ruled out."
+      },
+      {
+        "location": "paragraph_7",
+        "text": "During DNA replication, each of the two strands that make up the double helix serves as a template from which new strands are copied. The new strands will be complementary to the parental or “old” strands. When two daughter DNA copies are formed, they have the same sequence and are divided equally into the two daughter cells."
+      },
+      {
+        "location": "paragraph_9",
+        "text": "Access for free at https://openstax.org/books/biology-2e/pages/1-introduction"
+      },
+      {
+        "location": "paragraph_10",
+        "text": "Access for free at https://openstax.org/books/biology-2e/pages/1-introduction"
+      },
+      {
+        "location": "paragraph_11",
+        "text": "The information below includes the information needed to generate citations in most \n  major styles (APA, MLA, etc.); you must reformat and organize the information as needed \n  to fit the requirements of the style. Use the information below to generate a citation. \n  We recommend using a citation tool such as this one ."
+      },
+      {
+        "location": "paragraph_12",
+        "text": "© Jul 22, 2026 OpenStax. Textbook content produced by OpenStax is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike License. The OpenStax name, OpenStax logo, OpenStax book covers, OpenStax CNX name, and OpenStax CNX logo, \n    and Rice University name, and Rice University logo trademarks, or wordmarks are not subject to the Creative \n    Commons license and may not be reproduced without the prior and express written consent of Rice University."
+      }
+    ],
+    "figures": [
+      {
+        "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/891cb2e6c3f1d6a238ad6b341415ad17e5e2cfe5",
+        "caption": "Figure 14.12 The three suggested models of DNA replication. Gray indicates the original DNA strands, and blue indicates newly synthesized DNA.",
+        "alt": "Illustration shows the conservative, semi-conservative, and dispersive models of D N A synthesis. In the conservative model, the D N A is replicated and both newly synthesized strands are paired together. In the semi-conservative model, each newly synthesized strand pairs with a parent strand. In the dispersive model, newly synthesized D N A is interspersed with parent D N A within both D N A strands.",
+        "source_page": "https://openstax.org/books/biology-2e/pages/14-3-basics-of-dna-replication"
+      },
+      {
+        "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/35890d77913ada3576586cc786f313501980d764",
+        "caption": "Figure 14.13 Meselson and Stahl experimented with E. coli grown first in heavy nitrogen ( 15 N) then in 14 N. DNA grown in 15 N (red band) is heavier than DNA grown in 14 N (orange band), and sediments to a lower level in cesium chloride solution in an ultracentrifuge. When DNA grown in 15 N is switched to media containing 14 N, after one round of cell division the DNA sediments halfway between the 15 N and 14 N levels, indicating that it now contains fifty percent 14 N. In subsequent cell divisions, an increasing amount of DNA contains 14 N only. These data support the semi-conservative replication model. (credit: modification of work by Mariana Ruiz Villareal)",
+        "alt": "Illustration shows an experiment in which E coli was grown initially in media containing superscript 15 baseline upper case N nucleotides. When the D N A was extracted and run in an ultracentrifuge, a band of D N A appeared low in the tube. The culture was next placed in the superscript 14 baseline upper case N medium. After one generation, all of the D N A appeared in the middle of the tube, indicating that the D N A was a mixture of half superscript 14 baseline upper N and half superscript 15 baseline upper N, D N A. After two generations, half of the D N A appeared in the middle of the tube, and half appeared higher up, indicating that half the D N A contained 50% superscript 15 baseline upper N, and half contained superscript 14 baseline upper N only. In subsequent generations, more and more of the D N A appeared in the upper, superscript 14 baseline upper N band.",
+        "source_page": "https://openstax.org/books/biology-2e/pages/14-3-basics-of-dna-replication"
+      }
+    ],
+    "fact_support": [],
+    "conflicts": [],
+    "trust_limitations": "Publisher authority and exact quotes do not establish entailment; independent contract review required",
+    "status": "RETRIEVED"
+  },
+  {
+    "evidence_id": "E_d8ffea5a5785",
+    "url": "https://openstax.org/books/biology-2e/pages/14-5-dna-replication-in-eukaryotes",
+    "title": "14.5 DNA Replication in Eukaryotes - Biology 2e | OpenStax",
+    "author_or_institution": "openstax.org",
+    "source_type": "retrieved_scientific_webpage",
+    "biological_scope": "Requires independent scope verification against quoted passages",
+    "accessed_utc": "2026-11-25T10:59:20Z",
+    "content_sha256": "ff30253eb084c1944c86844790ccf2b6f06c512c2b1406395f6ad0e911342627",
+    "saved_text": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/research/dna_replication/E_d8ffea5a5785.txt",
+    "passages": [
+      {
+        "location": "paragraph_0",
+        "text": "By the end of this section, you will be able to do the following:"
+      },
+      {
+        "location": "paragraph_1",
+        "text": "Eukaryotic genomes are much more complex and larger in size than prokaryotic genomes. Eukaryotes also have a number of different linear chromosomes. The human genome has 3 billion base pairs per haploid set of chromosomes, and 6 billion base pairs are replicated during the S phase of the cell cycle. There are multiple origins of replication on each eukaryotic chromosome; humans can have up to 100,000 origins of replication across the genome. The rate of replication is approximately 100 nucleotides per second, much slower than prokaryotic replication. In yeast, which is a eukaryote, special sequences known as autonomously replicating sequences (ARS) are found on the chromosomes. These are equivalent to the origin of replication in E. coli ."
+      },
+      {
+        "location": "paragraph_2",
+        "text": "The number of DNA polymerases in eukaryotes is much more than in prokaryotes: 14 are known, of which five are known to have major roles during replication and have been well studied. They are known as pol α , pol β , pol γ , pol δ , and pol ε ."
+      },
+      {
+        "location": "paragraph_3",
+        "text": "The essential steps of replication are the same as in prokaryotes. Before replication can start, the DNA has to be made available as a template. Eukaryotic DNA is bound to basic proteins known as histones to form structures called nucleosomes. Histones must be removed and then replaced during the replication process, which helps to account for the lower replication rate in eukaryotes. The chromatin (the complex between DNA and proteins) may undergo some chemical modifications, so that the DNA may be able to slide off the proteins or be accessible to the enzymes of the DNA replication machinery. At the origin of replication, a pre-replication complex is made with other initiator proteins. Helicase and other proteins are then recruited to start the replication process ( Table 14.2 )."
+      },
+      {
+        "location": "paragraph_4",
+        "text": "A helicase using the energy from ATP hydrolysis opens up the DNA helix. Replication forks are formed at each replication origin as the DNA unwinds. The opening of the double helix causes over-winding, or supercoiling, in the DNA ahead of the replication fork. These are resolved with the action of topoisomerases. Primers are formed by the enzyme primase, and using the primer, DNA pol can start synthesis. Three major DNA polymerases are then involved: α, δ and ε. DNA pol α adds a short (20 to 30 nucleotides) DNA fragment to the RNA primer on both strands, and then hands off to a second polymerase. While the leading strand is continuously synthesized by the enzyme pol ε , the lagging strand is synthesized by pol δ . A sliding clamp protein known as PCNA (proliferating cell nuclear antigen) holds the DNA pol in place so that it does not slide off the DNA. As pol δ runs into the primer RNA on the lagging strand, it displaces it from the DNA template. The displaced primer RNA is then removed by RNase H (AKA flap endonuclease ) and replaced with DNA nucleotides. The Okazaki fragments in the lagging strand are joined after the replacement of the RNA primers with DNA. The gaps that remain are sealed by DNA ligase, which forms the phosphodiester bond."
+      },
+      {
+        "location": "paragraph_5",
+        "text": "Unlike prokaryotic chromosomes, eukaryotic chromosomes are linear. As you’ve learned, the enzyme DNA pol can add nucleotides only in the 5' to 3' direction. In the leading strand, synthesis continues until the end of the chromosome is reached. On the lagging strand, DNA is synthesized in short stretches, each of which is initiated by a separate primer. When the replication fork reaches the end of the linear chromosome, there is no way to replace the primer on the 5’ end of the lagging strand. The DNA at the ends of the chromosome thus remains unpaired, and over time these ends, called telomeres, may get progressively shorter as cells continue to divide."
+      },
+      {
+        "location": "paragraph_6",
+        "text": "Telomeres comprise repetitive sequences that code for no particular gene. In humans, a six-base-pair sequence, TTAGGG, is repeated 100 to 1000 times in the telomere regions. In a way, these telomeres protect the genes from getting deleted as cells continue to divide. The telomeres are added to the ends of chromosomes by a separate enzyme, telomerase ( Figure 14.16 ), whose discovery helped in the understanding of how these repetitive chromosome ends are maintained. The telomerase enzyme contains a catalytic part and a built-in RNA template. It attaches to the end of the chromosome, and DNA nucleotides complementary to the RNA template are added on the 3' end of the DNA strand. Once the 3' end of the lagging strand template is sufficiently elongated, DNA polymerase can add the nucleotides complementary to the ends of the chromosomes. Thus, the ends of the chromosomes are replicated."
+      },
+      {
+        "location": "paragraph_7",
+        "text": "Figure 14.15 The ends of linear chromosomes are maintained by the action of the telomerase enzyme. Credit: Rao, A. and Fletcher, S. Department of Biology, Texas A&M University."
+      },
+      {
+        "location": "paragraph_8",
+        "text": "Telomerase is typically active in germ cells and adult stem cells. It is not active in adult somatic cells. For their discovery of telomerase and its action, Elizabeth Blackburn, Carol W. Greider, and Jack W. Szostak ( Figure 14.16 ) received the Nobel Prize for Medicine and Physiology in 2009. Later research using HeLa cells (obtained from Henrietta Lacks)  confirmed that telomerase is present in human cells. And in 2001, researchers including Diane L. Wright found that telomerase is necessary for cells in human embryos to rapidly proliferate."
+      },
+      {
+        "location": "paragraph_9",
+        "text": "Figure 14.16 Elizabeth Blackburn, 2009 Nobel Laureate, is one of the scientists who discovered how telomerase works. (credit: US Embassy Sweden)"
+      },
+      {
+        "location": "paragraph_10",
+        "text": "Cells that undergo cell division continue to have their telomeres shortened because most somatic cells do not make telomerase. This essentially means that telomere shortening is associated with aging. With the advent of modern medicine, preventative health care, and healthier lifestyles, the human life span has increased, and there is an increasing demand for people to look younger and have a better quality of life as they grow older."
+      },
+      {
+        "location": "paragraph_11",
+        "text": "In 2010, scientists found that telomerase can reverse some age-related conditions in mice. This may have potential in regenerative medicine. 2 Telomerase-deficient mice were used in these studies; these mice have tissue atrophy, stem cell depletion, organ system failure, and impaired tissue injury responses. Telomerase reactivation in these mice caused extension of telomeres, reduced DNA damage, reversed neurodegeneration, and improved the function of the testes, spleen, and intestines. Thus, telomere reactivation may have potential for treating age-related diseases in humans."
+      },
+      {
+        "location": "paragraph_12",
+        "text": "Cancer is characterized by uncontrolled cell division of abnormal cells. The cells accumulate mutations, proliferate uncontrollably, and can migrate to different parts of the body through a process called metastasis. Scientists have observed that cancerous cells have considerably shortened telomeres and that telomerase is active in these cells. Interestingly, only after the telomeres were shortened in the cancer cells did the telomerase become active. If the action of telomerase in these cells can be inhibited by drugs during cancer therapy, then the cancerous cells could potentially be stopped from further division."
+      },
+      {
+        "location": "paragraph_13",
+        "text": "Access for free at https://openstax.org/books/biology-2e/pages/1-introduction"
+      },
+      {
+        "location": "paragraph_14",
+        "text": "Access for free at https://openstax.org/books/biology-2e/pages/1-introduction"
+      },
+      {
+        "location": "paragraph_15",
+        "text": "The information below includes the information needed to generate citations in most \n  major styles (APA, MLA, etc.); you must reformat and organize the information as needed \n  to fit the requirements of the style. Use the information below to generate a citation. \n  We recommend using a citation tool such as this one ."
+      },
+      {
+        "location": "paragraph_16",
+        "text": "© Jul 22, 2026 OpenStax. Textbook content produced by OpenStax is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike License. The OpenStax name, OpenStax logo, OpenStax book covers, OpenStax CNX name, and OpenStax CNX logo, \n    and Rice University name, and Rice University logo trademarks, or wordmarks are not subject to the Creative \n    Commons license and may not be reproduced without the prior and express written consent of Rice University."
+      }
+    ],
+    "figures": [
+      {
+        "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/51d37f92e5fa60c65d661592c3a0256925c8bcc1",
+        "caption": "Figure 14.15 The ends of linear chromosomes are maintained by the action of the telomerase enzyme. Credit: Rao, A. and Fletcher, S. Department of Biology, Texas A&M University.",
+        "alt": "The process of Telomere Replication is shown. The starting image has an unreplicated end, and is missing DNA on the lagging strang.  Telomerase has an associated R N A that complements the 5 prime overhang at the end of the chromosome, creating an extension of the unreplicated end. The R N A template is used to synthesize the complementary strand, and telomerase again extends the unreplicated end. Telomerase then shifts, and the process is repeated. Next, primase and D N A polymerase synthesize the rest of the complementary strand. And the lagging strand is completed.",
+        "source_page": "https://openstax.org/books/biology-2e/pages/14-5-dna-replication-in-eukaryotes"
+      },
+      {
+        "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/75e41fc0c90afb8b222007d3c5bb1dd027f8c94c",
+        "caption": "Figure 14.16 Elizabeth Blackburn, 2009 Nobel Laureate, is one of the scientists who discovered how telomerase works. (credit: US Embassy Sweden)",
+        "alt": "Photo of Elizabeth Blackburn.",
+        "source_page": "https://openstax.org/books/biology-2e/pages/14-5-dna-replication-in-eukaryotes"
+      }
+    ],
+    "fact_support": [],
+    "conflicts": [],
+    "trust_limitations": "Publisher authority and exact quotes do not establish entailment; independent contract review required",
+    "status": "RETRIEVED"
+  },
+  {
+    "evidence_id": "E_fff1d5f81aa1",
+    "url": "https://www.nature.com/scitable/topicpage/dna-replication-and-causes-of-mutation-409/",
+    "title": "Errors in DNA Replication | Learn Science at Scitable",
+    "author_or_institution": "www.nature.com",
+    "source_type": "retrieved_scientific_webpage",
+    "biological_scope": "Requires independent scope verification against quoted passages",
+    "accessed_utc": "2026-11-25T11:59:52Z",
+    "content_sha256": "fc4d6e1dd1650df5ef57396f18df4426ee196ded681582e13393beccbb52f911",
+    "saved_text": "/autodl-tmp/code2biovideo/biovideo-v4.3.1/Code2Video/experiments/biology_expert_v4_3_1/research/dna_replication/E_fff1d5f81aa1.txt",
+    "passages": [
+      {
+        "location": "paragraph_0",
+        "text": "This page has been archived and is no longer updated"
+      },
+      {
+        "location": "paragraph_2",
+        "text": "After James Watson and Francis Crick published their model of the double-helix structure of DNA in 1953, biologists initially speculated that most replication errors were caused by what are called tautomeric shifts. Both the purine and pyrimidine bases in DNA exist in different chemical forms, or tautomers, in which the protons occupy different positions in the molecule (Figure 1). The Watson-Crick model required that the nucleotide bases be in their more common \"keto\" form (Watson & Crick, 1953). Scientists believed that if and when a nucleotide base shifted into its rarer tautomeric form (the \"imino\" or \"enol\" form), a likely result would be base-pair mismatching. But evidence for these types of tautomeric shifts remains sparse. Figure 1: Tautomeric shifts in nucleotide bases. The purine and pyrimidine bases in DNA exist in two different tautomers, or chemical forms. (A) Nucleotide bases shift from their common “keto” form to their rarer, tautomeric “enol” form. (B) In common base pair arrangements, the common form of thymine (T) binds with the common form of adenine (A), and the common form of cytosine (C) binds with the common form of guanine (G). (C) Rare base-pairing arrangements result when one nucleotide in a base pair is the rare form instead of the common form. Here, the rare form of cytosine binds to the common form of adenine instead of guanine. The rare form of guanine binds to the common form of thymine instead of cytosine. © 2014 Nature Education Adapted from Pierce, Benjamin. Genetics: A Conceptual Approach , 2nd ed. All rights reserved. Figure Detail"
+      },
+      {
+        "location": "paragraph_4",
+        "text": "Today, scientists suspect that most DNA replication errors are caused by mispairings of a different nature: either between different but nontautomeric chemical forms of bases (e.g., bases with an extra proton, which can still bind but often with a mismatched nucleotide, such as an A with a G instead of a T) or between \"normal\" bases that nonetheless bond inappropriately (e.g., again, an A with a G instead of a T) because of a slight shift in position of the nucleotides in space (Figure 2). This type of mispairing is known as wobble . It occurs because the DNA double helix is flexible and able to accommodate slightly misshaped pairings (Crick, 1966). Figure 2: Wobble in mismatched nucleotide base pairs. A shift in the position of nucleotides causes a wobble between a normal thymine and normal guanine. An additional proton on adenine causes a wobble in an adenine-cytosine base-pair. © Nature Education Adapted from Pierce, Benjamin. Genetics: A Conceptual Approach, 2nd ed. All rights reserved."
+      },
+      {
+        "location": "paragraph_6",
+        "text": "Replication errors can also involve insertions or deletions of nucleotide bases that occur during a process called strand slippage . Sometimes, a newly synthesized strand loops out a bit, resulting in the addition of an extra nucleotide base (Figure 3). Other times, the template strand loops out a bit, resulting in the omission, or deletion, of a nucleotide base in the newly synthesized, or primer , strand. Regions of DNA containing many copies of small repeated sequences are particularly prone to this type of error."
+      },
+      {
+        "location": "paragraph_9",
+        "text": "DNA polymerase enzymes are amazingly particular with respect to their choice of nucleotides during DNA synthesis, ensuring that the bases added to a growing strand are correctly paired with their complements on the template strand (i.e., A's with T's, and C's with G's). Nonetheless, these enzymes do make mistakes at a rate of about 1 per every 100,000 nucleotides. That might not seem like much, until you consider how much DNA a cell has. In humans, with our 6 billion base pairs in each diploid cell, that would amount to about 120,000 mistakes every time a cell divides!"
+      },
+      {
+        "location": "paragraph_11",
+        "text": "Fortunately, cells have evolved highly sophisticated means of fixing most, but not all, of those mistakes. Some of the mistakes are corrected immediately during replication through a process known as proofreading , and some are corrected after replication in a process called mismatch repair . When an incorrect nucleotide is added to the growing strand, replication is stalled by the fact that the nucleotide's exposed 3′-OH group is in the \"wrong\" position. ( Recall that new nucleotides are added to the growing strand during replication by means of their 5′-phosphate group binding to the 3′-OH group of the previous nucleotide on the strand.) During proofreading, DNA polymerase enzymes recognize this and replace the incorrectly inserted nucleotide so that replication can continue. Proofreading fixes about 99% of these types of errors, but that's still not good enough for normal cell functioning."
+      },
+      {
+        "location": "paragraph_13",
+        "text": "After replication, mismatch repair reduces the final error rate even further. Incorrectly paired nucleotides cause deformities in the secondary structure of the final DNA molecule. During mismatch repair, enzymes recognize and fix these deformities by removing the incorrectly paired nucleotide and replacing it with the correct nucleotide."
+      },
+      {
+        "location": "paragraph_15",
+        "text": "Incorrectly paired nucleotides that still remain following mismatch repair become permanent mutations after the next cell division . This is because once such mistakes are established, the cell no longer recognizes them as errors. Consider the case of wobble-induced replication errors. When these mistakes are not corrected, the incorrectly sequenced DNA strand serves as a template for future replication events, causing all the base-pairings thereafter to be wrong. For instance, in the lower half of Figure 2, the original strand had a C-G pair; then, during replication, cytosine (C) is incorrectly matched to adenine (A) because of wobble. In this example, wobble occurs because A has an extra hydrogen atom. In the next round of cell division, the double strand with the C-A pairing would separate during replication, each strand serving as a template for synthesis of a new DNA molecule. At that particular spot, C would pair with G, forming a double helix with the same sequence as its original (i.e., before the wobble occurred), but A would pair with T, forming a new DNA molecule with an A-T pair in place of the original C-G pair. This type of mutation is known as a base, or base-pair, substitution. Base substitutions involving replacement of one purine for another or one pyrimidine for another (e.g., a mismatched A-A pair, instead of A-T) are known as transitions; the replacement of a purine by a pyrimidine, or vice versa, is called a transversion ."
+      },
+      {
+        "location": "paragraph_17",
+        "text": "Likewise, when strand-slippage replication errors are not corrected, they become insertion and deletion mutations. Much of the early research on strand-slippage mutations was conducted by George Streisinger in the 1970s. Streisinger, a professor at the University of Oregon and a fish hobbyist, is known by some as the \"founding father of zebrafish research.\" However, he is also known for his work with phage T4, a bacterial virus . Streisinger used this virus to show that most nucleotide insertion and deletion mutations occur in areas of DNA that contain many repeated sequences (also called tandem repeats), and he formulated the strand-slippage hypothesis to explain why this was the case (Streisinger et al. , 1966). (In Figure 3, notice the series of repeat T's on the template strand where the slippage has occurred.) When slippage takes place, the presence of nearby duplicate bases stabilizes the slippage so that replication can proceed. During the next round of replication, when the two strands separate, the insertion or deletion on either the template or primer strand, respectively, will be perpetuated as a permanent mutation . Scientists have collected enough evidence to confirm Streisinger's strand-slippage hypothesis, and this type of mutagenesis remains an active field of scientific research. Figure 3: Strand slippage during DNA replication. When strand slippage occurs during DNA replication, a DNA strand may loop out, resulting in the addition or deletion of a nucleotide on the newly-synthesized strand. © 2014 Nature Education Adapted from Pierce, Benjamin. Genetics: A Conceptual Approach , 2nd ed. All rights reserved. Figure Detail"
+      },
+      {
+        "location": "paragraph_19",
+        "text": "Although most mutations are believed to be caused by replication errors, they can also be caused by various environmentally induced and spontaneous changes to DNA that occur prior to replication but are perpetuated in the same way as unfixed replication errors. As with replication errors, most environmentally induced DNA damage is repaired, resulting in fewer than 1 out of every 1,000 chemically induced lesions actually becoming permanent mutations. The same is true of so-called spontaneous mutations. \"Spontaneous\" refers to the fact that the changes occur in the absence of chemical, radiation , or other environmental damage. Rather, they are usually caused by normal chemical reactions that go on in cells, such as hydrolysis. These types of errors include depurination , which occurs when the bond connecting a purine to its deoxyribose sugar is broken by a molecule of water, resulting in a purine-free nucleotide that can't act as a template during DNA replication, and deamination , which results in the loss of an amino group from a nucleotide, again by reaction with water. Again, most of these spontaneous errors are corrected by DNA repair processes. But if this does not occur, a nucleotide that is added to the newly synthesized strand can become a permanent mutation."
+      },
+      {
+        "location": "paragraph_20",
+        "text": "Mutation rates vary substantially among taxa, and even among different parts of the genome in a single organism . Scientists have reported mutation rates as low as 1 mistake per 100 million (10 -8 ) to 1 billion (10 -9 ) nucleotides, mostly in bacteria , and as high as 1 mistake per 100 (10 -2 ) to 1,000 (10 -3 ) nucleotides, the latter in a group of error-prone polymerase genes in humans (Johnson et al. , 2000)."
+      },
+      {
+        "location": "paragraph_22",
+        "text": "Even mutation rates as low as 10 -10 can accumulate quickly over time, particularly in rapidly reproducing organisms like bacteria. This is one reason why antibiotic resistance is such an important public health problem; after all, mutations that accumulate in a population of bacteria provide ample genetic variation with which to adapt (or respond) to the natural selection pressures imposed by antibacterial drugs (Smolinski et al. , 2003). Take E. coli , for example. The genome of this common intestinal bacterium has about 4.2 million base pairs, or 8.4 million bases. Assuming a mutation rate of 10 -9 (i.e., midway between reported estimates of 10 -8 and 10 -10 ), every time E. coli divides, each daughter cell will have, on average, 0.0084 new mutations. Or, another way to think about it is like this: Approximately 1% of bacterial cells will contain a new mutation. That may not seem like much. However, because bacteria can divide as rapidly as twice per hour, a single bacterium can grow into a colony of 1 million cells in only about 10 hours (2 20 = 1,048,576). At that point, approximately 10,000 of these bacteria will have accumulated at least one mutation. As the number of bacteria carrying different mutations increases, so too does the likelihood that at least one of them will develop a drug-resistant phenotype ."
+      },
+      {
+        "location": "paragraph_24",
+        "text": "Likewise, in eukaryotes, cells accumulate mutations as they divide. In humans, if enough somatic mutations (i.e., mutations in body cells rather than sperm or egg cells) accumulate over the course of a person's lifetime, the end result could be cancer. Or, less frequently, some cancer mutations are inherited from one or both parents; these are often referred to as germ-line mutations. One of the first cancer-associated somatic mutations was discovered in 1982, when researchers found that a mutated HRAS gene was associated with bladder cancer (Reddy et al. , 1982). HRAS encodes for a protein that helps regulate cell division. Since then, scientists have identified several hundred additional \"cancer genes.\" Some of them, like the handful of germ-line mutations associated with a form of colorectal cancer known as hereditary nonpolyposis colorectal cancer (HNPCC), play crucial roles in DNA repair (Wijnen et al. , 1998)."
+      },
+      {
+        "location": "paragraph_26",
+        "text": "Of course, not all mutations are \"bad.\" But, because so many mutations can cause cancer, DNA repair is obviously a crucially important property of eukaryotic cells. However, too much of a good thing can be dangerous. If DNA repair were perfect and no mutations ever accumulated, there would be no genetic variation—and this variation serves as the raw material for evolution . Successful organisms have thus evolved the means to repair their DNA efficiently but not too efficiently, leaving just enough genetic variability for evolution to continue."
+      },
+      {
+        "location": "paragraph_28",
+        "text": "Crick, F. H. S. Codon-anticodon pairing: The wobble hypothesis. Journal of Molecular Biology 19 , 548–555 (1966) ( link to article )"
+      },
+      {
+        "location": "paragraph_31",
+        "text": "Johnson, R. E., et al . Fidelity of human DNA polymerase η. Journal of Biological Chemistry 275 , 7447–7450 (2000)"
+      },
+      {
+        "location": "paragraph_33",
+        "text": "Reddy, E. P., et al . A point mutation is responsible for the acquisition of transforming properties by the T24 human bladder carcinoma oncogene. Nature 300 , 149–152 (1982) ( link to article)"
+      },
+      {
+        "location": "paragraph_35",
+        "text": "Smolinski, M., et al . Microbial Threats to Health: Emergence, Detection, and Response (Washington, D.C., National Academies Press, 2003)"
+      },
+      {
+        "location": "paragraph_37",
+        "text": "Streisinger, G., et al . Frameshift mutations and the genetic code. Cold Spring Harbor Symposia on Quantitative Biology 31 , 77–84 (1966)"
+      },
+      {
+        "location": "paragraph_39",
+        "text": "Watson, J. D., & Crick, F. H. S. Molecular structure of nucleic acids. Nature 171 , 737–738 (1953) ( link to article )"
+      },
+      {
+        "location": "paragraph_41",
+        "text": "Wijnen, J., et al . MSH2 genomic deletions are a frequent cause of HNPCC. Nature Genetics 20 , 326–328 (1998) ( link to article )"
+      },
+      {
+        "location": "paragraph_42",
+        "text": "Genetically Modified Organisms (GMOs): Transgenic Crops and Recombinant DNA Technology"
+      },
+      {
+        "location": "paragraph_43",
+        "text": "Recombinant DNA Technology and Transgenic Animals"
+      },
+      {
+        "location": "paragraph_45",
+        "text": "The Biotechnology Revolution: PCR and the Use of Reverse Transcriptase to Clone Expressed Genes"
+      },
+      {
+        "location": "paragraph_46",
+        "text": "DNA Damage & Repair:  Mechanisms for Maintaining DNA Integrity"
+      },
+      {
+        "location": "paragraph_50",
+        "text": "Major Molecular Events of DNA Replication"
+      },
+      {
+        "location": "paragraph_51",
+        "text": "Semi-Conservative DNA Replication: Meselson and Stahl"
+      },
+      {
+        "location": "paragraph_52",
+        "text": "Barbara McClintock and the Discovery of Jumping Genes (Transposons)"
+      },
+      {
+        "location": "paragraph_53",
+        "text": "Functions and Utility of Alu Jumping Genes"
+      },
+      {
+        "location": "paragraph_54",
+        "text": "Transposons, or Jumping Genes: Not Junk DNA?"
+      },
+      {
+        "location": "paragraph_57",
+        "text": "RNA Transcription by RNA Polymerase: Prokaryotes vs Eukaryotes"
+      },
+      {
+        "location": "paragraph_59",
+        "text": "What is a Gene? Colinearity and Transcription Units"
+      },
+      {
+        "location": "paragraph_60",
+        "text": "Barbara McClintock and the Discovery of Jumping Genes (Transposons)"
+      },
+      {
+        "location": "paragraph_61",
+        "text": "Discovery of DNA as the Hereditary Material using Streptococcus pneumoniae"
+      },
+      {
+        "location": "paragraph_62",
+        "text": "Discovery of DNA Structure and Function: Watson and Crick"
+      },
+      {
+        "location": "paragraph_63",
+        "text": "Isolating Hereditary Material: Frederick Griffith, Oswald Avery, Alfred Hershey, and Martha Chase"
+      },
+      {
+        "location": "paragraph_65",
+        "text": "Copy Number Variation and Genetic Disease"
+      },
+      {
+        "location": "paragraph_67",
+        "text": "DNA Deletion and Duplication and the Associated Genetic Disorders"
+      },
+      {
+        "location": "paragraph_68",
+        "text": "Tandem Repeats and Morphological Variation"
+      },
+      {
+        "location": "paragraph_71",
+        "text": "Genome Packaging in Prokaryotes: the Circular Chromosome of E. coli"
+      },
+      {
+        "location": "paragraph_73",
+        "text": "RNA Splicing: Introns, Exons and Spliceosome"
+      },
+      {
+        "location": "paragraph_74",
+        "text": "RNA Transcription by RNA Polymerase: Prokaryotes vs Eukaryotes"
+      },
+      {
+        "location": "paragraph_75",
+        "text": "What is a Gene? Colinearity and Transcription Units"
+      }
+    ],
+    "figures": [],
+    "fact_support": [],
+    "conflicts": [],
+    "trust_limitations": "Publisher authority and exact quotes do not establish entailment; independent contract review required",
+    "status": "RETRIEVED"
+  }
+]

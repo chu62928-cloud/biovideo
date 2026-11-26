@@ -1,0 +1,399 @@
+{
+  "evidence": [],
+  "failures": [
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12560119/fullTextXML",
+      "error": "FeatureNotFound",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12772631/fullTextXML",
+      "error": "FeatureNotFound",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11208286/fullTextXML",
+      "error": "HTTPError",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+      "error": "ValueError",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK9963/",
+      "error": "ValueError",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    }
+  ],
+  "search_records": [
+    {
+      "query": "motor protein dependent vesicle transport along microtubules kinesin dynein ATP mechanism cell biology grades 10-12",
+      "service": "Europe PMC",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=motor+protein+dependent+vesicle+transport+along+microtubules+kinesin+dynein+ATP+mechanism+cell+biology+grades+10-12&format=json&pageSize=3&resultType=core",
+      "results": [
+        {
+          "id": "41147645",
+          "source": "MED",
+          "pmid": "41147645",
+          "pmcid": "PMC12560119",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC12560119"
+            ]
+          },
+          "doi": "10.1002/jev2.70157",
+          "title": "ISEV2025 Abstract Book.",
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-6106-6685"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0001-8143-0958"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-1964-1006"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-2884-0055"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-3067-2556"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-3609-6270"
+              },
+              {
+                "type": "ORCID",
+                "value": "0009-0000-2168-3937"
+              },
+              {
+                "type": "ORCID",
+                "value": "0009-0002-8760-5928"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "S1",
+            "volume": "14",
+            "journalIssueId": 4038342,
+            "dateOfPublication": "2025 Oct",
+            "monthOfPublication": 10,
+            "yearOfPublication": 2025,
+            "journal": {
+              "medlineAbbreviation": "J Extracell Vesicles",
+              "title": "Journal of extracellular vesicles",
+              "essn": "2001-3078",
+              "issn": "2001-3078",
+              "nlmid": "101610479",
+              "isoabbreviation": "J Extracell Vesicles"
+            },
+            "printPublicationDate": "2025-10-01"
+          },
+          "pubYear": "2025",
+          "pageInfo": "e70157",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "abstract",
+              "Journal Article"
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1002/jev2.70157"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC12560119"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC12560119?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 2,
+          "hasReferences": "N",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "license": "cc by-nc-nd",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "gen",
+              "uniprot",
+              "nct",
+              "doi"
+            ]
+          },
+          "dateOfCreation": "2025-10-28",
+          "dateOfRevision": "2025-10-30",
+          "firstPublicationDate": "2025-10-01",
+          "firstIndexDate": "2025-10-28",
+          "fullTextReceivedDate": "2025-11-29",
+          "hasEvaluations": "N"
+        },
+        {
+          "id": "41493844",
+          "source": "MED",
+          "pmid": "41493844",
+          "pmcid": "PMC12772631",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC12772631"
+            ]
+          },
+          "doi": "10.1111/cas.70254",
+          "title": "Abstracts of the 84&lt;sup&gt;th&lt;/sup&gt; Annual Meeting of the Japanese Cancer Association.",
+          "journalInfo": {
+            "volume": "117 Suppl 1",
+            "journalIssueId": 4086054,
+            "dateOfPublication": "2026 Jan",
+            "monthOfPublication": 1,
+            "yearOfPublication": 2026,
+            "journal": {
+              "medlineAbbreviation": "Cancer Sci",
+              "title": "Cancer science",
+              "essn": "1349-7006",
+              "issn": "1347-9032",
+              "nlmid": "101168776",
+              "isoabbreviation": "Cancer Sci"
+            },
+            "printPublicationDate": "2026-01-01"
+          },
+          "pubYear": "2026",
+          "pageInfo": "1-2148",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "abstract",
+              "Journal Article"
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1111/cas.70254"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC12772631"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC12772631?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 0,
+          "hasReferences": "N",
+          "hasTextMinedTerms": "N",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "N",
+          "hasData": "N",
+          "license": "cc by",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCreation": "2026-01-06",
+          "dateOfRevision": "2026-01-08",
+          "firstPublicationDate": "2026-01-01",
+          "firstIndexDate": "2026-01-06",
+          "fullTextReceivedDate": "2026-01-08",
+          "hasEvaluations": "N"
+        },
+        {
+          "id": "PMC11208286",
+          "source": "PMC",
+          "pmcid": "PMC11208286",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC11208286"
+            ]
+          },
+          "title": "Posters",
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-1146-0542"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "Suppl 2",
+            "volume": "14",
+            "journalIssueId": 3791587,
+            "dateOfPublication": "2024 Jun",
+            "monthOfPublication": 6,
+            "yearOfPublication": 2024,
+            "journal": {
+              "medlineAbbreviation": "FEBS Open Bio",
+              "title": "FEBS open bio",
+              "essn": "2211-5463",
+              "issn": "2211-5463",
+              "nlmid": "101580716",
+              "isoabbreviation": "FEBS Open Bio"
+            },
+            "printPublicationDate": "2024-06-01"
+          },
+          "pubYear": "2024",
+          "pageInfo": "92-516",
+          "language": "eng",
+          "pubModel": "Undetermined",
+          "pubTypeList": {
+            "pubType": [
+              "Abstract"
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "PubMedCentral",
+                "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11208286/?tool=EBI"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "PubMedCentral",
+                "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11208286/pdf/?tool=EBI"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC11208286"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC11208286?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 1,
+          "hasReferences": "N",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "N",
+          "hasData": "Y",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "geo",
+              "gen",
+              "refsnp",
+              "omim",
+              "pdb",
+              "doi"
+            ]
+          },
+          "dateOfCreation": "2025-02-03",
+          "dateOfRevision": "2026-11-25",
+          "electronicPublicationDate": "2024-06-01",
+          "firstPublicationDate": "2024-06-01",
+          "firstIndexDate": "2024-06-29",
+          "fullTextReceivedDate": "2025-02-03",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  ],
+  "research_status": "UNVERIFIED",
+  "discovery": "Validated list queries, structured Europe PMC search/abstract/full text, candidate source fetch; source relevance is not assumed"
+}

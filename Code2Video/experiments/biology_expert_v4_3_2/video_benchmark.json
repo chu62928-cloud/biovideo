@@ -1,0 +1,59 @@
+{
+  "runs": [
+    {
+      "provider": "wan",
+      "model_id": "wan3.0-video",
+      "input_mode": "text_to_video",
+      "task_id": null,
+      "status": "NOT_EXECUTED",
+      "scientific_model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+      "prompt_sha256": "25082ac74053c045e3c20f188e50597b2aabc63ea5f7a9a4f39dd8bfad45be0e",
+      "video_sha256": null,
+      "actual_duration": null,
+      "science_review": "NOT_MEASURED",
+      "visual_review": "NOT_MEASURED",
+      "actual_cost": null,
+      "failure_reason": "New experiment paid generation not authorized",
+      "dry_run": {
+        "submission_status": "DRY_RUN",
+        "submitted": false,
+        "request_sha256": "2c2c5f9859f5493a416ed2a3f6dd7fd4c6e03e5a220cc81e0674d1f83ab7c49d",
+        "capabilities": {
+          "valid": true,
+          "errors": [],
+          "entitlement": "REAL_SUBMISSION_REQUIRED",
+          "docs": "https://help.aliyun.com/zh/model-studio/wan3-video-generation-api-reference"
+        },
+        "estimate": {
+          "estimated_cny": 1.5,
+          "basis": "Official Beijing output seconds list price; actual billed cost may differ",
+          "actual_cost": null
+        }
+      }
+    },
+    {
+      "provider": "seedance",
+      "model_id": null,
+      "input_mode": "NOT_VERIFIED",
+      "task_id": null,
+      "status": "NOT_EXECUTED",
+      "scientific_model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+      "prompt_sha256": "25082ac74053c045e3c20f188e50597b2aabc63ea5f7a9a4f39dd8bfad45be0e",
+      "video_sha256": null,
+      "actual_duration": null,
+      "science_review": "NOT_MEASURED",
+      "visual_review": "NOT_MEASURED",
+      "actual_cost": null,
+      "failure_reason": "No configured exact model/API key and no paid authorization; not a working full adapter",
+      "dry_run": {
+        "submission_status": "DRY_RUN",
+        "submitted": false,
+        "capabilities": {
+          "valid": false,
+          "status": "NOT_SELECTED",
+          "reason": "Current user selected Wan only; exact model/endpoint and key not configured."
+        }
+      }
+    }
+  ]
+}

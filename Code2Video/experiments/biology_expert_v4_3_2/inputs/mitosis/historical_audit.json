@@ -1,0 +1,174 @@
+{
+  "evidence": {
+    "issues": [],
+    "requirements": [
+      {
+        "requirement_id": "REQ_dup_chromosome_identity",
+        "requirement": "Model must represent a duplicated chromosome as a joined sister-chromatid pair attached at the centromeric region.",
+        "covered_by_process_ids": [
+          "PROC_kinetochore_attachment_orientation",
+          "PROC_metaphase_alignment",
+          "PROC_anaphase_sister_separation"
+        ]
+      },
+      {
+        "requirement_id": "REQ_bipolar_attachment",
+        "requirement": "Model must show kinetochore microtubules from opposite poles attaching to sister chromatids at their kinetochores during prometaphase.",
+        "covered_by_process_ids": [
+          "PROC_kinetochore_attachment_orientation"
+        ]
+      },
+      {
+        "requirement_id": "REQ_metaphase_alignment",
+        "requirement": "Model must show the duplicated chromosome aligned at the metaphase plate during metaphase (single-chromosome instantiation of the source's universal statement).",
+        "covered_by_process_ids": [
+          "PROC_metaphase_alignment"
+        ]
+      },
+      {
+        "requirement_id": "REQ_sister_separation",
+        "requirement": "Model must show breakdown of sister-chromatid connection and separation into two distinct daughter chromatid entities (now called chromosomes).",
+        "covered_by_process_ids": [
+          "PROC_anaphase_sister_separation"
+        ]
+      },
+      {
+        "requirement_id": "REQ_poleward_movement",
+        "requirement": "Model must show daughter chromatids pulled toward opposite poles after separation.",
+        "covered_by_process_ids": [
+          "PROC_anaphase_sister_separation"
+        ]
+      },
+      {
+        "requirement_id": "REQ_phase_order",
+        "requirement": "Model must represent schematic phase order: prometaphase attachment before metaphase alignment before anaphase separation, without asserting strict per-chromosome causal prerequisites.",
+        "covered_by_process_ids": [
+          "PROC_kinetochore_attachment_orientation",
+          "PROC_metaphase_alignment",
+          "PROC_anaphase_sister_separation"
+        ]
+      },
+      {
+        "requirement_id": "REQ_scope_boundary",
+        "requirement": "Model must explicitly exclude interphase replication, prophase nuclear envelope breakdown/centrosome separation, telophase, cytokinesis, spindle assembly checkpoint regulation, and molecular cohesin degradation/cleavage, and must note animal-cell example context.",
+        "covered_by_process_ids": [
+          "PROC_kinetochore_attachment_orientation",
+          "PROC_metaphase_alignment",
+          "PROC_anaphase_sister_separation"
+        ]
+      },
+      {
+        "requirement_id": "REQ_no_unsupported_causality",
+        "requirement": "Model must not claim causal sufficiency of microtubule pulling alone for connection breakdown, and must not assert molecular mechanism of cohesin degradation as modeled.",
+        "covered_by_process_ids": [
+          "PROC_anaphase_sister_separation"
+        ]
+      }
+    ],
+    "coverage_status": "PASS",
+    "model_sha256": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5"
+  },
+  "causal": {
+    "model_sha256": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+    "status": "REVIEW_INCOMPLETE",
+    "issues": [
+      {
+        "issue_id": "CAUSAL_1",
+        "issue_type": "INITIAL_STATE_UNSPECIFIED",
+        "affected_process_ids": [],
+        "status": "DETECTED",
+        "explanation": "Historical model has no explicit initial_states; reachability is conditional, not automatically FAIL/PASS."
+      },
+      {
+        "issue_id": "CAUSAL_2",
+        "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+        "affected_process_ids": [
+          "PROC_kinetochore_attachment_orientation"
+        ],
+        "status": "DETECTED",
+        "explanation": {
+          "key": "kinetochore_formed",
+          "value": "Each sister chromatid has a kinetochore in the centromeric region.",
+          "producers": [],
+          "initial_state_declared": false
+        }
+      },
+      {
+        "issue_id": "CAUSAL_3",
+        "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+        "affected_process_ids": [
+          "PROC_kinetochore_attachment_orientation"
+        ],
+        "status": "DETECTED",
+        "explanation": {
+          "key": "spindle_microtubules_present",
+          "value": "Mitotic spindle microtubules are present and extend from centrosomes.",
+          "producers": [],
+          "initial_state_declared": false
+        }
+      },
+      {
+        "issue_id": "CAUSAL_4",
+        "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+        "affected_process_ids": [
+          "PROC_metaphase_alignment"
+        ],
+        "status": "DETECTED",
+        "explanation": {
+          "key": "bipolar_attachment",
+          "value": "Sister chromatids attached via kinetochores to microtubules from opposing poles.",
+          "producers": [],
+          "initial_state_declared": false
+        }
+      },
+      {
+        "issue_id": "CAUSAL_5",
+        "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+        "affected_process_ids": [
+          "PROC_metaphase_alignment"
+        ],
+        "status": "DETECTED",
+        "explanation": {
+          "key": "cohesin_present",
+          "value": "Sister chromatids still tightly attached to each other by cohesin proteins.",
+          "producers": [],
+          "initial_state_declared": false
+        }
+      },
+      {
+        "issue_id": "CAUSAL_6",
+        "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+        "affected_process_ids": [
+          "PROC_anaphase_sister_separation"
+        ],
+        "status": "DETECTED",
+        "explanation": {
+          "key": "metaphase_alignment",
+          "value": "Duplicated chromosome aligned at the metaphase plate (schematic phase order; not asserted as a strict per-chromosome causal prerequisite).",
+          "producers": [],
+          "initial_state_declared": false
+        }
+      },
+      {
+        "issue_id": "CAUSAL_7",
+        "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+        "affected_process_ids": [
+          "PROC_anaphase_sister_separation"
+        ],
+        "status": "DETECTED",
+        "explanation": {
+          "key": "bipolar_attachment",
+          "value": "Sister chromatids attached via kinetochores to microtubules from opposing poles.",
+          "producers": [],
+          "initial_state_declared": false
+        }
+      }
+    ],
+    "reachable_process_ids": [],
+    "witnesses": {},
+    "states_explored": 1,
+    "exhaustive": true,
+    "limit": 4096,
+    "semantics": "Finite paths with exact state values, completion dependencies, once-per-process invocation; dynamic loops and unmodeled continuous chemistry not proven."
+  }
+}

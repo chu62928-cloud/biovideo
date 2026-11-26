@@ -1,0 +1,739 @@
+{
+  "evidence": [
+    {
+      "evidence_id": "E_5652fd769b72",
+      "url": "https://europepmc.org/article/MED/42969015",
+      "title": "Kinesin motor proteins as host factors regulating viral infection: Mechanisms of exploitation, emerging paradigms, and therapeutic horizons.",
+      "author_or_institution": "Aly HH.",
+      "source_type": "bibliographic_abstract",
+      "evidence_level": "ABSTRACT",
+      "biological_scope": "Requires claim-specific scope review",
+      "status": "RETRIEVED_ABSTRACT",
+      "content_sha256": "f6f3efd01c7e5aa2b0c47983635e544d01dddf117f3968e56f6284f91d4aa425",
+      "passages": [
+        {
+          "location": "abstract",
+          "text": "Intracellular transport via microtubules is integral to eukaryotic cell function, and viruses have developed intricate mechanisms to exploit this system at nearly every stage of their replication cycle. The mammalian kinesin superfamily, consisting of 14 distinct families, enables anterograde transport that is used by both DNA and RNA viruses. This review provides a comprehensive analysis of how a wide range of viral pathogens-including herpesviruses, human immunodeficiency virus type 1, vaccinia virus, hepatitis B virus (HBV), influenza virus, and severe acute respiratory syndrome coronavirus-interact with specific kinesin family members to promote viral entry, genome trafficking, organization of replication compartments, assembly, and egress. Recent findings underscore the role of the kinesin-4 family member KIF4A as a novel host factor for HBV. The therapeutic potential of modulating the surface expression of the HBV-entry receptor (NTCP) is discussed, either by suppressing KIF4 expression-necessary for anti-retrograde transport of NTCP to the cell surface-or by disrupting the NTCP-KIF4 interaction. Additionally, emerging pharmacological approaches targeting kinesin-dependent transport are evaluated. By establishing a unified framework that connects motor protein biology to virology, this review identifies key knowledge gaps and outlines future research directions for the development of broad-spectrum, host-targeted, antiviral therapies.",
+          "evidence_level": "ABSTRACT"
+        }
+      ],
+      "figures": [],
+      "limitations": [
+        "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+      ]
+    },
+    {
+      "evidence_id": "E_bac6751ff01c",
+      "url": "https://europepmc.org/article/MED/41879467",
+      "title": "Motor-Assisted Co-Migration of Intracellular Organelles and Microtubules as a Mechanism for Directed Cargo Transport.",
+      "author_or_institution": "Zhou C, Kengaku M.",
+      "source_type": "bibliographic_abstract",
+      "evidence_level": "ABSTRACT",
+      "biological_scope": "Requires claim-specific scope review",
+      "status": "RETRIEVED_ABSTRACT",
+      "content_sha256": "0d1bd74154db61fabdf1de94e5f37c73ad9994ca5766fbcb10ee1583c5d66606",
+      "passages": [
+        {
+          "location": "abstract",
+          "text": "Intracellular cargo transport relies on a microtubule (MT) network and its molecular motors, dynein and kinesin. While conventional models emphasize motor-driven cargo movement along stationary MT tracks, emerging evidence suggests that dynamic movements of MTs also contribute to directional transport. We propose a model of cargo co-migration with moving MTs, exemplified by nuclear migration in developing neurons. This transport mode may operate across cell types, provided that cargo-MT tethering and directional MT movements are present. We hypothesize multiple complementary mechanisms, including motor catch-bond formation and clustering, as well as MT-associated protein-mediated anchorage. We further discuss how directional MT movements can be generated through motor-driven sliding, cortical gliding, actin-MT crosslinking, and dynamic MT instability. This coupled transport mechanism provides an additional layer of directional control that supplements motor-stepping-dependent transport. Potential experimental approaches to validate this hypothesis are discussed. Understanding MT-mediated cargo delivery could refine our current models of intracellular transport and reveal new insights into neurodevelopmental and neurodegenerative disorders.",
+          "evidence_level": "ABSTRACT"
+        }
+      ],
+      "figures": [],
+      "limitations": [
+        "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+      ]
+    },
+    {
+      "evidence_id": "E_f8fbdc9701f1",
+      "url": "https://europepmc.org/article/MED/42158286",
+      "title": "Research progress on the interaction mechanisms and functions between exosomes and the cytoskeleton.",
+      "author_or_institution": "Yang S, Zhang X, Chen B, Kou H, Lai L, Liu H, Xu Y, Sun Y.",
+      "source_type": "bibliographic_abstract",
+      "evidence_level": "ABSTRACT",
+      "biological_scope": "Requires claim-specific scope review",
+      "status": "RETRIEVED_ABSTRACT",
+      "content_sha256": "1c6c81b84088f78773684d2c67d8bd2bc67cf9b7e65ec598f1483e42aee57bb5",
+      "passages": [
+        {
+          "location": "abstract",
+          "text": "Exosomes, as key mediators of intercellular communication, play a central regulatory role in cellular physiological and pathological processes through their dynamic interaction with the cytoskeleton. The cytoskeleton is a dynamic network composed of microtubules, microfilaments, and intermediate filaments. Microtubules provide track support for the directional transport of MVBs. Microfilament rearrangement generates contractile forces that promote MVB fusion with the plasma membrane. Therefore, the cytoskeleton directly participates in the biogenesis, intracellular transport, and secretion of exosomes. Moreover, cytoskeletal dynamics, coordinated by molecules such as Rab GTPases, affect exosome secretion efficiency. Conversely, exosomes carry bioactive molecules such as proteins, nucleic acids, and lipids. These molecules can regulate cytoskeletal rearrangement in recipient cells by modulating signaling pathways like the TGF-β/Smad signaling pathway and the RhoA/ROCK signaling pathway. Consequently, they influence target cell functions like morphology maintenance, migration, and proliferation. Dysregulation of this interaction is closely related to the progression of various diseases, including tumors and neurodegenerative diseases. For instance, disrupting the dynamic structure of the cytoskeleton or blocking the cytoskeletal remodeling process can significantly reduce exosome secretion, while abnormal exosome transfer disrupts cytoskeletal homeostasis. Current research still faces challenges, such as unresolved details of the molecular regulatory network and a lack of in-depth mechanistic validation in in vivo models. Future studies need to explore in depth novel regulatory factors and signaling pathways and investigate disease diagnosis and treatment strategies based on this interaction. This will provide a theoretical basis and innovative ideas for the prevention and treatment of related diseases.",
+          "evidence_level": "ABSTRACT"
+        }
+      ],
+      "figures": [],
+      "limitations": [
+        "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+      ]
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13724191/fullTextXML",
+      "error": "FeatureNotFound",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13015778/fullTextXML",
+      "error": "FeatureNotFound",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13180954/fullTextXML",
+      "error": "FeatureNotFound",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+      "error": "ValueError",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    },
+    {
+      "url": "https://www.molbiolcell.org/doi/10.1091/mbc.E14-07-1249",
+      "error": "HTTPError",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    }
+  ],
+  "search_records": [
+    {
+      "query": "kinesin and cytoplasmic dynein ATP-dependent vesicle transport along microtubules mechanism directionality and cargo coupling in eukaryotic cells review",
+      "service": "Europe PMC",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=kinesin+and+cytoplasmic+dynein+ATP-dependent+vesicle+transport+along+microtubules+mechanism+directionality+and+cargo+coupling+in+eukaryotic+cells+review&format=json&pageSize=3&resultType=core",
+      "results": [
+        {
+          "id": "42969015",
+          "source": "MED",
+          "pmid": "42969015",
+          "pmcid": "PMC13724191",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC13724191"
+            ]
+          },
+          "doi": "10.20407/fmj.2026-014",
+          "title": "Kinesin motor proteins as host factors regulating viral infection: Mechanisms of exploitation, emerging paradigms, and therapeutic horizons.",
+          "authorString": "Aly HH.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Aly HH",
+                "lastName": "Aly",
+                "firstName": "Hussein Hassan",
+                "initials": "HH",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Japan Institute for Health Security, National Institute of Infectious Diseases, Department of Virology 2, Shinjuku, Tokyo, Japan."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "journalInfo": {
+            "issue": "4",
+            "volume": "12",
+            "journalIssueId": 4303885,
+            "dateOfPublication": "2026 Nov",
+            "monthOfPublication": 11,
+            "yearOfPublication": 2026,
+            "journal": {
+              "medlineAbbreviation": "Fujita Med J",
+              "title": "Fujita medical journal",
+              "essn": "2189-7255",
+              "issn": "2189-7247",
+              "nlmid": "101745077",
+              "isoabbreviation": "Fujita Med J"
+            },
+            "printPublicationDate": "2026-11-01"
+          },
+          "pubYear": "2026",
+          "pageInfo": "261-267",
+          "abstractText": "Intracellular transport via microtubules is integral to eukaryotic cell function, and viruses have developed intricate mechanisms to exploit this system at nearly every stage of their replication cycle. The mammalian kinesin superfamily, consisting of 14 distinct families, enables anterograde transport that is used by both DNA and RNA viruses. This review provides a comprehensive analysis of how a wide range of viral pathogens-including herpesviruses, human immunodeficiency virus type 1, vaccinia virus, hepatitis B virus (HBV), influenza virus, and severe acute respiratory syndrome coronavirus-interact with specific kinesin family members to promote viral entry, genome trafficking, organization of replication compartments, assembly, and egress. Recent findings underscore the role of the kinesin-4 family member KIF4A as a novel host factor for HBV. The therapeutic potential of modulating the surface expression of the HBV-entry receptor (NTCP) is discussed, either by suppressing KIF4 expression-necessary for anti-retrograde transport of NTCP to the cell surface-or by disrupting the NTCP-KIF4 interaction. Additionally, emerging pharmacological approaches targeting kinesin-dependent transport are evaluated. By establishing a unified framework that connects motor protein biology to virology, this review identifies key knowledge gaps and outlines future research directions for the development of broad-spectrum, host-targeted, antiviral therapies.",
+          "affiliation": "Japan Institute for Health Security, National Institute of Infectious Diseases, Department of Virology 2, Shinjuku, Tokyo, Japan.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "keywordList": {
+            "keyword": [
+              "Kinesin",
+              "Intracellular transport",
+              "Antiviral Therapy",
+              "Viral Trafficking",
+              "Host Factor"
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.20407/fmj.2026-014"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13724191"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13724191?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 0,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "N",
+          "hasData": "N",
+          "license": "cc by",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2026-11-02",
+          "dateOfCreation": "2026-11-02",
+          "dateOfRevision": "2026-11-03",
+          "electronicPublicationDate": "2026-09-25",
+          "firstPublicationDate": "2026-09-25",
+          "firstIndexDate": "2026-11-03",
+          "fullTextReceivedDate": "2026-11-02",
+          "hasEvaluations": "N"
+        },
+        {
+          "id": "41879467",
+          "source": "MED",
+          "pmid": "41879467",
+          "pmcid": "PMC13015778",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC13015778"
+            ]
+          },
+          "doi": "10.1002/bies.70127",
+          "title": "Motor-Assisted Co-Migration of Intracellular Organelles and Microtubules as a Mechanism for Directed Cargo Transport.",
+          "authorString": "Zhou C, Kengaku M.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Zhou C",
+                "lastName": "Zhou",
+                "firstName": "Chuying",
+                "initials": "C",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Graduate School of Biostudies, Kyoto University, Kyoto, Japan."
+                    },
+                    {
+                      "affiliation": "Shenzhen Key Laboratory of Neuropsychiatric Modulation, Shenzhen-Hong Kong Institute of Brain Science, Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences, Shenzhen, China."
+                    },
+                    {
+                      "affiliation": "CAS Key Laboratory of Brain Connectome and Manipulation, the Brain Cognition and Brain Disease Institute, Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences, Shenzhen, China."
+                    },
+                    {
+                      "affiliation": "Guangdong Provincial Key Laboratory of Brain Connectome and Behavior, the Brain Cognition and Brain Disease Institute, Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences, Shenzhen, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Kengaku M",
+                "lastName": "Kengaku",
+                "firstName": "Mineko",
+                "initials": "M",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Graduate School of Biostudies, Kyoto University, Kyoto, Japan."
+                    },
+                    {
+                      "affiliation": "Institute for Integrated Cell-Material Science (WPI-iCeMS), Kyoto University, Kyoto, Japan."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "3",
+            "volume": "48",
+            "journalIssueId": 4134999,
+            "dateOfPublication": "2026 Mar",
+            "monthOfPublication": 3,
+            "yearOfPublication": 2026,
+            "journal": {
+              "medlineAbbreviation": "Bioessays",
+              "title": "BioEssays : news and reviews in molecular, cellular and developmental biology",
+              "essn": "1521-1878",
+              "issn": "0265-9247",
+              "nlmid": "8510851",
+              "isoabbreviation": "Bioessays"
+            },
+            "printPublicationDate": "2026-03-01"
+          },
+          "pubYear": "2026",
+          "pageInfo": "e70127",
+          "abstractText": "Intracellular cargo transport relies on a microtubule (MT) network and its molecular motors, dynein and kinesin. While conventional models emphasize motor-driven cargo movement along stationary MT tracks, emerging evidence suggests that dynamic movements of MTs also contribute to directional transport. We propose a model of cargo co-migration with moving MTs, exemplified by nuclear migration in developing neurons. This transport mode may operate across cell types, provided that cargo-MT tethering and directional MT movements are present. We hypothesize multiple complementary mechanisms, including motor catch-bond formation and clustering, as well as MT-associated protein-mediated anchorage. We further discuss how directional MT movements can be generated through motor-driven sliding, cortical gliding, actin-MT crosslinking, and dynamic MT instability. This coupled transport mechanism provides an additional layer of directional control that supplements motor-stepping-dependent transport. Potential experimental approaches to validate this hypothesis are discussed. Understanding MT-mediated cargo delivery could refine our current models of intracellular transport and reveal new insights into neurodevelopmental and neurodegenerative disorders.",
+          "affiliation": "Graduate School of Biostudies, Kyoto University, Kyoto, Japan.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "review-article",
+              "Review",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "Japan Society for the Promotion of Science (JSPS) Kakenhi",
+                "grantId": "23KJ1280",
+                "orderIn": 0
+              },
+              {
+                "agency": "Japan Society for the Promotion of Science (JSPS) Kakenhi",
+                "grantId": "22H05169",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Microtubules",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Organelles",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Biological Transport"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Models, Biological"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Molecular Motor Proteins",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Dyneins",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Kinesins",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Molecular Motor Proteins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Dyneins",
+                "registryNumber": "EC 3.6.4.2"
+              },
+              {
+                "name": "Kinesins",
+                "registryNumber": "EC 3.6.4.4"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1002/bies.70127"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13015778"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13015778?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 0,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "N",
+          "hasData": "Y",
+          "license": "cc by",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "doi"
+            ]
+          },
+          "dateOfCompletion": "2026-07-13",
+          "dateOfCreation": "2026-03-25",
+          "dateOfRevision": "2026-09-26",
+          "firstPublicationDate": "2026-03-01",
+          "firstIndexDate": "2026-03-25",
+          "fullTextReceivedDate": "2026-03-26",
+          "hasEvaluations": "N"
+        },
+        {
+          "id": "42158286",
+          "source": "MED",
+          "pmid": "42158286",
+          "pmcid": "PMC13180954",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC13180954"
+            ]
+          },
+          "doi": "10.3389/fcell.2026.1718115",
+          "title": "Research progress on the interaction mechanisms and functions between exosomes and the cytoskeleton.",
+          "authorString": "Yang S, Zhang X, Chen B, Kou H, Lai L, Liu H, Xu Y, Sun Y.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Yang S",
+                "lastName": "Yang",
+                "firstName": "Shili",
+                "initials": "S",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0009-4125-3323"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Guizhou University of Traditional Chinese Medicine, Guiyang, Guizhou, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Zhang X",
+                "lastName": "Zhang",
+                "firstName": "Xinyan",
+                "initials": "X",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Guizhou University of Traditional Chinese Medicine, Guiyang, Guizhou, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Chen B",
+                "lastName": "Chen",
+                "firstName": "Bo",
+                "initials": "B",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Guizhou University of Traditional Chinese Medicine, Guiyang, Guizhou, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Kou H",
+                "lastName": "Kou",
+                "firstName": "Haiyang",
+                "initials": "H",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Guizhou University of Traditional Chinese Medicine, Guiyang, Guizhou, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Lai L",
+                "lastName": "Lai",
+                "firstName": "Lingyan",
+                "initials": "L",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Guizhou University of Traditional Chinese Medicine, Guiyang, Guizhou, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Liu H",
+                "lastName": "Liu",
+                "firstName": "Huaiquan",
+                "initials": "H",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Guizhou University of Traditional Chinese Medicine, Guiyang, Guizhou, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Xu Y",
+                "lastName": "Xu",
+                "firstName": "Yunling",
+                "initials": "Y",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Guizhou University of Traditional Chinese Medicine, Guiyang, Guizhou, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Sun Y",
+                "lastName": "Sun",
+                "firstName": "Yu",
+                "initials": "Y",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Guizhou University of Traditional Chinese Medicine, Guiyang, Guizhou, China."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0009-0009-4125-3323"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "volume": "14",
+            "journalIssueId": 4110764,
+            "dateOfPublication": "2026 ",
+            "monthOfPublication": 0,
+            "yearOfPublication": 2026,
+            "journal": {
+              "medlineAbbreviation": "Front Cell Dev Biol",
+              "title": "Frontiers in cell and developmental biology",
+              "essn": "2296-634X",
+              "issn": "2296-634X",
+              "nlmid": "101630250",
+              "isoabbreviation": "Front Cell Dev Biol"
+            },
+            "printPublicationDate": "2026-01-01"
+          },
+          "pubYear": "2026",
+          "pageInfo": "1718115",
+          "abstractText": "Exosomes, as key mediators of intercellular communication, play a central regulatory role in cellular physiological and pathological processes through their dynamic interaction with the cytoskeleton. The cytoskeleton is a dynamic network composed of microtubules, microfilaments, and intermediate filaments. Microtubules provide track support for the directional transport of MVBs. Microfilament rearrangement generates contractile forces that promote MVB fusion with the plasma membrane. Therefore, the cytoskeleton directly participates in the biogenesis, intracellular transport, and secretion of exosomes. Moreover, cytoskeletal dynamics, coordinated by molecules such as Rab GTPases, affect exosome secretion efficiency. Conversely, exosomes carry bioactive molecules such as proteins, nucleic acids, and lipids. These molecules can regulate cytoskeletal rearrangement in recipient cells by modulating signaling pathways like the TGF-β/Smad signaling pathway and the RhoA/ROCK signaling pathway. Consequently, they influence target cell functions like morphology maintenance, migration, and proliferation. Dysregulation of this interaction is closely related to the progression of various diseases, including tumors and neurodegenerative diseases. For instance, disrupting the dynamic structure of the cytoskeleton or blocking the cytoskeletal remodeling process can significantly reduce exosome secretion, while abnormal exosome transfer disrupts cytoskeletal homeostasis. Current research still faces challenges, such as unresolved details of the molecular regulatory network and a lack of in-depth mechanistic validation in in vivo models. Future studies need to explore in depth novel regulatory factors and signaling pathways and investigate disease diagnosis and treatment strategies based on this interaction. This will provide a theoretical basis and innovative ideas for the prevention and treatment of related diseases.",
+          "affiliation": "Guizhou University of Traditional Chinese Medicine, Guiyang, Guizhou, China.",
+          "publicationStatus": "epublish",
+          "language": "eng",
+          "pubModel": "Electronic-eCollection",
+          "pubTypeList": {
+            "pubType": [
+              "review-article",
+              "Review",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "National Natural Science Foundation of China",
+                "grantId": "82360976",
+                "orderIn": 0
+              }
+            ]
+          },
+          "keywordList": {
+            "keyword": [
+              "Cytoskeleton",
+              "Interaction",
+              "Mechanism of action",
+              "Research progress",
+              "Exosomes"
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.3389/fcell.2026.1718115"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13180954"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13180954?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 1,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "N",
+          "hasData": "Y",
+          "license": "cc by",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "doi"
+            ]
+          },
+          "dateOfCompletion": "2026-05-20",
+          "dateOfCreation": "2026-05-20",
+          "dateOfRevision": "2026-08-13",
+          "electronicPublicationDate": "2026-05-04",
+          "firstPublicationDate": "2026-05-04",
+          "firstIndexDate": "2026-05-21",
+          "fullTextReceivedDate": "2026-05-20",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  ],
+  "research_status": "RETRIEVED_UNREVIEWED",
+  "discovery": "Validated list queries, structured Europe PMC search/abstract/full text, candidate source fetch; source relevance is not assumed"
+}

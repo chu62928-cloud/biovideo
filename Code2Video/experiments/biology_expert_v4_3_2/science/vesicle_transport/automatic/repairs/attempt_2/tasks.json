@@ -1,0 +1,231 @@
+[
+  {
+    "repair_id": "MODEL_REPAIR_1",
+    "issue_id": "ISS_MOTOR_ROLE_MISSING",
+    "target_artifact": "typed_science_model",
+    "target_ids": [
+      "proc_vesicle_transport_along_microtubule",
+      "ent_vesicle"
+    ],
+    "target_fields": [
+      "participants",
+      "preconditions",
+      "effects",
+      "temporal_scope",
+      "precondition_state_refs",
+      "effect_state_refs",
+      "support",
+      "scientific_name",
+      "definition"
+    ],
+    "required_evidence_ids": [
+      "E_9af4c0e6bde1"
+    ],
+    "repair_goal": "Task explicitly requires 'motor-protein-dependent' transport; evidence must name or describe a motor protein (e.g., kinesin, dynein) as an actor mediating vesicle movement along microtubules, or the task scope must be narrowed to exclude motor-protein dependence.",
+    "acceptance_predicates": [
+      "exact_evidence_support",
+      "original_requirements_preserved",
+      "typed_state_reachable",
+      "independent_science_review",
+      "target_issue_resolved"
+    ],
+    "status": "PENDING",
+    "before_model_sha256": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da"
+  },
+  {
+    "repair_id": "MODEL_REPAIR_2",
+    "issue_id": "ISS_UNSUPPORTED_CAUSAL_VESICLE_MOVEMENT",
+    "target_artifact": "typed_science_model",
+    "target_ids": [
+      "proc_vesicle_transport_along_microtubule",
+      "ent_vesicle"
+    ],
+    "target_fields": [
+      "participants",
+      "preconditions",
+      "effects",
+      "temporal_scope",
+      "precondition_state_refs",
+      "effect_state_refs",
+      "support",
+      "scientific_name",
+      "definition"
+    ],
+    "required_evidence_ids": [
+      "E_9af4c0e6bde1"
+    ],
+    "repair_goal": "Evidence explicitly stating that vesicles move along microtubules (as opposed to microtubules merely providing a track), and ideally the causal agent (motor protein) driving that movement.",
+    "acceptance_predicates": [
+      "exact_evidence_support",
+      "original_requirements_preserved",
+      "typed_state_reachable",
+      "independent_science_review",
+      "target_issue_resolved"
+    ],
+    "status": "PENDING",
+    "before_model_sha256": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da"
+  },
+  {
+    "repair_id": "MODEL_REPAIR_3",
+    "issue_id": "ISS_OBSERVABLE_DETERMINISM_OVERREACH",
+    "target_artifact": "typed_science_model",
+    "target_ids": [
+      "proc_vesicle_transport_along_microtubule"
+    ],
+    "target_fields": [
+      "participants",
+      "preconditions",
+      "effects",
+      "temporal_scope",
+      "precondition_state_refs",
+      "effect_state_refs",
+      "support",
+      "scientific_name",
+      "definition"
+    ],
+    "required_evidence_ids": [
+      "E_9af4c0e6bde1"
+    ],
+    "repair_goal": "Source statements specifying that a particular vesicle is located on/moving along a microtubule at an observable time scale, with persistence/order semantics, to justify a DETERMINISTIC computational check.",
+    "acceptance_predicates": [
+      "exact_evidence_support",
+      "original_requirements_preserved",
+      "typed_state_reachable",
+      "independent_science_review",
+      "target_issue_resolved"
+    ],
+    "status": "PENDING",
+    "before_model_sha256": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da"
+  },
+  {
+    "repair_id": "MODEL_REPAIR_4",
+    "issue_id": "ISS_TRACK_PROVISION_PROCESS_INFLATED",
+    "target_artifact": "typed_science_model",
+    "target_ids": [
+      "proc_microtubule_track_provision",
+      "ent_microtubule"
+    ],
+    "target_fields": [
+      "participants",
+      "preconditions",
+      "effects",
+      "temporal_scope",
+      "precondition_state_refs",
+      "effect_state_refs",
+      "support",
+      "scientific_name",
+      "definition"
+    ],
+    "required_evidence_ids": [
+      "E_9af4c0e6bde1"
+    ],
+    "repair_goal": "Source describing a distinct process of 'track provision' with start/end conditions tied to vesicle movement, separate from the structural statement that microtubules provide a track.",
+    "acceptance_predicates": [
+      "exact_evidence_support",
+      "original_requirements_preserved",
+      "typed_state_reachable",
+      "independent_science_review",
+      "target_issue_resolved"
+    ],
+    "status": "PENDING",
+    "before_model_sha256": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da"
+  },
+  {
+    "repair_id": "MODEL_REPAIR_5",
+    "issue_id": "ISS_VESICLE_ENTITY_TYPE_UNSUPPORTED",
+    "target_artifact": "typed_science_model",
+    "target_ids": [
+      "proc_vesicle_transport_along_microtubule",
+      "ent_vesicle"
+    ],
+    "target_fields": [
+      "participants",
+      "preconditions",
+      "effects",
+      "temporal_scope",
+      "precondition_state_refs",
+      "effect_state_refs",
+      "support",
+      "scientific_name",
+      "definition"
+    ],
+    "required_evidence_ids": [
+      "E_9af4c0e6bde1"
+    ],
+    "repair_goal": "Source specifying vesicle type/identity (e.g., membrane-bound cargo carrier) or state transitions (moving/stationary) along microtubules.",
+    "acceptance_predicates": [
+      "exact_evidence_support",
+      "original_requirements_preserved",
+      "typed_state_reachable",
+      "independent_science_review",
+      "target_issue_resolved"
+    ],
+    "status": "PENDING",
+    "before_model_sha256": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da"
+  },
+  {
+    "repair_id": "MODEL_REPAIR_6",
+    "issue_id": "ISS_SCOPE_TITLE_CONTRADICTION",
+    "target_artifact": "typed_science_model",
+    "target_ids": [
+      "proc_vesicle_transport_along_microtubule"
+    ],
+    "target_fields": [
+      "participants",
+      "preconditions",
+      "effects",
+      "temporal_scope",
+      "precondition_state_refs",
+      "effect_state_refs",
+      "support",
+      "scientific_name",
+      "definition"
+    ],
+    "required_evidence_ids": [
+      "E_9af4c0e6bde1"
+    ],
+    "repair_goal": "Either evidence supporting motor-protein-dependent transport, or a revised scope/title removing the motor-protein dependence claim.",
+    "acceptance_predicates": [
+      "exact_evidence_support",
+      "original_requirements_preserved",
+      "typed_state_reachable",
+      "independent_science_review",
+      "target_issue_resolved"
+    ],
+    "status": "PENDING",
+    "before_model_sha256": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da"
+  },
+  {
+    "repair_id": "MODEL_REPAIR_7",
+    "issue_id": "STATE_MODEL_MIGRATION",
+    "target_artifact": "typed_science_model",
+    "target_ids": [
+      "proc_microtubule_track_provision",
+      "proc_vesicle_transport_along_microtubule"
+    ],
+    "target_fields": [
+      "participants",
+      "preconditions",
+      "effects",
+      "temporal_scope",
+      "precondition_state_refs",
+      "effect_state_refs",
+      "support",
+      "scientific_name",
+      "definition"
+    ],
+    "required_evidence_ids": [
+      "E_9af4c0e6bde1"
+    ],
+    "repair_goal": "Identify supported pre-clip conditions, explicit subject/property/value states and missing state producers without omitting user-required mechanisms. Preserve actual user teaching scope.",
+    "acceptance_predicates": [
+      "exact_evidence_support",
+      "original_requirements_preserved",
+      "typed_state_reachable",
+      "independent_science_review",
+      "target_issue_resolved"
+    ],
+    "status": "PENDING",
+    "before_model_sha256": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da"
+  }
+]

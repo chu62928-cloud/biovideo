@@ -1,0 +1,11 @@
+{
+  "passed": 93,
+  "failed": 0,
+  "seconds": 109.54,
+  "categories": [
+    "new synthetic quality/state/repair tests",
+    "historical regression integrations"
+  ],
+  "actual_science_closure": "NOT_APPROVED",
+  "command": "python -m pytest experiments/biology_expert_v4_3_2/tests experiments/biology_expert_v4_3_1/tests experiments/biology_expert_v4_3/tests experiments/biology_expert_v4_2_2/tests experiments/biology_expert_v4_2_1/tests -q"
+}

@@ -1,0 +1,6 @@
+{
+  "science_calls": "Existing explicit DeepSeek/Qwen authorization persists; bounded repair attempts and actual calls recorded",
+  "wan_tasks": 0,
+  "seedance_tasks": 0,
+  "reason": "New no-first-last-frame benchmark not separately authorized; dry-run only"
+}

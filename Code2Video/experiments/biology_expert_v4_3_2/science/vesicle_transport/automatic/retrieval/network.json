@@ -1,0 +1,89 @@
+[
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=kinesin+and+dynein+motor+proteins+ATP-dependent+vesicle+transport+along+microtubules+mechanism+review+cell+biology&format=json&pageSize=3&resultType=core",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:03:10Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "136a78801e802641349ac447a7c196fed904c957a84021f33bed94278fbb9761"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13724191/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:03:12Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "6c236c7970bcbc66dad03913994a521a2cacee08e7401f7869403c4ec1cc70a0"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13504318/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:03:21Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "f609f76ad48cf461a3a24a5751bd51986ccbe9d5c6abbf11472381702019f974"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13204852/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:03:25Z",
+    "status": "UNVERIFIED",
+    "error": "ReadTimeout"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK26862/",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:03:52Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "732215fa8b1fde0005e7875484be6133000e09191d4f9a7b475b16c3e82cd2d9"
+  },
+  {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2862383/",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:03:52Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "948325d6aaa3f99a9a2a8b044c72b397ea6e46a1157e2243a168539993ae930b"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=kinesin+and+cytoplasmic+dynein+ATP-dependent+vesicle+transport+along+microtubules+mechanism+directionality+and+cargo+coupling+in+eukaryotic+cells+review&format=json&pageSize=3&resultType=core",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:04:15Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "7899bfc9878862ef3e19430e2e4d397b0e8425f96ec4a44b9f9b5c943ce2fba9"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13015778/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:04:26Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "e32b320092b0c2934df92e8247f79a63444c461c93cc9fc702e1c0290c3bc034"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13180954/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:04:40Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "8eebcabf7934cc9a8ec1804822cd22d20c6def4403cdda319a14ae53c4fbf9bb"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:04:55Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "db5db61d5cba553be0ad23ebbb4cc5929200a34e4929c0b6112cbc541f376664"
+  },
+  {
+    "url": "https://www.molbiolcell.org/doi/10.1091/mbc.E14-07-1249",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:04:57Z",
+    "status": "UNVERIFIED",
+    "http_status": 403,
+    "error": "HTTPError"
+  }
+]

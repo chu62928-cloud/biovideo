@@ -10,6 +10,9 @@ class ScientificEvidenceRetriever:
  def __init__(self,root,limit=60,visual_limit=12):
   self.root=Path(root);self.root.mkdir(parents=True,exist_ok=True);self.path=self.root/'network.json';self.rows=json.loads(self.path.read_text()) if self.path.exists() else [];self.limit=limit;self.visual_limit=visual_limit
  def get(self,url,kind='scientific'):
+  cache=self.root/'http_cache'/hashlib.sha256(url.encode()).hexdigest()
+  if cache.exists():
+   saved=json.loads(cache.read_text());response=requests.Response();response.status_code=saved['status'];response._content=bytes.fromhex(saved['hex']);response.headers.update(saved['headers']);response.url=url;return response
   host=urlparse(url).hostname
   if urlparse(url).scheme!='https' or not host:raise ValueError('HTTPS public sources only')
   if any(ipaddress.ip_address(x[4][0]).is_private for x in socket.getaddrinfo(host,443)):raise ValueError('Private network source rejected')
@@ -23,7 +26,7 @@ class ScientificEvidenceRetriever:
     destination=urljoin(url,response.headers.get('Location',''))
     row.update(status='redirect',destination=destination);write(self.path,self.rows)
     return self.get(destination,kind)
-   row.update(status='ok',content_sha256=hashlib.sha256(response.content).hexdigest());return response
+   row.update(status='ok',content_sha256=hashlib.sha256(response.content).hexdigest());cache.parent.mkdir(exist_ok=True);write(cache,{'status':response.status_code,'headers':dict(response.headers),'hex':response.content.hex()});return response
   except Exception as ex:row.update(status='UNVERIFIED',error=type(ex).__name__);raise
   finally:write(self.path,self.rows)
  def fetch(self,url,topic_id):
@@ -35,7 +38,7 @@ class ScientificEvidenceRetriever:
   eid='E_'+hashlib.sha256(url.encode()).hexdigest()[:12];dest=self.root/topic_id;dest.mkdir(exist_ok=True)
   (dest/(eid+'.html')).write_text(response.text);(dest/(eid+'.txt')).write_text(text)
   paragraphs=[{'location':'paragraph_'+str(i),'text':p.get_text(' ',strip=True)} for i,p in enumerate(soup.find_all(['p','figcaption'])) if len(p.get_text(' ',strip=True))>40]
-  if not paragraphs:paragraphs=[{'location':'body','text':text[:18000]}]
+  if not paragraphs:raise ValueError('FULL_TEXT_UNAVAILABLE: no substantive paragraphs')
   figures=[]
   for figure in soup.find_all('figure'):
    img=figure.find('img');caption=figure.get_text(' ',strip=True)
@@ -44,58 +47,33 @@ class ScientificEvidenceRetriever:
     if src:figures.append({'url':urljoin(url,src),'caption':caption,'alt':img.get('alt',''),'source_page':url})
   return {'evidence_id':eid,'url':url,'title':title,'author_or_institution':urlparse(url).hostname,'source_type':'retrieved_scientific_webpage','biological_scope':'Requires independent scope verification against quoted passages','accessed_utc':self.rows[-1]['started_utc'],'content_sha256':hashlib.sha256(text.encode()).hexdigest(),'saved_text':str(dest/(eid+'.txt')),'passages':paragraphs,'figures':figures,'fact_support':[],'conflicts':[],'trust_limitations':'Publisher authority and exact quotes do not establish entailment; independent contract review required','status':'RETRIEVED'}
  def retrieve(self,scope,plan):
-  urls=list(dict.fromkeys(plan.get('candidate_urls',[])));failures=[];search_records=[]
-  # Queries and suggested sources are model planned, but never counted as evidence until fetched.
-  for query in plan.get('scientific_queries',[])[:1]:
-   url='https://www.ebi.ac.uk/europepmc/webservices/rest/search?query='+quote(query)+'&format=json&pageSize=2'
+  from .retrieval_quality import validate_queries,source_quality
+  from urllib.parse import urlencode
+  queries=validate_queries(plan,scope);urls=list(dict.fromkeys(plan.get('candidate_urls',[])));evidence=[];failures=[];search_records=[]
+  for query in queries[:2]:
+   endpoint='https://www.ebi.ac.uk/europepmc/webservices/rest/search?'+urlencode({'query':query,'format':'json','pageSize':3,'resultType':'core'})
    try:
-    response=self.get(url);data=response.json();search_records.append({'query':query,'service':'Europe PMC','results':data.get('resultList',{}).get('result',[])})
-   except Exception as ex:failures.append({'url':url,'error':type(ex).__name__})
-  evidence=[]
-  # Public HTML search provides a recovery path when model URLs are nonexistent or blocked.
-  for query in plan.get('scientific_queries',[])[:1]:
+    response=self.get(endpoint);data=response.json();results=data.get('resultList',{}).get('result',[]);search_records.append({'query':query,'service':'Europe PMC','url':endpoint,'results':results})
+    for item in results:
+     abstract=item.get('abstractText');pmcid=item.get('pmcid')
+     if abstract:
+      text=BeautifulSoup(abstract,'html.parser').get_text(' ',strip=True);url='https://europepmc.org/article/'+item.get('source','MED')+'/'+item['id'];eid='E_'+hashlib.sha256(url.encode()).hexdigest()[:12]
+      evidence.append({'evidence_id':eid,'url':url,'title':item.get('title',''),'author_or_institution':item.get('authorString','Europe PMC'),'source_type':'bibliographic_abstract','evidence_level':'ABSTRACT','biological_scope':'Requires claim-specific scope review','status':'RETRIEVED_ABSTRACT','content_sha256':hashlib.sha256(text.encode()).hexdigest(),'passages':[{'location':'abstract','text':text,'evidence_level':'ABSTRACT'}],'figures':[],'limitations':['FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract']})
+     if pmcid:
+      full='https://www.ebi.ac.uk/europepmc/webservices/rest/'+pmcid+'/fullTextXML'
+      try:
+       xml=self.get(full);soup=BeautifulSoup(xml.text,'xml');body=soup.find('body');paragraphs=[{'location':'body_paragraph_'+str(i),'text':p.get_text(' ',strip=True),'evidence_level':'FULL_TEXT'} for i,p in enumerate(body.find_all('p')) if len(p.get_text(' ',strip=True).split())>=12] if body else []
+       if paragraphs:
+        title=item.get('title','');url='https://europepmc.org/articles/'+pmcid;eid='E_'+hashlib.sha256(url.encode()).hexdigest()[:12];evidence.append({'evidence_id':eid,'url':url,'title':title,'source_type':'open_access_article','evidence_level':'FULL_TEXT','biological_scope':'Requires claim-specific scope review','status':'RETRIEVED','content_sha256':hashlib.sha256(xml.content).hexdigest(),'passages':paragraphs,'figures':[]});dest=self.root/scope['topic_id'];dest.mkdir(exist_ok=True);(dest/(eid+'.xml')).write_text(xml.text)
+      except Exception as ex:failures.append({'url':full,'error':type(ex).__name__,'status':'FULL_TEXT_UNAVAILABLE'})
+   except Exception as ex:failures.append({'url':endpoint,'error':type(ex).__name__,'status':'SEARCH_FAILED'})
+  for url in urls[:4]:
    try:
-    response=self.get('https://www.google.com/search?q='+quote(query+' textbook mechanism'))
-    soup=BeautifulSoup(response.text,'html.parser')
-    for link in soup.find_all('a'):
-     target=link.get('href','')
-     if target.startswith('/url?'):target=parse_qs(urlparse(target).query).get('q',[''])[0]
-     host=urlparse(target).hostname or ''
-     if target.startswith('https://') and host.endswith(('openstax.org','ncbi.nlm.nih.gov','genome.gov','yourgenome.org','bio.libretexts.org')) and target not in urls:urls.append(target)
-    search_records.append({'query':query,'service':'Google HTML','candidate_links':urls[3:9]})
-   except Exception as ex:failures.append({'source':'public HTML discovery','error':type(ex).__name__})
-  # Discover replacement chapter slugs from the actual candidate publisher table of contents.
-  for suggested in list(urls):
-   parsed=urlparse(suggested)
-   if '/pages/' not in parsed.path:continue
-   base=suggested.split('/pages/')[0]
-   try:
-    response=self.get(base);soup=BeautifulSoup(response.text,'html.parser');tokens=set(re.findall('[a-z]+',scope['topic'].lower()))
-    candidates=[]
-    for link in soup.find_all('a'):
-     target=urljoin(base,link.get('href',''));words=set(re.findall('[a-z]+',(target+' '+link.get_text(' ',strip=True)).lower()))
-     if '/pages/' in target and urlparse(target).hostname==parsed.hostname:candidates.append((len(tokens&words),target))
-    for score,target in sorted(set(candidates),reverse=True)[:2]:
-     if score>=2 and target not in urls:urls.append(target)
-    search_records.append({'service':'publisher_live_TOC','url':base,'discovered':urls[3:]})
-   except Exception as ex:failures.append({'source':base,'error':type(ex).__name__})
-  for url in urls[:9]:
-   try:evidence.append(self.fetch(url,scope['topic_id']))
-   except Exception as ex:
-    failures.append({'url':url,'error':type(ex).__name__})
-    # Chapter numbers can drift across textbook editions. Probe nearby section numbers
-    # using the agent-proposed semantic slug, never a prewritten topic URL catalogue.
-    if '/pages/' in url and getattr(getattr(ex,'response',None),'status_code',None)==404:
-     match=re.search(r'/pages/(\d+)-(\d+)-',url)
-     if match:
-      for offset in [1,-1]:
-       section=int(match.group(2))+offset
-       if section<1:continue
-       alt=url[:match.start(2)]+str(section)+url[match.end(2):]
-       try:
-        evidence.append(self.fetch(alt,scope['topic_id']));break
-       except Exception as alt_ex:failures.append({'url':alt,'error':type(alt_ex).__name__})
-  result={'evidence':evidence,'failures':failures,'search_records':search_records,'research_status':'RETRIEVED' if evidence else 'UNVERIFIED','discovery':'Agent planned queries + live bibliographic search + content fetch, no legacy topic catalogue'}
+    ev=self.fetch(url,scope['topic_id']);gate=source_quality(ev)
+    if gate['status']!='READABLE_BODY':failures.append({'url':url,'status':'FULL_TEXT_UNAVAILABLE','reason':gate['reason']})
+    else:ev.update(evidence_level='FULL_TEXT');evidence.append(ev)
+   except Exception as ex:failures.append({'url':url,'error':type(ex).__name__,'status':'FULL_TEXT_UNAVAILABLE'})
+  result={'evidence':list({e['content_sha256']:e for e in evidence}.values()),'failures':failures,'search_records':search_records,'research_status':'RETRIEVED_UNREVIEWED' if evidence else 'UNVERIFIED','discovery':'Validated list queries, structured Europe PMC search/abstract/full text, candidate source fetch; source relevance is not assumed'}
   write(self.root/(scope['topic_id']+'_retrieval.json'),result);return result
  def visual(self,scope,plan,retrieval):
   registry=[]

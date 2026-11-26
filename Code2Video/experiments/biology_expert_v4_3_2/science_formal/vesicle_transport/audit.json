@@ -1,0 +1,254 @@
+{
+  "evidence": {
+    "issues": [
+      {
+        "issue_id": "ISS-001",
+        "affected_process_id": "proc_vesicle_transport_along_microtubule",
+        "affected_entity_id": null,
+        "requirement_id": "REQ-001",
+        "evidence_ids": [
+          "E_9af4c0e6bde1"
+        ],
+        "issue_type": "MISSING_REQUIRED_ROLE",
+        "required_evidence": "Task requires motor-protein-dependent transport; evidence must name or describe motor proteins (e.g., kinesin/dynein) as actors mediating vesicle movement along microtubules.",
+        "allowed_repair_actions": [
+          "add_motor_protein_entities_and_roles_with_new_evidence",
+          "narrow_scope_and_retitle_to_microtubule_track_vesicle_movement_explicitly_non_motor"
+        ],
+        "severity": "high",
+        "status": "open",
+        "explanation": "User task explicitly requests motor-protein-dependent transport. Retrieved passage E_9af4c0e6bde1 only states microtubules 'provide a track along which vesicles move'; it does not mention motor proteins, ATP, or dependence on motor activity. Model excludes motor protein identity/mechanism yet retains title implying it. Role absence is not merely nominal: no source actor supports the causal dependence the task names."
+      },
+      {
+        "issue_id": "ISS-002",
+        "affected_process_id": "proc_vesicle_transport_along_microtubule",
+        "affected_entity_id": "ent_vesicle",
+        "requirement_id": "REQ-002",
+        "evidence_ids": [
+          "E_9af4c0e6bde1"
+        ],
+        "issue_type": "UNSUPPORTED_CAUSAL_CLAIM",
+        "required_evidence": "Evidence that vesicle movement along microtubules is causally mediated by motor proteins, or at minimum that vesicles (not just cytoplasm) specifically move along microtubules.",
+        "allowed_repair_actions": [
+          "add_causal_evidence_for_motor_dependence",
+          "reclassify_as_schematic_relation_without_causal_dependence",
+          "remove_motor_dependence_claim_from_scope"
+        ],
+        "severity": "high",
+        "status": "open",
+        "explanation": "Model types transport as vesicle + microtubule → vesicle moves, titled motor-protein-dependent, but source quote is a general 'provide a track along which vesicles move' statement without specifying mechanism, direction, or that vesicles themselves are the moving entities via motors. Causal motor dependence is not entailed by the retrieved passage."
+      },
+      {
+        "issue_id": "ISS-003",
+        "affected_process_id": "proc_vesicle_transport_along_microtubule",
+        "affected_entity_id": null,
+        "requirement_id": "REQ-003",
+        "evidence_ids": [
+          "E_9af4c0e6bde1"
+        ],
+        "issue_type": "INSUFFICIENT_EVIDENCE",
+        "required_evidence": "Evidence supporting the deterministic observable that a specific vesicle is on/along a microtubule track during a defined transport interval with persistence semantics.",
+        "allowed_repair_actions": [
+          "downgrade_observable_to_schematic_or_generic_relation",
+          "remove_temporal_persistence_claim",
+          "add_evidence_for_temporal_tracking"
+        ],
+        "severity": "medium",
+        "status": "open",
+        "explanation": "obs_vesicle_transport_relation asserts 'relation_holds_during' with DETERMINISTIC capability, but source makes only a generic statement that microtubules provide a track for vesicles. It does not entail per-vesicle presence during any observed interval, nor order/persistence semantics. Observable overreaches source scope."
+      },
+      {
+        "issue_id": "ISS-004",
+        "affected_process_id": "proc_microtubule_track_provision",
+        "affected_entity_id": "ent_microtubule",
+        "requirement_id": "REQ-004",
+        "evidence_ids": [
+          "E_9af4c0e6bde1"
+        ],
+        "issue_type": "INSUFFICIENT_EVIDENCE",
+        "required_evidence": "Evidence that track provision is a distinct process with start/end conditions and concurrency with transport, rather than a structural capability.",
+        "allowed_repair_actions": [
+          "reclassify_as_structural_capability_not_process",
+          "remove_temporal_scope_for_track_provision",
+          "merge_into_single_transport_process"
+        ],
+        "severity": "medium",
+        "status": "open",
+        "explanation": "Source describes microtubules as providing a track (structural capability). It does not describe a separate 'track provision' process with temporal start/end tied to vesicle movement or concurrency semantics. Adding a second process with its own temporal scope inflates a single assertion into a formal process model not supported by evidence."
+      },
+      {
+        "issue_id": "ISS-005",
+        "affected_process_id": null,
+        "affected_entity_id": "ent_vesicle",
+        "requirement_id": "REQ-005",
+        "evidence_ids": [
+          "E_9af4c0e6bde1"
+        ],
+        "issue_type": "INSUFFICIENT_EVIDENCE",
+        "required_evidence": "Evidence that vesicles are membrane-bound cargo carriers and that their moving/stationary states are specifically along microtubules.",
+        "allowed_repair_actions": [
+          "remove_unsupported_entity_type_detail",
+          "reclassify_states_as_generic_cytoskeleton_assisted_movement",
+          "add_evidence_for_vesicle_identity"
+        ],
+        "severity": "low",
+        "status": "open",
+        "explanation": "Entity type 'membrane-bound cargo carrier' is not stated in E_9af4c0e6bde1. The state support quote 'allow cytoplasm and vesicles to move within the cell' is cytoskeleton-level, not microtubule-specific. These are plausible biology facts but not evidenced by the retrieved passage; must be marked as inference or omitted."
+      },
+      {
+        "issue_id": "ISS-006",
+        "affected_process_id": null,
+        "affected_entity_id": null,
+        "requirement_id": "REQ-006",
+        "evidence_ids": [
+          "E_9af4c0e6bde1"
+        ],
+        "issue_type": "SCOPE_MISMATCH",
+        "required_evidence": "Consistency between the task topic 'motor-protein-dependent transport' and the model's actual supported content.",
+        "allowed_repair_actions": [
+          "narrow_topic_and_explicitly_state_non_claims",
+          "add_motor_protein_evidence_to_cover_topic"
+        ],
+        "severity": "high",
+        "status": "open",
+        "explanation": "Scope excludes 'motor protein identity and mechanism' while the topic and title require motor-protein dependence. The produced model cannot support the learner-facing claim in the task title. This is a scope contradiction, not merely a limitation: it must be resolved by narrowing title/scope with explicit non-claims or by adding separate motor-protein evidence."
+      },
+      {
+        "issue_id": "ISS-007",
+        "affected_process_id": null,
+        "affected_entity_id": null,
+        "requirement_id": "REQ-007",
+        "evidence_ids": [
+          "E_9af4c0e6bde1"
+        ],
+        "issue_type": "UNRESOLVED_SCIENTIFIC_IDENTITY",
+        "required_evidence": "Evidence resolving directionality (anterograde vs retrograde), motor protein identity (kinesin/dynein), and organism specificity for the vesicle-microtubule transport claim.",
+        "allowed_repair_actions": [
+          "retain_as_explicit_unresolved_questions",
+          "add_new_evidence_resolving_identity"
+        ],
+        "severity": "medium",
+        "status": "open",
+        "explanation": "Model lists unresolved questions for motor identity, directionality, and organism specificity. That is appropriate honesty, but these unresolved identities block the motor-protein-dependent claim: without them the model cannot satisfy the topic. They must remain flagged and prevent PASS unless scope is narrowed."
+      }
+    ],
+    "requirements": [
+      {
+        "requirement_id": "REQ-001",
+        "requirement": "Model must represent motor proteins as required actors/roles for motor-protein-dependent vesicle transport along microtubules, or explicitly narrow scope and retitle to non-motor-dependent microtubule-associated vesicle movement.",
+        "covered_by_process_ids": [
+          "proc_vesicle_transport_along_microtubule"
+        ]
+      },
+      {
+        "requirement_id": "REQ-002",
+        "requirement": "Any causal claim that vesicle movement along microtubules depends on motor proteins must be supported by evidence naming motor proteins and their role; otherwise the causal dependence claim must be removed.",
+        "covered_by_process_ids": [
+          "proc_vesicle_transport_along_microtubule"
+        ]
+      },
+      {
+        "requirement_id": "REQ-003",
+        "requirement": "Deterministic observables asserting a specific vesicle-microtubule relation during a transport interval must be supported by evidence with temporal semantics, or downgraded to a schematic/generic relation.",
+        "covered_by_process_ids": [
+          "proc_vesicle_transport_along_microtubule",
+          "proc_microtubule_track_provision"
+        ]
+      },
+      {
+        "requirement_id": "REQ-004",
+        "requirement": "Processes with start/end and concurrency temporal scope must be supported by evidence describing a distinct process; structural capabilities should not be inflated into separate processes.",
+        "covered_by_process_ids": [
+          "proc_microtubule_track_provision",
+          "proc_vesicle_transport_along_microtubule"
+        ]
+      },
+      {
+        "requirement_id": "REQ-005",
+        "requirement": "Entity types and state definitions must be supported by retrieved evidence or explicitly marked as inference; unsupported detail should be removed or flagged.",
+        "covered_by_process_ids": [
+          "proc_vesicle_transport_along_microtubule",
+          "proc_microtubule_track_provision"
+        ]
+      },
+      {
+        "requirement_id": "REQ-006",
+        "requirement": "Model scope and title must be consistent with supported content; excluded processes must not be the ones that make the topic title true.",
+        "covered_by_process_ids": [
+          "proc_vesicle_transport_along_microtubule",
+          "proc_microtubule_track_provision"
+        ]
+      },
+      {
+        "requirement_id": "REQ-007",
+        "requirement": "Unresolved scientific identities (motor protein identity, directionality, organism specificity) must be retained as explicit unresolved questions and must block PASS when they are essential to the topic claim.",
+        "covered_by_process_ids": [
+          "proc_vesicle_transport_along_microtubule"
+        ]
+      }
+    ],
+    "coverage_status": "REVIEW_INCOMPLETE",
+    "model_sha256": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da"
+  },
+  "causal": {
+    "model_sha256": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da",
+    "status": "REVIEW_INCOMPLETE",
+    "issues": [
+      {
+        "issue_id": "CAUSAL_1",
+        "issue_type": "INITIAL_STATE_UNSPECIFIED",
+        "affected_process_ids": [],
+        "status": "DETECTED",
+        "explanation": "Historical model has no explicit initial_states; reachability is conditional, not automatically FAIL/PASS."
+      },
+      {
+        "issue_id": "CAUSAL_2",
+        "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+        "affected_process_ids": [
+          "proc_microtubule_track_provision"
+        ],
+        "status": "DETECTED",
+        "explanation": {
+          "key": "microtubule_present",
+          "value": true,
+          "producers": [],
+          "initial_state_declared": false
+        }
+      },
+      {
+        "issue_id": "CAUSAL_3",
+        "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+        "affected_process_ids": [
+          "proc_vesicle_transport_along_microtubule"
+        ],
+        "status": "DETECTED",
+        "explanation": {
+          "key": "microtubule_present_as_track",
+          "value": true,
+          "producers": [],
+          "initial_state_declared": false
+        }
+      },
+      {
+        "issue_id": "CAUSAL_4",
+        "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+        "affected_process_ids": [
+          "proc_vesicle_transport_along_microtubule"
+        ],
+        "status": "DETECTED",
+        "explanation": {
+          "key": "vesicle_present",
+          "value": true,
+          "producers": [],
+          "initial_state_declared": false
+        }
+      }
+    ],
+    "reachable_process_ids": [],
+    "witnesses": {},
+    "states_explored": 1,
+    "exhaustive": true,
+    "limit": 4096,
+    "semantics": "Finite paths with exact state values, completion dependencies, once-per-process invocation; dynamic loops and unmodeled continuous chemistry not proven."
+  }
+}

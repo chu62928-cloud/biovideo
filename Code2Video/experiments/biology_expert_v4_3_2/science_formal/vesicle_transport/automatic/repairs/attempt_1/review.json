@@ -1,0 +1,68 @@
+{
+  "decision": "REVISE",
+  "issues": [
+    {
+      "target_id": "proc_microtubule_track_provision",
+      "reason": "A microtubule is a static polymer that can serve as a track; it is not an actor that 'provides' a track as an active process. This framing implies an activity the source does not attribute to microtubules. Additionally, this 'process' requires a motor and a cargo even though track availability is independent of both.",
+      "evidence_ids": [
+        "E_9af4c0e6bde1",
+        "E_a7a76831c1a0"
+      ]
+    },
+    {
+      "target_id": "proc_motor_protein_binding_to_cargo",
+      "reason": "No retrieved passage states that motor proteins bind vesicles. Kinesin/dynein are said to transport cargos such as 'mRNAs, proteins, and organelles,' not specifically vesicles, and the binding step is never described. The model substitutes a specific cargo identity (vesicle) for the source's generic 'cargos.'",
+      "evidence_ids": [
+        "E_a7a76831c1a0"
+      ]
+    },
+    {
+      "target_id": "obs_vesicle_transport_relation",
+      "reason": "The source only supports that kinesin/dynein transport 'a variety of cargos, such as mRNAs, proteins, and organelles,' and that microtubules are tracks 'along which vesicles move.' It does not entail that a motor protein transports a vesicle specifically, and it never describes a motor-cargo binding or a transport relation directed at vesicles.",
+      "evidence_ids": [
+        "E_a7a76831c1a0",
+        "E_9af4c0e6bde1"
+      ]
+    },
+    {
+      "target_id": "st_motor_protein_bound_to_cargo",
+      "reason": "This produced state, and the derived step 'motor protein binds vesicle cargo,' are not source-entailed. The passages neither describe motor-cargo binding as a discrete process nor restrict the cargo to vesicles; the assertion is a model inference, not a documented finding.",
+      "evidence_ids": [
+        "E_a7a76831c1a0"
+      ]
+    },
+    {
+      "target_id": "scope.excluded_processes.motor_protein_identity_and_mechanism",
+      "reason": "The scope statement says motor-protein identity is 'not specified in retrieved passages,' but the model nevertheless names 'kinesin/dynein' and builds a transport process around them. The scope therefore contradicts the retrieved evidence (E_a7a76831c1a0 names kinesin and dynein explicitly). Choose either a generic 'motor protein' framing or a kinesin/dynein framing, and make the scope and the observable model agree.",
+      "evidence_ids": [
+        "E_a7a76831c1a0"
+      ]
+    }
+  ],
+  "observable_reviews": [
+    {
+      "constraint_id": "obs_track_relation_during_transport",
+      "decision": "REVISE",
+      "reason": "The source supports that microtubules are tracks 'along which vesicles move,' but it does not entail that a motor protein is required in the same relation, nor that the microtubule 'provides' a track as a process output. The observable's scope is broader than what the source entails."
+    },
+    {
+      "constraint_id": "obs_vesicle_on_microtubule_during_transport",
+      "decision": "PASS",
+      "reason": "The source directly entails that vesicles move along microtubules ('provide a track along which vesicles move through the cell'). The observable correctly preserves this narrow spatial relation during transport without overclaiming a motor mechanism."
+    },
+    {
+      "constraint_id": "obs_vesicle_transport_relation",
+      "decision": "REVISE",
+      "reason": "The source supports that kinesin/dynein transport 'cargos such as mRNAs, proteins, and organelles' and that microtubules are tracks for vesicle movement, but it does not entail a motor protein transporting a vesicle specifically. The observable asserts a motor-vesicle transport relation the source does not directly support."
+    },
+    {
+      "constraint_id": "obs_motor_cargo_binding",
+      "decision": "REVISE",
+      "reason": "No passage describes motor proteins binding to vesicle cargo. The source only says motors transport cargos; a binding relation to vesicles specifically is an unsupported inference."
+    }
+  ],
+  "scope_review": "The topic, audience, and organism generalization are consistent with the retrieved evidence, and the simplifications are honest in excluding molecular detail. However, two problems remain. First, the scope says motor-protein identity is not specified, but the model names kinesin/dynein and treats them as specific actors. Second, the model adds a motor-vesicle binding process and a motor-vesicle transport relation that the sources do not directly entail. Vesicle transport along microtubules is supported; motor-protein-dependent transport of vesicles is only partially supported, and the specific binding step is not. The model should either (a) keep the motor generic and explicitly limit its claims to 'microtubules as tracks along which vesicles move' without asserting a motor-vesicle binding step, or (b) clearly mark the kinesin/dynein transport of generic cargos as separate, source-supported but not vesicle-specific. As written, the model is not a fully faithful typed reconstruction of the retrieved sources.",
+  "model_hash": "acbbd03a10c9f47846ddb088f1aa8e61a6e7396049013d1fcd09221212e2c29b",
+  "separate_request": true,
+  "independent_provider": false
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=eukaryotic+lagging+strand+DNA+replication+primer+removal+RNase+H+flap+endonuclease+polymerase+alpha+delta+handoff+Okazaki+fragment+maturation+ligation+mechanism&format=json&pageSize=3&resultType=core",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:06:04Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "50596a1de821165a7f03c2d6d02369c2cc2d85b693b6b5213b1ffb97cabe5a5d"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK26845/",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:06:06Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "0bf4e53060b6fca25bf4076fdc79ce5dd22feec15d8428c579a9b6e2e30a600c"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2811071/",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:06:07Z",
+    "status": "redirect",
+    "http_status": 301,
+    "destination": "https://pmc.ncbi.nlm.nih.gov:443/articles/PMC2811071/"
+  },
+  {
+    "url": "https://pmc.ncbi.nlm.nih.gov:443/articles/PMC2811071/",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:06:07Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "1f8dac07ce58e4800d904ae092235e164a04f7fb481d3f196cd32401b0111091"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=eukaryotic+lagging+strand+DNA+replication+primer+removal+RNase+H+FEN1+polymerase+delta+hand-off+replacement+synthesis+ligation+mechanism+review&format=json&pageSize=3&resultType=core",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:06:20Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "eef3716ce4b67d819ed2ed102f4e5965b6b75969560420db5556efcf6aae9c0d"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11627200/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:06:37Z",
+    "status": "UNVERIFIED",
+    "http_status": 500,
+    "error": "HTTPError"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2811077/",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:06:42Z",
+    "status": "redirect",
+    "http_status": 301,
+    "destination": "https://pmc.ncbi.nlm.nih.gov:443/articles/PMC2811077/"
+  },
+  {
+    "url": "https://pmc.ncbi.nlm.nih.gov:443/articles/PMC2811077/",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T06:06:43Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "6c488b580f4c49fd84dc37e154c648f50070f4210eb11faa059926eb54a450ab"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "science_requested_goal": "Complete actual reliability experiment",
+  "authorization_basis": "Earlier explicit user cancellation of DeepSeek/Qwen suggested ceilings persists",
+  "previous_science_calls_retained": 12,
+  "new_total_science_ceiling": 36,
+  "repair_round1": "development failure; dependency-scope and action_category interface defects found",
+  "code_revision_after_development": true,
+  "new_formal_run_root": "science_formal",
+  "visual_failed_call_retained": true,
+  "video_paid_tasks": 0
+}

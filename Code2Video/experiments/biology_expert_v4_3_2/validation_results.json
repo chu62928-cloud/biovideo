@@ -1,0 +1,1823 @@
+{
+  "schema_and_causal": {
+    "schema": "PASS",
+    "exact_source_support": "PASS",
+    "causal": {
+      "model_sha256": "acbbd03a10c9f47846ddb088f1aa8e61a6e7396049013d1fcd09221212e2c29b",
+      "status": "PASS",
+      "issues": [],
+      "reachable_process_ids": [
+        "proc_microtubule_track_provision",
+        "proc_motor_protein_binding_to_cargo",
+        "proc_vesicle_transport_along_microtubule"
+      ],
+      "witnesses": {
+        "proc_microtubule_track_provision": {
+          "completed_before": [],
+          "required_state_refs": [
+            "st_microtubule_present",
+            "st_motor_protein_active"
+          ],
+          "produced_state_refs": [
+            "st_microtubule_available_as_track"
+          ]
+        },
+        "proc_motor_protein_binding_to_cargo": {
+          "completed_before": [],
+          "required_state_refs": [
+            "st_motor_protein_active",
+            "st_vesicle_present"
+          ],
+          "produced_state_refs": [
+            "st_motor_protein_bound_to_cargo"
+          ]
+        },
+        "proc_vesicle_transport_along_microtubule": {
+          "completed_before": [
+            "proc_microtubule_track_provision"
+          ],
+          "required_state_refs": [
+            "st_microtubule_available_as_track",
+            "st_vesicle_present",
+            "st_motor_protein_active"
+          ],
+          "produced_state_refs": [
+            "st_vesicle_moving_along_microtubule"
+          ]
+        }
+      },
+      "states_explored": 6,
+      "exhaustive": true,
+      "limit": 4096,
+      "semantics": "Bounded single-execution state paths on explicit subject/property/value; no claim about chemistry, loops or all continuous trajectories."
+    },
+    "independent_review": {
+      "decision": "REVISE",
+      "issues": [
+        {
+          "target_id": "proc_microtubule_track_provision",
+          "reason": "A microtubule is a static polymer that can serve as a track; it is not an actor that 'provides' a track as an active process. This framing implies an activity the source does not attribute to microtubules. Additionally, this 'process' requires a motor and a cargo even though track availability is independent of both.",
+          "evidence_ids": [
+            "E_9af4c0e6bde1",
+            "E_a7a76831c1a0"
+          ]
+        },
+        {
+          "target_id": "proc_motor_protein_binding_to_cargo",
+          "reason": "No retrieved passage states that motor proteins bind vesicles. Kinesin/dynein are said to transport cargos such as 'mRNAs, proteins, and organelles,' not specifically vesicles, and the binding step is never described. The model substitutes a specific cargo identity (vesicle) for the source's generic 'cargos.'",
+          "evidence_ids": [
+            "E_a7a76831c1a0"
+          ]
+        },
+        {
+          "target_id": "obs_vesicle_transport_relation",
+          "reason": "The source only supports that kinesin/dynein transport 'a variety of cargos, such as mRNAs, proteins, and organelles,' and that microtubules are tracks 'along which vesicles move.' It does not entail that a motor protein transports a vesicle specifically, and it never describes a motor-cargo binding or a transport relation directed at vesicles.",
+          "evidence_ids": [
+            "E_a7a76831c1a0",
+            "E_9af4c0e6bde1"
+          ]
+        },
+        {
+          "target_id": "st_motor_protein_bound_to_cargo",
+          "reason": "This produced state, and the derived step 'motor protein binds vesicle cargo,' are not source-entailed. The passages neither describe motor-cargo binding as a discrete process nor restrict the cargo to vesicles; the assertion is a model inference, not a documented finding.",
+          "evidence_ids": [
+            "E_a7a76831c1a0"
+          ]
+        },
+        {
+          "target_id": "scope.excluded_processes.motor_protein_identity_and_mechanism",
+          "reason": "The scope statement says motor-protein identity is 'not specified in retrieved passages,' but the model nevertheless names 'kinesin/dynein' and builds a transport process around them. The scope therefore contradicts the retrieved evidence (E_a7a76831c1a0 names kinesin and dynein explicitly). Choose either a generic 'motor protein' framing or a kinesin/dynein framing, and make the scope and the observable model agree.",
+          "evidence_ids": [
+            "E_a7a76831c1a0"
+          ]
+        }
+      ],
+      "observable_reviews": [
+        {
+          "constraint_id": "obs_track_relation_during_transport",
+          "decision": "REVISE",
+          "reason": "The source supports that microtubules are tracks 'along which vesicles move,' but it does not entail that a motor protein is required in the same relation, nor that the microtubule 'provides' a track as a process output. The observable's scope is broader than what the source entails."
+        },
+        {
+          "constraint_id": "obs_vesicle_on_microtubule_during_transport",
+          "decision": "PASS",
+          "reason": "The source directly entails that vesicles move along microtubules ('provide a track along which vesicles move through the cell'). The observable correctly preserves this narrow spatial relation during transport without overclaiming a motor mechanism."
+        },
+        {
+          "constraint_id": "obs_vesicle_transport_relation",
+          "decision": "REVISE",
+          "reason": "The source supports that kinesin/dynein transport 'cargos such as mRNAs, proteins, and organelles' and that microtubules are tracks for vesicle movement, but it does not entail a motor protein transporting a vesicle specifically. The observable asserts a motor-vesicle transport relation the source does not directly support."
+        },
+        {
+          "constraint_id": "obs_motor_cargo_binding",
+          "decision": "REVISE",
+          "reason": "No passage describes motor proteins binding to vesicle cargo. The source only says motors transport cargos; a binding relation to vesicles specifically is an unsupported inference."
+        }
+      ],
+      "scope_review": "The topic, audience, and organism generalization are consistent with the retrieved evidence, and the simplifications are honest in excluding molecular detail. However, two problems remain. First, the scope says motor-protein identity is not specified, but the model names kinesin/dynein and treats them as specific actors. Second, the model adds a motor-vesicle binding process and a motor-vesicle transport relation that the sources do not directly entail. Vesicle transport along microtubules is supported; motor-protein-dependent transport of vesicles is only partially supported, and the specific binding step is not. The model should either (a) keep the motor generic and explicitly limit its claims to 'microtubules as tracks along which vesicles move' without asserting a motor-vesicle binding step, or (b) clearly mark the kinesin/dynein transport of generic cargos as separate, source-supported but not vesicle-specific. As written, the model is not a fully faithful typed reconstruction of the retrieved sources.",
+      "model_hash": "acbbd03a10c9f47846ddb088f1aa8e61a6e7396049013d1fcd09221212e2c29b",
+      "separate_request": true,
+      "independent_provider": false
+    },
+    "compile": {
+      "model_hash": "acbbd03a10c9f47846ddb088f1aa8e61a6e7396049013d1fcd09221212e2c29b",
+      "science_review": "REVISE",
+      "constraints": [
+        {
+          "constraint_id": "obs_track_relation_during_transport",
+          "process_semantic_id": "proc_microtubule_track_provision",
+          "entity_semantic_ids": [
+            "ent_microtubule",
+            "ent_vesicle",
+            "ent_motor_protein"
+          ],
+          "relation_semantic_id": "rel_microtubule_track_for_vesicle",
+          "predicate": "relation_holds_during",
+          "spec": {
+            "predicate": "relation_holds_during",
+            "participant_roles": [
+              "track_provider",
+              "cargo_guided",
+              "motor"
+            ],
+            "interval": {
+              "event_role": "proc_microtubule_track_provision"
+            },
+            "source_role": "track_provider",
+            "target_role": "cargo_guided",
+            "relation_type": "rel_microtubule_track_for_vesicle"
+          },
+          "participant_entity_refs": {
+            "track_provider": "ent_microtubule",
+            "cargo_guided": "ent_vesicle",
+            "motor": "ent_motor_protein"
+          },
+          "evidence_ids": [
+            "E_9af4c0e6bde1",
+            "E_a7a76831c1a0"
+          ],
+          "source_support": [
+            {
+              "evidence_id": "E_9af4c0e6bde1",
+              "quote": "provide a track along which vesicles move through the cell",
+              "location": "paragraph_12"
+            },
+            {
+              "evidence_id": "E_a7a76831c1a0",
+              "quote": "used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell",
+              "location": "abstract"
+            }
+          ],
+          "compile_status": "PARTIALLY_COMPILED",
+          "full_semantics": false,
+          "exceptions": [
+            {
+              "exception_id": "exc_track_absent",
+              "description": "If microtubules are not present or not serving as tracks, this provision does not hold.",
+              "evidence_ids": [
+                "E_9af4c0e6bde1"
+              ]
+            }
+          ],
+          "model_hash": "acbbd03a10c9f47846ddb088f1aa8e61a6e7396049013d1fcd09221212e2c29b"
+        },
+        {
+          "constraint_id": "obs_vesicle_transport_relation",
+          "process_semantic_id": "proc_vesicle_transport_along_microtubule",
+          "entity_semantic_ids": [
+            "ent_vesicle",
+            "ent_microtubule",
+            "ent_motor_protein"
+          ],
+          "relation_semantic_id": "rel_motor_protein_transports_vesicle",
+          "predicate": "relation_holds_during",
+          "spec": {
+            "predicate": "relation_holds_during",
+            "participant_roles": [
+              "cargo",
+              "track",
+              "motor"
+            ],
+            "interval": {
+              "event_role": "proc_vesicle_transport_along_microtubule"
+            },
+            "source_role": "motor",
+            "target_role": "cargo",
+            "relation_type": "rel_motor_protein_transports_vesicle"
+          },
+          "participant_entity_refs": {
+            "cargo": "ent_vesicle",
+            "track": "ent_microtubule",
+            "motor": "ent_motor_protein"
+          },
+          "evidence_ids": [
+            "E_a7a76831c1a0"
+          ],
+          "source_support": [
+            {
+              "evidence_id": "E_a7a76831c1a0",
+              "quote": "used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell",
+              "location": "abstract"
+            }
+          ],
+          "compile_status": "PARTIALLY_COMPILED",
+          "full_semantics": false,
+          "exceptions": [
+            {
+              "exception_id": "exc_no_track",
+              "description": "Motor-protein-dependent vesicle transport along microtubules does not occur if no microtubule track is available.",
+              "evidence_ids": [
+                "E_9af4c0e6bde1"
+              ]
+            },
+            {
+              "exception_id": "exc_no_motor",
+              "description": "If no active motor protein is available to engage the vesicle cargo, transport along the microtubule does not proceed.",
+              "evidence_ids": [
+                "E_a7a76831c1a0"
+              ]
+            }
+          ],
+          "model_hash": "acbbd03a10c9f47846ddb088f1aa8e61a6e7396049013d1fcd09221212e2c29b"
+        },
+        {
+          "constraint_id": "obs_vesicle_on_microtubule_during_transport",
+          "process_semantic_id": "proc_vesicle_transport_along_microtubule",
+          "entity_semantic_ids": [
+            "ent_vesicle",
+            "ent_microtubule",
+            "ent_motor_protein"
+          ],
+          "relation_semantic_id": "rel_microtubule_track_for_vesicle",
+          "predicate": "relation_holds_during",
+          "spec": {
+            "predicate": "relation_holds_during",
+            "participant_roles": [
+              "cargo",
+              "track",
+              "motor"
+            ],
+            "interval": {
+              "event_role": "proc_vesicle_transport_along_microtubule"
+            },
+            "source_role": "track",
+            "target_role": "cargo",
+            "relation_type": "rel_microtubule_track_for_vesicle"
+          },
+          "participant_entity_refs": {
+            "cargo": "ent_vesicle",
+            "track": "ent_microtubule",
+            "motor": "ent_motor_protein"
+          },
+          "evidence_ids": [
+            "E_9af4c0e6bde1",
+            "E_a7a76831c1a0"
+          ],
+          "source_support": [
+            {
+              "evidence_id": "E_9af4c0e6bde1",
+              "quote": "provide a track along which vesicles move through the cell",
+              "location": "paragraph_12"
+            },
+            {
+              "evidence_id": "E_a7a76831c1a0",
+              "quote": "used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell",
+              "location": "abstract"
+            }
+          ],
+          "compile_status": "PARTIALLY_COMPILED",
+          "full_semantics": false,
+          "exceptions": [
+            {
+              "exception_id": "exc_no_track",
+              "description": "Motor-protein-dependent vesicle transport along microtubules does not occur if no microtubule track is available.",
+              "evidence_ids": [
+                "E_9af4c0e6bde1"
+              ]
+            },
+            {
+              "exception_id": "exc_no_motor",
+              "description": "If no active motor protein is available to engage the vesicle cargo, transport along the microtubule does not proceed.",
+              "evidence_ids": [
+                "E_a7a76831c1a0"
+              ]
+            }
+          ],
+          "model_hash": "acbbd03a10c9f47846ddb088f1aa8e61a6e7396049013d1fcd09221212e2c29b"
+        },
+        {
+          "constraint_id": "obs_motor_cargo_binding",
+          "process_semantic_id": "proc_motor_protein_binding_to_cargo",
+          "entity_semantic_ids": [
+            "ent_motor_protein",
+            "ent_vesicle"
+          ],
+          "relation_semantic_id": "rel_motor_protein_transports_vesicle",
+          "predicate": "relation_holds_during",
+          "spec": {
+            "predicate": "relation_holds_during",
+            "participant_roles": [
+              "motor",
+              "cargo"
+            ],
+            "interval": {
+              "event_role": "proc_motor_protein_binding_to_cargo"
+            },
+            "source_role": "motor",
+            "target_role": "cargo",
+            "relation_type": "rel_motor_protein_transports_vesicle"
+          },
+          "participant_entity_refs": {
+            "motor": "ent_motor_protein",
+            "cargo": "ent_vesicle"
+          },
+          "evidence_ids": [
+            "E_a7a76831c1a0"
+          ],
+          "source_support": [
+            {
+              "evidence_id": "E_a7a76831c1a0",
+              "quote": "used as tracks by kinesin and dynein motors to transport a variety of cargos, such as mRNAs, proteins, and organelles, within the cell",
+              "location": "abstract"
+            }
+          ],
+          "compile_status": "PARTIALLY_COMPILED",
+          "full_semantics": false,
+          "exceptions": [
+            {
+              "exception_id": "exc_no_motor_cargo_binding",
+              "description": "If no active motor protein engages the vesicle, this binding process does not occur.",
+              "evidence_ids": [
+                "E_a7a76831c1a0"
+              ]
+            }
+          ],
+          "model_hash": "acbbd03a10c9f47846ddb088f1aa8e61a6e7396049013d1fcd09221212e2c29b"
+        }
+      ],
+      "frozen_standard": "Typed observable text/roles/relations as independently reviewed; no semantic replacement"
+    },
+    "scope": "Schema/exact quotations and state reachability do not override independent scientific REVISE"
+  },
+  "all_topic_state_rechecks": {
+    "results": [
+      {
+        "topic": "dna_replication",
+        "model_hash": "0b010f9f174be631781ddedb93a1e3099c02622e7c904d37745116403de614be",
+        "validation": {
+          "model_sha256": "0b010f9f174be631781ddedb93a1e3099c02622e7c904d37745116403de614be",
+          "status": "REVIEW_INCOMPLETE",
+          "issues": [
+            {
+              "issue_id": "CAUSAL_1",
+              "issue_type": "INITIAL_STATE_UNSPECIFIED",
+              "affected_process_ids": [],
+              "status": "DETECTED",
+              "explanation": "Historical model has no explicit initial_states; reachability is conditional, not automatically FAIL/PASS."
+            },
+            {
+              "issue_id": "CAUSAL_2",
+              "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+              "affected_process_ids": [
+                "PROC_PRIMER_FORMATION"
+              ],
+              "status": "DETECTED",
+              "explanation": {
+                "key": "template_available",
+                "value": "DNA has been made available as a template",
+                "producers": [],
+                "initial_state_declared": false
+              }
+            },
+            {
+              "issue_id": "CAUSAL_3",
+              "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+              "affected_process_ids": [
+                "PROC_POL_ALPHA_EXTENSION"
+              ],
+              "status": "DETECTED",
+              "explanation": {
+                "key": "primer_exists",
+                "value": "RNA primer formed by primase",
+                "producers": [],
+                "initial_state_declared": false
+              }
+            },
+            {
+              "issue_id": "CAUSAL_4",
+              "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+              "affected_process_ids": [
+                "PROC_POL_DELTA_EXTENSION"
+              ],
+              "status": "DETECTED",
+              "explanation": {
+                "key": "pol_alpha_handoff_complete",
+                "value": "DNA polymerase alpha has added a short DNA fragment and handed off",
+                "producers": [],
+                "initial_state_declared": false
+              }
+            },
+            {
+              "issue_id": "CAUSAL_5",
+              "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+              "affected_process_ids": [
+                "PROC_PRIMER_REMOVAL"
+              ],
+              "status": "DETECTED",
+              "explanation": {
+                "key": "primer_displaced",
+                "value": "primer RNA displaced from DNA template by pol delta",
+                "producers": [],
+                "initial_state_declared": false
+              }
+            },
+            {
+              "issue_id": "CAUSAL_6",
+              "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+              "affected_process_ids": [
+                "PROC_LIGATION"
+              ],
+              "status": "DETECTED",
+              "explanation": {
+                "key": "primers_replaced",
+                "value": "RNA primers replaced with DNA nucleotides",
+                "producers": [],
+                "initial_state_declared": false
+              }
+            }
+          ],
+          "reachable_process_ids": [],
+          "witnesses": {},
+          "states_explored": 1,
+          "exhaustive": true,
+          "limit": 4096,
+          "semantics": "Finite paths with exact state values, completion dependencies, once-per-process invocation; dynamic loops and unmodeled continuous chemistry not proven."
+        },
+        "legacy_model_unchanged": true,
+        "new_typed_migration_status": "BLOCKED_MODEL_API_402"
+      },
+      {
+        "topic": "mitosis",
+        "model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+        "validation": {
+          "model_sha256": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+          "status": "REVIEW_INCOMPLETE",
+          "issues": [
+            {
+              "issue_id": "CAUSAL_1",
+              "issue_type": "INITIAL_STATE_UNSPECIFIED",
+              "affected_process_ids": [],
+              "status": "DETECTED",
+              "explanation": "Historical model has no explicit initial_states; reachability is conditional, not automatically FAIL/PASS."
+            },
+            {
+              "issue_id": "CAUSAL_2",
+              "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+              "affected_process_ids": [
+                "PROC_kinetochore_attachment_orientation"
+              ],
+              "status": "DETECTED",
+              "explanation": {
+                "key": "kinetochore_formed",
+                "value": "Each sister chromatid has a kinetochore in the centromeric region.",
+                "producers": [],
+                "initial_state_declared": false
+              }
+            },
+            {
+              "issue_id": "CAUSAL_3",
+              "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+              "affected_process_ids": [
+                "PROC_kinetochore_attachment_orientation"
+              ],
+              "status": "DETECTED",
+              "explanation": {
+                "key": "spindle_microtubules_present",
+                "value": "Mitotic spindle microtubules are present and extend from centrosomes.",
+                "producers": [],
+                "initial_state_declared": false
+              }
+            },
+            {
+              "issue_id": "CAUSAL_4",
+              "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+              "affected_process_ids": [
+                "PROC_metaphase_alignment"
+              ],
+              "status": "DETECTED",
+              "explanation": {
+                "key": "bipolar_attachment",
+                "value": "Sister chromatids attached via kinetochores to microtubules from opposing poles.",
+                "producers": [],
+                "initial_state_declared": false
+              }
+            },
+            {
+              "issue_id": "CAUSAL_5",
+              "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+              "affected_process_ids": [
+                "PROC_metaphase_alignment"
+              ],
+              "status": "DETECTED",
+              "explanation": {
+                "key": "cohesin_present",
+                "value": "Sister chromatids still tightly attached to each other by cohesin proteins.",
+                "producers": [],
+                "initial_state_declared": false
+              }
+            },
+            {
+              "issue_id": "CAUSAL_6",
+              "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+              "affected_process_ids": [
+                "PROC_anaphase_sister_separation"
+              ],
+              "status": "DETECTED",
+              "explanation": {
+                "key": "metaphase_alignment",
+                "value": "Duplicated chromosome aligned at the metaphase plate (schematic phase order; not asserted as a strict per-chromosome causal prerequisite).",
+                "producers": [],
+                "initial_state_declared": false
+              }
+            },
+            {
+              "issue_id": "CAUSAL_7",
+              "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+              "affected_process_ids": [
+                "PROC_anaphase_sister_separation"
+              ],
+              "status": "DETECTED",
+              "explanation": {
+                "key": "bipolar_attachment",
+                "value": "Sister chromatids attached via kinetochores to microtubules from opposing poles.",
+                "producers": [],
+                "initial_state_declared": false
+              }
+            }
+          ],
+          "reachable_process_ids": [],
+          "witnesses": {},
+          "states_explored": 1,
+          "exhaustive": true,
+          "limit": 4096,
+          "semantics": "Finite paths with exact state values, completion dependencies, once-per-process invocation; dynamic loops and unmodeled continuous chemistry not proven."
+        },
+        "legacy_model_unchanged": true,
+        "new_typed_migration_status": "BLOCKED_MODEL_API_402"
+      },
+      {
+        "topic": "vesicle_transport",
+        "model_hash": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da",
+        "validation": {
+          "model_sha256": "1acf54d3a99a22129c8125cacb3a6a94bab625ba395ae1538e96f263512bf1da",
+          "status": "REVIEW_INCOMPLETE",
+          "issues": [
+            {
+              "issue_id": "CAUSAL_1",
+              "issue_type": "INITIAL_STATE_UNSPECIFIED",
+              "affected_process_ids": [],
+              "status": "DETECTED",
+              "explanation": "Historical model has no explicit initial_states; reachability is conditional, not automatically FAIL/PASS."
+            },
+            {
+              "issue_id": "CAUSAL_2",
+              "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+              "affected_process_ids": [
+                "proc_microtubule_track_provision"
+              ],
+              "status": "DETECTED",
+              "explanation": {
+                "key": "microtubule_present",
+                "value": true,
+                "producers": [],
+                "initial_state_declared": false
+              }
+            },
+            {
+              "issue_id": "CAUSAL_3",
+              "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+              "affected_process_ids": [
+                "proc_vesicle_transport_along_microtubule"
+              ],
+              "status": "DETECTED",
+              "explanation": {
+                "key": "microtubule_present_as_track",
+                "value": true,
+                "producers": [],
+                "initial_state_declared": false
+              }
+            },
+            {
+              "issue_id": "CAUSAL_4",
+              "issue_type": "UNRESOLVED_INITIAL_OR_PRODUCER",
+              "affected_process_ids": [
+                "proc_vesicle_transport_along_microtubule"
+              ],
+              "status": "DETECTED",
+              "explanation": {
+                "key": "vesicle_present",
+                "value": true,
+                "producers": [],
+                "initial_state_declared": false
+              }
+            }
+          ],
+          "reachable_process_ids": [],
+          "witnesses": {},
+          "states_explored": 1,
+          "exhaustive": true,
+          "limit": 4096,
+          "semantics": "Finite paths with exact state values, completion dependencies, once-per-process invocation; dynamic loops and unmodeled continuous chemistry not proven."
+        },
+        "legacy_model_unchanged": true,
+        "new_typed_migration_status": "ATTEMPTED_NOT_APPROVED"
+      }
+    ],
+    "note": "All three subjects run same validator; unmigrated legacy initial conditions unresolved, not a proof of biological incorrectness."
+  },
+  "runtime_visual": {
+    "video_sha256": "c035449dc554645baf35a11b7855b8d0a85253ea2d06af39bf780bdde32e9f2d",
+    "scene_sha256": "ed8c6c9e92eec39a4cb458514c6e8084e16b8a139c8375391f7d1dfd2a67c25a",
+    "trace_sha256": "f4b02d7ad8dde9e630839ebc9606972b005396c28ddfce7d79b5d8aae993a3d4",
+    "samples": [
+      {
+        "requested_time": 1.2,
+        "actual_trace_time": 1.1333333333333333,
+        "delta": 0.06666666666666665,
+        "frame_path": "video_evidence/actual_1.2.png",
+        "frame_sha256": "18bf913b8702280d8599a6c61c6f996b6fb95080508e5c747c21ee636cc63432",
+        "registered_label_bbox_overlaps": [],
+        "evidence_level": "RUNTIME_OBSERVED_AND_ACTUAL_DECODED_FRAME",
+        "pixel_double_image_detection": "NOT_MEASURED"
+      },
+      {
+        "requested_time": 2.2,
+        "actual_trace_time": 2.1333333333333333,
+        "delta": 0.06666666666666687,
+        "frame_path": "video_evidence/actual_2.2.png",
+        "frame_sha256": "4c92586b6d009b53195bf08775cea7a7d63ee1598d1df3b78042dbe78c36bb12",
+        "registered_label_bbox_overlaps": [],
+        "evidence_level": "RUNTIME_OBSERVED_AND_ACTUAL_DECODED_FRAME",
+        "pixel_double_image_detection": "NOT_MEASURED"
+      },
+      {
+        "requested_time": 4.2,
+        "actual_trace_time": 4.133333333333338,
+        "delta": 0.06666666666666199,
+        "frame_path": "video_evidence/actual_4.2.png",
+        "frame_sha256": "d6bafc71272d886a795d40b3da08d81e543acc794728fa9ad8c5f2cb7432090a",
+        "registered_label_bbox_overlaps": [],
+        "evidence_level": "RUNTIME_OBSERVED_AND_ACTUAL_DECODED_FRAME",
+        "pixel_double_image_detection": "NOT_MEASURED"
+      }
+    ],
+    "original_reviews": [
+      "video_evidence/video_review_23.json",
+      "video_evidence/video_review_29.json",
+      "video_evidence/video_review_32.json"
+    ],
+    "dispute_status": "NOT_CORROBORATED",
+    "interpretation": "Exact frames plus earlier isolated frame review do not corroborate specific label-doubling claim. This is not proof all frames are artifact-free; no repeat same-model PASS voting.",
+    "request_attachment_audit": [
+      {
+        "request_file": "v42_12_07c2dd5e.request.json",
+        "video_sha256": "23f7820d8c74ded518aab417c23d2efb64d6e60b832b7a02b85b3af81214cd05",
+        "include_grid": true,
+        "decoded_frame_attachments": [],
+        "reference_contamination_risk": true
+      },
+      {
+        "request_file": "v42_23_c02af519.request.json",
+        "video_sha256": "c035449dc554645baf35a11b7855b8d0a85253ea2d06af39bf780bdde32e9f2d",
+        "include_grid": false,
+        "decoded_frame_attachments": [],
+        "reference_contamination_risk": false
+      },
+      {
+        "request_file": "v42_29_4a486fcb.request.json",
+        "video_sha256": "c035449dc554645baf35a11b7855b8d0a85253ea2d06af39bf780bdde32e9f2d",
+        "include_grid": false,
+        "decoded_frame_attachments": [],
+        "reference_contamination_risk": false
+      },
+      {
+        "request_file": "v42_32_6fce19f4.request.json",
+        "video_sha256": "c035449dc554645baf35a11b7855b8d0a85253ea2d06af39bf780bdde32e9f2d",
+        "include_grid": false,
+        "decoded_frame_attachments": [
+          {
+            "path": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/actual_frame_0.2.png",
+            "sha256": "7ebc2b9708eb4fd05f0e77d547f05849f7753a123300529b938d4e9371a76ccd"
+          },
+          {
+            "path": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/actual_frame_1.2.png",
+            "sha256": "18bf913b8702280d8599a6c61c6f996b6fb95080508e5c747c21ee636cc63432"
+          },
+          {
+            "path": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/actual_frame_2.2.png",
+            "sha256": "4c92586b6d009b53195bf08775cea7a7d63ee1598d1df3b78042dbe78c36bb12"
+          },
+          {
+            "path": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/actual_frame_3.2.png",
+            "sha256": "37e5d1bee161168212fda5de9432ec769349e56ceecc5ad950a5c951732007b9"
+          },
+          {
+            "path": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/actual_frame_4.2.png",
+            "sha256": "d6bafc71272d886a795d40b3da08d81e543acc794728fa9ad8c5f2cb7432090a"
+          },
+          {
+            "path": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/actual_frame_5.2.png",
+            "sha256": "42c06bb1bed26978392281c24e340ead64bc4fa4418eb63d5e3c5610867e4549"
+          },
+          {
+            "path": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/actual_frame_6.2.png",
+            "sha256": "f2c72a593f2f263cbf3249504051b3e6a967958bfa228e5e7603100826aad711"
+          },
+          {
+            "path": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/actual_frame_7.2.png",
+            "sha256": "67cad946e0686f78282bd2bc7240328da44800655524654c569da12561d72f69"
+          },
+          {
+            "path": "/autodl-tmp/code2biovideo/biovideo-v4.3/Code2Video/experiments/biology_expert_v4_3/actual_frame_7.8.png",
+            "sha256": "c961752a3c0897eee9ae030997769a6cd242834158ebc1863a1772c121e7d6c3"
+          }
+        ],
+        "reference_contamination_risk": false
+      }
+    ],
+    "declared_vs_observed": {
+      "samples": 124,
+      "issues": [],
+      "relation_evidence_counts": {
+        "DECLARED_ONLY": 355
+      },
+      "object_evidence_levels": {
+        "pole_left": "DECLARED_ONLY",
+        "pole_right": "DECLARED_ONLY",
+        "metaphase_plate": "DECLARED_ONLY",
+        "sister_chromatid_A": "DECLARED_ONLY",
+        "sister_chromatid_B": "DECLARED_ONLY",
+        "kinetochore_A": "DECLARED_ONLY",
+        "kinetochore_B": "DECLARED_ONLY",
+        "kmt_left": "DECLARED_ONLY",
+        "kmt_right": "DECLARED_ONLY"
+      },
+      "pixel_verification": "NOT_MEASURED",
+      "claim": "Runtime geometry visibility and endpoints only; no pixel or biological PASS inferred."
+    },
+    "unproven": [
+      "Every-frame pixel object tracking",
+      "All molecular geometry",
+      "Assembly parent semantics",
+      "Full teaching comprehensibility"
+    ]
+  },
+  "mutation": {
+    "runtime": {
+      "contract_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+      "checks": [
+        {
+          "constraint_id": "OBS_bipolar_attachment_during_prometaphase",
+          "predicate": "relation_holds_during",
+          "status": "PASS",
+          "full_constraint_verified": true,
+          "expected_interval": {
+            "status": "RESOLVED",
+            "source": "typed_scene_independent_start_end",
+            "event_id": "EV_attach_orient",
+            "start": 0,
+            "end": 1.0,
+            "model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5"
+          },
+          "observed_interval": [
+            0.0,
+            0.9999999999999999
+          ],
+          "samples_checked": 17,
+          "sample_times": [
+            0.0,
+            0.06666666666666667,
+            0.13333333333333333,
+            0.2,
+            0.26666666666666666,
+            0.3333333333333333,
+            0.39999999999999997,
+            0.4666666666666666,
+            0.5333333333333333,
+            0.6,
+            0.6666666666666666,
+            0.7333333333333333,
+            0.7999999999999999,
+            0.8666666666666666,
+            0.9333333333333332,
+            0.9999999999999999
+          ],
+          "violations": [],
+          "evidence": [
+            {
+              "expected_relation": "REL_microtubule_binds_kinetochore",
+              "source": "kmt_left",
+              "target": "kinetochore_A",
+              "sampling_gaps": [],
+              "interval_source": "typed_scene_independent_start_end"
+            }
+          ],
+          "reason": null,
+          "participants": {
+            "chromosome_being_attached": [
+              "sister_chromatid_A"
+            ],
+            "sister_chromatid_bearing_kinetochore": [
+              "sister_chromatid_A",
+              "sister_chromatid_B"
+            ],
+            "binding_site": [
+              "kinetochore_A",
+              "kinetochore_B"
+            ],
+            "attaching_fiber": [
+              "kmt_left",
+              "kmt_right"
+            ],
+            "target_pole": [
+              "pole_left",
+              "pole_right"
+            ]
+          },
+          "contract_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+          "scene_sha256": "ed8c6c9e92eec39a4cb458514c6e8084e16b8a139c8375391f7d1dfd2a67c25a",
+          "trace_sha256": "f4b02d7ad8dde9e630839ebc9606972b005396c28ddfce7d79b5d8aae993a3d4"
+        },
+        {
+          "constraint_id": "OBS_alignment_during_metaphase",
+          "predicate": "relation_holds_during",
+          "status": "PARTIALLY_VERIFIED",
+          "full_constraint_verified": false,
+          "expected_interval": {
+            "status": "RESOLVED",
+            "source": "typed_scene_independent_start_end",
+            "event_id": "EV_metaphase_align",
+            "start": 1.0,
+            "end": 2.5,
+            "model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5"
+          },
+          "observed_interval": [
+            1.0666666666666667,
+            2.4666666666666677
+          ],
+          "samples_checked": 22,
+          "sample_times": [
+            1.0666666666666667,
+            1.1333333333333333,
+            1.2,
+            1.2666666666666666,
+            1.3333333333333333,
+            1.4,
+            1.4666666666666666,
+            1.5333333333333332,
+            1.5999999999999999,
+            1.6666666666666665,
+            1.7333333333333332,
+            1.7999999999999998,
+            1.8666666666666665,
+            1.9333333333333331,
+            1.9999999999999998,
+            2.0666666666666664,
+            2.1333333333333333,
+            2.2,
+            2.266666666666667,
+            2.333333333333334,
+            2.400000000000001,
+            2.4666666666666677
+          ],
+          "violations": [],
+          "evidence": [
+            {
+              "expected_relation": "REL_duplicated_chromosome_at_metaphase_plate",
+              "source": "sister_chromatid_A",
+              "target": "metaphase_plate",
+              "sampling_gaps": [],
+              "interval_source": "typed_scene_independent_start_end"
+            }
+          ],
+          "reason": null,
+          "participants": {
+            "aligned_chromosome": [
+              "sister_chromatid_A",
+              "sister_chromatid_B"
+            ],
+            "alignment_plane": [
+              "metaphase_plate"
+            ]
+          },
+          "contract_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+          "scene_sha256": "ed8c6c9e92eec39a4cb458514c6e8084e16b8a139c8375391f7d1dfd2a67c25a",
+          "trace_sha256": "f4b02d7ad8dde9e630839ebc9606972b005396c28ddfce7d79b5d8aae993a3d4"
+        },
+        {
+          "constraint_id": "OBS_connection_breakdown_after_alignment",
+          "predicate": "event_precedes",
+          "status": "PARTIALLY_VERIFIED",
+          "full_constraint_verified": false,
+          "expected_interval": {
+            "status": "RESOLVED",
+            "source": "typed_scene_independent_start_end",
+            "event_id": "EV_anaphase_separate",
+            "start": 4.0,
+            "end": 7.5,
+            "model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5"
+          },
+          "observed_interval": null,
+          "samples_checked": 2,
+          "sample_times": [
+            1.0666666666666667,
+            4.000000000000005
+          ],
+          "violations": [],
+          "evidence": [
+            {
+              "event_ids": [
+                "EV_metaphase_align",
+                "EV_anaphase_separate"
+              ],
+              "source": "actual_event_markers"
+            }
+          ],
+          "reason": null,
+          "participants": {
+            "PROC_metaphase_alignment": [
+              "EV_metaphase_align"
+            ],
+            "PROC_anaphase_sister_separation": [
+              "EV_anaphase_separate"
+            ]
+          },
+          "contract_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+          "scene_sha256": "ed8c6c9e92eec39a4cb458514c6e8084e16b8a139c8375391f7d1dfd2a67c25a",
+          "trace_sha256": "f4b02d7ad8dde9e630839ebc9606972b005396c28ddfce7d79b5d8aae993a3d4"
+        },
+        {
+          "constraint_id": "OBS_two_daughter_chromatids_after_separation",
+          "predicate": "state_transition_allowed",
+          "status": "PARTIALLY_VERIFIED",
+          "full_constraint_verified": false,
+          "expected_interval": {
+            "status": "RESOLVED",
+            "source": "typed_scene_independent_start_end",
+            "event_id": "EV_anaphase_separate",
+            "start": 4.0,
+            "end": 7.5,
+            "model_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5"
+          },
+          "observed_interval": null,
+          "samples_checked": 1,
+          "sample_times": [
+            7.533333333333326
+          ],
+          "violations": [],
+          "evidence": [
+            {
+              "precondition": {
+                "metaphase_alignment": "Duplicated chromosome aligned at metaphase plate (schematic phase order)."
+              },
+              "to_value": "separated"
+            }
+          ],
+          "reason": null,
+          "participants": {
+            "separating_duplex": [
+              "sister_chromatid_A"
+            ],
+            "pre_separation_sister_chromatids": [
+              "sister_chromatid_A",
+              "sister_chromatid_B"
+            ],
+            "daughter_chromatids": [
+              "sister_chromatid_A",
+              "sister_chromatid_B"
+            ],
+            "pulling_microtubules": [
+              "kmt_left",
+              "kmt_right"
+            ],
+            "destination_pole": [
+              "pole_left",
+              "pole_right"
+            ]
+          },
+          "contract_hash": "1f96859caa38bca9224ad7a52c04525908dd4464f0e6e83224effb8e393f6ac5",
+          "scene_sha256": "ed8c6c9e92eec39a4cb458514c6e8084e16b8a139c8375391f7d1dfd2a67c25a",
+          "trace_sha256": "f4b02d7ad8dde9e630839ebc9606972b005396c28ddfce7d79b5d8aae993a3d4"
+        }
+      ]
+    },
+    "mutation": {
+      "cases": [
+        {
+          "mutation_type": "RELATION_TERMINATED_EARLY",
+          "constraint_id": "OBS_bipolar_attachment_during_prometaphase",
+          "valid_sample": true,
+          "baseline_status": "PASS",
+          "mutated_status": "FAIL",
+          "detected": true,
+          "changes": [
+            {
+              "time": 0.5333333333333333,
+              "before": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "kinetochore_A",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ],
+              "after": [
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ]
+            },
+            {
+              "time": 0.6,
+              "before": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "kinetochore_A",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ],
+              "after": [
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ]
+            },
+            {
+              "time": 0.6666666666666666,
+              "before": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "kinetochore_A",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ],
+              "after": [
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ]
+            },
+            {
+              "time": 0.7333333333333333,
+              "before": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "kinetochore_A",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ],
+              "after": [
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ]
+            },
+            {
+              "time": 0.7999999999999999,
+              "before": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "kinetochore_A",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ],
+              "after": [
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ]
+            },
+            {
+              "time": 0.8666666666666666,
+              "before": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "kinetochore_A",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ],
+              "after": [
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ]
+            },
+            {
+              "time": 0.9333333333333332,
+              "before": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "kinetochore_A",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ],
+              "after": [
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ]
+            },
+            {
+              "time": 0.9999999999999999,
+              "before": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "kinetochore_A",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ],
+              "after": [
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ]
+            }
+          ],
+          "baseline_trace_sha256": "f4b02d7ad8dde9e630839ebc9606972b005396c28ddfce7d79b5d8aae993a3d4",
+          "mutated_artifact_sha256": "486c03a9fc97e152bf8339d02c5ba7c712e607112d5faeeaf7cabd5b787b6298"
+        },
+        {
+          "mutation_type": "EVENT_ORDER_REVERSED",
+          "valid_sample": false,
+          "baseline_status": "NOT_MEASURED",
+          "mutated_status": "NOT_TESTED",
+          "detected": null,
+          "reason": "No fully compiled source-supported real baseline PASS for this predicate"
+        },
+        {
+          "mutation_type": "CONNECTION_TARGET_CHANGED",
+          "constraint_id": "OBS_bipolar_attachment_during_prometaphase",
+          "valid_sample": true,
+          "baseline_status": "PASS",
+          "mutated_status": "FAIL",
+          "detected": true,
+          "changes": [
+            {
+              "time": 0.5333333333333333,
+              "before": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "kinetochore_A",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ],
+              "after": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "MUTATED_WRONG_TARGET",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ]
+            },
+            {
+              "time": 0.6,
+              "before": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "kinetochore_A",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ],
+              "after": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "MUTATED_WRONG_TARGET",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ]
+            },
+            {
+              "time": 0.6666666666666666,
+              "before": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "kinetochore_A",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ],
+              "after": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "MUTATED_WRONG_TARGET",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ]
+            },
+            {
+              "time": 0.7333333333333333,
+              "before": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "kinetochore_A",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ],
+              "after": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "MUTATED_WRONG_TARGET",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ]
+            },
+            {
+              "time": 0.7999999999999999,
+              "before": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "kinetochore_A",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ],
+              "after": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "MUTATED_WRONG_TARGET",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ]
+            },
+            {
+              "time": 0.8666666666666666,
+              "before": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "kinetochore_A",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ],
+              "after": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "MUTATED_WRONG_TARGET",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ]
+            },
+            {
+              "time": 0.9333333333333332,
+              "before": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "kinetochore_A",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ],
+              "after": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "MUTATED_WRONG_TARGET",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ]
+            },
+            {
+              "time": 0.9999999999999999,
+              "before": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "kinetochore_A",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ],
+              "after": [
+                {
+                  "semantic_id": "REL_kmt_left_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_left",
+                  "target": "MUTATED_WRONG_TARGET",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                },
+                {
+                  "semantic_id": "REL_kmt_right_binds",
+                  "type": "REL_microtubule_binds_kinetochore",
+                  "source": "kmt_right",
+                  "target": "kinetochore_B",
+                  "source_anchor": "center",
+                  "target_anchor": "center",
+                  "model_relation_ref": "REL_microtubule_binds_kinetochore",
+                  "draw_link": false
+                }
+              ]
+            }
+          ],
+          "baseline_trace_sha256": "f4b02d7ad8dde9e630839ebc9606972b005396c28ddfce7d79b5d8aae993a3d4",
+          "mutated_artifact_sha256": "d1f0810749cd4630cb7d2641d0a79ed23a24d39d6c707ad9e5a1f95b108c66e0"
+        },
+        {
+          "mutation_type": "STATE_PRECONDITION_VIOLATED",
+          "valid_sample": false,
+          "baseline_status": "NOT_MEASURED",
+          "mutated_status": "NOT_TESTED",
+          "detected": null,
+          "reason": "No fully compiled source-supported real baseline PASS for this predicate"
+        }
+      ],
+      "negative_controls": [
+        {
+          "type": "color",
+          "unchanged_scientific_results": true,
+          "false_positive": false,
+          "scope": "visual-only metadata, no scientific event interval changed"
+        },
+        {
+          "type": "label_position",
+          "unchanged_scientific_results": true,
+          "false_positive": false,
+          "scope": "visual-only metadata, no scientific event interval changed"
+        },
+        {
+          "type": "noncritical_visual_duration",
+          "unchanged_scientific_results": true,
+          "false_positive": false,
+          "scope": "visual-only metadata, no scientific event interval changed"
+        }
+      ],
+      "source": "actual_runtime_trace",
+      "distinct_valid_mutation_types": 2,
+      "valid_mutations": 2,
+      "detected": 2,
+      "false_positives": 0
+    },
+    "source": "actual historical Manim trace, reevaluated by current generic validator",
+    "note": "Mutated trace copies, not physical rerendered mutations. Three visual-only metadata controls do not establish real allowed timing/concurrency visual immunity."
+  },
+  "topic_coupling": {
+    "new_science_modules_theme_names": [],
+    "legacy_findings": [
+      {
+        "file": "src/biology_expert/tools/repair_planner.py",
+        "line": 9,
+        "source": "issue=next((i for i in issues if i['issue_id']=='BIO-DIRECTION'),issues[0])",
+        "classification": "PREEXISTING_LEGACY_TOPIC_SPECIFIC_REPAIR_PATH_NOT_USED_BY_V432"
+      },
+      {
+        "file": "src/biology_expert/tools/repair_planner.py",
+        "line": 12,
+        "source": "if issue['issue_id']=='BIO-DIRECTION':",
+        "classification": "PREEXISTING_LEGACY_TOPIC_SPECIFIC_REPAIR_PATH_NOT_USED_BY_V432"
+      },
+      {
+        "file": "src/biology_expert/tools/repair_planner.py",
+        "line": 13,
+        "source": "task['instruction']='Repair ONLY event_5_maturation gap-fill nucleotide addition so actual visible addition progresses from the existing nascent 3prime side, consistent with the observed antiparallel lower template and 5prime-to-3prime synthesis. Cha",
+        "classification": "PREEXISTING_LEGACY_TOPIC_SPECIFIC_REPAIR_PATH_NOT_USED_BY_V432"
+      },
+      {
+        "file": "src/biology_expert/tools/repair_planner.py",
+        "line": 25,
+        "source": "targets=[(i,n) for i,n in enumerate(fn.body) if isinstance(n,ast.For) and any(isinstance(s,ast.Constant) and isinstance(s.value,str) and s.value.startswith('fill_dna_') for s in ast.walk(n))]",
+        "classification": "PREEXISTING_LEGACY_TOPIC_SPECIFIC_REPAIR_PATH_NOT_USED_BY_V432"
+      },
+      {
+        "file": "src/biology_expert/tools/repair_planner.py",
+        "line": 29,
+        "source": "loops=[n for n in ast.walk(incoming) if isinstance(n,ast.For) and any(isinstance(s,ast.Constant) and isinstance(s.value,str) and s.value.startswith('fill_dna_') for s in ast.walk(n))]",
+        "classification": "PREEXISTING_LEGACY_TOPIC_SPECIFIC_REPAIR_PATH_NOT_USED_BY_V432"
+      },
+      {
+        "file": "src/biology_expert/tools/repair_planner.py",
+        "line": 50,
+        "source": "prompt=\"\"\"You are the existing Code2Video DeepSeek Coder. Execute the scientific Repair Task with the smallest possible change. Return ONLY a complete replacement 'for i in range(n_fill):' loop in a Python code fence. This replaces the existing uniqu",
+        "classification": "PREEXISTING_LEGACY_TOPIC_SPECIFIC_REPAIR_PATH_NOT_USED_BY_V432"
+      },
+      {
+        "file": "src/biology_expert/tools/repair_planner.py",
+        "line": 52,
+        "source": "Use the CURRENT actual variable names. The lower blue TEMPLATE has 5prime at left and 3prime at right, so newly filled lower nascent DNA must grow toward the LEFT. Within the existing RNA-removed gap [lag1_primer_start, lag1_primer_start+lag1_primer_",
+        "classification": "PREEXISTING_LEGACY_TOPIC_SPECIFIC_REPAIR_PATH_NOT_USED_BY_V432"
+      },
+      {
+        "file": "src/biology_expert/tools/reviewers.py",
+        "line": 40,
+        "source": "issues.append(issue('BIO-DIRECTION' if c['check_id']=='lagging_gap_growth' else 'BIO-CONTACT',c['check_id']+' failed on actual execution evidence',c.get('object_ids',[]),c.get('fact_ids',[]),evidence={'trace_ref':artifacts.get('trace_ref','geometry_t",
+        "classification": "PREEXISTING_LEGACY_TOPIC_SPECIFIC_REPAIR_PATH_NOT_USED_BY_V432"
+      }
+    ],
+    "claim_boundary": "New model-reliability path has no theme-selected rules. Entire repository is NOT free of historical topic-specific animation repair paths."
+  },
+  "formal_science_code_unchanged": true,
+  "test_log": "tests/final_regression.txt",
+  "gates": {
+    "Gate0": "PASS_WITH_DISCLOSED_LEGACY_COUPLING",
+    "Gate1": "ENGINEERING_PASS_REAL_RELEVANCE_PARTIAL",
+    "Gate2": "ONE_REAL_CANDIDATE_CAUSAL_PASS_OTHER_TWO_NOT_MIGRATED",
+    "Gate3": "REAL_CHAIN_EXECUTED_SCIENCE_REVISE",
+    "Gate4": "SAMPLED_EVIDENCE_PASS_LIMITED_COVERAGE",
+    "Gate5": "WAN_TEXT_DRYRUN_PASS_SEEDANCE_NOT_CONFIGURED",
+    "Gate6": "SYNTHETIC_AND_LEGACY_REGRESSION_PASS_FULL_THREE_TOPIC_REAL_CLOSURE_INCOMPLETE"
+  }
+}

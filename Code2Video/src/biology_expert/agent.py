@@ -133,3 +133,24 @@ class BiologyExpertAgent:
   evidence_result=self._call('evidence_sufficiency_auditor',dict(task=task,model=model,evidence=evidence,prior_review=prior_review),'Audit scientific model reliability','Check requirement coverage and explicit evidence gaps before repair.')
   causal=self._call('scientific_causal_graph_validator',{'model':model},'Check state reachability','Explore state paths and completion dependencies independently of topic names.')
   return {'evidence':evidence_result,'causal':causal}
+
+ def repair_typed_science(self,task,model,issues,evidence,root,max_attempts=3):
+  from .model_repair import ScientificModelRepairTransaction
+  from .model_reliability import EvidenceGapResearch
+  from .contract_builder import ScientificEvidenceRetriever
+  workflow_root=Path(root);workflow_root.mkdir(parents=True,exist_ok=True)
+  researcher=EvidenceGapResearch(self.gateway,ScientificEvidenceRetriever(workflow_root/'retrieval',limit=30,visual_limit=0),max_attempts=2)
+  transaction=ScientificModelRepairTransaction(self.gateway,workflow_root/'repairs')
+  for name,fn in [('gap_driven_retrieval',researcher.retrieve),('typed_model_repair_transaction',transaction.run)]:
+   if name not in self.registry.tools:self.registry.register(name,fn)
+  research=self._call('gap_driven_retrieval',{'task':task,'issues':issues,'cache':str(workflow_root/'research_cache')},'Resolve located evidence gaps','Research terminates on supported claims or bounded no progress, not mere new pages.')
+  combined=list({e['evidence_id']:e for e in evidence+research['evidence']}.values());records=[];feedback=None;seen=set()
+  if not research['evidence']:return {'status':'NEEDS_HUMAN_REVIEW','research':research,'repairs':[],'reason':'No new verifiable evidence'}
+  for attempt in range(max_attempts):
+   result=self._call('typed_model_repair_transaction',{'task':task,'model':model,'issues':issues,'evidence':combined,'attempt':attempt,'feedback':feedback},'Repair exact scientific model gap','Local patch, schema, causal checks and independent science review must all succeed before commit.')
+   records.append(result)
+   if result['accepted']:return {'status':'COMMITTED','research':research,'repairs':records}
+   patchhash=digest(result.get('patch',{}))
+   if patchhash in seen:break
+   seen.add(patchhash);feedback={'previous_patch':result.get('patch'),'error':result.get('error'),'causal_status':result.get('causal_status'),'review':result.get('review')}
+  return {'status':'NEEDS_HUMAN_REVIEW','research':research,'repairs':records,'reason':'Bounded repair did not achieve all required gates'}

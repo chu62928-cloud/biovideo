@@ -24,9 +24,19 @@ def validate_typed_model(model,evidence=None):
     if o.get('source_role') not in roles or o.get('target_role') not in roles:raise ValueError('Undefined observable role')
     r=relations.get(o.get('relation_ref'));mapping={x['role']:x['entity_ref'] for x in p['participants']}
     if not r or mapping[o['source_role']]!=r['source_entity'] or mapping[o['target_role']]!=r['target_entity']:raise ValueError('Observable participant type/reference mismatch')
+ if model.get('schema_version')=='1.1':
+  states={x['state_id']:x for x in model['states']}
+  if len(states)!=len(model['states']):raise ValueError('Duplicate state ID')
+  for state in states.values():
+   if state['subject_ref'] not in ids:raise ValueError('Undefined state subject')
+   if state.get('producer_process_id') and state['producer_process_id'] not in processes:raise ValueError('Unknown state producer')
+   if not set(state['required_by_process_ids'])<=set(processes):raise ValueError('Unknown required-by process')
+  for p in processes.values():
+   for key in ['precondition_state_refs','effect_state_refs','terminates_state_refs']:
+    if not set(p.get(key,[]))<=set(states):raise ValueError('Unknown typed state reference')
  if evidence is not None:
   by={e['evidence_id']:e for e in evidence};errors=[]
-  for item in model['entities']+model['relations']+model['processes']+[o for p in model['processes'] for o in p['observables']]:
+  for item in model['entities']+model['relations']+model['processes']+[o for p in model['processes'] for o in p['observables']]+model.get('states',[])+model.get('states',[]):
    for eid in item['evidence_ids']:
     if eid not in by:errors.append('Unknown evidence '+eid)
    for support in item['support']:
@@ -44,6 +54,7 @@ class TypedScienceModelBuilder:
   sources=[]
   for e in retrieval['evidence']:
    sources.append({k:e[k] for k in ['evidence_id','url','title']}|{'passages':e['passages'][:28]})
+  prompt+=' New production proposals use schema_version1.1, states and clip_start. State references must explicitly map each prerequisite and produced result to subject/property/value, evidence and producer; do not automatically seed all prerequisites as initial. Do not omit user-required mechanism.'
   model=parse_json(self.gateway.request('deepseek','typed_scientific_model_build',prompt+json.dumps({'task':task,'schema':schema,'sources':sources},ensure_ascii=False)))
   try:validate_typed_model(model,retrieval['evidence'])
   except Exception as error:
@@ -58,8 +69,8 @@ class TypedScienceModelReviewer:
  def review(self,model,evidence,task):
   validate_typed_model(model,evidence)
   prompt='''Independently review the proposed typed scientific model against original source excerpts and original task. Do NOT trust generator assurances. Return JSON {"decision":"PASS|REVISE|NEEDS_HUMAN_REVIEW|INSUFFICIENT_EVIDENCE","issues":[{"target_id":"...","reason":"...","evidence_ids":[]}],"observable_reviews":[{"constraint_id":"...","decision":"PASS|REVISE|INSUFFICIENT_EVIDENCE","reason":"source entails this exact scope/persistence/order and computational observable preserves meaning"}],"scope_review":"..."}. Check every observable, participant identity/types, organism context, input/output, causal state changes, required actors, omissions, exceptions and whether narrow observable semantics are source-supported. A fully formal but biologically false model must fail. A schematic need not simulate molecular chemistry but must honestly delimit what it proves. Require direct source entailment, not merely matching words. No approval from model self-explanation. At most5 main issues, concise.'''
-  used={x['evidence_id'] for i in model['entities']+model['relations']+model['processes']+[o for p in model['processes'] for o in p['observables']] for x in i['support']}
-  excerpts=[{k:e[k] for k in ['evidence_id','url','title']}|{'passages':[q for q in e['passages'] if any(s['quote'] in q['text'] for i in model['entities']+model['relations']+model['processes']+[o for p in model['processes'] for o in p['observables']] for s in i['support'] if s['evidence_id']==e['evidence_id'])]} for e in evidence if e['evidence_id'] in used]
+  used={x['evidence_id'] for i in model['entities']+model['relations']+model['processes']+[o for p in model['processes'] for o in p['observables']]+model.get('states',[]) for x in i['support']}
+  excerpts=[{k:e[k] for k in ['evidence_id','url','title']}|{'passages':[q for q in e['passages'] if any(s['quote'] in q['text'] for i in model['entities']+model['relations']+model['processes']+[o for p in model['processes'] for o in p['observables']]+model.get('states',[]) for s in i['support'] if s['evidence_id']==e['evidence_id'])]} for e in evidence if e['evidence_id'] in used]
   out=parse_json(self.gateway.request('deepseek','independent_typed_science_review',prompt+json.dumps({'task':task,'model':model,'actual_evidence':excerpts},ensure_ascii=False)))
   expected={o['constraint_id'] for p in model['processes'] for o in p['observables']};reviewed={x['constraint_id'] for x in out.get('observable_reviews',[]) if x['decision']=='PASS'}
   if out['decision']=='PASS' and expected!=reviewed:out['decision']='INSUFFICIENT_EVIDENCE';out.setdefault('issues',[]).append({'reason':'Missing independent PASS for every proposed observable'})

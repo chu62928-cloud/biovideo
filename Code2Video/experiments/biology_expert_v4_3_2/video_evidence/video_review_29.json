@@ -1,0 +1,50 @@
+{
+  "science": {
+    "decision": "PASS",
+    "issues": []
+  },
+  "visual": {
+    "decision": "REVISE",
+    "issues": [
+      "Crossfade/label-doubling artifact present in the actual attached frames: at 1.2s the bottom caption is two superimposed sentences (unreadable) and the 'Sister_A'/'Sister_B'/'Microtubule' labels plus the chromosome bars are doubled (4 bars instead of 2). The same ghosting persists, milder, at 2.2s, 4.2s, 5.2s, 6.2s and 7.2s. Clean single-label frames at 0.2s and 3.2s confirm the doubling is a transition artifact, not intended content, so the prior 'unconfirmed' status is not supported by the attached pixels.",
+      "At 1.2s the doubled caption makes the stage caption illegible; this is the worst case and blocks a clean visual pass."
+    ]
+  },
+  "scope_review": "Scope is honestly represented. The video models exactly one duplicated chromosome (one sister pair), consistent with the model's deliberate single-chromosome instantiation of the source's 'all chromosomes align' statement. The anaphase caption explicitly states 'Molecular cleavage not shown,' matching the exclusion of cohesin degradation/cleavage; no molecular mechanism is depicted or implied. Phase order shown (bipolar kinetochore attachment -> metaphase-plate alignment -> sister separation to opposite poles) matches the schematic process order. No out-of-scope process (interphase replication, prophase NEBD, telophase, cytokinesis, SAC) is depicted. Schematic (not molecular-structure) interpretation is appropriate and is what the scene presents.",
+  "visible_evidence": [
+    {
+      "time": "0.2s",
+      "observation": "Crisp frame: two pink sister-chromatid bars (Sister_A bottom, Sister_B top) with yellow kinetochores at center; white microtubule lines from each blue pole bind the opposite-facing kinetochore; vertical gray metaphase-plate line through the pair. Caption: 'Kinetochores of sister chromatids bind microtubules from opposite poles.' Bipolar orientation correct."
+    },
+    {
+      "time": "1.2s",
+      "observation": "DEFECT: labels and chromosome bars doubled (4 pink bars); bottom caption is two overlapping sentences and illegible. Confirms crossfade artifact in the actual attached pixels (contradicts the claim of a crisp independent 1.2s extraction)."
+    },
+    {
+      "time": "2.2s",
+      "observation": "Residual label ghosting (Sister_A/Sister_B/Microtubule doubled, 4 bars) but caption now single: 'Duplicated chromosome aligns at the metaphase plate.' Chromosome at metaphase plate."
+    },
+    {
+      "time": "3.2s",
+      "observation": "Clean frame: single labels, two bars, pair centered on metaphase plate. Metaphase alignment clearly shown."
+    },
+    {
+      "time": "4.2s",
+      "observation": "Label/bar doubling recurs (transition into anaphase); caption single: 'Connection breaks down; existing sisters separate toward opposite poles. (Molecular cleavage not shown.)' Honest scope note present."
+    },
+    {
+      "time": "5.2s",
+      "observation": "Sisters now in two separated groups (left = Sister_A, right = Sister_B), each still showing doubled bars/labels; each group has a microtubule to its respective pole. Identity continuity maintained (A left, B right)."
+    },
+    {
+      "time": "6.2s",
+      "observation": "Left chromatid (Sister_A) moved toward left pole, right chromatid (Sister_B) toward right pole; mild label ghosting remains. Poleward movement toward the pole of the attached microtubule is correct."
+    },
+    {
+      "time": "7.2s",
+      "observation": "Daughter chromatids further displaced to opposite poles; mild label ghosting persists. Separation and poleward movement consistent with anaphase; no molecular cleavage depicted (matches scope)."
+    }
+  ],
+  "video_sha256": "c035449dc554645baf35a11b7855b8d0a85253ea2d06af39bf780bdde32e9f2d",
+  "scene_sha256": "e1d84bb392a6a1c2150b3dbd3a276c3fe618ba347c75c5b84bb606eea7a491bc"
+}

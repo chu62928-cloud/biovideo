@@ -1,0 +1,49 @@
+{
+  "model_sha256": "acbbd03a10c9f47846ddb088f1aa8e61a6e7396049013d1fcd09221212e2c29b",
+  "status": "PASS",
+  "issues": [],
+  "reachable_process_ids": [
+    "proc_microtubule_track_provision",
+    "proc_motor_protein_binding_to_cargo",
+    "proc_vesicle_transport_along_microtubule"
+  ],
+  "witnesses": {
+    "proc_microtubule_track_provision": {
+      "completed_before": [],
+      "required_state_refs": [
+        "st_microtubule_present",
+        "st_motor_protein_active"
+      ],
+      "produced_state_refs": [
+        "st_microtubule_available_as_track"
+      ]
+    },
+    "proc_motor_protein_binding_to_cargo": {
+      "completed_before": [],
+      "required_state_refs": [
+        "st_motor_protein_active",
+        "st_vesicle_present"
+      ],
+      "produced_state_refs": [
+        "st_motor_protein_bound_to_cargo"
+      ]
+    },
+    "proc_vesicle_transport_along_microtubule": {
+      "completed_before": [
+        "proc_microtubule_track_provision"
+      ],
+      "required_state_refs": [
+        "st_microtubule_available_as_track",
+        "st_vesicle_present",
+        "st_motor_protein_active"
+      ],
+      "produced_state_refs": [
+        "st_vesicle_moving_along_microtubule"
+      ]
+    }
+  },
+  "states_explored": 6,
+  "exhaustive": true,
+  "limit": 4096,
+  "semantics": "Bounded single-execution state paths on explicit subject/property/value; no claim about chemistry, loops or all continuous trajectories."
+}
