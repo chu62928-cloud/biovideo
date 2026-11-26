@@ -1,0 +1,18 @@
+{
+  "status": "ENGINEERING_BLOCKED_AT_MODEL_BUILD",
+  "science_code_unchanged": true,
+  "source_commit": "a4ffcbb075d8d817d078c29320650b402b650775",
+  "schema_pass": false,
+  "independent_review": "NOT_EXECUTED",
+  "scientific_repair": "NOT_EXECUTED",
+  "autonomous_repair_proven": false,
+  "failure_analysis": "failure_analysis.json",
+  "usage": {
+    "deepseek_calls": 3,
+    "input_tokens": 24447,
+    "output_tokens": 17790,
+    "failed_calls": 1,
+    "actual_cost": null
+  },
+  "interpretation": "A prospective unseen task failed before scientific rework. Does not establish impossibility for all themes; does refute release-readiness claim for this run. No modification of frozen production or biological answer supplied."
+}

@@ -1,0 +1,2159 @@
+{
+  "evidence": [
+    {
+      "evidence_id": "E_87d1ca57845e",
+      "url": "https://europepmc.org/article/MED/42394838",
+      "title": "Fine-tuning striated muscle performance: conserved sarcomere-level mechanisms across insect and vertebrate systems.",
+      "author_or_institution": "Matsui H, Chbihi Z, Mashni R, Hachem H, Snider S, Sujkowski A.",
+      "source_type": "bibliographic_abstract",
+      "evidence_level": "ABSTRACT",
+      "biological_scope": "Requires claim-specific scope review",
+      "status": "RETRIEVED_ABSTRACT",
+      "content_sha256": "5c7884533c381391c4de6090bba38f58eca740c73da19e678387ca1b232e77ef",
+      "passages": [
+        {
+          "location": "abstract",
+          "text": "Striated muscles exhibit remarkable structural and functional specialization that enables precise control of force production, contractile kinetics, and energetic efficiency. Although vertebrate skeletal and cardiac muscles have been extensively studied, comparative analyses across animal phyla reveal that many molecular and biophysical principles governing muscle performance are deeply conserved. Insects, in particular, possess highly differentiated muscle types that provide powerful systems for dissecting the regulation of contraction, elasticity, and force generation at the level of the sarcomere. In this review, we integrate insights from insect and vertebrate muscles to highlight conserved and divergent features of sarcomere organization and myofilament composition. We focus on major contractile and regulatory proteins, including actin, myosin, troponin, tropomyosin, and elastic proteins, emphasizing how isoform diversity fine-tunes muscle function. We discuss the biomedical relevance of invertebrate models for understanding muscle disease mechanisms, including congenital myopathies, sarcomeric protein-associated disorders, and muscular dystrophies. Finally, we examine how principles uncovered in insect muscles inform vertebrate cardiac physiology and skeletal muscle aging, positioning insect systems as complementary discovery platforms for advancing muscle biology.",
+          "evidence_level": "ABSTRACT"
+        }
+      ],
+      "figures": [],
+      "limitations": [
+        "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+      ]
+    },
+    {
+      "evidence_id": "E_01bd17d3a0f1",
+      "url": "https://europepmc.org/article/MED/42769728",
+      "title": "Aberrant myocardial calcium cycling: pathogenic mechanisms and targeted therapeutics for heart failure.",
+      "author_or_institution": "Zhao C, Liu J, Xin J, Liu Q, Zhang Y, Yu X, Gao J.",
+      "source_type": "bibliographic_abstract",
+      "evidence_level": "ABSTRACT",
+      "biological_scope": "Requires claim-specific scope review",
+      "status": "RETRIEVED_ABSTRACT",
+      "content_sha256": "5194198936c772a76bb299fbb87c2f04a7a458255c44f944ff5a7ca93fa09ae0",
+      "passages": [
+        {
+          "location": "abstract",
+          "text": "Cardiovascular diseases rank as the global primary cause of mortality. Heart failure (HF) represents a progressive cardiac syndrome triggered by structural or functional myocardial damage that compromises ventricular systolic output. Intracellular calcium homeostasis underpins cardiomyocyte excitation-contraction coupling. Calcium overload and dysregulated calcium handling act as central pathogenic forces driving HF progression. Sympathetic β 1 -adrenergic receptor (β 1 -AR) and parasympathetic M 2 muscarinic acetylcholine receptor (M 2 -AChR) coordinate dual regulatory signaling to control cardiac calcium turnover, alongside key modulators including L-type calcium channel (LTCC), ryanodine receptor 2 (RyR2), SERCA2a, cardiac troponin C (cTnC), Na + /Ca 2+ exchanger 1 (NCX1) and mitochondrial permeability transition pore (MPTP). This review outlines physiological calcium cycling and systematically characterizes HF-related functional defects of calcium regulatory machinery from three layers: calcium release, sarcoplasmic reticulum calcium reuptake and auxiliary calcium mediators. We further discuss the underlying mechanisms of calcium-targeted pharmaceuticals and gene therapeutic approaches, while addressing translational bottlenecks limiting single-target interventions. Restoration of balanced cytosolic calcium cycling holds therapeutic potential to reverse pathological myocardial remodeling in HF.",
+          "evidence_level": "ABSTRACT"
+        }
+      ],
+      "figures": [],
+      "limitations": [
+        "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+      ]
+    },
+    {
+      "evidence_id": "E_0c18da6b2687",
+      "url": "https://europepmc.org/article/MED/42227257",
+      "title": "Pathological changes and therapeutic strategies for sarcopenia.",
+      "author_or_institution": "Yang K, Peng S, Zhang C, Guo L, Liang D, Tao L.",
+      "source_type": "bibliographic_abstract",
+      "evidence_level": "ABSTRACT",
+      "biological_scope": "Requires claim-specific scope review",
+      "status": "RETRIEVED_ABSTRACT",
+      "content_sha256": "128b7c51d415e0543e2dc484247542578274397b0709c9309dd5749931cb5975",
+      "passages": [
+        {
+          "location": "abstract",
+          "text": "Sarcopenia is becoming a major public health concern for older adults. The incidence rate in people over 70 years of age is 30-50%. Patients with sarcopenia not only have difficulty moving and are prone to falls and fractures, but in severe cases, they may also experience heart and lung failure and even death. Early diagnosis and prevention in high-risk populations can effectively prevent the deterioration of muscle atrophy. In this review, we describe the physiological mechanism of muscle contraction and reveal common pathological changes in sarcopenic patients, including oxidative stress, inflammation, insulin resistance, hypoxia, and disturbance of the gut microbiota. These pathological changes synergistically inhibit the mass and strength of skeletal muscles. We also discuss nonpharmacological therapeutic methods for sarcopenia, such as nutrient supplementation and exercise, especially resistance training. On the basis of a thorough analysis of the pathogenesis of sarcopenia in high-risk populations, we believe that tissue synthesis and energy supply are the foundation for maintaining the normal physiological functions of muscles. Mitochondria are potential targets for the optimization of intervention methods. Targeted delivery of functional mitochondria to skeletal muscle cells contributes to improving biological oxidation, redox balance, and tissue remodeling. Additionally, stem cell transplantation with the stimulation of growth factors may also be an available method for the further treatment of sarcopenia.",
+          "evidence_level": "ABSTRACT"
+        }
+      ],
+      "figures": [],
+      "limitations": [
+        "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+      ]
+    },
+    {
+      "evidence_id": "E_8996a30b8401",
+      "url": "https://europepmc.org/article/MED/41898308",
+      "title": "Structural and Functional Regulation of RyR2 in Cardiac Calcium Handling and Arrhythmogenesis.",
+      "author_or_institution": "Gao K, Wang W, Ling Y, Li B, Xing C, Li N, Yin X, Tao L, Li X, Qiu J, Wang X, Wei J.",
+      "source_type": "bibliographic_abstract",
+      "evidence_level": "ABSTRACT",
+      "biological_scope": "Requires claim-specific scope review",
+      "status": "RETRIEVED_ABSTRACT",
+      "content_sha256": "e4e8d38416b52d6a1134b490396a6065eb5e0e8127376563477d55c3b3897edb",
+      "passages": [
+        {
+          "location": "abstract",
+          "text": "Cardiac Ca 2+ handling is critical for excitation-contraction coupling (ECC), with the ryanodine receptor type 2 (RyR2) serving as the key sarcoplasmic reticulum (SR) Ca 2+ release channel in cardiomyocytes. The dysfunction of RyR2 is linked to fatal cardiac arrhythmias, including heart failure (HF) and catecholaminergic polymorphic ventricular tachycardia (CPVT). This review aims to elucidate the structural basis of RyR2, its core role in cardiac ECC and Ca 2+ homeostasis, and the regulatory mechanisms of key modulators on its activity. By integrating recent high-resolution cryo-EM structural analyses with molecular and cellular studies on RyR2 regulation, as well as clinical evidence of RyR2 mutations in arrhythmogenic heart diseases, we provide a comprehensive overview of the field. Cryo-EM has unraveled RyR2's gating mechanisms, ligand-binding sites, and structural features. Functionally, RyR2 mediates calcium-induced calcium release (CICR) and maintains Ca 2+ homeostasis through coordination with SERCA2a and NCX. Key modulators (CaM, FKBP12.6, and PKA/CaMKII) and disease-linked mutations regulate RyR2 activity through distinct pathways, with defective RyR2 leading to store-overload-induced Ca 2+ release (SOICR) and arrhythmias. Furthermore, reactive oxygen species (ROS) can induce RyR2 oxidation, establishing a pathological Ca 2+ leak-ROS cycle in heart disease. In conclusion, RyR2 is a pivotal sensor of myocardial function, with its structural and regulatory mechanisms now well-characterized by recent studies. However, the effects of numerous RyR2 mutations remain unclear, and deeper mechanistic insights will lay a key foundation for developing novel therapies against RyR2-related cardiac diseases.",
+          "evidence_level": "ABSTRACT"
+        }
+      ],
+      "figures": [],
+      "limitations": [
+        "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+      ]
+    },
+    {
+      "evidence_id": "E_97ecc43b9a70",
+      "url": "https://europepmc.org/article/MED/41372236",
+      "title": "MCARE enhances SERCA1 activity in fast-twitch muscle to maintain calcium handling and muscle integrity.",
+      "author_or_institution": "Sasaki T, Takase H, Koebis M, Aiba A, Takahashi Y, Yamauchi Y, Sato R.",
+      "source_type": "bibliographic_abstract",
+      "evidence_level": "ABSTRACT",
+      "biological_scope": "Requires claim-specific scope review",
+      "status": "RETRIEVED_ABSTRACT",
+      "content_sha256": "b899922fa6cd817eec0163ade7f5d4de02dc5c6a96ddcd562fc07889955610f4",
+      "passages": [
+        {
+          "location": "abstract",
+          "text": "The release of Ca 2+ from the sarcoplasmic reticulum into the cytoplasm, followed by its reuptake by sarco/endoplasmic reticulum Ca 2+ ATPase (SERCA), is critical for the muscle contraction-relaxation cycle. In this study, we identify a small transmembrane protein, predominantly expressed in fast-twitch muscles, which regulates SERCA1 activity. This protein, termed muscle-enriched Ca 2+ regulator (MCARE), enhances SERCA1 function by competitively inhibiting myoregulin, a muscle-specific micropeptide that otherwise suppresses SERCA1 activity. By facilitating more efficient Ca 2+ clearance from the cytoplasm, MCARE accelerates muscle relaxation. Mcare-deficient mice exhibit symptoms resembling muscular dystrophy, including progressive muscle wasting in fast-twitch muscles, reduced muscle strength, and increased susceptibility to exercise-induced muscle damage. Notably, these mice also present with distinctive rippling muscle contractions. Our findings establish MCARE as a key regulator of SERCA1 activity, essential for maintaining Ca 2+ homeostasis and the functional integrity of fast-twitch muscle fibers.",
+          "evidence_level": "ABSTRACT"
+        }
+      ],
+      "figures": [],
+      "limitations": [
+        "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+      ]
+    },
+    {
+      "evidence_id": "E_97cb28f1ec29",
+      "url": "https://europepmc.org/article/MED/41021670",
+      "title": "Targeting Calcium Regulation for Heart Failure and Arrhythmia Therapeutics: A Critical Review.",
+      "author_or_institution": "Redel-Traub G, Marx SO, Marks AR.",
+      "source_type": "bibliographic_abstract",
+      "evidence_level": "ABSTRACT",
+      "biological_scope": "Requires claim-specific scope review",
+      "status": "RETRIEVED_ABSTRACT",
+      "content_sha256": "c30f1f295e4c46d783a34e5a93e523986ffae04061e5c413b2959cb89e896203",
+      "passages": [
+        {
+          "location": "abstract",
+          "text": "Despite advances in pharmacologic and procedural therapies, heart failure (HF) and cardiac arrhythmias remain significant global health burdens, highlighting the urgent need for novel therapeutic strategies. Defective Ca 2+ handling in cardiac myocytes is recognized as a central pathogenic mechanism underlying both heart failure and atrial and ventricular arrhythmias. In this review, we critically assess the current state of research on Ca 2+ -handling proteins and their role in causing heart failure and arrhythmias, highlighting therapeutic implications. Recent paradigm-shifting discoveries, clinical trial outcomes, and challenges of targeting Ca 2+ -handling proteins are examined. As outlined in this review, an improved understanding of the relevant proteins and their differential expression and function in human health and disease is crucial for developing Ca 2+ handling-targeted therapeutics that can fundamentally alter the natural history of heart failure and arrhythmias.",
+          "evidence_level": "ABSTRACT"
+        }
+      ],
+      "figures": [],
+      "limitations": [
+        "FULL_TEXT_UNAVAILABLE unless separately retrieved; no inference beyond abstract"
+      ]
+    },
+    {
+      "evidence_id": "E_d6fd3723dbb7",
+      "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-3-muscle-fiber-contraction-and-relaxation",
+      "title": "10.3 Muscle Fiber Contraction and Relaxation  - Anatomy and Physiology 2e | OpenStax",
+      "author_or_institution": "openstax.org",
+      "source_type": "retrieved_scientific_webpage",
+      "biological_scope": "Requires independent scope verification against quoted passages",
+      "accessed_utc": "2026-11-26T07:06:12Z",
+      "content_sha256": "e579fd365489b6facd959a0d9263e2d31649fa1803504a55b5a9e48ca5a6dfcf",
+      "saved_text": "/autodl-tmp/code2biovideo/biovideo-science-maintenance/Code2Video/experiments/science_unseen_mechanism/research/skeletal_muscle_response/E_d6fd3723dbb7.txt",
+      "passages": [
+        {
+          "location": "paragraph_0",
+          "text": "By the end of this section, you will be able to:"
+        },
+        {
+          "location": "paragraph_1",
+          "text": "The sequence of events that result in the contraction of an individual muscle fiber begins with a signal—the neurotransmitter, ACh—from the motor neuron innervating that fiber. The local membrane of the fiber will depolarize as positively charged sodium ions (Na + ) enter, triggering an action potential that spreads to the rest of the membrane which will depolarize, including the T-tubules. This triggers the release of calcium ions (Ca ++ ) from storage in the sarcoplasmic reticulum (SR). The Ca ++ then initiates contraction, which is sustained by ATP ( Figure 10.8 ). As long as Ca ++ ions remain in the sarcoplasm to bind to troponin, which keeps the actin-binding sites “unshielded,” and as long as ATP is available to drive the cross-bridge cycling and the pulling of actin strands by myosin, the muscle fiber will continue to shorten to an anatomical limit."
+        },
+        {
+          "location": "paragraph_2",
+          "text": "Figure 10.8 Contraction of a Muscle Fiber A cross-bridge forms between actin and the myosin heads triggering contraction. As long as Ca ++ ions remain in the sarcoplasm to bind to troponin, and as long as ATP is available, the muscle fiber will continue to shorten."
+        },
+        {
+          "location": "paragraph_3",
+          "text": "Muscle contraction usually stops when signaling from the motor neuron ends, which repolarizes the sarcolemma and T-tubules, and closes the voltage-gated calcium channels in the SR. Ca ++ ions are then pumped back into the SR, which causes the tropomyosin to reshield (or re-cover) the binding sites on the actin strands. A muscle also can stop contracting when it runs out of ATP and becomes fatigued ( Figure 10.9 )."
+        },
+        {
+          "location": "paragraph_4",
+          "text": "Figure 10.9 Relaxation of a Muscle Fiber Ca ++ ions are pumped back into the SR, which causes the tropomyosin to reshield the binding sites on the actin strands. A muscle may also stop contracting when it runs out of ATP and becomes fatigued."
+        },
+        {
+          "location": "paragraph_5",
+          "text": "The release of calcium ions initiates muscle contractions. Watch this video to learn more about the role of calcium. (a) What are “T-tubules” and what is their role? (b) Please describe how actin-binding sites are made available for cross-bridging with myosin heads during contraction."
+        },
+        {
+          "location": "paragraph_6",
+          "text": "The molecular events of muscle fiber shortening occur within the fiber’s sarcomeres (see Figure 10.10 ). The contraction of a striated muscle fiber occurs as the sarcomeres, linearly arranged within myofibrils, shorten as myosin heads pull on the actin filaments."
+        },
+        {
+          "location": "paragraph_7",
+          "text": "The region where thick and thin filaments overlap has a dense appearance, as there is little space between the filaments. This zone where thin and thick filaments overlap is very important to muscle contraction, as it is the site where filament movement starts. Thin filaments, anchored at their ends by the Z-discs, do not extend completely into the central region that only contains thick filaments, anchored at their bases at a spot called the M-line. A myofibril is composed of many sarcomeres running along its length; thus, myofibrils and muscle cells contract as the sarcomeres contract."
+        },
+        {
+          "location": "paragraph_8",
+          "text": "When signaled by a motor neuron, a skeletal muscle fiber contracts as the thin filaments are pulled and then slide past the thick filaments within the fiber’s sarcomeres. This process is known as the sliding filament model of muscle contraction ( Figure 10.10 ). The sliding can only occur when myosin-binding sites on the actin filaments are exposed by a series of steps that begins with Ca ++ entry into the sarcoplasm."
+        },
+        {
+          "location": "paragraph_9",
+          "text": "Figure 10.10 The Sliding Filament Model of Muscle Contraction When a sarcomere contracts, the Z lines move closer together, and the I band becomes smaller. The A band stays the same width. At full contraction, the thin and thick filaments overlap completely."
+        },
+        {
+          "location": "paragraph_10",
+          "text": "Tropomyosin is a protein that winds around the chains of the actin filament and covers the myosin-binding sites to prevent actin from binding to myosin. Tropomyosin binds to troponin to form a troponin-tropomyosin complex. The troponin-tropomyosin complex prevents the myosin “heads” from binding to the active sites on the actin microfilaments. Troponin also has a binding site for Ca ++ ions."
+        },
+        {
+          "location": "paragraph_11",
+          "text": "To initiate muscle contraction, tropomyosin has to expose the myosin-binding site on an actin filament to allow cross-bridge formation between the actin and myosin microfilaments. The first step in the process of contraction is for Ca ++ to bind to troponin so that tropomyosin can slide away from the binding sites on the actin strands. This allows the myosin heads to bind to these exposed binding sites and form cross-bridges. The thin filaments are then pulled by the myosin heads to slide past the thick filaments toward the center of the sarcomere. But each head can only pull a very short distance before it has reached its limit and must be “re-cocked” before it can pull again, a step that requires ATP."
+        },
+        {
+          "location": "paragraph_12",
+          "text": "For thin filaments to continue to slide past thick filaments during muscle contraction, myosin heads must pull the actin at the binding sites, detach, re-cock, attach to more binding sites, pull, detach, re-cock, etc. This repeated movement is known as the cross-bridge cycle. This motion of the myosin heads is similar to the oars when an individual rows a boat: The paddle of the oars (the myosin heads) pull, are lifted from the water (detach), repositioned (re-cocked) and then immersed again to pull ( Figure 10.11 ). Each cycle requires energy, and the action of the myosin heads in the sarcomeres repetitively pulling on the thin filaments also requires energy, which is provided by ATP."
+        },
+        {
+          "location": "paragraph_13",
+          "text": "Figure 10.11 Skeletal Muscle Contraction (a) The active site on actin is exposed as calcium binds to troponin. (b) The myosin head is attracted to actin, and myosin binds actin at its actin-binding site, forming the cross-bridge. (c) During the power stroke, the phosphate generated in the previous contraction cycle is released. This results in the myosin head pivoting toward the center of the sarcomere, after which the attached ADP and phosphate group are released. (d) A new molecule of ATP attaches to the myosin head, causing the cross-bridge to detach. (e) The myosin head hydrolyzes ATP to ADP and phosphate, which returns the myosin to the cocked position."
+        },
+        {
+          "location": "paragraph_14",
+          "text": "Cross-bridge formation occurs when the myosin head attaches to the actin while adenosine diphosphate (ADP) and inorganic phosphate (P i ) are still bound to myosin ( Figure 10.11 a,b ). P i is then released, causing myosin to form a stronger attachment to the actin, after which the myosin head moves toward the M-line, pulling the actin along with it. As actin is pulled, the filaments move approximately 10 nm toward the M-line. This movement is called the power stroke , as movement of the thin filament occurs at this step ( Figure 10.11 c ). In the absence of ATP, the myosin head will not detach from actin."
+        },
+        {
+          "location": "paragraph_15",
+          "text": "One part of the myosin head attaches to the binding site on the actin, but the head has another binding site for ATP. ATP binding causes the myosin head to detach from the actin ( Figure 10.11 d ). After this occurs, ATP is converted to ADP and P i by the intrinsic ATPase activity of myosin. The energy released during ATP hydrolysis changes the angle of the myosin head into a cocked position ( Figure 10.11 e ). The myosin head is now in position for further movement."
+        },
+        {
+          "location": "paragraph_16",
+          "text": "When the myosin head is cocked, myosin is in a high-energy configuration. This energy is expended as the myosin head moves through the power stroke, and at the end of the power stroke, the myosin head is in a low-energy position. After the power stroke, ADP is released; however, the formed cross-bridge is still in place, and actin and myosin are bound together. As long as ATP is available, it readily attaches to myosin, the cross-bridge cycle can recur, and muscle contraction can continue."
+        },
+        {
+          "location": "paragraph_17",
+          "text": "Note that each thick filament of roughly 300 myosin molecules has multiple myosin heads, and many cross-bridges form and break continuously during muscle contraction. Multiply this by all of the sarcomeres in one myofibril, all the myofibrils in one muscle fiber, and all of the muscle fibers in one skeletal muscle, and you can understand why so much energy (ATP) is needed to keep skeletal muscles working. In fact, it is the loss of ATP that results in the rigor mortis observed soon after someone dies. With no further ATP production possible, there is no ATP available for myosin heads to detach from the actin-binding sites, so the cross-bridges stay in place, causing the rigidity in the skeletal muscles."
+        },
+        {
+          "location": "paragraph_18",
+          "text": "ATP supplies the energy for muscle contraction to take place. In addition to its direct role in the cross-bridge cycle, ATP also provides the energy for the active-transport Ca ++ pumps in the SR. Muscle contraction does not occur without sufficient amounts of ATP. The amount of ATP stored in muscle is very low, only sufficient to power a few seconds worth of contractions. As it is broken down, ATP must therefore be regenerated and replaced quickly to allow for sustained contraction. There are three mechanisms by which ATP can be regenerated in muscle cells: creatine phosphate metabolism, anaerobic glycolysis, and aerobic respiration."
+        },
+        {
+          "location": "paragraph_19",
+          "text": "Creatine phosphate is a molecule that can store energy in its phosphate bonds. In a resting muscle, excess ATP transfers its energy to creatine, producing ADP and creatine phosphate. This acts as an energy reserve that can be used to quickly create more ATP. When the muscle starts to contract and needs energy, creatine phosphate transfers its phosphate back to ADP to form ATP and creatine. This reaction is catalyzed by the enzyme creatine kinase and occurs very quickly; thus, creatine phosphate-derived ATP powers the first few seconds of muscle contraction. However, creatine phosphate can only provide approximately 15 seconds worth of energy, at which point another energy source has to be used ( Figure 10.12 )."
+        },
+        {
+          "location": "paragraph_20",
+          "text": "Figure 10.12 Muscle Metabolism (a) Some ATP is stored in a resting muscle. As contraction starts, it is used up in seconds. More ATP is generated from creatine phosphate for about 15 seconds. (b) Each glucose molecule produces two ATP and two molecules of pyruvic acid, which can be used in aerobic respiration or converted to lactic acid. If oxygen is not available, pyruvic acid is converted to lactic acid, which may contribute to muscle fatigue. This occurs during strenuous exercise when high amounts of energy are needed but oxygen cannot be sufficiently delivered to muscle. (c) Aerobic respiration is the breakdown of glucose in the presence of oxygen (O 2 ) to produce carbon dioxide, water, and ATP. Approximately 95 percent of the ATP required for resting or moderately active muscles is provided by aerobic respiration, which takes place in mitochondria."
+        },
+        {
+          "location": "paragraph_21",
+          "text": "As the ATP produced by creatine phosphate is depleted, muscles turn to glycolysis as an ATP source. Glycolysis is an anaerobic (non-oxygen-dependent) process that breaks down glucose (sugar) to produce ATP; however, glycolysis cannot generate ATP as quickly as creatine phosphate. Thus, the switch to glycolysis results in a slower rate of ATP availability to the muscle. The sugar used in glycolysis can be provided by blood glucose or by metabolizing glycogen that is stored in the muscle. The breakdown of one glucose molecule produces two ATP and two molecules of pyruvic acid , which can be used in aerobic respiration or when oxygen levels are low, converted to lactic acid ( Figure 10.12 b )."
+        },
+        {
+          "location": "paragraph_22",
+          "text": "If oxygen is available, pyruvic acid is used in aerobic respiration. However, if oxygen is not available, pyruvic acid is converted to lactic acid , which may contribute to muscle fatigue. This conversion allows the recycling of the enzyme NAD + from NADH, which is needed for glycolysis to continue. This occurs during strenuous exercise when high amounts of energy are needed but oxygen cannot be sufficiently delivered to muscle. Glycolysis itself cannot be sustained for very long (approximately 1 minute of muscle activity), but it is useful in facilitating short bursts of high-intensity output. This is because glycolysis does not utilize glucose very efficiently, producing a net gain of two ATPs per molecule of glucose, and the end product of lactic acid, which may contribute to muscle fatigue as it accumulates."
+        },
+        {
+          "location": "paragraph_23",
+          "text": "Aerobic respiration is the breakdown of glucose or other nutrients in the presence of oxygen (O 2 ) to produce carbon dioxide, water, and ATP. Approximately 95 percent of the ATP required for resting or moderately active muscles is provided by aerobic respiration, which takes place in mitochondria. The inputs for aerobic respiration include glucose circulating in the bloodstream, pyruvic acid, and fatty acids. Aerobic respiration is much more efficient than anaerobic glycolysis, producing approximately 36 ATPs per molecule of glucose versus four from glycolysis. However, aerobic respiration cannot be sustained without a steady supply of O 2 to the skeletal muscle and is much slower ( Figure 10.12 c ). To compensate, muscles store a small amount of excess oxygen in proteins called myoglobin, allowing for more efficient muscle contractions and less fatigue. Aerobic training also increases the efficiency of the circulatory system so that O 2 can be supplied to the muscles for longer periods of time."
+        },
+        {
+          "location": "paragraph_24",
+          "text": "Muscle fatigue occurs when a muscle can no longer contract in response to signals from the nervous system. The exact causes of muscle fatigue are not fully known, although certain factors have been correlated with the decreased muscle contraction that occurs during fatigue. ATP is needed for normal muscle contraction, and as ATP reserves are reduced, muscle function may decline. This may be more of a factor in brief, intense muscle output rather than sustained, lower intensity efforts. Lactic acid buildup may lower intracellular pH, affecting enzyme and protein activity. Imbalances in Na + and K + levels as a result of membrane depolarization may disrupt Ca ++ flow out of the SR. Long periods of sustained exercise may damage the SR and the sarcolemma, resulting in impaired Ca ++ regulation."
+        },
+        {
+          "location": "paragraph_25",
+          "text": "Intense muscle activity results in an oxygen debt , which is the amount of oxygen needed to compensate for ATP produced without oxygen during muscle contraction. Oxygen is required to restore ATP and creatine phosphate levels, convert lactic acid to pyruvic acid, and, in the liver, to convert lactic acid into glucose or glycogen. Other systems used during exercise also require oxygen, and all of these combined processes result in the increased breathing rate that occurs after exercise. Until the oxygen debt has been met, oxygen intake is elevated, even after exercise has stopped."
+        },
+        {
+          "location": "paragraph_26",
+          "text": "Relaxing skeletal muscle fibers, and ultimately, the skeletal muscle, begins with the motor neuron, which stops releasing its chemical signal, ACh, into the synapse at the NMJ. The muscle fiber will repolarize, which closes the gates in the SR where Ca ++ was being released. ATP-driven pumps will move Ca ++ out of the sarcoplasm back into the SR. This results in the “reshielding” of the actin-binding sites on the thin filaments. Without the ability to form cross-bridges between the thin and thick filaments, the muscle fiber loses its tension and relaxes."
+        },
+        {
+          "location": "paragraph_27",
+          "text": "The number of skeletal muscle fibers in a given muscle is genetically determined and does not change. Muscle strength is directly related to the amount of myofibrils and sarcomeres within each fiber. Factors, such as hormones and stress (and artificial anabolic steroids), acting on the muscle can increase the production of sarcomeres and myofibrils within the muscle fibers, a change called hypertrophy, which results in the increased mass and bulk in a skeletal muscle. Likewise, decreased use of a skeletal muscle results in atrophy, where the number of sarcomeres and myofibrils disappear (but not the number of muscle fibers). It is common for a limb in a cast to show atrophied muscles when the cast is removed, and certain diseases, such as polio, show atrophied muscles."
+        },
+        {
+          "location": "paragraph_28",
+          "text": "Duchenne muscular dystrophy (DMD) is a progressive weakening of the skeletal muscles. It is one of several diseases collectively referred to as “muscular dystrophy.” DMD is caused by a lack of the protein dystrophin, which helps the thin filaments of myofibrils bind to the sarcolemma. Without sufficient dystrophin, muscle contractions cause the sarcolemma to tear, causing an influx of Ca ++ , leading to cellular damage and muscle fiber degradation. Over time, as muscle damage accumulates, muscle mass is lost, and greater functional impairments develop."
+        },
+        {
+          "location": "paragraph_29",
+          "text": "DMD is an inherited disorder caused by an abnormal X chromosome. It primarily affects males, and it is usually diagnosed in early childhood. DMD usually first appears as difficulty with balance and motion, and then progresses to an inability to walk. It continues progressing upward in the body from the lower extremities to the upper body, where it affects the muscles responsible for breathing and circulation. It ultimately causes death due to respiratory failure, and those afflicted do not usually live past their 20s."
+        },
+        {
+          "location": "paragraph_30",
+          "text": "Because DMD is caused by a mutation in the gene that codes for dystrophin, it was thought that introducing healthy myoblasts into patients might be an effective treatment. Myoblasts are the embryonic cells responsible for muscle development, and ideally, they would carry healthy genes that could produce the dystrophin needed for normal muscle contraction. This approach has been largely unsuccessful in humans. A recent approach has involved attempting to boost the muscle’s production of utrophin, a protein similar to dystrophin that may be able to assume the role of dystrophin and prevent cellular damage from occurring."
+        },
+        {
+          "location": "paragraph_31",
+          "text": "Access for free at https://openstax.org/books/anatomy-and-physiology-2e/pages/1-introduction"
+        },
+        {
+          "location": "paragraph_32",
+          "text": "Access for free at https://openstax.org/books/anatomy-and-physiology-2e/pages/1-introduction"
+        },
+        {
+          "location": "paragraph_33",
+          "text": "The information below includes the information needed to generate citations in most \n  major styles (APA, MLA, etc.); you must reformat and organize the information as needed \n  to fit the requirements of the style. Use the information below to generate a citation. \n  We recommend using a citation tool such as this one ."
+        },
+        {
+          "location": "paragraph_34",
+          "text": "© Jun 12, 2026 OpenStax. Textbook content produced by OpenStax is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike License. The OpenStax name, OpenStax logo, OpenStax book covers, OpenStax CNX name, and OpenStax CNX logo, \n    and Rice University name, and Rice University logo trademarks, or wordmarks are not subject to the Creative \n    Commons license and may not be reproduced without the prior and express written consent of Rice University."
+        }
+      ],
+      "figures": [
+        {
+          "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/d27415657173fa90321a95a51a9637b20d168b70",
+          "caption": "Figure 10.8 Contraction of a Muscle Fiber A cross-bridge forms between actin and the myosin heads triggering contraction. As long as Ca ++ ions remain in the sarcoplasm to bind to troponin, and as long as ATP is available, the muscle fiber will continue to shorten.",
+          "alt": "The top panel in this figure shows the interaction of a motor neuron with a muscle fiber and how the release of acetylcholine into the muscle cells leads to the release of calcium. The middle panel shows how calcium release activates troponin and leads to muscle contraction. The bottom panel shows an image of a muscle fiber being shortened and producing tension.",
+          "source_page": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-3-muscle-fiber-contraction-and-relaxation"
+        },
+        {
+          "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/aa1cd0ddb04d7fe1e9990764a2609235d96ac0c5",
+          "caption": "Figure 10.9 Relaxation of a Muscle Fiber Ca ++ ions are pumped back into the SR, which causes the tropomyosin to reshield the binding sites on the actin strands. A muscle may also stop contracting when it runs out of ATP and becomes fatigued.",
+          "alt": "The top panel in this figure shows the interaction of a motor neuron with a muscle fiber and how calcium is being absorbed into the muscle fiber. This results in the relaxation of the thin and thick filaments as shown in the bottom panel.",
+          "source_page": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-3-muscle-fiber-contraction-and-relaxation"
+        },
+        {
+          "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/1463f0ef934552382ad130bf14cd23dd9e1e779a",
+          "caption": "Figure 10.10 The Sliding Filament Model of Muscle Contraction When a sarcomere contracts, the Z lines move closer together, and the I band becomes smaller. The A band stays the same width. At full contraction, the thin and thick filaments overlap completely.",
+          "alt": "This diagram shows how muscle contracts. The top panel shows the stretched filaments and the bottom panel shows the compressed filaments.",
+          "source_page": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-3-muscle-fiber-contraction-and-relaxation"
+        },
+        {
+          "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/86ea61f9cc667f8fdba8e214b3cefcb16b60676e",
+          "caption": "Figure 10.11 Skeletal Muscle Contraction (a) The active site on actin is exposed as calcium binds to troponin. (b) The myosin head is attracted to actin, and myosin binds actin at its actin-binding site, forming the cross-bridge. (c) During the power stroke, the phosphate generated in the previous contraction cycle is released. This results in the myosin head pivoting toward the center of the sarcomere, after which the attached ADP and phosphate group are released. (d) A new molecule of ATP attaches to the myosin head, causing the cross-bridge to detach. (e) The myosin head hydrolyzes ATP to ADP and phosphate, which returns the myosin to the cocked position.",
+          "alt": "This multipart figure shows the mechanism of skeletal muscle contraction. In the top panel, the ADP and inorganic phosphate molecules are bound to the myosin motor head. In the middle panel, the ADP and phosphate come off the myosin motor and the direction of the power stroke is shown. In the bottom panel, a molecule of ATP is shown to bind the myosin motor head and the motor is reset.",
+          "source_page": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-3-muscle-fiber-contraction-and-relaxation"
+        },
+        {
+          "url": "https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/b54437d9c1a12b07842921d529ee26b6b8a788a5",
+          "caption": "Figure 10.12 Muscle Metabolism (a) Some ATP is stored in a resting muscle. As contraction starts, it is used up in seconds. More ATP is generated from creatine phosphate for about 15 seconds. (b) Each glucose molecule produces two ATP and two molecules of pyruvic acid, which can be used in aerobic respiration or converted to lactic acid. If oxygen is not available, pyruvic acid is converted to lactic acid, which may contribute to muscle fatigue. This occurs during strenuous exercise when high amounts of energy are needed but oxygen cannot be sufficiently delivered to muscle. (c) Aerobic respiration is the breakdown of glucose in the presence of oxygen (O 2 ) to produce carbon dioxide, water, and ATP. Approximately 95 percent of the ATP required for resting or moderately active muscles is provided by aerobic respiration, which takes place in mitochondria.",
+          "alt": "This figure shows the metabolic processes in muscle. The top panel shows the reactions in resting muscle. The middle panel shows glycolysis and aerobic respiration and the bottom panel shows cellular respiration in mitochondria.",
+          "source_page": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-3-muscle-fiber-contraction-and-relaxation"
+        }
+      ],
+      "fact_support": [],
+      "conflicts": [],
+      "trust_limitations": "Publisher authority and exact quotes do not establish entailment; independent contract review required",
+      "status": "RETRIEVED",
+      "evidence_level": "FULL_TEXT"
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13322953/fullTextXML",
+      "error": "FeatureNotFound",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13591147/fullTextXML",
+      "error": "ReadTimeout",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13238992/fullTextXML",
+      "error": "FeatureNotFound",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13024244/fullTextXML",
+      "error": "FeatureNotFound",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12815910/fullTextXML",
+      "error": "ReadTimeout",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12554249/fullTextXML",
+      "error": "ReadTimeout",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK537058/",
+      "error": "ValueError",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    },
+    {
+      "url": "https://openstax.org/books/biology-2e/pages/38-3-muscle-contraction-and-locomotion",
+      "error": "HTTPError",
+      "status": "FULL_TEXT_UNAVAILABLE"
+    }
+  ],
+  "search_records": [
+    {
+      "query": "skeletal muscle excitation contraction coupling calcium troponin tropomyosin myosin cross-bridge cycle review",
+      "service": "Europe PMC",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=skeletal+muscle+excitation+contraction+coupling+calcium+troponin+tropomyosin+myosin+cross-bridge+cycle+review&format=json&pageSize=3&resultType=core",
+      "results": [
+        {
+          "id": "42394838",
+          "source": "MED",
+          "pmid": "42394838",
+          "pmcid": "PMC13322953",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC13322953"
+            ]
+          },
+          "doi": "10.3389/fphys.2026.1836341",
+          "title": "Fine-tuning striated muscle performance: conserved sarcomere-level mechanisms across insect and vertebrate systems.",
+          "authorString": "Matsui H, Chbihi Z, Mashni R, Hachem H, Snider S, Sujkowski A.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Matsui H",
+                "lastName": "Matsui",
+                "firstName": "Hiroyoshi",
+                "initials": "H",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Wayne State School of Medicine Department of Pharmacology, Detroit, MI, United States."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Chbihi Z",
+                "lastName": "Chbihi",
+                "firstName": "Zach",
+                "initials": "Z",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Wayne State School of Medicine Department of Pharmacology, Detroit, MI, United States."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Mashni R",
+                "lastName": "Mashni",
+                "firstName": "Rima",
+                "initials": "R",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Wayne State School of Medicine Department of Pharmacology, Detroit, MI, United States."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Hachem H",
+                "lastName": "Hachem",
+                "firstName": "Haidar",
+                "initials": "H",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Wayne State School of Medicine Department of Pharmacology, Detroit, MI, United States."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Snider S",
+                "lastName": "Snider",
+                "firstName": "Sarah",
+                "initials": "S",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Wayne State School of Medicine Department of Pharmacology, Detroit, MI, United States."
+                    },
+                    {
+                      "affiliation": "University of Maryland Baltimore County College of Natural and Mathematical Sciences, Baltimore, MD, United States."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Sujkowski A",
+                "lastName": "Sujkowski",
+                "firstName": "Alyson",
+                "initials": "A",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Wayne State School of Medicine Department of Pharmacology, Detroit, MI, United States."
+                    },
+                    {
+                      "affiliation": "Wayne State School of Medicine Eugene Applebaum College of Pharmacy and Health Sciences, Detroit, MI, United States."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "related_data",
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "volume": "17",
+            "journalIssueId": 4103352,
+            "dateOfPublication": "2026 ",
+            "monthOfPublication": 0,
+            "yearOfPublication": 2026,
+            "journal": {
+              "medlineAbbreviation": "Front Physiol",
+              "title": "Frontiers in physiology",
+              "essn": "1664-042X",
+              "issn": "1664-042X",
+              "nlmid": "101549006",
+              "isoabbreviation": "Front Physiol"
+            },
+            "printPublicationDate": "2026-01-01"
+          },
+          "pubYear": "2026",
+          "pageInfo": "1836341",
+          "abstractText": "Striated muscles exhibit remarkable structural and functional specialization that enables precise control of force production, contractile kinetics, and energetic efficiency. Although vertebrate skeletal and cardiac muscles have been extensively studied, comparative analyses across animal phyla reveal that many molecular and biophysical principles governing muscle performance are deeply conserved. Insects, in particular, possess highly differentiated muscle types that provide powerful systems for dissecting the regulation of contraction, elasticity, and force generation at the level of the sarcomere. In this review, we integrate insights from insect and vertebrate muscles to highlight conserved and divergent features of sarcomere organization and myofilament composition. We focus on major contractile and regulatory proteins, including actin, myosin, troponin, tropomyosin, and elastic proteins, emphasizing how isoform diversity fine-tunes muscle function. We discuss the biomedical relevance of invertebrate models for understanding muscle disease mechanisms, including congenital myopathies, sarcomeric protein-associated disorders, and muscular dystrophies. Finally, we examine how principles uncovered in insect muscles inform vertebrate cardiac physiology and skeletal muscle aging, positioning insect systems as complementary discovery platforms for advancing muscle biology.",
+          "affiliation": "Wayne State School of Medicine Department of Pharmacology, Detroit, MI, United States.",
+          "publicationStatus": "epublish",
+          "language": "eng",
+          "pubModel": "Electronic-eCollection",
+          "pubTypeList": {
+            "pubType": [
+              "review-article",
+              "Review",
+              "Journal Article"
+            ]
+          },
+          "keywordList": {
+            "keyword": [
+              "Drosophila Models",
+              "Muscle Disease",
+              "Frank-starling Mechanism",
+              "Stretch Activation",
+              "Myofilament Regulation",
+              "Indirect Flight Muscle",
+              "Titin-like Proteins",
+              "Sarcomere Elasticity"
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.3389/fphys.2026.1836341"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13322953"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13322953?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 0,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "license": "cc by",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "doi"
+            ]
+          },
+          "dateOfCompletion": "2026-07-03",
+          "dateOfCreation": "2026-07-03",
+          "dateOfRevision": "2026-08-13",
+          "electronicPublicationDate": "2026-06-18",
+          "firstPublicationDate": "2026-06-18",
+          "firstIndexDate": "2026-07-03",
+          "fullTextReceivedDate": "2026-08-19",
+          "hasEvaluations": "N"
+        },
+        {
+          "id": "42769728",
+          "source": "MED",
+          "pmid": "42769728",
+          "pmcid": "PMC13591147",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC13591147"
+            ]
+          },
+          "doi": "10.3389/fcvm.2026.1938059",
+          "title": "Aberrant myocardial calcium cycling: pathogenic mechanisms and targeted therapeutics for heart failure.",
+          "authorString": "Zhao C, Liu J, Xin J, Liu Q, Zhang Y, Yu X, Gao J.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Zhao C",
+                "lastName": "Zhao",
+                "firstName": "Chunxiao",
+                "initials": "C",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "The Affiliated Hospital of Shandong University of Traditional Chinese Medicine, Jinan, Shandong, China."
+                    },
+                    {
+                      "affiliation": "Shandong University of Traditional Chinese Medicine, Jinan, Shandong, China."
+                    },
+                    {
+                      "affiliation": "Institute of Acupuncture and Moxibustion, China Academy of Chinese Medical Sciences, Beijing, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Liu J",
+                "lastName": "Liu",
+                "firstName": "Jiahao",
+                "initials": "J",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Jinan Municipal Government Hospital, Jinan, Shandong, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Xin J",
+                "lastName": "Xin",
+                "firstName": "Juanjuan",
+                "initials": "J",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Institute of Acupuncture and Moxibustion, China Academy of Chinese Medical Sciences, Beijing, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Liu Q",
+                "lastName": "Liu",
+                "firstName": "Qun",
+                "initials": "Q",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Institute of Acupuncture and Moxibustion, China Academy of Chinese Medical Sciences, Beijing, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Zhang Y",
+                "lastName": "Zhang",
+                "firstName": "Ying",
+                "initials": "Y",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Institute of Acupuncture and Moxibustion, China Academy of Chinese Medical Sciences, Beijing, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Yu X",
+                "lastName": "Yu",
+                "firstName": "Xiaochun",
+                "initials": "X",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Institute of Acupuncture and Moxibustion, China Academy of Chinese Medical Sciences, Beijing, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Gao J",
+                "lastName": "Gao",
+                "firstName": "Junhong",
+                "initials": "J",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Institute of Acupuncture and Moxibustion, China Academy of Chinese Medical Sciences, Beijing, China."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "volume": "13",
+            "journalIssueId": 4112090,
+            "dateOfPublication": "2026 ",
+            "monthOfPublication": 0,
+            "yearOfPublication": 2026,
+            "journal": {
+              "medlineAbbreviation": "Front Cardiovasc Med",
+              "title": "Frontiers in cardiovascular medicine",
+              "essn": "2297-055X",
+              "issn": "2297-055X",
+              "nlmid": "101653388",
+              "isoabbreviation": "Front Cardiovasc Med"
+            },
+            "printPublicationDate": "2026-01-01"
+          },
+          "pubYear": "2026",
+          "pageInfo": "1938059",
+          "abstractText": "Cardiovascular diseases rank as the global primary cause of mortality. Heart failure (HF) represents a progressive cardiac syndrome triggered by structural or functional myocardial damage that compromises ventricular systolic output. Intracellular calcium homeostasis underpins cardiomyocyte excitation-contraction coupling. Calcium overload and dysregulated calcium handling act as central pathogenic forces driving HF progression. Sympathetic β<sub>1</sub>-adrenergic receptor (β<sub>1</sub>-AR) and parasympathetic M<sub>2</sub> muscarinic acetylcholine receptor (M<sub>2</sub>-AChR) coordinate dual regulatory signaling to control cardiac calcium turnover, alongside key modulators including L-type calcium channel (LTCC), ryanodine receptor 2 (RyR2), SERCA2a, cardiac troponin C (cTnC), Na<sup>+</sup>/Ca<sup>2+</sup> exchanger 1 (NCX1) and mitochondrial permeability transition pore (MPTP). This review outlines physiological calcium cycling and systematically characterizes HF-related functional defects of calcium regulatory machinery from three layers: calcium release, sarcoplasmic reticulum calcium reuptake and auxiliary calcium mediators. We further discuss the underlying mechanisms of calcium-targeted pharmaceuticals and gene therapeutic approaches, while addressing translational bottlenecks limiting single-target interventions. Restoration of balanced cytosolic calcium cycling holds therapeutic potential to reverse pathological myocardial remodeling in HF.",
+          "affiliation": "The Affiliated Hospital of Shandong University of Traditional Chinese Medicine, Jinan, Shandong, China.",
+          "publicationStatus": "epublish",
+          "language": "eng",
+          "pubModel": "Electronic-eCollection",
+          "pubTypeList": {
+            "pubType": [
+              "review-article",
+              "Review",
+              "Journal Article"
+            ]
+          },
+          "keywordList": {
+            "keyword": [
+              "Excitation-contraction coupling",
+              "Heart Failure",
+              "Calcium Cycling",
+              "Autonomic Neural Regulation",
+              "Calcium Cycling-Related Proteins"
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.3389/fcvm.2026.1938059"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13591147"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13591147?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 0,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "N",
+          "hasData": "Y",
+          "license": "cc by",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "doi"
+            ]
+          },
+          "dateOfCompletion": "2026-09-22",
+          "dateOfCreation": "2026-09-22",
+          "dateOfRevision": "2026-09-23",
+          "electronicPublicationDate": "2026-09-03",
+          "firstPublicationDate": "2026-09-03",
+          "firstIndexDate": "2026-09-23",
+          "fullTextReceivedDate": "2026-09-22",
+          "hasEvaluations": "N"
+        },
+        {
+          "id": "42227257",
+          "source": "MED",
+          "pmid": "42227257",
+          "pmcid": "PMC13238992",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC13238992"
+            ]
+          },
+          "doi": "10.1530/eor-2025-0066",
+          "title": "Pathological changes and therapeutic strategies for sarcopenia.",
+          "authorString": "Yang K, Peng S, Zhang C, Guo L, Liang D, Tao L.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Yang K",
+                "lastName": "Yang",
+                "firstName": "Keda",
+                "initials": "K"
+              },
+              {
+                "fullName": "Peng S",
+                "lastName": "Peng",
+                "firstName": "Shengyao",
+                "initials": "S"
+              },
+              {
+                "fullName": "Zhang C",
+                "lastName": "Zhang",
+                "firstName": "Chi",
+                "initials": "C"
+              },
+              {
+                "fullName": "Guo L",
+                "lastName": "Guo",
+                "firstName": "Lan",
+                "initials": "L",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-3470-0414"
+                }
+              },
+              {
+                "fullName": "Liang D",
+                "lastName": "Liang",
+                "firstName": "Dong",
+                "initials": "D"
+              },
+              {
+                "fullName": "Tao L",
+                "lastName": "Tao",
+                "firstName": "Lin",
+                "initials": "L"
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-3470-0414"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "6",
+            "volume": "11",
+            "journalIssueId": 4205381,
+            "dateOfPublication": "2026 Jun",
+            "monthOfPublication": 6,
+            "yearOfPublication": 2026,
+            "journal": {
+              "medlineAbbreviation": "EFORT Open Rev",
+              "title": "EFORT open reviews",
+              "essn": "2058-5241",
+              "issn": "2058-5241",
+              "nlmid": "101695674",
+              "isoabbreviation": "EFORT Open Rev"
+            },
+            "printPublicationDate": "2026-06-01"
+          },
+          "pubYear": "2026",
+          "pageInfo": "480-511",
+          "abstractText": "Sarcopenia is becoming a major public health concern for older adults. The incidence rate in people over 70 years of age is 30-50%. Patients with sarcopenia not only have difficulty moving and are prone to falls and fractures, but in severe cases, they may also experience heart and lung failure and even death. Early diagnosis and prevention in high-risk populations can effectively prevent the deterioration of muscle atrophy. In this review, we describe the physiological mechanism of muscle contraction and reveal common pathological changes in sarcopenic patients, including oxidative stress, inflammation, insulin resistance, hypoxia, and disturbance of the gut microbiota. These pathological changes synergistically inhibit the mass and strength of skeletal muscles. We also discuss nonpharmacological therapeutic methods for sarcopenia, such as nutrient supplementation and exercise, especially resistance training. On the basis of a thorough analysis of the pathogenesis of sarcopenia in high-risk populations, we believe that tissue synthesis and energy supply are the foundation for maintaining the normal physiological functions of muscles. Mitochondria are potential targets for the optimization of intervention methods. Targeted delivery of functional mitochondria to skeletal muscle cells contributes to improving biological oxidation, redox balance, and tissue remodeling. Additionally, stem cell transplantation with the stimulation of growth factors may also be an available method for the further treatment of sarcopenia.",
+          "publicationStatus": "epublish",
+          "language": "eng",
+          "pubModel": "Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "review-article",
+              "Review",
+              "Journal Article"
+            ]
+          },
+          "keywordList": {
+            "keyword": [
+              "Mitochondria",
+              "Nutrition",
+              "Pathological change",
+              "Resistance Training",
+              "Sarcopenia"
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1530/EOR-2025-0066"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13238992"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13238992?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 0,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "license": "cc by-nc-nd",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "doi"
+            ]
+          },
+          "dateOfCompletion": "2026-06-02",
+          "dateOfCreation": "2026-06-02",
+          "dateOfRevision": "2026-08-13",
+          "electronicPublicationDate": "2026-06-01",
+          "firstPublicationDate": "2026-06-01",
+          "firstIndexDate": "2026-06-03",
+          "fullTextReceivedDate": "2026-06-08",
+          "hasEvaluations": "N"
+        }
+      ]
+    },
+    {
+      "query": "excitation-contraction-relaxation skeletal muscle sequence action potential T-tubule sarcoplasmic reticulum calcium reuptake",
+      "service": "Europe PMC",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=excitation-contraction-relaxation+skeletal+muscle+sequence+action+potential+T-tubule+sarcoplasmic+reticulum+calcium+reuptake&format=json&pageSize=3&resultType=core",
+      "results": [
+        {
+          "id": "41898308",
+          "source": "MED",
+          "pmid": "41898308",
+          "pmcid": "PMC13024244",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC13024244"
+            ]
+          },
+          "doi": "10.3390/biomedicines14030662",
+          "title": "Structural and Functional Regulation of RyR2 in Cardiac Calcium Handling and Arrhythmogenesis.",
+          "authorString": "Gao K, Wang W, Ling Y, Li B, Xing C, Li N, Yin X, Tao L, Li X, Qiu J, Wang X, Wei J.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Gao K",
+                "lastName": "Gao",
+                "firstName": "Kaiyang",
+                "initials": "K",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0004-0139-8310"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Cardiology, Northwest University First Hospital, Xi'an 710043, China."
+                    },
+                    {
+                      "affiliation": "School of Medicine, Northwest University, 229 Taibai North Road, Xi'an 710069, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Wang W",
+                "lastName": "Wang",
+                "firstName": "Wenzhuo",
+                "initials": "W",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Medicine, Northwest University, 229 Taibai North Road, Xi'an 710069, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Ling Y",
+                "lastName": "Ling",
+                "firstName": "Yanan",
+                "initials": "Y",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Medicine, Northwest University, 229 Taibai North Road, Xi'an 710069, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Li B",
+                "lastName": "Li",
+                "firstName": "Baihe",
+                "initials": "B",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Medicine, Northwest University, 229 Taibai North Road, Xi'an 710069, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Xing C",
+                "lastName": "Xing",
+                "firstName": "Chenlei",
+                "initials": "C",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Medicine, Northwest University, 229 Taibai North Road, Xi'an 710069, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Li N",
+                "lastName": "Li",
+                "firstName": "Nike",
+                "initials": "N",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Medicine, Northwest University, 229 Taibai North Road, Xi'an 710069, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Yin X",
+                "lastName": "Yin",
+                "firstName": "Xiaolan",
+                "initials": "X",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Medicine, Northwest University, 229 Taibai North Road, Xi'an 710069, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Tao L",
+                "lastName": "Tao",
+                "firstName": "Lan",
+                "initials": "L",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Medicine, Northwest University, 229 Taibai North Road, Xi'an 710069, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Li X",
+                "lastName": "Li",
+                "firstName": "Xiaoqing",
+                "initials": "X",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Medicine, Northwest University, 229 Taibai North Road, Xi'an 710069, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Qiu J",
+                "lastName": "Qiu",
+                "firstName": "Junling",
+                "initials": "J",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Cardiology, Northwest University First Hospital, Xi'an 710043, China."
+                    },
+                    {
+                      "affiliation": "School of Medicine, Northwest University, 229 Taibai North Road, Xi'an 710069, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Wang X",
+                "lastName": "Wang",
+                "firstName": "Xuanqi",
+                "initials": "X",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Cardiology, Northwest University First Hospital, Xi'an 710043, China."
+                    },
+                    {
+                      "affiliation": "School of Medicine, Northwest University, 229 Taibai North Road, Xi'an 710069, China."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Wei J",
+                "lastName": "Wei",
+                "firstName": "Jinhong",
+                "initials": "J",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-5251-9192"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Cardiology, Northwest University First Hospital, Xi'an 710043, China."
+                    },
+                    {
+                      "affiliation": "School of Medicine, Northwest University, 229 Taibai North Road, Xi'an 710069, China."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-5251-9192"
+              },
+              {
+                "type": "ORCID",
+                "value": "0009-0004-0139-8310"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "3",
+            "volume": "14",
+            "journalIssueId": 4149067,
+            "dateOfPublication": "2026 Mar",
+            "monthOfPublication": 3,
+            "yearOfPublication": 2026,
+            "journal": {
+              "medlineAbbreviation": "Biomedicines",
+              "title": "Biomedicines",
+              "essn": "2227-9059",
+              "issn": "2227-9059",
+              "nlmid": "101691304",
+              "isoabbreviation": "Biomedicines"
+            },
+            "printPublicationDate": "2026-03-01"
+          },
+          "pubYear": "2026",
+          "pageInfo": "662",
+          "abstractText": "Cardiac Ca<sup>2+</sup> handling is critical for excitation-contraction coupling (ECC), with the ryanodine receptor type 2 (RyR2) serving as the key sarcoplasmic reticulum (SR) Ca<sup>2+</sup> release channel in cardiomyocytes. The dysfunction of RyR2 is linked to fatal cardiac arrhythmias, including heart failure (HF) and catecholaminergic polymorphic ventricular tachycardia (CPVT). This review aims to elucidate the structural basis of RyR2, its core role in cardiac ECC and Ca<sup>2+</sup> homeostasis, and the regulatory mechanisms of key modulators on its activity. By integrating recent high-resolution cryo-EM structural analyses with molecular and cellular studies on RyR2 regulation, as well as clinical evidence of RyR2 mutations in arrhythmogenic heart diseases, we provide a comprehensive overview of the field. Cryo-EM has unraveled RyR2's gating mechanisms, ligand-binding sites, and structural features. Functionally, RyR2 mediates calcium-induced calcium release (CICR) and maintains Ca<sup>2+</sup> homeostasis through coordination with SERCA2a and NCX. Key modulators (CaM, FKBP12.6, and PKA/CaMKII) and disease-linked mutations regulate RyR2 activity through distinct pathways, with defective RyR2 leading to store-overload-induced Ca<sup>2+</sup> release (SOICR) and arrhythmias. Furthermore, reactive oxygen species (ROS) can induce RyR2 oxidation, establishing a pathological Ca<sup>2+</sup> leak-ROS cycle in heart disease. In conclusion, RyR2 is a pivotal sensor of myocardial function, with its structural and regulatory mechanisms now well-characterized by recent studies. However, the effects of numerous RyR2 mutations remain unclear, and deeper mechanistic insights will lay a key foundation for developing novel therapies against RyR2-related cardiac diseases.",
+          "affiliation": "Department of Cardiology, Northwest University First Hospital, Xi'an 710043, China.",
+          "publicationStatus": "epublish",
+          "language": "eng",
+          "pubModel": "Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "review-article",
+              "Review",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "Key R&amp;D Program Project of Shaanxi Province",
+                "grantId": "2024SF-YBXM-010",
+                "orderIn": 0
+              },
+              {
+                "agency": "National Foreign Expert Program of China",
+                "grantId": "H20250737",
+                "orderIn": 0
+              },
+              {
+                "agency": "Key R&D Program Project of Shaanxi Province",
+                "grantId": "2024SF-YBXM- 010",
+                "orderIn": 0
+              },
+              {
+                "agency": "National Natural Science Foundation of China",
+                "grantId": "82270323",
+                "orderIn": 0
+              }
+            ]
+          },
+          "keywordList": {
+            "keyword": [
+              "Calcium homeostasis",
+              "Cardiac Arrhythmias",
+              "Excitation–contraction Coupling",
+              "Ryanodine Receptor 2",
+              "Heart Rate Regulation"
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.3390/biomedicines14030662"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13024244"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC13024244?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 4,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "license": "cc by",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "pdb"
+            ]
+          },
+          "dateOfCompletion": "2026-03-28",
+          "dateOfCreation": "2026-03-28",
+          "dateOfRevision": "2026-08-13",
+          "electronicPublicationDate": "2026-03-14",
+          "firstPublicationDate": "2026-03-14",
+          "firstIndexDate": "2026-03-29",
+          "fullTextReceivedDate": "2026-03-28",
+          "hasEvaluations": "N"
+        },
+        {
+          "id": "41372236",
+          "source": "MED",
+          "pmid": "41372236",
+          "pmcid": "PMC12815910",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC12815910"
+            ]
+          },
+          "doi": "10.1038/s41467-025-67358-4",
+          "title": "MCARE enhances SERCA1 activity in fast-twitch muscle to maintain calcium handling and muscle integrity.",
+          "authorString": "Sasaki T, Takase H, Koebis M, Aiba A, Takahashi Y, Yamauchi Y, Sato R.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Sasaki T",
+                "lastName": "Sasaki",
+                "firstName": "Takashi",
+                "initials": "T",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-3352-0753"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Food Biochemistry Laboratory, Department of Applied Biological Chemistry, Graduate School of Agricultural and Life Sciences, The University of Tokyo, Tokyo, Japan. atsasaki@g.ecc.u-tokyo.ac.jp."
+                    },
+                    {
+                      "affiliation": "Nutri-Life Science Laboratory, Department of Applied Biological Chemistry, Graduate School of Agricultural and Life Sciences, The University of Tokyo, Tokyo, Japan. atsasaki@g.ecc.u-tokyo.ac.jp."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Takase H",
+                "lastName": "Takase",
+                "firstName": "Hayataka",
+                "initials": "H",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0007-5296-9947"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Nutri-Life Science Laboratory, Department of Applied Biological Chemistry, Graduate School of Agricultural and Life Sciences, The University of Tokyo, Tokyo, Japan."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Koebis M",
+                "lastName": "Koebis",
+                "firstName": "Michinori",
+                "initials": "M",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Laboratory of Animal Resources, Center for Disease Biology and Integrative Medicine, Graduate School of Medicine, The University of Tokyo, Tokyo, Japan."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Aiba A",
+                "lastName": "Aiba",
+                "firstName": "Atsu",
+                "initials": "A",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-8192-0778"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Laboratory of Animal Resources, Center for Disease Biology and Integrative Medicine, Graduate School of Medicine, The University of Tokyo, Tokyo, Japan."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Takahashi Y",
+                "lastName": "Takahashi",
+                "firstName": "Yu",
+                "initials": "Y",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Food Biochemistry Laboratory, Department of Applied Biological Chemistry, Graduate School of Agricultural and Life Sciences, The University of Tokyo, Tokyo, Japan."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Yamauchi Y",
+                "lastName": "Yamauchi",
+                "firstName": "Yoshio",
+                "initials": "Y",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-5559-4596"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Food Biochemistry Laboratory, Department of Applied Biological Chemistry, Graduate School of Agricultural and Life Sciences, The University of Tokyo, Tokyo, Japan."
+                    },
+                    {
+                      "affiliation": "Nutri-Life Science Laboratory, Department of Applied Biological Chemistry, Graduate School of Agricultural and Life Sciences, The University of Tokyo, Tokyo, Japan."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Sato R",
+                "lastName": "Sato",
+                "firstName": "Ryuichiro",
+                "initials": "R",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Food Biochemistry Laboratory, Department of Applied Biological Chemistry, Graduate School of Agricultural and Life Sciences, The University of Tokyo, Tokyo, Japan. roysato@g.ecc.u-tokyo.ac.jp."
+                    },
+                    {
+                      "affiliation": "Nutri-Life Science Laboratory, Department of Applied Biological Chemistry, Graduate School of Agricultural and Life Sciences, The University of Tokyo, Tokyo, Japan. roysato@g.ecc.u-tokyo.ac.jp."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-5559-4596"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-3352-0753"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-8192-0778"
+              },
+              {
+                "type": "ORCID",
+                "value": "0009-0007-5296-9947"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "supporting_data",
+              "related_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "1",
+            "volume": "17",
+            "journalIssueId": 4083229,
+            "dateOfPublication": "2025 Dec",
+            "monthOfPublication": 12,
+            "yearOfPublication": 2025,
+            "journal": {
+              "medlineAbbreviation": "Nat Commun",
+              "title": "Nature communications",
+              "essn": "2041-1723",
+              "issn": "2041-1723",
+              "nlmid": "101528555",
+              "isoabbreviation": "Nat Commun"
+            },
+            "printPublicationDate": "2025-12-01"
+          },
+          "pubYear": "2025",
+          "pageInfo": "629",
+          "abstractText": "The release of Ca<sup>2+</sup> from the sarcoplasmic reticulum into the cytoplasm, followed by its reuptake by sarco/endoplasmic reticulum Ca<sup>2+</sup> ATPase (SERCA), is critical for the muscle contraction-relaxation cycle. In this study, we identify a small transmembrane protein, predominantly expressed in fast-twitch muscles, which regulates SERCA1 activity. This protein, termed muscle-enriched Ca<sup>2+</sup> regulator (MCARE), enhances SERCA1 function by competitively inhibiting myoregulin, a muscle-specific micropeptide that otherwise suppresses SERCA1 activity. By facilitating more efficient Ca<sup>2+</sup> clearance from the cytoplasm, MCARE accelerates muscle relaxation. Mcare-deficient mice exhibit symptoms resembling muscular dystrophy, including progressive muscle wasting in fast-twitch muscles, reduced muscle strength, and increased susceptibility to exercise-induced muscle damage. Notably, these mice also present with distinctive rippling muscle contractions. Our findings establish MCARE as a key regulator of SERCA1 activity, essential for maintaining Ca<sup>2+</sup> homeostasis and the functional integrity of fast-twitch muscle fibers.",
+          "affiliation": "Food Biochemistry Laboratory, Department of Applied Biological Chemistry, Graduate School of Agricultural and Life Sciences, The University of Tokyo, Tokyo, Japan. atsasaki@g.ecc.u-tokyo.ac.jp.",
+          "publicationStatus": "epublish",
+          "language": "eng",
+          "pubModel": "Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "MEXT | Japan Society for the Promotion of Science",
+                "grantId": "JP19K15786",
+                "orderIn": 0
+              },
+              {
+                "agency": "MEXT | Japan Society for the Promotion of Science (JSPS)",
+                "grantId": "JP20H00408",
+                "orderIn": 0
+              },
+              {
+                "agency": "Lotte Shigemitsu Prize from the LOTTE Foundation",
+                "orderIn": 0
+              },
+              {
+                "agency": "MEXT | Japan Society for the Promotion of Science",
+                "grantId": "JP20H00408",
+                "orderIn": 0
+              },
+              {
+                "agency": "MEXT | Japan Society for the Promotion of Science (JSPS)",
+                "grantId": "JP23K05089",
+                "orderIn": 0
+              },
+              {
+                "agency": "MEXT | Japan Society for the Promotion of Science (JSPS)",
+                "grantId": "JP19K15786",
+                "orderIn": 0
+              },
+              {
+                "agency": "MEXT | Japan Society for the Promotion of Science",
+                "grantId": "JP23K05089",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Muscle Fibers, Fast-Twitch",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Muscle, Skeletal",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Sarcoplasmic Reticulum",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Mice, Inbred C57BL"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Mice, Knockout"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Mice"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Calcium",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Muscle Proteins",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Physical Conditioning, Animal"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Muscle Contraction",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Male"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Sarcoplasmic Reticulum Calcium-Transporting ATPases",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Muscle Proteins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Sarcoplasmic Reticulum Calcium-Transporting ATPases",
+                "registryNumber": "EC 3.6.3.8"
+              },
+              {
+                "name": "Atp2a1 protein, mouse",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Calcium",
+                "registryNumber": "SY7Q814VUP"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1038/s41467-025-67358-4"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC12815910"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC12815910?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 3,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "license": "cc by",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "doi"
+            ]
+          },
+          "dateOfCompletion": "2026-01-19",
+          "dateOfCreation": "2025-12-10",
+          "dateOfRevision": "2026-11-10",
+          "electronicPublicationDate": "2025-12-10",
+          "firstPublicationDate": "2025-12-10",
+          "firstIndexDate": "2025-12-11",
+          "fullTextReceivedDate": "2026-01-21",
+          "hasEvaluations": "N"
+        },
+        {
+          "id": "41021670",
+          "source": "MED",
+          "pmid": "41021670",
+          "pmcid": "PMC12554249",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC12554249"
+            ]
+          },
+          "doi": "10.1161/circulationaha.125.075150",
+          "title": "Targeting Calcium Regulation for Heart Failure and Arrhythmia Therapeutics: A Critical Review.",
+          "authorString": "Redel-Traub G, Marx SO, Marks AR.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Redel-Traub G",
+                "lastName": "Redel-Traub",
+                "firstName": "Gabriel",
+                "initials": "G",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-0908-7889"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Medicine (G.R.-T., S.O.M.), Columbia University, New York, NY."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Marx SO",
+                "lastName": "Marx",
+                "firstName": "Steven O",
+                "initials": "SO",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-0577-6030"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Medicine (G.R.-T., S.O.M.), Columbia University, New York, NY."
+                    },
+                    {
+                      "affiliation": "Physiology and Cellular Biophysics (S.O.M., A.R.M.), Columbia University, New York, NY."
+                    },
+                    {
+                      "affiliation": "Pharmacology and Molecular Signaling (S.O.M.), Columbia University, New York, NY."
+                    },
+                    {
+                      "affiliation": "Clyde and Helen Wu Center for Molecular Cardiology (S.O.M., A.R.M.), Columbia University, New York, NY."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Marks AR",
+                "lastName": "Marks",
+                "firstName": "Andrew R",
+                "initials": "AR",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-8057-1502"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Physiology and Cellular Biophysics (S.O.M., A.R.M.), Columbia University, New York, NY."
+                    },
+                    {
+                      "affiliation": "Clyde and Helen Wu Center for Molecular Cardiology (S.O.M., A.R.M.), Columbia University, New York, NY."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-0577-6030"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-8057-1502"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-0908-7889"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "13",
+            "volume": "152",
+            "journalIssueId": 4023720,
+            "dateOfPublication": "2025 Sep",
+            "monthOfPublication": 9,
+            "yearOfPublication": 2025,
+            "journal": {
+              "medlineAbbreviation": "Circulation",
+              "title": "Circulation",
+              "essn": "1524-4539",
+              "issn": "0009-7322",
+              "nlmid": "0147763",
+              "isoabbreviation": "Circulation"
+            },
+            "printPublicationDate": "2025-09-01"
+          },
+          "pubYear": "2025",
+          "pageInfo": "957-970",
+          "abstractText": "Despite advances in pharmacologic and procedural therapies, heart failure (HF) and cardiac arrhythmias remain significant global health burdens, highlighting the urgent need for novel therapeutic strategies. Defective Ca<sup>2+</sup> handling in cardiac myocytes is recognized as a central pathogenic mechanism underlying both heart failure and atrial and ventricular arrhythmias. In this review, we critically assess the current state of research on Ca<sup>2+</sup>-handling proteins and their role in causing heart failure and arrhythmias, highlighting therapeutic implications. Recent paradigm-shifting discoveries, clinical trial outcomes, and challenges of targeting Ca<sup>2+</sup>-handling proteins are examined. As outlined in this review, an improved understanding of the relevant proteins and their differential expression and function in human health and disease is crucial for developing Ca<sup>2+</sup> handling-targeted therapeutics that can fundamentally alter the natural history of heart failure and arrhythmias.",
+          "affiliation": "Department of Medicine (G.R.-T., S.O.M.), Columbia University, New York, NY.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "research-article",
+              "Review",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "NHLBI NIH HHS",
+                "acronym": "HL",
+                "grantId": "R01 HL102040",
+                "orderIn": 0
+              },
+              {
+                "agency": "NHLBI NIH HHS",
+                "acronym": "HL",
+                "grantId": "R01 HL145473",
+                "orderIn": 0
+              },
+              {
+                "agency": "NHLBI NIH HHS",
+                "acronym": "HL",
+                "grantId": "P01 HL164319",
+                "orderIn": 0
+              },
+              {
+                "agency": "NHLBI NIH HHS",
+                "acronym": "HL",
+                "grantId": "R01 HL155377",
+                "orderIn": 0
+              },
+              {
+                "agency": "NHLBI NIH HHS",
+                "acronym": "HL",
+                "grantId": "T32 HL007343",
+                "orderIn": 0
+              },
+              {
+                "agency": "NINDS NIH HHS",
+                "acronym": "NS",
+                "grantId": "R01 NS114570",
+                "orderIn": 0
+              },
+              {
+                "agency": "NHLBI NIH HHS",
+                "acronym": "HL",
+                "grantId": "R01 HL121253",
+                "orderIn": 0
+              },
+              {
+                "agency": "NHLBI NIH HHS",
+                "acronym": "HL",
+                "grantId": "R01 HL140934",
+                "orderIn": 0
+              },
+              {
+                "agency": "NIDDK NIH HHS",
+                "acronym": "DK",
+                "grantId": "R01 DK118240",
+                "orderIn": 0
+              },
+              {
+                "agency": "NHLBI NIH HHS",
+                "acronym": "HL",
+                "grantId": "R01 HL146149",
+                "orderIn": 0
+              },
+              {
+                "agency": "NINDS NIH HHS",
+                "acronym": "NS",
+                "grantId": "RF1 NS114570",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Myocytes, Cardiac",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "DE",
+                      "qualifierName": "drug effects"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Calcium",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Anti-Arrhythmia Agents",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "TU",
+                      "qualifierName": "therapeutic use"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Calcium Signaling",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "DE",
+                      "qualifierName": "drug effects"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Arrhythmias, Cardiac",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "DT",
+                      "qualifierName": "drug therapy"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PP",
+                      "qualifierName": "physiopathology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Heart Failure",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "DT",
+                      "qualifierName": "drug therapy"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PP",
+                      "qualifierName": "physiopathology"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "keywordList": {
+            "keyword": [
+              "Drug therapy",
+              "Calcium signaling",
+              "Heart Failure",
+              "Arrhythmias, Cardiac",
+              "Ryanodine Receptor Calcium Release Channel",
+              "Sarcoplasmic Reticulum Calcium-transporting Atpases"
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Anti-Arrhythmia Agents",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Calcium",
+                "registryNumber": "SY7Q814VUP"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1161/CIRCULATIONAHA.125.075150"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC12554249"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC12554249?pdf=render"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1161/circulationaha.125.075150"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 11,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "authMan": "Y",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "Y",
+          "manuscriptId": "NIHMS2114455",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "nct"
+            ]
+          },
+          "dateOfCompletion": "2025-09-29",
+          "dateOfCreation": "2025-09-29",
+          "dateOfRevision": "2026-09-17",
+          "electronicPublicationDate": "2025-09-29",
+          "firstPublicationDate": "2025-09-29",
+          "firstIndexDate": "2025-09-30",
+          "fullTextReceivedDate": "2025-12-22",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  ],
+  "research_status": "RETRIEVED_UNREVIEWED",
+  "discovery": "Validated list queries, structured Europe PMC search/abstract/full text, candidate source fetch; source relevance is not assumed"
+}

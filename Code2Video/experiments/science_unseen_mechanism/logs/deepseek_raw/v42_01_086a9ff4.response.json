@@ -1,0 +1,36 @@
+{
+  "id": "4dfa8353-655d-4157-b0f7-69bf4446aa13",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"topic_id\": \"skeletal_muscle_response\",\n  \"scientific_queries\": [\n    \"skeletal muscle excitation contraction coupling calcium troponin tropomyosin myosin cross-bridge cycle review\",\n    \"excitation-contraction-relaxation skeletal muscle sequence action potential T-tubule sarcoplasmic reticulum calcium reuptake\",\n    \"skeletal muscle relaxation calcium reuptake SERCA troponin tropomyosin cross-bridge detachment ATP\",\n    \"vertebrate skeletal muscle fiber contraction mechanism high school textbook explanation\"\n  ],\n  \"candidate_urls\": [\n    \"https://www.ncbi.nlm.nih.gov/books/NBK537058/\",\n    \"https://openstax.org/books/anatomy-and-physiology-2e/pages/10-3-muscle-fiber-contraction-and-relaxation\",\n    \"https://openstax.org/books/biology-2e/pages/38-3-muscle-contraction-and-locomotion\"\n  ],\n  \"visual_queries\": [\n    \"skeletal muscle fiber action potential T-tubule sarcoplasmic reticulum calcium release high school schematic\",\n    \"calcium binds troponin tropomyosin shifts exposes myosin binding sites actin filament schematic\",\n    \"myosin cross-bridge cycle power stroke ADP Pi release ATP binding detachment high school diagram\",\n    \"skeletal muscle relaxation calcium reuptake SERCA troponin tropomyosin blocks binding sites ATP required diagram\"\n  ],\n  \"visual_objects\": [\n    \"motor neuron axon terminal\",\n    \"neuromuscular junction\",\n    \"muscle fiber sarcolemma\",\n    \"T-tubule\",\n    \"sarcoplasmic reticulum\",\n    \"calcium ions\",\n    \"troponin\",\n    \"tropomyosin\",\n    \"actin filament\",\n    \"myosin filament\",\n    \"myosin head\",\n    \"ATP\",\n    \"ADP\",\n    \"inorganic phosphate\",\n    \"acetylcholine\"\n  ],\n  \"visual_states\": [\n    \"resting membrane potential\",\n    \"action potential propagation\",\n    \"acetylcholine release and binding\",\n    \"T-tubule depolarization\",\n    \"calcium release from sarcoplasmic reticulum\",\n    \"calcium binding to troponin\",\n    \"tropomyosin displacement\",\n    \"myosin binding site exposed\",\n    \"cross-bridge formation\",\n    \"power stroke\",\n    \"ADP and phosphate release\",\n    \"ATP binding to myosin head\",\n    \"cross-bridge detachment\",\n    \"calcium reuptake into sarcoplasmic reticulum\",\n    \"troponin-calcium dissociation\",\n    \"tropomyosin blockage restored\",\n    \"muscle relaxation\"\n  ],\n  \"scope\": {\n    \"included\": [\n      \"motor neuron action potential and neuromuscular transmission\",\n      \"muscle fiber action potential and T-tubule propagation\",\n      \"sarcoplasmic reticulum calcium release\",\n      \"calcium binding to troponin and tropomyosin shift\",\n      \"exposure of myosin binding sites on actin\",\n      \"cross-bridge cycle including power stroke, detachment, and ATP requirement\",\n      \"calcium reuptake by SERCA\",\n      \"troponin-calcium dissociation and tropomyosin restoration\",\n      \"relaxation and recovery to resting state\"\n    ],\n    \"excluded\": [\n      \"molecular atomic detail of myosin and actin\",\n      \"detailed structural biology of ion channels\",\n      \"sliding filament theory quantitative kinetics\",\n      \"smooth muscle and cardiac muscle specializations\",\n      \"neural circuit level movement control\",\n      \"energy metabolism pathways beyond ATP requirement\"\n    ]\n  }\n}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1795676611,
+  "model": "deepseek-flash",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+  "usage": {
+    "completion_tokens": 743,
+    "prompt_tokens": 358,
+    "total_tokens": 1101,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 358
+  }
+}

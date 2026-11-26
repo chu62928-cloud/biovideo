@@ -1,0 +1,87 @@
+[
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=skeletal+muscle+excitation+contraction+coupling+calcium+troponin+tropomyosin+myosin+cross-bridge+cycle+review&format=json&pageSize=3&resultType=core",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T07:03:35Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "1abf6edf6999bffd7bd16e7a52be87d5f4c2f1bcc55e978cdbadecbf8b7eac9f"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13322953/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T07:03:39Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "e9348187fa0aa399f486a87b3667a62b898a1ddb6e80a3e854b9b1892eae52f2"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13591147/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T07:04:04Z",
+    "status": "UNVERIFIED",
+    "error": "ReadTimeout"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13238992/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T07:04:30Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "17b11630a368454ee9a428181905f4ca9e8cf9c891160d6e5e2b4305bdf744b0"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=excitation-contraction-relaxation+skeletal+muscle+sequence+action+potential+T-tubule+sarcoplasmic+reticulum+calcium+reuptake&format=json&pageSize=3&resultType=core",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T07:04:42Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "f5af3ce428289019ce54612b94b8f8b5634695184b4ce74be2ccd8f00105a6bb"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13024244/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T07:04:54Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "f3e7d248aa80e18028a3ec666a35490ac52ae8a6333d92deec084f07d19ef751"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12815910/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T07:05:19Z",
+    "status": "UNVERIFIED",
+    "error": "ReadTimeout"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12554249/fullTextXML",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T07:05:45Z",
+    "status": "UNVERIFIED",
+    "error": "ReadTimeout"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK537058/",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T07:06:11Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "ba13709270b92877728f3f4b8882eb736185cbfbb7a0aac1ebc982e78cf83543"
+  },
+  {
+    "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-3-muscle-fiber-contraction-and-relaxation",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T07:06:12Z",
+    "status": "ok",
+    "http_status": 200,
+    "content_sha256": "86d0578a3f79082fe9419f9baa72a2946b9960282f7968a72b49d2383c2d9f7e"
+  },
+  {
+    "url": "https://openstax.org/books/biology-2e/pages/38-3-muscle-contraction-and-locomotion",
+    "kind": "scientific",
+    "started_utc": "2026-11-26T07:06:14Z",
+    "status": "UNVERIFIED",
+    "http_status": 404,
+    "error": "HTTPError"
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "stage": "INITIAL_TYPED_MODEL_SCHEMA_REPAIR",
+  "initial_candidate_validation": {
+    "type": "ValueError",
+    "message": "Undefined input/output role"
+  },
+  "repair_request": {
+    "call_id": "v42_03_c45d3765",
+    "provider": "deepseek",
+    "purpose": "typed_model_schema_repair",
+    "status": "error",
+    "started": 1795676804.145909,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "error_type": "ValueError",
+    "http_status": null,
+    "usage": {
+      "completion_tokens": 9000,
+      "prompt_tokens": 15488,
+      "total_tokens": 24488,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 15488
+    },
+    "response_model": "deepseek-flash",
+    "finish_reason": "length",
+    "root_cause": "MODEL_OUTPUT_TRUNCATED",
+    "elapsed_seconds": 25.392
+  },
+  "source_issue": "Retrieval includes cardiac abstracts outside skeletal task scope; semantic review not reached",
+  "conclusion": "Frozen engine failed before repair loop; no successful independent approval. Preserve output truncation, do not hand-edit model or modify production engine during holdout."
+}

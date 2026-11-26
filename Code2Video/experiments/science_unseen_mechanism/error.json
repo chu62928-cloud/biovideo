@@ -1,0 +1,5 @@
+{
+  "error_type": "ValueError",
+  "message": "DeepSeek response truncated at token limit",
+  "science_code_changed": false
+}

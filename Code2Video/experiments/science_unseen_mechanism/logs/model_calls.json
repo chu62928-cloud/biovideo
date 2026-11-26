@@ -1,0 +1,75 @@
+[
+  {
+    "call_id": "v42_01_086a9ff4",
+    "provider": "deepseek",
+    "purpose": "contract_discovery_plan",
+    "status": "ok",
+    "started": 1795676611.2622101,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 743,
+      "prompt_tokens": 358,
+      "total_tokens": 1101,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 358
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 4.327
+  },
+  {
+    "call_id": "v42_02_9c2fa1f7",
+    "provider": "deepseek",
+    "purpose": "typed_scientific_model_build",
+    "status": "ok",
+    "started": 1795676776.9040537,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "usage": {
+      "completion_tokens": 8047,
+      "prompt_tokens": 8601,
+      "total_tokens": 16648,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 128
+      },
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 8473
+    },
+    "response_model": "deepseek-flash",
+    "elapsed_seconds": 27.222
+  },
+  {
+    "call_id": "v42_03_c45d3765",
+    "provider": "deepseek",
+    "purpose": "typed_model_schema_repair",
+    "status": "error",
+    "started": 1795676804.145909,
+    "retries": 0,
+    "requested_model": "deepseek-flash",
+    "error_type": "ValueError",
+    "http_status": null,
+    "usage": {
+      "completion_tokens": 9000,
+      "prompt_tokens": 15488,
+      "total_tokens": 24488,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 15488
+    },
+    "response_model": "deepseek-flash",
+    "finish_reason": "length",
+    "root_cause": "MODEL_OUTPUT_TRUNCATED",
+    "elapsed_seconds": 25.392
+  }
+]

@@ -1,0 +1,77 @@
+{
+  "topic_id": "skeletal_muscle_response",
+  "scientific_queries": [
+    "skeletal muscle excitation contraction coupling calcium troponin tropomyosin myosin cross-bridge cycle review",
+    "excitation-contraction-relaxation skeletal muscle sequence action potential T-tubule sarcoplasmic reticulum calcium reuptake",
+    "skeletal muscle relaxation calcium reuptake SERCA troponin tropomyosin cross-bridge detachment ATP",
+    "vertebrate skeletal muscle fiber contraction mechanism high school textbook explanation"
+  ],
+  "candidate_urls": [
+    "https://www.ncbi.nlm.nih.gov/books/NBK537058/",
+    "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-3-muscle-fiber-contraction-and-relaxation",
+    "https://openstax.org/books/biology-2e/pages/38-3-muscle-contraction-and-locomotion"
+  ],
+  "visual_queries": [
+    "skeletal muscle fiber action potential T-tubule sarcoplasmic reticulum calcium release high school schematic",
+    "calcium binds troponin tropomyosin shifts exposes myosin binding sites actin filament schematic",
+    "myosin cross-bridge cycle power stroke ADP Pi release ATP binding detachment high school diagram",
+    "skeletal muscle relaxation calcium reuptake SERCA troponin tropomyosin blocks binding sites ATP required diagram"
+  ],
+  "visual_objects": [
+    "motor neuron axon terminal",
+    "neuromuscular junction",
+    "muscle fiber sarcolemma",
+    "T-tubule",
+    "sarcoplasmic reticulum",
+    "calcium ions",
+    "troponin",
+    "tropomyosin",
+    "actin filament",
+    "myosin filament",
+    "myosin head",
+    "ATP",
+    "ADP",
+    "inorganic phosphate",
+    "acetylcholine"
+  ],
+  "visual_states": [
+    "resting membrane potential",
+    "action potential propagation",
+    "acetylcholine release and binding",
+    "T-tubule depolarization",
+    "calcium release from sarcoplasmic reticulum",
+    "calcium binding to troponin",
+    "tropomyosin displacement",
+    "myosin binding site exposed",
+    "cross-bridge formation",
+    "power stroke",
+    "ADP and phosphate release",
+    "ATP binding to myosin head",
+    "cross-bridge detachment",
+    "calcium reuptake into sarcoplasmic reticulum",
+    "troponin-calcium dissociation",
+    "tropomyosin blockage restored",
+    "muscle relaxation"
+  ],
+  "scope": {
+    "included": [
+      "motor neuron action potential and neuromuscular transmission",
+      "muscle fiber action potential and T-tubule propagation",
+      "sarcoplasmic reticulum calcium release",
+      "calcium binding to troponin and tropomyosin shift",
+      "exposure of myosin binding sites on actin",
+      "cross-bridge cycle including power stroke, detachment, and ATP requirement",
+      "calcium reuptake by SERCA",
+      "troponin-calcium dissociation and tropomyosin restoration",
+      "relaxation and recovery to resting state"
+    ],
+    "excluded": [
+      "molecular atomic detail of myosin and actin",
+      "detailed structural biology of ion channels",
+      "sliding filament theory quantitative kinetics",
+      "smooth muscle and cardiac muscle specializations",
+      "neural circuit level movement control",
+      "energy metabolism pathways beyond ATP requirement"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "source_commit": "a4ffcbb075d8d817d078c29320650b402b650775",
+  "science_code_freeze": "../science_scope_maintenance/science_code_freeze.json",
+  "sample_class": "prospective_unseen_biological_mechanism",
+  "mechanistic_answers_preprovided": false,
+  "paid_science_request_ceiling": 12,
+  "retrieval_request_ceiling": 30,
+  "max_repairs": 3,
+  "production_edits_during_evaluation": false,
+  "success_requires": "Actual gap discovery, new source support, structural patch, schema, causal and separate science approval preserving original task",
+  "video_tasks": 0
+}
