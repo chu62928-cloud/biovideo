@@ -72,18 +72,21 @@ class ScientificModelRepairTransaction:
             sources.append({k:e.get(k) for k in ['evidence_id','url','title','evidence_level']}|{'passages':passages})
         patch=parse_json(self.gateway.request('deepseek','local_scientific_model_patch',prompt+json.dumps({'task':task,'model':model,'repair_tasks':tasks,'sources':sources,'feedback':feedback,'schema':schema,'allowed_fields':{k:sorted(v) for k,v in ALLOWED_FIELDS.items()}},ensure_ascii=False)))
         return tasks,patch
-    def run(self,task,model,issues,evidence,attempt=0,feedback=None):
+    def run(self,task,model,issues,evidence,attempt=0,feedback=None,prepared=None):
         folder=self.root/('attempt_'+str(attempt));folder.mkdir(exist_ok=True);write(folder/'before.json',model);before_hash=digest(model)
-        if (folder/'patch.json').exists():tasks=json.loads((folder/'tasks.json').read_text());patch=json.loads((folder/'patch.json').read_text())
+        if prepared is not None:
+            tasks,patch=prepared;write(folder/'tasks.json',tasks);write(folder/'patch.json',patch)
+        elif (folder/'patch.json').exists():tasks=json.loads((folder/'tasks.json').read_text());patch=json.loads((folder/'patch.json').read_text())
         else:tasks,patch=self.propose(task,model,issues,evidence,feedback);write(folder/'tasks.json',tasks);write(folder/'patch.json',patch)
         record={'before_hash':before_hash,'repair_tasks':tasks,'patch':patch,'accepted':False,'status':'CANDIDATE_CREATED','independent_review':'NOT_EXECUTED'}
         try:
             candidate,fields=apply_model_patch(model,patch,tasks,evidence);write(folder/'candidate.json',candidate);record.update(after_hash=digest(candidate),changed_fields=fields)
             causal=ScientificCausalGraphValidator().validate(candidate);write(folder/'causal.json',causal);record['causal_status']=causal['status']
             reviewfile=folder/'review.json'
-            if reviewfile.exists():review=json.loads(reviewfile.read_text())
+            if reviewfile.exists() and prepared is None:review=json.loads(reviewfile.read_text())
             else:
-                review=TypedScienceModelReviewer(self.gateway).review(candidate,evidence,task);write(reviewfile,review)
+                review_task=task if prepared is None else dict(task,original_issues=issues,original_model=model,actual_changes=patch)
+                review=TypedScienceModelReviewer(self.gateway).review(candidate,evidence,review_task);write(reviewfile,review)
             record.update(independent_review=review['decision'],review=review)
             # Every targeted gap must be explicitly independently resolved; global PASS required.
             if review['decision']=='PASS' and causal['status']=='PASS':write(self.root/'committed.json',{'model':candidate,'review':review,'model_hash':digest(candidate)});record.update(accepted=True,status='COMMITTED')

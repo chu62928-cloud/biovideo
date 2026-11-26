@@ -1,0 +1,30 @@
+{
+  "base": "006e450b3582d68cccfb3c9cb464bb6a348df86c",
+  "historical_inputs": {
+    "experiments/science_unseen_mechanism/recovered_automatic/repairs/attempt_0/before.json": "e1ed45ef80dd0a58dc67193cd92674baa304fe1a63787715ebd53666052ff90d",
+    "experiments/science_unseen_mechanism/recovered_automatic/repairs/attempt_0/patch.json": "dd48599ed990da30db75ec718aa346af2201c17b6ebfd7881bd2201aa2c3a17d",
+    "experiments/science_unseen_mechanism/recovered_automatic/repairs/attempt_0/result.json": "443d5d9c6858d63ae3eac49909ee707e161c6dad7e9b3856abc61fd562e9c7b7",
+    "experiments/science_unseen_mechanism/recovered_automatic/repairs/attempt_0/tasks.json": "8b02c671075e44a4a5af2fe944b82e99a0072129618e1b9afcc34851a4fba5df",
+    "experiments/science_unseen_mechanism/recovered_automatic/repairs/attempt_1/before.json": "e1ed45ef80dd0a58dc67193cd92674baa304fe1a63787715ebd53666052ff90d",
+    "experiments/science_unseen_mechanism/recovered_automatic/repairs/attempt_1/patch.json": "7e2ab77d269537683aea86508daef3085a4f0c73cd03e1b7182ec850fd340816",
+    "experiments/science_unseen_mechanism/recovered_automatic/repairs/attempt_1/result.json": "14b582284ae35de8cd4ad15b6e62272fc1dde1719d1ff085ca87e0acfc862669",
+    "experiments/science_unseen_mechanism/recovered_automatic/repairs/attempt_1/tasks.json": "8b02c671075e44a4a5af2fe944b82e99a0072129618e1b9afcc34851a4fba5df",
+    "experiments/science_unseen_mechanism/recovered_automatic/repairs/attempt_2/before.json": "e1ed45ef80dd0a58dc67193cd92674baa304fe1a63787715ebd53666052ff90d",
+    "experiments/science_unseen_mechanism/recovered_automatic/repairs/attempt_2/patch.json": "7793eff0514908566503aaa40af3e46aa85b666170067b164f9f7d1c71bb1b45",
+    "experiments/science_unseen_mechanism/recovered_automatic/repairs/attempt_2/result.json": "4c16830eb43478f65995ef7edeb0ce930d92bf7003af40ad26e2a6c11288b644",
+    "experiments/science_unseen_mechanism/recovered_automatic/repairs/attempt_2/tasks.json": "8b02c671075e44a4a5af2fe944b82e99a0072129618e1b9afcc34851a4fba5df",
+    "experiments/biology_expert_v4_3_2/inputs/mitosis/evidence.json": "35626190380f506acfc33ca6760bd3873b08585b3d8ff6432e6585c1a7cc95f8",
+    "experiments/biology_expert_v4_3_2/inputs/mitosis/historical_audit.json": "a48c4415503771c390cab3ccb26c2abec6b3d70acd6f0d69cfc633884b39d248",
+    "experiments/biology_expert_v4_3_2/inputs/mitosis/original.json": "6025f8b0e664ad88c12fcc931e7ef35998099e20250dc061ed34053be4427642",
+    "experiments/biology_expert_v4_3_2/inputs/mitosis/task.json": "91c99348df71cfdcafe35c20437bba01bf3690b213b7df39369995926e1bafe0"
+  },
+  "R2": "Skeletal muscle. Select before calls because all three rejected patches, exact evidence, original task and reviewer targets are available. Primary issue is calcium release actor and its relation to the stored pool.",
+  "R3": "Select fresh high school physiology task after code freeze.",
+  "limits": {
+    "R1": 6,
+    "R2": 6,
+    "R3": 10,
+    "video": 3
+  },
+  "paid_video": false
+}

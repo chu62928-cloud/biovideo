@@ -47,6 +47,9 @@ def validate_typed_model(model,evidence=None):
 
 class TypedScienceModelBuilder:
  def __init__(self,gateway):self.gateway=gateway
+ def build_staged(self,task,retrieval,cache):
+  from .staged_model import assemble
+  return assemble(self.gateway,task,retrieval,cache)
  def build(self,task,retrieval):
   if not retrieval.get('evidence'):raise ValueError('UNRESOLVED_EVIDENCE: no retrieved content')
   schema=json.loads((Path(__file__).parent/'schemas/typed_science_model.schema.json').read_text())

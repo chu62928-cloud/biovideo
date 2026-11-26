@@ -55,7 +55,7 @@ class ModelGateway:
   self.rows.append(rec);write(self.path,self.rows);start=time.monotonic()
   (self.root/(call_id+'_prompt.txt')).write_text(prompt)
   try:
-   if provider=='deepseek':response,usage=request_deepseek_token(prompt,log_id=call_id,max_tokens=9000,max_retries=1)
+   if provider=='deepseek':response,usage=request_deepseek_token(prompt,log_id=call_id,max_tokens=9000,max_retries=1,json_mode=purpose.startswith(('staged_model_', 'harness_')))
    else:
     grid=Path(__file__).resolve().parents[2]/'experiments/gemini3_critic_probe/GRID_upstream.png'
     if self.qwen_profile:

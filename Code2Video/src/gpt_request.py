@@ -1062,7 +1062,7 @@ if __name__ == "__main__":
     # print(response_claude)
 
 
-def request_deepseek_token(prompt, log_id=None, max_tokens=10000, max_retries=2):
+def request_deepseek_token(prompt, log_id=None, max_tokens=10000, max_retries=2,json_mode=False):
     """OpenAI-compatible provider; all connection settings come from environment."""
     import uuid
     required = ("DEEPSEEK_API_KEY", "DEEPSEEK_BASE_URL", "DEEPSEEK_MODEL")
@@ -1086,13 +1086,14 @@ def request_deepseek_token(prompt, log_id=None, max_tokens=10000, max_retries=2)
             response = client.chat.completions.create(
                 model=os.environ[required[2]], messages=[{"role":"user", "content":prompt}],
                 max_tokens=max_tokens,
+                **({"response_format":{"type":"json_object"}} if json_mode else {}),
                 extra_body={"thinking": {"type": os.environ.get("DEEPSEEK_THINKING", "enabled")}})
             usage = response.usage.model_dump() if response.usage else {}
             record.update(status="ok", model=response.model, usage=usage,
                           finish_reason=response.choices[0].finish_reason)
             (audit_dir / (call_id + ".response.json")).write_text(response.model_dump_json(indent=2), encoding="utf-8")
             if response.choices[0].finish_reason == "length":
-                raise ValueError("DeepSeek response truncated at token limit")
+                raise ValueError("MODEL_OUTPUT_TRUNCATED: DeepSeek response truncated at token limit")
             return response, usage
         except Exception as exc:
             status_code = getattr(exc, "status_code", None)
