@@ -1,7 +1,7 @@
 {
   "experiment": "V4.3.2",
   "baseline_commit": "38d0b02f41f27ebeb93895ade9f66b623c047241",
-  "git_commit": "38d0b02f41f27ebeb93895ade9f66b623c047241",
+  "git_commit": "3b1ece1fc3630d95a9071f409de9206200261e9f",
   "source_root": "Code2Video/src",
   "inputs": [
     "historical_inputs.json",
@@ -163,5 +163,10 @@
     "python": "3.12.4",
     "host": "motion-data"
   },
-  "formal_science_engine_unchanged": true
+  "formal_science_engine_unchanged": true,
+  "test_results": {
+    "passed": 93,
+    "failed": 0,
+    "seconds": 109.54
+  }
 }

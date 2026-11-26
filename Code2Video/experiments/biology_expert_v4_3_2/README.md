@@ -27,3 +27,5 @@
 所有候选、原文摘录、局部补丁、审核、回滚哈希和失败日志在包内相对路径可复核。无新视频或占位成功产物。
 
 实际调用：{"deepseek_calls": 23, "qwen_calls": 0, "wan_tasks": 0, "seedance_tasks": 0, "input_tokens": 191720, "output_tokens": 63478, "actual_cost": null, "failed_requests": 2, "unknown_usage_requests": ["v42_21_ef4bacb6"]}。费用API不返回，未知不写零。
+
+测试源码提交：3b1ece1fc3630d95a9071f409de9206200261e9f。最终93/93测试通过，用时109.54秒。
